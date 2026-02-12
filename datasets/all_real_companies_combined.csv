@@ -1,0 +1,996 @@
+company_name,normalized_company_name,industry_name,normalized_industry_name,sub_industry,country,source,confidence_score,verified
+Apple Inc.,apple inc,Technology,technology,Consumer Electronics,USA,Verified Real Company Database,100,True
+Microsoft Corporation,microsoft corporation,Technology,technology,Software,USA,Verified Real Company Database,100,True
+Google (Alphabet Inc.),google alphabet inc,Technology,technology,Internet Services,USA,Verified Real Company Database,100,True
+Amazon.com Inc.,amazon com inc,E-commerce,ecommerce,Online Retail,USA,Verified Real Company Database,100,True
+Meta Platforms Inc.,meta platforms inc,Technology,technology,Social Media,USA,Verified Real Company Database,100,True
+NVIDIA Corporation,nvidia corporation,Technology,technology,Semiconductors,USA,Verified Real Company Database,100,True
+Intel Corporation,intel corporation,Technology,technology,Semiconductors,USA,Verified Real Company Database,100,True
+IBM Corporation,ibm corporation,Technology,technology,IT Services,USA,Verified Real Company Database,100,True
+Oracle Corporation,oracle corporation,Technology,technology,Software,USA,Verified Real Company Database,100,True
+Cisco Systems Inc.,cisco systems inc,Technology,technology,Networking,USA,Verified Real Company Database,100,True
+Tesla Inc.,tesla inc,Automotive,automotive,Electric Vehicles,USA,Verified Real Company Database,100,True
+Adobe Inc.,adobe inc,Technology,technology,Software,USA,Verified Real Company Database,100,True
+Salesforce Inc.,salesforce inc,Technology,technology,Cloud Computing,USA,Verified Real Company Database,100,True
+Netflix Inc.,netflix inc,Media,media,Streaming Services,USA,Verified Real Company Database,100,True
+PayPal Holdings Inc.,paypal holdings inc,Financial Services,financial services,Payment Processing,USA,Verified Real Company Database,100,True
+Advanced Micro Devices Inc.,advanced micro devices inc,Technology,technology,Semiconductors,USA,Verified Real Company Database,100,True
+Qualcomm Inc.,qualcomm inc,Technology,technology,Semiconductors,USA,Verified Real Company Database,100,True
+Broadcom Inc.,broadcom inc,Technology,technology,Semiconductors,USA,Verified Real Company Database,100,True
+Texas Instruments Inc.,texas instruments inc,Technology,technology,Semiconductors,USA,Verified Real Company Database,100,True
+Applied Materials Inc.,applied materials inc,Technology,technology,Semiconductor Equipment,USA,Verified Real Company Database,100,True
+Micron Technology Inc.,micron technology inc,Technology,technology,Semiconductors,USA,Verified Real Company Database,100,True
+Dell Technologies Inc.,dell technologies inc,Technology,technology,Computer Hardware,USA,Verified Real Company Database,100,True
+HP Inc.,hp inc,Technology,technology,Computer Hardware,USA,Verified Real Company Database,100,True
+ServiceNow Inc.,servicenow inc,Technology,technology,Cloud Services,USA,Verified Real Company Database,100,True
+Workday Inc.,workday inc,Technology,technology,Cloud Software,USA,Verified Real Company Database,100,True
+VMware Inc.,vmware inc,Technology,technology,Virtualization Software,USA,Verified Real Company Database,100,True
+Autodesk Inc.,autodesk inc,Technology,technology,Design Software,USA,Verified Real Company Database,100,True
+Intuit Inc.,intuit inc,Technology,technology,Financial Software,USA,Verified Real Company Database,100,True
+Square Inc. (Block),square inc block,Financial Services,financial services,Payment Processing,USA,Verified Real Company Database,100,True
+Twitter Inc. (X Corp),twitter inc x corp,Technology,technology,Social Media,USA,Verified Real Company Database,100,True
+Uber Technologies Inc.,uber technologies inc,Technology,technology,Ride Hailing,USA,Verified Real Company Database,100,True
+Lyft Inc.,lyft inc,Technology,technology,Ride Hailing,USA,Verified Real Company Database,100,True
+Airbnb Inc.,airbnb inc,Technology,technology,Hospitality Platform,USA,Verified Real Company Database,100,True
+Zoom Video Communications,zoom video communications,Technology,technology,Video Conferencing,USA,Verified Real Company Database,100,True
+Slack Technologies,slack technologies,Technology,technology,Collaboration Software,USA,Verified Real Company Database,100,True
+Dropbox Inc.,dropbox inc,Technology,technology,Cloud Storage,USA,Verified Real Company Database,100,True
+DocuSign Inc.,docusign inc,Technology,technology,Digital Signature,USA,Verified Real Company Database,100,True
+Splunk Inc.,splunk inc,Technology,technology,Data Analytics,USA,Verified Real Company Database,100,True
+Snowflake Inc.,snowflake inc,Technology,technology,Cloud Data Platform,USA,Verified Real Company Database,100,True
+Datadog Inc.,datadog inc,Technology,technology,Monitoring & Analytics,USA,Verified Real Company Database,100,True
+CrowdStrike Holdings Inc.,crowdstrike holdings inc,Technology,technology,Cybersecurity,USA,Verified Real Company Database,100,True
+Palo Alto Networks Inc.,palo alto networks inc,Technology,technology,Cybersecurity,USA,Verified Real Company Database,100,True
+Fortinet Inc.,fortinet inc,Technology,technology,Cybersecurity,USA,Verified Real Company Database,100,True
+Okta Inc.,okta inc,Technology,technology,Identity Management,USA,Verified Real Company Database,100,True
+Zscaler Inc.,zscaler inc,Technology,technology,Cloud Security,USA,Verified Real Company Database,100,True
+MongoDB Inc.,mongodb inc,Technology,technology,Database Software,USA,Verified Real Company Database,100,True
+Atlassian Corporation,atlassian corporation,Technology,technology,Collaboration Software,USA,Verified Real Company Database,100,True
+Twilio Inc.,twilio inc,Technology,technology,Cloud Communications,USA,Verified Real Company Database,100,True
+HubSpot Inc.,hubspot inc,Technology,technology,Marketing Software,USA,Verified Real Company Database,100,True
+Zendesk Inc.,zendesk inc,Technology,technology,Customer Service Software,USA,Verified Real Company Database,100,True
+JPMorgan Chase & Co.,jpmorgan chase co,Banking,banking,Investment Banking,USA,Verified Real Company Database,100,True
+Bank of America Corp.,bank of america corp,Banking,banking,Commercial Banking,USA,Verified Real Company Database,100,True
+Wells Fargo & Company,wells fargo company,Banking,banking,Commercial Banking,USA,Verified Real Company Database,100,True
+Goldman Sachs Group Inc.,goldman sachs group inc,Banking,banking,Investment Banking,USA,Verified Real Company Database,100,True
+Morgan Stanley,morgan stanley,Banking,banking,Investment Banking,USA,Verified Real Company Database,100,True
+Citigroup Inc.,citigroup inc,Banking,banking,Commercial Banking,USA,Verified Real Company Database,100,True
+American Express Company,american express company,Financial Services,financial services,Credit Cards,USA,Verified Real Company Database,100,True
+Visa Inc.,visa inc,Financial Services,financial services,Payment Processing,USA,Verified Real Company Database,100,True
+Mastercard Inc.,mastercard inc,Financial Services,financial services,Payment Processing,USA,Verified Real Company Database,100,True
+BlackRock Inc.,blackrock inc,Financial Services,financial services,Asset Management,USA,Verified Real Company Database,100,True
+Charles Schwab Corporation,charles schwab corporation,Financial Services,financial services,Brokerage,USA,Verified Real Company Database,100,True
+U.S. Bancorp,us bancorp,Banking,banking,Commercial Banking,USA,Verified Real Company Database,100,True
+PNC Financial Services,pnc financial services,Banking,banking,Commercial Banking,USA,Verified Real Company Database,100,True
+Truist Financial Corporation,truist financial corporation,Banking,banking,Commercial Banking,USA,Verified Real Company Database,100,True
+Capital One Financial Corp.,capital one financial corp,Banking,banking,Commercial Banking,USA,Verified Real Company Database,100,True
+TD Bank,td bank,Banking,banking,Commercial Banking,USA,Verified Real Company Database,100,True
+State Street Corporation,state street corporation,Financial Services,financial services,Asset Management,USA,Verified Real Company Database,100,True
+BNY Mellon,bny mellon,Financial Services,financial services,Asset Management,USA,Verified Real Company Database,100,True
+Fidelity Investments,fidelity investments,Financial Services,financial services,Asset Management,USA,Verified Real Company Database,100,True
+Vanguard Group,vanguard group,Financial Services,financial services,Asset Management,USA,Verified Real Company Database,100,True
+MetLife Inc.,metlife inc,Financial Services,financial services,Insurance,USA,Verified Real Company Database,100,True
+Prudential Financial Inc.,prudential financial inc,Financial Services,financial services,Insurance,USA,Verified Real Company Database,100,True
+Aflac Inc.,aflac inc,Financial Services,financial services,Insurance,USA,Verified Real Company Database,100,True
+Progressive Corporation,progressive corporation,Financial Services,financial services,Insurance,USA,Verified Real Company Database,100,True
+Allstate Corporation,allstate corporation,Financial Services,financial services,Insurance,USA,Verified Real Company Database,100,True
+Travelers Companies Inc.,travelers companies inc,Financial Services,financial services,Insurance,USA,Verified Real Company Database,100,True
+Berkshire Hathaway Inc.,berkshire hathaway inc,Conglomerate,conglomerate,Diversified Holdings,USA,Verified Real Company Database,100,True
+Walmart Inc.,walmart inc,Retail,retail,Supermarket Chain,USA,Verified Real Company Database,100,True
+Target Corporation,target corporation,Retail,retail,Department Stores,USA,Verified Real Company Database,100,True
+The Home Depot Inc.,the home depot inc,Retail,retail,Home Improvement,USA,Verified Real Company Database,100,True
+Costco Wholesale Corporation,costco wholesale corporation,Retail,retail,Warehouse Club,USA,Verified Real Company Database,100,True
+The Coca-Cola Company,the coca cola company,FMCG,fmcg,Beverages,USA,Verified Real Company Database,100,True
+PepsiCo Inc.,pepsico inc,FMCG,fmcg,Beverages & Snacks,USA,Verified Real Company Database,100,True
+Procter & Gamble Co.,procter gamble co,FMCG,fmcg,Consumer Goods,USA,Verified Real Company Database,100,True
+Nike Inc.,nike inc,Retail,retail,Sportswear,USA,Verified Real Company Database,100,True
+Starbucks Corporation,starbucks corporation,Food & Beverage,food beverage,Coffee Shops,USA,Verified Real Company Database,100,True
+McDonald's Corporation,mcdonalds corporation,Food & Beverage,food beverage,Fast Food,USA,Verified Real Company Database,100,True
+Lowe's Companies Inc.,lowes companies inc,Retail,retail,Home Improvement,USA,Verified Real Company Database,100,True
+Best Buy Co. Inc.,best buy co inc,Retail,retail,Electronics Retail,USA,Verified Real Company Database,100,True
+Gap Inc.,gap inc,Retail,retail,Apparel Retail,USA,Verified Real Company Database,100,True
+Ross Stores Inc.,ross stores inc,Retail,retail,Discount Retail,USA,Verified Real Company Database,100,True
+TJX Companies Inc.,tjx companies inc,Retail,retail,Discount Retail,USA,Verified Real Company Database,100,True
+Macy's Inc.,macys inc,Retail,retail,Department Stores,USA,Verified Real Company Database,100,True
+Nordstrom Inc.,nordstrom inc,Retail,retail,Department Stores,USA,Verified Real Company Database,100,True
+Kohl's Corporation,kohls corporation,Retail,retail,Department Stores,USA,Verified Real Company Database,100,True
+Dollar General Corporation,dollar general corporation,Retail,retail,Discount Stores,USA,Verified Real Company Database,100,True
+Dollar Tree Inc.,dollar tree inc,Retail,retail,Discount Stores,USA,Verified Real Company Database,100,True
+Kroger Co.,kroger co,Retail,retail,Supermarket Chain,USA,Verified Real Company Database,100,True
+Albertsons Companies Inc.,albertsons companies inc,Retail,retail,Supermarket Chain,USA,Verified Real Company Database,100,True
+Walgreens Boots Alliance,walgreens boots alliance,Retail,retail,Pharmacy Retail,USA,Verified Real Company Database,100,True
+CVS Health Corporation,cvs health corporation,Healthcare,healthcare,Pharmacy Retail,USA,Verified Real Company Database,100,True
+Rite Aid Corporation,rite aid corporation,Retail,retail,Pharmacy Retail,USA,Verified Real Company Database,100,True
+Adidas America,adidas america,Retail,retail,Sportswear,USA,Verified Real Company Database,100,True
+Under Armour Inc.,under armour inc,Retail,retail,Sportswear,USA,Verified Real Company Database,100,True
+Lululemon Athletica,lululemon athletica,Retail,retail,Activewear,USA,Verified Real Company Database,100,True
+Ralph Lauren Corporation,ralph lauren corporation,Retail,retail,Fashion,USA,Verified Real Company Database,100,True
+PVH Corp.,pvh corp,Retail,retail,Apparel,USA,Verified Real Company Database,100,True
+Foot Locker Inc.,foot locker inc,Retail,retail,Footwear Retail,USA,Verified Real Company Database,100,True
+Levi Strauss & Co.,levi strauss co,Retail,retail,Apparel,USA,Verified Real Company Database,100,True
+Yum! Brands Inc.,yum brands inc,Food & Beverage,food beverage,Fast Food,USA,Verified Real Company Database,100,True
+Chipotle Mexican Grill,chipotle mexican grill,Food & Beverage,food beverage,Fast Casual,USA,Verified Real Company Database,100,True
+Domino's Pizza Inc.,dominos pizza inc,Food & Beverage,food beverage,Fast Food,USA,Verified Real Company Database,100,True
+Papa John's International,papa johns international,Food & Beverage,food beverage,Fast Food,USA,Verified Real Company Database,100,True
+Wendy's Company,wendys company,Food & Beverage,food beverage,Fast Food,USA,Verified Real Company Database,100,True
+Burger King (Restaurant Brands),burger king restaurant brands,Food & Beverage,food beverage,Fast Food,USA,Verified Real Company Database,100,True
+Subway,subway,Food & Beverage,food beverage,Fast Food,USA,Verified Real Company Database,100,True
+Dunkin' Brands,dunkin brands,Food & Beverage,food beverage,Coffee & Donuts,USA,Verified Real Company Database,100,True
+Mondelez International,mondelez international,FMCG,fmcg,Snacks,USA,Verified Real Company Database,100,True
+Kraft Heinz Company,kraft heinz company,FMCG,fmcg,Food Products,USA,Verified Real Company Database,100,True
+General Mills Inc.,general mills inc,FMCG,fmcg,Food Products,USA,Verified Real Company Database,100,True
+Kellogg Company,kellogg company,FMCG,fmcg,Cereals,USA,Verified Real Company Database,100,True
+Campbell Soup Company,campbell soup company,FMCG,fmcg,Food Products,USA,Verified Real Company Database,100,True
+Conagra Brands Inc.,conagra brands inc,FMCG,fmcg,Food Products,USA,Verified Real Company Database,100,True
+The Hershey Company,the hershey company,FMCG,fmcg,Confectionery,USA,Verified Real Company Database,100,True
+Mars Inc.,mars inc,FMCG,fmcg,Confectionery,USA,Verified Real Company Database,100,True
+Colgate-Palmolive Company,colgate palmolive company,FMCG,fmcg,Consumer Goods,USA,Verified Real Company Database,100,True
+Kimberly-Clark Corporation,kimberly clark corporation,FMCG,fmcg,Consumer Goods,USA,Verified Real Company Database,100,True
+Estée Lauder Companies,estee lauder companies,FMCG,fmcg,Cosmetics,USA,Verified Real Company Database,100,True
+Johnson & Johnson,johnson johnson,Healthcare,healthcare,Pharmaceuticals,USA,Verified Real Company Database,100,True
+Pfizer Inc.,pfizer inc,Healthcare,healthcare,Pharmaceuticals,USA,Verified Real Company Database,100,True
+UnitedHealth Group Inc.,unitedhealth group inc,Healthcare,healthcare,Health Insurance,USA,Verified Real Company Database,100,True
+Merck & Co. Inc.,merck co inc,Healthcare,healthcare,Pharmaceuticals,USA,Verified Real Company Database,100,True
+AbbVie Inc.,abbvie inc,Healthcare,healthcare,Pharmaceuticals,USA,Verified Real Company Database,100,True
+Bristol-Myers Squibb Co.,bristol myers squibb co,Healthcare,healthcare,Pharmaceuticals,USA,Verified Real Company Database,100,True
+Eli Lilly and Company,eli lilly and company,Healthcare,healthcare,Pharmaceuticals,USA,Verified Real Company Database,100,True
+Amgen Inc.,amgen inc,Healthcare,healthcare,Biotechnology,USA,Verified Real Company Database,100,True
+Gilead Sciences Inc.,gilead sciences inc,Healthcare,healthcare,Biotechnology,USA,Verified Real Company Database,100,True
+Regeneron Pharmaceuticals,regeneron pharmaceuticals,Healthcare,healthcare,Biotechnology,USA,Verified Real Company Database,100,True
+Biogen Inc.,biogen inc,Healthcare,healthcare,Biotechnology,USA,Verified Real Company Database,100,True
+Moderna Inc.,moderna inc,Healthcare,healthcare,Biotechnology,USA,Verified Real Company Database,100,True
+Vertex Pharmaceuticals,vertex pharmaceuticals,Healthcare,healthcare,Biotechnology,USA,Verified Real Company Database,100,True
+Celgene Corporation,celgene corporation,Healthcare,healthcare,Biotechnology,USA,Verified Real Company Database,100,True
+Anthem Inc.,anthem inc,Healthcare,healthcare,Health Insurance,USA,Verified Real Company Database,100,True
+Cigna Corporation,cigna corporation,Healthcare,healthcare,Health Insurance,USA,Verified Real Company Database,100,True
+Humana Inc.,humana inc,Healthcare,healthcare,Health Insurance,USA,Verified Real Company Database,100,True
+Centene Corporation,centene corporation,Healthcare,healthcare,Health Insurance,USA,Verified Real Company Database,100,True
+HCA Healthcare Inc.,hca healthcare inc,Healthcare,healthcare,Hospital Operator,USA,Verified Real Company Database,100,True
+Tenet Healthcare Corporation,tenet healthcare corporation,Healthcare,healthcare,Hospital Operator,USA,Verified Real Company Database,100,True
+Abbott Laboratories,abbott laboratories,Healthcare,healthcare,Medical Devices,USA,Verified Real Company Database,100,True
+Medtronic plc,medtronic plc,Healthcare,healthcare,Medical Devices,USA,Verified Real Company Database,100,True
+Boston Scientific Corporation,boston scientific corporation,Healthcare,healthcare,Medical Devices,USA,Verified Real Company Database,100,True
+Stryker Corporation,stryker corporation,Healthcare,healthcare,Medical Devices,USA,Verified Real Company Database,100,True
+Baxter International Inc.,baxter international inc,Healthcare,healthcare,Medical Products,USA,Verified Real Company Database,100,True
+Becton Dickinson and Company,becton dickinson and company,Healthcare,healthcare,Medical Devices,USA,Verified Real Company Database,100,True
+Danaher Corporation,danaher corporation,Healthcare,healthcare,Life Sciences,USA,Verified Real Company Database,100,True
+Thermo Fisher Scientific,thermo fisher scientific,Healthcare,healthcare,Life Sciences,USA,Verified Real Company Database,100,True
+Illumina Inc.,illumina inc,Healthcare,healthcare,Genetic Testing,USA,Verified Real Company Database,100,True
+Quest Diagnostics Inc.,quest diagnostics inc,Healthcare,healthcare,Diagnostic Services,USA,Verified Real Company Database,100,True
+Laboratory Corporation of America,laboratory corporation of america,Healthcare,healthcare,Diagnostic Services,USA,Verified Real Company Database,100,True
+ExxonMobil Corporation,exxonmobil corporation,Energy,energy,Oil & Gas,USA,Verified Real Company Database,100,True
+Chevron Corporation,chevron corporation,Energy,energy,Oil & Gas,USA,Verified Real Company Database,100,True
+ConocoPhillips,conocophillips,Energy,energy,Oil & Gas,USA,Verified Real Company Database,100,True
+Occidental Petroleum,occidental petroleum,Energy,energy,Oil & Gas,USA,Verified Real Company Database,100,True
+Phillips 66,phillips 66,Energy,energy,Oil Refining,USA,Verified Real Company Database,100,True
+Valero Energy Corporation,valero energy corporation,Energy,energy,Oil Refining,USA,Verified Real Company Database,100,True
+Marathon Petroleum Corporation,marathon petroleum corporation,Energy,energy,Oil Refining,USA,Verified Real Company Database,100,True
+Halliburton Company,halliburton company,Energy,energy,Oil Services,USA,Verified Real Company Database,100,True
+Schlumberger Limited,schlumberger limited,Energy,energy,Oil Services,USA,Verified Real Company Database,100,True
+Baker Hughes Company,baker hughes company,Energy,energy,Oil Services,USA,Verified Real Company Database,100,True
+NextEra Energy Inc.,nextera energy inc,Energy,energy,Renewable Energy,USA,Verified Real Company Database,100,True
+Duke Energy Corporation,duke energy corporation,Energy,energy,Electric Utility,USA,Verified Real Company Database,100,True
+Southern Company,southern company,Energy,energy,Electric Utility,USA,Verified Real Company Database,100,True
+Dominion Energy Inc.,dominion energy inc,Energy,energy,Electric Utility,USA,Verified Real Company Database,100,True
+General Motors Company,general motors company,Automotive,automotive,Automobile Manufacturing,USA,Verified Real Company Database,100,True
+Ford Motor Company,ford motor company,Automotive,automotive,Automobile Manufacturing,USA,Verified Real Company Database,100,True
+Rivian Automotive Inc.,rivian automotive inc,Automotive,automotive,Electric Vehicles,USA,Verified Real Company Database,100,True
+Lucid Motors Inc.,lucid motors inc,Automotive,automotive,Electric Vehicles,USA,Verified Real Company Database,100,True
+The Boeing Company,the boeing company,Aerospace,aerospace,Aircraft Manufacturing,USA,Verified Real Company Database,100,True
+Lockheed Martin Corporation,lockheed martin corporation,Aerospace,aerospace,Defense,USA,Verified Real Company Database,100,True
+Raytheon Technologies Corp.,raytheon technologies corp,Aerospace,aerospace,Defense,USA,Verified Real Company Database,100,True
+Northrop Grumman Corporation,northrop grumman corporation,Aerospace,aerospace,Defense,USA,Verified Real Company Database,100,True
+General Dynamics Corporation,general dynamics corporation,Aerospace,aerospace,Defense,USA,Verified Real Company Database,100,True
+SpaceX,spacex,Aerospace,aerospace,Space Technology,USA,Verified Real Company Database,100,True
+Blue Origin,blue origin,Aerospace,aerospace,Space Technology,USA,Verified Real Company Database,100,True
+The Walt Disney Company,the walt disney company,Media,media,Entertainment,USA,Verified Real Company Database,100,True
+Comcast Corporation,comcast corporation,Media,media,Telecommunications,USA,Verified Real Company Database,100,True
+AT&T Inc.,att inc,Telecommunications,telecommunications,Telecom Services,USA,Verified Real Company Database,100,True
+Verizon Communications Inc.,verizon communications inc,Telecommunications,telecommunications,Telecom Services,USA,Verified Real Company Database,100,True
+T-Mobile US Inc.,tmobile us inc,Telecommunications,telecommunications,Telecom Services,USA,Verified Real Company Database,100,True
+Warner Bros. Discovery,warner bros discovery,Media,media,Entertainment,USA,Verified Real Company Database,100,True
+Paramount Global,paramount global,Media,media,Entertainment,USA,Verified Real Company Database,100,True
+Fox Corporation,fox corporation,Media,media,Broadcasting,USA,Verified Real Company Database,100,True
+ViacomCBS,viacomcbs,Media,media,Entertainment,USA,Verified Real Company Database,100,True
+Sony Pictures Entertainment,sony pictures entertainment,Media,media,Film Production,USA,Verified Real Company Database,100,True
+Universal Pictures,universal pictures,Media,media,Film Production,USA,Verified Real Company Database,100,True
+Charter Communications Inc.,charter communications inc,Telecommunications,telecommunications,Cable Services,USA,Verified Real Company Database,100,True
+HSBC Holdings plc,hsbc holdings plc,Banking,banking,Commercial Banking,UK,Verified Real Company Database,100,True
+Barclays PLC,barclays plc,Banking,banking,Investment Banking,UK,Verified Real Company Database,100,True
+Lloyds Banking Group plc,lloyds banking group plc,Banking,banking,Commercial Banking,UK,Verified Real Company Database,100,True
+Standard Chartered PLC,standard chartered plc,Banking,banking,Commercial Banking,UK,Verified Real Company Database,100,True
+NatWest Group plc,natwest group plc,Banking,banking,Commercial Banking,UK,Verified Real Company Database,100,True
+Prudential plc,prudential plc,Financial Services,financial services,Insurance,UK,Verified Real Company Database,100,True
+Unilever PLC,unilever plc,FMCG,fmcg,Consumer Goods,UK,Verified Real Company Database,100,True
+Diageo plc,diageo plc,FMCG,fmcg,Alcoholic Beverages,UK,Verified Real Company Database,100,True
+Reckitt Benckiser Group plc,reckitt benckiser group plc,FMCG,fmcg,Consumer Goods,UK,Verified Real Company Database,100,True
+Tesco PLC,tesco plc,Retail,retail,Supermarket Chain,UK,Verified Real Company Database,100,True
+Sainsbury's,sainsburys,Retail,retail,Supermarket Chain,UK,Verified Real Company Database,100,True
+Marks & Spencer Group plc,marks spencer group plc,Retail,retail,Retail Chain,UK,Verified Real Company Database,100,True
+ASDA,asda,Retail,retail,Supermarket Chain,UK,Verified Real Company Database,100,True
+Morrisons,morrisons,Retail,retail,Supermarket Chain,UK,Verified Real Company Database,100,True
+BP plc,bp plc,Energy,energy,Oil & Gas,UK,Verified Real Company Database,100,True
+Shell plc,shell plc,Energy,energy,Oil & Gas,UK,Verified Real Company Database,100,True
+AstraZeneca PLC,astrazeneca plc,Healthcare,healthcare,Pharmaceuticals,UK,Verified Real Company Database,100,True
+GlaxoSmithKline plc,glaxosmithkline plc,Healthcare,healthcare,Pharmaceuticals,UK,Verified Real Company Database,100,True
+Rio Tinto Group,rio tinto group,Mining,mining,Metals & Mining,UK,Verified Real Company Database,100,True
+Anglo American plc,anglo american plc,Mining,mining,Metals & Mining,UK,Verified Real Company Database,100,True
+Glencore plc,glencore plc,Mining,mining,Metals & Mining,UK,Verified Real Company Database,100,True
+Vodafone Group Plc,vodafone group plc,Telecommunications,telecommunications,Telecom Services,UK,Verified Real Company Database,100,True
+BT Group plc,bt group plc,Telecommunications,telecommunications,Telecom Services,UK,Verified Real Company Database,100,True
+Rolls-Royce Holdings plc,rolls royce holdings plc,Aerospace,aerospace,Aircraft Engines,UK,Verified Real Company Database,100,True
+BAE Systems plc,bae systems plc,Aerospace,aerospace,Defense,UK,Verified Real Company Database,100,True
+British American Tobacco plc,british american tobacco plc,FMCG,fmcg,Tobacco,UK,Verified Real Company Database,100,True
+National Grid plc,national grid plc,Energy,energy,Utilities,UK,Verified Real Company Database,100,True
+Centrica plc,centrica plc,Energy,energy,Utilities,UK,Verified Real Company Database,100,True
+SSE plc,sse plc,Energy,energy,Utilities,UK,Verified Real Company Database,100,True
+Aviva plc,aviva plc,Financial Services,financial services,Insurance,UK,Verified Real Company Database,100,True
+Legal & General Group plc,legal general group plc,Financial Services,financial services,Insurance,UK,Verified Real Company Database,100,True
+WPP plc,wpp plc,Media,media,Advertising,UK,Verified Real Company Database,100,True
+Pearson plc,pearson plc,Media,media,Publishing,UK,Verified Real Company Database,100,True
+ITV plc,itv plc,Media,media,Broadcasting,UK,Verified Real Company Database,100,True
+Sky Group,sky group,Media,media,Broadcasting,UK,Verified Real Company Database,100,True
+Burberry Group plc,burberry group plc,Retail,retail,Luxury Fashion,UK,Verified Real Company Database,100,True
+Next plc,next plc,Retail,retail,Fashion Retail,UK,Verified Real Company Database,100,True
+Kingfisher plc,kingfisher plc,Retail,retail,Home Improvement,UK,Verified Real Company Database,100,True
+J Sainsbury plc,j sainsbury plc,Retail,retail,Supermarket Chain,UK,Verified Real Company Database,100,True
+Associated British Foods plc,associated british foods plc,FMCG,fmcg,Food Products,UK,Verified Real Company Database,100,True
+Royal Bank of Canada,royal bank of canada,Banking,banking,Commercial Banking,Canada,Verified Real Company Database,100,True
+Toronto-Dominion Bank,toronto dominion bank,Banking,banking,Commercial Banking,Canada,Verified Real Company Database,100,True
+Bank of Nova Scotia,bank of nova scotia,Banking,banking,Commercial Banking,Canada,Verified Real Company Database,100,True
+Bank of Montreal,bank of montreal,Banking,banking,Commercial Banking,Canada,Verified Real Company Database,100,True
+Canadian Imperial Bank of Commerce,canadian imperial bank of commerce,Banking,banking,Commercial Banking,Canada,Verified Real Company Database,100,True
+Suncor Energy Inc.,suncor energy inc,Energy,energy,Oil & Gas,Canada,Verified Real Company Database,100,True
+Canadian Natural Resources Ltd.,canadian natural resources ltd,Energy,energy,Oil & Gas,Canada,Verified Real Company Database,100,True
+Enbridge Inc.,enbridge inc,Energy,energy,Pipeline,Canada,Verified Real Company Database,100,True
+TC Energy Corporation,tc energy corporation,Energy,energy,Pipeline,Canada,Verified Real Company Database,100,True
+BCE Inc.,bce inc,Telecommunications,telecommunications,Telecom Services,Canada,Verified Real Company Database,100,True
+Rogers Communications Inc.,rogers communications inc,Telecommunications,telecommunications,Telecom Services,Canada,Verified Real Company Database,100,True
+Telus Corporation,telus corporation,Telecommunications,telecommunications,Telecom Services,Canada,Verified Real Company Database,100,True
+Loblaw Companies Limited,loblaw companies limited,Retail,retail,Supermarket Chain,Canada,Verified Real Company Database,100,True
+Canadian Tire Corporation,canadian tire corporation,Retail,retail,Retail Chain,Canada,Verified Real Company Database,100,True
+Shopify Inc.,shopify inc,Technology,technology,E-commerce Platform,Canada,Verified Real Company Database,100,True
+BlackBerry Limited,blackberry limited,Technology,technology,Cybersecurity,Canada,Verified Real Company Database,100,True
+Barrick Gold Corporation,barrick gold corporation,Mining,mining,Gold Mining,Canada,Verified Real Company Database,100,True
+Teck Resources Limited,teck resources limited,Mining,mining,Metals & Mining,Canada,Verified Real Company Database,100,True
+Canadian National Railway,canadian national railway,Transportation,transportation,Rail Transport,Canada,Verified Real Company Database,100,True
+Canadian Pacific Railway,canadian pacific railway,Transportation,transportation,Rail Transport,Canada,Verified Real Company Database,100,True
+Manulife Financial Corporation,manulife financial corporation,Financial Services,financial services,Insurance,Canada,Verified Real Company Database,100,True
+Sun Life Financial Inc.,sun life financial inc,Financial Services,financial services,Insurance,Canada,Verified Real Company Database,100,True
+Power Corporation of Canada,power corporation of canada,Financial Services,financial services,Investment Management,Canada,Verified Real Company Database,100,True
+Brookfield Asset Management,brookfield asset management,Financial Services,financial services,Asset Management,Canada,Verified Real Company Database,100,True
+Bombardier Inc.,bombardier inc,Aerospace,aerospace,Aircraft Manufacturing,Canada,Verified Real Company Database,100,True
+Air Canada,air canada,Aviation,aviation,Airlines,Canada,Verified Real Company Database,100,True
+Magna International Inc.,magna international inc,Automotive,automotive,Auto Parts,Canada,Verified Real Company Database,100,True
+Restaurant Brands International,restaurant brands international,Food & Beverage,food beverage,Fast Food,Canada,Verified Real Company Database,100,True
+Alimentation Couche-Tard Inc.,alimentation couche tard inc,Retail,retail,Convenience Stores,Canada,Verified Real Company Database,100,True
+Commonwealth Bank of Australia,commonwealth bank of australia,Banking,banking,Commercial Banking,Australia,Verified Real Company Database,100,True
+Westpac Banking Corporation,westpac banking corporation,Banking,banking,Commercial Banking,Australia,Verified Real Company Database,100,True
+Australia and New Zealand Banking Group,australia and new zealand banking group,Banking,banking,Commercial Banking,Australia,Verified Real Company Database,100,True
+National Australia Bank,national australia bank,Banking,banking,Commercial Banking,Australia,Verified Real Company Database,100,True
+Macquarie Group Limited,macquarie group limited,Financial Services,financial services,Investment Banking,Australia,Verified Real Company Database,100,True
+BHP Group Limited,bhp group limited,Mining,mining,Metals & Mining,Australia,Verified Real Company Database,100,True
+Rio Tinto Limited,rio tinto limited,Mining,mining,Metals & Mining,Australia,Verified Real Company Database,100,True
+Fortescue Metals Group,fortescue metals group,Mining,mining,Iron Ore Mining,Australia,Verified Real Company Database,100,True
+Newcrest Mining Limited,newcrest mining limited,Mining,mining,Gold Mining,Australia,Verified Real Company Database,100,True
+Woolworths Group Limited,woolworths group limited,Retail,retail,Supermarket Chain,Australia,Verified Real Company Database,100,True
+Wesfarmers Limited,wesfarmers limited,Retail,retail,Conglomerate,Australia,Verified Real Company Database,100,True
+Coles Group Limited,coles group limited,Retail,retail,Supermarket Chain,Australia,Verified Real Company Database,100,True
+Telstra Corporation Limited,telstra corporation limited,Telecommunications,telecommunications,Telecom Services,Australia,Verified Real Company Database,100,True
+CSL Limited,csl limited,Healthcare,healthcare,Biopharmaceuticals,Australia,Verified Real Company Database,100,True
+Santos Limited,santos limited,Energy,energy,Oil & Gas,Australia,Verified Real Company Database,100,True
+Woodside Energy Group,woodside energy group,Energy,energy,Oil & Gas,Australia,Verified Real Company Database,100,True
+Goodman Group,goodman group,Real Estate,real estate,Industrial Property,Australia,Verified Real Company Database,100,True
+Qantas Airways Limited,qantas airways limited,Aviation,aviation,Airlines,Australia,Verified Real Company Database,100,True
+Transurban Group,transurban group,Infrastructure,infrastructure,Toll Roads,Australia,Verified Real Company Database,100,True
+Brambles Limited,brambles limited,Transportation,transportation,Logistics,Australia,Verified Real Company Database,100,True
+Amcor plc,amcor plc,Manufacturing,manufacturing,Packaging,Australia,Verified Real Company Database,100,True
+Cochlear Limited,cochlear limited,Healthcare,healthcare,Medical Devices,Australia,Verified Real Company Database,100,True
+ResMed Inc.,resmed inc,Healthcare,healthcare,Medical Devices,Australia,Verified Real Company Database,100,True
+QBE Insurance Group,qbe insurance group,Financial Services,financial services,Insurance,Australia,Verified Real Company Database,100,True
+Insurance Australia Group,insurance australia group,Financial Services,financial services,Insurance,Australia,Verified Real Company Database,100,True
+Scentre Group,scentre group,Real Estate,real estate,Shopping Centers,Australia,Verified Real Company Database,100,True
+Stockland Corporation,stockland corporation,Real Estate,real estate,Property Development,Australia,Verified Real Company Database,100,True
+Origin Energy Limited,origin energy limited,Energy,energy,Energy Retail,Australia,Verified Real Company Database,100,True
+AGL Energy Limited,agl energy limited,Energy,energy,Energy Retail,Australia,Verified Real Company Database,100,True
+Tabcorp Holdings Limited,tabcorp holdings limited,Entertainment,entertainment,Gaming & Betting,Australia,Verified Real Company Database,100,True
+Samsung Electronics Co. Ltd.,samsung electronics co ltd,Technology,technology,Consumer Electronics,South Korea,Verified Real Company Database,100,True
+SK Hynix Inc.,sk hynix inc,Technology,technology,Semiconductors,South Korea,Verified Real Company Database,100,True
+LG Electronics Inc.,lg electronics inc,Technology,technology,Consumer Electronics,South Korea,Verified Real Company Database,100,True
+Samsung Display Co. Ltd.,samsung display co ltd,Technology,technology,Display Technology,South Korea,Verified Real Company Database,100,True
+Naver Corporation,naver corporation,Technology,technology,Internet Services,South Korea,Verified Real Company Database,100,True
+Kakao Corporation,kakao corporation,Technology,technology,Internet Services,South Korea,Verified Real Company Database,100,True
+Hyundai Motor Company,hyundai motor company,Automotive,automotive,Automobile Manufacturing,South Korea,Verified Real Company Database,100,True
+Kia Corporation,kia corporation,Automotive,automotive,Automobile Manufacturing,South Korea,Verified Real Company Database,100,True
+SK Group,sk group,Conglomerate,conglomerate,Diversified,South Korea,Verified Real Company Database,100,True
+LG Corporation,lg corporation,Conglomerate,conglomerate,Diversified,South Korea,Verified Real Company Database,100,True
+Lotte Corporation,lotte corporation,Conglomerate,conglomerate,Retail & Food,South Korea,Verified Real Company Database,100,True
+Hyundai Heavy Industries,hyundai heavy industries,Manufacturing,manufacturing,Shipbuilding,South Korea,Verified Real Company Database,100,True
+Samsung Heavy Industries,samsung heavy industries,Manufacturing,manufacturing,Shipbuilding,South Korea,Verified Real Company Database,100,True
+POSCO,posco,Manufacturing,manufacturing,Steel Production,South Korea,Verified Real Company Database,100,True
+Samsung Biologics,samsung biologics,Healthcare,healthcare,Biopharmaceuticals,South Korea,Verified Real Company Database,100,True
+Celltrion Inc.,celltrion inc,Healthcare,healthcare,Biopharmaceuticals,South Korea,Verified Real Company Database,100,True
+HYBE Corporation,hybe corporation,Media,media,Entertainment,South Korea,Verified Real Company Database,100,True
+SM Entertainment,sm entertainment,Media,media,Entertainment,South Korea,Verified Real Company Database,100,True
+JYP Entertainment,jyp entertainment,Media,media,Entertainment,South Korea,Verified Real Company Database,100,True
+YG Entertainment,yg entertainment,Media,media,Entertainment,South Korea,Verified Real Company Database,100,True
+CJ ENM,cj enm,Media,media,Entertainment,South Korea,Verified Real Company Database,100,True
+LG Chem,lg chem,Chemicals,chemicals,Chemical Manufacturing,South Korea,Verified Real Company Database,100,True
+SK Innovation,sk innovation,Energy,energy,Oil Refining,South Korea,Verified Real Company Database,100,True
+Hanwha Group,hanwha group,Conglomerate,conglomerate,Diversified,South Korea,Verified Real Company Database,100,True
+Hyundai Engineering & Construction,hyundai engineering construction,Infrastructure,infrastructure,Construction,South Korea,Verified Real Company Database,100,True
+Korean Air Lines,korean air lines,Aviation,aviation,Airlines,South Korea,Verified Real Company Database,100,True
+Asiana Airlines,asiana airlines,Aviation,aviation,Airlines,South Korea,Verified Real Company Database,100,True
+SK Telecom,sk telecom,Telecommunications,telecommunications,Telecom Services,South Korea,Verified Real Company Database,100,True
+KT Corporation,kt corporation,Telecommunications,telecommunications,Telecom Services,South Korea,Verified Real Company Database,100,True
+LG Uplus,lg uplus,Telecommunications,telecommunications,Telecom Services,South Korea,Verified Real Company Database,100,True
+Shinhan Financial Group,shinhan financial group,Banking,banking,Commercial Banking,South Korea,Verified Real Company Database,100,True
+KB Financial Group,kb financial group,Banking,banking,Commercial Banking,South Korea,Verified Real Company Database,100,True
+Hana Financial Group,hana financial group,Banking,banking,Commercial Banking,South Korea,Verified Real Company Database,100,True
+Amorepacific Corporation,amorepacific corporation,FMCG,fmcg,Cosmetics,South Korea,Verified Real Company Database,100,True
+LG Household & Health Care,lg household health care,FMCG,fmcg,Consumer Goods,South Korea,Verified Real Company Database,100,True
+Volkswagen AG,volkswagen ag,Automotive,automotive,Automobile Manufacturing,Germany,Verified Real Company Database,100,True
+Daimler AG (Mercedes-Benz),daimler ag mercedes benz,Automotive,automotive,Automobile Manufacturing,Germany,Verified Real Company Database,100,True
+BMW AG,bmw ag,Automotive,automotive,Automobile Manufacturing,Germany,Verified Real Company Database,100,True
+Siemens AG,siemens ag,Technology,technology,Industrial Automation,Germany,Verified Real Company Database,100,True
+SAP SE,sap se,Technology,technology,Enterprise Software,Germany,Verified Real Company Database,100,True
+BASF SE,basf se,Chemicals,chemicals,Chemical Manufacturing,Germany,Verified Real Company Database,100,True
+Allianz SE,allianz se,Financial Services,financial services,Insurance,Germany,Verified Real Company Database,100,True
+Deutsche Bank AG,deutsche bank ag,Banking,banking,Investment Banking,Germany,Verified Real Company Database,100,True
+Bayer AG,bayer ag,Healthcare,healthcare,Pharmaceuticals,Germany,Verified Real Company Database,100,True
+Bosch GmbH,bosch gmbh,Automotive,automotive,Auto Parts,Germany,Verified Real Company Database,100,True
+Continental AG,continental ag,Automotive,automotive,Auto Parts,Germany,Verified Real Company Database,100,True
+Porsche AG,porsche ag,Automotive,automotive,Luxury Automobiles,Germany,Verified Real Company Database,100,True
+Audi AG,audi ag,Automotive,automotive,Automobile Manufacturing,Germany,Verified Real Company Database,100,True
+Henkel AG & Co.,henkel ag co,FMCG,fmcg,Consumer Goods,Germany,Verified Real Company Database,100,True
+Adidas AG,adidas ag,Retail,retail,Sportswear,Germany,Verified Real Company Database,100,True
+Deutsche Telekom AG,deutsche telekom ag,Telecommunications,telecommunications,Telecom Services,Germany,Verified Real Company Database,100,True
+E.ON SE,eon se,Energy,energy,Utilities,Germany,Verified Real Company Database,100,True
+RWE AG,rwe ag,Energy,energy,Utilities,Germany,Verified Real Company Database,100,True
+Deutsche Post AG,deutsche post ag,Transportation,transportation,Logistics,Germany,Verified Real Company Database,100,True
+Lufthansa AG,lufthansa ag,Aviation,aviation,Airlines,Germany,Verified Real Company Database,100,True
+Commerzbank AG,commerzbank ag,Banking,banking,Commercial Banking,Germany,Verified Real Company Database,100,True
+Munich Re,munich re,Financial Services,financial services,Reinsurance,Germany,Verified Real Company Database,100,True
+Infineon Technologies AG,infineon technologies ag,Technology,technology,Semiconductors,Germany,Verified Real Company Database,100,True
+Merck KGaA,merck kgaa,Healthcare,healthcare,Pharmaceuticals,Germany,Verified Real Company Database,100,True
+Fresenius SE & Co.,fresenius se co,Healthcare,healthcare,Healthcare Services,Germany,Verified Real Company Database,100,True
+Beiersdorf AG,beiersdorf ag,FMCG,fmcg,Personal Care,Germany,Verified Real Company Database,100,True
+ThyssenKrupp AG,thyssenkrupp ag,Manufacturing,manufacturing,Steel & Engineering,Germany,Verified Real Company Database,100,True
+Deutsche Börse AG,deutsche boerse ag,Financial Services,financial services,Stock Exchange,Germany,Verified Real Company Database,100,True
+Linde plc,linde plc,Chemicals,chemicals,Industrial Gases,Germany,Verified Real Company Database,100,True
+TotalEnergies SE,totalenergies se,Energy,energy,Oil & Gas,France,Verified Real Company Database,100,True
+LVMH Moët Hennessy Louis Vuitton,lvmh moet hennessy louis vuitton,Retail,retail,Luxury Goods,France,Verified Real Company Database,100,True
+L'Oréal SA,loreal sa,FMCG,fmcg,Cosmetics,France,Verified Real Company Database,100,True
+Sanofi SA,sanofi sa,Healthcare,healthcare,Pharmaceuticals,France,Verified Real Company Database,100,True
+BNP Paribas SA,bnp paribas sa,Banking,banking,Commercial Banking,France,Verified Real Company Database,100,True
+AXA SA,axa sa,Financial Services,financial services,Insurance,France,Verified Real Company Database,100,True
+Airbus SE,airbus se,Aerospace,aerospace,Aircraft Manufacturing,France,Verified Real Company Database,100,True
+Hermès International,hermes international,Retail,retail,Luxury Goods,France,Verified Real Company Database,100,True
+Kering SA,kering sa,Retail,retail,Luxury Goods,France,Verified Real Company Database,100,True
+Schneider Electric SE,schneider electric se,Technology,technology,Industrial Automation,France,Verified Real Company Database,100,True
+Société Générale SA,societe generale sa,Banking,banking,Commercial Banking,France,Verified Real Company Database,100,True
+Crédit Agricole SA,credit agricole sa,Banking,banking,Commercial Banking,France,Verified Real Company Database,100,True
+Danone SA,danone sa,FMCG,fmcg,Food Products,France,Verified Real Company Database,100,True
+Air Liquide SA,air liquide sa,Chemicals,chemicals,Industrial Gases,France,Verified Real Company Database,100,True
+Renault SA,renault sa,Automotive,automotive,Automobile Manufacturing,France,Verified Real Company Database,100,True
+Peugeot SA (Stellantis),peugeot sa stellantis,Automotive,automotive,Automobile Manufacturing,France,Verified Real Company Database,100,True
+Orange SA,orange sa,Telecommunications,telecommunications,Telecom Services,France,Verified Real Company Database,100,True
+Carrefour SA,carrefour sa,Retail,retail,Supermarket Chain,France,Verified Real Company Database,100,True
+Vinci SA,vinci sa,Infrastructure,infrastructure,Construction,France,Verified Real Company Database,100,True
+Engie SA,engie sa,Energy,energy,Utilities,France,Verified Real Company Database,100,True
+Saint-Gobain SA,saint gobain sa,Manufacturing,manufacturing,Building Materials,France,Verified Real Company Database,100,True
+Safran SA,safran sa,Aerospace,aerospace,Aircraft Equipment,France,Verified Real Company Database,100,True
+Michelin,michelin,Automotive,automotive,Tyre Manufacturing,France,Verified Real Company Database,100,True
+Dassault Systèmes SE,dassault systemes se,Technology,technology,Software,France,Verified Real Company Database,100,True
+Capgemini SE,capgemini se,IT Services,it services,IT Consulting,France,Verified Real Company Database,100,True
+Publicis Groupe SA,publicis groupe sa,Media,media,Advertising,France,Verified Real Company Database,100,True
+Veolia Environnement SA,veolia environnement sa,Utilities,utilities,Water & Waste Management,France,Verified Real Company Database,100,True
+Christian Dior SE,christian dior se,Retail,retail,Luxury Goods,France,Verified Real Company Database,100,True
+Eni SpA,eni spa,Energy,energy,Oil & Gas,Italy,Verified Real Company Database,100,True
+Ferrari NV,ferrari nv,Automotive,automotive,Luxury Automobiles,Italy,Verified Real Company Database,100,True
+Enel SpA,enel spa,Energy,energy,Utilities,Italy,Verified Real Company Database,100,True
+Intesa Sanpaolo SpA,intesa sanpaolo spa,Banking,banking,Commercial Banking,Italy,Verified Real Company Database,100,True
+UniCredit SpA,unicredit spa,Banking,banking,Commercial Banking,Italy,Verified Real Company Database,100,True
+Generali Group,generali group,Financial Services,financial services,Insurance,Italy,Verified Real Company Database,100,True
+FCA (Fiat Chrysler),fca fiat chrysler,Automotive,automotive,Automobile Manufacturing,Italy,Verified Real Company Database,100,True
+Leonardo SpA,leonardo spa,Aerospace,aerospace,Defense,Italy,Verified Real Company Database,100,True
+Telecom Italia SpA,telecom italia spa,Telecommunications,telecommunications,Telecom Services,Italy,Verified Real Company Database,100,True
+Pirelli & C. SpA,pirelli c spa,Automotive,automotive,Tyre Manufacturing,Italy,Verified Real Company Database,100,True
+Luxottica Group (EssilorLuxottica),luxottica group essilorluxottica,Retail,retail,Eyewear,Italy,Verified Real Company Database,100,True
+Prada SpA,prada spa,Retail,retail,Luxury Fashion,Italy,Verified Real Company Database,100,True
+Salvatore Ferragamo SpA,salvatore ferragamo spa,Retail,retail,Luxury Fashion,Italy,Verified Real Company Database,100,True
+Moncler SpA,moncler spa,Retail,retail,Luxury Apparel,Italy,Verified Real Company Database,100,True
+Campari Group,campari group,FMCG,fmcg,Alcoholic Beverages,Italy,Verified Real Company Database,100,True
+Atlantia SpA,atlantia spa,Infrastructure,infrastructure,Toll Roads,Italy,Verified Real Company Database,100,True
+Terna SpA,terna spa,Energy,energy,Power Transmission,Italy,Verified Real Company Database,100,True
+Poste Italiane SpA,poste italiane spa,Financial Services,financial services,Postal Services,Italy,Verified Real Company Database,100,True
+Banco Santander SA,banco santander sa,Banking,banking,Commercial Banking,Spain,Verified Real Company Database,100,True
+Telefónica SA,telefonica sa,Telecommunications,telecommunications,Telecom Services,Spain,Verified Real Company Database,100,True
+Inditex SA (Zara),inditex sa zara,Retail,retail,Fashion Retail,Spain,Verified Real Company Database,100,True
+Iberdrola SA,iberdrola sa,Energy,energy,Utilities,Spain,Verified Real Company Database,100,True
+BBVA (Banco Bilbao Vizcaya Argentaria),bbva banco bilbao vizcaya argentaria,Banking,banking,Commercial Banking,Spain,Verified Real Company Database,100,True
+Repsol SA,repsol sa,Energy,energy,Oil & Gas,Spain,Verified Real Company Database,100,True
+CaixaBank SA,caixabank sa,Banking,banking,Commercial Banking,Spain,Verified Real Company Database,100,True
+ACS Group,acs group,Infrastructure,infrastructure,Construction,Spain,Verified Real Company Database,100,True
+Naturgy Energy Group SA,naturgy energy group sa,Energy,energy,Utilities,Spain,Verified Real Company Database,100,True
+Amadeus IT Group SA,amadeus it group sa,Technology,technology,Travel Technology,Spain,Verified Real Company Database,100,True
+Ferrovial SA,ferrovial sa,Infrastructure,infrastructure,Construction,Spain,Verified Real Company Database,100,True
+Endesa SA,endesa sa,Energy,energy,Utilities,Spain,Verified Real Company Database,100,True
+Mapfre SA,mapfre sa,Financial Services,financial services,Insurance,Spain,Verified Real Company Database,100,True
+IAG (International Airlines Group),iag international airlines group,Aviation,aviation,Airlines,Spain,Verified Real Company Database,100,True
+Acerinox SA,acerinox sa,Manufacturing,manufacturing,Stainless Steel,Spain,Verified Real Company Database,100,True
+Grifols SA,grifols sa,Healthcare,healthcare,Biopharmaceuticals,Spain,Verified Real Company Database,100,True
+Viscofan SA,viscofan sa,Manufacturing,manufacturing,Food Casings,Spain,Verified Real Company Database,100,True
+Nestlé SA,nestle sa,FMCG,fmcg,Food Products,Switzerland,Verified Real Company Database,100,True
+Novartis AG,novartis ag,Healthcare,healthcare,Pharmaceuticals,Switzerland,Verified Real Company Database,100,True
+Roche Holding AG,roche holding ag,Healthcare,healthcare,Pharmaceuticals,Switzerland,Verified Real Company Database,100,True
+UBS Group AG,ubs group ag,Banking,banking,Investment Banking,Switzerland,Verified Real Company Database,100,True
+Credit Suisse Group AG,credit suisse group ag,Banking,banking,Investment Banking,Switzerland,Verified Real Company Database,100,True
+Zurich Insurance Group AG,zurich insurance group ag,Financial Services,financial services,Insurance,Switzerland,Verified Real Company Database,100,True
+ABB Ltd,abb ltd,Technology,technology,Industrial Automation,Switzerland,Verified Real Company Database,100,True
+Richemont SA,richemont sa,Retail,retail,Luxury Goods,Switzerland,Verified Real Company Database,100,True
+Swatch Group AG,swatch group ag,Retail,retail,Watches,Switzerland,Verified Real Company Database,100,True
+Holcim Ltd,holcim ltd,Cement,cement,Cement Production,Switzerland,Verified Real Company Database,100,True
+Lonza Group AG,lonza group ag,Healthcare,healthcare,Life Sciences,Switzerland,Verified Real Company Database,100,True
+Swiss Re AG,swiss re ag,Financial Services,financial services,Reinsurance,Switzerland,Verified Real Company Database,100,True
+Givaudan SA,givaudan sa,Chemicals,chemicals,Flavors & Fragrances,Switzerland,Verified Real Company Database,100,True
+Geberit AG,geberit ag,Manufacturing,manufacturing,Sanitary Products,Switzerland,Verified Real Company Database,100,True
+Schindler Holding AG,schindler holding ag,Manufacturing,manufacturing,Elevators & Escalators,Switzerland,Verified Real Company Database,100,True
+Sika AG,sika ag,Chemicals,chemicals,Construction Chemicals,Switzerland,Verified Real Company Database,100,True
+Swisscom AG,swisscom ag,Telecommunications,telecommunications,Telecom Services,Switzerland,Verified Real Company Database,100,True
+LafargeHolcim,lafargeholcim,Cement,cement,Cement Production,Switzerland,Verified Real Company Database,100,True
+ASML Holding NV,asml holding nv,Technology,technology,Semiconductor Equipment,Netherlands,Verified Real Company Database,100,True
+ING Group NV,ing group nv,Banking,banking,Commercial Banking,Netherlands,Verified Real Company Database,100,True
+Philips NV,philips nv,Healthcare,healthcare,Medical Devices,Netherlands,Verified Real Company Database,100,True
+Unilever NV,unilever nv,FMCG,fmcg,Consumer Goods,Netherlands,Verified Real Company Database,100,True
+Heineken NV,heineken nv,FMCG,fmcg,Beverages,Netherlands,Verified Real Company Database,100,True
+Ahold Delhaize NV,ahold delhaize nv,Retail,retail,Supermarket Chain,Netherlands,Verified Real Company Database,100,True
+Akzo Nobel NV,akzo nobel nv,Chemicals,chemicals,Paints & Coatings,Netherlands,Verified Real Company Database,100,True
+Aegon NV,aegon nv,Financial Services,financial services,Insurance,Netherlands,Verified Real Company Database,100,True
+NN Group NV,nn group nv,Financial Services,financial services,Insurance,Netherlands,Verified Real Company Database,100,True
+RELX NV,relx nv,Media,media,Publishing & Information,Netherlands,Verified Real Company Database,100,True
+Wolters Kluwer NV,wolters kluwer nv,Media,media,Information Services,Netherlands,Verified Real Company Database,100,True
+Randstad NV,randstad nv,Services,services,Staffing,Netherlands,Verified Real Company Database,100,True
+ArcelorMittal,arcelormittal,Manufacturing,manufacturing,Steel Production,Netherlands,Verified Real Company Database,100,True
+Prosus NV,prosus nv,Technology,technology,Internet Services,Netherlands,Verified Real Company Database,100,True
+Adyen NV,adyen nv,Financial Services,financial services,Payment Processing,Netherlands,Verified Real Company Database,100,True
+Volvo AB,volvo ab,Automotive,automotive,Commercial Vehicles,Sweden,Verified Real Company Database,100,True
+Ericsson AB,ericsson ab,Technology,technology,Telecommunications Equipment,Sweden,Verified Real Company Database,100,True
+H&M (Hennes & Mauritz AB),hm hennes mauritz ab,Retail,retail,Fashion Retail,Sweden,Verified Real Company Database,100,True
+Spotify Technology SA,spotify technology sa,Technology,technology,Music Streaming,Sweden,Verified Real Company Database,100,True
+Atlas Copco AB,atlas copco ab,Manufacturing,manufacturing,Industrial Equipment,Sweden,Verified Real Company Database,100,True
+Sandvik AB,sandvik ab,Manufacturing,manufacturing,Industrial Tools,Sweden,Verified Real Company Database,100,True
+SKF AB,skf ab,Manufacturing,manufacturing,Bearings,Sweden,Verified Real Company Database,100,True
+Electrolux AB,electrolux ab,Consumer Durables,consumer durables,Home Appliances,Sweden,Verified Real Company Database,100,True
+Nordea Bank Abp,nordea bank abp,Banking,banking,Commercial Banking,Sweden,Verified Real Company Database,100,True
+Swedbank AB,swedbank ab,Banking,banking,Commercial Banking,Sweden,Verified Real Company Database,100,True
+Skandinaviska Enskilda Banken AB (SEB),skandinaviska enskilda banken ab seb,Banking,banking,Commercial Banking,Sweden,Verified Real Company Database,100,True
+Telia Company AB,telia company ab,Telecommunications,telecommunications,Telecom Services,Sweden,Verified Real Company Database,100,True
+Alfa Laval AB,alfa laval ab,Manufacturing,manufacturing,Industrial Equipment,Sweden,Verified Real Company Database,100,True
+Husqvarna AB,husqvarna ab,Manufacturing,manufacturing,Outdoor Power Products,Sweden,Verified Real Company Database,100,True
+Scania AB,scania ab,Automotive,automotive,Trucks & Buses,Sweden,Verified Real Company Database,100,True
+Novo Nordisk A/S,novo nordisk as,Healthcare,healthcare,Pharmaceuticals,Denmark,Verified Real Company Database,100,True
+Maersk A/S,maersk as,Transportation,transportation,Shipping,Denmark,Verified Real Company Database,100,True
+Carlsberg Group,carlsberg group,FMCG,fmcg,Beverages,Denmark,Verified Real Company Database,100,True
+Vestas Wind Systems A/S,vestas wind systems as,Energy,energy,Wind Turbines,Denmark,Verified Real Company Database,100,True
+Ørsted A/S,orsted as,Energy,energy,Renewable Energy,Denmark,Verified Real Company Database,100,True
+DSV A/S,dsv as,Transportation,transportation,Logistics,Denmark,Verified Real Company Database,100,True
+Pandora A/S,pandora as,Retail,retail,Jewelry,Denmark,Verified Real Company Database,100,True
+Coloplast A/S,coloplast as,Healthcare,healthcare,Medical Devices,Denmark,Verified Real Company Database,100,True
+Genmab A/S,genmab as,Healthcare,healthcare,Biotechnology,Denmark,Verified Real Company Database,100,True
+Danske Bank A/S,danske bank as,Banking,banking,Commercial Banking,Denmark,Verified Real Company Database,100,True
+Novozymes A/S,novozymes as,Chemicals,chemicals,Industrial Enzymes,Denmark,Verified Real Company Database,100,True
+Chr. Hansen Holding A/S,chr hansen holding as,FMCG,fmcg,Food Ingredients,Denmark,Verified Real Company Database,100,True
+William Demant Holding A/S,william demant holding as,Healthcare,healthcare,Hearing Aids,Denmark,Verified Real Company Database,100,True
+Rockwool International A/S,rockwool international as,Manufacturing,manufacturing,Insulation,Denmark,Verified Real Company Database,100,True
+Equinor ASA,equinor asa,Energy,energy,Oil & Gas,Norway,Verified Real Company Database,100,True
+Telenor ASA,telenor asa,Telecommunications,telecommunications,Telecom Services,Norway,Verified Real Company Database,100,True
+DNB ASA,dnb asa,Banking,banking,Commercial Banking,Norway,Verified Real Company Database,100,True
+Norsk Hydro ASA,norsk hydro asa,Manufacturing,manufacturing,Aluminum,Norway,Verified Real Company Database,100,True
+Yara International ASA,yara international asa,Chemicals,chemicals,Fertilizers,Norway,Verified Real Company Database,100,True
+Orkla ASA,orkla asa,FMCG,fmcg,Consumer Goods,Norway,Verified Real Company Database,100,True
+Aker BP ASA,aker bp asa,Energy,energy,Oil & Gas,Norway,Verified Real Company Database,100,True
+Subsea 7 S.A.,subsea 7 sa,Energy,energy,Oil Services,Norway,Verified Real Company Database,100,True
+Schibsted ASA,schibsted asa,Media,media,Publishing & Online Classifieds,Norway,Verified Real Company Database,100,True
+Mowi ASA,mowi asa,FMCG,fmcg,Seafood,Norway,Verified Real Company Database,100,True
+Nokia Corporation,nokia corporation,Technology,technology,Telecommunications Equipment,Finland,Verified Real Company Database,100,True
+Kone Corporation,kone corporation,Manufacturing,manufacturing,Elevators & Escalators,Finland,Verified Real Company Database,100,True
+Neste Corporation,neste corporation,Energy,energy,Renewable Fuels,Finland,Verified Real Company Database,100,True
+UPM-Kymmene Corporation,upm kymmene corporation,Manufacturing,manufacturing,Paper & Pulp,Finland,Verified Real Company Database,100,True
+Stora Enso Oyj,stora enso oyj,Manufacturing,manufacturing,Paper & Pulp,Finland,Verified Real Company Database,100,True
+Fortum Corporation,fortum corporation,Energy,energy,Utilities,Finland,Verified Real Company Database,100,True
+Wärtsilä Corporation,wartsila corporation,Manufacturing,manufacturing,Marine & Energy Equipment,Finland,Verified Real Company Database,100,True
+Sampo Group,sampo group,Financial Services,financial services,Insurance,Finland,Verified Real Company Database,100,True
+Kesko Corporation,kesko corporation,Retail,retail,Retail Chain,Finland,Verified Real Company Database,100,True
+Anheuser-Busch InBev SA/NV,anheuser busch inbev sanv,FMCG,fmcg,Beverages,Belgium,Verified Real Company Database,100,True
+KBC Group NV,kbc group nv,Banking,banking,Commercial Banking,Belgium,Verified Real Company Database,100,True
+Ageas SA/NV,ageas sanv,Financial Services,financial services,Insurance,Belgium,Verified Real Company Database,100,True
+Solvay SA,solvay sa,Chemicals,chemicals,Chemical Manufacturing,Belgium,Verified Real Company Database,100,True
+UCB SA,ucb sa,Healthcare,healthcare,Biopharmaceuticals,Belgium,Verified Real Company Database,100,True
+Proximus Group,proximus group,Telecommunications,telecommunications,Telecom Services,Belgium,Verified Real Company Database,100,True
+Umicore SA,umicore sa,Manufacturing,manufacturing,Materials Technology,Belgium,Verified Real Company Database,100,True
+Telenet Group Holding NV,telenet group holding nv,Telecommunications,telecommunications,Cable & Internet,Belgium,Verified Real Company Database,100,True
+Colruyt Group NV,colruyt group nv,Retail,retail,Supermarket Chain,Belgium,Verified Real Company Database,100,True
+Sofina SA,sofina sa,Financial Services,financial services,Investment Holding,Belgium,Verified Real Company Database,100,True
+Toyota Motor Corporation,toyota motor corporation,Automotive,automotive,Automobile Manufacturing,Japan,Verified Real Company Database,100,True
+Sony Corporation,sony corporation,Technology,technology,Consumer Electronics,Japan,Verified Real Company Database,100,True
+Honda Motor Co. Ltd.,honda motor co ltd,Automotive,automotive,Automobile Manufacturing,Japan,Verified Real Company Database,100,True
+Panasonic Corporation,panasonic corporation,Technology,technology,Consumer Electronics,Japan,Verified Real Company Database,100,True
+Nissan Motor Co. Ltd.,nissan motor co ltd,Automotive,automotive,Automobile Manufacturing,Japan,Verified Real Company Database,100,True
+SoftBank Group Corp.,softbank group corp,Technology,technology,Telecommunications,Japan,Verified Real Company Database,100,True
+Mitsubishi Corporation,mitsubishi corporation,Conglomerate,conglomerate,Diversified,Japan,Verified Real Company Database,100,True
+Mitsui & Co. Ltd.,mitsui co ltd,Conglomerate,conglomerate,Trading,Japan,Verified Real Company Database,100,True
+Hitachi Ltd.,hitachi ltd,Technology,technology,Industrial Equipment,Japan,Verified Real Company Database,100,True
+Toshiba Corporation,toshiba corporation,Technology,technology,Industrial Equipment,Japan,Verified Real Company Database,100,True
+Canon Inc.,canon inc,Technology,technology,Imaging Products,Japan,Verified Real Company Database,100,True
+Nikon Corporation,nikon corporation,Technology,technology,Imaging Products,Japan,Verified Real Company Database,100,True
+Fujifilm Holdings Corporation,fujifilm holdings corporation,Technology,technology,Imaging & Healthcare,Japan,Verified Real Company Database,100,True
+Sharp Corporation,sharp corporation,Technology,technology,Consumer Electronics,Japan,Verified Real Company Database,100,True
+Ricoh Company Ltd.,ricoh company ltd,Technology,technology,Office Equipment,Japan,Verified Real Company Database,100,True
+Mitsubishi Electric Corporation,mitsubishi electric corporation,Technology,technology,Electrical Equipment,Japan,Verified Real Company Database,100,True
+NEC Corporation,nec corporation,Technology,technology,IT Services,Japan,Verified Real Company Database,100,True
+Fujitsu Limited,fujitsu limited,Technology,technology,IT Services,Japan,Verified Real Company Database,100,True
+NTT Data Corporation,ntt data corporation,IT Services,it services,IT Services,Japan,Verified Real Company Database,100,True
+Rakuten Inc.,rakuten inc,E-commerce,ecommerce,Online Retail,Japan,Verified Real Company Database,100,True
+Nomura Holdings Inc.,nomura holdings inc,Banking,banking,Investment Banking,Japan,Verified Real Company Database,100,True
+Mitsubishi UFJ Financial Group,mitsubishi ufj financial group,Banking,banking,Commercial Banking,Japan,Verified Real Company Database,100,True
+Sumitomo Mitsui Financial Group,sumitomo mitsui financial group,Banking,banking,Commercial Banking,Japan,Verified Real Company Database,100,True
+Mizuho Financial Group,mizuho financial group,Banking,banking,Commercial Banking,Japan,Verified Real Company Database,100,True
+Japan Post Bank Co. Ltd.,japan post bank co ltd,Banking,banking,Commercial Banking,Japan,Verified Real Company Database,100,True
+Dai-ichi Life Holdings Inc.,daiichi life holdings inc,Financial Services,financial services,Insurance,Japan,Verified Real Company Database,100,True
+Tokio Marine Holdings Inc.,tokio marine holdings inc,Financial Services,financial services,Insurance,Japan,Verified Real Company Database,100,True
+MS&AD Insurance Group Holdings,msad insurance group holdings,Financial Services,financial services,Insurance,Japan,Verified Real Company Database,100,True
+Seven & i Holdings Co. Ltd.,seven i holdings co ltd,Retail,retail,Convenience Stores,Japan,Verified Real Company Database,100,True
+Fast Retailing Co. Ltd. (Uniqlo),fast retailing co ltd uniqlo,Retail,retail,Fashion Retail,Japan,Verified Real Company Database,100,True
+Aeon Co. Ltd.,aeon co ltd,Retail,retail,Retail Chain,Japan,Verified Real Company Database,100,True
+Takeda Pharmaceutical Company,takeda pharmaceutical company,Healthcare,healthcare,Pharmaceuticals,Japan,Verified Real Company Database,100,True
+Astellas Pharma Inc.,astellas pharma inc,Healthcare,healthcare,Pharmaceuticals,Japan,Verified Real Company Database,100,True
+Daiichi Sankyo Company,daiichi sankyo company,Healthcare,healthcare,Pharmaceuticals,Japan,Verified Real Company Database,100,True
+Eisai Co. Ltd.,eisai co ltd,Healthcare,healthcare,Pharmaceuticals,Japan,Verified Real Company Database,100,True
+Otsuka Holdings Co. Ltd.,otsuka holdings co ltd,Healthcare,healthcare,Pharmaceuticals,Japan,Verified Real Company Database,100,True
+Olympus Corporation,olympus corporation,Healthcare,healthcare,Medical Devices,Japan,Verified Real Company Database,100,True
+Terumo Corporation,terumo corporation,Healthcare,healthcare,Medical Devices,Japan,Verified Real Company Database,100,True
+Kyocera Corporation,kyocera corporation,Technology,technology,Electronics,Japan,Verified Real Company Database,100,True
+TDK Corporation,tdk corporation,Technology,technology,Electronic Components,Japan,Verified Real Company Database,100,True
+Murata Manufacturing Co. Ltd.,murata manufacturing co ltd,Technology,technology,Electronic Components,Japan,Verified Real Company Database,100,True
+Keyence Corporation,keyence corporation,Technology,technology,Sensors & Automation,Japan,Verified Real Company Database,100,True
+Fanuc Corporation,fanuc corporation,Manufacturing,manufacturing,Robotics,Japan,Verified Real Company Database,100,True
+Komatsu Ltd.,komatsu ltd,Manufacturing,manufacturing,Construction Equipment,Japan,Verified Real Company Database,100,True
+Kubota Corporation,kubota corporation,Manufacturing,manufacturing,Agricultural Equipment,Japan,Verified Real Company Database,100,True
+Mazda Motor Corporation,mazda motor corporation,Automotive,automotive,Automobile Manufacturing,Japan,Verified Real Company Database,100,True
+Suzuki Motor Corporation,suzuki motor corporation,Automotive,automotive,Automobile Manufacturing,Japan,Verified Real Company Database,100,True
+Subaru Corporation,subaru corporation,Automotive,automotive,Automobile Manufacturing,Japan,Verified Real Company Database,100,True
+Yamaha Corporation,yamaha corporation,Manufacturing,manufacturing,Musical Instruments,Japan,Verified Real Company Database,100,True
+Yamaha Motor Co. Ltd.,yamaha motor co ltd,Automotive,automotive,Motorcycles,Japan,Verified Real Company Database,100,True
+Kawasaki Heavy Industries,kawasaki heavy industries,Manufacturing,manufacturing,Heavy Machinery,Japan,Verified Real Company Database,100,True
+IHI Corporation,ihi corporation,Manufacturing,manufacturing,Heavy Machinery,Japan,Verified Real Company Database,100,True
+JFE Holdings Inc.,jfe holdings inc,Manufacturing,manufacturing,Steel Production,Japan,Verified Real Company Database,100,True
+Nippon Steel Corporation,nippon steel corporation,Manufacturing,manufacturing,Steel Production,Japan,Verified Real Company Database,100,True
+Sumitomo Metal Mining Co. Ltd.,sumitomo metal mining co ltd,Mining,mining,Metals & Mining,Japan,Verified Real Company Database,100,True
+INPEX Corporation,inpex corporation,Energy,energy,Oil & Gas,Japan,Verified Real Company Database,100,True
+JXTG Holdings Inc.,jxtg holdings inc,Energy,energy,Oil Refining,Japan,Verified Real Company Database,100,True
+Chubu Electric Power Co.,chubu electric power co,Energy,energy,Utilities,Japan,Verified Real Company Database,100,True
+Tokyo Electric Power Co.,tokyo electric power co,Energy,energy,Utilities,Japan,Verified Real Company Database,100,True
+Kansai Electric Power Co.,kansai electric power co,Energy,energy,Utilities,Japan,Verified Real Company Database,100,True
+ANA Holdings Inc.,ana holdings inc,Aviation,aviation,Airlines,Japan,Verified Real Company Database,100,True
+Japan Airlines Co. Ltd.,japan airlines co ltd,Aviation,aviation,Airlines,Japan,Verified Real Company Database,100,True
+East Japan Railway Company,east japan railway company,Transportation,transportation,Rail Transport,Japan,Verified Real Company Database,100,True
+Central Japan Railway Company,central japan railway company,Transportation,transportation,Rail Transport,Japan,Verified Real Company Database,100,True
+West Japan Railway Company,west japan railway company,Transportation,transportation,Rail Transport,Japan,Verified Real Company Database,100,True
+Mitsui O.S.K. Lines Ltd.,mitsui osk lines ltd,Transportation,transportation,Shipping,Japan,Verified Real Company Database,100,True
+Nippon Yusen K.K.,nippon yusen kk,Transportation,transportation,Shipping,Japan,Verified Real Company Database,100,True
+Kawasaki Kisen Kaisha Ltd.,kawasaki kisen kaisha ltd,Transportation,transportation,Shipping,Japan,Verified Real Company Database,100,True
+Nitori Holdings Co. Ltd.,nitori holdings co ltd,Retail,retail,Furniture Retail,Japan,Verified Real Company Database,100,True
+Don Quijote Holdings Co.,don quijote holdings co,Retail,retail,Discount Stores,Japan,Verified Real Company Database,100,True
+Isetan Mitsukoshi Holdings,isetan mitsukoshi holdings,Retail,retail,Department Stores,Japan,Verified Real Company Database,100,True
+Lawson Inc.,lawson inc,Retail,retail,Convenience Stores,Japan,Verified Real Company Database,100,True
+FamilyMart Co. Ltd.,familymart co ltd,Retail,retail,Convenience Stores,Japan,Verified Real Company Database,100,True
+Suntory Holdings Limited,suntory holdings limited,FMCG,fmcg,Beverages,Japan,Verified Real Company Database,100,True
+Asahi Group Holdings Ltd.,asahi group holdings ltd,FMCG,fmcg,Beverages,Japan,Verified Real Company Database,100,True
+Kirin Holdings Company Ltd.,kirin holdings company ltd,FMCG,fmcg,Beverages,Japan,Verified Real Company Database,100,True
+Ajinomoto Co. Inc.,ajinomoto co inc,FMCG,fmcg,Food Products,Japan,Verified Real Company Database,100,True
+Nissin Foods Holdings Co.,nissin foods holdings co,FMCG,fmcg,Food Products,Japan,Verified Real Company Database,100,True
+Kao Corporation,kao corporation,FMCG,fmcg,Consumer Goods,Japan,Verified Real Company Database,100,True
+Shiseido Company Limited,shiseido company limited,FMCG,fmcg,Cosmetics,Japan,Verified Real Company Database,100,True
+Unicharm Corporation,unicharm corporation,FMCG,fmcg,Consumer Goods,Japan,Verified Real Company Database,100,True
+Bridgestone Corporation,bridgestone corporation,Automotive,automotive,Tyre Manufacturing,Japan,Verified Real Company Database,100,True
+Sumitomo Rubber Industries,sumitomo rubber industries,Automotive,automotive,Tyre Manufacturing,Japan,Verified Real Company Database,100,True
+Denso Corporation,denso corporation,Automotive,automotive,Auto Components,Japan,Verified Real Company Database,100,True
+Aisin Seiki Co. Ltd.,aisin seiki co ltd,Automotive,automotive,Auto Components,Japan,Verified Real Company Database,100,True
+Takata Corporation,takata corporation,Automotive,automotive,Auto Components,Japan,Verified Real Company Database,100,True
+Nintendo Co. Ltd.,nintendo co ltd,Technology,technology,Gaming,Japan,Verified Real Company Database,100,True
+Bandai Namco Holdings Inc.,bandai namco holdings inc,Technology,technology,Gaming & Entertainment,Japan,Verified Real Company Database,100,True
+Capcom Co. Ltd.,capcom co ltd,Technology,technology,Gaming,Japan,Verified Real Company Database,100,True
+Square Enix Holdings Co.,square enix holdings co,Technology,technology,Gaming,Japan,Verified Real Company Database,100,True
+Konami Holdings Corporation,konami holdings corporation,Technology,technology,Gaming,Japan,Verified Real Company Database,100,True
+Dentsu Inc.,dentsu inc,Media,media,Advertising,Japan,Verified Real Company Database,100,True
+Hakuhodo DY Holdings Inc.,hakuhodo dy holdings inc,Media,media,Advertising,Japan,Verified Real Company Database,100,True
+Alibaba Group Holding Limited,alibaba group holding limited,E-commerce,ecommerce,Online Retail,China,Verified Real Company Database,100,True
+Tencent Holdings Limited,tencent holdings limited,Technology,technology,Internet Services,China,Verified Real Company Database,100,True
+Huawei Technologies Co. Ltd.,huawei technologies co ltd,Technology,technology,Telecommunications,China,Verified Real Company Database,100,True
+China Mobile Limited,china mobile limited,Telecommunications,telecommunications,Telecom Services,China,Verified Real Company Database,100,True
+Industrial and Commercial Bank of China,industrial and commercial bank of china,Banking,banking,Commercial Banking,China,Verified Real Company Database,100,True
+China Construction Bank,china construction bank,Banking,banking,Commercial Banking,China,Verified Real Company Database,100,True
+Agricultural Bank of China,agricultural bank of china,Banking,banking,Commercial Banking,China,Verified Real Company Database,100,True
+Bank of China,bank of china,Banking,banking,Commercial Banking,China,Verified Real Company Database,100,True
+Ping An Insurance Group,ping an insurance group,Financial Services,financial services,Insurance,China,Verified Real Company Database,100,True
+China Life Insurance Company,china life insurance company,Financial Services,financial services,Insurance,China,Verified Real Company Database,100,True
+PetroChina Company Limited,petrochina company limited,Energy,energy,Oil & Gas,China,Verified Real Company Database,100,True
+Sinopec Group,sinopec group,Energy,energy,Oil & Gas,China,Verified Real Company Database,100,True
+China National Offshore Oil Corporation,china national offshore oil corporation,Energy,energy,Oil & Gas,China,Verified Real Company Database,100,True
+State Grid Corporation of China,state grid corporation of china,Energy,energy,Utilities,China,Verified Real Company Database,100,True
+China Railway Engineering Corporation,china railway engineering corporation,Infrastructure,infrastructure,Construction,China,Verified Real Company Database,100,True
+China Railway Construction Corporation,china railway construction corporation,Infrastructure,infrastructure,Construction,China,Verified Real Company Database,100,True
+China State Construction Engineering,china state construction engineering,Infrastructure,infrastructure,Construction,China,Verified Real Company Database,100,True
+Xiaomi Corporation,xiaomi corporation,Technology,technology,Consumer Electronics,China,Verified Real Company Database,100,True
+Lenovo Group Limited,lenovo group limited,Technology,technology,Computer Hardware,China,Verified Real Company Database,100,True
+BYD Company Limited,byd company limited,Automotive,automotive,Electric Vehicles,China,Verified Real Company Database,100,True
+Geely Automobile Holdings,geely automobile holdings,Automotive,automotive,Automobile Manufacturing,China,Verified Real Company Database,100,True
+SAIC Motor Corporation,saic motor corporation,Automotive,automotive,Automobile Manufacturing,China,Verified Real Company Database,100,True
+Great Wall Motors Company,great wall motors company,Automotive,automotive,Automobile Manufacturing,China,Verified Real Company Database,100,True
+NIO Inc.,nio inc,Automotive,automotive,Electric Vehicles,China,Verified Real Company Database,100,True
+Li Auto Inc.,li auto inc,Automotive,automotive,Electric Vehicles,China,Verified Real Company Database,100,True
+XPeng Inc.,xpeng inc,Automotive,automotive,Electric Vehicles,China,Verified Real Company Database,100,True
+China Merchants Bank,china merchants bank,Banking,banking,Commercial Banking,China,Verified Real Company Database,100,True
+China Minsheng Banking Corp.,china minsheng banking corp,Banking,banking,Commercial Banking,China,Verified Real Company Database,100,True
+CITIC Group Corporation,citic group corporation,Conglomerate,conglomerate,Diversified,China,Verified Real Company Database,100,True
+China Resources Holdings,china resources holdings,Conglomerate,conglomerate,Diversified,China,Verified Real Company Database,100,True
+Baidu Inc.,baidu inc,Technology,technology,Internet Services,China,Verified Real Company Database,100,True
+JD.com Inc.,jdcom inc,E-commerce,ecommerce,Online Retail,China,Verified Real Company Database,100,True
+NetEase Inc.,netease inc,Technology,technology,Internet Services,China,Verified Real Company Database,100,True
+Pinduoduo Inc.,pinduoduo inc,E-commerce,ecommerce,Social Commerce,China,Verified Real Company Database,100,True
+Meituan,meituan,Technology,technology,Food Delivery,China,Verified Real Company Database,100,True
+ByteDance (TikTok),bytedance tiktok,Technology,technology,Social Media,China,Verified Real Company Database,100,True
+Didi Chuxing,didi chuxing,Technology,technology,Ride Hailing,China,Verified Real Company Database,100,True
+China Telecom Corporation,china telecom corporation,Telecommunications,telecommunications,Telecom Services,China,Verified Real Company Database,100,True
+China Unicom,china unicom,Telecommunications,telecommunications,Telecom Services,China,Verified Real Company Database,100,True
+ZTE Corporation,zte corporation,Technology,technology,Telecommunications Equipment,China,Verified Real Company Database,100,True
+China Southern Airlines,china southern airlines,Aviation,aviation,Airlines,China,Verified Real Company Database,100,True
+China Eastern Airlines,china eastern airlines,Aviation,aviation,Airlines,China,Verified Real Company Database,100,True
+Air China Limited,air china limited,Aviation,aviation,Airlines,China,Verified Real Company Database,100,True
+CRRC Corporation Limited,crrc corporation limited,Manufacturing,manufacturing,Railway Equipment,China,Verified Real Company Database,100,True
+COMAC (Commercial Aircraft Corporation),comac commercial aircraft corporation,Aerospace,aerospace,Aircraft Manufacturing,China,Verified Real Company Database,100,True
+Semiconductor Manufacturing International,semiconductor manufacturing international,Technology,technology,Semiconductors,China,Verified Real Company Database,100,True
+BOE Technology Group,boe technology group,Technology,technology,Display Technology,China,Verified Real Company Database,100,True
+China National Building Material,china national building material,Manufacturing,manufacturing,Building Materials,China,Verified Real Company Database,100,True
+Angang Steel Company,angang steel company,Manufacturing,manufacturing,Steel Production,China,Verified Real Company Database,100,True
+Baoshan Iron & Steel,baoshan iron steel,Manufacturing,manufacturing,Steel Production,China,Verified Real Company Database,100,True
+China Shenhua Energy Company,china shenhua energy company,Energy,energy,Coal Mining,China,Verified Real Company Database,100,True
+Wuliangye Yibin Co. Ltd.,wuliangye yibin co ltd,FMCG,fmcg,Alcoholic Beverages,China,Verified Real Company Database,100,True
+Kweichow Moutai Co. Ltd.,kweichow moutai co ltd,FMCG,fmcg,Alcoholic Beverages,China,Verified Real Company Database,100,True
+Yili Group,yili group,FMCG,fmcg,Dairy Products,China,Verified Real Company Database,100,True
+Mengniu Dairy Company,mengniu dairy company,FMCG,fmcg,Dairy Products,China,Verified Real Company Database,100,True
+DBS Group Holdings Ltd,dbs group holdings ltd,Banking,banking,Commercial Banking,Singapore,Verified Real Company Database,100,True
+Singapore Airlines Limited,singapore airlines limited,Aviation,aviation,Airlines,Singapore,Verified Real Company Database,100,True
+Singapore Telecommunications Limited,singapore telecommunications limited,Telecommunications,telecommunications,Telecom Services,Singapore,Verified Real Company Database,100,True
+United Overseas Bank Limited,united overseas bank limited,Banking,banking,Commercial Banking,Singapore,Verified Real Company Database,100,True
+Oversea-Chinese Banking Corporation,oversea chinese banking corporation,Banking,banking,Commercial Banking,Singapore,Verified Real Company Database,100,True
+Wilmar International Limited,wilmar international limited,FMCG,fmcg,Agribusiness,Singapore,Verified Real Company Database,100,True
+CapitaLand Limited,capitaland limited,Real Estate,real estate,Property Development,Singapore,Verified Real Company Database,100,True
+Keppel Corporation Limited,keppel corporation limited,Conglomerate,conglomerate,Diversified,Singapore,Verified Real Company Database,100,True
+Sembcorp Industries Ltd,sembcorp industries ltd,Conglomerate,conglomerate,Utilities & Marine,Singapore,Verified Real Company Database,100,True
+Singapore Exchange Limited,singapore exchange limited,Financial Services,financial services,Stock Exchange,Singapore,Verified Real Company Database,100,True
+Grab Holdings Limited,grab holdings limited,Technology,technology,Ride Hailing,Singapore,Verified Real Company Database,100,True
+Sea Limited (Shopee),sea limited shopee,E-commerce,ecommerce,Online Retail,Singapore,Verified Real Company Database,100,True
+Jardine Matheson Holdings,jardine matheson holdings,Conglomerate,conglomerate,Diversified,Singapore,Verified Real Company Database,100,True
+Mapletree Logistics Trust,mapletree logistics trust,Real Estate,real estate,Logistics REITs,Singapore,Verified Real Company Database,100,True
+Ascendas Real Estate Investment Trust,ascendas real estate investment trust,Real Estate,real estate,Industrial REITs,Singapore,Verified Real Company Database,100,True
+Olam International Limited,olam international limited,FMCG,fmcg,Agribusiness,Singapore,Verified Real Company Database,100,True
+ComfortDelGro Corporation,comfortdelgro corporation,Transportation,transportation,Land Transport,Singapore,Verified Real Company Database,100,True
+ST Engineering,st engineering,Aerospace,aerospace,Defense & Engineering,Singapore,Verified Real Company Database,100,True
+AIA Group Limited,aia group limited,Financial Services,financial services,Insurance,Hong Kong,Verified Real Company Database,100,True
+Hong Kong Exchanges and Clearing,hong kong exchanges and clearing,Financial Services,financial services,Stock Exchange,Hong Kong,Verified Real Company Database,100,True
+CLP Holdings Limited,clp holdings limited,Energy,energy,Utilities,Hong Kong,Verified Real Company Database,100,True
+Hang Seng Bank,hang seng bank,Banking,banking,Commercial Banking,Hong Kong,Verified Real Company Database,100,True
+Sun Hung Kai Properties,sun hung kai properties,Real Estate,real estate,Property Development,Hong Kong,Verified Real Company Database,100,True
+Henderson Land Development,henderson land development,Real Estate,real estate,Property Development,Hong Kong,Verified Real Company Database,100,True
+New World Development,new world development,Real Estate,real estate,Property Development,Hong Kong,Verified Real Company Database,100,True
+Swire Pacific Limited,swire pacific limited,Conglomerate,conglomerate,Diversified,Hong Kong,Verified Real Company Database,100,True
+Cathay Pacific Airways,cathay pacific airways,Aviation,aviation,Airlines,Hong Kong,Verified Real Company Database,100,True
+MTR Corporation Limited,mtr corporation limited,Transportation,transportation,Rail Transport,Hong Kong,Verified Real Company Database,100,True
+CK Hutchison Holdings,ck hutchison holdings,Conglomerate,conglomerate,Diversified,Hong Kong,Verified Real Company Database,100,True
+CK Asset Holdings Limited,ck asset holdings limited,Real Estate,real estate,Property Development,Hong Kong,Verified Real Company Database,100,True
+Link REIT,link reit,Real Estate,real estate,Retail REITs,Hong Kong,Verified Real Company Database,100,True
+Taiwan Semiconductor Manufacturing Company (TSMC),taiwan semiconductor manufacturing company tsmc,Technology,technology,Semiconductors,Taiwan,Verified Real Company Database,100,True
+Hon Hai Precision Industry (Foxconn),hon hai precision industry foxconn,Technology,technology,Electronics Manufacturing,Taiwan,Verified Real Company Database,100,True
+MediaTek Inc.,mediatek inc,Technology,technology,Semiconductors,Taiwan,Verified Real Company Database,100,True
+United Microelectronics Corporation,united microelectronics corporation,Technology,technology,Semiconductors,Taiwan,Verified Real Company Database,100,True
+Delta Electronics Inc.,delta electronics inc,Technology,technology,Power Electronics,Taiwan,Verified Real Company Database,100,True
+ASE Technology Holding,ase technology holding,Technology,technology,Semiconductor Packaging,Taiwan,Verified Real Company Database,100,True
+Pegatron Corporation,pegatron corporation,Technology,technology,Electronics Manufacturing,Taiwan,Verified Real Company Database,100,True
+Quanta Computer Inc.,quanta computer inc,Technology,technology,Electronics Manufacturing,Taiwan,Verified Real Company Database,100,True
+Compal Electronics Inc.,compal electronics inc,Technology,technology,Electronics Manufacturing,Taiwan,Verified Real Company Database,100,True
+Wistron Corporation,wistron corporation,Technology,technology,Electronics Manufacturing,Taiwan,Verified Real Company Database,100,True
+HTC Corporation,htc corporation,Technology,technology,Consumer Electronics,Taiwan,Verified Real Company Database,100,True
+Acer Inc.,acer inc,Technology,technology,Computer Hardware,Taiwan,Verified Real Company Database,100,True
+ASUS,asus,Technology,technology,Computer Hardware,Taiwan,Verified Real Company Database,100,True
+MSI (Micro-Star International),msi micro star international,Technology,technology,Computer Hardware,Taiwan,Verified Real Company Database,100,True
+Gigabyte Technology,gigabyte technology,Technology,technology,Computer Hardware,Taiwan,Verified Real Company Database,100,True
+Cathay Financial Holding Co.,cathay financial holding co,Financial Services,financial services,Insurance,Taiwan,Verified Real Company Database,100,True
+Fubon Financial Holding Co.,fubon financial holding co,Financial Services,financial services,Insurance,Taiwan,Verified Real Company Database,100,True
+CTBC Financial Holding Co.,ctbc financial holding co,Financial Services,financial services,Banking,Taiwan,Verified Real Company Database,100,True
+Taiwan Mobile Co. Ltd.,taiwan mobile co ltd,Telecommunications,telecommunications,Telecom Services,Taiwan,Verified Real Company Database,100,True
+Chunghwa Telecom Co. Ltd.,chunghwa telecom co ltd,Telecommunications,telecommunications,Telecom Services,Taiwan,Verified Real Company Database,100,True
+Far EasTone Telecommunications,far eastone telecommunications,Telecommunications,telecommunications,Telecom Services,Taiwan,Verified Real Company Database,100,True
+Formosa Plastics Corporation,formosa plastics corporation,Chemicals,chemicals,Petrochemicals,Taiwan,Verified Real Company Database,100,True
+Nan Ya Plastics Corporation,nan ya plastics corporation,Chemicals,chemicals,Plastics,Taiwan,Verified Real Company Database,100,True
+China Steel Corporation,china steel corporation,Manufacturing,manufacturing,Steel Production,Taiwan,Verified Real Company Database,100,True
+EVA Airways Corporation,eva airways corporation,Aviation,aviation,Airlines,Taiwan,Verified Real Company Database,100,True
+China Airlines,china airlines,Aviation,aviation,Airlines,Taiwan,Verified Real Company Database,100,True
+PTT Public Company Limited,ptt public company limited,Energy,energy,Oil & Gas,Thailand,Verified Real Company Database,100,True
+CP ALL Public Company Limited,cp all public company limited,Retail,retail,Convenience Stores,Thailand,Verified Real Company Database,100,True
+Charoen Pokphand Foods PCL,charoen pokphand foods pcl,FMCG,fmcg,Food Products,Thailand,Verified Real Company Database,100,True
+Bangkok Bank PCL,bangkok bank pcl,Banking,banking,Commercial Banking,Thailand,Verified Real Company Database,100,True
+Kasikornbank PCL,kasikornbank pcl,Banking,banking,Commercial Banking,Thailand,Verified Real Company Database,100,True
+Siam Commercial Bank PCL,siam commercial bank pcl,Banking,banking,Commercial Banking,Thailand,Verified Real Company Database,100,True
+Advanced Info Service PCL,advanced info service pcl,Telecommunications,telecommunications,Telecom Services,Thailand,Verified Real Company Database,100,True
+True Corporation PCL,true corporation pcl,Telecommunications,telecommunications,Telecom Services,Thailand,Verified Real Company Database,100,True
+Siam Cement Public Company,siam cement public company,Manufacturing,manufacturing,Cement & Building Materials,Thailand,Verified Real Company Database,100,True
+Thai Beverage PCL,thai beverage pcl,FMCG,fmcg,Beverages,Thailand,Verified Real Company Database,100,True
+Thai Airways International PCL,thai airways international pcl,Aviation,aviation,Airlines,Thailand,Verified Real Company Database,100,True
+Bangkok Dusit Medical Services,bangkok dusit medical services,Healthcare,healthcare,Hospital Operator,Thailand,Verified Real Company Database,100,True
+Central Pattana PCL,central pattana pcl,Real Estate,real estate,Shopping Malls,Thailand,Verified Real Company Database,100,True
+Land and Houses PCL,land and houses pcl,Real Estate,real estate,Property Development,Thailand,Verified Real Company Database,100,True
+Airports of Thailand PCL,airports of thailand pcl,Infrastructure,infrastructure,Airport Operations,Thailand,Verified Real Company Database,100,True
+Maybank (Malayan Banking Berhad),maybank malayan banking berhad,Banking,banking,Commercial Banking,Malaysia,Verified Real Company Database,100,True
+Public Bank Berhad,public bank berhad,Banking,banking,Commercial Banking,Malaysia,Verified Real Company Database,100,True
+CIMB Group Holdings Berhad,cimb group holdings berhad,Banking,banking,Commercial Banking,Malaysia,Verified Real Company Database,100,True
+Petronas (Petroliam Nasional Berhad),petronas petroliam nasional berhad,Energy,energy,Oil & Gas,Malaysia,Verified Real Company Database,100,True
+Tenaga Nasional Berhad,tenaga nasional berhad,Energy,energy,Utilities,Malaysia,Verified Real Company Database,100,True
+Maxis Berhad,maxis berhad,Telecommunications,telecommunications,Telecom Services,Malaysia,Verified Real Company Database,100,True
+Axiata Group Berhad,axiata group berhad,Telecommunications,telecommunications,Telecom Services,Malaysia,Verified Real Company Database,100,True
+Digi Telecommunications,digi telecommunications,Telecommunications,telecommunications,Telecom Services,Malaysia,Verified Real Company Database,100,True
+Sime Darby Berhad,sime darby berhad,Conglomerate,conglomerate,Diversified,Malaysia,Verified Real Company Database,100,True
+Genting Berhad,genting berhad,Entertainment,entertainment,Gaming & Hospitality,Malaysia,Verified Real Company Database,100,True
+AirAsia Group Berhad,airasia group berhad,Aviation,aviation,Airlines,Malaysia,Verified Real Company Database,100,True
+Malaysia Airlines Berhad,malaysia airlines berhad,Aviation,aviation,Airlines,Malaysia,Verified Real Company Database,100,True
+YTL Corporation Berhad,ytl corporation berhad,Conglomerate,conglomerate,Diversified,Malaysia,Verified Real Company Database,100,True
+IOI Corporation Berhad,ioi corporation berhad,FMCG,fmcg,Palm Oil,Malaysia,Verified Real Company Database,100,True
+Top Glove Corporation Berhad,top glove corporation berhad,Healthcare,healthcare,Medical Gloves,Malaysia,Verified Real Company Database,100,True
+Bank Central Asia (BCA),bank central asia bca,Banking,banking,Commercial Banking,Indonesia,Verified Real Company Database,100,True
+Bank Mandiri,bank mandiri,Banking,banking,Commercial Banking,Indonesia,Verified Real Company Database,100,True
+Bank Rakyat Indonesia (BRI),bank rakyat indonesia bri,Banking,banking,Commercial Banking,Indonesia,Verified Real Company Database,100,True
+Bank Negara Indonesia (BNI),bank negara indonesia bni,Banking,banking,Commercial Banking,Indonesia,Verified Real Company Database,100,True
+Telkom Indonesia,telkom indonesia,Telecommunications,telecommunications,Telecom Services,Indonesia,Verified Real Company Database,100,True
+Astra International,astra international,Conglomerate,conglomerate,Diversified,Indonesia,Verified Real Company Database,100,True
+Unilever Indonesia,unilever indonesia,FMCG,fmcg,Consumer Goods,Indonesia,Verified Real Company Database,100,True
+Indofood Sukses Makmur,indofood sukses makmur,FMCG,fmcg,Food Products,Indonesia,Verified Real Company Database,100,True
+GoTo Group (Gojek + Tokopedia),goto group gojek tokopedia,Technology,technology,Ride Hailing & E-commerce,Indonesia,Verified Real Company Database,100,True
+Bukalapak,bukalapak,E-commerce,ecommerce,Online Marketplace,Indonesia,Verified Real Company Database,100,True
+Pertamina,pertamina,Energy,energy,Oil & Gas,Indonesia,Verified Real Company Database,100,True
+PLN (Perusahaan Listrik Negara),pln perusahaan listrik negara,Energy,energy,Utilities,Indonesia,Verified Real Company Database,100,True
+Garuda Indonesia,garuda indonesia,Aviation,aviation,Airlines,Indonesia,Verified Real Company Database,100,True
+Semen Indonesia (Persero),semen indonesia persero,Cement,cement,Cement Production,Indonesia,Verified Real Company Database,100,True
+Gudang Garam,gudang garam,FMCG,fmcg,Tobacco,Indonesia,Verified Real Company Database,100,True
+SM Prime Holdings Inc.,sm prime holdings inc,Real Estate,real estate,Shopping Malls,Philippines,Verified Real Company Database,100,True
+Ayala Corporation,ayala corporation,Conglomerate,conglomerate,Diversified,Philippines,Verified Real Company Database,100,True
+SM Investments Corporation,sm investments corporation,Conglomerate,conglomerate,Diversified,Philippines,Verified Real Company Database,100,True
+BDO Unibank Inc.,bdo unibank inc,Banking,banking,Commercial Banking,Philippines,Verified Real Company Database,100,True
+Metropolitan Bank & Trust Company,metropolitan bank trust company,Banking,banking,Commercial Banking,Philippines,Verified Real Company Database,100,True
+Bank of the Philippine Islands,bank of the philippine islands,Banking,banking,Commercial Banking,Philippines,Verified Real Company Database,100,True
+PLDT Inc.,pldt inc,Telecommunications,telecommunications,Telecom Services,Philippines,Verified Real Company Database,100,True
+Globe Telecom Inc.,globe telecom inc,Telecommunications,telecommunications,Telecom Services,Philippines,Verified Real Company Database,100,True
+Jollibee Foods Corporation,jollibee foods corporation,Food & Beverage,food beverage,Fast Food,Philippines,Verified Real Company Database,100,True
+Manila Electric Company (Meralco),manila electric company meralco,Energy,energy,Utilities,Philippines,Verified Real Company Database,100,True
+Philippine Airlines,philippine airlines,Aviation,aviation,Airlines,Philippines,Verified Real Company Database,100,True
+Cebu Pacific Air,cebu pacific air,Aviation,aviation,Airlines,Philippines,Verified Real Company Database,100,True
+Universal Robina Corporation,universal robina corporation,FMCG,fmcg,Food Products,Philippines,Verified Real Company Database,100,True
+Aboitiz Power Corporation,aboitiz power corporation,Energy,energy,Power Generation,Philippines,Verified Real Company Database,100,True
+Vingroup JSC,vingroup jsc,Conglomerate,conglomerate,Diversified,Vietnam,Verified Real Company Database,100,True
+Vietcombank,vietcombank,Banking,banking,Commercial Banking,Vietnam,Verified Real Company Database,100,True
+BIDV (Bank for Investment and Development of Vietnam),bidv bank for investment and development of vietnam,Banking,banking,Commercial Banking,Vietnam,Verified Real Company Database,100,True
+Vietinbank,vietinbank,Banking,banking,Commercial Banking,Vietnam,Verified Real Company Database,100,True
+Viettel Group,viettel group,Telecommunications,telecommunications,Telecom Services,Vietnam,Verified Real Company Database,100,True
+VNPT (Vietnam Posts and Telecommunications Group),vnpt vietnam posts and telecommunications group,Telecommunications,telecommunications,Telecom Services,Vietnam,Verified Real Company Database,100,True
+MobiFone,mobifone,Telecommunications,telecommunications,Telecom Services,Vietnam,Verified Real Company Database,100,True
+PetroVietnam,petrovietnam,Energy,energy,Oil & Gas,Vietnam,Verified Real Company Database,100,True
+Electricity of Vietnam (EVN),electricity of vietnam evn,Energy,energy,Utilities,Vietnam,Verified Real Company Database,100,True
+Vietnam Airlines,vietnam airlines,Aviation,aviation,Airlines,Vietnam,Verified Real Company Database,100,True
+Vinamilk,vinamilk,FMCG,fmcg,Dairy Products,Vietnam,Verified Real Company Database,100,True
+Masan Group Corporation,masan group corporation,FMCG,fmcg,Consumer Goods,Vietnam,Verified Real Company Database,100,True
+FPT Corporation,fpt corporation,IT Services,it services,IT Services,Vietnam,Verified Real Company Database,100,True
+Hoa Phat Group,hoa phat group,Manufacturing,manufacturing,Steel Production,Vietnam,Verified Real Company Database,100,True
+Tata Consultancy Services (TCS),tata consultancy services tcs,IT Services,it services,Software Services,India,Verified Real Company Database,100,True
+Infosys Limited,infosys limited,IT Services,it services,Software Services,India,Verified Real Company Database,100,True
+Wipro Limited,wipro limited,IT Services,it services,Software Services,India,Verified Real Company Database,100,True
+HCL Technologies Limited,hcl technologies limited,IT Services,it services,Software Services,India,Verified Real Company Database,100,True
+Tech Mahindra Limited,tech mahindra limited,IT Services,it services,Software Services,India,Verified Real Company Database,100,True
+LTIMindtree Limited,ltimindtree limited,IT Services,it services,Software Services,India,Verified Real Company Database,100,True
+Mphasis Limited,mphasis limited,IT Services,it services,Software Services,India,Verified Real Company Database,100,True
+Persistent Systems Limited,persistent systems limited,IT Services,it services,Software Services,India,Verified Real Company Database,100,True
+Coforge Limited,coforge limited,IT Services,it services,Software Services,India,Verified Real Company Database,100,True
+Mindtree Limited,mindtree limited,IT Services,it services,Software Services,India,Verified Real Company Database,100,True
+L&T Infotech Limited,lt infotech limited,IT Services,it services,Software Services,India,Verified Real Company Database,100,True
+Zensar Technologies Limited,zensar technologies limited,IT Services,it services,Software Services,India,Verified Real Company Database,100,True
+KPIT Technologies Limited,kpit technologies limited,IT Services,it services,Software Services,India,Verified Real Company Database,100,True
+Cyient Limited,cyient limited,IT Services,it services,Engineering Services,India,Verified Real Company Database,100,True
+State Bank of India,state bank of india,Banking,banking,Commercial Banking,India,Verified Real Company Database,100,True
+HDFC Bank Limited,hdfc bank limited,Banking,banking,Commercial Banking,India,Verified Real Company Database,100,True
+ICICI Bank Limited,icici bank limited,Banking,banking,Commercial Banking,India,Verified Real Company Database,100,True
+Axis Bank Limited,axis bank limited,Banking,banking,Commercial Banking,India,Verified Real Company Database,100,True
+Kotak Mahindra Bank Limited,kotak mahindra bank limited,Banking,banking,Commercial Banking,India,Verified Real Company Database,100,True
+Punjab National Bank,punjab national bank,Banking,banking,Commercial Banking,India,Verified Real Company Database,100,True
+Bank of Baroda,bank of baroda,Banking,banking,Commercial Banking,India,Verified Real Company Database,100,True
+Canara Bank,canara bank,Banking,banking,Commercial Banking,India,Verified Real Company Database,100,True
+Union Bank of India,union bank of india,Banking,banking,Commercial Banking,India,Verified Real Company Database,100,True
+IndusInd Bank Limited,indusind bank limited,Banking,banking,Commercial Banking,India,Verified Real Company Database,100,True
+Yes Bank Limited,yes bank limited,Banking,banking,Commercial Banking,India,Verified Real Company Database,100,True
+IDFC First Bank Limited,idfc first bank limited,Banking,banking,Commercial Banking,India,Verified Real Company Database,100,True
+Federal Bank Limited,federal bank limited,Banking,banking,Commercial Banking,India,Verified Real Company Database,100,True
+RBL Bank Limited,rbl bank limited,Banking,banking,Commercial Banking,India,Verified Real Company Database,100,True
+HDFC Life Insurance,hdfc life insurance,Financial Services,financial services,Insurance,India,Verified Real Company Database,100,True
+SBI Life Insurance,sbi life insurance,Financial Services,financial services,Insurance,India,Verified Real Company Database,100,True
+Life Insurance Corporation of India,life insurance corporation of india,Financial Services,financial services,Insurance,India,Verified Real Company Database,100,True
+ICICI Prudential Life Insurance,icici prudential life insurance,Financial Services,financial services,Insurance,India,Verified Real Company Database,100,True
+Max Life Insurance,max life insurance,Financial Services,financial services,Insurance,India,Verified Real Company Database,100,True
+Bajaj Finance Limited,bajaj finance limited,Financial Services,financial services,NBFC,India,Verified Real Company Database,100,True
+Bajaj Finserv Limited,bajaj finserv limited,Financial Services,financial services,Financial Services,India,Verified Real Company Database,100,True
+Muthoot Finance Limited,muthoot finance limited,Financial Services,financial services,NBFC,India,Verified Real Company Database,100,True
+Manappuram Finance Limited,manappuram finance limited,Financial Services,financial services,NBFC,India,Verified Real Company Database,100,True
+Shriram Transport Finance,shriram transport finance,Financial Services,financial services,NBFC,India,Verified Real Company Database,100,True
+Reliance Industries Limited,reliance industries limited,Conglomerate,conglomerate,Diversified,India,Verified Real Company Database,100,True
+Tata Group,tata group,Conglomerate,conglomerate,Diversified,India,Verified Real Company Database,100,True
+Aditya Birla Group,aditya birla group,Conglomerate,conglomerate,Diversified,India,Verified Real Company Database,100,True
+Mahindra Group,mahindra group,Conglomerate,conglomerate,Diversified,India,Verified Real Company Database,100,True
+Adani Group,adani group,Conglomerate,conglomerate,Diversified,India,Verified Real Company Database,100,True
+Hindustan Unilever Limited,hindustan unilever limited,FMCG,fmcg,Consumer Goods,India,Verified Real Company Database,100,True
+ITC Limited,itc limited,FMCG,fmcg,Consumer Goods,India,Verified Real Company Database,100,True
+Nestlé India Limited,nestle india limited,FMCG,fmcg,Food Products,India,Verified Real Company Database,100,True
+Britannia Industries Limited,britannia industries limited,FMCG,fmcg,Food Products,India,Verified Real Company Database,100,True
+Dabur India Limited,dabur india limited,FMCG,fmcg,Consumer Goods,India,Verified Real Company Database,100,True
+Marico Limited,marico limited,FMCG,fmcg,Consumer Goods,India,Verified Real Company Database,100,True
+Godrej Consumer Products Limited,godrej consumer products limited,FMCG,fmcg,Consumer Goods,India,Verified Real Company Database,100,True
+Colgate-Palmolive (India) Limited,colgate palmolive india limited,FMCG,fmcg,Consumer Goods,India,Verified Real Company Database,100,True
+Procter & Gamble Hygiene and Health Care Limited,procter gamble hygiene and health care limited,FMCG,fmcg,Consumer Goods,India,Verified Real Company Database,100,True
+Emami Limited,emami limited,FMCG,fmcg,Consumer Goods,India,Verified Real Company Database,100,True
+Patanjali Ayurved Limited,patanjali ayurved limited,FMCG,fmcg,Consumer Goods,India,Verified Real Company Database,100,True
+Parle Products Private Limited,parle products private limited,FMCG,fmcg,Food Products,India,Verified Real Company Database,100,True
+Amul (Gujarat Cooperative Milk Marketing Federation),amul gujarat cooperative milk marketing federation,FMCG,fmcg,Dairy Products,India,Verified Real Company Database,100,True
+Mother Dairy Fruit & Vegetable,mother dairy fruit vegetable,FMCG,fmcg,Dairy Products,India,Verified Real Company Database,100,True
+Haldiram's,haldirams,FMCG,fmcg,Snacks,India,Verified Real Company Database,100,True
+Bikanervala Foods Private Limited,bikanervala foods private limited,FMCG,fmcg,Snacks,India,Verified Real Company Database,100,True
+Tata Motors Limited,tata motors limited,Automotive,automotive,Automobile Manufacturing,India,Verified Real Company Database,100,True
+Mahindra & Mahindra Limited,mahindra mahindra limited,Automotive,automotive,Automobile Manufacturing,India,Verified Real Company Database,100,True
+Maruti Suzuki India Limited,maruti suzuki india limited,Automotive,automotive,Automobile Manufacturing,India,Verified Real Company Database,100,True
+Hero MotoCorp Limited,hero motocorp limited,Automotive,automotive,Two-Wheeler Manufacturing,India,Verified Real Company Database,100,True
+Bajaj Auto Limited,bajaj auto limited,Automotive,automotive,Two-Wheeler Manufacturing,India,Verified Real Company Database,100,True
+TVS Motor Company Limited,tvs motor company limited,Automotive,automotive,Two-Wheeler Manufacturing,India,Verified Real Company Database,100,True
+Eicher Motors Limited,eicher motors limited,Automotive,automotive,Two-Wheeler Manufacturing,India,Verified Real Company Database,100,True
+Ashok Leyland Limited,ashok leyland limited,Automotive,automotive,Commercial Vehicles,India,Verified Real Company Database,100,True
+Force Motors Limited,force motors limited,Automotive,automotive,Commercial Vehicles,India,Verified Real Company Database,100,True
+MRF Limited,mrf limited,Automotive,automotive,Tyre Manufacturing,India,Verified Real Company Database,100,True
+Apollo Tyres Limited,apollo tyres limited,Automotive,automotive,Tyre Manufacturing,India,Verified Real Company Database,100,True
+CEAT Limited,ceat limited,Automotive,automotive,Tyre Manufacturing,India,Verified Real Company Database,100,True
+JK Tyre & Industries Limited,jk tyre industries limited,Automotive,automotive,Tyre Manufacturing,India,Verified Real Company Database,100,True
+Bosch Limited,bosch limited,Automotive,automotive,Auto Components,India,Verified Real Company Database,100,True
+Motherson Sumi Systems Limited,motherson sumi systems limited,Automotive,automotive,Auto Components,India,Verified Real Company Database,100,True
+Sun Pharmaceutical Industries Limited,sun pharmaceutical industries limited,Healthcare,healthcare,Pharmaceuticals,India,Verified Real Company Database,100,True
+Dr. Reddy's Laboratories Limited,dr reddys laboratories limited,Healthcare,healthcare,Pharmaceuticals,India,Verified Real Company Database,100,True
+Cipla Limited,cipla limited,Healthcare,healthcare,Pharmaceuticals,India,Verified Real Company Database,100,True
+Lupin Limited,lupin limited,Healthcare,healthcare,Pharmaceuticals,India,Verified Real Company Database,100,True
+Aurobindo Pharma Limited,aurobindo pharma limited,Healthcare,healthcare,Pharmaceuticals,India,Verified Real Company Database,100,True
+Divi's Laboratories Limited,divis laboratories limited,Healthcare,healthcare,Pharmaceuticals,India,Verified Real Company Database,100,True
+Biocon Limited,biocon limited,Healthcare,healthcare,Biopharmaceuticals,India,Verified Real Company Database,100,True
+Torrent Pharmaceuticals Limited,torrent pharmaceuticals limited,Healthcare,healthcare,Pharmaceuticals,India,Verified Real Company Database,100,True
+Cadila Healthcare Limited (Zydus),cadila healthcare limited zydus,Healthcare,healthcare,Pharmaceuticals,India,Verified Real Company Database,100,True
+Glenmark Pharmaceuticals Limited,glenmark pharmaceuticals limited,Healthcare,healthcare,Pharmaceuticals,India,Verified Real Company Database,100,True
+Alkem Laboratories Limited,alkem laboratories limited,Healthcare,healthcare,Pharmaceuticals,India,Verified Real Company Database,100,True
+Mankind Pharma Limited,mankind pharma limited,Healthcare,healthcare,Pharmaceuticals,India,Verified Real Company Database,100,True
+Ajanta Pharma Limited,ajanta pharma limited,Healthcare,healthcare,Pharmaceuticals,India,Verified Real Company Database,100,True
+Natco Pharma Limited,natco pharma limited,Healthcare,healthcare,Pharmaceuticals,India,Verified Real Company Database,100,True
+Ipca Laboratories Limited,ipca laboratories limited,Healthcare,healthcare,Pharmaceuticals,India,Verified Real Company Database,100,True
+NTPC Limited,ntpc limited,Energy,energy,Power Generation,India,Verified Real Company Database,100,True
+Power Grid Corporation of India,power grid corporation of india,Energy,energy,Power Transmission,India,Verified Real Company Database,100,True
+Indian Oil Corporation Limited,indian oil corporation limited,Energy,energy,Oil & Gas,India,Verified Real Company Database,100,True
+Bharat Petroleum Corporation Limited,bharat petroleum corporation limited,Energy,energy,Oil & Gas,India,Verified Real Company Database,100,True
+Hindustan Petroleum Corporation Limited,hindustan petroleum corporation limited,Energy,energy,Oil & Gas,India,Verified Real Company Database,100,True
+Oil and Natural Gas Corporation (ONGC),oil and natural gas corporation ongc,Energy,energy,Oil & Gas,India,Verified Real Company Database,100,True
+Coal India Limited,coal india limited,Energy,energy,Coal Mining,India,Verified Real Company Database,100,True
+Reliance Industries Limited - Jio,reliance industries limited jio,Energy,energy,Oil & Gas,India,Verified Real Company Database,100,True
+Adani Green Energy Limited,adani green energy limited,Energy,energy,Renewable Energy,India,Verified Real Company Database,100,True
+Tata Power Company Limited,tata power company limited,Energy,energy,Power Generation,India,Verified Real Company Database,100,True
+JSW Energy Limited,jsw energy limited,Energy,energy,Power Generation,India,Verified Real Company Database,100,True
+Torrent Power Limited,torrent power limited,Energy,energy,Power Generation,India,Verified Real Company Database,100,True
+GAIL (India) Limited,gail india limited,Energy,energy,Natural Gas,India,Verified Real Company Database,100,True
+Petronet LNG Limited,petronet lng limited,Energy,energy,LNG,India,Verified Real Company Database,100,True
+Tata Steel Limited,tata steel limited,Manufacturing,manufacturing,Steel Production,India,Verified Real Company Database,100,True
+JSW Steel Limited,jsw steel limited,Manufacturing,manufacturing,Steel Production,India,Verified Real Company Database,100,True
+Hindalco Industries Limited,hindalco industries limited,Manufacturing,manufacturing,Aluminum & Copper,India,Verified Real Company Database,100,True
+Vedanta Limited,vedanta limited,Mining,mining,Metals & Mining,India,Verified Real Company Database,100,True
+Steel Authority of India Limited (SAIL),steel authority of india limited sail,Manufacturing,manufacturing,Steel Production,India,Verified Real Company Database,100,True
+Jindal Steel & Power Limited,jindal steel power limited,Manufacturing,manufacturing,Steel Production,India,Verified Real Company Database,100,True
+National Aluminium Company Limited (NALCO),national aluminium company limited nalco,Manufacturing,manufacturing,Aluminum,India,Verified Real Company Database,100,True
+UltraTech Cement Limited,ultratech cement limited,Cement,cement,Cement Production,India,Verified Real Company Database,100,True
+Shree Cement Limited,shree cement limited,Cement,cement,Cement Production,India,Verified Real Company Database,100,True
+Ambuja Cements Limited,ambuja cements limited,Cement,cement,Cement Production,India,Verified Real Company Database,100,True
+ACC Limited,acc limited,Cement,cement,Cement Production,India,Verified Real Company Database,100,True
+Dalmia Bharat Limited,dalmia bharat limited,Cement,cement,Cement Production,India,Verified Real Company Database,100,True
+JK Cement Limited,jk cement limited,Cement,cement,Cement Production,India,Verified Real Company Database,100,True
+Ramco Cements Limited,ramco cements limited,Cement,cement,Cement Production,India,Verified Real Company Database,100,True
+Birla Corporation Limited,birla corporation limited,Cement,cement,Cement Production,India,Verified Real Company Database,100,True
+Bharti Airtel Limited,bharti airtel limited,Telecommunications,telecommunications,Telecom Services,India,Verified Real Company Database,100,True
+Reliance Jio Infocomm Limited,reliance jio infocomm limited,Telecommunications,telecommunications,Telecom Services,India,Verified Real Company Database,100,True
+Vodafone Idea Limited,vodafone idea limited,Telecommunications,telecommunications,Telecom Services,India,Verified Real Company Database,100,True
+Reliance Retail Ventures Limited,reliance retail ventures limited,Retail,retail,Retail Chain,India,Verified Real Company Database,100,True
+Avenue Supermarts Limited (DMart),avenue supermarts limited dmart,Retail,retail,Supermarket Chain,India,Verified Real Company Database,100,True
+Future Retail Limited,future retail limited,Retail,retail,Retail Chain,India,Verified Real Company Database,100,True
+Trent Limited,trent limited,Retail,retail,Fashion Retail,India,Verified Real Company Database,100,True
+Shoppers Stop Limited,shoppers stop limited,Retail,retail,Department Stores,India,Verified Real Company Database,100,True
+V-Mart Retail Limited,vmart retail limited,Retail,retail,Retail Chain,India,Verified Real Company Database,100,True
+Spencer's Retail Limited,spencers retail limited,Retail,retail,Supermarket Chain,India,Verified Real Company Database,100,True
+Aditya Birla Fashion and Retail Limited,aditya birla fashion and retail limited,Retail,retail,Fashion Retail,India,Verified Real Company Database,100,True
+Flipkart Private Limited,flipkart private limited,E-commerce,ecommerce,Online Retail,India,Verified Real Company Database,100,True
+Paytm (One97 Communications),paytm one97 communications,Financial Services,financial services,Digital Payments,India,Verified Real Company Database,100,True
+Zomato Limited,zomato limited,Technology,technology,Food Delivery,India,Verified Real Company Database,100,True
+Swiggy (Bundl Technologies),swiggy bundl technologies,Technology,technology,Food Delivery,India,Verified Real Company Database,100,True
+Ola (ANI Technologies),ola ani technologies,Technology,technology,Ride Hailing,India,Verified Real Company Database,100,True
+PolicyBazaar (PB Fintech),policybazaar pb fintech,Financial Services,financial services,Insurance Aggregator,India,Verified Real Company Database,100,True
+BYJU'S (Think and Learn),byjus think and learn,Technology,technology,EdTech,India,Verified Real Company Database,100,True
+Unacademy,unacademy,Technology,technology,EdTech,India,Verified Real Company Database,100,True
+Vedantu,vedantu,Technology,technology,EdTech,India,Verified Real Company Database,100,True
+Udaan,udaan,E-commerce,ecommerce,B2B E-commerce,India,Verified Real Company Database,100,True
+Meesho,meesho,E-commerce,ecommerce,Social Commerce,India,Verified Real Company Database,100,True
+BigBasket,bigbasket,E-commerce,ecommerce,Online Grocery,India,Verified Real Company Database,100,True
+Grofers (Blinkit),grofers blinkit,E-commerce,ecommerce,Online Grocery,India,Verified Real Company Database,100,True
+Larsen & Toubro Limited,larsen toubro limited,Infrastructure,infrastructure,Engineering & Construction,India,Verified Real Company Database,100,True
+Adani Ports and Special Economic Zone,adani ports and special economic zone,Infrastructure,infrastructure,Port Operations,India,Verified Real Company Database,100,True
+GMR Infrastructure Limited,gmr infrastructure limited,Infrastructure,infrastructure,Airport & Energy,India,Verified Real Company Database,100,True
+IRB Infrastructure Developers Limited,irb infrastructure developers limited,Infrastructure,infrastructure,Road Construction,India,Verified Real Company Database,100,True
+Dilip Buildcon Limited,dilip buildcon limited,Infrastructure,infrastructure,Construction,India,Verified Real Company Database,100,True
+PNC Infratech Limited,pnc infratech limited,Infrastructure,infrastructure,Construction,India,Verified Real Company Database,100,True
+NCC Limited,ncc limited,Infrastructure,infrastructure,Construction,India,Verified Real Company Database,100,True
+KNR Constructions Limited,knr constructions limited,Infrastructure,infrastructure,Construction,India,Verified Real Company Database,100,True
+IndiGo (InterGlobe Aviation),indigo interglobe aviation,Aviation,aviation,Airlines,India,Verified Real Company Database,100,True
+Air India,air india,Aviation,aviation,Airlines,India,Verified Real Company Database,100,True
+SpiceJet Limited,spicejet limited,Aviation,aviation,Airlines,India,Verified Real Company Database,100,True
+Vistara (Tata SIA Airlines),vistara tata sia airlines,Aviation,aviation,Airlines,India,Verified Real Company Database,100,True
+Air Asia India,air asia india,Aviation,aviation,Airlines,India,Verified Real Company Database,100,True
+GoAir (Go First),goair go first,Aviation,aviation,Airlines,India,Verified Real Company Database,100,True
+DLF Limited,dlf limited,Real Estate,real estate,Property Development,India,Verified Real Company Database,100,True
+Godrej Properties Limited,godrej properties limited,Real Estate,real estate,Property Development,India,Verified Real Company Database,100,True
+Prestige Estates Projects Limited,prestige estates projects limited,Real Estate,real estate,Property Development,India,Verified Real Company Database,100,True
+Oberoi Realty Limited,oberoi realty limited,Real Estate,real estate,Property Development,India,Verified Real Company Database,100,True
+Brigade Enterprises Limited,brigade enterprises limited,Real Estate,real estate,Property Development,India,Verified Real Company Database,100,True
+Sobha Limited,sobha limited,Real Estate,real estate,Property Development,India,Verified Real Company Database,100,True
+Phoenix Mills Limited,phoenix mills limited,Real Estate,real estate,Shopping Malls,India,Verified Real Company Database,100,True
+Zee Entertainment Enterprises Limited,zee entertainment enterprises limited,Media,media,Broadcasting,India,Verified Real Company Database,100,True
+Sun TV Network Limited,sun tv network limited,Media,media,Broadcasting,India,Verified Real Company Database,100,True
+PVR INOX Limited,pvr inox limited,Media,media,Cinema Chain,India,Verified Real Company Database,100,True
+Network18 Media & Investments Limited,network18 media investments limited,Media,media,Broadcasting,India,Verified Real Company Database,100,True
+TV18 Broadcast Limited,tv18 broadcast limited,Media,media,Broadcasting,India,Verified Real Company Database,100,True
+Dish TV India Limited,dish tv india limited,Media,media,DTH Services,India,Verified Real Company Database,100,True
+Hathway Cable & Datacom Limited,hathway cable datacom limited,Media,media,Cable TV,India,Verified Real Company Database,100,True
+Indian Hotels Company Limited (Taj Hotels),indian hotels company limited taj hotels,Hospitality,hospitality,Hotels,India,Verified Real Company Database,100,True
+EIH Limited (Oberoi Hotels),eih limited oberoi hotels,Hospitality,hospitality,Hotels,India,Verified Real Company Database,100,True
+Lemon Tree Hotels Limited,lemon tree hotels limited,Hospitality,hospitality,Hotels,India,Verified Real Company Database,100,True
+Chalet Hotels Limited,chalet hotels limited,Hospitality,hospitality,Hotels,India,Verified Real Company Database,100,True
+ITC Hotels,itc hotels,Hospitality,hospitality,Hotels,India,Verified Real Company Database,100,True
+The Leela Palaces Hotels and Resorts,the leela palaces hotels and resorts,Hospitality,hospitality,Luxury Hotels,India,Verified Real Company Database,100,True
+OYO Rooms,oyo rooms,Hospitality,hospitality,Budget Hotels,India,Verified Real Company Database,100,True
+Arvind Limited,arvind limited,Textiles,textiles,Textile Manufacturing,India,Verified Real Company Database,100,True
+Welspun India Limited,welspun india limited,Textiles,textiles,Home Textiles,India,Verified Real Company Database,100,True
+Trident Limited,trident limited,Textiles,textiles,Textiles & Paper,India,Verified Real Company Database,100,True
+Raymond Limited,raymond limited,Textiles,textiles,Textile & Apparel,India,Verified Real Company Database,100,True
+Page Industries Limited,page industries limited,Textiles,textiles,Innerwear,India,Verified Real Company Database,100,True
+Aditya Birla Nuvo Limited,aditya birla nuvo limited,Textiles,textiles,Textiles,India,Verified Real Company Database,100,True
+UPL Limited,upl limited,Chemicals,chemicals,Agrochemicals,India,Verified Real Company Database,100,True
+Pidilite Industries Limited,pidilite industries limited,Chemicals,chemicals,Adhesives,India,Verified Real Company Database,100,True
+Asian Paints Limited,asian paints limited,Chemicals,chemicals,Paints,India,Verified Real Company Database,100,True
+Berger Paints India Limited,berger paints india limited,Chemicals,chemicals,Paints,India,Verified Real Company Database,100,True
+Kansai Nerolac Paints Limited,kansai nerolac paints limited,Chemicals,chemicals,Paints,India,Verified Real Company Database,100,True
+Akzo Nobel India Limited,akzo nobel india limited,Chemicals,chemicals,Paints,India,Verified Real Company Database,100,True
+Tata Chemicals Limited,tata chemicals limited,Chemicals,chemicals,Chemicals & Fertilizers,India,Verified Real Company Database,100,True
+Deepak Nitrite Limited,deepak nitrite limited,Chemicals,chemicals,Chemicals,India,Verified Real Company Database,100,True
+Aarti Industries Limited,aarti industries limited,Chemicals,chemicals,Specialty Chemicals,India,Verified Real Company Database,100,True
+Vinati Organics Limited,vinati organics limited,Chemicals,chemicals,Specialty Chemicals,India,Verified Real Company Database,100,True
+Bharat Heavy Electricals Limited (BHEL),bharat heavy electricals limited bhel,Manufacturing,manufacturing,Heavy Electrical Equipment,India,Verified Real Company Database,100,True
+Siemens Limited,siemens limited,Manufacturing,manufacturing,Electrical Equipment,India,Verified Real Company Database,100,True
+ABB India Limited,abb india limited,Manufacturing,manufacturing,Electrical Equipment,India,Verified Real Company Database,100,True
+Crompton Greaves Consumer Electricals,crompton greaves consumer electricals,Manufacturing,manufacturing,Consumer Electricals,India,Verified Real Company Database,100,True
+Havells India Limited,havells india limited,Manufacturing,manufacturing,Electrical Equipment,India,Verified Real Company Database,100,True
+V-Guard Industries Limited,vguard industries limited,Manufacturing,manufacturing,Electrical Equipment,India,Verified Real Company Database,100,True
+Voltas Limited,voltas limited,Consumer Durables,consumer durables,Air Conditioners,India,Verified Real Company Database,100,True
+Blue Star Limited,blue star limited,Consumer Durables,consumer durables,Air Conditioning,India,Verified Real Company Database,100,True
+Whirlpool of India Limited,whirlpool of india limited,Consumer Durables,consumer durables,Home Appliances,India,Verified Real Company Database,100,True
+TTK Prestige Limited,ttk prestige limited,Consumer Durables,consumer durables,Kitchen Appliances,India,Verified Real Company Database,100,True
+Bajaj Electricals Limited,bajaj electricals limited,Consumer Durables,consumer durables,Electrical Appliances,India,Verified Real Company Database,100,True

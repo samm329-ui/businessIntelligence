@@ -1,0 +1,17 @@
+industry_name,sector,description
+FMCG Cleaning,Consumer Goods,Household cleaning products
+FMCG Consumer Goods,Consumer Goods,Daily consumer goods
+FMCG Food,Consumer Goods,Packaged foods
+FMCG Personal Care,Consumer Goods,Hygiene products
+IT Services,Technology,Software services
+Conglomerate,Multi-sector,Diversified business
+E-commerce,Technology,Online retail
+Consumer Electronics,Technology,Devices and electronics
+Technology Software,Technology,Software platforms
+Technology Internet,Technology,Internet companies
+Automobile,Manufacturing,Vehicle manufacturers
+Automobile EV,Manufacturing,Electric vehicles
+Pharmaceutical,Healthcare,Drug companies
+Beverages,Consumer Goods,Soft drink companies
+Banking,Finance,Banking services
+Apparel Sports,Retail,Sports apparel

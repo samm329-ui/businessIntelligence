@@ -1,0 +1,25 @@
+brand_name,normalized_name,company_id,category
+Harpic,harpic,1,Toilet Cleaner
+Dettol,dettol,1,Healthcare FMCG
+Lizol,lizol,1,Surface Cleaner
+Dove,dove,2,Personal Care
+Lux,lux,2,Soap
+Surf Excel,surf excel,4,Detergent
+Maggi,maggi,5,Food
+KitKat,kitkat,5,Food
+Colgate,colgate,6,Oral Care
+Aashirvaad,aashirvaad,7,Food
+Sunfeast,sunfeast,7,Food
+iPhone,iphone,12,Electronics
+Galaxy,galaxy,13,Electronics
+Kindle,kindle,11,Electronics
+Prime,prime,11,Subscription
+Swift,swift,18,Automobile
+Fortuner,fortuner,17,Automobile
+Thums Up,thums up,20,Beverage
+Sprite,sprite,20,Beverage
+Pepsi,pepsi,21,Beverage
+Nike Air,nike air,22,Sportswear
+Adidas Originals,adidas originals,23,Sportswear
+Visa Debit,visa debit,24,Financial Service
+ICICI Credit Card,icici credit card,25,Financial Service

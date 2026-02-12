@@ -1,0 +1,26 @@
+company_id,company_name,normalized_name,industry,country,is_public
+1,Reckitt,reckitt,FMCG Cleaning,UK,true
+2,Unilever,unilever,FMCG Consumer Goods,UK,true
+3,Procter & Gamble,procter gamble,FMCG Consumer Goods,USA,true
+4,Hindustan Unilever,hindustan unilever,FMCG Consumer Goods,India,true
+5,Nestle,nestle,FMCG Food,Switzerland,true
+6,Colgate-Palmolive,colgate palmolive,FMCG Personal Care,USA,true
+7,ITC Limited,itc,FMCG Conglomerate,India,true
+8,Infosys,infosys,IT Services,India,true
+9,Tata Consultancy Services,tcs,IT Services,India,true
+10,Reliance Industries,reliance industries,Conglomerate,India,true
+11,Amazon,amazon,E-commerce,USA,true
+12,Apple,apple,Consumer Electronics,USA,true
+13,Samsung,samsung,Consumer Electronics,South Korea,true
+14,Microsoft,microsoft,Technology Software,USA,true
+15,Google,google,Technology Internet,USA,true
+16,Tesla,tesla,Automobile EV,USA,true
+17,Toyota,toyota,Automobile,Japan,true
+18,Maruti Suzuki,maruti suzuki,Automobile,India,true
+19,Pfizer,pfizer,Pharmaceutical,USA,true
+20,Coca Cola,coca cola,Beverages,USA,true
+21,PepsiCo,pepsico,Beverages,USA,true
+22,Nike,nike,Apparel Sports,USA,true
+23,Adidas,adidas,Apparel Sports,Germany,true
+24,HDFC Bank,hdfc bank,Banking,India,true
+25,ICICI Bank,icici bank,Banking,India,true

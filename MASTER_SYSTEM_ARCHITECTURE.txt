@@ -1,0 +1,96 @@
+BUSINESS INTELLIGENCE PLATFORM — MASTER ARCHITECTURE DOCUMENT
+===========================================================
+
+PURPOSE
+-------
+This system provides accurate business intelligence by combining structured datasets, APIs, web crawling, and AI analysis while minimizing hallucinations through validation layers.
+
+SYSTEM ARCHITECTURE
+-------------------
+
+1. DATA SOURCES LAYER
+   Primary Sources:
+   - Free financial APIs (Yahoo Finance, Alpha Vantage, FMP)
+   - Government open data (RBI, MOSPI, data.gov.in)
+   - Wikidata/Wikipedia structured data
+   
+   Secondary Sources:
+   - Python crawler (Playwright/Selenium)
+   - Public datasets (CSV/JSON ingestion)
+   - Annual reports (PDF scraping)
+
+2. DATA PIPELINE
+   Sequence:
+   API/Dataset/Crawler → Cleaning → Entity Resolution → Validation → Database Storage → AI Analysis → Dashboard Output
+
+3. ENTITY RESOLUTION
+   Components:
+   - Brand-to-company mapping
+   - Parent company identification
+   - Industry classification normalization
+   - Alias detection and fuzzy matching
+
+4. DATA VALIDATION
+   Methods:
+   - Cross-source comparison
+   - Confidence scoring (0-100%)
+   - Timestamp tracking
+   - Source attribution
+   - Outlier detection
+
+5. AI ANALYSIS
+   Functions:
+   - KPI calculations (CAGR, margins, markup, breakeven)
+   - Industry benchmarking
+   - Strategic insights
+   - Risk detection
+   
+   Guardrails:
+   - AI must always reference structured data
+   - No guessing or hallucination
+   - Confidence thresholds
+
+6. DATABASE
+   Platform: Supabase/PostgreSQL
+   
+   Key Tables:
+   - companies (parent/subsidiary relationships)
+   - brands (with aliases)
+   - industries (NAICS/GICS classification)
+   - data_sources (provenance tracking)
+   - data_lineage (transparency)
+   - ai_analysis (with citations)
+   - financial_metrics (validated KPIs)
+
+7. CRAWLER
+   Implementation: Python + Playwright
+   
+   Sources:
+   - Wikipedia/Wikidata
+   - Government portals (MCA, RBI)
+   - Company websites
+   - Stock exchange filings
+   
+   Validation:
+   - All crawled data validated before insertion
+   - Cross-reference with APIs
+   - Confidence scoring
+
+8. FRONTEND
+   Platform: Next.js
+   
+   Features:
+   - Analysis dashboard
+   - Market intelligence UI
+   - Source attribution display
+   - Confidence scores
+
+TRUST FRAMEWORK
+---------------
+Every output includes:
+- Source attribution (where did this come from)
+- Confidence score (how reliable)
+- Timestamp (when was this collected)
+- Validation status (was it cross-checked)
+
+END OF MASTER DOCUMENT
