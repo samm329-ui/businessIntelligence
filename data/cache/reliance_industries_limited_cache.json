@@ -1,0 +1,445 @@
+{
+  "entity": "Reliance Industries Limited",
+  "data": {
+    "analysis": {
+      "executiveSummary": "Reliance Industries Limited is a company in the Conglomerate industry. Analysis based on 86 sources.",
+      "financials": {
+        "revenue": "₹9.98 lakh",
+        "growth": "10.38%"
+      },
+      "competitors": [
+        "Tata Group",
+        "Aditya Birla Group",
+        "Mahindra Group",
+        "Adani Group",
+        "List"
+      ],
+      "keyFindings": [
+        "Identified in Conglomerate industry",
+        "Data collected from 86 sources",
+        "Existing entity in dataset"
+      ],
+      "risks": [
+        "Market competition",
+        "Economic conditions",
+        "Regulatory changes"
+      ],
+      "opportunities": [
+        "Industry growth potential",
+        "Market expansion",
+        "Innovation opportunities"
+      ],
+      "industryOutlook": "Conglomerate shows steady growth potential with increasing digitalization and market expansion.",
+      "confidence": 60,
+      "model": "rule-based"
+    },
+    "collectedData": {
+      "entity": {
+        "name": "Reliance Industries Limited",
+        "type": "company",
+        "industry": "Conglomerate",
+        "subIndustry": "General"
+      },
+      "sources": {
+        "companyInfo": [
+          {
+            "title": "Reliance Industries - Wikipedia",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FReliance_Industries&rut=011528136055fc9ad58b3b7f71a04878bf0377a29cd816be7ba5523a0ea329eb",
+            "description": "Reliance Industries Limited is an Indian multinational conglomerate headquartered in Mumbai. Its businesses include energy, petrochemicals, natural gas, retail, entertainment, telecommunications, mass media, and textiles. Reliance is the largest public company in India by market capitalisation [6][7] and revenue, [8] and the 86th largest company worldwide. [9] It is India's largest private tax ...",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "About Reliance Industries Limited - A Fortune 500® Company & The ...",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.ril.com%2Fabout&rut=eb9ce8151c17f9f9e390042fda9e55ea726f0ff2c2cf99939a951a4190e04634",
+            "description": "Reliance Industries Limited is committed to innovation-led, exponential growth in the areas of hydrocarbon exploration and production, petroleum refining and marketing, petrochemicals, retail and telecommunications.",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Reliance Industries Limited (RELIANCE.NS) Company Profile & Facts ...",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Ffinance.yahoo.com%2Fquote%2FRELIANCE.NS%2Fprofile%2F&rut=0454acb5e5eda208b1c4d9220532dee452bffa7060a2bff90e6d1a35683c980b",
+            "description": "See the company profile for Reliance Industries Limited (RELIANCE.NS) including business summary, industry/sector information, number of employees, business summary, corporate governance, key ...",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Reliance Industries (BOM:500325) Company Profile & Description",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fstockanalysis.com%2Fquote%2Fbom%2F500325%2Fcompany%2F&rut=48df8d61280759a3d924b539c9550922e07365d4d2d199963cf4eded03d44f54",
+            "description": "Company profile for Reliance Industries Limited (BOM:500325) with a description, list of executives, contact details and other key facts.",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Reliance Industries Ltd, RELIANCE:NSI profile - FT.com",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fmarkets.ft.com%2Fdata%2Fequities%2Ftearsheet%2Fprofile%3Fs%3DRELIANCE%3ANSI&rut=46c176d5a9ad3669aeef4b02a34444e5cb2e5e2cfc636a735f4d5decd6786978",
+            "description": "Reliance Industries Ltd (RELIANCE:NSI) company profile with history, revenue, mergers & acquisitions, peer analysis, institutional shareholders and more.",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Strategy",
+            "url": "https://www.ril.com/ar2022-23/strategy.html",
+            "description": "Strategic objective. Build Reliance as one of the world's leading O2C company, with a sustainable and circular business model. · Enablers and way forward · Net ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Reliance Industries",
+            "url": "https://en.wikipedia.org/wiki/Reliance_Industries",
+            "description": "Its businesses include energy, petrochemicals, natural gas, retail, entertainment, telecommunications, mass media, and textiles. Reliance is the largest public ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "A Fortune 500® Company & The Largest Private Sector ...",
+            "url": "https://www.ril.com/about",
+            "description": "Reliance is a consumer-oriented company, offering consumer-centric solutions across its business verticals. We provide superior and delightful experiences ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Decoding Reliance Industries' Business Model in 2026",
+            "url": "https://iide.co/case-studies/business-model-of-reliance-industries/",
+            "description": "Its focus on technology, strategic partnerships, and customer-first philosophy drives continued success.",
+            "source": "serpapi"
+          },
+          {
+            "title": "Reliance Industries Analysis: A Simple Guide for Beginners",
+            "url": "https://sharpely.in/blog/reliance-industries-analysis:-a-simple-guide-for-beginners",
+            "description": "Reliance Industries operates a diversified business model primarily across three major segments: Energy (Oil to Chemicals and Oil & Gas), ...",
+            "source": "serpapi"
+          }
+        ],
+        "industryInfo": [
+          {
+            "title": "Conglomerate | Multinational, Diversification, Mergers - Britannica Money",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.britannica.com%2Fmoney%2Fconglomerate%2Dbusiness&rut=edf951eb2abfa9f91fe1027000946310150feb2c3a421f821add0111b9fa24dd",
+            "description": "Ratio analysis is used to compare a firm's performance with that of other firms in the same industry or with the performance of industry in general. It is also used to study trends in the firm's performance over time and thus to anticipate problems before they develop. Profit planning Ratio analysis applies to a firm's current operating ...",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Conglomerates: Exploring Risks, Returns, and Diversification",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.investopedia.com%2Farticles%2Fbasics%2F06%2Fconglomerates.asp&rut=d5708c18425b57b76e8d7e21e105532e46f7a9606756ab43ba4045ca38901ab3",
+            "description": "Learn how conglomerates manage risks, offer diversification, and impact investments. Explore the advantages, disadvantages, and the concept of conglomerate discounts",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Exploring the Conglomerates Sector: Definition, Performance, and ...",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.supermoney.com%2Fencyclopedia%2Fconglomerate%2Dindustry&rut=8270177b93b26a85ddbdc43207999fe5fb73fd785c1ede27c58ae87390414cb3",
+            "description": "Conglomerates, defined as expansive holding companies with diverse business units, pose a unique challenge for analysis. While conglomerates and their subsidiaries may participate in various Global Industry Classification Standard (GICS) market sectors, some analyses find it beneficial to segregate them into their sector for performance interpretation and investment strategy development.",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Conglomerate - Overview and Examples of Conglomerates",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.wallstreetoasis.com%2Fresources%2Fskills%2Fdeals%2Fconglomerate&rut=c54f5ed94ffa5d7ea89aadef697183c99c049a889bd86ae245440c0ed8b80fc2",
+            "description": "A conglomerate is a multi-industry firm that combines various business units operating in distinct industries into a single corporate group. This corporate group typically consists of a parent company and numerous subsidiaries.",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Conglomerates: Industry Sector Overview, Market Performace - Forbes",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.forbes.com%2Fmarkets%2Fsectors%2Dindustries%2Fconglomerates%2Dconglomerates.html&rut=aea9692571aeb158ff14c2f82003954c02d4747a4b1c2ba90fb92b34586c0bc4",
+            "description": "Conglomerates: Online Industry Sector Analysis, Find Financial Market Data and Historical Performance for the Conglomerates Industry Sector",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Conglomerates Industry Growth Rates - CSIMarket",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fcsimarket.com%2FIndustry%2Findustry_growth_rates.php%3Find%3D301&rut=57ddffd61adc58c886ab8bb8990edb0a6a901562eae3d236fe04ee9d0b5c152d",
+            "description": "Conglomerates Industry revenue, income and capex, current, historic quarterly and annual growth rates, statistics and averages - CSIMarket from Q4 2025 to Q4 2024",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Growth industries and the next big arenas of competition | McKinsey",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.mckinsey.com%2Fmgi%2Four%2Dresearch%2Fthe%2Dnext%2Dbig%2Darenas%2Dof%2Dcompetition&rut=729544561154ac7a28d47fbeb49b6bb41ef4a3e85b02e0e390a521ecfd061b01",
+            "description": "We look at the new high-growth industries that represent the next big arenas of competition and which have the power to transform the business landscape.",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Industrial Conglomerate - BlackNote Investment",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fblacknoteinvestment.com%2Findustrial%2Dconglomerate%2Dindustry%2Dkey%2Dfinancial%2Ddata%2F&rut=1f0faa996fe6684bbe9f46b2102d4ef28814821e7bbffce0c0acb09d35ad275c",
+            "description": "Industrial Conglomerate Industry Key Financial Data 2023 The following analysis considers the 145 major publicly listed industrial conglomerate companies with a market capitalisation above $1 billion. The numbers in the tables are expressed in millions of dollars except for percentages and ratios. Number 145 Expected Growth Rate 3,03% ...",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "PDF Q1 2025 Top Conglomerates' Market Outlook",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fcdn.prod.website%2Dfiles.com%2F679b17668c8048d0dbb52a1c%2F67e518caf8dbb83f1e3a553d_Consolidated%2520Conglomerates_Mar%252019.pdf&rut=37d65ccd8f387241b77c740d4f77ba209344328077550e45e226ac0cef5bb25a",
+            "description": "Q1 2025 Top Conglomerates' Market Outlook The information provided in this content is for informational and educational purposes only and should not be construed as financial, investment, or trading advice. No financial decisions should be made based on this content without consulting a qualified financial advisor.",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Largest conglomerate companies by Market Cap",
+            "url": "https://companiesmarketcap.com/conglomerate/largest-companies-by-market-cap/",
+            "description": "List of the largest conglomerate companies by market capitalization, all rankings are updated daily.",
+            "source": "serpapi"
+          }
+        ],
+        "financialData": [
+          {
+            "title": "Investor Relations | Reliance Industries Limited",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.ril.com%2Finvestors%2Finvestor%2Drelations&rut=efab006965c8339d58fccbe9a4b85ddb97195766be17562fa3d831f8c1b1a9c2",
+            "description": "Access Reliance Industries' Investor Relations hub for financial reports, quarterly results, shareholder info, governance updates, and investment-related resources.",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Reliance, Inc. - Financial Information - Quarterly Results",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Finvestor.reliance.com%2Ffinancial%2Dinformation%2Fquarterly%2Dresults%2Fdefault.aspx&rut=2da09f63ffd880220973dd4b3a6004b58d242e8c2b107213419fbd6be2614fa9",
+            "description": "First Quarter 2025 Reliance, Inc. Reports First Quarter 2025 Financial Results of First Quarter 2025, aspx file, (opens in new window) Reliance, Inc. Reports First Quarter 2025 Financial Results (PDF) of First Quarter 2025, PDF file, (opens in new window) Earnings Conference Call of First Quarter 2025, jsp file, (opens in new window)",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Quarterly Results, Reliance Industries Financial Statement & Accounts",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.moneycontrol.com%2Fmarkets%2Ffinancials%2Fquarterly%2Dresults%2Frelianceindustries%2DRI%2F&rut=0aacbece7337195190b01790586941189508df790867e70f383f9f87f1ca5ffe",
+            "description": "Get Reliance Industries latest Quarterly Results, Financial Statements and Reliance Industries detailed profit and loss accounts.",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Reliance Industries Ltd Quarterly Results - Business Standard",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.business%2Dstandard.com%2Fcompanies%2Fquarterly%2Dresults%2Freliance%2Dindustries%2Dltd%2Dquarterly%2Dresults%2D476&rut=6340ab3004d860b8e12301ea7d4e5012268075fc8573630eaf952d3a798db086",
+            "description": "Reliance Industries Ltd Quarterly Results - Reliance Industries Ltd Q3 Results Summary: The revenue stands at ₹2,64,905.00 cr, reflecting a quarter-on-quarter (QoQ) increase of 4.04% from ₹2,54,623.00 cr. This corresponds to a year-on-year (YoY) growth of 10.38%.",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Reliance Industries - Quarterly Results and Financial Statement as of ...",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Ftrendlyne.com%2Ffundamentals%2Ffinancials%2F1127%2FRELIANCE%2Freliance%2Dindustries%2Dltd%2F&rut=57479ce4b8c3addd6a7d8a7dc965304846e583f219ed9b3531045a29fccd5213",
+            "description": "Reliance Industries quarterly and annual financials: results, revenue, profit, P&L, balance sheet, cash flow, financial ratios, revenue mix, peer comparison, and ...",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Reliance Industries Limited Integrated Annual Report 2024-25",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.ril.com%2Far2024%2D25%2Findex.html&rut=a197ff5e49ab40c111938c61969b79978d0f7892b960603242535d77c9dd9800",
+            "description": "Shri. Mukesh D. Ambani Chairman and Managing Director, Reliance Industries Limited A Powerhouse with Multiple Growth Engines REVENUE 7.9% L 3,30,943 Crore EBITDA 8.6% L 25,094 Crore",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Reliance EBITDA 2012-2025 | RS - Macrotrends",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.macrotrends.net%2Fstocks%2Fcharts%2FRS%2Freliance%2Febitda&rut=7b5a4999cb8353fc32de03d5703a5fbb1cf1e27ea952cc0cfa6016e901e2f49f",
+            "description": "Reliance annual and quarterly EBITDA history from 2012 to 2025. EBITDA can be defined as earnings before interest, taxes, depreciation and amortization. Reliance EBITDA for the quarter ending September 30, 2025 was $0.330B, a 3.22% decline year-over-year.",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Reliance Industries | RIL - Ebitda - TRADING ECONOMICS",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Ftradingeconomics.com%2Fril%3Ain%3Aebitda&rut=8155fd5d23ae0f6a154825d2fffea1303c64ee12698fd7716e8c204f4c9c9b00",
+            "description": "Reliance Industries reported INR558.46B in EBITDA for its fiscal quarter ending in December of 2025. Data for Reliance Industries | RIL - Ebitda including historical, tables and charts were last updated by Trading Economics this last February in 2026.",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "EBITDA For Reliance Industries Ltd (RELIANCE) - finbox.com",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Ffinbox.com%2FNSEI%3ARELIANCE%2Fexplorer%2Febitda%2F&rut=aae58c097291e69a8b8dfca1de11d904ca4c4960c5cc7fdfde721e31277cd565",
+            "description": "Reliance Industries's latest twelve months ebitda is 1,684.5 billion.. View Reliance Industries Ltd's EBITDA trends, charts, and more.",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Reliance Industries (NSE:RELIANCE) EBITDA - GuruFocus",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.gurufocus.com%2Fterm%2Febitda%2FNSE%3ARELIANCE&rut=2463ce483f76e2bdbd5119423c51d0bea2e17a933c5b8054550b316a3ed8ae93",
+            "description": "Earnings Before Interest, Taxes, Depreciation, and Amortization (EBITDA) is what the company earns before it expenses interest, taxes, depreciation and amortization. Reliance Industries 's EBITDA for the fiscal year that ended in Mar. 2025 is calculated as Reliance Industries's EBITDA was directly provided by GuruFocus' data source Morningstar. For the fiscal year ended in Mar. 2025, Reliance ...",
+            "source": "duckduckgo"
+          }
+        ],
+        "competitors": [
+          {
+            "title": "Reliance Industries Competitors List - The Economic Times",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Feconomictimes.indiatimes.com%2Freliance%2Dindustries%2Dltd%2Fquotecompare%2Fcompanyid%2D13215.cms&rut=c3967828efe391d68037fd22abad3a3ca8f82ab1cd6ddbdbf207c0120a8779c1",
+            "description": "Reliance Industries Competitors List - Compare Reliance Industries with its Competitors in terms of Share Price, Stock price forecast, trends, charts and more on The Economic Times",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Who Are Reliance Competitors? A Look At Its Biggest Competitors",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fcultinvestor.com%2Freliance%2Dcompetitors%2F&rut=d6b6c848a391eefc11c5e3fa56b4a5de3819260d85648f8c039c0b505145a3c6",
+            "description": "Reliance Industries Limited (RIL) is one of India's most diversified conglomerates, with operations in industries ranging from petrochemicals and telecom to retail and energy. As Reliance expands its influence across various sectors, it faces stiff competition from some of the biggest players in these industries. In this article, we take a closer look at the Reliance competitors and how they ...",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Reliance Industries Ltd. Peers Comparison & Competitor Analysis - ET Money",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.etmoney.com%2Fstocks%2Freliance%2Dindustries%2Dltd%2Fpeers%2F2046&rut=eac598fd02c0bdc491752fec70b70b29f92551162627567c8c332fa3e20e5600",
+            "description": "Get a comprehensive RELIANCE peer comparison to understand the stock's performance relative to the industry. Analyse how Reliance Industries Ltd. shares stacks up against its competitors.",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Reliance Industries Competitors - Comparably",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.comparably.com%2Fcompanies%2Freliance%2Dindustries%2Fcompetitors&rut=383350c1fcdbd7b122703220d70fba4512d77df78cf445cb34329d2d5ccd2c75",
+            "description": "Reliance Industries competitors include L&T Co., Jio, BASF and Toray Industries. Reliance Industries ranks 1st in Overall Culture Score on Comparably vs its competitors. See below how Reliance Industries compares to its competitors with CEO Rankings, Product & Services, NPS, Pricing, Customer Services, Overall Culture Score, eNPS, Gender and Diversity Scores.",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Reliance Industries - Competitors/Peers Analysis - Trendlyne",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Ftrendlyne.com%2Ffundamentals%2Fpeer%2Dgroup%2F1127%2FRELIANCE%2Freliance%2Dindustries%2Dltd%2F&rut=59a97a538427c3ab5df87340ba45c3ae287f57e9af7d20e1e4b1da5ec24c1bdf",
+            "description": "Reliance Industries competitor comparison and performance snapshot within industry",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Largest conglomerate companies by Market Cap",
+            "url": "https://companiesmarketcap.com/conglomerate/largest-companies-by-market-cap/",
+            "description": "List of the largest conglomerate companies by market capitalization, all rankings are updated daily.",
+            "source": "serpapi"
+          },
+          {
+            "title": "Top Largest Companies In The Conglomerates Industry List",
+            "url": "https://finance.yahoo.com/research-hub/screener/sec-ind_ind-largest-equities_conglomerates/",
+            "description": "Largest Companies In The Conglomerates Industry ; 1. HON. Honeywell International Inc. ; 2. MMM. 3M Company ; 3. V · VMI. Valmont Industries, Inc. ; 4. S · SEB.",
+            "source": "serpapi"
+          },
+          {
+            "title": "List of conglomerates",
+            "url": "https://en.wikipedia.org/wiki/List_of_conglomerates",
+            "description": "3M · Access Industries · AL-Dewan Royal Holding Group · Advanced Micro Devices · Alphabet · Altra Industrial Motion · Altria · Amazon ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Forbes' 2025 Global 2000 List - The World's Largest ...",
+            "url": "https://www.forbes.com/lists/global2000/",
+            "description": "America's largest bank, JPMorgan, is ranked No. 1 for the third year in a row, leading 612 U.S.-based companies on the list.",
+            "source": "serpapi"
+          },
+          {
+            "title": "Best Conglomerate Stocks to Buy Now (2026)",
+            "url": "https://www.wallstreetzen.com/industries/best-conglomerate-stocks",
+            "description": "Seaboard (NYSEMKT:SEB) is the #1 top conglomerate stock out of 19 with a Zen Rating of B. · Valmont Industries (NYSE:VMI) is the #2 top conglomerate stock out of ...",
+            "source": "serpapi"
+          }
+        ],
+        "news": [
+          {
+            "title": "Reliance Industries News - The Economic Times",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Feconomictimes.indiatimes.com%2Freliance%2Dindustries%2Dltd%2Fstocksupdate%2Fcompanyid%2D13215.cms&rut=8ef225d39b41929e91b704cfdaa169e74755c2201d7c20953ade9c2ff1d4b820",
+            "description": "Reliance Industries' shares rose after a new India‑US trade deal cut tariffs to 18% and opened the possibility of Venezuelan crude resuming to India. Reliance's heavy crude processing capacity positions it as a key beneficiary amid shifting global oil sourcing.",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Corporate Announcements - Reliance Industries Limited",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.ril.com%2Finvestor%2Fresource%2Dcenter%2Fcorporate%2Dannouncements&rut=edd52ff2b8650610aaeb95fb393987fc2d9c275d71f8640ae871dfb519f641f8",
+            "description": "Check out and find the latest information on the Corporate Announcements of Reliance. Keep up to date with all the important announcements, news and updates including company reports and other notifications here.",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Reliance Industries Ltd | Reuters",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.reuters.com%2Fcompany%2Freliance%2Dindustries%2Dltd%2F&rut=d40c851a7619bba972d157599b3cb684b02a72f8bf01ffa4ae82ea970a89f572",
+            "description": "The latest international Reliance Industries Ltd news and views from Reuters - one of the world's largest news agencies",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Reliance industries ltd News: Reliance industries ltd Latest News ...",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.financialexpress.com%2Fabout%2Freliance%2Dindustries%2Dltd%2F&rut=2409f287c7c33a359c85be677fddad3a486849ba656676011345eb7bd46f6892",
+            "description": "Reliance industries ltd News: Check here latest news and updates about Reliance industries ltd in India. Read top headlines and breaking news today in India about Reliance industries ltd on ...",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Reliance Industries News, Corporate filings and Earnings ... - Trendlyne",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Ftrendlyne.com%2Flatest%2Dnews%2Fall%2F1127%2FRELIANCE%2Freliance%2Dindustries%2Dltd%2F&rut=5c82e3e13ee870b933bead8317497c8ed4ffd5d6772f88adc3f9c91e1031e72a",
+            "description": "RELIANCE, BSE:500325- Keep track of all breaking news and updates on Reliance Industries from all sources in a single place.",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Reliance Industries NEWS - CNBCTV18",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.cnbctv18.com%2Ftags%2Freliance%2Dindustries.htm&rut=46ae5a0375ff82f53fed53736e4d1c574cbf73193c8187609cbe4aef03088356",
+            "description": "Reliance industries: Read all latest news and live updates on Reliance industries including breaking news on Reliance industries, Reliance industries photos, Reliance industries videos and many more at cnbctv18.com",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Reliance--industries: Latest Reliance--industries News, Photos, Videos ...",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.livemint.com%2Ftopic%2Freliance%2D%2Dindustries&rut=7b980ee94ab09063eb700cd5ce4a72921e965fbf72979710f4e52f7af60f30f9",
+            "description": "Reliance--industries: Get the latest Reliance--industries news, photos, videos, and podcasts. Explore more for Reliance--industries breaking news, opinions, special reports, and more on mint.",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Reliance Industries-Limited-Ril News: Latest Reliance Industries ...",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.news18.com%2Ftopics%2Freliance%2Dindustries%2Dlimited%2Dril%2F&rut=e4285bf820fb17497daac6e7af874b9e9899a19d2f4a0e66865de9e71d8198a5",
+            "description": "Get all the latest news and updates on Reliance Industries-Limited-Ril only on News18.com. Read Politics news, current affairs and news headlines online on Reliance Industries-Limited-Ril News today.",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Press Releases - Reliance Industries Limited",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.ril.com%2Fnews%2Dmedia%2Fpress%2Dreleases&rut=c55a21d624ded467a9ee5e125313be3729543b0f25f433ba32d3705fcec2d099",
+            "description": "Stay updated with the latest Reliance Industries press releases, financial results, strategic ventures, and corporate announcements. Read now!",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Reliance Industries Latest News- Top News on Reliance Industries ...",
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.zeebiz.com%2Ftopics%2Freliance%2Dindustries&rut=2c048c8ba2dffc4d2d2cd23f61afd6ff2820804eb89429f254f01b20b4465b99",
+            "description": "Reliance Industries News- Zee Business provides latest news on Reliance Industries, Reliance Industries news Today, Top News on Reliance Industries, update on Reliance Industries. Stay updated with business news, breaking news headlines.",
+            "source": "duckduckgo"
+          }
+        ],
+        "crawledPages": [
+          {
+            "url": "https:////duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.moneycontrol.com%2Fmarkets%2Ffinancials%2Fquarterly%2Dresults%2Frelianceindustries%2DRI%2F&rut=0aacbece7337195190b01790586941189508df790867e70f383f9f87f1ca5ffe",
+            "title": "",
+            "content": "<META http-equiv='refresh' content=\"0;URL=https://www.moneycontrol.com/markets/financials/quarterly-results/relianceindustries-RI/\">",
+            "crawledAt": "2026-02-18T17:54:36.074Z",
+            "sourceType": "financial"
+          },
+          {
+            "url": "https://www.moneycontrol.com/financials/relianceindustries/balance-sheetVI/RI",
+            "title": "Reliance Industries Balance Sheet, Reliance Industries Financial Statement & Accounts",
+            "content": "Reliance Industries Ltd. BSE: 500325 | NSE: RELIANCE | Series: | ISIN: INE002A01018 | SECTOR: Oil Exploration and ProductionOil Exploration and Production Success Alert Please select a Day. Info Trade Portfolio Watchlist Portfolio | Watchlist Messages Set SMS Alert Open trading A/c Open trading A/c Reliance Indus Reliance Industries Ltd. | BSE 1441.25 18.45 (1.30%) | NSE (%) | Trade | Add Home Home News Markets Mutual Funds Commodities Property Personal Finance Portfolio Messages sme Live TV tv18 terminal quote Today's L/H 52 Wk L/H Circuit VWAP F&O Quote Historical Prices Pre Opening Session Prices charts Basic Advanced Technical Chart Technicals Moving Average Pivot Table Indicators Valuations Moving Averages Corp Action Board meetings AGM/EGM Dividends Bonus Splits Rights News All News Announcements Business Earnings Mgmt Interviews Advice Research reports Sector Financials Balance sheet Profit & Loss Quarterly Results Half Yearly Results Nine Months Results Yearly Results Cash Flows Ratios Capital Structure Financial Graphs Annual Report Directors report Chairman's speech Auditors report Shareholding SH Pattern MF holding Top Public SH Promoter H Bulk deals Large deals Peers Competition Data Bank Latest price Stock Performance Market Cap Net sales Net profit Total assets Fund Manager holdings Company Info Management History Background Location Listing Forum (8) BSE Live Feb 18, 16:01 1441.25 18.45 (1.30%) Volume AVERAGE VOLUME 5-Day 689,347 10-Day 685,804 30-Day 790,211 368,386 Prev. Close 1422.80 Open Price 1425.40 Bid Price (Qty.) 0.00 (0) Offer Price (Qty.) 0.00 (0) NSE Live (%) Volume No Data Available Prev. Close Open Price Bid Price (Qty.) () Offer Price (Qty.) () Reliance Industries is not listed on NSE × VWAP And Current Price Comparison Financials Result inNew Format Result inOld Format Standalone Consolidated Print/Copy to Excel : - Standalone - Profit & Loss Profit & Loss (New) Balance Sheet Balance Sheet (New) Cash Flows Cash Flows (New) Quarterly Half Yearly Nine Monthly Yearly Capital Structure Raw Materials Finished Goods Financial Ratios Financial Ratios (New) - Consolidated - Quaterly Half Yearly Nine Monthly Yearly Profit & Loss Profit & Loss (New) Balance Sheet Balance Sheet (New) Cash Flows Cash Flows (New) Financial Ratios Financial Ratios (New) Go Balance Sheet of Reliance Industries (in Rs. Cr.) Mar 25 Mar 24 Mar 23 Mar 22 Mar 21 12 mths 12 mths 12 mths 12 mths 12 mths EQUITIES AND LIABILITIES SHAREHOLDER'S FUNDS Equity Share Capital 13,532.00 6,766.00 6,766.00 6,765.00 6,445.00 Total Share Capital 13,532.00 6,766.00 6,766.00 6,765.00 6,445.00 Reserves and Surplus 529,555.00 508,330.00 472,328.00 464,762.00 468,038.00 Total Reserves and Surplus 529,555.00 508,330.00 472,328.00 464,762.00 468,038.00 Total Shareholders Funds 543,087.00 515,096.00 479,094.00 471,527.00 474,483.00 NON-CURRENT LIABILITIES Long Term Borrowings 172,025.00 161,059.00 135,561.00 167,231.00 160,598.00 Deferred Tax Liabilities [Net] 37,390.00 36,259.00 33,968.00 30,832.00 30,788.00 Other Long Term Liabilities 10,197.00 5,514.00 3,370.00 6,504.00 4,518.00 Long Term Provisions 1,767.00 1,701.00 1,296.00 1,598.00 1,499.00 Total Non-Current Liabilities 221,379.00 204,533.00 174,195.00 206,165.00 197,403.00 CURRENT LIABILITIES Short Term Borrowings 26,788.00 50,731.00 80,262.00 27,332.00 33,152.00 Trade Payables 122,379.00 129,859.00 110,722.00 134,005.00 86,999.00 Other Current Liabilities 107,612.00 58,452.00 45,366.00 38,749.00 80,735.00 Short Term Provisions 1,156.00 972.00 926.00 896.00 901.00 Total Current Liabilities 257,935.00 240,014.00 237,276.00 200,982.00 201,787.00 Total Capital And Liabilities 1,022,401.00 959,643.00 890,565.00 878,674.00 873,673.00 ASSETS NON-CURRENT ASSETS Tangible Assets 267,096.00 258,911.00 232,238.00 223,824.00 292,092.00 Intangible Assets 43,951.00 40,719.00 12,926.00 15,802.00 14,741.00 Capital Work-In-Progress 76,322.00 44,294.00 30,958.00 19,267.00 20,765.00 Other Assets 0.00 0.00 0.00 0.00 0.00 Fixed Assets 393,464.00 361,262.00 294,079.00 274,288.00 339,668.00 Non-Current Investments 333,258.00 301,400.00 303,558.00 330,493.00 252,620.00 Deferred Tax Assets [Net] 0.00 0.00 0.00 0.00 0.00 Long Term Loans And Advances 4,941.00 10,051.00 22,448.00 41,951.00 65,698.00 Other Non-Current Assets 21,175.00 24,305.00 4,548.00 9,544.00 4,968.00 Total Non-Current Assets 752,838.00 697,018.00 624,633.00 656,276.00 662,954.00 CURRENT ASSETS Current Investments 57,102.00 68,663.00 86,074.00 78,304.00 94,665.00 Inventories 89,216.00 85,100.00 48,926.00 45,923.00 37,437.00 Trade Receivables 15,591.00 14,740.00 16,898.00 14,394.00 4,159.00 Cash And Cash Equivalents 82,471.00 69,248.00 56,811.00 21,714.00 5,573.00 Short Term Loans And Advances 0.00 0.00 595.00 161.00 993.00 OtherCurrentAssets 25,183.00 24,874.00 56,628.00 61,902.00 67,892.00 Total Current Assets 269,563.00 262,625.00 265,932.00 222,398.00 210,719.00 Total Assets 1,022,401.00 959,643.00 890,565.00 878,674.00 873,673.00 OTHER ADDITIONAL INFORMATION CONTINGENT LIABILITIES, COMMITMENTS Contingent Liabilities 39,668.00 31,018.00 27,421.00 30,426.00 25,921.00 CIF VALUE OF IMPORTS Raw Materials 0.00 0.00 0.00 0.00 0.00 Stores, Spares And Loose Tools 0.00 0.00 0.00 0.00 0.00 Trade/Other Goods 0.00 0.00 0.00 0.00 0.00 Capital Goods 0.00 0.00 0.00 0.00 0.00 EXPENDITURE IN FOREIGN EXCHANGE Expenditure In Foreign Currency 381,233.00 367,617.00 413,231.00 321,119.00 134,436.00 REMITTANCES IN FOREIGN CURRENCIES FOR DIVIDENDS Dividend Remittance In Foreign Currency -- -- -- -- -- EARNINGS IN FOREIGN EXCHANGE FOB Value Of Goods -- -- -- -- -- Other Earnings 460,394.00 463,715.00 576,842.00 245,752.00 179,929.00 BONUS DETAILS Bonus Equity Share Capital 11,955.08 5,188.89 5,188.89 5,188.89 5,188.89 NON-CURRENT INVESTMENTS Non-Current Investments Quoted Market Value 3,696.00 6,196.00 2,934.00 62,401.00 21,240.00 Non-Current Investments Unquoted Book Value 332,821.00 300,930.00 303,180.00 273,377.00 235,348.00 CURRENT INVESTMENTS Current Investments Quoted Market Value 52,355.00 62,723.00 65,984.00 21,471.00 36,303.00 Current Investments Unquoted Book Value 4,747.00 5,940.00 20,090.00 56,833.00 58,362.00 Source : Dion Global Solutions Limited Results of Reliance News Results Estimates Analysis 18.02.2026 Buy Reliance Industries; target of Rs 1688: Prabhudas Lilladher 17.02.2026 Stocks to Watch Today: Lupin, Cochin Shipyard, Texmaco Rail, Highway Infrastructure, TVS Supply Chain Solutions, Seamec in focus on 17 February 09.02.2026 Stocks to Watch Today: SBI, Aurobindo Pharma, Ipca Labs, Tata Steel, PFC, REC, Force Motors, Kalyan Jewellers, JK Tyre, Ram Ratna Wires, Atul Auto in focus on 09 February 04.02.2026 Mukesh Ambani credits stable leadership under PM Modi for India’s growth momentum 20.01.2026 Reliance Consolidated December 2025 Net Sales at Rs 264,905.00 crore, up 10.38% Y-o-Y 19.01.2026 Reliance Standalone December 2025 Net Sales at Rs 121,150.00 crore, down 2.6% Y-o-Y 20.10.2025 Reliance Standalone September 2025 Net Sales at Rs 126,335.00 crore, down 2.9% Y-o-Y 18.07.2025 Reliance Retail to demerge FMCG business to boost growth 20.07.2023 RIL Q1 preview: Net profit seen at Rs 16,995 crore 20.04.2023 RIL may record 17% growth in Q4 operating profit, single-digit rise in topline, bottomline 20.10.2022 Preview: RIL’s Q2 consolidated net profit seen rising 12% YoY, driven by telecom, retail business 21.07.2022 RIL Results Preview | Net profit likely to surge over 105% in Q1 on robust refining margins 21.07.2025 Reliance Industries shares slip on reporting highest-ever profit; should you buy, sell, or hold? 22.04.2024 RIL Q4: Superb execution, upbeat outlook 19.01.2024 RIL: Q3 results reflect broad-based business strength 21.07.2023 Reliance Q1 results: Newbies cover the weakness of the legacy business Results of Refineries Sector News Results Estimates Analysis 29.03.2017 Reliance Induatries intimation under requlation 30 23.03.2017 Reliance allots equity shares 23.03.2017 BPCL declares 120% second interim special dividend 23.03.2017 HPCL approves dividend of Rs 6.40/per share 13.02.2017 HPCL profit jumps 53% on higher sales, inventory gains 12.02.2017 Mahanagar Gas Q3 net profit at Rs 99 cr 09.02.2017 BPCL Q3 net profit up 74% at Rs 2272 crore 07.02.2017 MRPL Q3 net profit jumps 92% to Rs 566 crore 31.01.2017 IOC's Q3 net seen rising 77% to Rs 5539 cr 16.01.2017 Reliance Q3 profit seen up at Rs 7850cr, GRM may be at &amp;#36;11.5/bbl 12.01.2017 Reliance Inds. Q3 PAT seen up 3.9% to Rs 8002 cr: Motilal Oswal 12.01.2017 IOC Q3 PAT seen up 104.7% to Rs 6390.7 cr: Motilal Oswal 17.01.2017 Positive on RIL, earnings seen improving in Q1FY18: Religare 16.01.2017 RIL may correct but not substantially, say experts 21.10.2016 Jio to touch 100 mn subscribers in next 3 years: Edelweiss 20.10.2016 RIL blockbuster numbers to continue into H2; stock to gain: Pros Quick links News Business Earnings Mgmt Interviews Announcements Stock Views Brokerage Reports Sector Corporate Action Board Meetings AGM/EGM Bonus Rights Splits Dividends Information Company History Listing Info Locations Bulk Deals Large Deals Shareholding MF Holding Top Shareholders Promoter Holding Financials Balance Sheet Profit & Loss Quarterly Results Half Yearly Results Nine Monthly Results Yearly Results Cash Flow Ratios Annual Report Directors Report Chairman's Speech Auditors Report Notes to Accounts Finished Goods Raw Materials Background Board of Directors Capital Structure Peer Comparison Competition Price Price Performance Market Cap Net Sales Net Profit Total Assets Historical Prices Price of SBI on previous budgets Related Searches Reliance Industries Stock Price | Reliance Stock Quote | Reliance Results | Reliance News | View All Related Searches",
+            "crawledAt": "2026-02-18T17:54:38.820Z",
+            "sourceType": "financial"
+          },
+          {
+            "url": "https://www.ril.com/about",
+            "title": "About Reliance Industries Limited - A Fortune 500® Company & The Largest Private Sector Corporation In India",
+            "content": "Growth is Life Growth is Life Reliance Industries Limited is a Fortune 500® company and the largest private sector corporation in India Reliance is India’s largest and most profitable private sector company. Our motto “Growth is Life” aptly captures the ever-evolving spirit of Reliance. In just over four decades, we have emerged as one of India’s most valuable, stakeholder-centric organisations, building valuable assets for India and innovating for a better future for all Indians. What is Good for India is Good for Reliance Our belief \"What is Good for India is Good for Reliance\" has shaped our ambitions and actions every day since inception. We have evolved from being a textile and polyester company to an integrated player across energy, materials, retail, entertainment, and digital services, putting India on the global energy map and triggering a nationwide retail and digital revolution. We are committed to self-reliant, sustainable growth and are embracing the New Energy and digital-first future by making it India’s own. Our Businesses Energy explore Petrochemicals explore Retail explore Digital Services - Jio explore New Energy & New Materials explore Media & Entertainment explore VALUE-CREATION APPROACH Forward with India Forward with Everyone Investors & Shareholders Reliance is a pioneer to have started the equity revolution in India. Over the years, we have given superior and consistent returns to our shareholders and investors. ₹17,25,378 crore($201.9 billion) Market capitalisation for FY2024-25 1st Indian company to cross consolidated total equity of over ₹10,00,000 crore ($117 billion*) Government & Regulatory Authorities Reliance is one of the largest taxpayers (direct and indirect) in India. We have a strong track record of mandatory and voluntary compliance, and we endorse national schemes set for India’s growth. ₹1,86,440 crore ($22.4 billion) Contribution to National Exchequer for FY2023-24 Supporting Communities Through Reliance Foundation, we run one of the largest corporate philanthropies in India, with far-reaching impact. ~86 million People reached through CSR activities* 91,500+ Villages served through CSR initiatives* (*Since inception figures) Employees Consistently ranked among India's top employers of choice, Reliance attracts skilled talent from various backgrounds and provides them with a fair, inclusive, diverse, and meritocratic ecosystem for growth. Reliance among 'TIME100 Most Influential Companies' 2024 Reliance recognized among 'India's Best Employers among Nation-Builders' by Great Place to Work, India for 2025. Customers Reliance is a consumer-oriented company, offering consumer-centric solutions across its business verticals. We provide superior and delightful experiences for our customers across all our businesses. 515.3 million Jio subscribers as of Q3 FY2026 378 million Reliance Retail registered customer base as of Q3 FY2026 Suppliers and Partners Our partnerships continue to power our way forward in the sectors that we operate in on shared growth platforms. We also maintain an agile, yet predictable supply chain, and work closely with our vendors, including MSMEs, and domestic manufacturers. 11.5% Input material sourced from MSME/small producers in FY 2024-25 Our Values & Behaviours We aim to conduct our businesses ethically and in a manner that is respectful to all. We achieve this by aligning our goals with our six core values. CUSTOMER VALUE We believe that our customers are the reason for our existence and the only guarantee to our future. Everything that we do must delight our customers, each time, and always. OWNERSHIP MINDSET We believe that the success and the reputation of the company is paramount. Having an ownership mindset is fundamental to our existence. It creates a sense of inspiration and purpose. It enables accountability and accomplishment. It ensures our strong commitment to the highest standards of safety and environment. RESPECT We believe that without respecting all our stakeholders, there can be no Reliance. We acknowledge that there may be a difference of perspectives, but there must always be respect. INTEGRITY Upholding our reputation is paramount as we are judged by how we act. We are committed to being truthful in all our actions. We strive to be honest and forthright with one another and with all our stakeholders. We respect the world in which we operate. It begins with compliance with laws and regulations. We hold ourselves to the highest ethical standards and behave in ways that earn the trust of others. ONE TEAM Whatever the strength of the individual, we will accomplish more together. We put the team ahead of our personal success and commit to building its capabilities. We trust each other to deliver on our respective obligations. EXCELLENCE We are committed to excellence, in spirit and in action. We believe everything that we do and everything we think can always get better. We see all of our activities in terms of our higher purpose and ideas, which drives our quest for excellence always. Awards & Recognition 2025 RIL ranks #88 in Fortune Global 500; retains position as top-ranked Indian company on the list. 2025 RIL ranks #45 in Forbes Global 2000; retains position as top-ranked Indian company on the list. 2025 RIL retains #1 position on ‘2024 Burgundy Private Hurun India 500’ list of most valuable companies. 2025 RIL is Great Place to Work® certified for the 5th consecutive year 2025 RIL and Reliance Retail recognised among 'India's Best Employers Among Nation-Builders' by Great Place to Work® India. 2024 Reliance is among ‘TIME100 Most Influential Companies 2024’ 2024 RIL among world’s most valuable brands, Jio among world’s 25 strongest brands in ‘Brand Finance Global 500 2024’ list 2024 RIL, Reliance Retail, and Jio are ‘Great Place to Work’ certified 2024 RIL and Reliance Retail among BW Businessworld’s ‘Most Respected Companies’",
+            "crawledAt": "2026-02-18T17:54:40.800Z",
+            "sourceType": "official"
+          },
+          {
+            "url": "https://en.wikipedia.org/wiki/Reliance_Industries",
+            "title": "Reliance Industries - Wikipedia",
+            "content": "From Wikipedia, the free encyclopedia Indian multinational conglomerate Not to be confused with Reliance Group. This article may require cleanup to meet Wikipedia's quality standards. The specific problem is: primary sorucing, unreliable sources, NPOV, promotional tone, etc. Please help improve this article if you can. (May 2025) (Learn how and when to remove this message) Reliance Industries LimitedFormerlyReliance Commercial Corporation (1958–1966) Reliance Textiles and Engineers (1966–1973)Company typePublicTraded asBSE: 500325NSE: RELIANCELSE: RIGDBSE SENSEX constituentNSE NIFTY 50 constituentISININE002A01018IndustryConglomerateFounded1958; 68 years ago (1958)[1]FounderDhirubhai AmbaniHeadquartersMumbai, Maharashtra, IndiaArea servedWorldwideKey peopleMukesh Ambani (Chairman & Managing Director)ProductsPetroleumNatural gasChemicalPetrochemicalOil refiningRetailTelecommunicationsMediaEntertainmentRevenue ₹9.98 lakh crore (US$120 billion) (2025)Operating income ₹1.83 lakh crore (US$22 billion) (2025)Net income ₹81,309 crore (US$9.6 billion) (2025)Total assets ₹19.50 lakh crore (US$230 billion) (2025)Total equity ₹10.09 lakh crore (US$120 billion) (2025)OwnerAmbani family (51%)[2]Number of employees403,303 (2025) [3]Subsidiaries List Jio Platforms (67.03%)Reliance RetailJio-bp (51%)JioStar (16.34%)Network18 Group (56.89%)DEN Networks (78.62%)Hathway (71.95%)Alok Industries (75%)Reliance FoundationIndiawin SportsRelicordReliance Institute of Life SciencesReliance Industrial Infrastructure (45.43%)Sterling and Wilson Renewable EnergyReliance New Energy Ltd.Sikka Ports & Terminals LimitedRenewable Energy Corporation Websitewww.ril.com Footnotes / referencesFinancials as of 31 March 2025[update].[4][5] Reliance Industries Limited is an Indian multinational conglomerate headquartered in Mumbai. Its businesses include energy, petrochemicals, natural gas, retail, entertainment, telecommunications, mass media, and textiles. Reliance is the largest public company in India by market capitalisation[6][7] and revenue,[8] and the 86th largest company worldwide.[9] It is India's largest private tax payer[10] and largest exporter, accounting for 7% of India's total merchandise exports.[11] The company has attracted controversy for reports of political corruption, cronyism, fraud, financial manipulation, and exploitation of its customers, Indian citizens, and natural resources.[12][13][14][15][16] Its chairman, Mukesh Ambani, has been described as a plutocrat.[17] History 1958–1985 Stamp released in 2002 to honor company founder Dhirubhai Ambani Reliance Commercial Corporation was set up in 1958 by Dhirubhai Ambani as a small venture firm trading commodities, especially spices and polyester yarn.[1] In 1965, the partnership ended and Dhirubhai continued the polyester business of the firm.[18] In 1966, Reliance Textiles Industries Pvt. Ltd. was incorporated in Maharashtra. It established a synthetic fabrics mill in the same year at Naroda in Gujarat.[19] On 8 May 1973, it became Reliance Textiles Industries Limited. In 1975, the company expanded its business into textiles, with \"Vimal\" becoming its major brand in later years. The company held its initial public offering (IPO) in 1977.[20] The issue was over-subscribed by seven times.[21] In 1979, a textiles company Sidhpur Mills was amalgamated with the company.[22] In 1980, the company expanded its polyester yarn business by setting up a Polyester Filament Yarn Plant in Patalganga, Raigad, Maharashtra with financial and technical collaboration with E. I. du Pont de Nemours & Co., U.S.[19] 1981–2000 In 1985, the name of the company was changed from Reliance Textiles Industries Ltd. to Reliance Industries Ltd.[19] During 1985 to 1992, the company expanded its installed capacity for producing polyester yarn by over 145,000 tonnes per annum.[19] The Hazira petrochemical plant was commissioned in 1991–92.[23] In 1993, Reliance turned to the overseas capital markets for funds through a global depository issue of Reliance Petroleum. In 1996, it became the first private sector company in India to be rated by international credit rating agencies. S&P rated Reliance \"BB+, stable outlook, constrained by the sovereign ceiling\". Moody's rated \"Baa3, Investment grade, constrained by the sovereign ceiling\".[24] In 1995/96, the company entered the telecommunications industry through a joint venture with NYNEX, USA, and promoted Reliance Telecom Private Limited in India.[23] In 1998, Reliance took over Indian Petrochemicals Corporation Limited during privatization of public sector enterprises. In 1998/99, RIL introduced packaged LPG in 15 kg cylinders under the brand name Reliance Gas.[23] The years 1998–2000 saw the construction of the integrated petrochemical complex at Jamnagar in Gujarat,[23] the largest refinery in the world. 2001 onwards In 2001, Reliance Industries Ltd. and Reliance Petroleum Ltd. became India's two largest companies in terms of all major financial parameters.[25] In 2001–02, Reliance Petroleum was merged with Reliance Industries.[20] In 2002, Reliance announced India's biggest gas discovery (at the Krishna Godavari basin) in nearly three decades and one of the largest gas discoveries in the world during 2002. The in-place volume of natural gas was more than 7 trillion cubic feet, equivalent to about 120 crore (1.2 billion) barrels of crude oil. This was the first-ever discovery by an Indian private sector company.[20][non-primary source needed][26] In 2002–03, RIL purchased a majority stake in Indian Petrochemicals Corporation Ltd. (IPCL), India's second largest petrochemicals company, from the government of India,[27] RIL took over IPCL's Vadodara Plants and renamed it as Vadodara Manufacturing Division (VMD).[28][29] IPCL's Nagothane and Dahej manufacturing complexes came under RIL when IPCL was merged with RIL in 2008.[30][31] In 2005 and 2006, the company reorganised its business by demerging its investments in power generation and distribution, financial services and telecommunication services into four separate entities.[32][non-primary source needed] In 2006, Reliance entered the organised retail market in India[33] with the launch of its retail store format under the brand name of 'Reliance Fresh'.[34][35] By the end of 2008, Reliance Retail had close to 600 stores across 57 cities in India.[20][non-primary source needed] [36] In November 2009, Reliance Industries issued 1:1 bonus shares to its shareholders.[37][38] In 2010, Reliance entered the broadband services market with acquisition of Infotel Broadband Services Limited, which was the only successful bidder for pan-India fourth-generation (4G) spectrum auction held by the government of India.[39][40] In the same year, Reliance and BP announced a partnership in the oil and gas business. BP took a 30 per cent stake in 23 oil and gas production sharing contracts that Reliance operates in India, including the KG-D6 block for $7.2 billion.[41] Reliance also formed a 50:50 joint venture with BP for sourcing and marketing of gas in India.[42] In 2017, RIL set up a joint venture with Russian Company Sibur for setting up a Butyl rubber plant in Jamnagar, Gujarat, to be operational by 2018.[43] In 2018, the Commercial Court (England and Wales), hearing a legal case involving Reliance Industries and the Union of India, ruled for the first time that the foreign act of state doctrine applied when issues were being addressed through arbitration, as well as when they are addressed through litigation.[44] In August 2019, Reliance added Fynd[45] primarily for its consumer businesses and mobile phone services in the e-commerce space.[46][47] In December 2022, Reliance Industries Market cap stood at ₹17.59 lakh crore (US$223.78 billion).[48] In the field of generative pre-trained transformer (GPT) technology, Reliance Industries Ltd. and The BharatGPT Group announced in February 2024 that they would launch a large language model (LLM), Hanuman's AI system, in March 2024. The model will work in 11 local languages in four major areas: health, governance, financial services and education.[49] In February 2024, Reliance and The Walt Disney Company announced a deal to merge their streaming and television assets.[50][51] The deal was closed in November 2024, with the Disney Star joint venture having a reported value of $8.5 billion.[52] In October 2024, Reliance entered into an agreement with Nvidia to procure Blackwell chips for its planned data centre in Jamnagar.[53] On 3 June 2025, it was reported that Reliance Industries-owned Jai Ammunition Limited was part of an Indian Army project to supply indigenously designed, developed and produced artillery shells and reduce foreign dependence. As of date, four ammunition variants – including high explosive, smoke and dual-purpose improved conventional munition (DPICM) rounds – have been tested for the past two years. The final development-cum-user trials are planned in November 2025, following which mass order could be placed. The shells have been developed under the Development Cum Production Partner (DCPP) programme by the Defence Research and Development Organisation (DRDO) with two industry partners – Jai Ammunition and Yantra India.[54] Shareholding The number of shares of RIL are approx. 644.51 crore (6.44 billion).[55] The promoter group, the Ambani family, holds 50.39% of the total shares whereas the remaining 49.61% shares are held by public shareholders, including FII and corporate bodies.[55] Life Insurance Corporation of India, public sector company, is the largest non-promoter investor in the company, with 6.49% shareholding.[56] In January 2012, the company announced a buyback program to buy a maximum of 12 crore (120 million) shares for ₹10,400 crore (US$1.95 billion). By the end of January 2013, the company had bought back 4.62 crore (46.2 million) shares for ₹3,366 crore (US$574.42 million).[57] Listing The company's equity shares are listed on the National Stock ",
+            "crawledAt": "2026-02-18T17:54:42.591Z",
+            "sourceType": "other"
+          },
+          {
+            "url": "https://iide.co/case-studies/business-model-of-reliance-industries/",
+            "title": "Reliance Industries Business Model in 2026: Global Strategy Explained",
+            "content": "Students CentricPlacements ReportTrackable results, real numbersReviewsProven success, real voicesTrainersExpert-led, Industry-Driven TrainingLife at IIDEVibrant Spirit student lifeAlumniSuccessful Journeys, Inspiring StoriesLearning CentreWebinarsLive, Interactive MasterclassesBlogsFresh Insights, quick readsCase studiesReal-life, Industry relevantMoreHire from usHire Top Digital Marketing TalentWork with usJoin Our Team, Make an ImpactCustomised TrainingPersonalised digital marketing training for your companyRefer & earnSimple, easy rewardsContact usGet the answers you needAbout usKnow more about IIDEExplore all course optionsDigital Marketing CoursesMarketing ProgramsFOR FRESH GRADUATESPG in Digital Marketing & StrategyIdeal for Age: 20–25 YearsFOR WORKING PROFESSIONALSOnline Digital Marketing CourseIdeal for Age: 25–35 YearsCan’t decide? Explore all ourDigital Marketing CoursesAI ProgramsTrendingProfessional Certification in AI StrategyIdeal for AI EnthusiastBachelor's ProgramsMost PopularFOR 12TH GRADUATESUG Program in Digital Business & EntrepreneurshipIdeal for Age: 18–19 YearsPARTNER PROGRAMSJai Hind B.Com in Digital StrategyThakur College BCom in Digital BusinessKES Shroff College BCom Digital BusinessPillai College BBA in Digital MarketingKPB Hinduja BBA in Digital BusinessNagindas Khandwala BCom in Digital BusinessRaheja B.Com in Digital BusinessCan’t decide? Explore allBBA In Digital Marketing CollegesStart Learning for FreeFREE MASTERCLASSCareers in Digital MarketingDigital Marketing BasicsStrategic Digital MarketingMeta Ads FundamentalsAI in Digital MarketingDecoding Reliance Industries’ Business Model in 2026: How It Dominates Multiple SectorsBy Aditya ShastriUpdated on Dec 12, 2025Share on:Reliance Industries' business model is built on its diversified portfolio, including petrochemicals, refining, telecom, and retail. This strategy allows them to offer a broad range of products and services while maintaining strong market leadership. Reliance achieves this by integrating technology, optimising supply chains, and leveraging economies of scale. By continually innovating and expanding across sectors, Reliance drives growth and global competitiveness. In this blog, we decode Reliance Industries’ revenue model and strategy, shedding light on how it has achieved market dominance and consistent growth. Curious about how Reliance’s diversified model powers its global success? Read on to learn more!About Reliance Industries Founded by Dhirubhai Ambani in 1966, Reliance Industries Limited (RIL) is one of India’s largest conglomerates with a diverse business presence across petrochemicals, refining, telecommunications, and retail. The company’s unique value proposition lies in its integrated business model, utilising synergies across different sectors to fuel growth and innovation. RIL has posted a revenue of ₹8.39 trillion in FY 2023 and employs over 2,50,000 people globally, securing its position as a market leader. Reliance’s customer-first approach, commitment to sustainability, and focus on continuous innovation have helped it expand and lead across various industries. With a deep-rooted philosophy of empowering people and businesses, RIL’s diversified model is the key to its long-term success and leadership across sectors. Summary table Feature Details Founded 1966 Founder Dhirubhai Ambani Headquarters Mumbai, India Industry Conglomerate (Petrochemicals, Refining, Retail, Telecom) Revenue (2023) ₹8.39 trillion Presence Global, 50+ countries Employees 2,50,000+ Popular for Telecom (Jio), Retail (Reliance Retail), Petrochemicals & Refining Learn Digital Marketing for FREE 45 Mins Masterclass Watch Anytime, Anywhere 1,00,000+ Students Enrolled Register NowHow Does Reliance Industries Make Money? Revenue Stream Breakdown: Product Sales: Reliance generates significant income from petrochemical products, refined fuels, and textiles. These products serve both domestic and international markets, contributing heavily to its revenue. Subscription Fees: Reliance Jio, a leading telecommunications provider in India, brings in substantial recurring revenue from mobile and broadband subscriptions. Franchise Fees: Reliance Retail operates numerous outlets under its brands, contributing revenue through franchise agreements. Advertising Revenue: Reliance’s media division, particularly through Jio and its broadcast content, generates advertising revenue from TV ads, online content, and sponsored promotions. Services: Reliance provides services such as broadband, telecom, and cloud offerings. These services contribute to its recurring revenue model. Licensing/Royalties: Revenue from telecom spectrum sales and intellectual property rights, such as licensing deals, contributes to Reliance’s income stream. Other Revenue Streams: Income from one-time events, asset sales, or special projects also form part of its diversified revenue generation. Revenue Contribution: Telecom (Jio): Approximately 35% of total revenue, driven by the broad adoption of mobile, broadband, and digital services in India. Petrochemicals: Around 30% of total revenue is generated through the sale of petrochemical products, refined fuels, and textiles. Retail: Contributes approximately 25% of total revenue, driven by Reliance Retail's dominance in the Indian retail sector. Others (Media & Licensing): Contributes around 10% of total revenue from advertising and licensing income. Pricing Strategy: Value-Based Pricing: Used for telecom services through Jio, where the pricing is set according to the perceived value of mobile data, internet services, and broadband offerings. Competitive Pricing: Applied to petroleum products and petrochemicals, where Reliance competes on price while maintaining quality and operational efficiency.Premium Pricing: Used for select luxury goods offered under Reliance Retail, targeting higher-income customers who value premium quality products and services. This pricing model allows Reliance to attract a broad consumer base, from mass-market users for telecom and petroleum products to high-end buyers for luxury goods. The diverse pricing strategy strengthens its market positioning across various sectors, ensuring substantial revenue across its portfolio.Reliance Industries Business Model Canvas Reliance Industries Value Proposition Reliance Industries uniquely integrates diverse sectors, from petrochemicals and telecom to retail, creating synergies that fuel growth. By providing affordable, high-quality telecom services through Jio, Reliance revolutionised communication in India. The retail division offers a wide range of products, from groceries to electronics, supported by both physical and online shopping experiences. Reliance’s commitment to sustainability in petrochemical and retail operations addresses eco-conscious consumer needs. It creates an emotional bond by offering innovation, customer-first solutions, and sustainable practices. Customers benefit from functional advantages like speed, convenience, and quality. Reliance’s competitive edge lies in its diversified and integrated business model, which competitors struggle to replicate. Reliance Industries Revenue Model Reliance Industries generates revenue through various sectors. The largest contributions come from product sales in petrochemicals (30%) and telecom services through Jio (35%). Retail sales, both physical and e-commerce, account for about 25%, while media, advertising, and licensing contribute the remaining 10%. This diverse approach ensures consistent revenue growth across multiple markets, balancing product sales and subscription-based models. Reliance Industries Cost Structure Reliance's major expenses include high costs for manufacturing, logistics, R&D, marketing, and telecom infrastructure. Significant investments in refining, retail expansion, and technology lead to high capital expenditure. To manage costs, Reliance focuses on bulk production, automation, and outsourcing non-core services. These strategies help maintain healthy profit margins while driving growth in all sectors. Reliance Industries Customer Segment Reliance operates on a B2C and B2B model, serving a wide customer base. Its core B2C segment includes urban middle to high-income consumers, tech-savvy individuals, and eco-conscious buyers. Reliance targets consumers of all ages who seek affordable telecom services, diverse retail options, and sustainable products. The B2B segment includes businesses needing petrochemical products and telecom infrastructure, while government contracts further expand its reach. Reliance Industries Distribution Channels Reliance uses both physical and digital channels for distribution. Its telecom services, including Jio, are available through a vast retail network and digital platforms. Reliance Retail operates both online via JioMart and through physical stores across India. The brand also follows an omnichannel approach, seamlessly integrating online and offline experiences for convenience, with additional services like app-based shopping and customer support. Reliance Industries Key Partnerships Reliance collaborates with several key partners, including raw material suppliers for petrochemical production, telecom infrastructure providers for network development, and technology partners for digital services. It works with retail suppliers and franchisees to expand its retail footprint. Reliance also engages in sustainability partnerships with NGOs and government entities to ensure eco-friendly practices and promote green technologies across its operations. SWOT Analysis of Reliance Industries Strengths Weaknesses Opportunities Threats Market leader in multiple sectors High debt levels Expanding telecom and retail globally Intense competition in telecom and retail Strong technological infrastructure Dependence on oil prices Growth in digital services Regulatory challenges in energy sectors Diversified revenue streams Operational complexities Sustaina",
+            "crawledAt": "2026-02-18T17:54:44.050Z",
+            "sourceType": "official"
+          },
+          {
+            "url": "https://sharpely.in/blog/reliance-industries-analysis:-a-simple-guide-for-beginners",
+            "title": "Reliance Industries Analysis: A Simple Guide for Beginners | sharpely.in",
+            "content": "reliance industries analysis a simple guide for beginners",
+            "crawledAt": "2026-02-18T17:54:46.723Z",
+            "sourceType": "official"
+          },
+          {
+            "url": "https://companiesmarketcap.com/reliance-industries/revenue/",
+            "title": "Reliance Industries (RELIANCE.NS) - Revenue",
+            "content": "Companies: 10,652 total market cap: $141.588 T Sign In ENEnglish Deutsch Français $ USD €EUR₹INR£GBP$CAD$AUD$NZD$HKD$SGD Reliance Industries RELIANCE.NS #81Rank $215.06 BMarketcap IndiaCountry $15.89Share price 1.29%Change (1 day) 12.55%Change (1 year) 🏙 Conglomerate Categories Market cap Revenue Earnings Price history P/E ratio P/S ratio More Price history P/E ratio P/S ratio P/B ratio Operating margin EPS Stock Splits Dividends Dividend yield Shares outstanding Cost to borrow Total assets Total liabilities Total debt Cash on Hand Net Assets Annual Reports ESG Reports Sustainability Reports Revenue for Reliance Industries (RELIANCE.NS) Revenue in 2025 (TTM): $116.49 Billion USD According to Reliance Industries's latest financial reports the company's current revenue (TTM ) is $116.49 Billion USD. In 2024 the company made a revenue of $111.77 Billion USD an increase over the revenue in the year 2023 that were of $105.93 Billion USD. The revenue is the total amount of income that a company generates by the sale of goods or services. Unlike with the earnings no expenses are subtracted. Revenue history for Reliance Industries from 2014 to 2025 Annual revenue Year Revenue Change 2025 (TTM) $116.49 B4.22%2024 $111.77 B5.51%2023 $105.93 B-3.18%2022 $109.41 B26.22%2021 $86.68 B42.05%2020 $61.02 B-28.63%2019 $85.50 B8.26%2018 $78.97 B41.96%2017 $55.63 B33.36%2016 $41.71 B-4.69%2015 $43.76 B-34.88%2014 $67.20 B What is the market capitalization of a company? The market capitalization sometimes referred as Marketcap, is the value of a publicly listed company. In most cases it can be easily calculated by multiplying the share price with the amount of outstanding shares. DISCLAIMER CompaniesMarketCap is not associated in any way with CoinMarketCap.com Stock prices are delayed, the delay can range from a few minutes to several hours. Company logos are from the CompaniesLogo.com logo database and belong to their respective copyright holders. Companies Marketcap displays them for editorial purposes only. Contact For inquiries or if you want to report a problem write to helnospamlo@8market(nospam)cap.com Links - Privacy policy - Terms and conditions © 2025 CompaniesMarketcap.com",
+            "crawledAt": "2026-02-18T17:54:48.468Z",
+            "sourceType": "official"
+          },
+          {
+            "url": "https://www.screener.in/company/RELIANCE/consolidated/",
+            "title": "Reliance Industries Ltd share price | About Reliance Industries | Key Insights - Screener",
+            "content": "Reliance Industries Ltd ₹ 1,441 1.29% 18 Feb - close price Export to Excel Follow ril.com BSE: 500325 NSE: RELIANCE About Reliance was founded by Dhirubhai Ambani and is now promoted and managed by his elder son, Mukesh Dhirubhai Ambani. Ambani's family has about 50% shareholding in the conglomerate. Key Points Business Segments[1] Read More Website BSE NSE Market Cap ₹ 19,51,385 Cr. Current Price ₹ 1,441 High / Low ₹ 1,612 / 1,115 Stock P/E 25.4 Book Value ₹ 648 Dividend Yield 0.38 % ROCE 9.69 % ROE 8.40 % Face Value ₹ 10.0 Add ratio to table Edit ratios 1M 6M 1Yr 3Yr 5Yr 10Yr Max Price PE Ratio Hidden More Sales & Margin EV / EBITDA Price to Book Market Cap / Sales Alerts Pros Cons The company has delivered a poor sales growth of 10.0% over past five years.Company has a low return on equity of 8.79% over last 3 years.Dividend payout has been low at 9.84% of profits over last 3 years * The pros and cons are machine generated. Pros / cons are based on a checklist to highlight important points. Please exercise caution and do your own analysis. Peer comparison Energy Oil, Gas & Consumable Fuels Petroleum Products Refineries & Marketing Part of BSE Sensex Nifty 50 BSE 500 BSE 100 BSE 200 BSE Dollex 200 Nifty 500 BSE Oil & Gas Nifty Energy Nifty 100 Nifty Infrastructure Nifty 200 Nifty Commodities Nifty Low Volatility 50 Nifty 100 Liquid 15 Nifty 100 Equal Weight BSE Allcap BSE Energy BSE India Manufacturing Index BSE SENSEX 50 BSE 100 ESG Index (INR) BSE 250 LargeMidCap Index BSE Dividend Stability Index BSE Low Volatility Index Nifty 50 Equal Weight Nifty 100 Low Volatility 30 BSE 100 LargeCap TMC Index Nifty100 ESG Sector Leaders Nifty LargeMidcap 250 Nifty 500 Multicap 50:25:25 Nifty Oil & Gas Nifty100 ESG Nifty India Manufacturing Nifty Total Market Nifty Alpha Low-Volatility 30 Nifty500 Multicap India Manufacturing 50:30:20 Nifty500 Multicap Infrastructure 50:30:20 Nifty100 Enhanced ESG Nifty500 Equal Weight Nifty EV & New Age Automotive Nifty500 LargeMidSmall Equal-Cap Weighted show all Edit Columns Loading peers table ... Detailed Comparison with: Quarterly Results Consolidated Figures in Rs. Crores / View Standalone Close Segments Product Segments Dec 2022 Mar 2023 Jun 2023 Sep 2023 Dec 2023 Mar 2024 Jun 2024 Sep 2024 Dec 2024 Mar 2025 Jun 2025 Sep 2025 Dec 2025 Sales + 216,737 212,834 207,559 231,886 225,086 236,533 231,784 231,535 239,986 261,388 243,632 254,623 264,905 Expenses + 181,728 174,478 169,466 190,918 184,430 194,017 193,019 192,477 196,197 217,556 200,727 208,738 218,887 Operating Profit 35,009 38,356 38,093 40,968 40,656 42,516 38,765 39,058 43,789 43,832 42,905 45,885 46,018 OPM % 16% 18% 18% 18% 18% 18% 17% 17% 18% 17% 18% 18% 17% Other Income + 3,377 2,996 3,813 3,841 3,869 4,534 3,983 4,876 4,214 4,905 15,119 4,482 4,914 Interest 5,201 5,819 5,837 5,731 5,789 5,761 5,918 6,017 6,179 6,155 7,036 6,827 6,613 Depreciation 10,183 11,452 11,775 12,585 12,903 13,569 13,596 12,880 13,181 13,479 13,842 14,416 14,622 Profit before tax 23,002 24,081 24,294 26,493 25,833 27,720 23,234 25,037 28,643 29,103 37,146 29,124 29,697 Tax % 23% 11% 25% 25% 25% 24% 25% 24% 24% 23% 17% 24% 25% Net Profit + 17,806 21,327 18,258 19,878 19,641 21,243 17,445 19,323 21,930 22,611 30,783 22,092 22,290 EPS in Rs 11.67 14.26 11.83 12.85 12.76 14.01 11.19 12.24 13.70 14.34 19.95 13.42 13.78 Raw PDF Profit & Loss Consolidated Figures in Rs. Crores / View Standalone Related Party Close Segments Product Segments Mar 2014 Mar 2015 Mar 2016 Mar 2017 Mar 2018 Mar 2019 Mar 2020 Mar 2021 Mar 2022 Mar 2023 Mar 2024 Mar 2025 TTM Sales + 433,521 374,372 272,583 303,954 390,823 568,337 596,679 466,307 694,673 876,396 899,041 962,820 1,024,548 Expenses + 398,586 336,923 230,802 257,647 326,508 484,087 507,413 385,517 586,092 734,078 736,543 797,222 845,908 Operating Profit 34,935 37,449 41,781 46,307 64,315 84,250 89,266 80,790 108,581 142,318 162,498 165,598 178,640 OPM % 8% 10% 15% 15% 16% 15% 15% 17% 16% 16% 18% 17% 17% Other Income + 8,865 8,528 12,212 9,222 9,869 8,406 8,570 22,432 19,600 12,020 15,792 17,824 29,420 Interest 3,836 3,316 3,691 3,849 8,052 16,495 22,027 21,189 14,584 19,571 23,118 24,269 26,631 Depreciation 11,201 11,547 11,565 11,646 16,706 20,934 22,203 26,572 29,782 40,303 50,832 53,136 56,359 Profit before tax 28,763 31,114 38,737 40,034 49,426 55,227 53,606 55,461 83,815 94,464 104,340 106,017 125,070 Tax % 22% 24% 23% 25% 27% 28% 26% 3% 19% 22% 25% 24% Net Profit + 22,548 23,640 29,861 29,833 36,080 39,837 39,880 53,739 67,845 74,088 79,020 81,309 97,776 EPS in Rs 16.31 17.07 21.51 21.55 26.69 29.28 29.10 38.75 44.87 49.29 51.45 51.47 61.49 Dividend Payout % 12% 12% 10% 11% 10% 10% 10% 9% 9% 9% 10% 11% Compounded Sales Growth 10 Years: 10% 5 Years: 10% 3 Years: 11% TTM: 9% Compounded Profit Growth 10 Years: 12% 5 Years: 10% 3 Years: 5% TTM: 11% Stock Price CAGR 10 Years: 21% 5 Years: 9% 3 Years: 9% 1 Year: 18% Return on Equity 10 Years: 9% 5 Years: 8% 3 Years: 9% Last Year: 8% Balance Sheet Consolidated Figures in Rs. Crores / View Standalone Corporate actions Mar 2014 Mar 2015 Mar 2016 Mar 2017 Mar 2018 Mar 2019 Mar 2020 Mar 2021 Mar 2022 Mar 2023 Mar 2024 Mar 2025 Sep 2025 Equity Capital 2,940 2,943 2,948 2,959 5,922 5,926 6,339 6,445 6,765 6,766 6,766 13,532 13,532 Reserves 195,747 215,556 228,608 260,750 287,584 381,186 442,827 693,727 772,720 709,106 786,715 829,668 863,748 Borrowings + 138,761 168,251 194,714 217,475 239,843 307,714 355,133 278,962 319,158 451,664 350,719 374,313 374,593 Other Liabilities + 91,395 117,736 172,727 225,618 277,924 302,804 358,716 340,931 399,979 438,346 610,848 732,200 787,073 Total Liabilities 428,843 504,486 598,997 706,802 811,273 997,630 1,163,015 1,320,065 1,498,622 1,605,882 1,755,048 1,949,713 2,038,946 Fixed Assets + 141,417 156,458 184,910 198,526 403,885 398,374 532,658 541,258 627,798 724,805 779,985 999,393 1,096,375 CWIP 91,494 166,462 228,697 324,837 187,022 179,463 109,106 125,953 172,506 293,752 338,855 262,358 217,097 Investments 60,602 76,451 84,015 82,899 82,862 235,635 276,767 364,828 394,264 235,560 225,672 242,381 256,335 Other Assets + 135,330 105,115 101,375 100,540 137,504 184,158 244,484 288,026 304,054 351,765 410,536 445,581 469,139 Total Assets 428,843 504,486 598,997 706,802 811,273 997,630 1,163,015 1,320,065 1,498,622 1,605,882 1,755,048 1,949,713 2,038,946 Cash Flows Consolidated Figures in Rs. Crores / View Standalone Mar 2014 Mar 2015 Mar 2016 Mar 2017 Mar 2018 Mar 2019 Mar 2020 Mar 2021 Mar 2022 Mar 2023 Mar 2024 Mar 2025 Cash from Operating Activity + 43,261 34,374 38,134 49,550 71,459 42,346 94,877 26,958 110,654 115,032 158,788 178,703 Cash from Investing Activity + -73,070 -64,706 -36,186 -66,201 -68,192 -94,507 -72,497 -142,385 -109,162 -93,001 -113,581 -137,535 Cash from Financing Activity + 13,713 8,444 -3,210 8,617 -2,001 55,906 -2,541 101,904 17,289 10,455 -16,646 -31,891 Net Cash Flow -16,096 -21,888 -1,262 -8,034 1,266 3,745 19,839 -13,523 18,781 32,486 28,561 9,277 Ratios Consolidated Figures in Rs. Crores / View Standalone Mar 2014 Mar 2015 Mar 2016 Mar 2017 Mar 2018 Mar 2019 Mar 2020 Mar 2021 Mar 2022 Mar 2023 Mar 2024 Mar 2025 Debtor Days 8 5 6 10 16 19 12 15 12 12 13 16 Inventory Days 57 66 90 84 83 63 67 102 83 87 95 85 Days Payable 61 74 117 132 146 100 87 136 123 91 111 108 Cash Conversion Cycle 4 -2 -21 -38 -46 -18 -9 -19 -27 7 -3 -8 Working Capital Days -30 -64 -148 -179 -179 -108 -158 -58 -56 -66 -53 -68 ROCE % 10% 9% 10% 10% 11% 12% 11% 8% 8% 9% 10% 10% Shareholding Pattern Numbers in percentages Quarterly Yearly Trades 4 Recently Mar 2023Jun 2023Sep 2023Dec 2023Mar 2024Jun 2024Sep 2024Dec 2024Mar 2025Jun 2025Sep 2025Dec 2025 Promoters + 50.41% 50.39% 50.27% 50.30% 50.31% 50.33% 50.24% 50.13% 50.10% 50.07% 50.01% 50.00% FIIs + 22.49% 22.55% 22.60% 22.13% 22.06% 21.75% 21.30% 19.16% 19.07% 19.21% 18.65% 19.09% DIIs + 16.06% 16.13% 15.99% 16.59% 16.98% 17.30% 17.61% 19.02% 19.36% 19.72% 20.25% 20.10% Government + 0.16% 0.17% 0.17% 0.18% 0.19% 0.19% 0.19% 0.18% 0.17% 0.17% 0.17% 0.17% Public + 10.89% 10.76% 10.98% 10.80% 10.46% 10.43% 10.67% 11.52% 11.29% 10.84% 10.92% 10.64% No. of Shareholders 36,39,39635,06,86736,98,64836,13,81434,63,27634,93,12538,34,96847,14,95947,65,72844,35,75643,93,76442,06,159 Mar 2017Mar 2018Mar 2019Mar 2020Mar 2021Mar 2022Mar 2023Mar 2024Mar 2025Dec 2025 Promoters + 46.32% 47.45% 47.27% 50.07% 50.58% 50.66% 50.41% 50.31% 50.10% 50.00% FIIs + 22.58% 24.46% 24.39% 24.08% 25.66% 24.23% 22.49% 22.06% 19.07% 19.09% DIIs + 11.85% 11.23% 11.86% 13.78% 12.62% 14.23% 16.06% 16.98% 19.36% 20.10% Government + 0.14% 0.15% 0.18% 0.20% 0.20% 0.17% 0.16% 0.19% 0.17% 0.17% Public + 19.12% 16.72% 16.29% 11.87% 10.94% 10.71% 10.89% 10.46% 11.29% 10.64% No. of Shareholders 25,01,30222,66,00022,11,23126,32,16830,31,27233,27,84736,39,39634,63,27647,65,72842,06,159 * The classifications might have changed from Sep'2022 onwards. The new XBRL format added more details from Sep'22 onwards. Classifications such as banks and foreign portfolio investors were not available earlier. The sudden changes in FII or DII can be because of these changes. Click on the line-items to see the names of individual entities. Documents Announcements Recent Important Search All Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation 3m - The Company executives will be participating in the Institutional Investors'' Meeting - Kotak Chasing Growth 2026 Investor Conference, scheduled to be held on February 23, … Media Release - \"RELIANCE CONSUMER PRODUCTS PARTNERS WITH NIGERIA'S LEADING BUSINESS TGI GROUP.\" 2d - RCPL to form majority-owned JV with Nigeria’s TGI Group to enter Nigerian FMCG market, signed Feb 16, 2026. Update On Institutional Investors'' Meeting - Axis Capital Flagship India Conference 11 Feb - Reliance attended Axis Capital Flagship India Conference (Feb 11, 2026, Mumbai); no unpublished price-sensitive information shared. Update On Institutional Investors'' Meeting - Nuvama India Conference 202",
+            "crawledAt": "2026-02-18T17:54:51.274Z",
+            "sourceType": "official"
+          },
+          {
+            "url": "https://www.annualreports.com/Company/reliance-industries-limited",
+            "title": "Reliance Industries Limited - AnnualReports.com",
+            "content": "Reliance Industries Limited Ticker RIGD Exchange LSE More Industry Oil & Gas Refining & Marketing More Sector Energy More 10,000+ Employees Based in Mumbai, India Reliance Industries Limited is a Fortune 500 company and the largest private sector corporation in India. Their motto “Growth is Life” aptly captures the ever-evolving spirit of Reliance. They have evolved from being a textiles and polyester company to an integrated player across energy, materials, retail, entertainment and digital services. In each of these areas, they are committed to…More innovation-led, exponential growth. Their vision has pushed them to achieve global leadership in many of their businesses. Visit website REPORT RATINGS4.4 / 5.0 (284)Reliance Industries Limited reports have an aggregate usefulness score of 4.4 based on 284 reviews. Reliance Industries Limited Most Recent Annual Report MOST RECENT 2024 Annual Report View PDF View 2024 Sustainability Report This company has a Sustainability Report available to view on our partner site, ResponsibilityReports.com Older/Archived Annual Reports 2023 Annual Report View Annual Report Download 2022 Annual Report View Annual Report Download 2021 Annual Report View Annual Report Download 2020 Annual Report View Annual Report Download 2019 Annual Report View Annual Report Download 2018 Annual Report View Annual Report Download 2017 Annual Report View Annual Report Download 2016 Annual Report View Annual Report Download 2015 Annual Report View Annual Report Download 2014 Annual Report View Annual Report Download 2013 Annual Report View Annual Report Download 2012 Annual Report View Annual Report Download 2011 Annual Report View Annual Report Download 2010 Annual Report View Annual Report Download 2009 Annual Report View Annual Report Download 2008 Annual Report View Annual Report Download 2007 Annual Report View Annual Report Download 2006 Annual Report View Annual Report Download 2005 Annual Report View Annual Report Download 2004 Annual Report View Annual Report Download 2003 Annual Report View Annual Report Download 2002 Annual Report View Annual Report Download 2001 Annual Report View Annual Report Download 2000 Annual Report View Annual Report Download 1999 Annual Report View Annual Report Download 1998 Annual Report View Annual Report Download 1997 Annual Report View Annual Report Download 1996 Annual Report View Annual Report Download 1995 Annual Report View Annual Report Download 1994 Annual Report View Annual Report Download 1993 Annual Report View Annual Report Download 1992 Annual Report View Annual Report Download 1991 Annual Report View Annual Report Download 1990 Annual Report View Annual Report Download 1989 Annual Report View Annual Report Download 1988 Annual Report View Annual Report Download 1986 Annual Report View Annual Report Download 1985 Annual Report View Annual Report Download Show 35 older reports x Rate This ReportYour vote helps our reports be more useful 12345 Rating Saved!Thank you for your feedback!",
+            "crawledAt": "2026-02-18T17:54:53.645Z",
+            "sourceType": "official"
+          }
+        ]
+      },
+      "metadata": {
+        "collectedAt": "2026-02-18T17:54:54.647Z",
+        "totalSources": 86,
+        "collectionTimeMs": 45084,
+        "isNewEntity": false
+      },
+      "csvCompetitors": [
+        "Tata Group",
+        "Aditya Birla Group",
+        "Mahindra Group",
+        "Adani Group",
+        "List",
+        "Reliance Industries",
+        "Times Reliance Industries",
+        "Industries with its",
+        "and how they",
+        "Who Are Reliance"
+      ]
+    },
+    "timestamp": "2026-02-18T17:54:54.925Z"
+  },
+  "timestamp": "2026-02-18T17:54:54.926Z",
+  "expiryHours": 24,
+  "source": "api_realtime",
+  "isStale": false
+}

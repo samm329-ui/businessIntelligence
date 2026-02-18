@@ -13,7 +13,7 @@ export async function getFromCache(
   const cacheKey = generateCacheKey(industry, params)
   
   const { data, error } = await supabase
-    .from('analysis_cache')
+    .from('intelligence_cache')
     .select('*')
     .eq('cache_key', cacheKey)
     .gt('expires_at', new Date().toISOString())
@@ -26,15 +26,15 @@ export async function getFromCache(
   // Update access tracking (fire and forget)
   Promise.resolve(
     supabase
-      .from('analysis_cache')
+      .from('intelligence_cache')
       .update({
-        access_count: (data.access_count || 0) + 1,
-        last_accessed: new Date().toISOString()
+        hit_count: (data.hit_count || 0) + 1,
+        last_accessed_at: new Date().toISOString()
       })
       .eq('id', data.id)
   ).catch(err => console.error('Failed to update cache access:', err))
   
-  return data.analysis_data
+  return data.cache_data
 }
 
 /**
@@ -51,18 +51,17 @@ export async function setCache(
   const expiresAt = new Date()
   expiresAt.setDate(expiresAt.getDate() + ttlDays)
   
-  const sizeBytes = Buffer.byteLength(JSON.stringify(data))
-  
   const { error } = await supabase
-    .from('analysis_cache')
+    .from('intelligence_cache')
     .upsert({
       cache_key: cacheKey,
-      industry_name: industry.toLowerCase().trim(),
-      analysis_data: data,
+      cache_layer: 'analysis',
+      entity_name: industry.toLowerCase().trim(),
+      cache_data: data,
       expires_at: expiresAt.toISOString(),
-      size_bytes: sizeBytes,
-      access_count: 0,
-      version: 1
+      ttl_seconds: ttlDays * 86400,
+      hit_count: 0,
+      cache_version: 1
     }, {
       onConflict: 'cache_key'
     })
@@ -79,7 +78,7 @@ export async function setCache(
  */
 export async function cleanupExpiredCache(): Promise<number> {
   const { data, error } = await supabase
-    .from('analysis_cache')
+    .from('intelligence_cache')
     .delete()
     .lt('expires_at', new Date().toISOString())
     .select('id')

@@ -550,6 +550,63 @@ export const INDUSTRY_TAXONOMY = {
 };
 
 // ─────────────────────────────────────────────
+// BRAND TO PRODUCT CATEGORY MAPPING
+// ─────────────────────────────────────────────
+export const BRAND_PRODUCT_CATEGORIES: Record<string, string> = {
+  // Home Cleaning - Fabric Care & Detergents
+  'surf excel': 'Detergents',
+  'rin': 'Detergents',
+  'wheel': 'Detergents',
+  'ariel': 'Detergents',
+  'tide': 'Detergents',
+  // Home Cleaning - Dishwash
+  'vim': 'Dishwash',
+  'pril': 'Dishwash',
+  'finish': 'Dishwash',
+  // Home Cleaning - Toilet & Floor
+  'harpic': 'Toilet Cleaners',
+  'lizol': 'Floor Cleaners',
+  'domex': 'Toilet Cleaners',
+  'colin': 'Glass Cleaners',
+  // Home Cleaning - Insecticides
+  'hit': 'Insecticides',
+  'good knight': 'Mosquito Repellents',
+  'mortein': 'Insecticides',
+  'odomos': 'Mosquito Repellents',
+  // Personal Care
+  'lux': 'Soaps',
+  'lifebuoy': 'Soaps',
+  'dove': 'Personal Care',
+  'colgate': 'Oral Care',
+  'pears': 'Soaps',
+  // Automobile - Passenger Vehicles
+  'swift': 'Hatchbacks',
+  'baleno': 'Hatchbacks',
+  'nexon': 'Compact SUVs',
+  'harrier': 'SUVs',
+  'scorpio': 'SUVs',
+  'thar': 'Off-road SUVs',
+  // Technology
+  'tcs': 'IT Services',
+  'infosys': 'IT Services',
+  'wipro': 'IT Services',
+};
+
+/** Get product category for a brand */
+export function getProductCategoryForBrand(brand: string): string | null {
+  const normalizedBrand = brand.toLowerCase().trim();
+  return BRAND_PRODUCT_CATEGORIES[normalizedBrand] || null;
+}
+
+/** Get companies by product category */
+export function getCompaniesByProductCategory(category: string): CompanyRecord[] {
+  const normalizedCategory = category.toLowerCase();
+  return COMPANY_DATABASE.filter(c =>
+    c.productCategories.some(pc => pc.toLowerCase().includes(normalizedCategory))
+  );
+}
+
+// ─────────────────────────────────────────────
 // UTILITY FUNCTIONS
 // ─────────────────────────────────────────────
 
@@ -571,6 +628,24 @@ export function resolveEntity(input: string): CompanyRecord | null {
   );
   
   return fuzzy || null;
+}
+
+/** Get full industry hierarchy/taxonomy for a company */
+export function getIndustryHierarchy(company: CompanyRecord) {
+  const taxonomy = INDUSTRY_TAXONOMY[company.industry as keyof typeof INDUSTRY_TAXONOMY];
+  const gics = GICS_TAXONOMY[company.gicsCode];
+  
+  return {
+    sector: gics?.sector || 'Unknown',
+    industryGroup: gics?.industry || 'Unknown',
+    industry: taxonomy?.label || company.industry,
+    subIndustry: company.subIndustry,
+    niche: company.niche,
+    productCategories: company.productCategories,
+    gicsCode: company.gicsCode,
+    naicsCode: company.naicsCode,
+    naicsDescription: NAICS_CODES[company.naicsCode],
+  };
 }
 
 /** Get all competitors for a company */

@@ -1,6 +1,12 @@
 // lib/integration/analysis-adapter.ts
+// DEPRECATED: This file is for backward compatibility only.
+// Use lib/intelligence/orchestrator.ts for new implementations.
+//
 // Adapter to bridge main-orchestrator with existing analysis engine
 // Maintains backward compatibility while using new architecture
+
+export const DEPRECATED = true;
+console.warn('[DEPRECATED] analysis-adapter.ts is deprecated. Use lib/intelligence/orchestrator.ts');
 
 import { mainOrchestrator, AnalysisRequest, AnalysisResponse } from './main-orchestrator'
 import { runCompleteAnalysis, CompleteAnalysis } from '../analyzers/engine'

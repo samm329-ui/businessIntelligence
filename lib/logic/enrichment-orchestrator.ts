@@ -65,15 +65,19 @@ export async function enrichCompanyData(companyId: string, ticker: string) {
         confidence: calculateConfidenceScore([...dataPoints.revenue, ...dataPoints.ebitda])
     };
 
-    await supabase.from('financial_metrics').upsert({
-        company_id: companyId,
-        fiscal_period: 'LTM',
-        period_end_date: new Date().toISOString().split('T')[0],
+    // Store in consensus_metrics (Upgrade 2 schema)
+    const expiresAt = new Date();
+    expiresAt.setDate(expiresAt.getDate() + 1); // 1 day expiry
+    
+    await supabase.from('consensus_metrics').upsert({
+        entity_id: companyId,
+        fiscal_period: 'TTM',
         revenue: finalMetrics.revenue,
         ebitda: finalMetrics.ebitda,
         confidence_score: finalMetrics.confidence,
-        data_source: 'Multi-Source Synthesis'
-    }, { onConflict: 'company_id,fiscal_period' });
+        sources_used: ['Multi-Source Synthesis'],
+        expires_at: expiresAt.toISOString()
+    }, { onConflict: 'entity_id,fiscal_period' });
 
     return finalMetrics;
 }

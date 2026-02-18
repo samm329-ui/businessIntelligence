@@ -67,10 +67,11 @@ export async function loadCompanyDatabase(): Promise<boolean> {
     const path = await import('path')
     
     const possiblePaths = [
-      'C:\\Users\\jishu\\Downloads\\all_real_companies_combined.csv',
       path.resolve(process.cwd(), 'datasets', 'all_real_companies_combined.csv'),
-      path.resolve(process.cwd(), '..', '..', 'Downloads', 'all_real_companies_combined.csv'),
+      path.resolve(process.cwd(), '..', 'business-intelligence', 'datasets', 'all_real_companies_combined.csv'),
       path.resolve(process.cwd(), 'data', 'all_real_companies_combined.csv'),
+      path.resolve(process.cwd(), '..', '..', 'business-intelligence', 'datasets', 'all_real_companies_combined.csv'),
+      'C:\\Users\\jishu\\Downloads\\all_real_companies_combined.csv',
     ]
 
     let csvContent: string | null = null
@@ -148,37 +149,61 @@ export async function loadCompanyDatabase(): Promise<boolean> {
 // Search companies (works on both server and client if data is loaded)
 export function searchCompanies(query: string): CompanyRecord[] {
   if (!isDataLoaded || companiesData.length === 0) {
+    console.warn('[CompanyDB] Database not loaded, cannot search')
     return []
   }
 
-  const normalizedQuery = query.toLowerCase().trim()
+  const normalizedQuery = query.toLowerCase().trim().replace(/[^a-z0-9\s]/g, '')
   if (!normalizedQuery) return []
+
+  console.log(`[CompanyDB] Searching for: "${normalizedQuery}" in ${companiesData.length} companies`)
 
   const results: CompanyRecord[] = []
   const seen = new Set<string>()
+  const queryTokens = normalizedQuery.split(/\s+/).filter(t => t.length > 2)
 
   for (const company of companiesData) {
     if (seen.has(company.companyName)) continue
 
-    const nameMatch = company.normalizedCompanyName.includes(normalizedQuery)
-    const industryMatch = company.normalizedIndustryName.includes(normalizedQuery)
-    const subIndustryMatch = company.subIndustry.toLowerCase().includes(normalizedQuery)
+    // Clean normalized names for comparison (remove special chars)
+    const cleanNormalizedName = company.normalizedCompanyName.replace(/[^a-z0-9\s]/g, '')
+    const cleanCompanyName = company.companyName.toLowerCase().replace(/[^a-z0-9\s]/g, '')
     
-    if (nameMatch || industryMatch || subIndustryMatch) {
+    // Check various match types
+    const nameMatch = cleanNormalizedName.includes(normalizedQuery) || 
+                      normalizedQuery.includes(cleanNormalizedName) ||
+                      cleanCompanyName.includes(normalizedQuery)
+    const industryMatch = company.normalizedIndustryName.includes(normalizedQuery)
+    const subIndustryMatch = company.subIndustry.toLowerCase().replace(/[^a-z0-9\s]/g, '').includes(normalizedQuery)
+    
+    // Token matching - match if most query tokens are in company name
+    const companyTokens = cleanNormalizedName.split(/\s+/)
+    const matchingTokens = queryTokens.filter(qt => 
+      companyTokens.some(ct => ct.includes(qt) || qt.includes(ct))
+    )
+    const tokenMatch = queryTokens.length > 0 && matchingTokens.length >= Math.min(2, queryTokens.length)
+    
+    if (nameMatch || industryMatch || subIndustryMatch || tokenMatch) {
       results.push(company)
       seen.add(company.companyName)
     }
   }
 
+  console.log(`[CompanyDB] Found ${results.length} matches`)
+
   // Sort by relevance
   return results.sort((a, b) => {
-    const aExact = a.normalizedCompanyName === normalizedQuery ? 2 : 
-                  a.normalizedCompanyName.startsWith(normalizedQuery) ? 1 : 0
-    const bExact = b.normalizedCompanyName === normalizedQuery ? 2 : 
-                  b.normalizedCompanyName.startsWith(normalizedQuery) ? 1 : 0
+    const aClean = a.normalizedCompanyName.replace(/[^a-z0-9\s]/g, '')
+    const bClean = b.normalizedCompanyName.replace(/[^a-z0-9\s]/g, '')
+    const aExact = aClean === normalizedQuery ? 3 : 
+                  aClean.startsWith(normalizedQuery) ? 2 : 
+                  aClean.includes(normalizedQuery) ? 1 : 0
+    const bExact = bClean === normalizedQuery ? 3 : 
+                  bClean.startsWith(normalizedQuery) ? 2 : 
+                  bClean.includes(normalizedQuery) ? 1 : 0
     return bExact - aExact
   }).slice(0, 20)
-}
+} 
 
 // Get company by name
 export function getCompanyByName(name: string): CompanyRecord | undefined {
@@ -243,6 +268,81 @@ export function getSimilarCompanies(companyName: string, limit: number = 10): Co
        c.subIndustry === company.subIndustry)
     )
     .slice(0, limit)
+}
+
+// Get Indian competitors by industry
+export function getIndianCompetitors(industryName: string, excludeCompany?: string, limit: number = 10): CompanyRecord[] {
+  if (!isDataLoaded) {
+    console.warn('[CompanyDB] Database not loaded, cannot get Indian competitors')
+    return []
+  }
+  
+  const normalizedIndustry = industryName.toLowerCase().trim()
+  
+  console.log(`[CompanyDB] Finding Indian competitors for industry: "${industryName}"`)
+  
+  const competitors = companiesData
+    .filter(c => {
+      // Must be from India
+      if (c.country !== 'India') return false
+      
+      // Exclude the source company if provided
+      if (excludeCompany && c.companyName.toLowerCase() === excludeCompany.toLowerCase()) return false
+      
+      // Match by industry
+      const industryMatch = c.industryName.toLowerCase().includes(normalizedIndustry) ||
+                           normalizedIndustry.includes(c.industryName.toLowerCase())
+      
+      return industryMatch
+    })
+    .sort((a, b) => b.confidenceScore - a.confidenceScore) // Sort by confidence
+    .slice(0, limit)
+  
+  console.log(`[CompanyDB] Found ${competitors.length} Indian competitors in ${industryName}`)
+  
+  return competitors
+}
+
+// Get Indian competitors by sub-industry (more specific)
+export function getIndianCompetitorsBySubIndustry(subIndustry: string, excludeCompany?: string, limit: number = 10): CompanyRecord[] {
+  if (!isDataLoaded) {
+    console.warn('[CompanyDB] Database not loaded, cannot get Indian competitors')
+    return []
+  }
+  
+  const normalizedSubIndustry = subIndustry.toLowerCase().trim()
+  
+  console.log(`[CompanyDB] Finding Indian competitors for sub-industry: "${subIndustry}"`)
+  
+  const competitors = companiesData
+    .filter(c => {
+      // Must be from India
+      if (c.country !== 'India') return false
+      
+      // Exclude the source company if provided
+      if (excludeCompany && c.companyName.toLowerCase() === excludeCompany.toLowerCase()) return false
+      
+      // Match by sub-industry
+      const subIndustryMatch = c.subIndustry.toLowerCase().includes(normalizedSubIndustry) ||
+                              normalizedSubIndustry.includes(c.subIndustry.toLowerCase())
+      
+      return subIndustryMatch
+    })
+    .sort((a, b) => b.confidenceScore - a.confidenceScore)
+    .slice(0, limit)
+  
+  console.log(`[CompanyDB] Found ${competitors.length} Indian competitors in ${subIndustry}`)
+  
+  return competitors
+}
+
+// Get all Indian companies
+export function getAllIndianCompanies(): CompanyRecord[] {
+  if (!isDataLoaded) return []
+  
+  return companiesData
+    .filter(c => c.country === 'India')
+    .sort((a, b) => b.confidenceScore - a.confidenceScore)
 }
 
 // Get all companies

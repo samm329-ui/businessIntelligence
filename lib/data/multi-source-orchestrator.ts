@@ -337,49 +337,33 @@ class MultiSourceOrchestrator {
     validations: CrossValidationResult[],
     warnings: string[]
   ): Promise<void> {
+    // Log to api_fetch_log instead of data_lineage (Upgrade 2 schema)
     for (const source of sources) {
       if (source.data) {
-        await supabase.from('data_lineage').insert({
-          entity_type: 'company',
-          entity_id: ticker,
-          data_source_id: await this.getSourceId(source.source),
-          source_table: 'multi_source_fetch',
-          raw_value: JSON.stringify(source.data),
-          fetched_at: source.timestamp.toISOString(),
-          confidence_score: source.reliability
-        })
+        try {
+          await supabase.from('api_fetch_log').insert({
+            entity_name: ticker,
+            source_name: source.source,
+            success: true,
+            metrics_returned: Object.keys(source.data),
+            fetched_at: source.timestamp.toISOString()
+          })
+        } catch (e) {
+          // Ignore logging errors
+        }
       }
     }
 
-    // Log cross-source comparisons
-    for (const validation of validations) {
-      if (validation.values.length > 1) {
-        await supabase.from('cross_source_comparison').insert({
-          entity_type: 'company',
-          entity_id: ticker,
-          field_name: validation.field,
-          source_1_id: await this.getSourceId(validation.values[0]?.source),
-          source_1_value: validation.values[0]?.value?.toString(),
-          source_2_id: await this.getSourceId(validation.values[1]?.source),
-          source_2_value: validation.values[1]?.value?.toString(),
-          variance_percent: validation.variance * 100,
-          is_anomaly: validation.isAnomaly
-        })
-      }
-    }
+    // Note: cross_source_comparison not in Upgrade 2 schema - skipping
   }
 
   /**
    * Get data source ID from name
+   * Note: data_sources not in Upgrade 2 schema
    */
   private async getSourceId(sourceName: string): Promise<string | null> {
-    const { data } = await supabase
-      .from('data_sources')
-      .select('id')
-      .ilike('name', sourceName)
-      .single()
-
-    return data?.id || null
+    // Return a placeholder since data_sources table doesn't exist
+    return `source_${sourceName.toLowerCase().replace(/\s+/g, '_')}`
   }
 
   /**

@@ -11,7 +11,16 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { entityResolver } from '@/lib/industry/entity-resolver';
 import { orchestrator } from '@/lib/data/orchestrator';
-import { getCompetitors, getCompaniesByIndustry } from '@/lib/industry/industry-dataset';
+import { 
+  getCompetitors, 
+  getCompaniesByIndustry,
+  getProductCategoryForBrand,
+  getCompaniesByProductCategory,
+  getIndustryHierarchy,
+  COMPANY_DATABASE,
+  INDUSTRY_TAXONOMY,
+  type CompanyRecord
+} from '@/lib/industry/industry-dataset';
 import {
   buildCompanyAnalysisPrompt,
   buildCompetitorAnalysisPrompt,
@@ -108,33 +117,88 @@ export async function POST(req: NextRequest) {
 
     const entity = resolution.entity;
 
-    // 3. Fetch financial data via priority pipeline
+    // 3. Get product category context (e.g., "Surf Excel" → "Detergents")
+    const productCategory = getProductCategoryForBrand(query);
+    const companyInDB = COMPANY_DATABASE.find(c => c.ticker === entity.ticker);
+    const industryHierarchy = companyInDB 
+      ? getIndustryHierarchy(companyInDB)
+      : {
+          sector: entity.industry || 'Unknown',
+          industryGroup: entity.subIndustry || entity.industry || 'Unknown',
+          industry: entity.industry || 'Unknown',
+          subIndustry: entity.subIndustry || 'Unknown',
+          niche: undefined,
+          productCategories: [],
+          gicsCode: undefined,
+          naicsCode: undefined,
+          naicsDescription: undefined,
+        };
+
+    // 4. Fetch financial data via priority pipeline
     const financials = await orchestrator.fetchCompanyFinancials(
       entity.ticker,
       entity.region
     );
 
-    // 4. Fetch competitors (from dataset first, then API)
+    // 5. Fetch competitors - prioritize same product category, then same sub-industry, then same industry
     let competitorData: PromptContext['competitors'] = [];
+    let competitorContext = '';
+    
     if (includeCompetitors) {
-      const competitorRecords = getCompetitors(entity.ticker, entity.region).slice(0, 20);
-      competitorData = competitorRecords.map(c => ({
+      // First try to get competitors from same product category
+      let competitorRecords: CompanyRecord[] = [];
+      
+      if (productCategory) {
+        // Get companies that share the same product category
+        const categoryCompetitors = getCompaniesByProductCategory(productCategory)
+          .filter(c => c.ticker !== entity.ticker && c.region === entity.region);
+        
+        if (categoryCompetitors.length > 0) {
+          competitorRecords = categoryCompetitors;
+          competitorContext = `Product Category: ${productCategory}`;
+        }
+      }
+      
+      // If no product category competitors, get same sub-industry competitors
+      if (competitorRecords.length === 0) {
+        const company = COMPANY_DATABASE.find(c => c.ticker === entity.ticker);
+        if (company) {
+          competitorRecords = COMPANY_DATABASE.filter(c => 
+            c.ticker !== entity.ticker &&
+            c.subIndustry === company.subIndustry &&
+            c.region === entity.region
+          );
+          if (competitorRecords.length > 0) {
+            competitorContext = `Sub-Industry: ${company.subIndustry}`;
+          }
+        }
+      }
+      
+      // Fallback to same industry competitors
+      if (competitorRecords.length === 0) {
+        competitorRecords = getCompetitors(entity.ticker, entity.region);
+        competitorContext = `Industry: ${entity.industry}`;
+      }
+      
+      competitorData = competitorRecords.slice(0, 10).map(c => ({
         name: c.name,
         ticker: c.ticker,
-        marketCap: null,  // Will be null unless we fetch them too
+        marketCap: null,
         revenueGrowth: null,
         netMargin: null,
       }));
     }
 
-    // 5. Build prompt context
+    // 6. Build prompt context with full industry taxonomy
     const companyRecord = {
       name: entity.name,
       ticker: entity.ticker,
-      industry: entity.industry,
-      subIndustry: entity.subIndustry,
+      industry: entity.industry || 'Unknown',
+      subIndustry: entity.subIndustry || 'Unknown',
       region: entity.region,
-      brands: entity.brands,
+      brands: entity.brands || [],
+      productCategory: productCategory,
+      industryHierarchy: industryHierarchy,
     };
 
     const ctx: PromptContext = {
@@ -160,6 +224,9 @@ export async function POST(req: NextRequest) {
     // 7. Build final response
     const responseTime = Date.now() - startTime;
 
+    // 8. Build industry taxonomy info
+    const industryInfo = INDUSTRY_TAXONOMY[entity.industry as keyof typeof INDUSTRY_TAXONOMY];
+
     return NextResponse.json({
       success: true,
       
@@ -178,6 +245,21 @@ export async function POST(req: NextRequest) {
         warnings: entity.warnings,
       },
 
+      // Industry taxonomy and context
+      industryContext: {
+        searchedBrand: query,
+        productCategory: productCategory,
+        hierarchy: industryHierarchy,
+        taxonomy: {
+          label: industryInfo?.label || entity.industry,
+          gicsSector: industryInfo?.gics,
+          naicsCode: industryInfo?.naics,
+          subIndustries: industryInfo?.subIndustries || [],
+          kpis: industryInfo?.kpis || [],
+        },
+        competitorFilterContext: competitorContext,
+      },
+
       // Raw financial data with source tracking
       financials: {
         currentPrice:       financials.currentPrice,
@@ -194,7 +276,7 @@ export async function POST(req: NextRequest) {
         currentRatio:       financials.currentRatio,
       },
 
-      // Competitors list (from dataset)
+      // Competitors list (from dataset - filtered by product category/sub-industry)
       competitors: competitorData,
 
       // AI Analysis

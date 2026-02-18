@@ -70,7 +70,7 @@ export const supabaseClient = new Proxy({} as SupabaseClient, {
 export async function testConnection() {
   try {
     const { data, error } = await supabase
-      .from('industries')
+      .from('entity_intelligence')
       .select('count')
       .limit(1)
     

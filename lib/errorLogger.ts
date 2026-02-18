@@ -6,11 +6,13 @@ export interface ErrorContext {
   endpoint?: string
   userIdentifier?: string
   industry?: string
+  entityId?: string
+  entityName?: string
   [key: string]: any
 }
 
 /**
- * Log error to database
+ * Log error to database (using api_fetch_log for tracking)
  */
 export async function logError(
   error: Error | string,
@@ -21,23 +23,24 @@ export async function logError(
   const errorMessage = error instanceof Error ? error.message : error
   const stackTrace = error instanceof Error ? error.stack : undefined
   
+  // Log to console for now
+  console.error(`[${severity.toUpperCase()}] ${errorMessage}`, context)
+  
+  // Also log to api_fetch_log for tracking (maps errors to source tracking)
   try {
     await supabase
-      .from('error_logs')
+      .from('api_fetch_log')
       .insert({
-        error_type: context.endpoint || 'unknown',
+        entity_id: context.entityId,
+        entity_name: context.entityName,
+        source_name: context.endpoint || 'error_logger',
+        success: false,
         error_message: errorMessage,
-        stack_trace: stackTrace,
-        context,
-        severity,
-        timestamp: new Date().toISOString(),
-        resolved: false
+        fetched_at: new Date().toISOString()
       })
   } catch (dbError) {
-    // Failed to log error to database
-    // Fall back to console
-    console.error('Failed to log error to database:', dbError)
-    console.error('Original error:', errorMessage, stackTrace)
+    // Fall back to console only
+    console.error('Failed to log to api_fetch_log:', dbError)
   }
 }
 
@@ -49,7 +52,4 @@ export async function logCriticalError(
   context: ErrorContext = {}
 ): Promise<void> {
   await logError(error, context, 'critical')
-  
-  // Note: Sentry integration can be added here if needed
-  // For now, errors are logged to the database only
 }

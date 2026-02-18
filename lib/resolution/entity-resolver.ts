@@ -175,14 +175,17 @@ export class EntityResolver {
     } catch (error) {
       console.error('[EntityResolver] Error:', error)
 
-      await supabase.from('error_logs').insert({
-        error_type: 'resolution_error',
-        severity: 'error',
-        component: 'entity_resolver',
-        query_text: query,
-        error_message: error instanceof Error ? error.message : 'Unknown error',
-        error_details: { context }
-      })
+      // Use api_fetch_log to track errors (Upgrade 2 schema)
+      try {
+        await supabase.from('api_fetch_log').insert({
+          source_name: 'entity_resolver',
+          success: false,
+          error_message: error instanceof Error ? error.message : 'Unknown error',
+          fetched_at: new Date().toISOString()
+        })
+      } catch (e) {
+        // Ignore if fails
+      }
 
       throw error
     }
@@ -214,117 +217,41 @@ export class EntityResolver {
       }
     }
 
-    // Then try database
+    // Then try database - using entity_intelligence (Upgrade 2 schema)
     if (entityType === 'brand' || entityType === 'company') {
-      let brandQuery = supabase
-        .from('brands')
-        .select('*, companies!inner(*, parent_companies!inner(id, name, ticker))')
+      let entityQuery = supabase
+        .from('entity_intelligence')
+        .select('*')
         .eq('normalized_name', normalizedQuery)
 
       if (context?.preferredRegion) {
-        brandQuery = brandQuery.eq('companies.region', context.preferredRegion)
+        entityQuery = entityQuery.eq('region', context.preferredRegion)
       }
 
-      const { data: brandData } = await brandQuery.limit(1).maybeSingle()
+      const { data: entityData } = await entityQuery.limit(1).maybeSingle()
 
-      if (brandData) {
-        return {
-          entityType: 'brand',
-          entityId: brandData.id,
-          name: brandData.name,
-          confidence: 100,
-          matchMethod: 'exact',
-          parentCompany: brandData.companies?.parent_companies ? {
-            id: brandData.companies.parent_companies.id,
-            name: brandData.companies.parent_companies.name,
-            ticker: brandData.companies.parent_companies.ticker
-          } : undefined,
-          alternatives: [],
-          isVerified: true,
-          resolutionPath: ['classification', 'exact_match_brand']
-        }
-      }
-
-      let companyQuery = supabase
-        .from('companies')
-        .select('*, parent_companies(id, name, ticker)')
-        .or(`normalized_name.eq.${normalizedQuery},ticker.eq.${query.toUpperCase()}`)
-
-      if (context?.preferredRegion) {
-        companyQuery = companyQuery.eq('region', context.preferredRegion)
-      }
-
-      const { data: companyData } = await companyQuery.limit(1).maybeSingle()
-
-      if (companyData) {
+      if (entityData) {
         return {
           entityType: 'company',
-          entityId: companyData.id,
-          name: companyData.name,
+          entityId: entityData.id,
+          name: entityData.canonical_name,
           confidence: 100,
           matchMethod: 'exact',
-          parentCompany: companyData.parent_companies ? {
-            id: companyData.parent_companies.id,
-            name: companyData.parent_companies.name,
-            ticker: companyData.parent_companies.ticker
+          parentCompany: entityData.parent_entity_id ? {
+            id: entityData.parent_entity_id,
+            name: entityData.canonical_name,
+            ticker: entityData.ticker_nse || ''
           } : undefined,
           alternatives: [],
           isVerified: true,
-          resolutionPath: ['classification', 'exact_match_company']
+          resolutionPath: ['classification', 'exact_match']
         }
       }
     }
 
-    const { data: parentData } = await supabase
-      .from('parent_companies')
-      .select('*')
-      .eq('normalized_name', normalizedQuery)
-      .limit(1)
-      .maybeSingle()
-
-    if (parentData) {
-      return {
-        entityType: 'parent_company',
-        entityId: parentData.id,
-        name: parentData.name,
-        confidence: 100,
-        matchMethod: 'exact',
-        alternatives: [],
-        isVerified: true,
-        resolutionPath: ['classification', 'exact_match_parent']
-      }
-    }
-
-    // Try company aliases table (enhanced with regional match)
-    let aliasQuery = supabase
-      .from('company_aliases')
-      .select('*, companies(*, parent_companies(id, name, ticker))')
-      .eq('normalized_alias', normalizedQuery)
-
-    if (context?.preferredRegion) {
-      aliasQuery = aliasQuery.eq('companies.region', context.preferredRegion)
-    }
-
-    const { data: aliasData } = await aliasQuery.limit(1).maybeSingle()
-
-    if (aliasData && aliasData.companies) {
-      return {
-        entityType: 'company',
-        entityId: aliasData.companies.id,
-        name: aliasData.companies.name,
-        confidence: aliasData.confidence_score || 100,
-        matchMethod: 'alias',
-        parentCompany: aliasData.companies.parent_companies ? {
-          id: aliasData.companies.parent_companies.id,
-          name: aliasData.companies.parent_companies.name,
-          ticker: aliasData.companies.parent_companies.ticker
-        } : undefined,
-        alternatives: [],
-        isVerified: true,
-        resolutionPath: ['classification', 'alias_match_company']
-      }
-    }
-
+    // Note: parent_companies, company_aliases, brands tables not in Upgrade 2 schema
+    // These are now part of entity_intelligence with JSONB fields (brands, subsidiaries, all_aliases)
+    
     return null
   }
 
@@ -332,67 +259,35 @@ export class EntityResolver {
     const normalizedQuery = normalize(query)
     if (normalizedQuery.length < 3) return null
 
-    // 1. Try brands with ilike (trigram indexed)
-    let brandQuery = supabase
-      .from('brands')
-      .select('*, companies(*, parent_companies(id, name, ticker))')
+    // Try entity_intelligence with ilike (Upgrade 2 schema)
+    let fuzzyQuery = supabase
+      .from('entity_intelligence')
+      .select('*')
       .ilike('normalized_name', `%${normalizedQuery}%`)
       .limit(3)
 
     if (context?.preferredRegion) {
-      brandQuery = brandQuery.eq('companies.region', context.preferredRegion)
+      fuzzyQuery = fuzzyQuery.eq('region', context.preferredRegion)
     }
 
-    const { data: fuzzyBrands } = await brandQuery
+    const { data: fuzzyEntities } = await fuzzyQuery
 
-    if (fuzzyBrands && fuzzyBrands.length > 0) {
-      const best = fuzzyBrands[0]
-      return {
-        entityType: 'brand',
-        entityId: best.id,
-        name: best.name,
-        confidence: context?.preferredRegion ? 90 : 85, // Regional match boosts confidence
-        matchMethod: 'fuzzy',
-        parentCompany: best.companies?.parent_companies ? {
-          id: best.companies.parent_companies.id,
-          name: best.companies.parent_companies.name,
-          ticker: best.companies.parent_companies.ticker
-        } : undefined,
-        alternatives: fuzzyBrands.slice(1).map(b => ({ name: b.name, type: 'brand', confidence: 70 })),
-        isVerified: false,
-        resolutionPath: ['classification', 'fuzzy_match_brand_db']
-      }
-    }
-
-    // 2. Try companies with ilike
-    let companyQuery = supabase
-      .from('companies')
-      .select('*, parent_companies(id, name, ticker)')
-      .ilike('normalized_name', `%${normalizedQuery}%`)
-      .limit(3)
-
-    if (context?.preferredRegion) {
-      companyQuery = companyQuery.eq('region', context.preferredRegion)
-    }
-
-    const { data: fuzzyCompanies } = await companyQuery
-
-    if (fuzzyCompanies && fuzzyCompanies.length > 0) {
-      const best = fuzzyCompanies[0]
+    if (fuzzyEntities && fuzzyEntities.length > 0) {
+      const best = fuzzyEntities[0]
       return {
         entityType: 'company',
         entityId: best.id,
-        name: best.name,
+        name: best.canonical_name,
         confidence: context?.preferredRegion ? 85 : 80,
         matchMethod: 'fuzzy',
-        parentCompany: best.parent_companies ? {
-          id: best.parent_companies.id,
-          name: best.parent_companies.name,
-          ticker: best.parent_companies.ticker
+        parentCompany: best.parent_entity_id ? {
+          id: best.parent_entity_id,
+          name: best.canonical_name,
+          ticker: best.ticker_nse || ''
         } : undefined,
-        alternatives: fuzzyCompanies.slice(1).map(c => ({ name: c.name, type: 'company', confidence: 65 })),
+        alternatives: fuzzyEntities.slice(1).map(c => ({ name: c.canonical_name, type: 'company', confidence: 65 })),
         isVerified: false,
-        resolutionPath: ['classification', 'fuzzy_match_company_db']
+        resolutionPath: ['classification', 'fuzzy_match']
       }
     }
 
@@ -402,24 +297,25 @@ export class EntityResolver {
   private async tryAliasMatch(query: string, context?: ResolutionContext): Promise<EntityResolutionResult | null> {
     const normalizedQuery = query.toLowerCase().trim()
 
+    // Try entity_intelligence using all_aliases JSONB field (Upgrade 2 schema)
     const { data: aliasMatches } = await supabase
-      .from('brands')
-      .select('*, companies!inner(*, parent_companies!inner(id, name, ticker))')
-      .filter('aliases', 'cs', `{${normalizedQuery}}`)
+      .from('entity_intelligence')
+      .select('*')
+      .contains('all_aliases', [normalizedQuery])
       .limit(1)
-      .single()
+      .maybeSingle()
 
     if (aliasMatches) {
       return {
-        entityType: 'brand',
+        entityType: 'company',
         entityId: aliasMatches.id,
-        name: aliasMatches.name,
+        name: aliasMatches.canonical_name,
         confidence: 95,
         matchMethod: 'alias',
-        parentCompany: aliasMatches.companies?.parent_companies ? {
-          id: aliasMatches.companies.parent_companies.id,
-          name: aliasMatches.companies.parent_companies.name,
-          ticker: aliasMatches.companies.parent_companies.ticker
+        parentCompany: aliasMatches.parent_entity_id ? {
+          id: aliasMatches.parent_entity_id,
+          name: aliasMatches.canonical_name,
+          ticker: aliasMatches.ticker_nse || ''
         } : undefined,
         alternatives: [],
         isVerified: true,
@@ -427,24 +323,25 @@ export class EntityResolver {
       }
     }
 
+    // Try ticker match
     const { data: tickerMatch } = await supabase
-      .from('companies')
-      .select('*, parent_companies!inner(id, name, ticker)')
-      .ilike('ticker', normalizedQuery)
+      .from('entity_intelligence')
+      .select('*')
+      .or(`ticker_nse.ieq.${normalizedQuery},ticker_bse.ieq.${normalizedQuery}`)
       .limit(1)
-      .single()
+      .maybeSingle()
 
     if (tickerMatch) {
       return {
         entityType: 'company',
         entityId: tickerMatch.id,
-        name: tickerMatch.name,
-        confidence: 95,
+        name: tickerMatch.canonical_name,
+        confidence: 98,
         matchMethod: 'exact',
-        parentCompany: tickerMatch.parent_companies ? {
-          id: tickerMatch.parent_companies.id,
-          name: tickerMatch.parent_companies.name,
-          ticker: tickerMatch.parent_companies.ticker
+        parentCompany: tickerMatch.parent_entity_id ? {
+          id: tickerMatch.parent_entity_id,
+          name: tickerMatch.canonical_name,
+          ticker: tickerMatch.ticker_nse || ''
         } : undefined,
         alternatives: [],
         isVerified: true,

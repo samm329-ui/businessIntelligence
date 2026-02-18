@@ -67,10 +67,51 @@ export function OverviewTab({ analysis }: { analysis: any }) {
     return (
         <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
 
+            {/* Industry Context & Hierarchy */}
+            {analysis.industryHierarchy && (
+                <Card className="glass-card border-primary/20">
+                    <CardContent className="p-4">
+                        <div className="flex flex-wrap items-center gap-2 text-sm">
+                            <span className="text-muted-foreground">Industry Hierarchy:</span>
+                            <Badge variant="secondary" className="text-xs">
+                                {analysis.industryHierarchy.sector}
+                            </Badge>
+                            <span className="text-muted-foreground">›</span>
+                            <Badge variant="secondary" className="text-xs">
+                                {analysis.industryHierarchy.industry}
+                            </Badge>
+                            <span className="text-muted-foreground">›</span>
+                            <Badge variant="outline" className="text-xs bg-primary/10 text-primary border-primary/30">
+                                {analysis.subIndustry || analysis.industryHierarchy.subIndustry}
+                            </Badge>
+                            {analysis.productCategory && (
+                                <>
+                                    <span className="text-muted-foreground">›</span>
+                                    <Badge className="text-xs bg-primary text-primary-foreground">
+                                        {analysis.productCategory}
+                                    </Badge>
+                                </>
+                            )}
+                        </div>
+                        {analysis.competitorContext && (
+                            <p className="text-xs text-muted-foreground mt-2">
+                                Competitors filtered by: {analysis.competitorContext}
+                            </p>
+                        )}
+                    </CardContent>
+                </Card>
+            )}
+
             {/* Header with Region Selector */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div>
                     <h2 className="text-2xl font-bold font-heading mb-1">{analysis.industry}</h2>
+                    {analysis.subIndustry && (
+                        <p className="text-sm text-muted-foreground">
+                            {analysis.subIndustry}
+                            {analysis.productCategory && ` • ${analysis.productCategory}`}
+                        </p>
+                    )}
                     <VerifiedData source={dataSources.slice(0, 3).join(', ')} lastUpdated="Jan 2025" />
                 </div>
                 <div className="flex items-center gap-3">

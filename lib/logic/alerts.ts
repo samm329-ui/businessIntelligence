@@ -3,6 +3,7 @@ import { supabase } from '../db';
 /**
  * Real-time Alerts System
  * Monitors data changes and generates user alerts for significant events.
+ * NOTE: 'alerts' table not in Upgrade 2 schema - using intelligence_cache instead
  */
 
 export interface Alert {
@@ -41,13 +42,26 @@ export async function checkAndGenerateAlerts(companyId: string, newData: any, ol
         }
     }
 
-    // Store alerts in DB
+    // Store alerts in intelligence_cache (Upgrade 2 schema)
     if (alerts.length > 0) {
-        // Assuming an 'alerts' table exists or creating it
-        await supabase.from('alerts').insert(alerts.map(a => ({
-            ...a,
-            created_at: new Date().toISOString()
-        })));
+        for (const alert of alerts) {
+            const cacheKey = `alert_${companyId}_${Date.now()}`;
+            const expiresAt = new Date();
+            expiresAt.setDate(expiresAt.getDate() + 7); // 7 days
+            
+            try {
+                await supabase.from('intelligence_cache').insert({
+                    cache_key: cacheKey,
+                    cache_layer: 'alert',
+                    entity_id: companyId,
+                    cache_data: alert,
+                    expires_at: expiresAt.toISOString(),
+                    ttl_seconds: 604800
+                });
+            } catch (err) {
+                console.error('Failed to store alert:', err);
+            }
+        }
     }
 
     return alerts;

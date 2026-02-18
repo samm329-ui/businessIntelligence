@@ -1,7 +1,13 @@
 // lib/integration/main-orchestrator.ts
+// DEPRECATED: This file is for backward compatibility only.
+// Use lib/intelligence/orchestrator.ts for new implementations.
+//
 // Main Orchestrator - Ties all systems together for accuracy-first analysis
 // This is the central hub that coordinates entity resolution, multi-source data,
 // validation, AI analysis with guardrails, and error monitoring
+
+export const DEPRECATED = true;
+console.warn('[DEPRECATED] main-orchestrator.ts is deprecated. Use lib/intelligence/orchestrator.ts');
 
 import { entityResolver, EntityResolutionResult } from '../resolution/entity-resolver'
 import { multiSourceOrchestrator, MultiSourceData } from '../data/multi-source-orchestrator'
@@ -230,15 +236,16 @@ class MainOrchestrator {
   
   /**
    * Get company ticker from database
+   * Updated to use entity_intelligence (Upgrade 2 schema)
    */
   private async getCompanyTicker(companyId: string): Promise<string | null> {
     const { data } = await supabase
-      .from('companies')
-      .select('ticker')
+      .from('entity_intelligence')
+      .select('ticker_nse')
       .eq('id', companyId)
       .single()
     
-    return data?.ticker || null
+    return data?.ticker_nse || null
   }
   
   /**
@@ -341,15 +348,22 @@ class MainOrchestrator {
     response: AnalysisResponse,
     status: string
   ): Promise<void> {
-    await supabase.from('analysis_cache').insert({
+    // Use intelligence_cache (Upgrade 2 schema)
+    const expiresAt = new Date()
+    expiresAt.setDate(expiresAt.getDate() + 7)
+    
+    await supabase.from('intelligence_cache').insert({
       cache_key: requestId,
-      analysis_type: request.analysisType || 'general',
-      query_params: request,
-      result_data: response,
-      data_sources_used: response.metadata?.sourcesUsed || [],
-      confidence_score: response.data?.confidence || 0,
-      expires_at: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString(),
-      created_at: new Date().toISOString()
+      cache_layer: 'analysis',
+      entity_name: request.query,
+      cache_data: {
+        query_params: request,
+        result_data: response,
+        data_sources_used: response.metadata?.sourcesUsed || [],
+        confidence_score: response.data?.confidence || 0
+      },
+      expires_at: expiresAt.toISOString(),
+      ttl_seconds: 604800
     })
   }
   
@@ -371,9 +385,9 @@ class MainOrchestrator {
       database: false
     }
     
-    // Test database
+    // Test database - using entity_intelligence (Upgrade 2 schema)
     try {
-      const { data } = await supabase.from('companies').select('count').limit(1)
+      const { data } = await supabase.from('entity_intelligence').select('count').limit(1)
       status.database = !!data
     } catch {
       status.database = false

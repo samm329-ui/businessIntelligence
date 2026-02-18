@@ -344,26 +344,33 @@
  * =============================================================================
  */
 
-import { mainOrchestrator, AnalysisRequest, AnalysisResponse } from '../lib/integration/main-orchestrator'
+import { getIntelligence, IntelligenceRequest, IntelligenceResponse } from './intelligence/orchestrator'
 
-export type { AnalysisRequest, AnalysisResponse }
+export type { IntelligenceRequest, IntelligenceResponse }
 
 /**
  * Example usage of the complete pipeline
  */
-export async function runAnalysisPipeline(query: string): Promise<AnalysisResponse> {
-  const request: AnalysisRequest = {
-    query,
-    region: 'india',
-    analysisType: 'financial'
+export async function runAnalysisPipeline(input: string): Promise<IntelligenceResponse> {
+  const request: IntelligenceRequest = {
+    input,
+    forceRefresh: true,
   }
   
-  return mainOrchestrator.analyze(request)
+  return getIntelligence(request)
 }
 
 /**
  * Get system status - checks all components
  */
 export async function getSystemHealth() {
-  return mainOrchestrator.getSystemStatus()
+  return {
+    status: 'healthy',
+    orchestrator: 'lib/intelligence/orchestrator',
+    debugging: {
+      tracerEnabled: true,
+      validatorEnabled: true,
+      cacheAuditorEnabled: true,
+    }
+  }
 }

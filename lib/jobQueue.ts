@@ -12,6 +12,9 @@ interface JobLock {
   error?: string
 }
 
+// In-memory fallback for job locks (if database unavailable)
+const memoryLocks = new Map<string, JobLock>()
+
 /**
  * Clean up stale locks (older than 2 minutes)
  * Call this before acquiring a lock
@@ -22,21 +25,13 @@ async function cleanupStaleLocks(): Promise<void> {
     
     // Delete completed/failed jobs older than 1 hour
     await supabase
-      .from('job_locks')
+      .from('intelligence_cache')
       .delete()
-      .in('status', ['COMPLETED', 'FAILED'])
-      .lt('locked_at', new Date(Date.now() - 60 * 60 * 1000).toISOString())
+      .eq('cache_layer', 'job_lock')
+      .lt('last_accessed_at', new Date(Date.now() - 60 * 60 * 1000).toISOString())
     
-    // Update stale processing jobs to failed
-    await supabase
-      .from('job_locks')
-      .update({
-        status: 'FAILED',
-        completed_at: new Date().toISOString(),
-        error: 'Job timed out (stale lock)'
-      })
-      .eq('status', 'PROCESSING')
-      .lt('locked_at', twoMinutesAgo)
+    // Note: Cannot update stale processing jobs in intelligence_cache easily
+    // Using memory fallback instead
   } catch (error) {
     console.error('Cleanup stale locks error:', error)
   }
@@ -52,6 +47,7 @@ export async function acquireJobLock(
 ): Promise<boolean> {
   
   const normalizedName = industryName.toLowerCase().trim()
+  const lockKey = `job_lock_${normalizedName}`
   
   try {
     // First, clean up any stale locks
@@ -59,15 +55,29 @@ export async function acquireJobLock(
     
     // Check if job already exists and is processing
     const { data: existing, error: selectError } = await supabase
-      .from('job_locks')
+      .from('intelligence_cache')
       .select('*')
-      .eq('industry_name', normalizedName)
-      .in('status', ['QUEUED', 'PROCESSING'])
+      .eq('cache_key', lockKey)
+      .eq('cache_layer', 'job_lock')
+      .gt('expires_at', new Date().toISOString())
       .maybeSingle()
     
     if (selectError) {
       console.error('Error checking job lock:', selectError)
-      // If we can't check, assume we can proceed (fail open)
+      // Fall back to memory
+      if (memoryLocks.has(normalizedName)) {
+        const memLock = memoryLocks.get(normalizedName)!
+        if (memLock.status === 'PROCESSING' || memLock.status === 'QUEUED') {
+          return false
+        }
+      }
+      memoryLocks.set(normalizedName, {
+        id: `mem_${Date.now()}`,
+        industry_name: normalizedName,
+        status: 'PROCESSING',
+        locked_at: new Date().toISOString(),
+        locked_by: workerId
+      })
       return true
     }
     
@@ -76,26 +86,37 @@ export async function acquireJobLock(
       return false
     }
     
-    // Try to acquire lock - first delete any old entry for this industry
-    await supabase
-      .from('job_locks')
-      .delete()
-      .eq('industry_name', normalizedName)
+    // Try to acquire lock
+    const expiresAt = new Date()
+    expiresAt.setMinutes(expiresAt.getMinutes() + 10) // 10 minute lock
     
-    // Then insert new lock
     const { error: insertError } = await supabase
-      .from('job_locks')
-      .insert({
-        industry_name: normalizedName,
-        status: 'PROCESSING',
-        locked_at: new Date().toISOString(),
-        locked_by: workerId,
-        lock_type: 'analysis'
+      .from('intelligence_cache')
+      .upsert({
+        cache_key: lockKey,
+        cache_layer: 'job_lock',
+        entity_name: normalizedName,
+        cache_data: {
+          status: 'PROCESSING',
+          locked_by: workerId
+        },
+        expires_at: expiresAt.toISOString(),
+        ttl_seconds: 600,
+        hit_count: 0
+      }, {
+        onConflict: 'cache_key'
       })
     
     if (insertError) {
       console.error('Failed to acquire job lock:', insertError)
-      // If we can't lock, assume we can proceed (fail open)
+      // Fall back to memory
+      memoryLocks.set(normalizedName, {
+        id: `mem_${Date.now()}`,
+        industry_name: normalizedName,
+        status: 'PROCESSING',
+        locked_at: new Date().toISOString(),
+        locked_by: workerId
+      })
       return true
     }
     
@@ -119,25 +140,33 @@ export async function releaseJobLock(
 ): Promise<void> {
   
   const normalizedName = industryName.toLowerCase().trim()
+  const lockKey = `job_lock_${normalizedName}`
   
   try {
     const { error: updateError } = await supabase
-      .from('job_locks')
+      .from('intelligence_cache')
       .update({
-        status,
-        completed_at: new Date().toISOString(),
-        result: result ? JSON.stringify(result) : null,
-        error
+        cache_data: {
+          status,
+          result,
+          error,
+          completed_at: new Date().toISOString()
+        }
       })
-      .eq('industry_name', normalizedName)
+      .eq('cache_key', lockKey)
+      .eq('cache_layer', 'job_lock')
     
     if (updateError) {
       console.error('Failed to release job lock:', updateError)
     } else {
       console.log(`Lock released for: ${normalizedName} (${status})`)
     }
+    
+    // Also clear memory lock
+    memoryLocks.delete(normalizedName)
   } catch (err) {
     console.error('Exception in releaseJobLock:', err)
+    memoryLocks.delete(normalizedName)
   }
 }
 
@@ -146,10 +175,15 @@ export async function releaseJobLock(
  */
 export async function forceClearAllLocks(): Promise<void> {
   try {
-    await supabase.from('job_locks').delete().neq('id', '00000000-0000-0000-0000-000000000000')
+    await supabase
+      .from('intelligence_cache')
+      .delete()
+      .eq('cache_layer', 'job_lock')
+    memoryLocks.clear()
     console.log('All locks cleared')
   } catch (error) {
     console.error('Failed to clear locks:', error)
+    memoryLocks.clear()
   }
 }
 
@@ -158,22 +192,37 @@ export async function forceClearAllLocks(): Promise<void> {
  */
 export async function getJobStatus(industryName: string): Promise<JobLock | null> {
   const normalizedName = industryName.toLowerCase().trim()
+  const lockKey = `job_lock_${normalizedName}`
   
   try {
     const { data, error } = await supabase
-      .from('job_locks')
+      .from('intelligence_cache')
       .select('*')
-      .eq('industry_name', normalizedName)
+      .eq('cache_key', lockKey)
+      .eq('cache_layer', 'job_lock')
       .maybeSingle()
     
     if (error) {
       console.error('Error getting job status:', error)
-      return null
+      // Fall back to memory
+      return memoryLocks.get(normalizedName) || null
     }
     
-    return data
+    if (!data) {
+      return memoryLocks.get(normalizedName) || null
+    }
+    
+    return {
+      id: data.id,
+      industry_name: normalizedName,
+      status: data.cache_data?.status || 'UNKNOWN',
+      locked_at: data.created_at,
+      locked_by: data.cache_data?.locked_by,
+      result: data.cache_data?.result,
+      error: data.cache_data?.error
+    }
   } catch (error) {
     console.error('Exception in getJobStatus:', error)
-    return null
+    return memoryLocks.get(normalizedName) || null
   }
 }

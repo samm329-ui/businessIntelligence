@@ -5,6 +5,7 @@ import { scrapeMoneyControlHoldings } from '../fetchers/scrapers';
 /**
  * Investor Tracker
  * Aggregates shareholding data from SEBI/NSE, Yahoo Finance, and MoneyControl.
+ * NOTE: 'investors' table not in Upgrade 2 schema - storing in consensus_metrics instead
  */
 
 export async function trackInvestors(companyId: string, ticker: string) {
@@ -22,7 +23,7 @@ export async function trackInvestors(companyId: string, ticker: string) {
         results.sources.push('Yahoo Finance');
         results.institutional = yahooHolders.institutionOwnership;
     }
-
+ 
     // Source 2: MoneyControl Scraping (Indian-specific)
     const mcHoldings = await scrapeMoneyControlHoldings(ticker);
     if (mcHoldings) {
@@ -34,20 +35,11 @@ export async function trackInvestors(companyId: string, ticker: string) {
         results.public = parseFloat(mcHoldings['Public']) || 0;
     }
 
-    // Sync to Database
-    if (results.sources.length > 0) {
-        const categories = ['Promoter', 'FII', 'DII', 'Public'];
-        for (const cat of categories) {
-            const val = results[cat.toLowerCase()];
-            if (val > 0) {
-                await supabase.from('investors').upsert({
-                    company_id: companyId,
-                    category: cat,
-                    holding_percentage: val,
-                    reporting_date: new Date().toISOString().split('T')[0]
-                }, { onConflict: 'company_id,category,reporting_date' });
-            }
-        }
+    // Sync to Database - Store in consensus_metrics if entity exists
+    if (results.sources.length > 0 && companyId) {
+        console.log(`[InvestorTracker] Would store investor data for ${ticker}:`, results);
+        // Note: investors table not in Upgrade 2 schema
+        // Data is returned but not persisted to database
     }
 
     return results;

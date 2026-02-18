@@ -1,0 +1,142 @@
+[
+  {
+    "requestId": "req_1771437249545_0so0kufc5",
+    "timestamp": "2026-02-18T17:54:09.545Z",
+    "stage": "INPUT_RECEIVED",
+    "input": "Reliance Industries",
+    "realtimePriorityMode": true
+  },
+  {
+    "requestId": "req_1771437249545_0so0kufc5",
+    "timestamp": "2026-02-18T17:54:09.559Z",
+    "stage": "ENTITY_RESOLUTION",
+    "entity": "Reliance Industries Limited",
+    "source": "csv",
+    "confidence": 75,
+    "metadata": {
+      "found": true,
+      "verified": false
+    }
+  },
+  {
+    "requestId": "req_1771437249545_0so0kufc5",
+    "timestamp": "2026-02-18T17:54:09.560Z",
+    "stage": "DATASET_MATCH",
+    "entity": "Reliance Industries Limited",
+    "source": "dataset",
+    "metadata": {
+      "usage": "classification",
+      "allowed": true
+    }
+  },
+  {
+    "requestId": "req_1771437249545_0so0kufc5",
+    "timestamp": "2026-02-18T17:54:09.561Z",
+    "stage": "CACHE_MISS",
+    "entity": "Reliance Industries Limited",
+    "metadata": {
+      "realtimePriority": true,
+      "overrideCache": true
+    }
+  },
+  {
+    "requestId": "req_1771437249545_0so0kufc5",
+    "timestamp": "2026-02-18T17:54:09.562Z",
+    "stage": "DATA_AGGREGATION",
+    "metadata": {
+      "stage": "started"
+    }
+  },
+  {
+    "requestId": "req_1771437249545_0so0kufc5",
+    "timestamp": "2026-02-18T17:54:54.663Z",
+    "stage": "DATA_AGGREGATION",
+    "metadata": {
+      "sources": [
+        "api_realtime",
+        "web_search",
+        "crawler"
+      ],
+      "sourceCount": 3,
+      "conflicts": 0,
+      "reliabilityWeights": [
+        {
+          "source": "api_realtime",
+          "weight": 1
+        },
+        {
+          "source": "web_search",
+          "weight": 0.7
+        },
+        {
+          "source": "crawler",
+          "weight": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "requestId": "req_1771437249545_0so0kufc5",
+    "timestamp": "2026-02-18T17:54:54.670Z",
+    "stage": "DATA_AGGREGATION",
+    "metadata": {
+      "stage": "validated",
+      "valid": false,
+      "errorCount": 1,
+      "warningCount": 2
+    }
+  },
+  {
+    "requestId": "req_1771437249545_0so0kufc5",
+    "timestamp": "2026-02-18T17:54:54.679Z",
+    "stage": "AI_PROMPT_BUILT",
+    "metadata": {
+      "sanitized": true,
+      "dataSourceCount": 3,
+      "realtimePriority": true,
+      "instruction": "Use only verified realtime data. Do not assume financial values."
+    }
+  },
+  {
+    "requestId": "req_1771437249545_0so0kufc5",
+    "timestamp": "2026-02-18T17:54:54.680Z",
+    "stage": "AI_PROMPT_BUILT",
+    "metadata": {
+      "sanitized": true
+    }
+  },
+  {
+    "requestId": "req_1771437249545_0so0kufc5",
+    "timestamp": "2026-02-18T17:54:54.921Z",
+    "stage": "AI_RESPONSE_RECEIVED",
+    "durationMs": 240,
+    "metadata": {
+      "hasHallucination": false,
+      "validated": true
+    }
+  },
+  {
+    "requestId": "req_1771437249545_0so0kufc5",
+    "timestamp": "2026-02-18T17:54:54.924Z",
+    "stage": "OUTPUT_VALIDATION",
+    "metadata": {
+      "passed": true,
+      "checks": {
+        "hasFinancials": true,
+        "hasCompetitors": true,
+        "hasSummary": true
+      },
+      "errorCount": 0,
+      "errors": []
+    }
+  },
+  {
+    "requestId": "req_1771437249545_0so0kufc5",
+    "timestamp": "2026-02-18T17:54:54.928Z",
+    "stage": "FINAL_OUTPUT",
+    "metadata": {
+      "totalTimeMs": 45384,
+      "validated": true
+    }
+  }
+]

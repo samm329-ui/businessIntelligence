@@ -1,11 +1,15 @@
 /**
  * EBITA INTELLIGENCE — ENTITY RESOLVER
- * Fixes: "Harpic showing wrong data", "Surf Excel not mapping to HUL"
- * Uses: Dataset-first → DB → fuzzy match → AI fallback
+ * 
+ * PRIMARY SOURCE: Indian Excel Database (c:\Users\jishu\Downloads\Indian_Industry_Companies_Database.xlsx)
+ * Fallback: Comprehensive Indian Industry Dataset + Company Database + CSV
  */
 
 import { resolveEntity, getCompetitors, getCompaniesByIndustry, BRAND_TO_COMPANY, COMPANY_DATABASE } from './industry-dataset';
-import type { CompanyRecord, Region } from './industry-dataset';
+import { ALL_INDUSTRIES, INDUSTRY_NAMES, getIndustryByKeyword, getIndustryByName, type IndustryInfo } from './indian-industries';
+import type { CompanyRecord, Region, Exchange } from './industry-dataset';
+import { searchCompanies, loadCompanyDatabase } from '../datasets/company-database';
+import { loadIndianCompaniesFromExcel, searchIndianCompanies, getCompanyByExactName, getIndustryInfo as getExcelIndustryInfo, getAllIndustries as getExcelIndustries } from '../datasets/load-excel-companies';
 
 // ─────────────────────────────────────────────
 // TYPES
@@ -43,6 +47,83 @@ function normalize(str: string): string {
     .trim()
     .replace(/[^a-z0-9\s]/g, '')  // Remove special chars
     .replace(/\s+/g, ' ');         // Normalize whitespace
+}
+
+// Check if query matches an industry from comprehensive dataset
+function isIndustryQuery(query: string): boolean {
+  const normalized = normalize(query);
+  
+  // Direct match in INDUSTRY_NAMES
+  if (INDUSTRY_NAMES[normalized]) {
+    return true;
+  }
+  
+  // Check partial matches
+  for (const key of Object.keys(INDUSTRY_NAMES)) {
+    if (normalized.includes(key) || key.includes(normalized)) {
+      return true;
+    }
+  }
+  
+  // Check keywords in the dataset
+  for (const ind of ALL_INDUSTRIES) {
+    if (ind.keywords) {
+      for (const kw of ind.keywords) {
+        if (normalized === kw || normalized.includes(kw) || kw.includes(normalized)) {
+          return true;
+        }
+      }
+    }
+    // Also check subCategory and industry name
+    if (ind.industry && normalized.includes(ind.industry.toLowerCase())) {
+      return true;
+    }
+    if (ind.subCategory && normalized.includes(ind.subCategory.toLowerCase())) {
+      return true;
+    }
+  }
+  
+  return false;
+}
+
+// Get industry info from comprehensive dataset
+function getIndustryInfo(query: string): IndustryInfo | null {
+  const normalized = normalize(query);
+  
+  // Direct match from INDUSTRY_NAMES
+  if (INDUSTRY_NAMES[normalized]) {
+    const targetIndustry = INDUSTRY_NAMES[normalized];
+    // Find in ALL_INDUSTRIES
+    for (const ind of ALL_INDUSTRIES) {
+      if (ind.industry && targetIndustry) {
+        if (ind.industry.toLowerCase().includes(targetIndustry.toLowerCase().split(' ')[0].toLowerCase()) ||
+            targetIndustry.toLowerCase().includes(ind.industry.toLowerCase().split(' ')[0].toLowerCase())) {
+          return ind;
+        }
+      }
+    }
+  }
+  
+  // Try keyword matching
+  for (const ind of ALL_INDUSTRIES) {
+    // Check keywords
+    if (ind.keywords) {
+      for (const kw of ind.keywords) {
+        if (normalized === kw || normalized.includes(kw) || kw.includes(normalized)) {
+          return ind;
+        }
+      }
+    }
+    // Check if query matches industry name or subCategory
+    if (ind.industry && normalized.includes(ind.industry.toLowerCase())) {
+      return ind;
+    }
+    if (ind.subCategory && normalized.includes(ind.subCategory.toLowerCase())) {
+      return ind;
+    }
+  }
+  
+  return null;
 }
 
 function tokenize(str: string): string[] {
@@ -91,14 +172,174 @@ export class EntityResolver {
   
   /**
    * PRIMARY METHOD: Resolve any query to a verified company
-   * Priority: Dataset → DB lookup → Fuzzy → API → AI Fallback
-   */
+    * Priority: Excel Database → Industry Detection → Dataset → DB lookup → Fuzzy → CSV
+    */
   async resolve(
     query: string,
     context?: { industry?: string; region?: Region }
   ): Promise<EntityResolutionResult> {
     
     const warnings: string[] = [];
+    
+    // ═══════════════════════════════════════════════════════════════════════════
+    // STEP 0: PRIMARY - Indian Excel Database
+    // ═══════════════════════════════════════════════════════════════════════════
+    try {
+      const excelRecords = await loadIndianCompaniesFromExcel();
+      
+      if (excelRecords && excelRecords.length > 0) {
+        // Exact name match
+        const excelExact = getCompanyByExactName(query);
+        if (excelExact) {
+          warnings.push(`Resolved from Excel: ${excelExact.companyName} (${excelExact.industry})`);
+          return {
+            found: true,
+            entity: {
+              ticker: excelExact.companyName.toUpperCase().replace(/\s+/g, ''),
+              name: excelExact.companyName,
+              industry: excelExact.industry || 'Unknown',
+              subIndustry: excelExact.subCategory || 'General',
+              region: 'INDIA' as Region,
+              exchange: excelExact.isListed ? 'NSE' : '',
+              brands: excelExact.brands ? excelExact.brands.split('|').map(b => b.trim()) : [],
+              parentTicker: undefined,
+              confidence: 100,
+              resolvedBy: 'DATASET',
+              matchedInput: query,
+              warnings,
+            },
+            alternatives: [],
+          };
+        }
+
+        // Search match
+        const excelResults = searchIndianCompanies(query);
+        if (excelResults.length > 0) {
+          const bestExcel = excelResults[0];
+          const isExactMatch = bestExcel.companyName.toLowerCase() === query.toLowerCase();
+          warnings.push(`Resolved from Excel search: ${bestExcel.companyName} (${bestExcel.industry})`);
+          
+          return {
+            found: true,
+            entity: {
+              ticker: bestExcel.companyName.toUpperCase().replace(/\s+/g, ''),
+              name: bestExcel.companyName,
+              industry: bestExcel.industry || 'Unknown',
+              subIndustry: bestExcel.subCategory || 'General',
+              region: 'INDIA' as Region,
+              exchange: bestExcel.isListed ? 'NSE' : '',
+              brands: bestExcel.brands ? bestExcel.brands.split('|').map(b => b.trim()) : [],
+              parentTicker: undefined,
+              confidence: isExactMatch ? 95 : 80,
+              resolvedBy: 'DATASET',
+              matchedInput: query,
+              warnings,
+            },
+            alternatives: excelResults.slice(1, 5).map(c => ({
+              ticker: c.companyName.toUpperCase().replace(/\s+/g, ''),
+              name: c.companyName,
+              industry: c.industry,
+              confidence: 70,
+              region: 'INDIA' as Region,
+              exchange: 'NSE',
+              brands: [],
+              subIndustry: c.subCategory || c.industry,
+              parentTicker: undefined,
+              resolvedBy: 'DATASET' as const,
+              matchedInput: query,
+              warnings: [],
+            })),
+          };
+        }
+
+        // Check industry match in Excel
+        const excelIndustries = getExcelIndustries();
+        const matchedExcelIndustry = excelIndustries.find(ind => 
+          ind.toLowerCase() === query.toLowerCase() || 
+          ind.toLowerCase().includes(query.toLowerCase()) ||
+          query.toLowerCase().includes(ind.toLowerCase())
+        );
+        
+        if (matchedExcelIndustry) {
+          const excelIndInfo = getExcelIndustryInfo(matchedExcelIndustry);
+          warnings.push(`Detected industry from Excel: ${matchedExcelIndustry} (${excelIndInfo?.companyCount || 0} companies)`);
+          
+          return {
+            found: true,
+            entity: {
+              ticker: `IND_${matchedExcelIndustry.toUpperCase().replace(/\s/g, '_')}`,
+              name: matchedExcelIndustry,
+              industry: matchedExcelIndustry,
+              subIndustry: excelIndInfo?.subCategories?.[0] || 'General',
+              region: 'INDIA',
+              exchange: 'NSE',
+              brands: [],
+              parentTicker: undefined,
+              confidence: 95,
+              resolvedBy: 'DATASET',
+              matchedInput: query,
+              warnings,
+            },
+            alternatives: (excelIndInfo?.subCategories || []).slice(0, 10).map(sc => ({
+              ticker: `SUBCAT_${sc.toUpperCase().replace(/\s/g, '_')}`,
+              name: sc,
+              industry: matchedExcelIndustry,
+              confidence: 80,
+              region: 'INDIA' as Region,
+              exchange: 'NSE',
+              brands: [],
+              subIndustry: sc,
+              parentTicker: undefined,
+              resolvedBy: 'DATASET' as const,
+              matchedInput: query,
+              warnings: [],
+            })),
+          };
+        }
+      }
+    } catch (excelError) {
+      console.warn('[EntityResolver] Excel database error:', excelError);
+    }
+
+    // ── STEP 1: Check if query is an industry ───────────────────────────────
+    if (isIndustryQuery(query)) {
+      const industryInfo = getIndustryInfo(query);
+      if (industryInfo && industryInfo.industry) {
+        console.log(`[EntityResolver] Industry detected: "${query}" -> ${industryInfo.industry} (${industryInfo.sector})`);
+        warnings.push(`Detected industry query: "${query}" → ${industryInfo.industry}`);
+        return {
+          found: true,
+          entity: {
+            ticker: `IND_${industryInfo.industry.toUpperCase().replace(/\s/g, '_')}`,
+            name: industryInfo.industry,
+            industry: industryInfo.industry,
+            subIndustry: industryInfo.subCategory || industryInfo.industry,
+            region: context?.region || 'INDIA',
+            exchange: 'NSE',
+            brands: industryInfo.brands || [],
+            parentTicker: undefined,
+            confidence: 100,
+            resolvedBy: 'DATASET',
+            matchedInput: query,
+            warnings: [`Industry: ${industryInfo.industry}`, `Sector: ${industryInfo.sector}`, `${industryInfo.companies?.length || 0} companies available`]
+          },
+          alternatives: (industryInfo.companies || []).slice(0, 10).map(c => ({
+            ticker: `IND_${c.toUpperCase().replace(/\s/g, '_')}`,
+            name: c,
+            industry: industryInfo.industry,
+            confidence: 80,
+            region: 'INDIA' as Region,
+            exchange: 'NSE',
+            brands: [],
+            subIndustry: industryInfo.subCategory || industryInfo.industry,
+            parentTicker: undefined,
+            resolvedBy: 'DATASET' as const,
+            matchedInput: query,
+            warnings: []
+          })),
+        };
+      }
+    }
     
     // ── STEP 1: Dataset lookup (highest confidence) ──────────────────────
     const datasetMatch = this.resolveFromDataset(query);
@@ -133,8 +374,40 @@ export class EntityResolver {
         };
       }
     }
+
+    // ── STEP 4: CSV Database Fallback ─────────────────────────────────────
+    try {
+      await loadCompanyDatabase();
+      const csvResults = searchCompanies(query);
+      if (csvResults.length > 0) {
+        const bestCSV = csvResults[0];
+        const region = bestCSV.country === 'India' || bestCSV.country === 'INDIA' ? 'INDIA' : 'GLOBAL';
+        const csvEntity: ResolvedEntity = {
+          ticker: bestCSV.companyName.toUpperCase().replace(/\s+/g, ''),
+          name: bestCSV.companyName,
+          industry: bestCSV.industryName || 'Unknown',
+          subIndustry: bestCSV.subIndustry || bestCSV.industryName || 'Unknown',
+          region: region,
+          exchange: region === 'INDIA' ? 'NSE' : bestCSV.country === 'UK' ? 'LSE' : bestCSV.country === 'USA' ? 'NYSE' : 'OTHER',
+          brands: [],
+          parentTicker: undefined,
+          confidence: bestCSV.confidenceScore || 70,
+          resolvedBy: 'DATASET',
+          matchedInput: query,
+          warnings: [],
+        };
+        warnings.push(`Resolved from CSV database: ${bestCSV.companyName} (${bestCSV.industryName})`);
+        return {
+          found: true,
+          entity: { ...csvEntity, resolvedBy: 'DATASET', matchedInput: query, warnings },
+          alternatives: [],
+        };
+      }
+    } catch (csvError) {
+      console.warn('[EntityResolver] CSV fallback error:', csvError);
+    }
     
-    // ── STEP 4: Not found ───────────────────────────────────────────────
+    // ── STEP 5: Not found ───────────────────────────────────────────────
     return {
       found: false,
       entity: null,

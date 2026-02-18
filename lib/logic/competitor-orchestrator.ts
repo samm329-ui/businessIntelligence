@@ -5,31 +5,32 @@ import { analyzeWithGroq } from '../analyzers/groq';
 /**
  * Competitor Orchestrator
  * Ensures a minimum of 20+ competitors by combining multiple discovery layers.
+ * Updated to use entity_intelligence (Upgrade 2 schema)
  */
 
 export async function discoverCompetitors(companyName: string, industry: string) {
     const competitors: Set<string> = new Set();
 
-    // Layer 1: Database Check
+    // Layer 1: Database Check - using entity_intelligence
     const { data: dbPeers } = await supabase
-        .from('companies')
-        .select('name')
+        .from('entity_intelligence')
+        .select('canonical_name')
         .eq('industry', industry)
-        .neq('name', companyName)
+        .neq('canonical_name', companyName)
         .limit(10);
 
-    dbPeers?.forEach(p => competitors.add(p.name));
+    dbPeers?.forEach(p => competitors.add(p.canonical_name));
 
     // Layer 2: Web Scraping (Screener.in)
     // We attempt to find the company's ticker first
     const { data: company } = await supabase
-        .from('companies')
-        .select('ticker')
-        .eq('name', companyName)
+        .from('entity_intelligence')
+        .select('ticker_nse')
+        .eq('canonical_name', companyName)
         .single();
 
-    if (company?.ticker) {
-        const scrapedData = await scrapeScreenerData(company.ticker);
+    if (company?.ticker_nse) {
+        const scrapedData = await scrapeScreenerData(company.ticker_nse);
         scrapedData?.peers?.forEach((p: any) => competitors.add(p.name));
     }
 

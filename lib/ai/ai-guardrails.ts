@@ -354,33 +354,24 @@ OUTPUT FORMAT:
     claims: AIClaim[],
     hallucinationDetails: string[]
   ): Promise<void> {
-    const { data, error } = await supabase.from('ai_analysis').insert({
+    // Use analysis_results table (Upgrade 2 schema)
+    const expiresAt = new Date();
+    expiresAt.setDate(expiresAt.getDate() + 7); // 7 days expiry
+    
+    const { data, error } = await supabase.from('analysis_results').insert({
+      entity_name: entityName,
       analysis_type: 'guarded_analysis',
-      entity_type: 'company',
-      prompt: 'Guarded prompt with structured input',
-      raw_response: response,
-      parsed_response: { claims: claims.map(c => ({ claim: c.claim, verified: c.verified })) },
-      confidence_score: claims.filter(c => c.verified).length / Math.max(claims.length, 1) * 100,
-      model_name: 'guarded-model',
+      executive_summary: response,
+      key_findings: claims.map(c => ({ claim: c.claim, verified: c.verified })),
       hallucination_detected: hallucinationDetails.length > 0,
-      hallucination_details: { details: hallucinationDetails },
-      created_at: new Date().toISOString()
+      ai_confidence: Math.round((claims.filter(c => c.verified).length / Math.max(claims.length, 1)) * 100),
+      ai_model: 'guarded-model',
+      created_at: new Date().toISOString(),
+      expires_at: expiresAt.toISOString()
     }).select()
 
     if (!error && data) {
-      // Log individual citations
-      for (const claim of claims) {
-        if (claim.verified && claim.source) {
-          await supabase.from('ai_citations').insert({
-            analysis_id: data[0].id,
-            claim: claim.claim,
-            citation_type: 'database',
-            source_field: claim.source,
-            source_value: claim.claim,
-            is_verified: claim.verified
-          })
-        }
-      }
+      console.log(`[AIGuardrails] Analysis logged for ${entityName}, ID: ${data[0]?.id}`)
     }
   }
 
@@ -396,8 +387,9 @@ OUTPUT FORMAT:
     const startDate = new Date()
     startDate.setDate(startDate.getDate() - days)
 
+    // Use analysis_results table (Upgrade 2 schema)
     const { data, error } = await supabase
-      .from('ai_analysis')
+      .from('analysis_results')
       .select('*')
       .gte('created_at', startDate.toISOString())
 
@@ -418,7 +410,7 @@ OUTPUT FORMAT:
       totalAnalyses,
       hallucinationsDetected,
       hallucinationRate,
-      topUnverifiedClaims: [] // Would require parsing stored claims
+      topUnverifiedClaims: []
     }
   }
 }
