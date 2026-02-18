@@ -132,17 +132,11 @@ class ErrorMonitor {
 
   /**
    * Log entity resolution feedback
+   * Note: entity_resolution_log not in Upgrade 2 schema
    */
   async logResolutionFeedback(feedback: ResolutionFeedback): Promise<void> {
-    await supabase
-      .from('entity_resolution_log')
-      .update({
-        was_correct: feedback.wasCorrect,
-        user_notes: feedback.userNotes,
-        correct_entity_id: feedback.correctEntityId
-      })
-      .eq('id', feedback.logId)
-
+    console.log(`[ErrorMonitor] Resolution feedback: ${feedback.wasCorrect ? 'correct' : 'incorrect'}`, feedback)
+    
     // If resolution was wrong, log as error for improvement
     if (!feedback.wasCorrect) {
       await this.logError({
@@ -161,15 +155,18 @@ class ErrorMonitor {
 
   /**
    * Get error statistics
+   * Note: error_logs not in Upgrade 2 schema - using api_fetch_log instead
    */
   async getErrorStats(days: number = 7): Promise<ErrorStats> {
     const startDate = new Date()
     startDate.setDate(startDate.getDate() - days)
 
+    // Use api_fetch_log for error tracking (Upgrade 2 schema)
     const { data, error } = await supabase
-      .from('error_logs')
+      .from('api_fetch_log')
       .select('*')
-      .gte('created_at', startDate.toISOString())
+      .eq('success', false)
+      .gte('fetched_at', startDate.toISOString())
 
     if (error || !data) {
       return {
@@ -239,13 +236,13 @@ class ErrorMonitor {
     secondHalfStart.setDate(secondHalfStart.getDate() - halfDays)
 
     const { data: firstHalf } = await supabase
-      .from('error_logs')
+      .from('api_fetch_log')
       .select('id', { count: 'exact' })
       .gte('created_at', firstHalfStart.toISOString())
       .lt('created_at', secondHalfStart.toISOString())
 
     const { data: secondHalf } = await supabase
-      .from('error_logs')
+      .from('api_fetch_log')
       .select('id', { count: 'exact' })
       .gte('created_at', secondHalfStart.toISOString())
 
@@ -266,7 +263,7 @@ class ErrorMonitor {
    */
   async getUnresolvedErrors(severity?: string): Promise<any[]> {
     let query = supabase
-      .from('error_logs')
+      .from('api_fetch_log')
       .select('*')
       .eq('resolved', false)
       .order('created_at', { ascending: false })
@@ -286,7 +283,7 @@ class ErrorMonitor {
    */
   async resolveError(errorId: string, resolutionNotes: string): Promise<void> {
     await supabase
-      .from('error_logs')
+      .from('api_fetch_log')
       .update({
         resolved: true,
         resolution_notes: resolutionNotes,
@@ -331,7 +328,7 @@ class ErrorMonitor {
     oneHourAgo.setHours(oneHourAgo.getHours() - 1)
 
     const { count: errorCount } = await supabase
-      .from('error_logs')
+      .from('api_fetch_log')
       .select('*', { count: 'exact', head: true })
       .gte('created_at', oneHourAgo.toISOString())
 

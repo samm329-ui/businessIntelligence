@@ -1,0 +1,127 @@
+version: '3.8'
+
+services:
+  # =============================================================================
+  # CORE SERVICES
+  # =============================================================================
+  
+  postgres:
+    image: postgres:15-alpine
+    container_name: ebitadb
+    environment:
+      POSTGRES_USER: dev
+      POSTGRES_PASSWORD: devpassword
+      POSTGRES_DB: ebitadb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dev"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: ebitaredis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # =============================================================================
+  # APPLICATION (Next.js)
+  # =============================================================================
+  
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ebitapp
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env.local
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    restart: unless-stopped
+
+  # =============================================================================
+  # MONITORING
+  # =============================================================================
+  
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: ebitaprometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./config/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: ebitagrafana
+    ports:
+      - "3001:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./config/grafana/dashboards:/etc/grafana/provisioning/dashboards
+    depends_on:
+      - prometheus
+    restart: unless-stopped
+
+  # =============================================================================
+  # OPTIONAL: Python Service (for PDF extraction)
+  # =============================================================================
+  
+  python-service:
+    build:
+      context: ./python-service
+      dockerfile: Dockerfile
+    container_name: ebitapython
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data/pdfs:/app/data/pdfs
+    env_file:
+      - .env.local
+    restart: unless-stopped
+
+# =============================================================================
+# VOLUMES
+# =============================================================================
+
+volumes:
+  postgres_data:
+  redis_data:
+  prometheus_data:
+  grafana_data:
+
+# =============================================================================
+# NETWORKS
+# =============================================================================
+
+networks:
+  default:
+    name: ebitanetwork
