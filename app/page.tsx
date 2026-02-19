@@ -2,17 +2,25 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { SearchBar } from '@/components/dashboard/SearchBar'
+import { StructuredSearchBar, type SearchParams } from '@/components/dashboard/StructuredSearchBar'
 import { BarChart3, TrendingUp, Shield, Zap, Layers, ArrowRight, Activity, Globe, Cpu, Leaf, Bitcoin } from 'lucide-react'
 
 export default function Home() {
   const router = useRouter()
   const [loading, setLoading] = useState(false)
 
-  const handleSearch = async (industry: string) => {
+  const handleSearch = async (params: SearchParams) => {
     setLoading(true)
-    // Navigate to analysis page (logic remains same)
-    router.push(`/analyze/${encodeURIComponent(industry)}`)
+    console.log('[Search] Starting search with params:', params)
+    
+    // Use the query as the main search term for the existing analyze page
+    // Build the query - include type, industry, country for N.A.T. context
+    let searchQuery = params.query
+    if (params.industry) searchQuery += ` in ${params.industry}`
+    if (params.country) searchQuery += ` ${params.country}`
+    
+    // Navigate to existing analyze page (path-based for backward compatibility)
+    router.push(`/analyze/${encodeURIComponent(searchQuery)}`)
   }
 
   return (
@@ -23,7 +31,6 @@ export default function Home() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-primary/10 blur-[120px] rounded-full mix-blend-screen opacity-20" />
         <div className="absolute bottom-0 right-0 w-[800px] h-[600px] bg-secondary/5 blur-[100px] rounded-full mix-blend-screen opacity-10" />
         <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.03] mix-blend-overlay" />
-        {/* Note: 'noise.png' is assumed to exist or will fail silently. Can use CSS radial gradient instead for noise if needed. */}
       </div>
 
       {/* Hero Section */}
@@ -47,7 +54,7 @@ export default function Home() {
           </p>
 
           <div className="animate-in fade-in slide-in-from-bottom-10 duration-700 delay-300">
-            <SearchBar onSearch={handleSearch} loading={loading} />
+            <StructuredSearchBar onSearch={handleSearch} loading={loading} />
           </div>
         </div>
       </section>
