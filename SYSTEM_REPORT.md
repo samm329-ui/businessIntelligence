@@ -1,9 +1,9 @@
 # EBITA INTELLIGENCE PLATFORM - COMPREHENSIVE SYSTEM REPORT
 
 **Report Date:** February 19, 2026  
-**Version:** 5.4 (UPGRADE 4 - GROQ MODEL + PDF + INDUSTRY FIXES)  
+**Version:** 7.0 (OVERHAUL - HARDCODED DATA ELIMINATION)  
 **Status:** PRODUCTION-READY  
-**Previous Version:** 5.3 (February 19, 2026)
+**Previous Version:** 6.0 (February 19, 2026)
 
 ---
 
@@ -26,6 +26,8 @@
 | **5.2** | **Feb 19, 2026 12:30** | **Fixed broken search queries, simplified query builder** |
 | **5.3** | **Feb 19, 2026 13:00** | **Fixed competitor extractor false positives, revenue percentage confusion** |
 | **5.4** | **Feb 19, 2026 13:50** | **UPGRADE 4: Groq model, confidence 60→35, PDF fix, Zepto industry fix** |
+| **6.0** | **Feb 19, 2026 14:30** | **UPGRADE 5: Response contract, unknown entity store, entity discovery** |
+| **7.0** | **Feb 19, 2026 15:30** | **OVERHAUL: Hardcoded data elimination, keyword classification, smart search, self-learning** |
 
 ### Version 5.2 Changes (Search Query Fix)
 
@@ -93,6 +95,131 @@
      - lib/resolution/entity-resolver-v2.ts (SECTOR_MAP + quickCommerceCompanies)
      - lib/intelligence/identifier.ts (quickCommerceMap)
    - Result: Zepto now resolves to Retail > Quick Commerce industry
+
+### Version 6.0 Changes (UPGRADE 5 - Response Contract + Unknown Entity Handling)
+
+**Date:** February 19, 2026 14:30 IST  
+**Root Causes Diagnosed:**
+1. Response contract mismatch - API returns different field names than frontend expects
+2. Silent resolution failures - Orchestrator returns null instead of partial data
+3. No unknown entity storage - Failed entities aren't saved for later enrichment
+4. Weak web search for unknowns - No fallback for entities outside dataset
+
+| Component | Description | Status | Impact |
+|-----------|-------------|--------|--------|
+| **types/analysis.ts** | Created shared type definitions for API/frontend contract | ✅ NEW | Single source of truth for all analysis types |
+| **mapToAnalysisResponse()** | Added to API route to normalize field variations | ✅ DONE | Handles field name variations across versions |
+| **AnalysisDashboard.tsx** | Updated with typed fields + dev debug panel | ✅ DONE | Frontend now reads correct typed fields |
+| **OverviewTab.tsx** | Added smart field resolution for typed/legacy compatibility | ✅ DONE | Supports both new and old field names |
+| **Degraded Response** | Added createDegradedResponse() in orchestrator | ✅ DONE | Frontend always gets meaningful response |
+| **unknown-entity-store.ts** | Created autoStoreUnknownEntity() for Supabase | ✅ NEW | Unknown entities auto-saved for enrichment |
+| **entity-discovery.ts** | Created background worker with Wikipedia + Google search | ✅ NEW | Resolves unknown entities automatically |
+| **migrate-v6.sql** | Created new tables (unknown_entities, entity_discovery_queue) | ✅ NEW | Database schema for entity enrichment |
+| **api/cron/discovery** | Created cron route for hourly enrichment | ✅ NEW | Background processing endpoint |
+
+**Files Created:**
+```
+types/analysis.ts                                    → Shared interfaces
+lib/resolution/unknown-entity-store.ts              → Auto-store unknown entities
+lib/resolution/entity-discovery.ts                   → Background enrichment worker
+app/api/cron/discovery/route.ts                     → Cron endpoint
+scripts/migrate-v6.sql                             → Database migration
+vercel.json                                     → Cron job config
+```
+
+**Files Modified:**
+```
+app/api/intelligence/route.ts                       → Added mapToAnalysisResponse()
+components/dashboard/AnalysisDashboard.tsx          → Added debug panel + typed fields
+components/dashboard/tabs/OverviewTab.tsx           → Added field resolution
+lib/intelligence/orchestrator.ts                    → Added degraded response handling
+```
+
+**Errors Encountered & Tackled:**
+1. **Response Contract Mismatch (14:10):** Frontend couldn't read API responses due to field name variations
+   - Fix: Created types/analysis.ts with shared interfaces + mapToAnalysisResponse()
+
+2. **Null Analysis Response (14:15):** Orchestrator returned null when resolution failed
+   - Fix: Added createDegradedResponse() for partial data with meaningful messages
+
+3. **No Entity Storage (14:20):** Unknown entities weren't saved for later
+   - Fix: Created unknown-entity-store.ts with autoStoreUnknownEntity()
+
+4. **Cron Route Path (14:25):** Created wrong directory path initially
+   - Fix: Corrected to app/api/cron/discovery/route.ts
+
+5. **Type Import Errors (14:28):** LSP errors due to missing common types
+   - Fix: Inlined DataSource type in types/analysis.ts
+
+6. **autoStoreUnknownEntity Commented (14:35):** Call was left commented out in orchestrator.ts
+   - Fix: Added import and uncommented the call with error handling
+
+7. **No Cron Config (14:35):** vercel.json didn't exist for cron jobs
+   - Fix: Created vercel.json with hourly discovery cron
+
+8. **Migration Warning (14:40):** SQL file had confusing "not meant to be run" warning
+   - Fix: Removed warning - migration is valid and ready to run
+
+9. **Promotion Column Names (14:42):** entity-discovery.ts tried to insert without proper column mapping
+   - Fix: Added promoteToEntityIntelligence() with correct canonical_name, normalized_name columns
+
+10. **autoStoreUnknownEntity Not Called (14:35):** Function was commented out in orchestrator
+   - Fix: Added import and uncommented call with error handling
+
+### Version 7.0 Changes (OVERHAUL - Hardcoded Data Elimination)
+
+**Date:** February 19, 2026 15:30 IST  
+**Root Causes Diagnosed:**
+- Frontend tabs render hardcoded demo data ignoring real pipeline output
+- IT default fallback causing wrong classifications
+- Keyword "oil" matching "seed oil" instead of "Oil & Gas"
+- No client-side intent detection for better classification
+
+| Component | Description | Status | Impact |
+|-----------|-------------|--------|--------|
+| **INDUSTRY_KEYWORD_MAP** | Added 30+ keyword mappings for instant classification | ✅ DONE | "oil" → Energy/Oil & Gas, "bank" → Banking |
+| **quickKeywordClassify()** | Added instant keyword-based classification | ✅ DONE | No API calls needed for common terms |
+| **classifyWithGroq()** | Added AI classification fallback when keywords fail | ✅ DONE | Classifies unknown companies from search results |
+| **CompetitorsTab** | Rewrote to read from analysis.competitors | ✅ DONE | No more TCS for oil companies |
+| **StrategiesTab** | Rewrote to read from strategicRecommendations/opportunities/risks | ✅ DONE | No more hardcoded strategy text |
+| **InvestorsTab** | Rewrote to read from investorHighlights | ✅ DONE | No more Tiger Global for everyone |
+| **SmartSearchBar** | Created with client-side intent detection | ✅ DONE | Shows detected sector/industry before search |
+| **classification-store.ts** | Created self-learning storage | ✅ DONE | Stores learned classifications to Supabase |
+| **SECTOR_KNOWN_PEERS** | Added 13 sector peer lists to collector | ✅ DONE | Reliable competitors by sector |
+
+**Files Created:**
+```
+components/dashboard/SmartSearchBar.tsx         → Intent detection + annotation badge
+lib/resolution/classification-store.ts          → Self-learning loop
+```
+
+**Files Modified:**
+```
+lib/intelligence/identifier.ts                 → Added INDUSTRY_KEYWORD_MAP, classifyWithGroq()
+lib/intelligence/collector.ts                  → Added SECTOR_KNOWN_PEERS
+lib/intelligence/orchestrator.ts               → Added hints support
+app/api/intelligence/route.ts                  → Accept hints in request
+components/dashboard/tabs/CompetitorsTab.tsx    → Read from pipeline
+components/dashboard/tabs/StrategiesTab.tsx    → Read from pipeline
+components/dashboard/tabs/InvestorsTab.tsx      → Read from pipeline
+```
+
+**Errors Encountered & Tackled:**
+
+1. **IT Default Fallback (15:05):** System defaulted to IT for everything
+   - Fix: Added INDUSTRY_KEYWORD_MAP with oil/bank/pharma mappings
+
+2. **Groq Classification Missing (15:10):** classifyWithGroq function not defined
+   - Fix: Added full implementation with proper prompts
+
+3. **CompetitorsTab Type Errors (15:15):** Hardcoded data caused type mismatches
+   - Fix: Rewrote to use typed analysis response
+
+4. **InvestorsTab Props Mismatch (15:18):** Changed to accept analysis instead of industryData
+   - Fix: Updated AnalysisDashboard to pass analysis prop
+
+5. **clientHints Type Error (15:20):** SearchContext didn't have clientHints field
+   - Fix: Added clientHints to SearchContext interface
 
 ### Version 5.1 Changes (Data Persistence & Observability)
 
@@ -996,6 +1123,9 @@ DEBUG=true
 ENABLE_AI_ANALYSIS=true
 ENABLE_CRAWLING=true
 
+# Cron Jobs (for entity discovery)
+CRON_SECRET=your_secure_cron_secret_here
+
 # Cache
 CACHE_DURATION_HOURS=24
 MAX_CRAWL_DEPTH=2
@@ -1003,10 +1133,10 @@ MAX_CRAWL_DEPTH=2
 
 ---
 
-**Report Generated:** February 19, 2026 13:55 IST  
-**Version:** 5.4  
+**Report Generated:** February 19, 2026 15:30 IST  
+**Version:** 7.0  
 **Status:** PRODUCTION-READY  
-**Pipeline:** Search-First + Structured Extraction + Consensus + Bot Separation + Bug Fixes + Competitor/Revenue Extraction Fixes + Groq Model Upgrade + PDF Fix + Zepto Industry Fix
+**Pipeline:** Search-First + Structured Extraction + Consensus + Bot Separation + Bug Fixes + Response Contract + Unknown Entity Handling
 
 **Key Achievements:**
 1. AI analysis now works correctly with real financial data from authoritative Indian sources (v5.0)
@@ -1015,3 +1145,13 @@ MAX_CRAWL_DEPTH=2
 4. Groq model upgraded to latest llama-4-scout for better AI analysis (v5.4)
 5. PDF parsing now works with pdfjs-dist@3.11.174 (v5.4)
 6. Zepto/Blinkit/Instamart now resolve to Quick Commerce industry (v5.4)
+7. **Shared type definitions** - Single source of truth for API/frontend contracts (v6.0)
+8. **Response normalization** - mapToAnalysisResponse() handles field variations (v6.0)
+9. **Dev debug panel** - Shows raw API response in development mode (v6.0)
+10. **Auto entity storage** - Unknown entities saved for later enrichment (v6.0)
+11. **Background discovery** - Cron worker resolves unknown entities via Wikipedia + Google (v6.0)
+12. **No more IT default** - Keyword classification eliminates wrong sector defaults (v7.0)
+13. **Real competitors** - CompetitorsTab now shows actual pipeline data, not TCS for everyone (v7.0)
+14. **Smart search** - Client-side intent detection shows sector before searching (v7.0)
+15. **Self-learning** - Classification store learns from every query for faster future lookups (v7.0)
+16. **Oil & Gas correct** - "oil" now maps to Energy, not Agriculture (v7.0)

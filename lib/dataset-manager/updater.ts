@@ -170,15 +170,22 @@ export async function identifyIndustry(
     .join(' ')
     .toLowerCase();
 
-  // Industry keywords mapping
+  // STEP 1: Try Groq AI classification first (more accurate)
+  const groqClassification = await classifyIndustryWithGroq(name, searchResults);
+  if (groqClassification && groqClassification.confidence >= 60) {
+    return groqClassification;
+  }
+
+  // STEP 2: Fallback to regex patterns if Groq fails or has low confidence
   const industryPatterns: Record<string, { industry: string; subIndustry: string }> = {
-    'software|saas|technology|it services|cloud computing': { industry: 'Information Technology', subIndustry: 'Software' },
+    'software|saas|technology company|it services|cloud computing': { industry: 'Information Technology', subIndustry: 'Software' },
     'bank|financial services|insurance|fintech|nbfc': { industry: 'Financial Services', subIndustry: 'Banking' },
     'pharma|pharmaceutical|biotech|healthcare|medical': { industry: 'Healthcare', subIndustry: 'Pharmaceuticals' },
     'automobile|automotive|car|vehicle|ev|electric vehicle': { industry: 'Automotive', subIndustry: 'Automobile Manufacturers' },
     'e-commerce|online retail|marketplace': { industry: 'E-commerce', subIndustry: 'Online Retail' },
     'telecom|telecommunication|mobile|broadband': { industry: 'Telecommunications', subIndustry: 'Wireless' },
-    'energy|oil|gas|renewable|solar|wind': { industry: 'Energy', subIndustry: 'Renewable Energy' },
+    'oil refiner|petroleum|oil & gas|oil and gas|fuel|refinery': { industry: 'Energy', subIndustry: 'Oil & Gas' },
+    'energy company|oil company|gas company': { industry: 'Energy', subIndustry: 'Oil & Gas' },
     'real estate|property|construction|infra': { industry: 'Real Estate', subIndustry: 'Real Estate' },
     'consumer goods|fmcg|retail|food|beverage': { industry: 'Consumer Goods', subIndustry: 'FMCG' },
     'manufacturing|industrial|engineering|machinery': { industry: 'Industrials', subIndustry: 'Manufacturing' },
@@ -195,27 +202,131 @@ export async function identifyIndustry(
       return {
         industry: data.industry,
         subIndustry: data.subIndustry,
-        confidence: 80,
+        confidence: 70,
       };
     }
   }
 
-  // Try to extract from search results more specifically
-  const commonWords = combinedText.match(/\b\w+\b/g) || [];
-  const wordFreq: Record<string, number> = {};
-  
-  for (const word of commonWords) {
-    if (word.length > 3) {
-      wordFreq[word] = (wordFreq[word] || 0) + 1;
-    }
-  }
-
-  // If no match found, return generic
+  // If no match found, return Unknown (never default to IT)
   return {
     industry: 'Unknown',
     subIndustry: 'General',
-    confidence: 30,
+    confidence: 20,
   };
+}
+
+/**
+ * Classify industry using Groq AI based on search results
+ * This is more accurate than regex patterns
+ */
+async function classifyIndustryWithGroq(
+  name: string,
+  searchResults: { title: string; description: string; url: string }[]
+): Promise<{ industry: string; subIndustry: string; confidence: number } | null> {
+  try {
+    // Prepare search snippets
+    const searchSnippets = searchResults
+      .slice(0, 3)
+      .map(r => `${r.title}: ${r.description}`)
+      .join('\n\n');
+
+    const classificationPrompt = `Based on these search results about "${name}", determine the industry classification.
+
+Search results:
+${searchSnippets}
+
+Analyze the search results and determine:
+1. What sector is this company/entity in?
+2. What is the specific industry?
+3. What is the sub-industry/niche?
+
+Examples:
+- Bharat Petroleum → Energy > Oil & Gas > Oil Refining & Marketing
+- TCS → Technology > IT Services > Software Consulting
+- HDFC Bank → Financial Services > Banking > Private Banking
+- Zepto → Consumer > Retail > Quick Commerce
+
+Respond ONLY in this JSON format:
+{
+  "sector": "Energy",
+  "industry": "Oil & Gas",
+  "subIndustry": "Oil Refining & Marketing",
+  "confidence": 85,
+  "reasoning": "Brief explanation of why"
+}
+
+Important:
+- If the search results clearly mention "oil", "petroleum", "refinery", "fuel" → classify as Energy/Oil & Gas
+- If the search results clearly mention "software", "IT services", "technology company" → classify as Technology/IT
+- If unclear or mixed signals, set confidence below 50
+- Never guess - if truly unclear, return "Unknown"`;
+
+    const apiKey = process.env.GROQ_API_KEY;
+    if (!apiKey) {
+      console.warn('[IndustryClassification] GROQ_API_KEY not set, skipping AI classification');
+      return null;
+    }
+
+    const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        model: 'meta-llama/llama-4-scout-17b-16e-instruct',
+        messages: [
+          {
+            role: 'system',
+            content: 'You are an industry classification expert. Analyze search results and classify companies accurately. Respond only in JSON format.',
+          },
+          {
+            role: 'user',
+            content: classificationPrompt,
+          },
+        ],
+        temperature: 0.1,
+        max_tokens: 500,
+        response_format: { type: 'json_object' },
+      }),
+    });
+
+    if (!response.ok) {
+      console.warn('[IndustryClassification] Groq API error:', response.status);
+      return null;
+    }
+
+    const data = await response.json();
+    const content = data.choices[0]?.message?.content;
+    
+    if (!content) {
+      return null;
+    }
+
+    const classification = JSON.parse(content);
+    
+    // Validate the response
+    if (!classification.industry || classification.confidence < 50) {
+      console.log(`[IndustryClassification] Low confidence (${classification.confidence}%) for ${name}, returning Unknown`);
+      return {
+        industry: 'Unknown',
+        subIndustry: 'General',
+        confidence: classification.confidence || 30,
+      };
+    }
+
+    console.log(`[IndustryClassification] Groq classified ${name} as ${classification.industry} (${classification.confidence}%)`);
+    
+    return {
+      industry: classification.industry,
+      subIndustry: classification.subIndustry || 'General',
+      confidence: classification.confidence,
+    };
+
+  } catch (error) {
+    console.error('[IndustryClassification] Error:', error);
+    return null;
+  }
 }
 
 // ═══════════════════════════════════════════════════════════════════════════

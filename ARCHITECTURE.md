@@ -3146,8 +3146,8 @@ QUERY: "Zepto"
 
 ---
 
-*Last Updated: February 19, 2026 13:55 IST*
-*Version: 5.4*
+*Last Updated: February 19, 2026 14:30 IST*
+*Version: 6.0*
 *Total Components: 80+ files*
 *Data Sources: 6 APIs + Python Service*
 *Supported Companies: 995+*

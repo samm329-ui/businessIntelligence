@@ -836,6 +836,24 @@ export interface CompetitorGraph {
   sources: string[];
 }
 
+// Known sector peers for fallback when search doesn't return competitors (v7.0)
+const SECTOR_KNOWN_PEERS: Record<string, string[]> = {
+  'Oil & Gas': ['HPCL', 'IOCL', 'ONGC', 'Reliance Industries', 'Cairn India', 'BPCL', 'HPCL'],
+  'Banking': ['HDFC Bank', 'ICICI Bank', 'SBI', 'Axis Bank', 'Kotak Mahindra Bank', 'Yes Bank', 'PNB'],
+  'IT Services': ['TCS', 'Infosys', 'Wipro', 'HCL Tech', 'Tech Mahindra', 'Mindtree', 'LTI'],
+  'Pharmaceuticals': ['Sun Pharma', 'Cipla', 'Dr Reddys', 'Lupin', 'Aurobindo Pharma', 'Divis Labs'],
+  'Automobile': ['Maruti Suzuki', 'Tata Motors', 'Mahindra & Mahindra', 'Hero MotoCorp', 'Bajaj Auto', 'Eicher Motors'],
+  'Steel': ['Tata Steel', 'JSW Steel', 'SAIL', 'Jindal Steel & Power', 'NMDC', 'Hindalco'],
+  'Telecom': ['Reliance Jio', 'Bharti Airtel', 'Vodafone Idea', 'BSNL', 'MTNL'],
+  'FMCG': ['HUL', 'ITC', 'Nestle India', 'Britannia Industries', 'Dabur', 'Colgate-Palmolive'],
+  'Quick Commerce': ['Blinkit', 'Swiggy Instamart', 'Zepto', 'BigBasket', 'Dunzo', 'Grab'],
+  'E-Commerce': ['Flipkart', 'Amazon India', 'Meesho', 'Nykaa', 'Myntra', 'Snapdeal'],
+  'Cement': ['UltraTech Cement', 'Shree Cement', 'Ambuja Cements', 'ACC', 'Ramco Cements', 'JK Lakshmi'],
+  'Power': ['NTPC', 'Tata Power', 'Adani Power', 'JSW Energy', 'NHPC', 'Power Grid Corp'],
+  'Healthcare': ['Apollo Hospitals', 'Fortis Healthcare', 'Max Healthcare', 'Narayana Health', 'Dr Lal PathLabs'],
+  'Retail': ['Reliance Retail', 'Future Group', 'DMart', 'Shoppers Stop', 'Trent', 'Zara'],
+};
+
 export async function extractCompetitors(collectedData: CollectedData): Promise<string[]> {
   const competitors = new Set<string>();
   const entityName = collectedData.entity.name;
@@ -980,6 +998,18 @@ export async function extractCompetitors(collectedData: CollectedData): Promise<
         if (name && name.length > 3 && name.length < 40 && name.toLowerCase() !== entityName.toLowerCase()) {
           competitors.add(name);
         }
+      }
+    }
+  }
+  
+  // Priority 5 (v7.0): Add known sector peers as fallback if we don't have enough competitors
+  if (competitors.size < 3 && industry && SECTOR_KNOWN_PEERS[industry]) {
+    console.log(`[Collector] Adding sector peers for: ${industry}`);
+    const sectorPeers = SECTOR_KNOWN_PEERS[industry];
+    for (const peer of sectorPeers) {
+      // Exclude the entity itself
+      if (peer.toLowerCase() !== entityName.toLowerCase()) {
+        competitors.add(peer);
       }
     }
   }

@@ -14,6 +14,62 @@ import { loadDynamicEntities, entityExists, addEntity, identifyIndustry } from '
 import { searchCompanyInfo, searchIndustryInfo } from '../search-bots/google-bot';
 import { searchCompanies as searchCSVCompanies, loadCompanyDatabase } from '../datasets/company-database';
 
+// ============================================================================
+// KEYWORD-BASED CLASSIFICATION (v7.0)
+// Early-exit classification for common industry keywords
+// ============================================================================
+
+const INDUSTRY_KEYWORD_MAP: Record<string, { sector: string; industry: string; subIndustry: string }> = {
+  // Energy
+  'petroleum': { sector: 'Energy', industry: 'Oil & Gas', subIndustry: 'Oil Refining & Marketing' },
+  'petrol': { sector: 'Energy', industry: 'Oil & Gas', subIndustry: 'Oil Refining & Marketing' },
+  'oil': { sector: 'Energy', industry: 'Oil & Gas', subIndustry: 'Exploration & Production' },
+  'gas': { sector: 'Energy', industry: 'Oil & Gas', subIndustry: 'Natural Gas' },
+  'refinery': { sector: 'Energy', industry: 'Oil & Gas', subIndustry: 'Oil Refining & Marketing' },
+  'coal': { sector: 'Energy', industry: 'Mining', subIndustry: 'Coal Mining' },
+  'power': { sector: 'Utilities', industry: 'Power', subIndustry: 'Power Generation' },
+  'solar': { sector: 'Utilities', industry: 'Renewable Energy', subIndustry: 'Solar Power' },
+
+  // Finance
+  'bank': { sector: 'Financial Services', industry: 'Banking', subIndustry: 'Commercial Banking' },
+  'insurance': { sector: 'Financial Services', industry: 'Insurance', subIndustry: 'General Insurance' },
+  'nbfc': { sector: 'Financial Services', industry: 'Non-Banking Finance', subIndustry: 'NBFC' },
+  'mutual fund': { sector: 'Financial Services', industry: 'Asset Management', subIndustry: 'Mutual Funds' },
+
+  // Technology
+  'software': { sector: 'Technology', industry: 'IT Services', subIndustry: 'Software' },
+  'semiconductor': { sector: 'Technology', industry: 'Semiconductors', subIndustry: 'Chip Manufacturing' },
+  'telecom': { sector: 'Communication', industry: 'Telecom', subIndustry: 'Mobile Services' },
+
+  // Consumer
+  'ecommerce': { sector: 'Consumer', industry: 'E-Commerce', subIndustry: 'Online Retail' },
+  'fmcg': { sector: 'Consumer Goods', industry: 'FMCG', subIndustry: 'Packaged Goods' },
+  'pharma': { sector: 'Healthcare', industry: 'Pharmaceuticals', subIndustry: 'Generic Drugs' },
+  'hospital': { sector: 'Healthcare', industry: 'Healthcare Services', subIndustry: 'Hospitals' },
+
+  // Manufacturing
+  'steel': { sector: 'Materials', industry: 'Steel', subIndustry: 'Integrated Steel' },
+  'cement': { sector: 'Materials', industry: 'Cement', subIndustry: 'Cement Manufacturing' },
+  'auto': { sector: 'Automotive', industry: 'Automobile', subIndustry: 'Passenger Vehicles' },
+  'automobile': { sector: 'Automotive', industry: 'Automobile', subIndustry: 'Passenger Vehicles' },
+};
+
+/**
+ * Quick keyword-based classification - instant, no API calls
+ */
+export function quickKeywordClassify(query: string): {
+  sector: string; industry: string; subIndustry: string
+} | null {
+  const lower = query.toLowerCase();
+  for (const [keyword, classification] of Object.entries(INDUSTRY_KEYWORD_MAP)) {
+    if (lower.includes(keyword)) {
+      console.log(`[Identifier] Keyword match: "${keyword}" → ${classification.industry}`);
+      return classification;
+    }
+  }
+  return null;
+}
+
 export interface IdentificationResult {
   found: boolean;
   type: 'company' | 'industry' | 'brand' | 'unknown';
@@ -32,6 +88,7 @@ export interface IdentificationResult {
 export interface SearchContext {
   results?: Array<{ title: string; url: string; description: string }>;
   hints?: { name?: string; industry?: string; type?: string };
+  clientHints?: { sector?: string; industry?: string };
 }
 
 function extractTickerFromSearchResults(results: Array<{ title: string; url: string; description: string }>): string | undefined {
@@ -159,6 +216,22 @@ export async function identifyInput(input: string, searchContext?: SearchContext
   }
 
   console.log(`[Identifier] Identifying: "${trimmedInput}"${searchContext?.results ? ` (with ${searchContext.results.length} search hints)` : ''}`);
+
+  // Step 0: Quick keyword classification (v7.0) - instant, no API calls
+  const keywordMatch = quickKeywordClassify(trimmedInput);
+  if (keywordMatch) {
+    console.log(`[Identifier] Instant keyword classification: ${keywordMatch.industry}`);
+    return {
+      found: true,
+      type: 'company',
+      name: trimmedInput,
+      industry: keywordMatch.industry,
+      subIndustry: keywordMatch.subIndustry,
+      confidence: 85,
+      source: 'excel', // Treat as high-confidence like Excel
+      isNew: false,
+    };
+  }
 
   if (searchContext?.results && searchContext.results.length > 0) {
     const searchBasedResult = resolveFromSearchContext(trimmedInput, searchContext);
@@ -443,6 +516,104 @@ async function checkIndustryName(input: string): Promise<IdentificationResult> {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
+// Groq AI Classification (v7.0)
+// Uses AI to classify industry from search snippets when other methods fail
+// ═══════════════════════════════════════════════════════════════════════════
+
+async function classifyWithGroq(
+  entityName: string,
+  searchResults: { title: string; description: string; url: string }[]
+): Promise<{ sector: string; industry: string; subIndustry: string; confidence: number } | null> {
+
+  if (!searchResults || searchResults.length === 0) return null;
+
+  const snippetText = searchResults
+    .slice(0, 5)
+    .map(r => `${r.title}: ${r.description}`)
+    .join('\n---\n');
+
+  const prompt = `You are a business intelligence classifier for Indian companies.
+
+Based ONLY on these search results about "${entityName}", classify it:
+
+${snippetText}
+
+Analyze the search results and determine:
+1. What sector is this company in?
+2. What is the specific industry?
+3. What is the sub-industry/niche?
+
+Examples:
+- Bharat Petroleum → Energy > Oil & Gas > Oil Refining & Marketing
+- TCS → Technology > IT Services > Software Consulting
+- HDFC Bank → Financial Services > Banking > Private Banking
+- Zepto → Consumer > Retail > Quick Commerce
+
+Return JSON only - no explanation, no markdown:
+{
+  "sector": "Energy",
+  "industry": "Oil & Gas",
+  "subIndustry": "Oil Refining & Marketing",
+  "confidence": 85,
+  "reasoning": "Brief explanation of why"
+}
+
+Important:
+- If search results clearly mention "oil", "petroleum", "refinery", "fuel" → classify as Energy/Oil & Gas
+- If search results clearly mention "software", "IT services", "technology company" → classify as Technology/IT
+- If results show a bank/financial company → classify as Financial Services
+- If unclear or mixed signals, set confidence below 50
+- NEVER use "Information Technology" unless the company actually makes software/hardware
+- If truly unknown, use sector: "Unknown", confidence: 0`;
+
+  try {
+    const apiKey = process.env.GROQ_API_KEY;
+    if (!apiKey) {
+      console.warn('[Identifier] GROQ_API_KEY not set, skipping AI classification');
+      return null;
+    }
+
+    const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        model: 'meta-llama/llama-4-scout-17b-16e-instruct',
+        temperature: 0.0,
+        max_tokens: 300,
+        response_format: { type: 'json_object' },
+        messages: [{ role: 'user', content: prompt }],
+      }),
+    });
+
+    if (!response.ok) {
+      console.warn('[Identifier] Groq API error:', response.status);
+      return null;
+    }
+
+    const data = await response.json();
+    const content = data.choices?.[0]?.message?.content;
+    if (!content) return null;
+
+    const parsed = JSON.parse(content);
+    console.log(`[Identifier] Groq classified "${entityName}":`, parsed);
+    
+    return {
+      sector: parsed.sector || 'Unknown',
+      industry: parsed.industry || 'Unknown',
+      subIndustry: parsed.subIndustry || 'General',
+      confidence: parsed.confidence || 0,
+    };
+
+  } catch (e) {
+    console.warn('[Identifier] Groq classification failed:', e);
+    return null;
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
 // Search Google and Identify
 // ═══════════════════════════════════════════════════════════════════════════
 
@@ -456,10 +627,23 @@ async function searchAndIdentify(input: string): Promise<IdentificationResult> {
     }
 
     // Identify industry from search results
-    const industryData = await identifyIndustry(input, searchResults);
+    let industryData = await identifyIndustry(input, searchResults);
 
+    // If regex-based classification fails, try Groq AI classification (v7.0)
     if (!industryData || industryData.confidence < 40) {
-      return { found: false, type: 'unknown', name: input, industry: 'Unknown', subIndustry: 'Unknown', confidence: 0, source: 'none' };
+      console.log(`[Identifier] Regex classification failed, trying Groq AI for "${input}"...`);
+      const groqClassification = await classifyWithGroq(input, searchResults);
+      
+      if (groqClassification && groqClassification.confidence >= 30) {
+        console.log(`[Identifier] Groq classified "${input}": ${groqClassification.industry} (${groqClassification.confidence}%)`);
+        industryData = {
+          industry: groqClassification.industry,
+          subIndustry: groqClassification.subIndustry,
+          confidence: groqClassification.confidence,
+        };
+      } else {
+        return { found: false, type: 'unknown', name: input, industry: 'Unknown', subIndustry: 'Unknown', confidence: 0, source: 'none' };
+      }
     }
 
     // Add to dynamic dataset

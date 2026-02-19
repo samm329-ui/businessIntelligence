@@ -18,9 +18,30 @@ import { INDUSTRIES, getIndustryData, getRevenueBreakdown, Region, DATA_SOURCES_
 export function OverviewTab({ analysis }: { analysis: any }) {
     const [region, setRegion] = useState<Region>('india')
 
+    // Smart field resolution for typed/legacy compatibility
+    const resolvedIndustry = useMemo(() => 
+        analysis?.entity?.industry || analysis?.industry || analysis?.industryName || 'Unknown',
+        [analysis]
+    )
+    
+    const resolvedEntityName = useMemo(() =>
+        analysis?.entity?.name || analysis?.entityName || analysis?.query || 'Unknown',
+        [analysis]
+    )
+
+    const resolvedSummary = useMemo(() =>
+        analysis?.analysis?.summary || analysis?.analysis?.executiveSummary || analysis?.summary || '',
+        [analysis]
+    )
+
+    const resolvedConfidence = useMemo(() =>
+        analysis?.data?.confidence || analysis?.analysis?.confidence || analysis?.confidence || analysis?.metadata?.dataConfidenceScore || 0,
+        [analysis]
+    )
+
     // Get industry-specific data with smart resolution
-    const industryData = useMemo(() => getResolvedData(analysis.industry), [analysis.industry])
-    const companyContext = useMemo(() => getIndustryByCompany(analysis.industry), [analysis.industry])
+    const industryData = useMemo(() => getResolvedData(resolvedIndustry), [resolvedIndustry])
+    const companyContext = useMemo(() => getIndustryByCompany(resolvedIndustry), [resolvedIndustry])
 
     // Get revenue breakdown based on industry and region
     const revenueData = useMemo(() => {

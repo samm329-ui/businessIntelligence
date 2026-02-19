@@ -23,6 +23,70 @@ import { buildConsensus, formatForAI, type ConsensusMetrics } from './consensus-
 import { createTracer, getCurrentTracer, clearTracer, logDatasetUsage } from '../debugging/pipeline-tracer';
 import { dataValidator } from '../debugging/data-validator';
 import { cacheAuditor } from '../debugging/cache-auditor';
+import { autoStoreUnknownEntity } from '../resolution/unknown-entity-store';
+
+/**
+ * Creates a degraded response when entity resolution fails or data is incomplete.
+ * This ensures the frontend always has something meaningful to display.
+ */
+function createDegradedResponse(
+  request: IntelligenceRequest,
+  identification: IdentificationResult | null,
+  reason: string,
+  requestId: string,
+  totalTimeMs: number
+): IntelligenceResponse {
+  console.log(`[Orchestrator] Creating degraded response: ${reason}`);
+  
+  // Store unknown entity for later enrichment
+  autoStoreUnknownEntity(request.input, identification).catch(err => 
+    console.warn('[Orchestrator] Failed to store unknown entity:', err)
+  );
+  
+  return {
+    success: true, // Partial success - we have some info
+    entity: {
+      name: identification?.name || request.input,
+      type: identification?.type || 'unknown',
+      industry: identification?.industry || 'Unknown',
+      subIndustry: identification?.subIndustry || 'Unknown',
+    },
+    analysis: {
+      executiveSummary: `Partial analysis for "${request.input}". ${reason}`,
+      financials: {},
+      competitors: [],
+      keyFindings: [
+        `Entity resolution confidence: ${identification?.confidence || 0}%`,
+        reason,
+      ],
+      risks: [
+        'Limited data available for this entity',
+        'Some metrics may be unavailable',
+      ],
+      opportunities: [
+        'More data may improve analysis quality',
+      ],
+      industryOutlook: 'Unable to determine industry outlook due to limited data.',
+      confidence: identification?.confidence || 0,
+      model: 'degraded',
+    },
+    data: null,
+    metadata: {
+      identificationTimeMs: 0,
+      collectionTimeMs: 0,
+      analysisTimeMs: 0,
+      totalTimeMs,
+      isNewEntity: true,
+      isFromCache: false,
+      changeDetected: false,
+      sourcesUsed: [],
+      dataSource: 'dataset',
+      requestId,
+      validated: false,
+      warnings: [reason],
+    },
+  };
+}
 
 function normalizeConfidence(value: any): number {
   if (value === null || value === undefined) return 0;
@@ -45,6 +109,10 @@ export interface IntelligenceRequest {
   input: string;
   forceRefresh?: boolean;
   options?: CollectionOptions;
+  hints?: {
+    sector?: string;
+    industry?: string;
+  };
 }
 
 export interface IntelligenceResponse {
@@ -141,17 +209,27 @@ export async function getIntelligence(
     // ═══════════════════════════════════════════════════════════════════
     const idStartTime = Date.now();
     console.log(`[Orchestrator] STEP 2: Entity resolution (search-enhanced)...`);
+    
+    // Use client hints if provided (from SmartSearchBar)
+    if (request.hints?.sector && request.hints?.industry) {
+      console.log(`[Orchestrator] Using client hints: ${request.hints.sector} › ${request.hints.industry}`);
+    }
+    
     const identification = await identifyInput(request.input, {
       results: quickSearchResults,
       hints: searchEntityHints,
+      clientHints: request.hints,
     });
     const idTime = Date.now() - idStartTime;
 
-    if (searchEntityHints.industry && !identification.industry) {
-      identification.industry = searchEntityHints.industry;
+    // Override with client hints if identification failed or returned Unknown
+    if (request.hints?.industry && (!identification.industry || identification.industry === 'Unknown')) {
+      identification.industry = request.hints.industry;
+      (identification as any).sector = request.hints.sector || 'Unknown';
+      identification.confidence = Math.max(identification.confidence, 70);
     }
-    if (searchEntityHints.type && identification.type === 'unknown') {
-      identification.type = searchEntityHints.type as any;
+    if (request.hints?.sector && identification.type === 'unknown') {
+      identification.type = 'company';
     }
 
     tracer.traceEntityResolution(
