@@ -1,0 +1,2008 @@
+{
+  "entity": "company: Tata Motors in Automotive industry India",
+  "data": {
+    "analysis": {
+      "executiveSummary": "[INSUFFICIENT DATA] Tata Motors' financial performance shows revenue of ₹15518.00, EBITDA of ₹4.00, and net margin of 10.60%. The company's market cap is ₹1744.77B with a debt-to-equity ratio of 0.70.",
+      "financials": {
+        "revenue": "₹15518.00",
+        "ebitda": "₹4.00",
+        "profit": null,
+        "growth": null,
+        "marketCap": "₹1744.77B"
+      },
+      "competitors": [
+        "3DSoC",
+        "91Mobiles",
+        "Acision",
+        "Cardback",
+        "Diabeto",
+        "Eashmart",
+        "Genii Technologies",
+        "Gingr",
+        "Gray Routes Innovative Distribution",
+        "GupShup",
+        "has"
+      ],
+      "keyFindings": [
+        "Tata Motors has a debt-to-equity ratio of 0.70.",
+        "The company's EBITDA margin is 10.60%.",
+        "Tata Motors' EPS is ₹1.52.",
+        "The company's ROE is 20.10%."
+      ],
+      "risks": [
+        "High variance in market cap (86%) across sources.",
+        "High variance in revenue (22531060604%) across sources.",
+        "High variance in EBITDA (125%) across sources."
+      ],
+      "opportunities": [
+        "Tata Motors surpassed Hyundai in March 2025 auto sales.",
+        "The company has a significant presence in the Indian automotive market."
+      ],
+      "industryOutlook": "The Indian automotive market is competitive, with Tata Motors facing rivals such as Mahindra and Maruti Suzuki.",
+      "confidence": 55,
+      "model": "groq-llama-4-scout",
+      "tokensUsed": 1681
+    },
+    "collectedData": {
+      "entity": {
+        "name": "company: Tata Motors in Automotive industry India",
+        "type": "company",
+        "industry": "Automobile",
+        "subIndustry": "Passenger Vehicles"
+      },
+      "sources": {
+        "companyInfo": [
+          {
+            "title": "Investors",
+            "url": "https://www.tatamotors.com/investors/",
+            "description": "Q1 FY26 key metrics · ₹ 17,009 Cr Revenue · 12.2% EBITDA · 9.7% EBIT margin · ₹ 1,657 Cr PBT (bei).",
+            "source": "serpapi"
+          },
+          {
+            "title": "Tata Motors Investor Relations | Q4 FY25 Results ...",
+            "url": "https://cv.tatamotors.com/investors",
+            "description": "Explore Tata Motors' latest investor updates, Q4 FY25 results, and access key resources, annual reports, and financial performance insights in one place.",
+            "source": "serpapi"
+          },
+          {
+            "title": "Overview",
+            "url": "https://cars.tatamotors.com/investors/overview.html",
+            "description": "Stellantis, a leading global automaker, and Tata Motors Passenger Vehicles, India's leading manufacturer of cars and SUVs, commemorated 20-years of successful ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Investors | Tata group",
+            "url": "https://www.tata.com/investors",
+            "description": "Welcome to the Investors' Page. Financial Information and live stock data of the Tata companies ... India, comprising 31 companies across multiple verticals.",
+            "source": "serpapi"
+          },
+          {
+            "title": "TATAMOTORS Investor Relations - Tata Motors Ltd",
+            "url": "https://www.alphaspread.com/security/nse/tatamotors/investor-relations",
+            "description": "Tata Motors Ltd (NSE:TATAMOTORS) investor relations materials: earnings calls, slides & pdfs, and letter to shareholders.",
+            "source": "serpapi"
+          },
+          {
+            "title": "Tata-Motors-Investor-presentation-Q1FY26.pdf",
+            "url": "https://www.tatamotors.com/wp-content/uploads/2025/08/Tata-Motors-Investor-presentation-Q1FY26.pdf",
+            "description": "The business has three segments: Industrials (Truck, Bus,. Powertrain), Financial Services, and Defence. • Transaction perimeter : €14.1B in ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "80TH INTEGRATED ANNUAL REPORT 2024-25",
+            "url": "https://www.tatamotors.com/wp-content/uploads/2024/05/tata-motor-IAR-2024-25.pdf",
+            "description": "With dedicated leadership and a clear strategic mandate, both businesses are better positioned to strengthen market presence, unlock new growth ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Annual Reports - Tata Motors",
+            "url": "https://www.tatamotors.com/annual-reports/",
+            "description": "Annual reports. Investors; Financial information; Annual Reports. Filter by financial year: Select Financial Year, 2025-2026, 2024-2025, 2023- ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "TATA MOTORS 2024-25 Annual Report Analysis",
+            "url": "https://www.equitymaster.com/research-it/annual-results-analysis/TELCO/TATA-MOTORS-2024-25-Annual-Report-Analysis/12150",
+            "description": "Operating profit margins witnessed a fall and stood at 12.4% in FY25 as against 13.3% in FY24. Depreciation charges decreased by 14.6% and finance costs ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "statement of standalone audited financial results for the ...",
+            "url": "https://static-assets.tatamotors.com/Production/www-tatamotors-com-NEW/wp-content/uploads/2025/05/TML-Standalone-Q4-FY25-Results.pdf",
+            "description": "STATEMENT OF STANDALONE AUDITED FINANCIAL RESULTS FOR THE QUARTER AND YEAR ENDED MARCH 31, 2025. Quarter ended. Year ended. March 31,.",
+            "source": "serpapi"
+          }
+        ],
+        "industryInfo": [
+          {
+            "title": "2025 Cox Automotive Market Insights and Outlook",
+            "url": "https://www.coxautoinc.com/insights-hub/2025-cox-automotive-market-insights-and-outlook/",
+            "description": "Throughout much of 2024, the U.S. automobile market was held in check by the uncertainty of the national election unfolding and political ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "2025 automotive sales data highlights mixed global trends",
+            "url": "https://www.spglobal.com/automotive-insights/en/blogs/2026/01/2025-automotive-sales-data-global-trends",
+            "description": "In 2025, Japan's new vehicle sales grew 3.26% y/y to 4.56 million units, according to the Japan Automobile Dealers' Association (JADA) and the ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Automotive Industry 2025 - Market Size, Company, Growth ...",
+            "url": "https://www.marketresearchfuture.com/reports/automotive-industry-7683",
+            "description": "Industry Reports · Automobile; Automotive Industry. English. German · French · Japanese · English ... As per MRFR analysis, the Automotive Industry Market Size ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Global Automotive Supplier Study 2025",
+            "url": "https://www.lazard.com/media/4k4gnvco/global-automotive-supplier-study-2025-summary.pdf",
+            "description": "Looking ahead, the outlook for the industry in 2025 has worsened substantially over the past. 18 months. ... 2024, European Automobile. Manufacturers' Association ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Global Automotive Outlook: Predictions For 2025",
+            "url": "https://www.forbes.com/sites/sarwantsingh/2025/01/13/global-automotive-outlook-predictions-for-2025/",
+            "description": "... Automobile's vehicle distribution center in Liangjiang New Area, Chongqing, China, Jan. ... China's share in Europe's EV market—9% in 2024 ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Automotive Market Size, Share & Industry Report 2030",
+            "url": "https://www.mordorintelligence.com/industry-reports/global-automotive-market",
+            "description": "Automotive Market CAGR (%), Growth Rate by Region Image © Mordor Intelligence. ... 16 Tesla Inc. 6.4.17 FAW Group; 6.4.18 Changan Automobile Group ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Automobile Market Size, Share, Trends & Forecast 2034",
+            "url": "https://www.zionmarketresearch.com/report/automobile-market",
+            "description": "Automobile Market: Report Scope ; Growth Rate, CAGR of 3.6% ; Number of Pages, 217 ; Key Companies Covered, Ford Motor Company, BMW Group, Volkswagen Group, ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "US automakers optimistic on auto sales despite tough ...",
+            "url": "https://www.spglobal.com/automotive-insights/en/blogs/2026/02/us-automakers-optimistic-about-improving-auto-sales",
+            "description": "Reports from the National Automobile Dealers Association (NADA) meeting earlier in February provide insights into how several US automakers ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "U.S Automobile Market Size, Share, Growth & Analysis, 2033",
+            "url": "https://www.marketdataforecast.com/market-reports/us-automobile-market",
+            "description": "The U.S automobile market size was valued at USD 46.10 billion in 2024 and is anticipated to reach USD 49.64 billion in 2025 to USD 84.58 ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "US Automotive Industry Market Size, Report 2035",
+            "url": "https://www.marketresearchfuture.com/reports/us-automotive-industry-market-12674",
+            "description": "Automobile · Automotive Components · Automotive Technology, Services · Bikes and ... How does the market growth rate differ between passenger cars and commercial ...",
+            "source": "serpapi"
+          }
+        ],
+        "financialData": [
+          {
+            "title": "Tata Motors Ltd share price | About Tata Motors | Key Insights",
+            "url": "https://www.screener.in/company/TMCV/",
+            "description": "Tata Motors · Mkt Cap: 1,74477 Crore · Profit: -0.08 Cr · Company has low interest coverage ratio. · Promoter Holding: 42.6%",
+            "source": "serpapi"
+          },
+          {
+            "title": "Tata Motors Passenger Vehicles Ltd",
+            "url": "https://www.screener.in/company/TMPV/consolidated/",
+            "description": "Tata Motors PVeh · Mkt Cap: 1,38399 Crore (down -8.68% in 1 year) · Revenue: 3,49637 Cr · Profit: 85324 Cr · Earnings include an other income of Rs.85293 ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Automotive Stampings & Assemblies Ltd",
+            "url": "https://www.screener.in/company/ASAL/",
+            "description": "As of December 2024, Tata Motors Ltd (TML) holds a 36% stake in the commercial vehicle market, while Tata Motors Passenger Vehicles Ltd (TMPVL) leads the ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Automotive Stampings & Assemblies Ltd",
+            "url": "https://www.screener.in/company/ASAL/consolidated/",
+            "description": "As of December 2024, Tata Motors Ltd (TML) holds a 36% stake in the commercial vehicle market, while Tata Motors Passenger Vehicles Ltd (TMPVL) leads the ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Tata Technologies Ltd share price | About ...",
+            "url": "https://www.screener.in/company/TATATECH/consolidated/",
+            "description": "The segment revenue grew by 50% between FY22 and FY24, driven by new business wins with its anchor and non-anchor accounts. Market Cap ₹ 24,423 Cr.",
+            "source": "serpapi"
+          },
+          {
+            "title": "Automobiles Companies",
+            "url": "https://www.screener.in/market/IN02/IN0201/IN020101/",
+            "description": "Hyundai Motor I, 2181.00, 31.20, 177314.72, 0.96, 1194.92, 6.30, 17452.70, 7.46, 54.25. 7. Tata Motors PVeh, 375.70, 23.03, 138399.42, 1.60, -3483.00 ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Tata Motors Group Q1 FY24 earnings call transcript",
+            "url": "https://cdn-media.screener.in/concalls/411f6eed-f15f-4c3f-8b32-26ecf790a429.pdf",
+            "description": "It will lead to a reduction in the overall capital base of the company, making it 4% EPS accretive for all shareholders. It will eliminate the ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "UMA OMKAR SHENDE",
+            "url": "https://cdn-media.screener.in/concalls/ace6d4b6-9098-43c6-b3fc-fcb39dc8974c.pdf",
+            "description": "Q4 Renewal growth at healthy 29%. • Profit after tax for Q4 FY2025 stood at ₹ 41 crore vs. ₹ 106 crore in Q4 FY2024, due to lower investment ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Atharv Enterprises Ltd share price",
+            "url": "https://www.screener.in/company/id/313/",
+            "description": "Atharv Enter · Mkt Cap: 6.48 Crore (up 24.9% in 1 year) · Revenue: 0.46 Cr · Profit: 0.20 Cr · Though the company is reporting repeated profits, it is not ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Kurla - ValuePickr Forum",
+            "url": "https://cdn-media.screener.in/concalls/c7e19d02-8b00-4176-9127-518d99ceae5f.pdf",
+            "description": "Subject: Earnings Call Presentation of the Company pertaining to Q2 of FY 2024-25. In continuation with the Company's letter dated October ...",
+            "source": "serpapi"
+          }
+        ],
+        "competitors": [
+          {
+            "title": "March 2025 Auto Sales: Tata Motors surpasses Hyundai ...",
+            "url": "https://auto.economictimes.indiatimes.com/news/passenger-vehicle/tata-motors-surpasses-hyundai-mm-to-claim-second-spot-in-march-2025/120067028",
+            "description": "Tata Motors held a market share of 14.10% in March 2025, while the country's largest carmaker, Maruti Suzuki, held 37.77% of the market pie.",
+            "source": "serpapi"
+          },
+          {
+            "title": "Big Three (automobile manufacturers)",
+            "url": "https://en.wikipedia.org/wiki/Big_Three_(automobile_manufacturers)",
+            "description": "Big Three (automobile manufacturers) · United States — General Motors, Ford, and Stellantis North America (Chrysler Corporation) · Germany — the Volkswagen Group, ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Maruti Suzuki's market lead narrows as Tata, Mahindra ...",
+            "url": "https://www.manufacturingtodayindia.com/maruti-suzuki-market-lead-narrows-as-tata-mahindra-surge-in-indias-2025-car-market",
+            "description": "Tata's market share more than doubled in this period — from around 7.2% in 2020 to 15.8% in 2025, an increase of 8.6 percentage points. This ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Tata's EV market share in India plunges as rivals gain ground",
+            "url": "https://restofworld.org/2025/tata-india-ev-market-share/",
+            "description": "Tata Motors' EV market share dropped from nearly 70% in early 2024 to 53% in 2025. Experts say JSW MG Motor India's edge in pricing and battery- ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Top 13 Car Manufacturers in India in 2026",
+            "url": "https://www.godigit.com/car-guides/top-car-manufacturers-in-india",
+            "description": "4. Tata Motors | Market Share: 11.4% · Car unit sold in July 2025: 39,521 units* · Popular cars: Hexa, Tiago, Indica, Safari, Storme, Nano, and Bolt.",
+            "source": "serpapi"
+          },
+          {
+            "title": "Indian Electric Vehicle Market: MG Nears Tata's Share, High",
+            "url": "https://eu.36kr.com/en/p/3510102299777416",
+            "description": "Although Tata Motors, the former market leader, still leads with a 35% share, its market share has significantly declined compared with the same ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Largest automakers by market capitalization",
+            "url": "https://companiesmarketcap.com/automakers/largest-automakers-by-market-cap/",
+            "description": "List of the largest automaker companies by market capitalization ... Chery Automobile logo. Chery Automobile. 239973.HK. $20.96 B. $3.61. 1.67%. 1.67 ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "World's Top 30 Automotive Industry Market Companies 2025",
+            "url": "https://www.sphericalinsights.com/blogs/world-s-top-30-automotive-industry-market-companies-2025-innovation-revenue-insights",
+            "description": "Toyota Motor Corporation, is one of the global biggest and most powerful automobile producers. Toyota designs, produces, and sells an array of vehicles, such as ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Top 10 Largest Car Manufacturers In The US",
+            "url": "https://www.storagecafe.com/blog/top-10-largest-car-manufacturers-in-the-us/",
+            "description": "2. Toyota Motor Company — 15% market share. The automobile company was founded in Japan in 1937 as a spinoff of Toyota Industries, which ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Automotive industry worldwide - statistics & facts",
+            "url": "https://www.statista.com/topics/1487/automotive-industry/?srsltid=AfmBOoqPcF_mByHmgq9eMxSze0gStaamaryhohZisiCzD_MV0XLl2KeE",
+            "description": "Statista R identifies and awards industry leaders, top ... Global automobile market share in 2024, by brand. Passenger Cars. Car ...",
+            "source": "serpapi"
+          }
+        ],
+        "news": [
+          {
+            "title": "Tata Motors Passenger Vehicles Sees Double-Digit Sales ...",
+            "url": "https://www.youtube.com/watch?v=b2pgGAoLs8Q",
+            "description": "Passenger vehicle sales in India are expected to grow around 10% in 2026, extending momentum from GST rate cuts, with SUVs likely to witness accelerated ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Press releases",
+            "url": "https://www.tatamotors.com/newsroom/press-releases/",
+            "description": "Latest press releases · Tata Motors Launches Ace Gold+ Diesel Mini-Truck at Rs. · India's Safest Hatchback: All-new Altroz Achieves 5-Star Bharat NCAP Rating ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Latest News & Updates: Innovations and Launches",
+            "url": "https://cars.tatamotors.com/news-and-events.html",
+            "description": "Tata Motors Passenger Vehicles Ltd. (TMPVL) announced its results for quarter ending December 31, 2025 ... TMPVL delivered revenues of ₹70.1K Cr (down 25.8%) and ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Here's What Led To Tata Motors' Stellar D-Street Debut; MD ...",
+            "url": "https://www.youtube.com/watch?v=UloQv_7qtZM",
+            "description": "Tata Motors CV | Here's what led to the Tata Motors CV big D-Street Debut. Girish Wagh, MD & CEO, Tata Motors, shares his insights on the key growth factors ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "India's Auto Sector Sees Unprecedented Growth with ...",
+            "url": "https://www.devdiscourse.com/article/business/3670367-indias-auto-sector-sees-unprecedented-growth-with-tatas-mega-acquisition",
+            "description": "India's automotive sector saw significant activity in the September quarter with 30 transactions worth USD 4.6 billion. This surge, led by Tata Motors' USD ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "LIVE | Tata Motors' Strategy To Win Back Market Share ...",
+            "url": "https://www.youtube.com/watch?v=3OyqahpYWb0",
+            "description": "Tata Motors MD Shailesh Chandra reveals the company's strategy to win back market share. He explains why the new Altroz is the beginning of the FY26 gameplan & ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Tata Curvv EV Review - Page 17",
+            "url": "https://www.team-bhp.com/forum/electric-cars/283860-tata-curvv-ev-review-17.html",
+            "description": "I test drove the vehicle today. While I am impressed with driving characteristics, I have a very serious safety concern. While using Regen mode the brake lights ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Industry Sitting On High Volume, Expect Growth To Taper A Bit ...",
+            "url": "https://www.youtube.com/watch?v=hjg3wXDl_9A",
+            "description": "The new Tata Sierra was one of the most eagerly anticipated reveals at the 2025 Auto Expo, and it appears to have lived up to the hype.",
+            "source": "serpapi"
+          },
+          {
+            "title": "Consumer Behavior in Indian Automobiles | PDF | Toyota",
+            "url": "https://www.scribd.com/document/830476866/DOC-20250219-WA0008",
+            "description": "The project report titled 'A Study on Consumer Behaviour in the Automobiles Industry' explores the dynamics of consumer preferences in the Indian automobile ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "SIAM Looking Ahead Conclave sees PV sales growing 1-4 ...",
+            "url": "https://www.autocarpro.in/news/siam-looking-ahead-conclave-sees-pv-sales-growing-1-4-in-fy26-125027",
+            "description": "Maruti Suzuki and Hyundai expect the volumes to grow by 1-1.5% while Mahindra & Mahindra, Kia, and Tata Motors forecasted volume growth of 1-2%, 2-3% and 2-4%, ...",
+            "source": "serpapi"
+          }
+        ],
+        "crawledPages": [
+          {
+            "url": "https://www.tatamotors.com/investors/",
+            "title": "Investors – Tata Motors",
+            "content": "₹ 104,407 Cr Revenue 9.2% EBITDA 4.3% EBIT margin ₹ 5,617 Cr. PBT (bei) £ 6,604 Mn Revenue 9.3% EBITDA 4.0% EBIT margin £ 351 Mn PBT (bei) ₹ 17,009 Cr Revenue 12.2% EBITDA 9.7% EBIT margin ₹ 1,657 Cr PBT (bei) ₹ 10,877 Cr Revenue 4.0% EBITDA (2.8%) EBIT margin (₹ 129 Cr) PBT (bei)",
+            "crawledAt": "2026-02-19T22:52:30.432Z",
+            "sourceType": "official"
+          },
+          {
+            "url": "https://cv.tatamotors.com/investors",
+            "title": "Tata Motors Investor Relations | Q4 FY25 Results, Revenue and Key Metrics",
+            "content": "InvestorsConsistent Value CreationQ3 FY26 key metrics*₹ 21,533 CrRevenue12.7%EBITDA Margin10.6%EBIT Margin₹ 2,290 CrPBT (bei)*Represent data on Commercial Vehicle Segment basis.Key Investor ResourcesResults and Key resourcesTata Motors Investor Call Recording - 31st July 2025Tata Motors Investor Presentation – IVECO acquisitionTata Motors Press Release for Q3 FY26Q3 FY26 Standalone Financial ResultsQ3 FY26 Consolidated Financial ResultsTata Motors investor presentation Q3 FY26Q3 FY26 Tata Motors earnings call recordingDetails of Entitlement of Shareholders Pursuant to the Cancellation of ‘A’ Ordinary SharesFAQs - Cancellation of \"A\" Ordinary SharesView AllAnnual Report and AGM resources80th Integrated Annual Report 2024-25AGM Presentation FY24AGM Recording, 20 June, 2025Subsidiary annual reportsInvestor day presentationTML Investor day presentation, 9 June, 2025TML Investor day recording, 9 June, 2025TML Corporate PresentationView Presentation",
+            "crawledAt": "2026-02-19T22:52:31.786Z",
+            "sourceType": "official"
+          },
+          {
+            "url": "https://cars.tatamotors.com/investors/overview.html",
+            "title": "Overview",
+            "content": "<iframe src=https://www.googletagmanager.com/ns.html?id=GTM-M5QCTM7 height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe> Go Back Quick Link Book a test drive Brand Stories Pre-owned vehicles Digital Showroom Dealers near me Sign In Sign Out Our Models Account Accessories Dealer Locator Request a call back Sierra Harrier Safari Nexon Punch Altroz Tiago Curvv Tigor Digital Showroom Exchange Car Pre-Owned Rewards Service Service Products Book a Service Estimate Service Cost Service Connect App Owner's Manual General Tips Fuel Saving Tips Best Value Service Value Added Services Phone Bluetooth™ Compatibility Android Auto User Guide Information On warranty Contact Us Sitemap Book a Test Drive Our Models Drive NEW FOREVER. A whole new range of cars from Tata Motors. Sierra Learn More Harrier Learn More Harrier.ev Learn More Safari Learn More Nexon Learn More Nexon.ev Learn More THE NEW PUNCH Learn More Punch.ev Learn More All New Altroz Learn More Tiago Learn More Tiago.ev Learn More Curvv Learn More Curvv.ev Learn More Tigor Learn More Tigor.ev Learn More XPRES Learn More Your browser does not support JavaScript. Some components may not be visible. Investors Consistent value creation Key investor resources Results and Key resources Tata Motors Passenger Vehicles Group Q3 FY26 Press Release Tata Motors Group investor presentation Q3 FY26 Q3 FY26 Standalone Financial Results Q3 FY26 Consolidated Financial Results Tata Motors Investor Call Recording - 31st December 2025 Details of Entitlement of Shareholders Pursuant to the Cancellation of ‘A’ Ordinary Shares FAQs - Cancellation of \"A\" Ordinary Shares View All Annual Report and AGM resources 80th Integrated Annual Report 2024-25 AGM Presentation FY24 AGM Recording, 20 June, 2025 Subsidiary annual reports Investor day presentation TML Investor day presentation, 9 June, 2025 TML Investor day recording, 9 June, 2025 JLR Investor day presentation, 16 June, 2025 JLR Investor day recording, 16 June, 2025 Corporate Presentation Tata Motors Passenger Vehicles Corporate Presentation 2025 MOA and AOA Memorandum and Articles of Association Recent past event(s) On 5th February 2026 Results for the Quarter ending December 31st, 2025 Quarterly Investors Call Invite Schedule of analyst/investor meet Press releases Subject All Year Year 2025 2026 Month Month January February October November December No items found. Other resources View listed securities information Credit ratings ADR delisting Investor contacts Visit Our commitment Moving India forward Safer-Smarter-Greener We’re embarking on a journey to realise a people-focused, intelligent, eco-friendly future of mobility, encompassing sustainable fuels, technology and materials. Read more",
+            "crawledAt": "2026-02-19T22:52:33.172Z",
+            "sourceType": "official"
+          },
+          {
+            "url": "https://www.tata.com/investors",
+            "title": "Investors | Tata group",
+            "content": "Investors Welcome to the Investors' Page Financial Information and live stock data of the Tata companies To my father the acquisition of wealth was only a secondary object in life; it was always subordinate to the constant desire in his heart to improve the industrial and intellectual condition of the people of this country and the various enterprises which he from time to time undertook in his lifetime had for their principal object the advancement of India in these important respects.\" - Sir Dorabji Tata, while laying the foundation stone of the Lonavala Dam, 8 February, 1911 Founded by Jamsetji Tata in 1868, the Tata Group is a global enterprise, headquartered in India, comprising 31 companies across multiple verticals. The group operates in more than 100 countries across six continents, with a mission 'To improve the quality of life of the communities we serve globally, through long-term stakeholder value creation based on Leadership with Trust’. Tata Sons is the principal investment holding company and promoter of Tata companies. Sixty-six percent of the equity share capital of Tata Sons is held by philanthropic trusts, which support education, health, livelihood generation and art and culture. In 2024-25, the aggregate revenue of Tata companies was more than $180 billion. These companies collectively employ over one million people. Each Tata company or enterprise operates independently under the guidance and supervision of its own board of directors. There are 26 publicly listed Tata companies with an aggregate market capitalisation of more than $328 billion as on March 31, 2025. Scroll below to explore more about the Tata group. Information Holding Company Tata Sons Tata Sons is the principal investment holding company and promoter of Tata companies. FEEDS Tata Companies Stock Data List of Tata entities listed in the NSE and BSE Business Business Verticals Explore the business verticals that make the Tata group. Related Community Tata and the Community For over 150 years, we have been serving the communities in which we operate. People Careers and People Learn more about people, culture, and jobs at the Tata group and companies Values Values and Purpose The values that continue to direct the growth and business of Tata companies. Brands Tata Brands Showcase The Tata companies offer a range of products and services under various brand names.",
+            "crawledAt": "2026-02-19T22:52:34.662Z",
+            "sourceType": "official"
+          },
+          {
+            "url": "https://www.alphaspread.com/security/nse/tatamotors/investor-relations",
+            "title": "TATAMOTORS Investor Relations - Tata Motors Ltd - Alpha Spread",
+            "content": "Alpha Spread Alpha Spread Tata Motors Ltd NSE:TATAMOTORS Tata Motors Ltd Business Overview In the bustling corridors of India's industrial tapestry, Tata Motors Ltd. stands as a significant cornerstone, tracing its legacy back to its inception in 1945. Emerging from the broader Tata Group, a behemoth that thrives across various sectors, Tata Motors initially ventured into the commercial vehicle market, etching its name as a pioneer in Indian automotive engineering. This journey is led by a strategic vision that combines innovation with adaptability—a vision that saw the company launch its first commercial truck in collaboration with Daimler-Benz in 1954. Over the years, the company expanded its portfolio, scaling the ranks to offer passenger vehicles, utility vehicles, and even defense vehicles, each crafted to cater to the dynamically evolving demands of both domestic and international markets. Today, Tata Motors generates revenue through the manufacturing and sale of a diverse range of vehicles, from compact cars to heavy trucks. Its business model is anchored in comprehensive operations that span design and engineering, backed by robust manufacturing capabilities. A key catalyst in its financial engine is the success of its subsidiary, Jaguar Land Rover, acquired in 2008, which added a premium sheen to its global footprint. By focusing on innovation, quality, and sustainability, Tata Motors has carved a niche, leveraging economies of scale and synergies across its diverse product lines. With extensive production facilities in India and abroad, coupled with an expansive distribution network, the company maintains a resilient presence in the automotive industry, constantly navigating challenges and opportunities in an ever-competitive landscape. Mr. Maloy Kumar Gupta Compliance Officer & Company Secretary Mr. Girish Arun Wagh President of Commercial Vehicles Business Unit & Executive Director Mr. Petkar M. Rajendra CTO & President Mr. Rajesh Kannan President and Chief Digital & Information Officer Ms. Namrata Divekar Head of Treasury and Investor Relations Mr. Sudeep Bhalla Head of Corporate Communications Mr. Shubhranshu Singh Vice President of Marketing of Domestic & International business Mr. Sitaram Kandi Chief Human Resource Officer Mr. R. Ramakrishnan Global Head of Customer Care Mr. Prasann Chobe Head of Manufacturing Operations - CVBU & Senior VP Summary TATAMOTORS intrinsic value, competitors valuation, and company profile. DCF Valuation TATAMOTORS stock valuation using Discount Cash Flow valuation method. Relative Valuation TATAMOTORS stock valuation using valuation multiples. Wall Street Estimates TATAMOTORS price targets and financial estimates made by Wall st analysts. Profitability Analysis Detailed analysis of the company's profitability. Solvency Analysis Analysis of the financial position and solvency of the company. Financials Income Statement, Balance Sheet, Cash Flow Statement. Discount Rate TATAMOTORS stock discount rate: cost of equity and WACC. Back to Top ALPHA SPREAD The AI Assistant may be inaccurate The AI Assistant may sometimes provide inaccurate information. This is not financial advice Make your own investment decisions or consult a licensed financial advisor. Warren Buffett Create Your Free Account Already have an account? Sign in",
+            "crawledAt": "2026-02-19T22:52:36.813Z",
+            "sourceType": "financial"
+          },
+          {
+            "url": "https://www.screener.in/company/TMCV/",
+            "title": "Tata Motors Ltd share price | About Tata Motors | Key Insights - Screener",
+            "content": "Tata Motors Ltd ₹ 474 -2.93% 19 Feb - close price Export to Excel Follow cv.tatamotors.com BSE: 544569 NSE: TMCV About [ edit about ] [ add key points ] Website BSE NSE Market Cap ₹ 1,74,477 Cr. Current Price ₹ 474 High / Low ₹ 500 / 306 Stock P/E 383 Book Value ₹ Dividend Yield 0.00 % ROCE % ROE -400 % Face Value ₹ 2.00 Add ratio to table Edit ratios 1M 6M 1Yr 3Yr 5Yr 10Yr Max Price PE Ratio Hidden More Sales & Margin EV / EBITDA Price to Book Market Cap / Sales Alerts Pros Cons Company has low interest coverage ratio. * The pros and cons are machine generated. Pros / cons are based on a checklist to highlight important points. Please exercise caution and do your own analysis. Peer comparison Industrials Capital Goods Agricultural, Commercial & Construction Vehicles Commercial Vehicles Part of BSE Allcap BSE Industrials Edit Columns Loading peers table ... Detailed Comparison with: Quarterly Results Standalone Figures in Rs. Crores / View Consolidated Sep 2024 Dec 2024 Jun 2025 Sep 2025 Dec 2025 Sales + 15,518 17,040 15,682 16,861 20,404 Expenses + 13,877 15,035 13,695 14,784 17,798 Operating Profit 1,641 2,005 1,987 2,077 2,606 OPM % 11% 12% 13% 12% 13% Other Income + 143 282 235 -2,088 -1,273 Interest 211 220 174 186 143 Depreciation 484 488 423 412 417 Profit before tax 1,089 1,579 1,625 -609 773 Tax % 41% 10% 13% 68% 27% Net Profit + 643 1,417 1,411 -1,021 561 EPS in Rs 1.52 Raw PDF Profit & Loss Standalone Figures in Rs. Crores / View Consolidated Related Party Mar 2025 10m Sales + 0.00 Expenses + 0.08 Operating Profit -0.08 OPM % Other Income + 0.00 Interest 0.00 Depreciation 0.00 Profit before tax -0.08 Tax % 0.00% Net Profit + -0.08 EPS in Rs Dividend Payout % 0.00% Compounded Sales Growth 10 Years: % 5 Years: % 3 Years: % TTM: % Compounded Profit Growth 10 Years: % 5 Years: % 3 Years: % TTM: % Stock Price CAGR 10 Years: % 5 Years: % 3 Years: % 1 Year: % Return on Equity 10 Years: % 5 Years: % 3 Years: % Last Year: -400% Balance Sheet Standalone Figures in Rs. Crores / View Consolidated Corporate actions Mar 2025 Sep 2025 Equity Capital 0.10 736.00 Reserves -0.08 9,708.00 Borrowings + 0.00 5,983.00 Other Liabilities + 0.08 22,446.00 Total Liabilities 0.10 38,873.00 Fixed Assets + 0.00 13,021.00 CWIP 0.00 626.00 Investments 0.00 9,590.00 Other Assets + 0.10 15,636.00 Total Assets 0.10 38,873.00 Cash Flows Standalone Figures in Rs. Crores / View Consolidated Mar 2025 Cash from Operating Activity + Cash from Investing Activity + Cash from Financing Activity + Net Cash Flow Ratios Standalone Figures in Rs. Crores / View Consolidated Mar 2025 Debtor Days Inventory Days Days Payable Cash Conversion Cycle Working Capital Days ROCE % Shareholding Pattern Numbers in percentages Quarterly Yearly Trades 1 Recently Dec 2025 Promoters + 42.56% FIIs + 18.29% DIIs + 16.91% Government + 0.31% Public + 21.91% No. of Shareholders 61,03,194 Dec 2025 Promoters + 42.56% FIIs + 18.29% DIIs + 16.91% Government + 0.31% Public + 21.91% No. of Shareholders 61,03,194 * The classifications might have changed from Sep'2022 onwards. The new XBRL format added more details from Sep'22 onwards. Classifications such as banks and foreign portfolio investors were not available earlier. The sudden changes in FII or DII can be because of these changes. Click on the line-items to see the names of individual entities. Documents Announcements Recent Important Search All Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation 1d - Details of the physical group meeting scheduled with the Analysts / Institutional Investors on February 25, 2026 and February 26, 2026. Announcement under Regulation 30 (LODR)-Press Release / Media Release 10 Feb - PT Tata Motors Distribusi Indonesia wins 70,000-unit order (35,000 Yodha, 35,000 Ultra T.7) for Indonesia deployment. Announcement under Regulation 30 (LODR)-Acquisition 9 Feb - Tata Motors incorporated 100%‑owned AIEQU Mobility Limited on Jan 19, 2026; paid-up capital ₹50 lakh. Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation 5 Feb - Details of the physical group meeting scheduled with the Analysts / Institutional Investors on February 10, 2026. Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation 4 Feb - Details of the physical group meeting scheduled with the Analysts / Institutional Investors on February 9, 2026. Annual reports No data available. Credit ratings Rating update 26 Nov 2025 from crisil Concalls Add Missing Feb 2026 Transcript AI Summary PPT Jan 2026 Transcript AI Summary PPT REC Nov 2025 Transcript AI Summary PPT REC",
+            "crawledAt": "2026-02-19T22:52:39.208Z",
+            "sourceType": "official"
+          },
+          {
+            "url": "https://trendlyne.com/latest-news/only-news/1362/TMPV/tata-motors-passenger-vehicles-ltd/?page=59&qstime=1761714732",
+            "title": "Tata Motors PV  News and Updates\n                \n        \n    \n\n    \n        - page 59",
+            "content": "MARKETS SECTOR : AUTOMOBILES & AUTO COMPONENTS INDUSTRY : CARS & UTILITY VEHICLES TATA MOTORS PASSENGER VEHICLES LTD. Tata Motors Passenger Vehicles Ltd. NSE: TMPV | BSE: 500570 Mid-range Performer In 5 Starfolio Baskets Download real time 375.70 -7.15 (-1.87%) 49.50% Fall from 52W High 7.3M NSE+BSE Volume NSE 19 Feb, 2026 3:31 PM (IST) Watchlist Portfolio Alert My Notes Tata Motors PV News and Updates Keep track of all breaking news on Tata Motors PV from all sources in a single place. All News Earnings Calls Corporate Announcements Research Reports Load latest Is Tata Motors Ltd. worth buying? 5552 Votes: Buy 77.72% Sell 11.28% Hold 11.01% BUY SELL HOLD RESEARCH REPORTS Hold SEE REPORTS >19 Nov 2025, 12:00AMpdfTata Motors Passenge.. by Deven Choksey | Target: 378Target met Hold SEE REPORTS >17 Nov 2025pdfTata Motors Passenge.. by ICICI Securities Limited | Target: 375Target met All reports of TMPV",
+            "crawledAt": "2026-02-19T22:52:40.782Z",
+            "sourceType": "news"
+          },
+          {
+            "url": "https://www.tickertape.in/stocks/tata-motors-TMC",
+            "title": "TMCV Share Price Today: Tata Motors Stock Price NSE",
+            "content": "What is the share price of Tata Motors Ltd (TMCV) today?The share price of TMCV as on 19th February 2026 is ₹474.50. The stock prices are volatile and keep changing through the day depending upon various factors and market conditions.What is the return on Tata Motors Ltd (TMCV) share?The past returns of Tata Motors Ltd (TMCV) share are Past 1 week: -2.85%Past 1 month: 5.30%Past 3 months: 45.87%Past 6 months: 44.03%Past 1 year: 44.03%Past 3 years: N/A%Past 5 years: 44.03%What are the peers or stocks similar to Tata Motors Ltd (TMCV)?The peers or stocks similar to Tata Motors Ltd (TMCV) include: Tata Motors Ltd Eicher Motors Ltd Ashok Leyland Ltd SML Mahindra Limited Automobile Corp Of Goa Ltd What is the market cap of Tata Motors Ltd (TMCV) share?Market capitalization, short for market cap, is the market value of a publicly traded company's outstanding shares. The market cap of Tata Motors Ltd (TMCV) is ₹174726.62 Cr as of 19th February 2026.What is the 52 week high and low of Tata Motors Ltd (TMCV) share?The 52-week high of Tata Motors Ltd (TMCV) is ₹500 and the 52-week low is ₹306.30.What is the PE and PB ratio of Tata Motors Ltd (TMCV) stock?The P/E (price-to-earnings) ratio of Tata Motors Ltd (TMCV) is -2184082.80. The P/B (price-to-book) ratio is 8736331.18.Which sector does Tata Motors Ltd (TMCV) belong to?Tata Motors Ltd (TMCV) belongs to the Industrials sector & Trucks & Buses sub-sector.How to buy Tata Motors Ltd (TMCV) shares?You can directly buy Tata Motors Ltd (TMCV) shares on Tickertape. Simply sign up, connect your demat account and place your order.",
+            "crawledAt": "2026-02-19T22:52:42.609Z",
+            "sourceType": "official"
+          },
+          {
+            "url": "https://www.equitymaster.com/research-it/annual-results-analysis/TELCO/TATA-MOTORS-2024-25-Annual-Report-Analysis/12150",
+            "title": "TATA MOTORS 2024-25 Annual Report Analysis",
+            "content": "<iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-596H\" height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe> Premium Subscribers: Complete your KYC to Avoid Service Suspension. Login Here. Home About Team Today's Market Premium Services Research it Portfolio Stock Screener Help Fundamental Equity StockSelect Hidden Treasure InsiderPro Stocks Phase One Alert Permanent Wealth Circle Big Wave Profits Latest Research All Research Forever Stocks Equitymaster Venture Microcap Millionaires Momentum Profits Double Income Midcap Value Alert Exponential Profits Annual Breakout Alert Wealth Alliance Reserve S Features Private Briefing Mutual Fund Active Wealth Multiplier 2030 FundSelect Learning DeriVantage OptionMaster TradeMaster Lazy Millionaire Equitymaster's Secrets Today's Market Read Today's Commentary List of BSE 30 Stocks All BSE Indices ADRs Momentum Moves NSE Nifty Heatmap Key Sector Quotes List of NSE 50 Stocks All NSE Indices FIIs Gift Nifty List of FinNifty Stocks Market Stats List of Bank Nifty Stocks Other Indices International Market Indices Gold Earnings Track Your Stocks My Stocks Portfolio Tracker Most Popular Stocks Company Info Factsheets Compare Company Company Results Sector Info Sector Reports Sector-wise Results Corporate Actions Board Meetings Rights Quarterly Results Bonus Splits Buyback Dividends AGM/EGM Calculator SIP Real Return Retirement Free Newsletters Profit Hunter The Honest Truth The FundStrategist The Long View Free Guide How to Profit from Sensex 100,000 Multibagger Stock Ideas Portfolio Register Demo Login Tutorials Release Notes Terms Of Use Help Sitemap How To Reach Us How Does Equitymaster Work Press Release Equitymaster FAQ Terms of Use About Us The Equitymaster Way QIS Legal Company Matters / Activities Grievance Redressal / Escalation Matrix Investor Charter Investor Complaints Equitymaster Legal Company Matters / Activities Grievance Redressal / Escalation Matrix Investor Charter Investor Complaints Key Sector Stocks Loading... MyStocks MEMBER'S LOGIN MEMBER'S LOGINX Invalid Username / Password Invalid Captcha Remember Username Keep me signed in (Please do not use this option on a public machine) Select (Optional) Active Wealth Multiplier 2030 Equitymaster Flex Equitymaster Reserve Exponential Profits Hidden Treasure InsiderPro Stocks Forever Stocks FundSelect Big Wave Profits Equitymaster Venture Microcap Millionaires Momentum Profits Double Income Midcap Value Alert Permanent Wealth Circle Phase One Alert Portfolio Tracker StockSelect Annual Breakout Alert Wealth Alliance DeriVantage TradeMaster Equitymaster's Secrets OptionMaster Lazy Millionaire Sign Up | Forgot Password? Investment in securities market are subject to market risks. Read all the related documents carefully before investing Revealing on Feb 23Our Big PredictionDiscover a Mega Wealth Creation OpportunityAnd How to Ride it with 3 Actionable Stock Recommendations Show Me Full Details Important: We hate spam as much as you do. Check out our Privacy Policy and Terms Of Use. Remind Me Later | No, Thank You AD Print Text -Size Twitter LinkedIn WhatsApp HomeResearch ItTATA MOTORS PASSENGER VEHICLES LIMITEDTATA MOTORS 2024-25 Annual Report Analysis TATA MOTORS 2024-25 Annual Report Analysis Tue, 27 May TATA MOTORS has announced its results for the year ended March 2025. Let us have a look at the detailed performance review of the company during FY24-25. TATA MOTORS Income Statement Analysis Operating income during the year rose 1.3% on a year-on-year (YoY) basis. The company's operating profit decreased by 5.0% YoY during the fiscal. Operating profit margins witnessed a fall and stood at 12.4% in FY25 as against 13.3% in FY24. Depreciation charges decreased by 14.6% and finance costs decreased by 33.1% YoY, respectively. Other income grew by 30.2% YoY. Net profit for the year declined by 28.3% YoY. Net profit margins during the year declined from 7.5% in FY24 to 5.3% in FY25. TATA MOTORS Income Statement 2024-25 No. of Mths Year Ending 12 Mar-24* 12 Mar-25* % Change Net Sales Rs m 4,340,160 4,396,950 1.3% Other income Rs m 56,920 74,120 30.2% Total Revenues Rs m 4,397,080 4,471,070 1.7% Gross profit Rs m 575,700 547,070 -5.0% Depreciation Rs m 272,390 232,560 -14.6% Interest Rs m 75,940 50,830 -33.1% Profit before tax Rs m 284,290 337,800 18.8% Tax Rs m -40,240 105,020 NA Profit after tax Rs m 324,530 232,780 -28.3% Gross profit margin % 13.3 12.4 Effective tax rate % -14.2 31.1 Net profit margin % 7.5 5.3 * Results ConsolidatedInterim results exclude extraordinary / exceptional items Source: Accord Fintech, Equitymaster For Investors: A Potential Mega Wealth Creation Opportunity TATA MOTORS Balance Sheet Analysis The company's current liabilities during FY25 down at Rs 1,667 billion as compared to Rs 1,736 billion in FY24, thereby witnessing an decrease of -4.0%. Long-term debt down at Rs 402 billion as compared to Rs 621 billion during FY24, a fall of 35.3%. Current assets fell 5% and stood at Rs 1,598 billion, while fixed assets rose 12% and stood at Rs 2,111 billion in FY25. Overall, the total assets and liabilities for FY25 stood at Rs 3,715 billion as against Rs 3,576 billion during FY24, thereby witnessing a growth of 4%. TATA MOTORS Balance Sheet as on March 2025 No. of Mths Year Ending 12 Mar-24* 12 Mar-25* % Change Networth Rs m 848,270 1,160,500 36.8 Current Liabilities Rs m 1,736,160 1,666,840 -4.0 Long-term Debt Rs m 621,490 402,170 -35.3 Total Liabilities Rs m 3,575,650 3,714,660 3.9 Current assets Rs m 1,677,180 1,598,110 -4.7 Fixed Assets Rs m 1,891,730 2,111,410 11.6 Total Assets Rs m 3,575,650 3,714,660 3.9 * Results ConsolidatedInterim results exclude extraordinary / exceptional items Source: Accord Fintech, Equitymaster TATA MOTORS Cash Flow Statement Analysis TATA MOTORS's cash flow from operating activities (CFO) during FY25 stood at Rs 631 billion on a YoY basis. Cash flow from investing activities (CFI) during FY25 stood at Rs -476 billion, an improvement of 108.5% on a YoY basis. Cash flow from financial activities (CFF) during FY25 stood at Rs -188 billion, an improvement of 49% on a YoY basis. Overall, net cash flows for the company during FY25 stood at Rs -57 billion from the Rs 81 billion net cash flows seen during FY24. TATA MOTORS Cash Flow Statement 2024-25 Particulars No. of months 12 12 % Change Year Ending Mar-24 Mar-25 Cash Flow from Operating Activities Rs m 679,150 631,020 -7.1% Cash Flow from Investing Activities Rs m -228,280 -475,940 - Cash Flow from Financing Activities Rs m -370,060 -187,860 - Net Cash Flow Rs m 81,280 -56,660 - * Results ConsolidatedInterim results exclude extraordinary / exceptional items Source: Accord Fintech, Equitymaster Current Valuations for TATA MOTORS The trailing twelve-month earnings per share (EPS) of the company stands at Rs 63.2, an decline from the EPS of Rs 84.7 recorded last year. The price to earnings (P/E) ratio, at the current price of Rs 724.1, stands at 11.6 times its trailing twelve months earnings. The price to book value (P/BV) ratio at current price levels stands at 2.3 times, while the price to sales ratio stands at 0.6 times. The company's price to cash flow (P/CF) ratio stood at 7.1 times its end-of-year operating cash flow earnings. Per Share Data/Valuations No. of Mths Year Ending 12 Mar-24* 12 Mar-25* Sales per share (Unadj.) Rs 1,132.5 1,194.4 TTM Earnings per share Rs 84.7 63.2 Diluted earnings per share Rs 88.2 63.2 Price to Cash Flow x 6.1 7.1 TTM P/E ratio x 11.7 11.6 Price / Book Value ratio x 3.4 2.8 Market Cap Rs m 2,845,535 3,286,064 Dividends per share (Unadj.) Rs 6.0 6.0 * Results ConsolidatedInterim results exclude extraordinary / exceptional items Source: Accord Fintech, Equitymaster Ratio Analysis for TATA MOTORS Solvency Ratios Current Ratio: The company's current ratio deteriorated and stood at 1.0x during FY25, from 1.0x during FY24. The current ratio measures the company's ability to pay short-term and long-term obligations. Interest Coverage Ratio: The company's interest coverage ratio improved and stood at 7.6x during FY25, from 4.7x during FY24. The interest coverage ratio of a company states how easily a company can pay its interest expense on outstanding debt. A higher ratio is preferable. Profitability Ratios Return on Equity (ROE): The ROE for the company declined and down at 20.1% during FY25, from 38.3% during FY25. The ROE measures the ability of a firm to generate profits from its shareholders capital in the company. Return on Capital Employed (ROCE): The ROCE for the company improved and stood at 24.9% during FY25, from 24.5% during FY24. The ROCE measures the ability of a firm to generate profits from its total capital (shareholder capital plus debt capital) employed in the company. Return on Assets (ROA): The ROA of the company declined and down at 7.6% during FY25, from 11.2% during FY24. The ROA measures how efficiently the company uses its assets to generate earnings. Key Ratio Analysis No. of Mths Year Ending 12 Mar-24* 12 Mar-25* Current ratio x 1.0 1.0 Debtors’ Days Days 1 1 Interest coverage x 4.7 7.6 Debt to equity ratio x 0.7 0.3 Return on assets % 11.2 7.6 Return on equity % 38.3 20.1 Return on capital employed % 24.5 24.9 * Results ConsolidatedInterim results exclude extraordinary / exceptional items Source: Accord Fintech, Equitymaster To see how TATA MOTORS has performed over the last 5 years, please visit here. TATA MOTORS Share Price Performance Over the last one year, TATA MOTORS share price has moved down from Rs 958.0 to Rs 724.1, registering a loss of Rs 233.9 or around 24.4%. Meanwhile, the S&P BSE AUTO Index is trading at Rs 53,096.4 (down 0.4%). Over the last one year it has moved down from 54,219.6 to 53,096.4, a loss of 1,123 points (down 2.1%). Overall, the S&P BSE SENSEX is up 8.9% over the year. (To know more, check out historical annual results for TATA MOTORS and quarterly results for TATA MOTORS) Annual Report FAQs What is the curren",
+            "crawledAt": "2026-02-19T22:52:43.981Z",
+            "sourceType": "official"
+          }
+        ]
+      },
+      "metadata": {
+        "collectedAt": "2026-02-19T22:52:45.000Z",
+        "totalSources": 107,
+        "collectionTimeMs": 52574,
+        "isNewEntity": false,
+        "dataConfidenceScore": 100
+      },
+      "csvCompetitors": [
+        "3DSoC",
+        "91Mobiles",
+        "Acision",
+        "Cardback",
+        "Diabeto",
+        "Eashmart",
+        "Genii Technologies",
+        "Gingr",
+        "Gray Routes Innovative Distribution",
+        "GupShup",
+        "has"
+      ],
+      "structuredFinancials": {
+        "revenue": [
+          {
+            "metric": "revenue",
+            "value": 15518,
+            "rawValue": "Sales + 15,518",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.screener.in/company/TMCV/",
+            "confidence": 0.9,
+            "extractedAt": "2026-02-19T22:52:46.453Z",
+            "fiscalPeriod": "2024",
+            "publishedDate": "2025-11-25",
+            "freshnessScore": 1
+          },
+          {
+            "metric": "revenue",
+            "value": 180000000000,
+            "rawValue": "revenue of Tata companies was more than $180 billion",
+            "unit": "billion",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.tata.com/investors",
+            "confidence": 0.68,
+            "extractedAt": "2026-02-19T22:52:46.453Z",
+            "fiscalPeriod": "FY25",
+            "publishedDate": "2025-03-30",
+            "freshnessScore": 0.85
+          },
+          {
+            "metric": "revenue",
+            "value": 3496370000000,
+            "rawValue": "Revenue: 3,49637 Cr",
+            "unit": "cr",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://www.screener.in/company/TMPV/consolidated/",
+            "confidence": 0.63,
+            "extractedAt": "2026-02-19T22:52:46.405Z",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "revenue",
+            "value": 5,
+            "rawValue": "revenue grew by 5",
+            "unit": "",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://www.screener.in/company/TATATECH/consolidated/",
+            "confidence": 0.63,
+            "extractedAt": "2026-02-19T22:52:46.416Z",
+            "fiscalPeriod": "FY22",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "revenue",
+            "value": 4600000,
+            "rawValue": "Revenue: 0.46 Cr",
+            "unit": "cr",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://www.screener.in/company/id/313/",
+            "confidence": 0.63,
+            "extractedAt": "2026-02-19T22:52:46.426Z",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "revenue",
+            "value": 9,
+            "rawValue": "Revenue 9.",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.tatamotors.com/investors/",
+            "confidence": 0.5599999999999999,
+            "extractedAt": "2026-02-19T22:52:46.439Z",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "revenue",
+            "value": 12,
+            "rawValue": "Revenue12.",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://cv.tatamotors.com/investors",
+            "confidence": 0.5599999999999999,
+            "extractedAt": "2026-02-19T22:52:46.446Z",
+            "fiscalPeriod": "FY26",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "revenue",
+            "value": 4340160,
+            "rawValue": "Sales Rs m 4,340,160",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.equitymaster.com/research-it/annual-results-analysis/TELCO/TATA-MOTORS-2024-25-Annual-Report-Analysis/12150",
+            "confidence": 0.48,
+            "extractedAt": "2026-02-19T22:52:46.456Z",
+            "fiscalPeriod": "FY24",
+            "publishedDate": "2024-03-11",
+            "freshnessScore": 0.6
+          },
+          {
+            "metric": "revenue",
+            "value": 12,
+            "rawValue": "Revenue · 12.",
+            "unit": "",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://www.tatamotors.com/investors/",
+            "confidence": 0.315,
+            "extractedAt": "2026-02-19T22:52:46.427Z",
+            "fiscalPeriod": "FY26",
+            "freshnessScore": 0.7
+          }
+        ],
+        "ebitda": [
+          {
+            "metric": "ebitda",
+            "value": 4,
+            "rawValue": "EBITDA 4.",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.tatamotors.com/investors/",
+            "confidence": 0.5599999999999999,
+            "extractedAt": "2026-02-19T22:52:46.439Z",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "ebitda",
+            "value": 10,
+            "rawValue": "EBITDA Margin10.",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://cv.tatamotors.com/investors",
+            "confidence": 0.5599999999999999,
+            "extractedAt": "2026-02-19T22:52:46.446Z",
+            "fiscalPeriod": "FY26",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "ebitda",
+            "value": 9,
+            "rawValue": "EBITDA · 9.",
+            "unit": "",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://www.tatamotors.com/investors/",
+            "confidence": 0.315,
+            "extractedAt": "2026-02-19T22:52:46.427Z",
+            "fiscalPeriod": "FY26",
+            "freshnessScore": 0.7
+          }
+        ],
+        "netProfit": [
+          {
+            "metric": "netProfit",
+            "value": 1641,
+            "rawValue": "Profit 1,641",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.screener.in/company/TMCV/",
+            "confidence": 0.9,
+            "extractedAt": "2026-02-19T22:52:46.453Z",
+            "fiscalPeriod": "2024",
+            "publishedDate": "2025-11-25",
+            "freshnessScore": 1
+          },
+          {
+            "metric": "netProfit",
+            "value": 5552,
+            "rawValue": "Earnings Calls Corporate Announcements Research Reports Load latest Is Tata Motors Ltd. worth buying",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_news",
+            "sourceUrl": "https://trendlyne.com/latest-news/only-news/1362/TMPV/tata-motors-passenger-vehicles-ltd/?page=59&qstime=1761714732",
+            "confidence": 0.9,
+            "extractedAt": "2026-02-19T22:52:46.454Z",
+            "fiscalPeriod": "2026",
+            "publishedDate": "2025-11-18",
+            "freshnessScore": 1
+          },
+          {
+            "metric": "netProfit",
+            "value": 800000,
+            "rawValue": "Profit: -0.08 Cr",
+            "unit": "cr",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://www.screener.in/company/TMCV/",
+            "confidence": 0.63,
+            "extractedAt": "2026-02-19T22:52:46.401Z",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "netProfit",
+            "value": 853240000000,
+            "rawValue": "Profit: 85324 Cr",
+            "unit": "cr",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://www.screener.in/company/TMPV/consolidated/",
+            "confidence": 0.63,
+            "extractedAt": "2026-02-19T22:52:46.406Z",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "netProfit",
+            "value": 4,
+            "rawValue": "Profit after tax for Q4",
+            "unit": "",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://cdn-media.screener.in/concalls/ace6d4b6-9098-43c6-b3fc-fcb39dc8974c.pdf",
+            "confidence": 0.63,
+            "extractedAt": "2026-02-19T22:52:46.426Z",
+            "fiscalPeriod": "FY2025",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "netProfit",
+            "value": 2000000,
+            "rawValue": "Profit: 0.20 Cr",
+            "unit": "cr",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://www.screener.in/company/id/313/",
+            "confidence": 0.63,
+            "extractedAt": "2026-02-19T22:52:46.426Z",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "netProfit",
+            "value": 2,
+            "rawValue": "Earnings Call Presentation of the Company pertaining to Q2",
+            "unit": "",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://cdn-media.screener.in/concalls/c7e19d02-8b00-4176-9127-518d99ceae5f.pdf",
+            "confidence": 0.63,
+            "extractedAt": "2026-02-19T22:52:46.426Z",
+            "fiscalPeriod": "FY2024",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "netProfit",
+            "value": 2184082.8,
+            "rawValue": "earnings) ratio of Tata Motors Ltd (TMCV) is -2184082.80",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.tickertape.in/stocks/tata-motors-TMC",
+            "confidence": 0.63,
+            "extractedAt": "2026-02-19T22:52:46.455Z",
+            "fiscalPeriod": "2026",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "netProfit",
+            "value": 80000000000000,
+            "rawValue": "earnings call recordingDetails of Entitlement of Shareholders Pursuant to the Cancellation of ‘A’ Or",
+            "unit": "t",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://cv.tatamotors.com/investors",
+            "confidence": 0.5599999999999999,
+            "extractedAt": "2026-02-19T22:52:46.446Z",
+            "fiscalPeriod": "FY26",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "netProfit",
+            "value": 3,
+            "rawValue": "patibility Android Auto User Guide Information On warranty Contact Us Sitemap Book a Test Drive Our ",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://cars.tatamotors.com/investors/overview.html",
+            "confidence": 0.5599999999999999,
+            "extractedAt": "2026-02-19T22:52:46.448Z",
+            "fiscalPeriod": "FY26",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "netProfit",
+            "value": 2030,
+            "rawValue": "Profits Latest Research All Research Forever Stocks Equitymaster Venture Microcap Millionaires Momen",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.equitymaster.com/research-it/annual-results-analysis/TELCO/TATA-MOTORS-2024-25-Annual-Report-Analysis/12150",
+            "confidence": 0.48,
+            "extractedAt": "2026-02-19T22:52:46.456Z",
+            "fiscalPeriod": "FY24",
+            "publishedDate": "2024-03-11",
+            "freshnessScore": 0.6
+          },
+          {
+            "metric": "netProfit",
+            "value": 12,
+            "rawValue": "profit margins witnessed a fall and stood at 12.",
+            "unit": "",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://www.equitymaster.com/research-it/annual-results-analysis/TELCO/TATA-MOTORS-2024-25-Annual-Report-Analysis/12150",
+            "confidence": 0.315,
+            "extractedAt": "2026-02-19T22:52:46.438Z",
+            "fiscalPeriod": "FY25",
+            "freshnessScore": 0.7
+          }
+        ],
+        "operatingProfit": [
+          {
+            "metric": "operatingProfit",
+            "value": 1641,
+            "rawValue": "Operating Profit 1,641",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.screener.in/company/TMCV/",
+            "confidence": 0.9,
+            "extractedAt": "2026-02-19T22:52:46.453Z",
+            "fiscalPeriod": "2024",
+            "publishedDate": "2025-11-25",
+            "freshnessScore": 1
+          },
+          {
+            "metric": "operatingProfit",
+            "value": 1,
+            "rawValue": "Operating income during the year rose 1.",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.equitymaster.com/research-it/annual-results-analysis/TELCO/TATA-MOTORS-2024-25-Annual-Report-Analysis/12150",
+            "confidence": 0.48,
+            "extractedAt": "2026-02-19T22:52:46.456Z",
+            "fiscalPeriod": "FY24",
+            "publishedDate": "2024-03-11",
+            "freshnessScore": 0.6
+          },
+          {
+            "metric": "operatingProfit",
+            "value": 12,
+            "rawValue": "Operating profit margins witnessed a fall and stood at 12.",
+            "unit": "",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://www.equitymaster.com/research-it/annual-results-analysis/TELCO/TATA-MOTORS-2024-25-Annual-Report-Analysis/12150",
+            "confidence": 0.315,
+            "extractedAt": "2026-02-19T22:52:46.438Z",
+            "fiscalPeriod": "FY25",
+            "freshnessScore": 0.7
+          }
+        ],
+        "grossProfit": [
+          {
+            "metric": "grossProfit",
+            "value": 575700,
+            "rawValue": "Gross profit Rs m 575,700",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.equitymaster.com/research-it/annual-results-analysis/TELCO/TATA-MOTORS-2024-25-Annual-Report-Analysis/12150",
+            "confidence": 0.48,
+            "extractedAt": "2026-02-19T22:52:46.456Z",
+            "fiscalPeriod": "FY24",
+            "publishedDate": "2024-03-11",
+            "freshnessScore": 0.6
+          }
+        ],
+        "marketCap": [
+          {
+            "metric": "marketCap",
+            "value": 1744770000000,
+            "rawValue": "Market Cap ₹ 1,74,477 Cr",
+            "unit": "cr",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.screener.in/company/TMCV/",
+            "confidence": 0.9,
+            "extractedAt": "2026-02-19T22:52:46.453Z",
+            "fiscalPeriod": "2024",
+            "publishedDate": "2025-11-25",
+            "freshnessScore": 1
+          },
+          {
+            "metric": "marketCap",
+            "value": 328000000000,
+            "rawValue": "market capitalisation of more than $328 billion",
+            "unit": "billion",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.tata.com/investors",
+            "confidence": 0.68,
+            "extractedAt": "2026-02-19T22:52:46.453Z",
+            "fiscalPeriod": "FY25",
+            "publishedDate": "2025-03-30",
+            "freshnessScore": 0.85
+          },
+          {
+            "metric": "marketCap",
+            "value": 244230000000,
+            "rawValue": "Market Cap ₹ 24,423 Cr",
+            "unit": "cr",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://www.screener.in/company/TATATECH/consolidated/",
+            "confidence": 0.63,
+            "extractedAt": "2026-02-19T22:52:46.417Z",
+            "fiscalPeriod": "FY22",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "marketCap",
+            "value": 1747266200000,
+            "rawValue": "market cap of Tata Motors Ltd (TMCV) is ₹174726.62 Cr",
+            "unit": "cr",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.tickertape.in/stocks/tata-motors-TMC",
+            "confidence": 0.63,
+            "extractedAt": "2026-02-19T22:52:46.455Z",
+            "fiscalPeriod": "2026",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "marketCap",
+            "value": 2845535,
+            "rawValue": "Market Cap Rs m 2,845,535",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.equitymaster.com/research-it/annual-results-analysis/TELCO/TATA-MOTORS-2024-25-Annual-Report-Analysis/12150",
+            "confidence": 0.48,
+            "extractedAt": "2026-02-19T22:52:46.456Z",
+            "fiscalPeriod": "FY24",
+            "publishedDate": "2024-03-11",
+            "freshnessScore": 0.6
+          }
+        ],
+        "revenueGrowth": [],
+        "ebitdaMargin": [
+          {
+            "metric": "ebitdaMargin",
+            "value": 10.6,
+            "rawValue": "EBITDA Margin10.6%",
+            "unit": "%",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://cv.tatamotors.com/investors",
+            "confidence": 0.5599999999999999,
+            "extractedAt": "2026-02-19T22:52:46.446Z",
+            "fiscalPeriod": "FY26",
+            "freshnessScore": 0.7
+          }
+        ],
+        "netMargin": [
+          {
+            "metric": "netMargin",
+            "value": 10.6,
+            "rawValue": "Margin10.6%",
+            "unit": "%",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://cv.tatamotors.com/investors",
+            "confidence": 0.5599999999999999,
+            "extractedAt": "2026-02-19T22:52:46.446Z",
+            "fiscalPeriod": "FY26",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "netMargin",
+            "value": 12.4,
+            "rawValue": "profit margins witnessed a fall and stood at 12.4%",
+            "unit": "%",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.equitymaster.com/research-it/annual-results-analysis/TELCO/TATA-MOTORS-2024-25-Annual-Report-Analysis/12150",
+            "confidence": 0.48,
+            "extractedAt": "2026-02-19T22:52:46.456Z",
+            "fiscalPeriod": "FY24",
+            "publishedDate": "2024-03-11",
+            "freshnessScore": 0.6
+          },
+          {
+            "metric": "netMargin",
+            "value": 12.4,
+            "rawValue": "profit margins witnessed a fall and stood at 12.4%",
+            "unit": "%",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://www.equitymaster.com/research-it/annual-results-analysis/TELCO/TATA-MOTORS-2024-25-Annual-Report-Analysis/12150",
+            "confidence": 0.315,
+            "extractedAt": "2026-02-19T22:52:46.438Z",
+            "fiscalPeriod": "FY25",
+            "freshnessScore": 0.7
+          }
+        ],
+        "peRatio": [
+          {
+            "metric": "peRatio",
+            "value": 383,
+            "rawValue": "P/E 383",
+            "unit": "x",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.screener.in/company/TMCV/",
+            "confidence": 0.9,
+            "extractedAt": "2026-02-19T22:52:46.453Z",
+            "fiscalPeriod": "2024",
+            "publishedDate": "2025-11-25",
+            "freshnessScore": 1
+          },
+          {
+            "metric": "peRatio",
+            "value": 5,
+            "rawValue": "Performer In 5",
+            "unit": "x",
+            "currency": "INR",
+            "source": "crawl_news",
+            "sourceUrl": "https://trendlyne.com/latest-news/only-news/1362/TMPV/tata-motors-passenger-vehicles-ltd/?page=59&qstime=1761714732",
+            "confidence": 0.9,
+            "extractedAt": "2026-02-19T22:52:46.454Z",
+            "fiscalPeriod": "2026",
+            "publishedDate": "2025-11-18",
+            "freshnessScore": 1
+          },
+          {
+            "metric": "peRatio",
+            "value": 100,
+            "rawValue": "perates in more than 100",
+            "unit": "x",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.tata.com/investors",
+            "confidence": 0.68,
+            "extractedAt": "2026-02-19T22:52:46.453Z",
+            "fiscalPeriod": "FY25",
+            "publishedDate": "2025-03-30",
+            "freshnessScore": 0.85
+          },
+          {
+            "metric": "peRatio",
+            "value": 2,
+            "rawValue": "pertaining to Q2",
+            "unit": "x",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://cdn-media.screener.in/concalls/c7e19d02-8b00-4176-9127-518d99ceae5f.pdf",
+            "confidence": 0.63,
+            "extractedAt": "2026-02-19T22:52:46.426Z",
+            "fiscalPeriod": "FY2024",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "peRatio",
+            "value": 1,
+            "rawValue": "pending upon various factors and market conditions.What is the return on Tata Motors Ltd (TMCV) shar",
+            "unit": "x",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.tickertape.in/stocks/tata-motors-TMC",
+            "confidence": 0.63,
+            "extractedAt": "2026-02-19T22:52:46.456Z",
+            "fiscalPeriod": "2026",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "peRatio",
+            "value": 23,
+            "rawValue": "Permanent Wealth Circle Phase One Alert Portfolio Tracker StockSelect Annual Breakout Alert Wealth A",
+            "unit": "x",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.equitymaster.com/research-it/annual-results-analysis/TELCO/TATA-MOTORS-2024-25-Annual-Report-Analysis/12150",
+            "confidence": 0.48,
+            "extractedAt": "2026-02-19T22:52:46.456Z",
+            "fiscalPeriod": "FY24",
+            "publishedDate": "2024-03-11",
+            "freshnessScore": 0.6
+          },
+          {
+            "metric": "peRatio",
+            "value": 14.1,
+            "rawValue": "perimeter : €14.1",
+            "unit": "x",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://www.tatamotors.com/wp-content/uploads/2025/08/Tata-Motors-Investor-presentation-Q1FY26.pdf",
+            "confidence": 0.315,
+            "extractedAt": "2026-02-19T22:52:46.438Z",
+            "fiscalPeriod": "FY26",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "peRatio",
+            "value": 12.4,
+            "rawValue": "perating profit margins witnessed a fall and stood at 12.4",
+            "unit": "x",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://www.equitymaster.com/research-it/annual-results-analysis/TELCO/TATA-MOTORS-2024-25-Annual-Report-Analysis/12150",
+            "confidence": 0.315,
+            "extractedAt": "2026-02-19T22:52:46.438Z",
+            "fiscalPeriod": "FY25",
+            "freshnessScore": 0.7
+          }
+        ],
+        "debtToEquity": [
+          {
+            "metric": "debtToEquity",
+            "value": 0.7,
+            "rawValue": "Debt to equity ratio x 0.7",
+            "unit": "x",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.equitymaster.com/research-it/annual-results-analysis/TELCO/TATA-MOTORS-2024-25-Annual-Report-Analysis/12150",
+            "confidence": 0.48,
+            "extractedAt": "2026-02-19T22:52:46.456Z",
+            "fiscalPeriod": "FY24",
+            "publishedDate": "2024-03-11",
+            "freshnessScore": 0.6
+          }
+        ],
+        "roe": [
+          {
+            "metric": "roe",
+            "value": 20.1,
+            "rawValue": "Return on Equity (ROE): The ROE for the company declined and down at 20.1%",
+            "unit": "%",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.equitymaster.com/research-it/annual-results-analysis/TELCO/TATA-MOTORS-2024-25-Annual-Report-Analysis/12150",
+            "confidence": 0.48,
+            "extractedAt": "2026-02-19T22:52:46.456Z",
+            "fiscalPeriod": "FY24",
+            "publishedDate": "2024-03-11",
+            "freshnessScore": 0.6
+          }
+        ],
+        "eps": [
+          {
+            "metric": "eps",
+            "value": 1.52,
+            "rawValue": "EPS in Rs 1.52",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.screener.in/company/TMCV/",
+            "confidence": 0.9,
+            "extractedAt": "2026-02-19T22:52:46.454Z",
+            "fiscalPeriod": "2024",
+            "publishedDate": "2025-11-25",
+            "freshnessScore": 1
+          },
+          {
+            "metric": "eps",
+            "value": 63.2,
+            "rawValue": "earnings per share (EPS) of the company stands at Rs 63.2",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.equitymaster.com/research-it/annual-results-analysis/TELCO/TATA-MOTORS-2024-25-Annual-Report-Analysis/12150",
+            "confidence": 0.48,
+            "extractedAt": "2026-02-19T22:52:46.456Z",
+            "fiscalPeriod": "FY24",
+            "publishedDate": "2024-03-11",
+            "freshnessScore": 0.6
+          }
+        ],
+        "freeCashFlow": [],
+        "metadata": {
+          "totalExtractions": 49,
+          "uniqueMetrics": 12,
+          "avgConfidence": 0.59,
+          "sourcesUsed": [
+            "serpapi",
+            "crawl_official",
+            "crawl_news"
+          ],
+          "extractedAt": "2026-02-19T22:52:46.457Z"
+        }
+      },
+      "consensusMetrics": {
+        "entityId": "company: Tata Motors in Automotive industry India",
+        "entityName": "company: Tata Motors in Automotive industry India",
+        "entityType": "company",
+        "fiscalPeriod": "TTM",
+        "marketCap": {
+          "value": 1744770000000,
+          "confidence": 55,
+          "variance": 86,
+          "hasWarning": true,
+          "warningReason": "High variance (86%) across sources",
+          "sources": [
+            {
+              "source": "crawl_official",
+              "value": 1744770000000,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": 244230000000,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": true
+        },
+        "currentPrice": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "priceChange1D": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "priceChange1Y": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "weekHigh52": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "weekLow52": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "volume": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "revenue": {
+          "value": 15518,
+          "confidence": 55,
+          "variance": 22531060603.7,
+          "hasWarning": true,
+          "warningReason": "High variance (22531060604%) across sources",
+          "sources": [
+            {
+              "source": "crawl_official",
+              "value": 15518,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": 3496370000000,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": true
+        },
+        "revenueGrowthYoy": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "grossProfit": {
+          "value": 575700,
+          "confidence": 69,
+          "variance": 0,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_official",
+              "value": 575700,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": true
+        },
+        "grossMargin": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "operatingIncome": {
+          "value": 1641,
+          "confidence": 55,
+          "variance": 99.3,
+          "hasWarning": true,
+          "warningReason": "High variance (99%) across sources",
+          "sources": [
+            {
+              "source": "crawl_official",
+              "value": 1641,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": 12,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": true
+        },
+        "operatingMargin": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "netIncome": {
+          "value": 1641,
+          "confidence": 55,
+          "variance": 238.3,
+          "hasWarning": true,
+          "warningReason": "High variance (238%) across sources",
+          "sources": [
+            {
+              "source": "crawl_official",
+              "value": 1641,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": 800000,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": 5552,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": true
+        },
+        "netMargin": {
+          "value": 10.6,
+          "confidence": 55,
+          "variance": 17,
+          "hasWarning": true,
+          "warningReason": "High variance (17%) across sources",
+          "sources": [
+            {
+              "source": "crawl_official",
+              "value": 10.6,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": 12.4,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": true
+        },
+        "ebitda": {
+          "value": 4,
+          "confidence": 55,
+          "variance": 125,
+          "hasWarning": true,
+          "warningReason": "High variance (125%) across sources",
+          "sources": [
+            {
+              "source": "crawl_official",
+              "value": 4,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": 9,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": true
+        },
+        "ebitdaMargin": {
+          "value": 10.6,
+          "confidence": 69,
+          "variance": 0,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_official",
+              "value": 10.6,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": true
+        },
+        "eps": {
+          "value": 1.52,
+          "confidence": 69,
+          "variance": 0,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_official",
+              "value": 1.52,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": true
+        },
+        "totalAssets": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "totalDebt": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "cashAndEquivalents": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "shareholderEquity": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "peRatio": {
+          "value": 5,
+          "confidence": 43,
+          "variance": 60,
+          "hasWarning": true,
+          "warningReason": "High variance (60%) across sources",
+          "sources": [
+            {
+              "source": "crawl_official",
+              "value": 383,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": 2,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": 5,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": true
+        },
+        "pbRatio": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "psRatio": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "evToEbitda": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "debtToEquity": {
+          "value": 0.7,
+          "confidence": 69,
+          "variance": 0,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_official",
+              "value": 0.7,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": true
+        },
+        "currentRatio": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "roe": {
+          "value": 20.1,
+          "confidence": 69,
+          "variance": 0,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_official",
+              "value": 20.1,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": true
+        },
+        "roa": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "roic": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "freeCashFlow": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "operatingCashFlow": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "overallConfidence": 60,
+        "sourcesUsed": [
+          "crawl_official",
+          "serpapi",
+          "crawl_news"
+        ],
+        "dataGaps": [
+          "currentPrice",
+          "priceChange1D",
+          "priceChange1Y",
+          "weekHigh52",
+          "weekLow52",
+          "volume",
+          "revenueGrowthYoy",
+          "grossMargin",
+          "operatingMargin",
+          "totalAssets",
+          "totalDebt",
+          "cashAndEquivalents",
+          "shareholderEquity",
+          "pbRatio",
+          "psRatio",
+          "evToEbitda",
+          "currentRatio",
+          "roa",
+          "roic",
+          "freeCashFlow",
+          "operatingCashFlow"
+        ],
+        "varianceWarnings": [
+          "marketCap: High variance (86%) across sources",
+          "revenue: High variance (22531060604%) across sources",
+          "operatingIncome: High variance (99%) across sources",
+          "netIncome: High variance (238%) across sources",
+          "netMargin: High variance (17%) across sources",
+          "ebitda: High variance (125%) across sources",
+          "peRatio: High variance (60%) across sources"
+        ],
+        "fetchedAt": "2026-02-19T22:52:46.506Z",
+        "expiresAt": "2026-02-20T22:52:46.506Z",
+        "confidenceExplanation": {
+          "overallScore": 60,
+          "level": "medium",
+          "reasons": [
+            "Medium confidence: 3 sources with some variance",
+            "Only 40% of metrics available"
+          ],
+          "factors": {
+            "sourceCount": 3,
+            "pdfCount": 0,
+            "freshnessScore": 100,
+            "varianceScore": 0,
+            "dataCompleteness": 40
+          }
+        }
+      },
+      "consensusForAI": "=== VALIDATED CONSENSUS DATA FOR COMPANY: TATA MOTORS IN AUTOMOTIVE INDUSTRY INDIA ===\nOverall Data Confidence: 60%\nSources: crawl_official, serpapi, crawl_news\nData As Of: 2026-02-19T22:52:46.506Z\n\n--- MARKET DATA ---\nMarket Cap: ₹1744.77B (confidence: 55%) [HIGH VARIANCE - treat with caution]\nCurrent Price: UNAVAILABLE\n1-Day Price Change: UNAVAILABLE%\n1-Year Price Change: UNAVAILABLE%\n52-Week High: UNAVAILABLE\n52-Week Low: UNAVAILABLE\n\n--- INCOME STATEMENT ---\nRevenue (TTM): ₹15518.00 (confidence: 55%) [HIGH VARIANCE - treat with caution]\nRevenue Growth YoY: UNAVAILABLE%\nGross Margin: UNAVAILABLE%\nOperating Margin: UNAVAILABLE%\nNet Margin: 10.60 (confidence: 55%) [HIGH VARIANCE - treat with caution]%\nEBITDA: ₹4.00 (confidence: 55%) [HIGH VARIANCE - treat with caution]\nEBITDA Margin: 10.60 (confidence: 69%)%\nEPS: ₹1.52 (confidence: 69%)\n\n--- BALANCE SHEET ---\nTotal Assets: UNAVAILABLE\nTotal Debt: UNAVAILABLE\nCash & Equivalents: UNAVAILABLE\nDebt to Equity: 0.70 (confidence: 69%)\n\n--- VALUATION RATIOS ---\nP/E Ratio: 5.00 (confidence: 43%) [HIGH VARIANCE - treat with caution]\nP/B Ratio: UNAVAILABLE\nEV/EBITDA: UNAVAILABLE\n\n--- RETURNS ---\nReturn on Equity (ROE): 20.10 (confidence: 69%)%\nReturn on Assets (ROA): UNAVAILABLE%\nReturn on Invested Capital (ROIC): UNAVAILABLE%\n\n--- CASH FLOW ---\nFree Cash Flow: UNAVAILABLE\nOperating Cash Flow: UNAVAILABLE\n\n\n--- DATA GAPS (DO NOT ESTIMATE THESE) ---\ncurrentPrice, priceChange1D, priceChange1Y, weekHigh52, weekLow52, volume, revenueGrowthYoy, grossMargin, operatingMargin, totalAssets, totalDebt, cashAndEquivalents, shareholderEquity, pbRatio, psRatio, evToEbitda, currentRatio, roa, roic, freeCashFlow, operatingCashFlow\n\n--- VARIANCE WARNINGS ---\nmarketCap: High variance (86%) across sources\nrevenue: High variance (22531060604%) across sources\noperatingIncome: High variance (99%) across sources\nnetIncome: High variance (238%) across sources\nnetMargin: High variance (17%) across sources\nebitda: High variance (125%) across sources\npeRatio: High variance (60%) across sources\n=== END VALIDATED DATA ==="
+    },
+    "timestamp": "2026-02-19T22:52:47.759Z"
+  },
+  "timestamp": "2026-02-19T22:52:47.760Z",
+  "expiryHours": 24,
+  "source": "api_realtime",
+  "isStale": false
+}
