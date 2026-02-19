@@ -147,32 +147,45 @@ export async function loadCompanyDatabase(): Promise<boolean> {
 }
 
 // Search companies (works on both server and client if data is loaded)
-export function searchCompanies(query: string): CompanyRecord[] {
+export function searchCompanies(query: string, options?: {
+  country?: string;
+  industry?: string;
+  minConfidence?: number;
+  limit?: number;
+}): CompanyRecord[] {
   if (!isDataLoaded || companiesData.length === 0) {
     console.warn('[CompanyDB] Database not loaded, cannot search')
     return []
   }
 
   const normalizedQuery = query.toLowerCase().trim().replace(/[^a-z0-9\s]/g, '')
-  if (!normalizedQuery) return []
+  if (!normalizedQuery && !options?.country && !options?.industry) return []
 
   console.log(`[CompanyDB] Searching for: "${normalizedQuery}" in ${companiesData.length} companies`)
 
   const results: CompanyRecord[] = []
   const seen = new Set<string>()
-  const queryTokens = normalizedQuery.split(/\s+/).filter(t => t.length > 2)
+  const queryTokens = normalizedQuery.split(/\s+/).filter(t => t.length > 1)
 
   for (const company of companiesData) {
     if (seen.has(company.companyName)) continue
+
+    // Apply filters first
+    if (options?.country && !company.country.toLowerCase().includes(options.country.toLowerCase())) continue
+    if (options?.industry && !company.industryName.toLowerCase().includes(options.industry.toLowerCase())) continue
+    if (options?.minConfidence && company.confidenceScore < options.minConfidence) continue
 
     // Clean normalized names for comparison (remove special chars)
     const cleanNormalizedName = company.normalizedCompanyName.replace(/[^a-z0-9\s]/g, '')
     const cleanCompanyName = company.companyName.toLowerCase().replace(/[^a-z0-9\s]/g, '')
     
-    // Check various match types
+    // Check various match types - case insensitive
     const nameMatch = cleanNormalizedName.includes(normalizedQuery) || 
                       normalizedQuery.includes(cleanNormalizedName) ||
-                      cleanCompanyName.includes(normalizedQuery)
+                      cleanCompanyName.includes(normalizedQuery) ||
+                      // Fuzzy match - partial word match
+                      cleanNormalizedName.split(' ').some(w => w.startsWith(normalizedQuery.split(' ')[0])) ||
+                      cleanCompanyName.split(' ').some(w => w.startsWith(normalizedQuery.split(' ')[0]))
     const industryMatch = company.normalizedIndustryName.includes(normalizedQuery)
     const subIndustryMatch = company.subIndustry.toLowerCase().replace(/[^a-z0-9\s]/g, '').includes(normalizedQuery)
     
@@ -181,7 +194,7 @@ export function searchCompanies(query: string): CompanyRecord[] {
     const matchingTokens = queryTokens.filter(qt => 
       companyTokens.some(ct => ct.includes(qt) || qt.includes(ct))
     )
-    const tokenMatch = queryTokens.length > 0 && matchingTokens.length >= Math.min(2, queryTokens.length)
+    const tokenMatch = queryTokens.length > 0 && matchingTokens.length >= Math.min(1, queryTokens.length)
     
     if (nameMatch || industryMatch || subIndustryMatch || tokenMatch) {
       results.push(company)
@@ -191,18 +204,29 @@ export function searchCompanies(query: string): CompanyRecord[] {
 
   console.log(`[CompanyDB] Found ${results.length} matches`)
 
-  // Sort by relevance
+  // Sort by relevance - case insensitive scoring
   return results.sort((a, b) => {
     const aClean = a.normalizedCompanyName.replace(/[^a-z0-9\s]/g, '')
     const bClean = b.normalizedCompanyName.replace(/[^a-z0-9\s]/g, '')
-    const aExact = aClean === normalizedQuery ? 3 : 
-                  aClean.startsWith(normalizedQuery) ? 2 : 
-                  aClean.includes(normalizedQuery) ? 1 : 0
-    const bExact = bClean === normalizedQuery ? 3 : 
-                  bClean.startsWith(normalizedQuery) ? 2 : 
-                  bClean.includes(normalizedQuery) ? 1 : 0
-    return bExact - aExact
-  }).slice(0, 20)
+    
+    // Exact match gets highest score
+    const aExact = aClean === normalizedQuery ? 10 : 
+                   aClean.startsWith(normalizedQuery) ? 8 : 
+                   aClean.includes(normalizedQuery) ? 5 : 0
+    const bExact = bClean === normalizedQuery ? 10 : 
+                   bClean.startsWith(normalizedQuery) ? 8 : 
+                   bClean.includes(normalizedQuery) ? 5 : 0
+    
+    // Confidence boost
+    const aConf = a.confidenceScore / 100
+    const bConf = b.confidenceScore / 100
+    
+    // Verified boost
+    const aVerified = a.verified ? 2 : 0
+    const bVerified = b.verified ? 2 : 0
+    
+    return (bExact + bConf + bVerified) - (aExact + aConf + aVerified)
+  }).slice(0, options?.limit || 20)
 } 
 
 // Get company by name
