@@ -9,10 +9,10 @@
  *   4. Google Search + Add to dataset
  */
 
-import { loadIndianCompaniesFromExcel, searchIndianCompanies, getCompanyByExactName, getIndustryInfo, getAllIndustries } from '../datasets/load-excel-companies';
-import { loadDynamicEntities, entityExists, addEntity, identifyIndustry } from '../dataset-manager/updater';
+import { loadIndianCompaniesFromExcel, searchIndianCompanies, getCompanyByExactName, getIndustryInfo, getAllIndustries, searchIndianCompanies as searchExcelCompanies } from '../datasets/load-excel-companies';
+import { loadDynamicEntities, entityExists, addEntity, identifyIndustry, searchAllEntities } from '../dataset-manager/updater';
 import { searchCompanyInfo, searchIndustryInfo } from '../search-bots/google-bot';
-import { searchCompanies as searchCSVCompanies, loadCompanyDatabase } from '../datasets/company-database';
+import { searchCompanies as searchCSVCompanies, loadCompanyDatabase, searchCompanies } from '../datasets/company-database';
 
 // ============================================================================
 // KEYWORD-BASED CLASSIFICATION (v7.0)
@@ -29,29 +29,72 @@ const INDUSTRY_KEYWORD_MAP: Record<string, { sector: string; industry: string; s
   'coal': { sector: 'Energy', industry: 'Mining', subIndustry: 'Coal Mining' },
   'power': { sector: 'Utilities', industry: 'Power', subIndustry: 'Power Generation' },
   'solar': { sector: 'Utilities', industry: 'Renewable Energy', subIndustry: 'Solar Power' },
+  'renewable': { sector: 'Utilities', industry: 'Renewable Energy', subIndustry: 'Clean Energy' },
+  'wind': { sector: 'Utilities', industry: 'Renewable Energy', subIndustry: 'Wind Power' },
 
   // Finance
   'bank': { sector: 'Financial Services', industry: 'Banking', subIndustry: 'Commercial Banking' },
   'insurance': { sector: 'Financial Services', industry: 'Insurance', subIndustry: 'General Insurance' },
   'nbfc': { sector: 'Financial Services', industry: 'Non-Banking Finance', subIndustry: 'NBFC' },
   'mutual fund': { sector: 'Financial Services', industry: 'Asset Management', subIndustry: 'Mutual Funds' },
+  'fintech': { sector: 'Financial Services', industry: 'FinTech', subIndustry: 'Financial Technology' },
+  'payment': { sector: 'Financial Services', industry: 'Payment Services', subIndustry: 'Payment Processing' },
+  'lending': { sector: 'Financial Services', industry: 'Lending', subIndustry: 'Loan Services' },
 
   // Technology
   'software': { sector: 'Technology', industry: 'IT Services', subIndustry: 'Software' },
   'semiconductor': { sector: 'Technology', industry: 'Semiconductors', subIndustry: 'Chip Manufacturing' },
   'telecom': { sector: 'Communication', industry: 'Telecom', subIndustry: 'Mobile Services' },
+  'ai': { sector: 'Technology', industry: 'Artificial Intelligence', subIndustry: 'AI Solutions' },
+  'cloud': { sector: 'Technology', industry: 'Cloud Computing', subIndustry: 'Cloud Services' },
+  'data': { sector: 'Technology', industry: 'Data Analytics', subIndustry: 'Data Services' },
+  'cybersecurity': { sector: 'Technology', industry: 'Cybersecurity', subIndustry: 'Security Services' },
+  'mobile': { sector: 'Technology', industry: 'Mobile', subIndustry: 'Mobile Apps' },
+  'saas': { sector: 'Technology', industry: 'SaaS', subIndustry: 'Software as a Service' },
+  'biotech': { sector: 'Healthcare', industry: 'Biotechnology', subIndustry: 'Biotech Research' },
+  'healthcare': { sector: 'Healthcare', industry: 'Healthcare', subIndustry: 'Healthcare Services' },
 
   // Consumer
   'ecommerce': { sector: 'Consumer', industry: 'E-Commerce', subIndustry: 'Online Retail' },
   'fmcg': { sector: 'Consumer Goods', industry: 'FMCG', subIndustry: 'Packaged Goods' },
   'pharma': { sector: 'Healthcare', industry: 'Pharmaceuticals', subIndustry: 'Generic Drugs' },
   'hospital': { sector: 'Healthcare', industry: 'Healthcare Services', subIndustry: 'Hospitals' },
+  'retail': { sector: 'Consumer', industry: 'Retail', subIndustry: 'Retail Trade' },
+  'fashion': { sector: 'Consumer', industry: 'Fashion', subIndustry: 'Apparel' },
+  'food': { sector: 'Consumer', industry: 'Food & Beverage', subIndustry: 'Food Services' },
+  'beverage': { sector: 'Consumer', industry: 'Food & Beverage', subIndustry: 'Beverages' },
 
   // Manufacturing
   'steel': { sector: 'Materials', industry: 'Steel', subIndustry: 'Integrated Steel' },
   'cement': { sector: 'Materials', industry: 'Cement', subIndustry: 'Cement Manufacturing' },
   'auto': { sector: 'Automotive', industry: 'Automobile', subIndustry: 'Passenger Vehicles' },
   'automobile': { sector: 'Automotive', industry: 'Automobile', subIndustry: 'Passenger Vehicles' },
+  'manufacturing': { sector: 'Manufacturing', industry: 'Manufacturing', subIndustry: 'Industrial Manufacturing' },
+  'electronics': { sector: 'Manufacturing', industry: 'Electronics', subIndustry: 'Electronic Equipment' },
+  'machinery': { sector: 'Manufacturing', industry: 'Machinery', subIndustry: 'Industrial Machinery' },
+
+  // Real Estate & Construction
+  'real estate': { sector: 'Real Estate', industry: 'Real Estate', subIndustry: 'Property Development' },
+  'property': { sector: 'Real Estate', industry: 'Real Estate', subIndustry: 'Property Management' },
+  'construction': { sector: 'Construction', industry: 'Construction', subIndustry: 'Civil Engineering' },
+
+  // Media & Entertainment
+  'media': { sector: 'Media', industry: 'Media', subIndustry: 'Entertainment' },
+  'gaming': { sector: 'Media', industry: 'Gaming', subIndustry: 'Video Games' },
+  'entertainment': { sector: 'Media', industry: 'Entertainment', subIndustry: 'Media & Entertainment' },
+  'streaming': { sector: 'Media', industry: 'Streaming', subIndustry: 'Video Streaming' },
+
+  // Professional Services
+  'consulting': { sector: 'Professional Services', industry: 'Consulting', subIndustry: 'Management Consulting' },
+  'legal': { sector: 'Professional Services', industry: 'Legal Services', subIndustry: 'Law Firm' },
+  'accounting': { sector: 'Professional Services', industry: 'Accounting', subIndustry: 'Financial Accounting' },
+  'hr': { sector: 'Professional Services', industry: 'HR Services', subIndustry: 'Human Resources' },
+  'marketing': { sector: 'Professional Services', industry: 'Marketing', subIndustry: 'Advertising & Marketing' },
+
+  // Transportation & Logistics
+  'logistics': { sector: 'Transportation', industry: 'Logistics', subIndustry: 'Transportation & Logistics' },
+  'shipping': { sector: 'Transportation', industry: 'Shipping', subIndustry: 'Freight Services' },
+  'aviation': { sector: 'Transportation', industry: 'Aviation', subIndustry: 'Airline Services' },
 };
 
 /**
@@ -673,6 +716,200 @@ async function searchAndIdentify(input: string): Promise<IdentificationResult> {
     console.error('[Identifier] Google search error:', error.message);
     return { found: false, type: 'unknown', name: input, industry: 'Unknown', subIndustry: 'Unknown', confidence: 0, source: 'none' };
   }
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// Enhanced Search with Parameters
+// ═══════════════════════════════════════════════════════════════════════════
+
+export interface EnhancedSearchOptions {
+  query: string;
+  country?: string;
+  industry?: string;
+  searchSources?: ('database' | 'google' | 'excel' | 'dynamic')[];
+  requireFinancials?: boolean;
+  minConfidence?: number;
+  limit?: number;
+}
+
+export interface EnhancedSearchResult {
+  results: IdentificationResult[];
+  searchMetadata: {
+    sourcesUsed: string[];
+    totalFound: number;
+    executionTimeMs: number;
+    suggestions?: string[];
+  };
+}
+
+export async function enhancedSearch(options: EnhancedSearchOptions): Promise<EnhancedSearchResult> {
+  const startTime = Date.now();
+  const sourcesUsed: string[] = [];
+  const allResults: IdentificationResult[] = [];
+  const seen = new Map<string, IdentificationResult>();
+
+  const sources = options.searchSources || ['database', 'google'];
+  const minConf = options.minConfidence || 0;
+
+  console.log(`[EnhancedSearch] Starting search for: "${options.query}"`);
+  console.log(`[EnhancedSearch] Options:`, {
+    country: options.country,
+    industry: options.industry,
+    sources,
+    requireFinancials: options.requireFinancials,
+    minConfidence: minConf
+  });
+
+  // 1. Database search
+  if (sources.includes('database')) {
+    try {
+      const dbResults = searchCompanies(options.query, {
+        country: options.country,
+        industry: options.industry,
+        minConfidence: minConf,
+        limit: options.limit || 20
+      });
+
+      for (const r of dbResults) {
+        const result: IdentificationResult = {
+          found: true,
+          type: 'company',
+          name: r.companyName,
+          industry: r.industryName,
+          subIndustry: r.subIndustry,
+          confidence: r.confidenceScore,
+          source: 'csv',
+          data: r
+        };
+        
+        const key = r.normalizedCompanyName;
+        if (!seen.has(key) || seen.get(key)!.confidence < r.confidenceScore) {
+          seen.set(key, result);
+        }
+      }
+      sourcesUsed.push('database');
+      console.log(`[EnhancedSearch] Database found: ${dbResults.length} matches`);
+    } catch (e) {
+      console.warn('[EnhancedSearch] Database search failed:', e);
+    }
+  }
+
+  // 2. Excel/Indian companies search
+  if (sources.includes('excel')) {
+    try {
+      const excelResults = await searchIndianCompanies(options.query);
+      for (const r of excelResults) {
+        const result: IdentificationResult = {
+          found: true,
+          type: 'company',
+          name: r.companyName,
+          industry: r.industry,
+          subIndustry: r.subCategory,
+          confidence: 85,
+          source: 'excel',
+          domain: r.location,
+          data: r
+        };
+        
+        const key = r.normalizedName;
+        if (!seen.has(key) || seen.get(key)!.confidence < 85) {
+          seen.set(key, result);
+        }
+      }
+      sourcesUsed.push('excel');
+    } catch (e) {
+      console.warn('[EnhancedSearch] Excel search failed:', e);
+    }
+  }
+
+  // 3. Dynamic entities search
+  if (sources.includes('dynamic')) {
+    try {
+      const dynamicResults = await searchAllEntities(options.query);
+      for (const r of dynamicResults) {
+        const companyName = 'companyName' in r ? r.companyName : r.name;
+        const industry = 'industry' in r ? r.industry : 'Unknown';
+        const subIndustry = 'subIndustry' in r ? r.subIndustry : 'subCategory' in r ? (r as any).subCategory : 'Unknown';
+        const confidence = 'confidence' in r ? r.confidence : 70;
+        
+        const result: IdentificationResult = {
+          found: true,
+          type: 'company',
+          name: companyName,
+          industry: industry,
+          subIndustry: subIndustry,
+          confidence: confidence,
+          source: 'dynamic',
+          data: r
+        };
+        
+        const key = companyName.toLowerCase();
+        if (!seen.has(key)) {
+          seen.set(key, result);
+        }
+      }
+      sourcesUsed.push('dynamic');
+    } catch (e) {
+      console.warn('[EnhancedSearch] Dynamic search failed:', e);
+    }
+  }
+
+  // 4. Google search (if requested and no results found)
+  if (sources.includes('google') && seen.size < 3) {
+    try {
+      console.log(`[EnhancedSearch] Google search triggered for: "${options.query}"`);
+      const googleResults = await searchCompanyInfo(options.query);
+      
+      for (const r of googleResults.slice(0, 5)) {
+        const result: IdentificationResult = {
+          found: true,
+          type: 'company',
+          name: r.title,
+          industry: 'Unknown',
+          subIndustry: 'Unknown',
+          confidence: 50,
+          source: 'google',
+          domain: r.url,
+          data: r
+        };
+        
+        const key = r.title.toLowerCase();
+        if (!seen.has(key)) {
+          seen.set(key, result);
+        }
+      }
+      sourcesUsed.push('google');
+    } catch (e) {
+      console.warn('[EnhancedSearch] Google search failed:', e);
+    }
+  }
+
+  // Convert seen map to array and sort
+  const results = Array.from(seen.values())
+    .filter(r => r.confidence >= minConf)
+    .sort((a, b) => b.confidence - a.confidence)
+    .slice(0, options.limit || 20);
+
+  const executionTime = Date.now() - startTime;
+
+  // Generate suggestions if few results
+  const suggestions = results.length < 3 ? [
+    `Try adding more keywords like "${options.query} limited"`,
+    `Try searching in a specific country: India, USA, UK`,
+    `Try specifying an industry: Technology, Finance, Healthcare`
+  ] : undefined;
+
+  console.log(`[EnhancedSearch] Complete: ${results.length} results in ${executionTime}ms`);
+
+  return {
+    results,
+    searchMetadata: {
+      sourcesUsed,
+      totalFound: results.length,
+      executionTimeMs: executionTime,
+      suggestions
+    }
+  };
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
