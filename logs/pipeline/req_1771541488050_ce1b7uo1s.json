@@ -1,0 +1,121 @@
+[
+  {
+    "requestId": "req_1771541488050_ce1b7uo1s",
+    "timestamp": "2026-02-19T22:51:28.050Z",
+    "stage": "INPUT_RECEIVED",
+    "input": "company: Tata Motors in Automotive industry India",
+    "realtimePriorityMode": true
+  },
+  {
+    "requestId": "req_1771541488050_ce1b7uo1s",
+    "timestamp": "2026-02-19T22:51:28.054Z",
+    "stage": "SEARCH_FIRST_INITIATED",
+    "metadata": {
+      "input": "company: Tata Motors in Automotive industry India"
+    }
+  },
+  {
+    "requestId": "req_1771541488050_ce1b7uo1s",
+    "timestamp": "2026-02-19T22:51:52.409Z",
+    "stage": "SEARCH_FIRST_COMPLETED",
+    "metadata": {
+      "resultsCount": 14,
+      "entityHints": {
+        "type": "company"
+      },
+      "timeMs": 24356
+    }
+  },
+  {
+    "requestId": "req_1771541488050_ce1b7uo1s",
+    "timestamp": "2026-02-19T22:51:52.411Z",
+    "stage": "ENTITY_RESOLUTION",
+    "entity": "company: Tata Motors in Automotive industry India",
+    "source": "excel",
+    "confidence": 85,
+    "metadata": {
+      "found": true,
+      "searchEnhanced": true,
+      "verified": true
+    }
+  },
+  {
+    "requestId": "req_1771541488050_ce1b7uo1s",
+    "timestamp": "2026-02-19T22:51:52.411Z",
+    "stage": "DATASET_MATCH",
+    "entity": "company: Tata Motors in Automotive industry India",
+    "source": "dataset",
+    "metadata": {
+      "usage": "classification",
+      "allowed": true
+    }
+  },
+  {
+    "requestId": "req_1771541488050_ce1b7uo1s",
+    "timestamp": "2026-02-19T22:51:52.412Z",
+    "stage": "CACHE_MISS",
+    "entity": "company: Tata Motors in Automotive industry India",
+    "metadata": {
+      "realtimePriority": true,
+      "overrideCache": true
+    }
+  },
+  {
+    "requestId": "req_1771541488050_ce1b7uo1s",
+    "timestamp": "2026-02-19T22:51:52.413Z",
+    "stage": "DATA_AGGREGATION",
+    "metadata": {
+      "stage": "started",
+      "mode": "search_first"
+    }
+  },
+  {
+    "requestId": "req_1771541488050_ce1b7uo1s",
+    "timestamp": "2026-02-19T22:52:46.285Z",
+    "stage": "DATA_AGGREGATION",
+    "metadata": {
+      "sources": [
+        "api_realtime",
+        "web_search",
+        "crawler"
+      ],
+      "sourceCount": 3,
+      "conflicts": 0,
+      "reliabilityWeights": [
+        {
+          "source": "api_realtime",
+          "weight": 1
+        },
+        {
+          "source": "web_search",
+          "weight": 0.7
+        },
+        {
+          "source": "crawler",
+          "weight": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "requestId": "req_1771541488050_ce1b7uo1s",
+    "timestamp": "2026-02-19T22:52:46.318Z",
+    "stage": "DATA_AGGREGATION",
+    "metadata": {
+      "stage": "validated",
+      "valid": true,
+      "errorCount": 0,
+      "warningCount": 1
+    }
+  },
+  {
+    "requestId": "req_1771541488050_ce1b7uo1s",
+    "timestamp": "2026-02-19T22:52:46.362Z",
+    "stage": "CONFIDENCE_GATING",
+    "metadata": {
+      "score": 100,
+      "threshold": 60,
+      "gated": false
+    }
+  }
+]
