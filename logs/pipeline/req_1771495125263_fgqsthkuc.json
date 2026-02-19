@@ -1,0 +1,121 @@
+[
+  {
+    "requestId": "req_1771495125263_fgqsthkuc",
+    "timestamp": "2026-02-19T09:58:45.263Z",
+    "stage": "INPUT_RECEIVED",
+    "input": "boAt Lifestyle",
+    "realtimePriorityMode": true
+  },
+  {
+    "requestId": "req_1771495125263_fgqsthkuc",
+    "timestamp": "2026-02-19T09:58:45.265Z",
+    "stage": "SEARCH_FIRST_INITIATED",
+    "metadata": {
+      "input": "boAt Lifestyle"
+    }
+  },
+  {
+    "requestId": "req_1771495125263_fgqsthkuc",
+    "timestamp": "2026-02-19T09:58:57.739Z",
+    "stage": "SEARCH_FIRST_COMPLETED",
+    "metadata": {
+      "resultsCount": 13,
+      "entityHints": {
+        "type": "company"
+      },
+      "timeMs": 12474
+    }
+  },
+  {
+    "requestId": "req_1771495125263_fgqsthkuc",
+    "timestamp": "2026-02-19T09:58:57.745Z",
+    "stage": "ENTITY_RESOLUTION",
+    "entity": "boAt Lifestyle",
+    "source": "google",
+    "confidence": 85,
+    "metadata": {
+      "found": true,
+      "searchEnhanced": true,
+      "verified": true
+    }
+  },
+  {
+    "requestId": "req_1771495125263_fgqsthkuc",
+    "timestamp": "2026-02-19T09:58:57.745Z",
+    "stage": "DATASET_MATCH",
+    "entity": "boAt Lifestyle",
+    "source": "dataset",
+    "metadata": {
+      "usage": "classification",
+      "allowed": true
+    }
+  },
+  {
+    "requestId": "req_1771495125263_fgqsthkuc",
+    "timestamp": "2026-02-19T09:58:57.747Z",
+    "stage": "CACHE_MISS",
+    "entity": "boAt Lifestyle",
+    "metadata": {
+      "realtimePriority": true,
+      "overrideCache": true
+    }
+  },
+  {
+    "requestId": "req_1771495125263_fgqsthkuc",
+    "timestamp": "2026-02-19T09:58:57.748Z",
+    "stage": "DATA_AGGREGATION",
+    "metadata": {
+      "stage": "started",
+      "mode": "search_first"
+    }
+  },
+  {
+    "requestId": "req_1771495125263_fgqsthkuc",
+    "timestamp": "2026-02-19T10:00:18.523Z",
+    "stage": "DATA_AGGREGATION",
+    "metadata": {
+      "sources": [
+        "api_realtime",
+        "web_search",
+        "crawler"
+      ],
+      "sourceCount": 3,
+      "conflicts": 0,
+      "reliabilityWeights": [
+        {
+          "source": "api_realtime",
+          "weight": 1
+        },
+        {
+          "source": "web_search",
+          "weight": 0.7
+        },
+        {
+          "source": "crawler",
+          "weight": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "requestId": "req_1771495125263_fgqsthkuc",
+    "timestamp": "2026-02-19T10:00:18.525Z",
+    "stage": "DATA_AGGREGATION",
+    "metadata": {
+      "stage": "validated",
+      "valid": false,
+      "errorCount": 1,
+      "warningCount": 0
+    }
+  },
+  {
+    "requestId": "req_1771495125263_fgqsthkuc",
+    "timestamp": "2026-02-19T10:00:18.530Z",
+    "stage": "CONFIDENCE_GATING",
+    "metadata": {
+      "score": 85,
+      "threshold": 60,
+      "gated": false
+    }
+  }
+]

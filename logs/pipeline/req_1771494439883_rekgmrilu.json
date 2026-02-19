@@ -1,0 +1,121 @@
+[
+  {
+    "requestId": "req_1771494439883_rekgmrilu",
+    "timestamp": "2026-02-19T09:47:19.884Z",
+    "stage": "INPUT_RECEIVED",
+    "input": "Reliance Industries",
+    "realtimePriorityMode": true
+  },
+  {
+    "requestId": "req_1771494439883_rekgmrilu",
+    "timestamp": "2026-02-19T09:47:19.887Z",
+    "stage": "SEARCH_FIRST_INITIATED",
+    "metadata": {
+      "input": "Reliance Industries"
+    }
+  },
+  {
+    "requestId": "req_1771494439883_rekgmrilu",
+    "timestamp": "2026-02-19T09:47:28.301Z",
+    "stage": "SEARCH_FIRST_COMPLETED",
+    "metadata": {
+      "resultsCount": 15,
+      "entityHints": {
+        "type": "company"
+      },
+      "timeMs": 8414
+    }
+  },
+  {
+    "requestId": "req_1771494439883_rekgmrilu",
+    "timestamp": "2026-02-19T09:47:28.316Z",
+    "stage": "ENTITY_RESOLUTION",
+    "entity": "Reliance Industries Limited",
+    "source": "csv",
+    "confidence": 85,
+    "metadata": {
+      "found": true,
+      "searchEnhanced": true,
+      "verified": true
+    }
+  },
+  {
+    "requestId": "req_1771494439883_rekgmrilu",
+    "timestamp": "2026-02-19T09:47:28.317Z",
+    "stage": "DATASET_MATCH",
+    "entity": "Reliance Industries Limited",
+    "source": "dataset",
+    "metadata": {
+      "usage": "classification",
+      "allowed": true
+    }
+  },
+  {
+    "requestId": "req_1771494439883_rekgmrilu",
+    "timestamp": "2026-02-19T09:47:28.318Z",
+    "stage": "CACHE_MISS",
+    "entity": "Reliance Industries Limited",
+    "metadata": {
+      "realtimePriority": true,
+      "overrideCache": true
+    }
+  },
+  {
+    "requestId": "req_1771494439883_rekgmrilu",
+    "timestamp": "2026-02-19T09:47:28.318Z",
+    "stage": "DATA_AGGREGATION",
+    "metadata": {
+      "stage": "started",
+      "mode": "search_first"
+    }
+  },
+  {
+    "requestId": "req_1771494439883_rekgmrilu",
+    "timestamp": "2026-02-19T09:48:39.261Z",
+    "stage": "DATA_AGGREGATION",
+    "metadata": {
+      "sources": [
+        "api_realtime",
+        "web_search",
+        "crawler"
+      ],
+      "sourceCount": 3,
+      "conflicts": 0,
+      "reliabilityWeights": [
+        {
+          "source": "api_realtime",
+          "weight": 1
+        },
+        {
+          "source": "web_search",
+          "weight": 0.7
+        },
+        {
+          "source": "crawler",
+          "weight": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "requestId": "req_1771494439883_rekgmrilu",
+    "timestamp": "2026-02-19T09:48:39.265Z",
+    "stage": "DATA_AGGREGATION",
+    "metadata": {
+      "stage": "validated",
+      "valid": true,
+      "errorCount": 0,
+      "warningCount": 0
+    }
+  },
+  {
+    "requestId": "req_1771494439883_rekgmrilu",
+    "timestamp": "2026-02-19T09:48:39.267Z",
+    "stage": "CONFIDENCE_GATING",
+    "metadata": {
+      "score": 100,
+      "threshold": 60,
+      "gated": false
+    }
+  }
+]

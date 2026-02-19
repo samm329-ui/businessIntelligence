@@ -51,6 +51,27 @@ export class CacheAuditor {
     return path.join(CACHE_DIR, `${normalized}_cache.json`);
   }
 
+  /**
+   * Read cache data for an entity
+   * Returns null if cache doesn't exist or is corrupted
+   */
+  readCache(entity: string): CacheEntry | null {
+    const cacheFile = this.getCacheFilePath(entity);
+    
+    if (!fs.existsSync(cacheFile)) {
+      return null;
+    }
+
+    try {
+      const content = fs.readFileSync(cacheFile, 'utf-8');
+      const cache: CacheEntry = JSON.parse(content);
+      return cache;
+    } catch (error) {
+      console.error(`[CacheAuditor] Failed to read cache for ${entity}:`, error);
+      return null;
+    }
+  }
+
   auditCache(entity: string, forceRealtime: boolean = false): CacheAuditResult {
     const cacheFile = this.getCacheFilePath(entity);
     const now = new Date();
