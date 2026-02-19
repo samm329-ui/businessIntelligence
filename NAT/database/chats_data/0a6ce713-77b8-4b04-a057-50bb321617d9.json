@@ -1,0 +1,18 @@
+{
+  "session_id": "0a6ce713-77b8-4b04-a057-50bb321617d9",
+  "chat_type": "realtime",
+  "messages": [
+    {
+      "role": "user",
+      "content": "who is elon musk",
+      "timestamp": "2026-02-20T02:58:40.817130"
+    },
+    {
+      "role": "assistant",
+      "content": "I apologize, but I encountered an error: All Groq API keys failed",
+      "timestamp": "2026-02-20T02:58:42.702268"
+    }
+  ],
+  "created_at": "2026-02-20T02:58:40.817130",
+  "updated_at": "2026-02-20T02:58:42.702268"
+}
