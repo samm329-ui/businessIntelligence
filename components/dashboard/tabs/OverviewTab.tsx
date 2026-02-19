@@ -82,8 +82,18 @@ export function OverviewTab({ analysis }: { analysis: any }) {
     const formatCurrency = (val: number) => `${currencySymbol}${val.toFixed(1)}${currencyUnit}`
     const industryNews = getIndustryNews(industryData.name)
 
-    // Data sources for this industry
-    const dataSources = industryData?.dataSources || ['Statista', 'Bloomberg']
+    const getSourceCount = (sources: any[]) => {
+      if (!sources || !Array.isArray(sources)) return 2
+      return sources.length
+    }
+    const dataSourceCount = getSourceCount(industryData?.dataSources)
+    
+    // Data sources for this industry - handle both string and object arrays
+    const getSourceNames = (sources: any[]) => {
+      if (!sources || !Array.isArray(sources)) return 'Statista, Bloomberg'
+      return sources.map(s => typeof s === 'string' ? s : s.source || s.name || 'Unknown').slice(0, 3).join(', ')
+    }
+    const dataSourceNames = getSourceNames(industryData?.dataSources)
 
     return (
         <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
@@ -133,7 +143,7 @@ export function OverviewTab({ analysis }: { analysis: any }) {
                             {analysis.productCategory && ` • ${analysis.productCategory}`}
                         </p>
                     )}
-                    <VerifiedData source={dataSources.slice(0, 3).join(', ')} lastUpdated="Jan 2025" />
+                    <VerifiedData source={dataSourceNames} lastUpdated="Jan 2025" />
                 </div>
                 <div className="flex items-center gap-3">
                     <RegionSelector region={region} onRegionChange={setRegion} />
@@ -180,7 +190,7 @@ export function OverviewTab({ analysis }: { analysis: any }) {
                 <Card className="glass-card">
                     <CardContent className="p-5">
                         <p className="text-xs text-muted-foreground mb-2">Data Sources</p>
-                        <p className="text-2xl font-bold">{dataSources.length}</p>
+                        <p className="text-2xl font-bold">{dataSourceCount}</p>
                         <p className="text-xs text-muted-foreground mt-1">Verified sources</p>
                     </CardContent>
                 </Card>
