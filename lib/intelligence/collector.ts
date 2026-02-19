@@ -926,15 +926,22 @@ export async function extractCompetitors(collectedData: CollectedData): Promise<
   }
   
   // Priority 4: General competitor search results
+  const BLACKLIST = new Set([
+    'the','and','or','vs','etc','also','had','has','have','been','was',
+    'were','are','this','that','with','from','into','than','then','they',
+    'company','companies','business','market','industry','sector','india',
+    'indian','million','billion','crore','revenue','profit','growth',
+    'funding','raised','investors','startup','venture','capital','data',
+    'report','quarter','annual','results','financial','statement'
+  ]);
+
   for (const result of collectedData.sources.competitors) {
     const text = `${result.title} ${result.description}`;
     
+    // Stricter patterns that require context keywords
     const companyPatterns = [
-      /vs\s+([A-Z][a-zA-Z\s]+?)(?:,|\.|;|$)/g,
-      /competitors?(?:\s+include)?\s*:?\s*([A-Z][a-zA-Z\s,]+)/gi,
-      /([A-Z][a-zA-Z]+(?:\s+[A-Z][a-zA-Z]+){0,2})\s+(?:vs|versus|competitor)/gi,
-      /(?:market\s+leader|top\s+player|key\s+player)[s]?\s*(?:include|are|:)\s*([A-Z][a-zA-Z\s,]+)/gi,
-      /(?:rivals?|competing\s+with)\s+([A-Z][a-zA-Z\s]+?)(?:,|\.|;|$)/gi,
+      /(?:competitors?|rivals?|competing with)\s*:?\s*([A-Z][a-zA-Z]+(?:\s+[A-Z][a-zA-Z]+){0,2})/gi,
+      /(?:vs\.?|versus)\s+([A-Z][a-zA-Z]+(?:\s+[A-Z][a-zA-Z]+){0,2})\b/gi,
     ];
 
     for (const pattern of companyPatterns) {
@@ -943,10 +950,13 @@ export async function extractCompetitors(collectedData: CollectedData): Promise<
         const names = match[1]?.split(/,\s*/);
         for (const rawName of names || []) {
           const name = rawName.trim();
-          if (name && name.length > 2 && name.length < 50) {
-            if (name.toLowerCase() !== entityName.toLowerCase()) {
-              competitors.add(name);
-            }
+          // Stricter filtering
+          if (name && name.length > 2 && name.length < 40 
+              && !BLACKLIST.has(name.toLowerCase())
+              && /^[A-Z]/.test(name)  // must start with capital
+              && name.split(' ').length <= 4  // max 4 words
+              && name.toLowerCase() !== entityName.toLowerCase()) {
+            competitors.add(name);
           }
         }
       }

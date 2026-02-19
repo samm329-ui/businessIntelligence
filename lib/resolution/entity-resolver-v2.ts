@@ -379,6 +379,9 @@ const INDUSTRY_HIERARCHY: Record<string, { sector: string; industry: string; sub
   'retail': { sector: 'Consumer', industry: 'Retail', subIndustry: 'Diversified Retail' },
   'ecommerce': { sector: 'Consumer', industry: 'Retail', subIndustry: 'E-commerce' },
   'qsr': { sector: 'Consumer', industry: 'Retail', subIndustry: 'Quick Service Restaurants' },
+  'quick commerce': { sector: 'Consumer', industry: 'Retail', subIndustry: 'Quick Commerce' },
+  'q-commerce': { sector: 'Consumer', industry: 'Retail', subIndustry: 'Quick Commerce' },
+  'instant delivery': { sector: 'Consumer', industry: 'Retail', subIndustry: 'Quick Commerce' },
 
   // Manufacturing
   'auto': { sector: 'Manufacturing', industry: 'Automobile', subIndustry: 'Diversified Auto' },
@@ -417,6 +420,12 @@ function mapSectorHierarchy(rawSector: string): { sector: string; industry: stri
 // ─── Brand Knowledge Base ─────────────────────────────────────────────────────
 
 const BRAND_MAPPINGS: Record<string, string> = {
+  // Quick Commerce (NEW - Feb 2026)
+  'zepto': 'Zepto',
+  'blinkit': 'Zepto',
+  'instamart': 'Zepto',
+  'swiggy instamart': 'Swiggy Instamart',
+
   // Tata Group
   'tata sky': 'Tata Play Ltd',
   'tata play': 'Tata Play Ltd',
@@ -515,6 +524,52 @@ export async function resolveEntity(
   if (!trimmedQuery || trimmedQuery.length < 2) return null;
 
   const normalizedQuery = normalize(trimmedQuery);
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // STEP 0B: Quick Commerce Special Cases (Feb 2026)
+  // ═══════════════════════════════════════════════════════════════════════════
+  const quickCommerceCompanies: Record<string, ResolvedEntity> = {
+    'zepto': {
+      entityId: 'zepto_quick_commerce',
+      canonicalName: 'Zepto',
+      ticker: 'ZEPTO',
+      tickerNSE: undefined,
+      tickerBSE: undefined,
+      tickerGlobal: undefined,
+      sector: 'Consumer',
+      industry: 'Retail',
+      subIndustry: 'Quick Commerce',
+      country: 'India',
+      region: 'INDIA',
+      isListed: false,
+      exchange: undefined,
+      confidence: 95,
+      matchMethod: 'quick_commerce_database',
+    },
+    'blinkit': {
+      entityId: 'blinkit_quick_commerce',
+      canonicalName: 'Blinkit (Zepto)',
+      ticker: 'BLINKIT',
+      tickerNSE: undefined,
+      tickerBSE: undefined,
+      tickerGlobal: undefined,
+      sector: 'Consumer',
+      industry: 'Retail',
+      subIndustry: 'Quick Commerce',
+      country: 'India',
+      region: 'INDIA',
+      isListed: false,
+      exchange: undefined,
+      confidence: 95,
+      matchMethod: 'quick_commerce_database',
+    },
+  };
+
+  const qcKey = normalizedQuery.toLowerCase();
+  if (quickCommerceCompanies[qcKey]) {
+    console.log(`[EntityResolver] Quick Commerce match: ${qcKey}`);
+    return quickCommerceCompanies[qcKey];
+  }
 
   // ═══════════════════════════════════════════════════════════════════════════
   // STEP 0: PRIMARY - Indian Excel Database (c:\Users\jishu\Downloads\...)

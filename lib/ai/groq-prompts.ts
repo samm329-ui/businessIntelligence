@@ -2,7 +2,7 @@
  * EBITA INTELLIGENCE — GROQ AI PROMPT LIBRARY
  * Anti-hallucination guardrails: AI never invents financial numbers
  * All prompts require structured JSON input, return structured JSON output
- * Model: llama-3.3-70b-versatile (via Groq)
+ * Model: meta-llama/llama-4-scout-17b-16e-instruct (via Groq)
  */
 
 // ─────────────────────────────────────────────
@@ -492,7 +492,7 @@ export async function callGroq(
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: options?.model ?? 'llama-3.3-70b-versatile',
+        model: options?.model ?? 'meta-llama/llama-4-scout-17b-16e-instruct',
         messages,
         max_tokens: options?.maxTokens ?? 2000,
         temperature: options?.temperature ?? 0.1,  // Low temperature for factual analysis

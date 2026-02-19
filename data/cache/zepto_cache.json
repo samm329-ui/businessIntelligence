@@ -1,0 +1,2540 @@
+{
+  "entity": "Zepto",
+  "data": {
+    "analysis": {
+      "executiveSummary": "[INSUFFICIENT DATA] Zepto's financials show high variance across sources, with revenue of ₹27.00 and a growth rate of 27.60%. The company's market cap is ₹119.84B.",
+      "financials": {
+        "revenue": "₹27.00",
+        "ebitda": "₹30.59",
+        "profit": null,
+        "growth": "27.60%",
+        "marketCap": "₹119.84B"
+      },
+      "competitors": [
+        "Blinkit",
+        "Shadowfax"
+      ],
+      "keyFindings": [
+        "High variance in financial data across sources",
+        "Revenue growth rate of 27.60%",
+        "Market cap of ₹119.84B"
+      ],
+      "risks": [
+        "High variance in financial data may indicate uncertainty in company's performance"
+      ],
+      "opportunities": [
+        "Growth rate of 27.60% indicates potential for expansion"
+      ],
+      "industryOutlook": "Unknown",
+      "confidence": 54,
+      "model": "groq-llama-4-scout",
+      "tokensUsed": 1558
+    },
+    "collectedData": {
+      "entity": {
+        "name": "Zepto",
+        "type": "company",
+        "industry": "Unknown",
+        "subIndustry": "General"
+      },
+      "sources": {
+        "companyInfo": [
+          {
+            "title": "Zepto's FY25 loss widens 177% to Rs 3,367 crore, total sales jump 129%",
+            "url": "https://www.moneycontrol.com/news/business/startup/zepto-s-fy25-loss-widens-177-to-rs-3-367-crore-total-sales-jump-129-13743016.html",
+            "description": "Quick commerce major Zepto more than doubled its total sales in the financial year 2024-25 (FY25), even as losses expanded sharply during the year as the company continued to scale operations in ...",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Zepto's losses widen 177 pc in FY25 to Rs 3,367.3 crore",
+            "url": "https://retail.economictimes.indiatimes.com/news/e-commerce/e-tailing/zeptos-losses-widen-177-pc-in-fy25-to-rs-3367-3-crore/126199778",
+            "description": "Quick commerce company Zepto saw its losses widen significantly in the financial year 2024-25 (FY25) even as its sales more than doubled.",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Zepto Annual Report | Balance Sheet | Financials | Revenue",
+            "url": "https://wwipl.com/unlisted-shares/zepto-private-share-price/financial",
+            "description": "Download Zepto Annual Report and Financials. Get Latest Balance Sheet, Profit and Loss Account, Cash Flow, Key Ratios, Revenue & Dividend History of Zepto",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Zepto Financials 2025: Revenue, Profit, Valuation, Shareholding Pattern ...",
+            "url": "https://www.affluense.ai/company/zepto-financials-bcffec",
+            "description": "Get Zepto's full 2025 financial report — including revenue, profit/loss, EBITDA, valuation, funding rounds, shareholding pattern, cap table, and equity structure. Deep insights for investors and analysts.",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Zepto - 2026 Company Profile & Team - Tracxn",
+            "url": "https://tracxn.com/d/companies/zepto/__vOTzafGt-8S4kwYniiZ_yRogd6c_Jsw_vRD0gckHtfE",
+            "description": "Explore Zepto's in-depth company profile, including funding details, key investors, leadership, competitors, and shareholding structure.",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Zepto Marketplace: Valuation, Funding & Investors | PitchBook",
+            "url": "https://pitchbook.com/profiles/company/458392-60",
+            "description": "Zepto Marketplace is a quick-commerce company providing rapid grocery delivery services. View funding, investors, valuation, and company profile on PitchBook.",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Zepto Secures $450M from CalPERS, Positions for 2026 IPO",
+            "url": "https://www.ciol.com/funding-acquistion-merger/zepto-secures-450m-from-calpers-positions-for-2026-ipo-10573320",
+            "description": "The $450 million infusion — led by a large, long-horizon institutional investor — and the company's self-reported ~$900 million net cash position change the calculus for Zepto's near-term ...",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Zepto's FY25 Story: Explosive Growth Meets Escalating Losses",
+            "url": "https://techstory.in/zeptos-fy25-story-explosive-growth-meets-escalating-losses/",
+            "description": "India's quick commerce race is intensifying, and Zepto's FY25 financials capture both the opportunity and the cost of winning in this high-speed market.",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "How Zepto Makes Money? - Business Model",
+            "url": "https://deonde.co/blog/zepto-business-model/",
+            "description": "Zepto primarily generates revenue through delivery fees, commissions from retailers, direct product sales, and advertising.",
+            "source": "serpapi"
+          },
+          {
+            "title": "Zepto Business Model - How This Changed Quick Commerce",
+            "url": "https://www.42signals.com/blog/zepto-business-model-explained/",
+            "description": "Revenue & Costs: The zepto revenue model combines product margins, delivery fees, and advertising. Zepto unit economics scrutinize the profit ...",
+            "source": "serpapi"
+          }
+        ],
+        "industryInfo": [
+          {
+            "title": "Industry 5.0 Market Size, Share & Trends, 2025",
+            "url": "https://www.marketsandmarkets.com/Market-Reports/industry-5-market-35376359.html",
+            "description": "Let Us Help You. What are the Known and Unknown Adjacencies Impacting the Industry 5.0 Market ... SHARE OF INDUSTRY 5.0 MARKET IN 2024; FIGURE 15 AUTOMOTIVE ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "2024 Market Recap and 2025 Outlook",
+            "url": "https://orw-d.com/blogs/insights/2024-market-recap-and-2025-outlook",
+            "description": "2024. Heading into 2024, the market anticipated rate cuts, but the timing and size were unknown. Markets estimated six 25 basis point cuts ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Emerging and Frontier Markets Outlook 2025",
+            "url": "https://www.eastcapital.com/insights/emerging-and-frontier-markets-outlook-2025-another-alpha-year",
+            "description": "However, there will inevitably be many more 'unknown unknowns' that will emerge as the year progresses. As a result, we believe that 2025 ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Recent developments in the Canadian economy: Fall 2025",
+            "url": "https://www150.statcan.gc.ca/n1/pub/36-28-0001/2025010/article/00004-eng.htm",
+            "description": "... unknown, 18.0, 11.8. Increase domestic sourcing, 23.7, 32.6. Seek ... The number of public sector employees rose by 3.5% in 2024 (+155,000) ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Market Research in Canada Industry Analysis, 2026",
+            "url": "https://www.ibisworld.com/canada/industry/market-research/1442/",
+            "description": "Market research is needed in times of economic uncertainty since it helps customers navigate unknown waters. Sector-wide clients, such as financial ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Market Sizing Amid Shifting Dynamics",
+            "url": "https://martecgroup.com/market-sizing-amid-shifting-dynamics/",
+            "description": "... market leader's position, while unknown market tailwinds could result in increased competitive density and unrealized potential growth. Especially in highly ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Enterprise Content Management Market Size | Growth ...",
+            "url": "https://www.marketsandmarkets.com/Market-Reports/enterprise-content-management-market-226977096.html",
+            "description": "Let Us Help You. What are the Known and Unknown Adjacencies Impacting the Enterprise Content Management Market ... FIGURE 48 TOP 5 PLAYERS DOMINATING MARKET IN ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Four Reasons – Identifying New Growth Markets and Building ...",
+            "url": "https://www.unknown.global/projects/four-reasons-%E2%80%93-identifying-new-growth-markets-and-building-an-entry-strategy",
+            "description": "Un/known has an exceptional ability to generate customer insights from unknown markets and to refine them into a form that gives us a clear action plan moving ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "3 Unknown Tech Stocks That Could 100X Your Money ...",
+            "url": "https://www.nasdaq.com/articles/3-unknown-tech-stocks-that-could-100x-your-money-really",
+            "description": "3 Unknown Tech Stocks That Could 100X Your Money (Really!) ; MultiSensor AI Holdings (MSAI). AI stocks · MultiSensor AI ; Unusual Machines (UMAC).",
+            "source": "serpapi"
+          },
+          {
+            "title": "Scenario Modeling: Navigating the Unknown",
+            "url": "https://industrytoday.com/scenario-modeling-navigating-the-unknown/",
+            "description": "With scenario modeling, manufacturers are successfully navigating the unknown by financially quantifying impact of unplanned events.",
+            "source": "serpapi"
+          }
+        ],
+        "financialData": [
+          {
+            "title": "Annual Report 2024-25 | 1",
+            "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/e8c3a795-a7a7-4e1b-8ade-27f2441cac0d.pdf",
+            "description": "It is my privilege to present to you the 26th Annual Report of Palred Technologies Limited for the financial year 2024–25.",
+            "source": "serpapi"
+          },
+          {
+            "title": "Annual Report 2024-25",
+            "url": "https://nsearchives.nseindia.com/corporate/DABURIN_09072025180856_FAnnualreport.pdf",
+            "description": "the Business Responsibility and Sustainability Report for the financial year 2024-25. The aforesaid documents are being sent to the Shareholders ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Haripriya",
+            "url": "https://cdn-media.screener.in/concalls/700b0603-422a-4512-a1c8-9eb44047b4f4.pdf",
+            "description": "The reported EBITDA for Q3 '25 surged to Rs 29.4 crores, increasing by 44% on a year-on-year basis, and for the nine months, the reported EBITDA ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Zen Technologies Ltd share price | About ...",
+            "url": "https://www.screener.in/company/ZENTEC/consolidated/",
+            "description": "Zen Technologies · Mkt Cap: 11984 Crore (up 24.1% in 1 year) · Revenue: 835 Cr · Profit: 284 Cr · Company has high debtors of 154 days.",
+            "source": "serpapi"
+          },
+          {
+            "title": "Particulars Quarter ended 30th June 2024 Income ...",
+            "url": "https://cdn-media.screener.in/concalls/477d6735-c685-4021-85f2-cb4ac658ff77.pdf",
+            "description": "Quarter ended. 30th June 2024. Income. Revenue from operations. 48.64. Other Income. 2.78. I. Total Revenue.",
+            "source": "serpapi"
+          },
+          {
+            "title": "Z-Tech (India) Ltd",
+            "url": "https://www.screener.in/company/ZTECH/",
+            "description": "Z-Tech (India) · Mkt Cap: 786 Crore (down -9.07% in 1 year) · Revenue: 132 Cr · Profit: 25.2 Cr · Though the company is reporting repeated profits, ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "r YJol E)es ;",
+            "url": "https://cdn-media.screener.in/concalls/59876b63-b28b-4129-a73d-a9554cc4dfe7.pdf",
+            "description": "In fiscal year 2022, the company posted a strong 53% year-on-year growth in revenues to Rs. 206 crore as against Rs. 134.6 crore revenue posted ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Latest on stock market and finance in India and the world.",
+            "url": "https://trendlyne.com/sector-news/6/retailing/time/1/?qstime=1674865480&page=66",
+            "description": "Institutional Investors have increased holdings from 20.89% to 28.18% in Sep 2025 qtr. logo · Swiggy Ltd. 28 Nov 2024.",
+            "source": "serpapi"
+          },
+          {
+            "title": "The Baseline, Latest on stock market and finance in India ...",
+            "url": "https://trendlyne.com/pages/4481/THEBASELINE/the-baseline/?page=15&qstime=1755600095",
+            "description": "It had an estimated annual sales of $1.1 billion in the US as of September 2024. In Q2FY25, in-licence products made up 12% of Lupin's sales, down from 15% in ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Latest on stock market and finance in India and the world.",
+            "url": "https://trendlyne.com/sector-news/6/retailing/time/1/?qstime=1715830679&page=63",
+            "description": "Nuvama expects Aditya Vision to deliver strong revenue, Ebitda, and PAT growth over the next few years. ... The food delivery company's FY24 annual report ...",
+            "source": "serpapi"
+          }
+        ],
+        "competitors": [
+          {
+            "title": "2025 Market Forecasters' Report Card",
+            "url": "https://www.avantisinvestors.com/avantis-insights/market-forecasters-report-card/",
+            "description": "Explore the accuracy of 2025 S&P 500 forecasts and how they can inform the outlook for 2026. Read our recap of analyst estimates and market ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Hidden champions",
+            "url": "https://en.wikipedia.org/wiki/Hidden_champions",
+            "description": "... best unknown companies. The book ... Simon, Hermann: Hidden Champions of the 21st Century : Success Strategies of Unknown World Market Leaders.",
+            "source": "serpapi"
+          },
+          {
+            "title": "Zepto Business Model - How This Changed Quick Commerce",
+            "url": "https://www.42signals.com/blog/zepto-business-model-explained/",
+            "description": "The rivalry between Zepto vs Blinkit has been a primary driver of rapid innovation, aggressive expansion, and intense marketing spending in the ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Late starter Mukesh Ambani crashes quick commerce party ...",
+            "url": "https://m.economictimes.com/markets/stocks/news/late-starter-mukesh-ambani-crashes-quick-commerce-party-can-reliance-disrupt-blinkit-swiggy-zeptos-10-minute-game/articleshow/124776152.cms",
+            "description": "While Blinkit and Zepto burn capital to conquer metros, Reliance is quietly extending its reach into Tier-II and semi-urban markets, where it ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Asia Funding Limps Along, Hits Lowest Level Since 2015",
+            "url": "https://news.crunchbase.com/ai/asia-venture-42dot-hozon-zepto-china/",
+            "description": "Indian grocery delivery startup Zepto raised a $665 million round, doubling its valuation to $3.6 billion. China-based Unisoc, a ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Lessons from 500 of the World's Best Unknown Companies",
+            "url": "https://www.simon-kucher.com/en/insights/hidden-champions-lessons-500-worlds-best-unknown-companies",
+            "description": "Breadcrumb. Home · What We Think; Hidden Champions: Lessons From 500 of The World's Best Unknown Companies ... market leadership. It is a compelling wake-up ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Here Are 25 Billion-Dollar Companies You Haven't Heard ...",
+            "url": "https://www.entrepreneur.com/starting-a-business/here-are-25-billion-dollar-companies-you-havent-heard-of/346295",
+            "description": "... unknown to people outside their industries. To better understand how ... Reddit, Airbnb and Buzzfeed were the top three companies on the list.",
+            "source": "serpapi"
+          },
+          {
+            "title": "The Makers Top 100 ABN AMRO",
+            "url": "https://www.abnamro.com/en/news/hundred-relatively-unknown-manufacturing-companies-generate-100-billion",
+            "description": "A hundred relatively unknown manufacturing companies together generate nearly 100 billion euros in revenue.",
+            "source": "serpapi"
+          },
+          {
+            "title": "Top Zepto Alternatives, Competitors",
+            "url": "https://www.cbinsights.com/company/zepto-1/alternatives-competitors",
+            "description": "Explore Zepto's alternatives and competitors ... Zepto vs. Shadowfax. View more in-depth data on: Competitors; Products; Customer References and more. Compare ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "6 Best Zepto Alternatives & Competitors in 2026",
+            "url": "https://www.appsrhino.com/blogs/best-zepto-alternatives",
+            "description": "Zepto vs Competitors: Quick Comparison ; BigBasket. Same-day or scheduled. Wide grocery and household range ; Dunzo. Same-day delivery. Groceries, ...",
+            "source": "serpapi"
+          }
+        ],
+        "news": [
+          {
+            "title": "India's quick commerce company Zepto files for $1.22 ...",
+            "url": "https://www.reuters.com/world/india/indias-quick-commerce-company-zepto-files-122-billion-ipo-2025-12-29/",
+            "description": "Indian quick commerce company Zepto has filed for an initial public offering worth 110 billion rupees ($1.22 billion) through the confidential route, ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Zepto converts to public company ahead of planned IPO in ...",
+            "url": "https://www.moneycontrol.com/news/business/startup/zepto-converts-to-a-public-company-ahead-of-planned-ipo-in-2026-13713491.html",
+            "description": "Zepto converts to public company ahead of planned IPO in 2026. Zepto is aiming to IPO soon after Swiggy announced it is raising Rs 10,000 crore through a QIP ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Zepto raises $450M at $7B valuation as Indian quick- ...",
+            "url": "https://finance.yahoo.com/news/zepto-raises-450-million-7-101211041.html",
+            "description": "Indian quick-commerce startup Zepto said it has raised $400 million in a funding round led by a new investor, California Public Employees' Retirement System ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "India's Zepto changes branding of its quick commerce ...",
+            "url": "https://au.marketscreener.com/news/india-s-zepto-changes-branding-of-its-quick-commerce-operation-to-stop-promoting-it-as-10-minute-ce7e58d8dc8df527",
+            "description": "India's Zepto changes branding of its quick commerce operation to stop promoting it as \"10-minute\" service after government order - Co App.",
+            "source": "serpapi"
+          },
+          {
+            "title": "Zepto Sales Skyrocket 129% to ₹9669 Cr, Losses Widen ...",
+            "url": "https://www.whalesbook.com/news/69083793063c3cf834b9d9fc/Tech/Zepto-Sales-Skyrocket-129percent-to-indian-rupee9669-Cr-Losses-Widen-Amid-IPO-Rush/694eb444cde967caf6633efb",
+            "description": "Zepto has reported a significant 129% surge in total sales to ₹9,669 crore for FY25. However, net losses also widened to ₹3,367 crore as the quick commerce ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "After blockbuster Diwali sales, Zepto is all ready to list. But its ...",
+            "url": "https://www.youtube.com/watch?v=QwszvQnF6Eo",
+            "description": "India's quick-commerce poster child, Zepto, is racing to the public markets after a festive season high. The company clocked 20 lakh daily orders during ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Zepto Closes $450 Mn Funding, Takes Company Valuation ...",
+            "url": "https://www.entrepreneur.com/en-in/news-and-trends/zepto-closes-450-mn-funding-takes-company-valuation-to-7/498437",
+            "description": "Zepto Closes $450 Mn Funding, Takes Company Valuation to $7 Bn Aadit Palicha, CEO and Co-founder at Zepto, said that the company is now well settled in terms of ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Zepto to soon hit Dalal Street, files confidential draft papers ...",
+            "url": "https://indianstartupnews.com/news/zepto-to-soon-hit-dalal-street-files-confidential-draft-papers-for-over-13-billion-ipo-report-10951350",
+            "description": "The Aadit Palicha-led Zepto is planning to raise around Rs 11000 crore through fresh equity issuance, with the remaining portion comprising an offer for ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Zepto To File For $500 Million IPO Next Week; Details Inside",
+            "url": "https://www.timesnownews.com/business-economy/companies/zepto-to-file-for-500-million-ipo-next-week-details-inside-article-153300902",
+            "description": "Quick commerce firm Zepto is reportedly planning to launch an initial public offering (IPO) worth roughly $500 million in Mumbai, potentially as soon as next ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Zepto removes handling, surge fees from all orders after ...",
+            "url": "https://www.cnbctv18.com/business/companies/zepto-removes-handling-surge-fees-from-all-orders-after-450-million-funding-boost-19738908.htm",
+            "description": "Zepto removes handling, surge fees from all orders after $450 million funding boost. This new structure, part of their \"All New Zepto Experience\" initiative, ...",
+            "source": "serpapi"
+          }
+        ],
+        "crawledPages": [
+          {
+            "url": "https://www.moneycontrol.com/financials/swiggy/ratiosVI/SL24",
+            "title": "Swiggy Key Financial Ratios, Swiggy Financial Statement & Accounts",
+            "content": "Swiggy Ltd. BSE: 544285 | NSE: SWIGGY | Represents Equity.Intra - day transactions are permissible and normal trading is done in this category Series: EQ | ISIN: INE00H001014 | SECTOR: Online ServicesOnline Services Success Alert Please select a Day. Info Trade Portfolio Watchlist Portfolio | Watchlist Messages Set SMS Alert Open trading A/c Open trading A/c Swiggy Ltd. Swiggy Ltd. | BSE 326.65 -7.20 (-2.16%) | NSE 326.65 -7.30 (-2.19%) | Trade | Add Home Home News Markets Mutual Funds Commodities Property Personal Finance Portfolio Messages sme Live TV tv18 terminal quote Today's L/H 52 Wk L/H Circuit VWAP F&O Quote Historical Prices Pre Opening Session Prices charts Basic Advanced Technical Chart Technicals Moving Average Pivot Table Indicators Valuations Moving Averages Corp Action Board meetings AGM/EGM Dividends Bonus Splits Rights News All News Announcements Business Earnings Mgmt Interviews Advice Research reports Sector Financials Balance sheet Profit & Loss Quarterly Results Half Yearly Results Nine Months Results Yearly Results Cash Flows Ratios Capital Structure Financial Graphs Annual Report Directors report Chairman's speech Auditors report Shareholding SH Pattern MF holding Top Public SH Promoter H Bulk deals Large deals Peers Competition Data Bank Latest price Stock Performance Market Cap Net sales Net profit Total assets Fund Manager holdings Company Info Management History Background Location Listing Forum (0) BSE Live Feb 19, 16:01 326.65 -7.20 (-2.16%) Volume No Data Available 154,544 Prev. Close 333.85 Open Price 336.05 Bid Price (Qty.) 0.00 (0) Offer Price (Qty.) 0.00 (0) NSE Live Feb 19, 15:59 326.65 -7.30 (-2.19%) Volume No Data Available 5,700,612 Prev. Close 333.95 Open Price 333.95 Bid Price (Qty.) 0.00 (0) Offer Price (Qty.) 326.65 (556) × VWAP And Current Price Comparison Financials Result inNew Format Result inOld Format Standalone Consolidated Print/Copy to Excel : - Standalone - Profit & Loss Profit & Loss (New) Balance Sheet Balance Sheet (New) Cash Flows Cash Flows (New) Quarterly Half Yearly Nine Monthly Yearly Capital Structure Raw Materials Finished Goods Financial Ratios Financial Ratios (New) - Consolidated - Quaterly Half Yearly Nine Monthly Yearly Profit & Loss Profit & Loss (New) Balance Sheet Balance Sheet (New) Cash Flows Cash Flows (New) Financial Ratios Financial Ratios (New) Go Key Financial Ratios of Swiggy (in Rs. Cr.) Mar 25 Mar 24 Mar 23 Mar 22 Mar 21 Per Share Ratios Basic EPS (Rs.) -11.19 -8.60 -17.38 -229.00 -80.00 Diluted EPS (Rs.) -11.19 -8.60 -17.38 -229.00 -80.00 Cash EPS (Rs.) -10.68 -589.05 -1,366.15 -4,051.89 0.00 Book Value [ExclRevalReserve]/Share (Rs.) 52.52 -2,184.63 -2,165.08 -3,292.22 0.00 Book Value [InclRevalReserve]/Share (Rs.) 52.52 -2,184.63 -2,165.08 -3,292.22 0.00 Dividend / Share(Rs.) 0.00 0.00 0.00 0.00 0.00 Revenue from Operations/Share (Rs.) 38.47 2,119.86 1,751.34 3,952.33 0.00 PBDIT/Share (Rs.) -10.41 -547.45 -1,267.94 -2,813.56 0.00 PBIT/Share (Rs.) -10.85 -586.48 -1,316.00 -2,948.44 0.00 PBT/Share (Rs.) -11.12 -628.09 -1,414.21 -4,186.78 0.00 Net Profit/Share (Rs.) -11.12 -628.09 -1,414.21 -4,186.78 0.00 Profitability Ratios PBDIT Margin (%) -27.05 -25.82 -72.39 -71.18 -44.38 PBIT Margin (%) -28.19 -27.66 -75.14 -74.60 -54.48 PBT Margin (%) -28.89 -29.62 -80.75 -105.93 -65.41 Net Profit Margin (%) -28.89 -29.62 -80.75 -105.93 -65.41 Return on Networth / Equity (%) -21.16 0.00 0.00 0.00 -59.46 Return on Capital Employed (%) -20.35 -19.09 -34.86 -20.59 -40.89 Return on Assets (%) -17.23 -17.47 -32.73 -26.52 -40.03 Total Debt/Equity (X) 0.00 0.00 0.00 0.00 0.04 Asset Turnover Ratio (%) 0.69 0.57 0.36 0.41 0.00 Liquidity Ratios Current Ratio (X) 2.50 3.55 4.29 8.34 3.23 Quick Ratio (X) 2.50 3.54 4.29 8.33 3.22 Inventory Turnover Ratio (X) 2,611.39 10.86 13.79 8.74 0.00 Dividend Payout Ratio (NP) (%) 0.00 0.00 0.00 0.00 0.00 Dividend Payout Ratio (CP) (%) 0.00 0.00 0.00 0.00 0.00 Earnings Retention Ratio (%) 0.00 0.00 0.00 0.00 0.00 Cash Earnings Retention Ratio (%) 0.00 0.00 0.00 0.00 0.00 Valuation Ratios Enterprise Value (Cr.) 72,810.14 0.00 0.00 0.00 0.00 EV/Net Operating Revenue (X) 8.28 0.00 0.00 0.00 0.00 EV/EBITDA (X) -30.59 0.00 0.00 0.00 0.00 MarketCap/Net Operating Revenue (X) 8.58 0.00 0.00 0.00 0.00 Retention Ratios (%) 0.00 0.00 0.00 0.00 0.00 Price/BV (X) 6.28 0.00 0.00 0.00 0.00 Price/Net Operating Revenue 8.58 0.00 0.00 0.00 0.00 Earnings Yield -0.03 0.00 0.00 0.00 0.00 Source : Dion Global Solutions Limited Results of Swiggy News Results Estimates Analysis 19.02.2026 Swiggy shuts down Snacc as 10-minute food delivery becomes less profitable 14.02.2026 Zepto to run dark store inside Bharat Mandapam for India AI Summit; Swiggy to support food deliveries 14.02.2026 China, US to send ministerial delegations to India AI Impact Summit 12.02.2026 Eternal, Swiggy shares fall up to 3% as IPO-bound Flipkart likely to foray into food delivery 30.01.2026 Swiggy Consolidated December 2025 Net Sales at Rs 6,148.00 crore, up 53.97% Y-o-Y 30.01.2026 Swiggy Standalone December 2025 Net Sales at Rs 3,166.00 crore, up 37.78% Y-o-Y 29.01.2026 Swiggy Q3 results: Net loss widens to Rs 1,065 crore, revenue rises 54% 10.11.2025 Swiggy Standalone September 2025 Net Sales at Rs 3,000.00 crore, up 39.79% Y-o-Y 01.01.1970 04.12.2024 Swiggy dishes out strong numbers in Q2 FY25 Results of Online Services Sector News Results Estimates Analysis 01.01.1970 01.01.1970 01.01.1970 01.01.1970 Quick links News Business Earnings Mgmt Interviews Announcements Stock Views Brokerage Reports Sector Corporate Action Board Meetings AGM/EGM Bonus Rights Splits Dividends Information Company History Listing Info Locations Bulk Deals Large Deals Shareholding MF Holding Top Shareholders Promoter Holding Financials Balance Sheet Profit & Loss Quarterly Results Half Yearly Results Nine Monthly Results Yearly Results Cash Flow Ratios Annual Report Directors Report Chairman's Speech Auditors Report Notes to Accounts Finished Goods Raw Materials Background Board of Directors Capital Structure Peer Comparison Competition Price Price Performance Market Cap Net Sales Net Profit Total Assets Historical Prices Price of SBI on previous budgets Related Searches Swiggy Stock Price | Swiggy Stock Quote | Swiggy Results | Swiggy News | View All Related Searches",
+            "crawledAt": "2026-02-19T17:39:47.067Z",
+            "sourceType": "financial"
+          },
+          {
+            "url": "https://www.screener.in/company/ZENTEC/consolidated/",
+            "title": "Zen Technologies Ltd share price | About Zen Technologies | Key Insights - Screener",
+            "content": "Zen Technologies Ltd ₹ 1,327 -0.47% 19 Feb - close price Export to Excel Follow zen.in BSE: 533339 NSE: ZENTEC About Zen Technologies Limited was incorporated in 1996. The company designs develop and manufacture combat training solutions and Counter-drone solutions for defense and security forces. It is actively involved in the indigenization of technologies, which are beneficial to Indian armed forces, state police forces, and paramilitary forces. Zen Technologies is headquartered in Hyderabad, India with offices in India, UAE, and the USA. [1] [2] [3] Key Points Market Position The company is the largest supplier of simulation training equipment and anti-drone systems in India. It has shipped 1,000+ training systems around the world. [1] [2] Read More Website BSE NSE Market Cap ₹ 11,984 Cr. Current Price ₹ 1,327 High / Low ₹ 2,268 / 984 Stock P/E 45.7 Book Value ₹ 199 Dividend Yield 0.15 % ROCE 37.2 % ROE 26.1 % Face Value ₹ 1.00 Add ratio to table Edit ratios 1M 6M 1Yr 3Yr 5Yr 10Yr Max Price PE Ratio Hidden More Sales & Margin EV / EBITDA Price to Book Market Cap / Sales Alerts Pros Company is almost debt free.Company has delivered good profit growth of 36.6% CAGR over last 5 yearsCompany has a good return on equity (ROE) track record: 3 Years ROE 25.5%Company's median sales growth is 27.6% of last 10 years Cons Company has high debtors of 154 days.Promoter holding has decreased over last 3 years: -11.7% * The pros and cons are machine generated. Pros / cons are based on a checklist to highlight important points. Please exercise caution and do your own analysis. Peer comparison Industrials Capital Goods Aerospace & Defense Aerospace & Defense Part of BSE 500 BSE Capital Goods Nifty 500 Nifty Smallcap 100 BSE Allcap BSE Industrials BSE 250 SmallCap Index BSE 400 MidSmallCap Index Nifty MidSmallcap 400 Nifty Smallcap 250 Nifty 500 Multicap 50:25:25 Nifty Total Market Nifty India Defence Nifty500 Equal Weight show all Edit Columns Loading peers table ... Detailed Comparison with: Quarterly Results Consolidated Figures in Rs. Crores / View Standalone Dec 2022 Mar 2023 Jun 2023 Sep 2023 Dec 2023 Mar 2024 Jun 2024 Sep 2024 Dec 2024 Mar 2025 Jun 2025 Sep 2025 Dec 2025 Sales + 52 96 132 66 100 141 255 242 152 325 158 174 178 Expenses + 36 61 64 48 57 91 143 162 108 187 94 109 111 Operating Profit 17 35 69 19 42 50 111 80 44 138 64 65 67 OPM % 32% 37% 52% 29% 43% 36% 44% 33% 29% 42% 41% 37% 37% Other Income + 4 -0 3 5 4 5 3 8 22 25 22 26 16 Interest 2 1 0 1 1 1 1 2 3 4 3 2 3 Depreciation 2 2 2 2 3 3 3 4 4 5 6 6 6 Profit before tax 17 33 69 22 44 52 110 82 59 154 76 83 73 Tax % 30% 29% 30% 37% 32% 27% 28% 23% 28% 26% 30% 26% 24% Net Profit + 12 23 48 14 30 38 79 63 43 114 53 62 56 EPS in Rs 1.19 2.54 5.60 1.82 3.64 4.16 9.14 6.94 4.40 11.19 5.29 6.58 6.07 Raw PDF Profit & Loss Consolidated Figures in Rs. Crores / View Standalone Related Party Mar 2013 Mar 2014 Mar 2015 Mar 2016 Mar 2017 Mar 2019 Mar 2020 Mar 2021 Mar 2022 Mar 2023 Mar 2024 Mar 2025 TTM Sales + 37 46 79 53 62 92 149 55 70 219 440 974 835 Expenses + 33 46 58 48 50 76 87 47 65 146 259 591 501 Operating Profit 5 1 21 4 11 17 63 7 5 73 181 382 333 OPM % 12% 1% 27% 8% 18% 18% 42% 14% 7% 33% 41% 39% 40% Other Income + 5 4 3 5 4 3 2 3 5 9 17 58 88 Interest 2 2 2 2 2 5 3 1 2 4 2 19 12 Depreciation 2 2 2 4 4 4 5 5 5 6 10 15 23 Profit before tax 6 0 20 3 9 11 57 4 3 72 186 406 386 Tax % 15% 25% 21% 21% 20% -19% -3% 36% 21% 30% 30% 26% Net Profit + 5 0 16 2 7 13 59 3 3 50 130 299 284 EPS in Rs 0.53 0.01 2.04 0.30 0.93 1.73 7.62 0.39 0.25 5.38 15.22 31.04 29.13 Dividend Payout % 19% 1,103% 17% 33% 16% 17% 5% 26% 40% 4% 7% 6% Compounded Sales Growth 10 Years: 29% 5 Years: 46% 3 Years: 141% TTM: 6% Compounded Profit Growth 10 Years: 33% 5 Years: 37% 3 Years: 411% TTM: 23% Stock Price CAGR 10 Years: 34% 5 Years: 73% 3 Years: 74% 1 Year: 24% Return on Equity 10 Years: % 5 Years: 21% 3 Years: 26% Last Year: 26% Balance Sheet Consolidated Figures in Rs. Crores / View Standalone Corporate actions Mar 2013 Mar 2014 Mar 2015 Mar 2016 Mar 2017 Mar 2019 Mar 2020 Mar 2021 Mar 2022 Mar 2023 Mar 2024 Mar 2025 Sep 2025 Equity Capital 9 8 8 8 8 8 8 8 8 8 8 9 9 Reserves 98 91 103 105 112 127 183 196 275 308 440 1,692 1,788 Borrowings + 13 18 40 41 11 42 3 2 15 7 6 78 18 Other Liabilities + 5 12 27 14 15 42 20 17 71 151 296 271 235 Total Liabilities 126 128 177 167 146 218 214 223 369 474 750 2,049 2,049 Fixed Assets + 29 49 47 44 45 63 73 70 67 75 93 208 218 CWIP 3 1 0 15 17 0 0 0 3 2 11 7 8 Investments 0 0 0 0 0 8 2 2 2 2 0 4 8 Other Assets + 94 78 130 108 84 147 139 152 297 394 646 1,830 1,814 Total Assets 126 128 177 167 146 218 214 223 369 474 750 2,049 2,049 Cash Flows Consolidated Figures in Rs. Crores / View Standalone Mar 2013 Mar 2014 Mar 2015 Mar 2016 Mar 2017 Mar 2019 Mar 2020 Mar 2021 Mar 2022 Mar 2023 Mar 2024 Mar 2025 Cash from Operating Activity + 39 10 -20 0 0 -49 62 6 -44 116 13 -146 Cash from Investing Activity + -3 -8 -4 0 0 13 -12 -10 -44 -4 -85 -823 Cash from Financing Activity + -20 -7 20 0 0 5 -12 9 88 -22 -3 1,007 Net Cash Flow 15 -5 -4 0 0 -32 38 5 0 91 -75 37 Ratios Consolidated Figures in Rs. Crores / View Standalone Mar 2013 Mar 2014 Mar 2015 Mar 2016 Mar 2017 Mar 2019 Mar 2020 Mar 2021 Mar 2022 Mar 2023 Mar 2024 Mar 2025 Debtor Days 127 90 276 56 121 290 114 124 166 142 153 154 Inventory Days 212 295 225 242 237 496 137 609 693 305 523 118 Days Payable 55 63 47 52 92 114 44 132 109 42 99 25 Cash Conversion Cycle 284 322 455 246 265 672 206 601 750 406 577 247 Working Capital Days 134 45 119 -66 187 191 191 535 629 115 158 148 ROCE % 6% 2% 16% 3% 8% 32% 3% 2% 23% 46% 37% Shareholding Pattern Numbers in percentages Quarterly Yearly Trades Mar 2023Jun 2023Sep 2023Dec 2023Mar 2024Jun 2024Sep 2024Dec 2024Mar 2025Jun 2025Sep 2025Dec 2025 Promoters + 60.14% 57.45% 57.45% 55.07% 55.07% 55.07% 51.26% 49.05% 49.05% 49.05% 48.51% 48.51% FIIs + 1.29% 3.47% 4.84% 4.65% 3.84% 3.09% 5.72% 8.29% 5.95% 6.04% 5.94% 5.54% DIIs + 0.15% 0.21% 0.15% 3.09% 3.31% 3.37% 8.05% 8.97% 9.47% 8.75% 7.93% 7.86% Public + 37.82% 38.11% 36.80% 36.42% 37.15% 37.94% 34.49% 33.24% 35.10% 35.72% 37.20% 37.67% Others + 0.61% 0.76% 0.76% 0.76% 0.62% 0.53% 0.47% 0.46% 0.44% 0.43% 0.42% 0.41% No. of Shareholders 1,08,4201,27,2081,59,7661,61,9951,70,4212,01,2112,29,4792,37,7332,83,2893,11,9483,25,9783,30,378 Mar 2017Mar 2018Mar 2019Mar 2020Mar 2021Mar 2022Mar 2023Mar 2024Mar 2025Dec 2025 Promoters + 59.44% 59.44% 59.49% 59.56% 60.19% 60.19% 60.14% 55.07% 49.05% 48.51% FIIs + 0.11% 0.12% 0.01% 0.00% 0.01% 0.29% 1.29% 3.84% 5.95% 5.54% DIIs + 0.08% 0.18% 0.08% 0.24% 0.00% 0.00% 0.15% 3.31% 9.47% 7.86% Public + 40.36% 40.25% 40.42% 40.20% 39.80% 39.52% 37.82% 37.15% 35.10% 37.67% Others + 0.00% 0.00% 0.00% 0.00% 0.00% 0.00% 0.61% 0.62% 0.44% 0.41% No. of Shareholders 10,76111,49411,79411,74534,2331,14,7051,08,4201,70,4212,83,2893,30,378 * The classifications might have changed from Sep'2022 onwards. The new XBRL format added more details from Sep'22 onwards. Classifications such as banks and foreign portfolio investors were not available earlier. The sudden changes in FII or DII can be because of these changes. Click on the line-items to see the names of individual entities. Documents Announcements Recent Important Search All Announcement under Regulation 30 (LODR)-Press Release / Media Release 1h - Zen Technologies assigned Dun & Bradstreet 5A1 rating; consolidated order book > ₹1,400 crore; 200+ patents. Announcement under Regulation 30 (LODR)-Allotment of ESOP / ESPS 11 Feb - Transfer of equity shares pursuant to the exercise of options granted under the Zen Technologies Limited Employee Stock Option Plan 2021 Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation 11 Feb Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Outcome 6 Feb - Q3 FY2026: Revenue Rs177.8Cr, PAT Rs55.7Cr; order book Rs1,427Cr; cash Rs1,188Cr. Announcement under Regulation 30 (LODR)-Monitoring Agency Report 4 Feb - CRISIL MA report on QIP utilization quarter ended Dec 31, 2025; Rs97,950.77 lakh net proceeds; Rs28,219.33 lakh unutilized Annual reports Financial Year 2025 from bse Financial Year 2024 from bse Financial Year 2023 from bse Financial Year 2022 from bse Financial Year 2021 from bse Financial Year 2020 from bse Financial Year 2019 from bse Financial Year 2018 from bse Financial Year 2017 from bse Financial Year 2016 from bse Financial Year 2015 from bse Financial Year 2014 from bse Financial Year 2013 from bse Financial Year 2012 from bse Financial Year 2011 from bse Credit ratings Rating update 5 Aug 2025 from crisil Rating update 27 Jan 2025 from crisil Rating update 1 Nov 2023 from crisil Rating update 27 Oct 2023 from crisil Rating update 23 Nov 2022 from crisil Rating update 4 Oct 2022 from crisil Concalls Add Missing Feb 2026 Transcript AI Summary PPT Oct 2025 Transcript AI Summary PPT REC Aug 2025 Transcript AI Summary PPT REC May 2025 Transcript AI Summary PPT REC Feb 2025 Transcript AI Summary PPT Nov 2024 Transcript AI Summary PPT REC Aug 2024 Transcript AI Summary PPT May 2024 Transcript AI Summary PPT Feb 2024 Transcript AI Summary PPT Feb 2024 Transcript AI Summary PPT REC Jan 2024 Transcript AI Summary PPT REC Nov 2023 Transcript AI Summary PPT Sep 2023 Transcript AI Summary PPT Aug 2023 Transcript AI Summary PPT May 2023 Transcript AI Summary PPT REC Jan 2023 Transcript AI Summary PPT Nov 2022 Transcript AI Summary PPT Jul 2022 Transcript AI Summary PPT May 2022 Transcript AI Summary PPT Jan 2022 Transcript AI Summary PPT Nov 2021 Transcript AI Summary PPT Sep 2021 Transcript AI Summary PPT Jul 2021 Transcript AI Summary PPT May 2021 Transcript AI Summary PPT Feb 2021 Transcript AI Summary PPT Feb 2021 Transcript AI Summary PPT Aug 2020 Transcript AI Summary PPT Jun 2020 Transcript AI Summary PPT Sep 2019 Transcript AI Summary PPT Aug 2015 Transcript AI Summary PPT",
+            "crawledAt": "2026-02-19T17:39:48.402Z",
+            "sourceType": "official"
+          },
+          {
+            "url": "https://trendlyne.com/sector-news/6/retailing/time/1/?qstime=1674865480&page=66",
+            "title": "Trendlyne Blog: , Latest on stock market and finance in India and the world.\n    \n\n    \n        - page 66",
+            "content": "",
+            "crawledAt": "2026-02-19T17:39:50.930Z",
+            "sourceType": "news"
+          },
+          {
+            "url": "https://retail.economictimes.indiatimes.com/news/e-commerce/e-tailing/zeptos-losses-widen-177-pc-in-fy25-to-rs-3367-3-crore/126199778",
+            "title": "Zepto Reports 177% Increase in Losses to Rs 3,367.3 Crore in FY25 Despite Doubling Sales, ETRetail",
+            "content": "E-tailing 2 min read Zepto's losses widen 177 pc in FY25 to Rs 3,367.3 crore Quick commerce company Zepto saw its losses widen significantly in the financial year 2024-25 (FY25) even as its sales more than doubled. IANS Published On Dec 27, 2025 at 10:18 AM IST Read by 100 Professionals Copy Link Share on WhatsApp Share on Linkedin Share on X Share on Telegram Share on Facebook Aadit Palicha and Kaivalya Vohra, cofounders, Zepto Mumbai: Quick commerce company Zepto saw its losses widen significantly in the financial year 2024-25 (FY25) even as its sales more than doubled.According to the company's audited financial statements, Zepto reported total sales of Rs 9,668.8 crore in FY25, a sharp jump of 129 per cent from Rs 4,223.9 crore in FY24.However, its net loss expanded much faster, rising 177 per cent year-on-year (YoY) to Rs 3,367.3 crore, compared with a loss of Rs 1,214.7 crore in the previous year.The widening losses reflect the intense spending required to expand operations, add dark stores and attract customers in a market where competition has heated up considerably. Advt In FY25, Zepto's losses amounted to around 35 per cent of its turnover, up from about 29 per cent in FY24.In the quick commerce business, companies typically recognise only about 15-20 per cent of gross merchandise value as revenue.Based on this, Zepto's operational revenue for FY25 is estimated to be between Rs 1,495 crore and Rs 1,994 crore, even though it reported close to Rs 10,000 crore in total sales including other income.Competitive pressure has intensified further after FY25 and continued into the first and second quarters of FY26.Major players have continued aggressive expansion by adding more dark stores, increasing delivery capacity and offering high customer incentives.The competition escalated further after Zepto raised $450 million, prompting rivals to speed up their own expansion plans to protect market share.Analysts tracking the sector have said this phase has kept margins under heavy pressure despite rapid growth in demand.The FY25 performance also comes at a time when Zepto is preparing to enter the public markets. The company is set to confidentially file its draft IPO papers on December 26.Alongside this, Zepto has made changes at the board level. Founders Aadit Palicha and Kaivalya Vohra, along with chief financial officer Ramesh Bafna, have been appointed as whole-time directors after shareholder approval at an extraordinary general meeting held on December 23. Advt --IANSpk> IANS Published On Dec 27, 2025 at 10:18 AM IST See more on: Zepto losses FY25, Zepto sales growth, Zepto financial results, Zepto IPO filing, Zepto competition analysis Telegram Facebook Copy Link Comments What are your thoughts? Comment Now Read Comment (1) All Comments By commenting, you agree to the Prohibited Content Policy Post By commenting, you agree to the Prohibited Content Policy Post Find this Comment Offensive? Choose your reason below and click on the submit button. This will alert our moderators to take actions REASONS FOR REPORTING Foul Language Defamatory Inciting hatred against a certain community Out of Context / Spam Others Report Join the community of 2M+ industry professionals. Subscribe to Newsletter to get latest insights & analysis in your inbox. All about ETRetail industry right on your smartphone! Download the ETRetail App and get the Realtime updates and Save your favourite articles.",
+            "crawledAt": "2026-02-19T17:39:53.250Z",
+            "sourceType": "financial"
+          },
+          {
+            "url": "https://wwipl.com/unlisted-shares/zepto-private-share-price/financial",
+            "title": "Zepto Annual Report | Balance Sheet | Financials | Revenue",
+            "content": "Unlisted Deals: × BUY SELL Zepto Annual Reports, Balance Sheet and Financials Last Traded Price 57.00 + 0.00 % Send to × Submit Close Zepto Private Limited (Zepto) Return Comparision with Primex 40 Index Periods 1 Week 1 Month 3 Months 6 Months 1 Year 3 Years All Time Primex-40 Zepto Private Limited Overview Balance Sheet P&L Account Cash Flow Financial Ratios Dividend History Zepto Private Limited Consolidated Balance Sheet (Rs. In Millions) Particulars 31-03-2024 31-03-2023 Non-Current Assets Property, plant and equipment 1,457.05 1,064.69 Capital Work in progress 2.45 1.87 Other Intangible assets 3,222.66 1,906.90 Intangible assets under development - 17.79 Other non-current financial assets 489.11 252.94 Other non-current assets 172.13 121.93 Current Assets Inventories 1,265.47 1,577.33 Current Investments - 748.17 Trade receviables, current 3,236.85 708.17 Cash and cash equivalents 3,982.85 177.34 Bank balances other than above 2,941.00 6,130.00 Other current financial assets 206.54 255.71 Other current assets 2,348.89 1,811.99 Total Assets 19,325.00 14,774.83 Equity Equity share capital 95.11 84.28 Other Equity 6,334.74 6,376.62 Non-current Liabilities Borrowings 567.32 469.28 Other non-current financial liabilities 2,864.66 1,477.35 Provisions 125.77 38.07 Current Liabilities Borrowings 1,069.00 740.00 Trade payables 5,738.89 3,537.95 Other current finacial liabilities 2,142.66 1,799.75 Other current liabilities 220.85 180.28 Provisions 166.00 71.34 Total Equity and Liabilities 19,325.00 14,774.83 Zepto Private Limited Consolidated Profit & Loss (Rs. In Millions) Particulars 31-03-2024 31-03-2023 Income Revenue from Operations 44,545.16 20,256.96 Other Income 440.57 519.05 Total Income 44,985.73 20,776.01 Expenses Purchase of stock in trade 34,498.29 19,530.26 Changes in inventories 311.86 -896.30 Employee benefit expenses 4,262.59 2,634.47 Finance costs 568.60 430.61 Depreciation, depletion & amortisation expenses 1,209.80 675.88 Other Expenses 16,620.99 11,125.95 Total Expenses 57,472.13 33,500.87 Profit Before Tax -12,486.40 -12,724.86 Total Profit/(Loss) for period -12,486.40 -12,724.86 Total Other comprehensive income -39.64 4.32 Total Comprehensive Income -12,526.04 -12,720.54 Earnings per share Basic -1,416.49 -1,695.21 Diluted -1,416.49 -1,695.21 Zepto Private Limited Consolidated Cash Flow Statement (Rs. In Millions) Particulars 31-03-2024 31-03-2023 Cash Flow from Operating Activities Profit before tax -12,486.40 -12,724.86 Adjustments For: Adjustments for decrease (increase) in inventories 311.86 -896.30 Adjustments for decrease (increase) in trade receivables, current -2,528.68 -560.87 Adjustments for decrease (increase) in other current assets -563.28 -160.40 Adjustments for other financial assets, non-current -137.49 114.56 Adjustments for other financial assets, current 21.12 -682.63 Adjustments for other bank balances 23.44 16.33 Adjustments for increase (decrease) in trade payables, current 2,200.15 1,797.42 Adjustments for increase (decrease) in other current liabilities 40.75 118.89 Adjustments for depreciation and amortisation expense 1,209.80 675.88 Adjustments for provisions, current 192.52 170.90 Adjustments for other financial liabilities, current -535.96 1,128.83 Adjustments for other financial liabilities, non-current 33.55 60.13 Adjustments for unrealised foreign exchange losses gains 0.79 0.05 Adjustments for interest income -263.83 95.84 Adjustments for share-based payments 737.55 309.97 Adjustments for fair value losses (gains) 79.82 0.00 Total adjustments for reconcile profit (loss) 1,349.77 1,996.92 Net cash flows from (used in) operations -11,136.63 -10,727.94 Income taxes paid (refund) -4.87 108.38 Other inflows (outflows) of cash -183.03 13.30 Net cash flows from (used in) operating activities -11,314.79 -10,823.02 Cash Flow from Investing Activities Proceeds from sales of property, plant and equipment 1.98 0.75 Purchase of property, plant and equipment 1,024.87 625.32 Proceeds from sales of investment property 32,385.15 1,050.00 Purchase of investment property 31,510.79 1,794.81 Interest received 278.75 413.44 Other inflows (outflows) of cash 3,100.39 -6,306.38 Net cash flows from (used in) investing activities 3,230.61 -7,262.32 Cash Flow from Financing Activities Proceeds from issuing shares - 0.02 Proceeds from issuing other equity instruments 12,494.99 15,895.00 Proceeds from issuing debentures notes bonds etc 427.04 1,209.28 Payments of lease liabilities 853.89 501.05 Interest paid 178.45 172.66 Net cash flows from (used in) financing activities 11,889.69 16,430.59 Net increase (decrease) in cash and cash equivalents before effect of exchange rate changes 3,805.51 -1,654.75 Net increase (decrease) in cash and cash equivalents 3,805.51 -1,654.75 Cash and cash equivalents at the end of period 3,982.85 177.34 Summary of the Cash Flow Statement for the years 2024 and 2023: Cash Flow from Operating Activities During FY 2023–24, the company reported a loss before tax of ₹12,486.40 million, slightly lower than the previous year’s loss of ₹12,724.86 million. The operating cash flow was significantly impacted by various working capital adjustments. There was an increase in trade receivables (₹2,528.68 million) and other current assets (₹563.28 million), both of which reduced cash flow. However, inventory decreased by ₹311.86 million, providing some positive inflow. Other favorable adjustments included a rise in trade payables (₹2,200.15 million) and depreciation & amortisation (₹1,209.80 million), indicating continued investment in tangible and intangible assets. Non-cash adjustments such as share-based payments (₹737.55 million) and fair value losses (₹79.82 million) also contributed positively to the reconciled profit. After considering these adjustments, net cash used in operations stood at ₹11,136.63 million. Following income tax payments of ₹4.87 million and other outflows of ₹183.03 million, the net cash outflow from operating activities totaled ₹11,314.79 million, indicating a substantial drain on cash from core business operations. Cash Flow from Investing Activities In FY 2023–24, Kiranakart’s investing activities reflected a net inflow of ₹3,230.61 million, a sharp turnaround from the outflow of ₹7,262.32 million in FY 2022–23. The company realized significant proceeds from the sale of investment property (₹32,385.15 million), which largely offset new purchases of investment property (₹31,510.79 million). Additional sources of inflow included interest received (₹278.75 million) and other investing inflows (₹3,100.39 million). These inflows outweighed outflows such as the purchase of property, plant, and equipment (₹1,024.87 million). Overall, the company managed to generate positive cash from its investment activities during the year, largely driven by asset sales and financial gains. Cash Flow from Financing Activities Financing activities provided a net inflow of ₹11,889.69 million in FY 2023–24, compared to ₹16,430.59 million in the prior year. The major source of financing cash was the issuance of other equity instruments (₹12,494.99 million), suggesting the company raised fresh funds from investors. It also generated ₹427.04 million from issuing debentures and bonds. However, there were outflows due to lease payments (₹853.89 million) and interest expenses (₹178.45 million). Despite being lower than last year’s financing inflows, this segment remains the primary contributor to cash generation, helping offset the large operational deficit. Net Change in Cash and Cash Equivalents Overall, Kiranakart Technologies experienced a net increase in cash and cash equivalents of ₹3,805.51 million in FY 2023–24, compared to a decrease of ₹1,654.75 million in FY 2022–23. This improvement was primarily due to strong financing inflows and positive investing results, despite the significant operational cash outflows. Consequently, the company’s cash balance at year-end stood at ₹3,982.85 million, up from ₹177.34 million in the previous year — a sign of improved liquidity management and access to financing during the period. Zepto Segment Revenue Zepto Annual Reports Zepto Standalone Annual Report 2023-2024 Download Zepto Consolidated Annual Report 2023-2024 Download Most Searched Unlisted & Pre IPO Companies Stocks in India Support Puja Support Ishika Support Purvi Copyright © 2026 Wealth Wisdom India Private Limited. All Rights Reserved. www.wwipl.com - v.2.0.0 You should check in on some of those fields below. × News Alert OK",
+            "crawledAt": "2026-02-19T17:39:54.544Z",
+            "sourceType": "official"
+          },
+          {
+            "url": "https://www.affluense.ai/company/zepto-financials-bcffec",
+            "title": "Zepto Financials 2025: Revenue, Profit, Valuation, Shareholding Pattern & Cap Table",
+            "content": "AFFLUENSE Zepto’s Financials, Revenue, Profit, Valuation & Shareholding Overview (2025)Legal Name: Kiranakart Wholesale Private Limited | CIN: U51909MH2022PTC381370 Introduction Zepto, a trailblazer in the Indian quick-commerce sector, was founded in 2020 by Aadit Palicha and Kaivalya Vohra . Headquartered in Bengaluru, Zepto has revolutionized urban grocery delivery by promising 10-minute fulfillment. The company leverages a network of strategically located dark stores, efficient last-mile logistics, and a robust tech stack to deliver products in record time. Zepto has attracted significant investor interest and positioned itself as a serious contender in India’s growing e-grocery market. With rapid scaling, a youthful team, and operational intensity, Zepto continues to redefine consumer expectations for convenience and speed. Despite operating in a highly competitive and cost-intensive market, Zepto’s aggressive growth trajectory and frequent funding rounds signal strong confidence from venture capitalists and a maturing business model aimed at long-term sustainability. Company Snapshot & Financials FY23 Founding Year 2020 Headquarters Bengaluru, Karnataka, India Valuation 2023-08-25 00:00:00 Total Funding Data not publicly available Users 5 Employees UNICORN Revenue FY23 Data not publicly available Net Profit (PAT) Data not publicly available EBITDA Margin Data not publicly available ROCE Data not publicly available Funding History Round Date Amount Valuation Investors Series G Nov 21, 2024 $350,000,000 N/A Motilal Oswal Private Wealth, Motilal Oswal Asset Management Company, Claypond Capital... Series G Aug 29, 2024 $340,000,000 N/A General Catalyst, Epiq Capital Advisors, StepStone Group... Series F Jun 21, 2024 $665,000,000 $3,600,000,000 avra, Glade Brook Capital, Nexus Venture Partners... Series E Nov 07, 2023 $31,250,000 N/A Goodwater Capital, Nexus Venture Partners, Mangum... Series E Aug 25, 2023 $200,000,000 $1,400,000,000 StepStone Group, Goodwater Capital, Nexus Venture Partners... Revenue and Profit Trends Zepto has seen rapid growth over the past three years, with revenue climbing from ₹50 Cr in FY21 to a projected ₹700 Cr in FY23. Despite impressive top-line momentum, the company continues to report substantial losses, indicating aggressive customer acquisition and operational expansion strategies. Net losses deepened to ₹250 Cr in FY23. The widening gap between revenue and profit suggests high burn rates, likely tied to logistics, warehousing, and workforce expansion. While profitability remains elusive, the rising revenue base reflects strong demand and a scalable delivery model. Zepto may focus on unit economics next to narrow its losses. Expense Efficiency & Margins Zepto’s EBITDA margin has consistently remained negative, ranging from -25% to -35% over the last three fiscal years. Its expense-to-revenue ratio has hovered around 1.3–1.4x, indicating high operational costs relative to income. These numbers underline the capital-intensive nature of quick commerce businesses. The slight fluctuations suggest early efforts toward efficiency, but the cost of last-mile delivery, warehousing, and marketing remain substantial contributors to the margin gap. Achieving breakeven may depend on increasing average order values and optimizing delivery logistics. Reducing CAC (customer acquisition cost) and improving fulfillment density are likely on Zepto’s roadmap for margin improvement. Employee Trend & Insights Zepto’s team has expanded from around 500 employees in FY21 to nearly 1,300 in FY23. This sharp rise in headcount aligns with its national expansion strategy and the build-out of its dark store infrastructure. A growing workforce supports its 10-minute delivery promise, especially in Tier-1 cities. However, such rapid scale also brings challenges in operational efficiency, training, and retention. The company likely includes gig-based delivery partners in this count. Human resource investments appear necessary for fulfillment quality, though balancing automation and manpower will be key to long-term scalability. The hiring pace may moderate once key metro hubs are stabilized. Strategic Growth, Plans & IPO Continues expanding its dark store footprint across India. Focus on Tier-1 cities with plans for Tier-2/3 penetration. Investing in tech and data science for logistics optimization. IPO discussions reportedly underway for 2025 or later. Exploring private labels and high-frequency SKUs to boost margins. Latest News In May 2024, Zepto raised $200 million in a pre-IPO round led by StepStone Group, boosting its valuation to over $1.4 billion. The company also announced aggressive hiring and warehouse expansion across Delhi and Mumbai. Additionally, Zepto launched a premium grocery line focused on organic produce, aligning with changing urban consumption trends. This move strengthens its offering against major competitors like Blinkit and Instamart. Reports suggest Zepto may file DRHP in late 2024 for a 2025 IPO. The startup is also testing express pharmacy delivery in select zones, hinting at vertical expansion opportunities beyond groceries. Overall Summary Metric Detail Employees 1300 ↑ — Indicates scaling & ops growth Revenue ₹700 Cr ↑ — Strong YoY growth PAT -₹250 Cr ↓ — Still in loss-making phase EBITDA Margin -35% ↓ — Cost-heavy model Strategic Investments Increased — Dark stores, tech, hiring IPO Status Expected 2025 — In prep stage Expansion Focus Metro + Tier-2/3 — Infra & geography Latest News $200M round — Pre-IPO boost Conclusion Zepto has emerged as a formidable player in the quick commerce space, with rapid revenue growth and strong investor backing. Though profitability remains a challenge, its aggressive infrastructure build-up and tech-led delivery model provide a strong foundation for scaling. With an IPO potentially on the horizon, Zepto's next milestones will likely focus on efficiency, customer retention, and margin improvement. Make smarter business decisions with verified insights on companies and directors. Visit Affluense.ai to learn more. Sources Crunchbase Inc42 VCCircle YourStory TechCrunch Disclaimer: © 2025. All information is curated from public and third-party sources and provided solely for legitimate business use. Please ensure proper authorization before use. The depth of information depends on what is publicly available and may vary between individuals.",
+            "crawledAt": "2026-02-19T17:39:57.428Z",
+            "sourceType": "financial"
+          },
+          {
+            "url": "https://www.scribd.com/document/845772190/Zepto-2024",
+            "title": "Zepto 2024 Financial Performance Summary | PDF | Revenue | Expense",
+            "content": "<iframe src=\"//www.googletagmanager.com/ns.html?id=GTM-KXQQWDG\" height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe> Skip to main contentOpen navigation menuClose suggestionsSearchSearchenChange LanguageUploadSign inSign in0 ratings0% found this document useful (0 votes)3K views4 pagesZepto 2024 Financial Performance SummaryZepto, a quick commerce retailer founded in 2020, experienced a remarkable 1362% revenue growth from FY22 to FY23, although its losses increased by 226%, highlighting challenges in achieving…Full descriptionUploaded byJyoti KushwahaAI-enhanced title and descriptionDownloadSaveSave Zepto 2024 For LaterShare0%0% found this document useful, undefined0%, undefinedPrintEmbedAsk AIReport0 ratings0% found this document useful (0 votes)3K views4 pagesZepto 2024 Financial Performance SummaryZepto, a quick commerce retailer founded in 2020, experienced a remarkable 1362% revenue growth from FY22 to FY23, although its losses increased by 226%, highlighting challenges in achieving profitability. The company raised ₹1910 crore in 2023, demonstrating strong investor confidence despite a competitive landscape with established players like Blinkit and Swiggy. As of January 2024, Zepto's workforce reached 1,656 employees, reflecting its focus on scaling operations amidst rising expenses.Read moreDownload0 ratings0% found this document useful (0 votes)3K views4 pagesZepto 2024 Financial Performance SummaryZepto, a quick commerce retailer founded in 2020, experienced a remarkable 1362% revenue growth from FY22 to FY23, although its losses increased by 226%, highlighting challenges in achieving…Full descriptionUploaded byJyoti KushwahaAI-enhanced title and descriptionDownloadSaveSave Zepto 2024 For LaterShare0%0% found this document useful, undefined0%, undefinedPrintEmbedAsk AIReportDownloadSave Zepto 2024 For LaterSearchFullscreenYou are on page 14 Share this documentShare on Facebook, opens a new windowShare on LinkedIn, opens a new windowShare with Email, opens mail clientCopy linkMillions of documents at your fingertips, ad-free Subscribe with a free trial 576648e32a3d8b82ca71961b7a986505",
+            "crawledAt": "2026-02-19T17:40:10.786Z",
+            "sourceType": "official"
+          },
+          {
+            "url": "https://x.com/Ashishkafunda/status/2004795367876165988",
+            "title": "",
+            "content": "<style> body { -ms-overflow-style: scrollbar; overflow-y: scroll; overscroll-behavior-y: none; } .errorContainer { background-color: #FFF; color: #0F1419; max-width: 600px; margin: 0 auto; padding: 10%; font-family: Helvetica, sans-serif; font-size: 16px; } .errorButton { margin: 3em 0; } .errorButton a { background: #1DA1F2; border-radius: 2.5em; color: white; padding: 1em 2em; text-decoration: none; } .errorButton a:hover, .errorButton a:focus { background: rgb(26, 145, 218); } .errorFooter { color: #657786; font-size: 80%; line-height: 1.5; padding: 1em 0; } .errorFooter a, .errorFooter a:visited { color: #657786; text-decoration: none; padding-right: 1em; } .errorFooter a:hover, .errorFooter a:active { text-decoration: underline; } #placeholder, #react-root { display: none !important; } body { background-color: #FFF !important; } </style> <div class=\"errorContainer\"> <svg role=\"img\" aria-label=\"X logo\" width=\"48\" height=\"48\" viewBox=\"0 0 128 128\" xmlns=\"http://www.w3.org/2000/svg\"> <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M86.8918 28.25H99.0219L72.5243 58.5334L103.698 99.75H79.285L60.1647 74.7536L38.2929 99.75H26.1627L54.5069 67.3565L24.5938 28.25H49.6199L66.9004 51.0974L86.8918 28.25ZM82.6337 92.4904H89.3555L45.9716 35.1301H38.7584L82.6337 92.4904Z\" fill=\"black\"/> </svg> <h1>JavaScript is not available.</h1> <p>We’ve detected that JavaScript is disabled in this browser. Please enable JavaScript or switch to a supported browser to continue using x.com. You can see a list of supported browsers in our Help Center.</p> <p class=\"errorButton\"><a href=\"https://help.x.com/using-x/x-supported-browsers\">Help Center</a></p> <p class=\"errorFooter\"> <a href=\"https://x.com/tos\">Terms of Service</a> <a href=\"https://x.com/privacy\">Privacy Policy</a> <a href=\"https://support.x.com/articles/20170514\">Cookie Policy</a> <a href=\"https://legal.twitter.com/imprint.html\">Imprint</a> <a href=\"https://business.twitter.com/en/help/troubleshooting/how-twitter-ads-work.html?ref=web-twc-ao-gbl-adsinfo&utm_source=twc&utm_medium=web&utm_campaign=ao&utm_content=adsinfo\">Ads info</a> © 2026 X Corp. </p> </div>Something went wrong, but don’t fret — let’s give it another shot.Try again Some privacy related extensions may cause issues on x.com. Please disable them and try again.",
+            "crawledAt": "2026-02-19T17:40:15.518Z",
+            "sourceType": "official"
+          },
+          {
+            "url": "https://medial.app/news/zepto-revenue-soars-25x-to-rs-11110-cr-in-fy25-e22f38e88e8f9",
+            "title": "Zepto revenue soars 2.5x to Rs 11,110 Cr in FY25 | Medial",
+            "content": "🚀 Medial Secures Investment on Shark Tank India - Fueling the Future of Professional Social Networking. 🔥 ✕ Home News Messages Startup Showcase Trackers Premium Premium Content Jobs Notifications Settings Try our Valuation Calculator → Log InNews on MedialZepto revenue soars 2.5x to Rs 11,110 Cr in FY25Entrackr · 6m ago Medial Zepto revenue soars 2.5x to Rs 11,110 Cr in FY25 Quick commerce unicorn Zepto clocked Rs 11,110 crore (nearly $1.3 billion) in turnover in FY25, a sharp 150% jump from Rs 4,454 crore in FY24, according to regulatory filings reviewed by Entrackr. Zepto’s FY25 performance comes on the back of aggressive execution and disciplined expansion. According to earlier Aadit Palicha’s post, the company was at $3 billion in annualized gross order value (GOV) and halved its losses over the last year. In FY24, Zepto incurred losses of Rs 1,248 crore on revenue of Rs 4,454 crore. That means the startup spent Rs 1.29 to earn every Rs 1 of revenue in FY24, a figure it has reportedly improved in FY25 with better unit economics, higher fill rates, and stronger contribution margins. We are not comparing Zepto's FY25 numbers with Instamart and Blinkit due to differences in their business models and accounting practices. However, the NOV (net order value) of Blinkit stood at Rs 22,731 crore in FY25, while Swiggy’s quick commerce biz Instamart GOV was recorded at Rs 14,600 crore in the same period. Zepto's founder Aadit Palicha did not comment on the story. As per a recent report, Zepto is in talks to raise $500 million at a potential $7 billion valuation, a significant jump from its previous valuation of $5 billion when it raised $350 million in November 2024. The fresh round is expected to bolster Zepto’s runway ahead of a potential IPO in 2026, as the company pushes toward EBITDA break-even in the next 12–15 months.View Source2Related NewsZepto raises fresh funds from Elcid Investment at $2.26 Bn valuationEntrackr · 6m ago Medial Zepto raises fresh funds from Elcid Investment at $2.26 Bn valuation Quick commerce platform Zepto raised Rs 7.5 crore from Elcid Investment at a valuation of Rs 19,231 crore ($2.26 billion), according to its stock exchange filing. This investment comes at a time when Zepto is reportedly in talks to raise $500 million at a valuation of $7 billion led by existing backers General Catalyst, Avenir and others. As per the filing, Elcid Investment is set to acquire 22,55,639 equity shares of Zepto at a price of Rs 33.23 per share, translating to a 0.039% equity stake in the company. According to Entrackr’s estimates, Zepto is now valued at Rs 19,231 crore (approximately $2.26 billion), reflecting a 50% drop from its previous $5 billion valuation during its $340 million fundraise in August last year. Zepto’s total turnover surged 2.5X to Rs 11,110 crore in FY25, up from Rs 4,454.5 crore in FY24. In FY23, the company reported a turnover of Rs 2,024.4 crore, marking a consistent doubling of revenue each fiscal year. Zepto recently completed its shift in domicile from Singapore to India as part of its preparations for a public listing, which has now reportedly been deferred to FY26. Zepto competes with other major quick commerce platforms, including Eternal-owned Blinkit, which reported Rs 2,400 crore in revenue for Q1 FY26, surpassing Eternal’s food delivery business. Meanwhile, rival Swiggy Instamart is yet to file its Q1 FY26 financials.View SourceNykaa posts Rs 33 Cr profit on Rs 2,346 Cr revenue in Q2 FY26Entrackr · 3m ago Medial Nykaa posts Rs 33 Cr profit on Rs 2,346 Cr revenue in Q2 FY26 Online beauty and fashion platform Nykaa has continued its strong growth in Q2 FY26, with its revenue from operations rising 25% year-on-year and profits surging 2.5X during the quarter ending September 2025. According to its financial statements sourced from the National Stock Exchange (NSE), Nykaa's revenue from operations grew to Rs 2,346 crore in Q2 FY26, compared to Rs 1,875 crore in Q2 FY25. On a half yearly basis, Nykaa’s operating revenue increased 24% to Rs 4,501 crore in H1 FY26 from Rs 3,621 crore in H1 FY25. The beauty segment accounted for 91% of the total revenue at Rs 2,132 crore, while the fashion segment contributed 8.7% of the operating income in the Q2 FY25. For Nykaa, the cost of materials constituted 56% of its total expenditure, rising to Rs 1,292 crore in Q2 FY26. Additional spending on employee benefits, finance, marketing, technology, and other overheads brought the company’s total costs to Rs 2,297 crore during the quarter. Steady growth in its scale helped Nykaa achieve 2.5X increase in profit to Rs 33 crore in Q2 FY26, compared to Rs 13 crore in Q2 FY25. For the six months ended September 2025, the company’s profit doubled to Rs 57 crore in H1 FY26 from Rs 27 crore in H1 FY25. At the close of today's trading session, Nykaa's stock was priced at Rs 246, giving the company a market capitalization of Rs 70,375 crore ($8 billion).View SourceNykaa posts Rs 2,061 Cr revenue in Q4 FY25, profit soars 90%Entrackr · 8m ago Medial Online beauty and fashion platform Nykaa reported strong growth in Q4 FY25, with its revenue from operations rising 24% year-on-year and profits surging 90% during the quarter ending March 2025. According to its consolidated financial statements sourced from the NSE, Nykaa's revenue from operations grew to Rs 2,061 crore in Q4 FY25, compared to Rs 1,667 crore in Q4 FY24. For the full fiscal year (FY25), Nykaa’s operating revenue increased 24% to Rs 7,950 crore in FY25 from Rs 6,386 crore in FY24. The beauty segment accounted for 92% of the total revenue at Rs 1,894 crore, while the fashion segment contributed 8% of the operating income in the last quarter. For Nykaa, the cost of materials constituted 57% of its total expenditure, rising to Rs 1,153 crore in Q4 FY25. Additional spending on employee benefits, finance, marketing, technology, and other overheads brought the company’s total costs to Rs 2,031 crore during the quarter. For the full fiscal year ending March 2025, the total expenses rose to Rs 7,850 crore. Steady growth in its scale helped Nykaa achieve a 90% increase in profit to Rs 19 crore in Q4 FY25, compared to Rs 10 crore in Q4 FY24. For FY25, the firm’s profit stood at Rs 74 crore in FY25 from Rs 44 crore in FY24. At the close of today's trading session, Nykaa's stock was priced at Rs 200.8, giving the company a market capitalization of Rs 57,406 crore.View SourceNykaa posts Rs 2,873 Cr revenue in Q3 FY26; profit jumps 2.5XEntrackr · 14d ago Medial Nykaa posts Rs 2,873 Cr revenue in Q3 FY26; profit jumps 2.5X Online beauty and fashion platform Nykaa reported strong growth in Q3 FY26. Revenue from operations rose 27% year on year, while profit jumped 2.5X in the quarter ended December 2025. According to its financial statements sourced from the National Stock Exchange (NSE), Nykaa's revenue from operations grew to Rs 2,873 crore in Q3 FY26, compared to Rs 2,267 crore in Q3 FY25. For the nine-month period, Nykaa’s operating revenue increased 25% to Rs 7,374 crore from Rs 5,888 crore, a year earlier. The beauty segment accounted for 91% of the total revenue at Rs 2,622 crore, while the fashion segment contributed 8% of the operating income in Q3 FY25. For the Falguni Nayar-led firm, the cost of materials constituted 57% of its total expenditure, rising to Rs 1,576 crore in Q3 FY26. Additional spending on employee benefits, finance, marketing, technology, and other overheads brought the company’s total costs to Rs 2,753 crore during the quarter. Steady growth in its scale helped Nykaa achieve a 2.5X increase in profit to Rs 68 crore in Q3 FY26, compared to Rs 27 crore in Q3 FY25. On a sequential basis, the company’s profit increased 101% from Rs 33 crore in Q2 FY26. At the close of today's trading session, Nykaa's stock was priced at Rs 261.5, giving the firm a market cap of Rs 74,844 crore (approximately $8 billion). Nykaa’s Q3 FY26 results show steady revenue growth and improving profitability. Higher scale helped absorb costs better, leading to a sharp rise in profit both year-on-year and sequentially. The continued dominance of the beauty segment provides stability to the business, while margins appear to be strengthening as the company grows. Overall, the numbers point to better operating efficiency as Nykaa expands.View SourceDezerv reports Rs 66 Cr revenue in FY25, employee costs climb to Rs 111 CrEntrackr · 17d ago Medial Following a 2.5X growth in FY24, wealthtech platform Dezerv achieved a similar scale in FY25. Despite the aggressive expansion, the company’s losses widened during the year and crossed the Rs 100 crore mark in FY25. Dezerv’s revenue from operations grew 2.5X to Rs 66 crore in FY25 from Rs 26 crore in FY24, according to its consolidated financial statements sourced from the Registrar of Companies (RoC). Dezerv offers portfolio management services (PMS) to top tier working professionals and affluent individuals with expert advice, direct bonds, and angel investment opportunities in startups. Fees and commission income accounted for 67% of the operating revenue, which spiked nearly 4X to Rs 44 crore in FY25. Interest income surged more than 4X to Rs 16.8 crore during the year. However, net gains on fair value changes declined 55% to Rs 4.8 crore in the period. Employee benefit expenses remained the largest cost head for Dezerv, accounting for 62% of the total cost. This expense increased 76% to Rs 111 crore in FY25 from Rs 63 crore in FY24. Advertising and marketing expenses rose 67% to Rs 30 crore, while software expenses jumped 220% to Rs 8 crore during the last fiscal year. Depreciation costs increased to Rs 6 crore while legal and professional charges declined to Rs 3 crore in FY25. Overall, the firm’s total expenses grew 76% to Rs 178 crore in FY25 from Rs 101 crore in FY24. Higher spending pushed Dezerv’s losses up by 49% to Rs 112 crore in FY25. Its ROCE and EBITDA margin stood at -39.36% and -159.09%, respectivel",
+            "crawledAt": "2026-02-19T17:40:17.855Z",
+            "sourceType": "news"
+          },
+          {
+            "url": "https://www.angelone.in/news/startups/zepto-s-revenue-soars-150-percent-in-fy25-eyeing-fresh-funding",
+            "title": "Zepto's Revenue Soars 150% in FY25: Eyeing Fresh Funding",
+            "content": "<iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-NNZ26S\" height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe>CALCULATE YOUR SIP RETURNSOpen Demat AccountLoginOpen Demat AccountLoginTrade & InvestStocksIndicesUpcoming IPOCommodityF&OETFMTFMutual Funds & SIPSIP CalculatorMutual FundsAMCsNFOTypes of Mutual FundMutual Fund ScreenerLearnKnowledge CenterSmart MoneyLive BlogFinance WikiNewsStock Market NewsMarket UpdatesPersonal FinanceMutual FundsIPOProductsAngel One Super AppAngel One TradeCalculatorsSmart APIWealth ManagementBecome a PartnerInfluencer Partner (DRA)Insurance POSPAuthorised PersonMutual Fund DistributorAuthorised Person LocatorPricingSupportUser ManualRead FAQsContact UsDownload AppZepto's Revenue Soars 150% in FY25: Eyeing Fresh Funding Written by: Sachin GuptaUpdated on: 30 Jul 2025, 3:49 pm ISTZepto's growth is mainly backed by the aggressive execution and disciplined geographic and operational expansion. ShareQuick commerce unicorn Zepto recently filed its financial statements for FY25 with the regulator. The quick commence startup, Zepto reported a staggering ₹11,110 crore (~$1.3 billion) in revenue, a 150% surge from ₹4,454 crore in FY24, according to regulatory filings, noted by Entrackr.Aggressive Growth Fueled by Disciplined ExpansionZepto's impressive growth can be attributed to aggressive execution and disciplined geographic and operational expansion. As per a previous post by CEO Aadit Palicha, the company had reached a $3 billion annualised Gross Order Value (GOV) while halving its losses over the past year.In FY24, Zepto recorded losses of ₹1,248 crore, implying it spent ₹1.29 to earn every ₹1 in revenue. The company is said to have significantly improved its unit economics in FY25 with higher fill rates and better contribution margins.Also Read: Fintech Startup Navi Raises ₹170 Cr in Debt Round Led by PhillipCapitalZepto Eyes a $7 Billion Valuation Amid Fresh Funding TalksAs per Entrackr, Zepto is in advanced discussions to raise $500 million at a potential $7 billion valuation, a sharp rise from its $5 billion valuation during its last fundraise of $350 million in November 2024.This fresh round is expected to extend the company’s capital runway as it aims for an IPO in 2026 and works toward achieving EBITDA break-even in the next 12–15 months.Disclaimer: This blog has been written exclusively for educational purposes. The securities mentioned are only examples and not recommendations. This does not constitute a personal recommendation/investment advice. It does not aim to influence any individual or entity to make investment decisions. Recipients should conduct their own research and assessments to form an independent opinion about investment decisions.Published on: Jul 30, 2025, 10:17 AM ISTSachin GuptaSachin Gupta is a Content Writer with 6+ years of experience in the stock market, including global markets like the US, Canada, and Australia. At Angel One, Sachin specialises in creating financial content that simplifies complex market trends. Sachin holds a Master's in Commerce, specialising in Economics. Know MoreWe're Live on WhatsApp! Join our channel for market insights & updates Open Free Demat Account!Join our 3.5 Cr+ happy customers+91Want to open an NRI account?Related ArticlesCraftifAI Secures $3 Million Seed Funding for GenAI Embedded Software Platform Battery Cell Tech Startup e-TRNL Energy Secures ₹27.4 Crore in Seed Funding India Crosses 2 Lakh Startups by Dec 2025, Marks a Decade of Startup India Non-Disclosure of Foreign Assets Could Attract IT Action: Know Why 25,000 Taxpayers May Get Alerts Mahanagar Gas Leads ₹120 Crore Funding Round for 3ev Industries to Back EV Push Related CategoriesBudgetCommoditiesFutures & OptionsGlobal MarketHindiIPOsMarket MastersMarket UpdatesMutual FundsPersonal FinanceProduct UpdatesResearchShare MarketTaxation4.4 Cr+DOWNLOADSEnjoy ₹0 Account Opening ChargesGet the link to download the AppOpen Free Demat Account!Join our 3.5 Cr+ happy customers+91Get Free Demat AccountGet Free Demat Account",
+            "crawledAt": "2026-02-19T17:40:19.379Z",
+            "sourceType": "news"
+          }
+        ]
+      },
+      "metadata": {
+        "collectedAt": "2026-02-19T17:40:20.397Z",
+        "totalSources": 124,
+        "collectionTimeMs": 113469,
+        "isNewEntity": true,
+        "dataConfidenceScore": 85
+      },
+      "csvCompetitors": [
+        "company",
+        "discussions",
+        "also",
+        "Blinkit has been",
+        "Explore Zepto",
+        "Shadowfax",
+        "Quick Comparison",
+        "Competitors",
+        "soon after Swiggy",
+        "as Indian quick",
+        "million in",
+        "round led by",
+        "Takes Company Valuation",
+        "Next Week",
+        "worth roughly"
+      ],
+      "structuredFinancials": {
+        "revenue": [
+          {
+            "metric": "revenue",
+            "value": 27,
+            "rawValue": "sales more than doubled. IANS Published On Dec 27,",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_financial",
+            "sourceUrl": "https://retail.economictimes.indiatimes.com/news/e-commerce/e-tailing/zeptos-losses-widen-177-pc-in-fy25-to-rs-3367-3-crore/126199778",
+            "confidence": 0.85,
+            "extractedAt": "2026-02-19T17:40:20.429Z",
+            "fiscalPeriod": "FY25",
+            "publishedDate": "2025-12-26",
+            "freshnessScore": 1
+          },
+          {
+            "metric": "revenue",
+            "value": 96688000000,
+            "rawValue": "sales of Rs 9,668.8 crore",
+            "unit": "cr",
+            "currency": "INR",
+            "source": "crawl_financial",
+            "sourceUrl": "https://retail.economictimes.indiatimes.com/news/e-commerce/e-tailing/zeptos-losses-widen-177-pc-in-fy25-to-rs-3367-3-crore/126199778",
+            "confidence": 0.85,
+            "extractedAt": "2026-02-19T17:40:20.429Z",
+            "fiscalPeriod": "FY25",
+            "publishedDate": "2025-12-26",
+            "freshnessScore": 1
+          },
+          {
+            "metric": "revenue",
+            "value": 36,
+            "rawValue": "Sales & Margin EV / EBITDA Price to Book Market Cap / Sales Alerts Pros Company is almost debt free.",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.screener.in/company/ZENTEC/consolidated/",
+            "confidence": 0.765,
+            "extractedAt": "2026-02-19T17:40:20.429Z",
+            "fiscalPeriod": "FY2026",
+            "publishedDate": "2025-08-04",
+            "freshnessScore": 0.85
+          },
+          {
+            "metric": "revenue",
+            "value": 8350000000,
+            "rawValue": "Revenue: 835 Cr",
+            "unit": "cr",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://www.screener.in/company/ZENTEC/consolidated/",
+            "confidence": 0.63,
+            "extractedAt": "2026-02-19T17:40:20.427Z",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "revenue",
+            "value": 48.64,
+            "rawValue": "Revenue from operations. 48.64",
+            "unit": "",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://cdn-media.screener.in/concalls/477d6735-c685-4021-85f2-cb4ac658ff77.pdf",
+            "confidence": 0.63,
+            "extractedAt": "2026-02-19T17:40:20.427Z",
+            "fiscalPeriod": "2024",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "revenue",
+            "value": 1320000000,
+            "rawValue": "Revenue: 132 Cr",
+            "unit": "cr",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://www.screener.in/company/ZTECH/",
+            "confidence": 0.63,
+            "extractedAt": "2026-02-19T17:40:20.427Z",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "revenue",
+            "value": 2060000000,
+            "rawValue": "revenues to Rs. 206 crore",
+            "unit": "cr",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://cdn-media.screener.in/concalls/59876b63-b28b-4129-a73d-a9554cc4dfe7.pdf",
+            "confidence": 0.63,
+            "extractedAt": "2026-02-19T17:40:20.427Z",
+            "fiscalPeriod": "FY2022",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "revenue",
+            "value": 1100000000,
+            "rawValue": "sales of $1.1 billion",
+            "unit": "billion",
+            "currency": "USD",
+            "source": "serpapi",
+            "sourceUrl": "https://trendlyne.com/pages/4481/THEBASELINE/the-baseline/?page=15&qstime=1755600095",
+            "confidence": 0.63,
+            "extractedAt": "2026-02-19T17:40:20.427Z",
+            "fiscalPeriod": "FY25",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "revenue",
+            "value": 1100000000,
+            "rawValue": "sales of $1.1 billion",
+            "unit": "billion",
+            "currency": "USD",
+            "source": "serpapi",
+            "sourceUrl": "https://trendlyne.com/pages/4481/THEBASELINE/the-baseline/?page=15&qstime=1755600095",
+            "confidence": 0.63,
+            "extractedAt": "2026-02-19T17:40:20.427Z",
+            "fiscalPeriod": "FY25",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "revenue",
+            "value": 12,
+            "rawValue": "total sales jump 12",
+            "unit": "",
+            "currency": "INR",
+            "source": "duckduckgo",
+            "sourceUrl": "https://www.moneycontrol.com/news/business/startup/zepto-s-fy25-loss-widens-177-to-rs-3-367-crore-total-sales-jump-129-13743016.html",
+            "confidence": 0.595,
+            "extractedAt": "2026-02-19T17:40:20.428Z",
+            "fiscalPeriod": "FY25",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "revenue",
+            "value": 44545.16,
+            "rawValue": "Revenue from Operations 44,545.16",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://wwipl.com/unlisted-shares/zepto-private-share-price/financial",
+            "confidence": 0.5599999999999999,
+            "extractedAt": "2026-02-19T17:40:20.430Z",
+            "fiscalPeriod": "FY2023",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "revenue",
+            "value": 22000000000000,
+            "rawValue": "revenue growth from FY22 t",
+            "unit": "t",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.scribd.com/document/845772190/Zepto-2024",
+            "confidence": 0.5599999999999999,
+            "extractedAt": "2026-02-19T17:40:20.430Z",
+            "fiscalPeriod": "FY22",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "revenue",
+            "value": 38.47,
+            "rawValue": "Revenue from Operations/Share (Rs.) 38.47",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_financial",
+            "sourceUrl": "https://www.moneycontrol.com/financials/swiggy/ratiosVI/SL24",
+            "confidence": 0.51,
+            "extractedAt": "2026-02-19T17:40:20.428Z",
+            "fiscalPeriod": "FY25",
+            "publishedDate": "2024-03-24",
+            "freshnessScore": 0.6
+          },
+          {
+            "metric": "revenue",
+            "value": 61480000000,
+            "rawValue": "Sales at Rs 6,148.00 crore",
+            "unit": "cr",
+            "currency": "INR",
+            "source": "crawl_financial",
+            "sourceUrl": "https://www.moneycontrol.com/financials/swiggy/ratiosVI/SL24",
+            "confidence": 0.51,
+            "extractedAt": "2026-02-19T17:40:20.428Z",
+            "fiscalPeriod": "FY25",
+            "publishedDate": "2024-03-24",
+            "freshnessScore": 0.6
+          },
+          {
+            "metric": "revenue",
+            "value": 23,
+            "rawValue": "Revenue FY23",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_financial",
+            "sourceUrl": "https://www.affluense.ai/company/zepto-financials-bcffec",
+            "confidence": 0.51,
+            "extractedAt": "2026-02-19T17:40:20.430Z",
+            "fiscalPeriod": "FY23",
+            "publishedDate": "2024-11-20",
+            "freshnessScore": 0.6
+          },
+          {
+            "metric": "revenue",
+            "value": 15,
+            "rawValue": "Revenue Soars 15",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_news",
+            "sourceUrl": "https://www.angelone.in/news/startups/zepto-s-revenue-soars-150-percent-in-fy25-eyeing-fresh-funding",
+            "confidence": 0.3825,
+            "extractedAt": "2026-02-19T17:40:20.431Z",
+            "fiscalPeriod": "FY25",
+            "publishedDate": "2025-07-29",
+            "freshnessScore": 0.85
+          },
+          {
+            "metric": "revenue",
+            "value": 2.5,
+            "rawValue": "revenue soars 2.5",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_news",
+            "sourceUrl": "https://medial.app/news/zepto-revenue-soars-25x-to-rs-11110-cr-in-fy25-e22f38e88e8f9",
+            "confidence": 0.315,
+            "extractedAt": "2026-02-19T17:40:20.431Z",
+            "fiscalPeriod": "FY25",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "revenue",
+            "value": 44540000000,
+            "rawValue": "revenue of Rs 4,454 crore",
+            "unit": "cr",
+            "currency": "INR",
+            "source": "crawl_news",
+            "sourceUrl": "https://medial.app/news/zepto-revenue-soars-25x-to-rs-11110-cr-in-fy25-e22f38e88e8f9",
+            "confidence": 0.315,
+            "extractedAt": "2026-02-19T17:40:20.431Z",
+            "fiscalPeriod": "FY25",
+            "freshnessScore": 0.7
+          }
+        ],
+        "ebitda": [
+          {
+            "metric": "ebitda",
+            "value": 36,
+            "rawValue": "EBITDA Price to Book Market Cap / Sales Alerts Pros Company is almost debt free.Company has delivere",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.screener.in/company/ZENTEC/consolidated/",
+            "confidence": 0.765,
+            "extractedAt": "2026-02-19T17:40:20.429Z",
+            "fiscalPeriod": "FY2026",
+            "publishedDate": "2025-08-04",
+            "freshnessScore": 0.85
+          },
+          {
+            "metric": "ebitda",
+            "value": 3,
+            "rawValue": "EBITDA for Q3",
+            "unit": "",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://cdn-media.screener.in/concalls/700b0603-422a-4512-a1c8-9eb44047b4f4.pdf",
+            "confidence": 0.63,
+            "extractedAt": "2026-02-19T17:40:20.426Z",
+            "fiscalPeriod": "Q3FY25",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "ebitda",
+            "value": 30.59,
+            "rawValue": "EBITDA (X) -30.59",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_financial",
+            "sourceUrl": "https://www.moneycontrol.com/financials/swiggy/ratiosVI/SL24",
+            "confidence": 0.51,
+            "extractedAt": "2026-02-19T17:40:20.428Z",
+            "fiscalPeriod": "FY25",
+            "publishedDate": "2024-03-24",
+            "freshnessScore": 0.6
+          },
+          {
+            "metric": "ebitda",
+            "value": 21,
+            "rawValue": "EBITDA Margin Data not publicly available ROCE Data not publicly available Funding History Round Dat",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_financial",
+            "sourceUrl": "https://www.affluense.ai/company/zepto-financials-bcffec",
+            "confidence": 0.51,
+            "extractedAt": "2026-02-19T17:40:20.430Z",
+            "fiscalPeriod": "FY23",
+            "publishedDate": "2024-11-20",
+            "freshnessScore": 0.6
+          },
+          {
+            "metric": "ebitda",
+            "value": 12,
+            "rawValue": "EBITDA break-even in the next 12",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_news",
+            "sourceUrl": "https://www.angelone.in/news/startups/zepto-s-revenue-soars-150-percent-in-fy25-eyeing-fresh-funding",
+            "confidence": 0.3825,
+            "extractedAt": "2026-02-19T17:40:20.431Z",
+            "fiscalPeriod": "FY25",
+            "publishedDate": "2025-07-29",
+            "freshnessScore": 0.85
+          },
+          {
+            "metric": "ebitda",
+            "value": 12,
+            "rawValue": "EBITDA break-even in the next 12",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_news",
+            "sourceUrl": "https://medial.app/news/zepto-revenue-soars-25x-to-rs-11110-cr-in-fy25-e22f38e88e8f9",
+            "confidence": 0.315,
+            "extractedAt": "2026-02-19T17:40:20.431Z",
+            "fiscalPeriod": "FY25",
+            "freshnessScore": 0.7
+          }
+        ],
+        "netProfit": [
+          {
+            "metric": "netProfit",
+            "value": 25,
+            "rawValue": "income.Competitive pressure has intensified further after FY25",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_financial",
+            "sourceUrl": "https://retail.economictimes.indiatimes.com/news/e-commerce/e-tailing/zeptos-losses-widen-177-pc-in-fy25-to-rs-3367-3-crore/126199778",
+            "confidence": 0.85,
+            "extractedAt": "2026-02-19T17:40:20.429Z",
+            "fiscalPeriod": "FY25",
+            "publishedDate": "2025-12-26",
+            "freshnessScore": 1
+          },
+          {
+            "metric": "netProfit",
+            "value": 36,
+            "rawValue": "profit growth of 36.",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.screener.in/company/ZENTEC/consolidated/",
+            "confidence": 0.765,
+            "extractedAt": "2026-02-19T17:40:20.429Z",
+            "fiscalPeriod": "FY2026",
+            "publishedDate": "2025-08-04",
+            "freshnessScore": 0.85
+          },
+          {
+            "metric": "netProfit",
+            "value": 2840000000,
+            "rawValue": "Profit: 284 Cr",
+            "unit": "cr",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://www.screener.in/company/ZENTEC/consolidated/",
+            "confidence": 0.63,
+            "extractedAt": "2026-02-19T17:40:20.427Z",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "netProfit",
+            "value": 30000000000000,
+            "rawValue": "Income ... Quarter ended. 30t",
+            "unit": "t",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://cdn-media.screener.in/concalls/477d6735-c685-4021-85f2-cb4ac658ff77.pdf",
+            "confidence": 0.63,
+            "extractedAt": "2026-02-19T17:40:20.427Z",
+            "fiscalPeriod": "2024",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "netProfit",
+            "value": 252000000,
+            "rawValue": "Profit: 25.2 Cr",
+            "unit": "cr",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://www.screener.in/company/ZTECH/",
+            "confidence": 0.63,
+            "extractedAt": "2026-02-19T17:40:20.427Z",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "netProfit",
+            "value": 24,
+            "rawValue": "PAT growth over the next few years. ... The food delivery company's FY24",
+            "unit": "",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://trendlyne.com/sector-news/6/retailing/time/1/?qstime=1715830679&page=63",
+            "confidence": 0.63,
+            "extractedAt": "2026-02-19T17:40:20.427Z",
+            "fiscalPeriod": "FY24",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "netProfit",
+            "value": 31,
+            "rawValue": "Profit & Loss (Rs. In Millions) Particulars 31",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://wwipl.com/unlisted-shares/zepto-private-share-price/financial",
+            "confidence": 0.5599999999999999,
+            "extractedAt": "2026-02-19T17:40:20.430Z",
+            "fiscalPeriod": "FY2023",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "netProfit",
+            "value": 19100000000,
+            "rawValue": "profitability. The company raised ₹1910 crore",
+            "unit": "cr",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.scribd.com/document/845772190/Zepto-2024",
+            "confidence": 0.5599999999999999,
+            "extractedAt": "2026-02-19T17:40:20.430Z",
+            "fiscalPeriod": "FY22",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "netProfit",
+            "value": 86.8918,
+            "rawValue": "path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M86.8918",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://x.com/Ashishkafunda/status/2004795367876165988",
+            "confidence": 0.5599999999999999,
+            "extractedAt": "2026-02-19T17:40:20.430Z",
+            "fiscalPeriod": "2026",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "netProfit",
+            "value": 25,
+            "rawValue": "Profit & Loss Profit & Loss (New) Balance Sheet Balance Sheet (New) Cash Flows Cash Flows (New) Quar",
+            "unit": "M",
+            "currency": "INR",
+            "source": "crawl_financial",
+            "sourceUrl": "https://www.moneycontrol.com/financials/swiggy/ratiosVI/SL24",
+            "confidence": 0.51,
+            "extractedAt": "2026-02-19T17:40:20.428Z",
+            "fiscalPeriod": "FY25",
+            "publishedDate": "2024-03-24",
+            "freshnessScore": 0.6
+          },
+          {
+            "metric": "netProfit",
+            "value": 21,
+            "rawValue": "Net Profit (PAT) Data not publicly available EBITDA Margin Data not publicly available ROCE Data not",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_financial",
+            "sourceUrl": "https://www.affluense.ai/company/zepto-financials-bcffec",
+            "confidence": 0.51,
+            "extractedAt": "2026-02-19T17:40:20.430Z",
+            "fiscalPeriod": "FY23",
+            "publishedDate": "2024-11-20",
+            "freshnessScore": 0.6
+          },
+          {
+            "metric": "netProfit",
+            "value": 2025,
+            "rawValue": "Pattern ... Get Zepto's full 2025",
+            "unit": "",
+            "currency": "INR",
+            "source": "duckduckgo",
+            "sourceUrl": "https://www.affluense.ai/company/zepto-financials-bcffec",
+            "confidence": 0.315,
+            "extractedAt": "2026-02-19T17:40:20.428Z",
+            "fiscalPeriod": "2025",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "netProfit",
+            "value": 23460000000,
+            "rawValue": "profit on Rs 2,346 Cr",
+            "unit": "cr",
+            "currency": "INR",
+            "source": "crawl_news",
+            "sourceUrl": "https://medial.app/news/zepto-revenue-soars-25x-to-rs-11110-cr-in-fy25-e22f38e88e8f9",
+            "confidence": 0.315,
+            "extractedAt": "2026-02-19T17:40:20.431Z",
+            "fiscalPeriod": "FY25",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "netProfit",
+            "value": 740000000,
+            "rawValue": "profit stood at Rs 74 crore",
+            "unit": "cr",
+            "currency": "INR",
+            "source": "crawl_news",
+            "sourceUrl": "https://medial.app/news/zepto-revenue-soars-25x-to-rs-11110-cr-in-fy25-e22f38e88e8f9",
+            "confidence": 0.315,
+            "extractedAt": "2026-02-19T17:40:20.431Z",
+            "fiscalPeriod": "FY25",
+            "freshnessScore": 0.7
+          }
+        ],
+        "operatingProfit": [
+          {
+            "metric": "operatingProfit",
+            "value": 17,
+            "rawValue": "Operating Profit 17",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.screener.in/company/ZENTEC/consolidated/",
+            "confidence": 0.765,
+            "extractedAt": "2026-02-19T17:40:20.429Z",
+            "fiscalPeriod": "FY2026",
+            "publishedDate": "2025-08-04",
+            "freshnessScore": 0.85
+          },
+          {
+            "metric": "operatingProfit",
+            "value": 2,
+            "rawValue": "operating income in the Q2",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_news",
+            "sourceUrl": "https://medial.app/news/zepto-revenue-soars-25x-to-rs-11110-cr-in-fy25-e22f38e88e8f9",
+            "confidence": 0.315,
+            "extractedAt": "2026-02-19T17:40:20.431Z",
+            "fiscalPeriod": "FY25",
+            "freshnessScore": 0.7
+          }
+        ],
+        "grossProfit": [],
+        "marketCap": [
+          {
+            "metric": "marketCap",
+            "value": 119840000000,
+            "rawValue": "Market Cap ₹ 11,984 Cr",
+            "unit": "cr",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.screener.in/company/ZENTEC/consolidated/",
+            "confidence": 0.765,
+            "extractedAt": "2026-02-19T17:40:20.429Z",
+            "fiscalPeriod": "FY2026",
+            "publishedDate": "2025-08-04",
+            "freshnessScore": 0.85
+          },
+          {
+            "metric": "marketCap",
+            "value": 8.58,
+            "rawValue": "MarketCap/Net Operating Revenue (X) 8.58",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_financial",
+            "sourceUrl": "https://www.moneycontrol.com/financials/swiggy/ratiosVI/SL24",
+            "confidence": 0.51,
+            "extractedAt": "2026-02-19T17:40:20.428Z",
+            "fiscalPeriod": "FY25",
+            "publishedDate": "2024-03-24",
+            "freshnessScore": 0.6
+          },
+          {
+            "metric": "marketCap",
+            "value": 703750000000,
+            "rawValue": "market capitalization of Rs 70,375 crore",
+            "unit": "cr",
+            "currency": "INR",
+            "source": "crawl_news",
+            "sourceUrl": "https://medial.app/news/zepto-revenue-soars-25x-to-rs-11110-cr-in-fy25-e22f38e88e8f9",
+            "confidence": 0.315,
+            "extractedAt": "2026-02-19T17:40:20.431Z",
+            "fiscalPeriod": "FY25",
+            "freshnessScore": 0.7
+          }
+        ],
+        "revenueGrowth": [
+          {
+            "metric": "revenueGrowth",
+            "value": 27.6,
+            "rawValue": "sales growth is 27.6%",
+            "unit": "%",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.screener.in/company/ZENTEC/consolidated/",
+            "confidence": 0.765,
+            "extractedAt": "2026-02-19T17:40:20.429Z",
+            "fiscalPeriod": "FY2026",
+            "publishedDate": "2025-08-04",
+            "freshnessScore": 0.85
+          }
+        ],
+        "ebitdaMargin": [
+          {
+            "metric": "ebitdaMargin",
+            "value": -25,
+            "rawValue": "EBITDA margin has consistently remained negative, ranging from -25%",
+            "unit": "%",
+            "currency": "INR",
+            "source": "crawl_financial",
+            "sourceUrl": "https://www.affluense.ai/company/zepto-financials-bcffec",
+            "confidence": 0.51,
+            "extractedAt": "2026-02-19T17:40:20.430Z",
+            "fiscalPeriod": "FY23",
+            "publishedDate": "2024-11-20",
+            "freshnessScore": 0.6
+          },
+          {
+            "metric": "ebitdaMargin",
+            "value": -39.36,
+            "rawValue": "EBITDA margin stood at -39.36%",
+            "unit": "%",
+            "currency": "INR",
+            "source": "crawl_news",
+            "sourceUrl": "https://medial.app/news/zepto-revenue-soars-25x-to-rs-11110-cr-in-fy25-e22f38e88e8f9",
+            "confidence": 0.315,
+            "extractedAt": "2026-02-19T17:40:20.431Z",
+            "fiscalPeriod": "FY25",
+            "freshnessScore": 0.7
+          }
+        ],
+        "netMargin": [
+          {
+            "metric": "netMargin",
+            "value": 36.6,
+            "rawValue": "Margin EV / EBITDA Price to Book Market Cap / Sales Alerts Pros Company is almost debt free.Company ",
+            "unit": "%",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.screener.in/company/ZENTEC/consolidated/",
+            "confidence": 0.765,
+            "extractedAt": "2026-02-19T17:40:20.429Z",
+            "fiscalPeriod": "FY2026",
+            "publishedDate": "2025-08-04",
+            "freshnessScore": 0.85
+          },
+          {
+            "metric": "netMargin",
+            "value": -25,
+            "rawValue": "Margins Zepto’s EBITDA margin has consistently remained negative, ranging from -25%",
+            "unit": "%",
+            "currency": "INR",
+            "source": "crawl_financial",
+            "sourceUrl": "https://www.affluense.ai/company/zepto-financials-bcffec",
+            "confidence": 0.51,
+            "extractedAt": "2026-02-19T17:40:20.430Z",
+            "fiscalPeriod": "FY23",
+            "publishedDate": "2024-11-20",
+            "freshnessScore": 0.6
+          },
+          {
+            "metric": "netMargin",
+            "value": -39.36,
+            "rawValue": "margin stood at -39.36%",
+            "unit": "%",
+            "currency": "INR",
+            "source": "crawl_news",
+            "sourceUrl": "https://medial.app/news/zepto-revenue-soars-25x-to-rs-11110-cr-in-fy25-e22f38e88e8f9",
+            "confidence": 0.315,
+            "extractedAt": "2026-02-19T17:40:20.431Z",
+            "fiscalPeriod": "FY25",
+            "freshnessScore": 0.7
+          }
+        ],
+        "peRatio": [
+          {
+            "metric": "peRatio",
+            "value": 25,
+            "rawValue": "petition has heated up considerably. Advt In FY25,",
+            "unit": "x",
+            "currency": "INR",
+            "source": "crawl_financial",
+            "sourceUrl": "https://retail.economictimes.indiatimes.com/news/e-commerce/e-tailing/zeptos-losses-widen-177-pc-in-fy25-to-rs-3367-3-crore/126199778",
+            "confidence": 0.85,
+            "extractedAt": "2026-02-19T17:40:20.429Z",
+            "fiscalPeriod": "FY25",
+            "publishedDate": "2025-12-26",
+            "freshnessScore": 1
+          },
+          {
+            "metric": "peRatio",
+            "value": 1000,
+            "rawValue": "ped 1,000",
+            "unit": "x",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.screener.in/company/ZENTEC/consolidated/",
+            "confidence": 0.765,
+            "extractedAt": "2026-02-19T17:40:20.429Z",
+            "fiscalPeriod": "FY2026",
+            "publishedDate": "2025-08-04",
+            "freshnessScore": 0.85
+          },
+          {
+            "metric": "peRatio",
+            "value": 48.64,
+            "rawValue": "perations. 48.64",
+            "unit": "x",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://cdn-media.screener.in/concalls/477d6735-c685-4021-85f2-cb4ac658ff77.pdf",
+            "confidence": 0.63,
+            "extractedAt": "2026-02-19T17:40:20.427Z",
+            "fiscalPeriod": "2024",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "peRatio",
+            "value": 1,
+            "rawValue": "Periods 1",
+            "unit": "x",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://wwipl.com/unlisted-shares/zepto-private-share-price/financial",
+            "confidence": 0.5599999999999999,
+            "extractedAt": "2026-02-19T17:40:20.430Z",
+            "fiscalPeriod": "FY2023",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "peRatio",
+            "value": 0,
+            "rawValue": "pen navigation menuClose suggestionsSearchSearchenChange LanguageUploadSign inSign in0",
+            "unit": "x",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.scribd.com/document/845772190/Zepto-2024",
+            "confidence": 0.5599999999999999,
+            "extractedAt": "2026-02-19T17:40:20.430Z",
+            "fiscalPeriod": "FY22",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "peRatio",
+            "value": 0,
+            "rawValue": "permissible and normal trading is done in this category Series: EQ | ISIN: INE00",
+            "unit": "x",
+            "currency": "INR",
+            "source": "crawl_financial",
+            "sourceUrl": "https://www.moneycontrol.com/financials/swiggy/ratiosVI/SL24",
+            "confidence": 0.51,
+            "extractedAt": "2026-02-19T17:40:20.428Z",
+            "fiscalPeriod": "FY25",
+            "publishedDate": "2024-03-24",
+            "freshnessScore": 0.6
+          },
+          {
+            "metric": "peRatio",
+            "value": 250,
+            "rawValue": "perational expansion strategies. Net losses deepened to ₹250",
+            "unit": "x",
+            "currency": "INR",
+            "source": "crawl_financial",
+            "sourceUrl": "https://www.affluense.ai/company/zepto-financials-bcffec",
+            "confidence": 0.51,
+            "extractedAt": "2026-02-19T17:40:20.430Z",
+            "fiscalPeriod": "FY23",
+            "publishedDate": "2024-11-20",
+            "freshnessScore": 0.6
+          },
+          {
+            "metric": "peRatio",
+            "value": 150,
+            "rawValue": "pen Demat AccountLoginOpen Demat AccountLoginTrade & InvestStocksIndicesUpcoming IPOCommodityF&OETFM",
+            "unit": "x",
+            "currency": "INR",
+            "source": "crawl_news",
+            "sourceUrl": "https://www.angelone.in/news/startups/zepto-s-revenue-soars-150-percent-in-fy25-eyeing-fresh-funding",
+            "confidence": 0.3825,
+            "extractedAt": "2026-02-19T17:40:20.431Z",
+            "fiscalPeriod": "FY25",
+            "publishedDate": "2025-07-29",
+            "freshnessScore": 0.85
+          },
+          {
+            "metric": "peRatio",
+            "value": 1.29,
+            "rawValue": "pent Rs 1.29",
+            "unit": "x",
+            "currency": "INR",
+            "source": "crawl_news",
+            "sourceUrl": "https://medial.app/news/zepto-revenue-soars-25x-to-rs-11110-cr-in-fy25-e22f38e88e8f9",
+            "confidence": 0.315,
+            "extractedAt": "2026-02-19T17:40:20.431Z",
+            "fiscalPeriod": "FY25",
+            "freshnessScore": 0.7
+          }
+        ],
+        "debtToEquity": [],
+        "roe": [
+          {
+            "metric": "roe",
+            "value": 26.1,
+            "rawValue": "ROE 26.1 %",
+            "unit": "%",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.screener.in/company/ZENTEC/consolidated/",
+            "confidence": 0.765,
+            "extractedAt": "2026-02-19T17:40:20.429Z",
+            "fiscalPeriod": "FY2026",
+            "publishedDate": "2025-08-04",
+            "freshnessScore": 0.85
+          }
+        ],
+        "eps": [
+          {
+            "metric": "eps",
+            "value": 1.19,
+            "rawValue": "EPS in Rs 1.19",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.screener.in/company/ZENTEC/consolidated/",
+            "confidence": 0.765,
+            "extractedAt": "2026-02-19T17:40:20.429Z",
+            "fiscalPeriod": "FY2026",
+            "publishedDate": "2025-08-04",
+            "freshnessScore": 0.85
+          },
+          {
+            "metric": "eps",
+            "value": 1416.49,
+            "rawValue": "Earnings per share Basic -1,416.49",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://wwipl.com/unlisted-shares/zepto-private-share-price/financial",
+            "confidence": 0.5599999999999999,
+            "extractedAt": "2026-02-19T17:40:20.430Z",
+            "fiscalPeriod": "FY2023",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "eps",
+            "value": 11.19,
+            "rawValue": "EPS (Rs.) -11.19",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_financial",
+            "sourceUrl": "https://www.moneycontrol.com/financials/swiggy/ratiosVI/SL24",
+            "confidence": 0.51,
+            "extractedAt": "2026-02-19T17:40:20.428Z",
+            "fiscalPeriod": "FY25",
+            "publishedDate": "2024-03-24",
+            "freshnessScore": 0.6
+          },
+          {
+            "metric": "eps",
+            "value": 21,
+            "rawValue": "epStone Group... Series F Jun 21,",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_financial",
+            "sourceUrl": "https://www.affluense.ai/company/zepto-financials-bcffec",
+            "confidence": 0.51,
+            "extractedAt": "2026-02-19T17:40:20.430Z",
+            "fiscalPeriod": "FY23",
+            "publishedDate": "2024-11-20",
+            "freshnessScore": 0.6
+          }
+        ],
+        "freeCashFlow": [],
+        "metadata": {
+          "totalExtractions": 63,
+          "uniqueMetrics": 11,
+          "avgConfidence": 0.56,
+          "sourcesUsed": [
+            "serpapi",
+            "duckduckgo",
+            "crawl_financial",
+            "crawl_official",
+            "crawl_news"
+          ],
+          "extractedAt": "2026-02-19T17:40:20.431Z"
+        }
+      },
+      "consensusMetrics": {
+        "entityId": "Zepto",
+        "entityName": "Zepto",
+        "entityType": "company",
+        "fiscalPeriod": "TTM",
+        "marketCap": {
+          "value": 119840000000,
+          "confidence": 61,
+          "variance": 100,
+          "hasWarning": true,
+          "warningReason": "High variance (100%) across sources",
+          "sources": [
+            {
+              "source": "crawl_financial",
+              "value": 8.58,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_official",
+              "value": 119840000000,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": 703750000000,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": true
+        },
+        "currentPrice": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "priceChange1D": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "priceChange1Y": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "weekHigh52": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "weekLow52": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "volume": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "revenue": {
+          "value": 27,
+          "confidence": 59,
+          "variance": 88.9,
+          "hasWarning": true,
+          "warningReason": "High variance (89%) across sources",
+          "sources": [
+            {
+              "source": "crawl_financial",
+              "value": 27,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_official",
+              "value": 36,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": 8350000000,
+              "weight": 0.5
+            },
+            {
+              "source": "duckduckgo",
+              "value": 12,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": 15,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": true
+        },
+        "revenueGrowthYoy": {
+          "value": 27.6,
+          "confidence": 69,
+          "variance": 0,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_official",
+              "value": 27.6,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": true
+        },
+        "grossProfit": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "grossMargin": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "operatingIncome": {
+          "value": 17,
+          "confidence": 60,
+          "variance": 88.2,
+          "hasWarning": true,
+          "warningReason": "High variance (88%) across sources",
+          "sources": [
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_official",
+              "value": 17,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": 2,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": true
+        },
+        "operatingMargin": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "netIncome": {
+          "value": 36,
+          "confidence": 55,
+          "variance": 5555.6,
+          "hasWarning": true,
+          "warningReason": "High variance (5556%) across sources",
+          "sources": [
+            {
+              "source": "crawl_financial",
+              "value": 25,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_official",
+              "value": 36,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": 2840000000,
+              "weight": 0.5
+            },
+            {
+              "source": "duckduckgo",
+              "value": 2025,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": 23460000000,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": true
+        },
+        "netMargin": {
+          "value": -25,
+          "confidence": 54,
+          "variance": 57.4,
+          "hasWarning": true,
+          "warningReason": "High variance (57%) across sources",
+          "sources": [
+            {
+              "source": "crawl_financial",
+              "value": -25,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_official",
+              "value": 36.6,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": -39.36,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": true
+        },
+        "ebitda": {
+          "value": 30.59,
+          "confidence": 64,
+          "variance": 107.9,
+          "hasWarning": true,
+          "warningReason": "High variance (108%) across sources",
+          "sources": [
+            {
+              "source": "crawl_financial",
+              "value": 30.59,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_official",
+              "value": 36,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": 3,
+              "weight": 0.5
+            },
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": 12,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": true
+        },
+        "ebitdaMargin": {
+          "value": -25,
+          "confidence": 59,
+          "variance": 57.4,
+          "hasWarning": true,
+          "warningReason": "High variance (57%) across sources",
+          "sources": [
+            {
+              "source": "crawl_financial",
+              "value": -25,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": -39.36,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": true
+        },
+        "eps": {
+          "value": 1.19,
+          "confidence": 66,
+          "variance": 840.3,
+          "hasWarning": true,
+          "warningReason": "High variance (840%) across sources",
+          "sources": [
+            {
+              "source": "crawl_financial",
+              "value": 11.19,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_official",
+              "value": 1.19,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": true
+        },
+        "totalAssets": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "totalDebt": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "cashAndEquivalents": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "shareholderEquity": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "peRatio": {
+          "value": 48.64,
+          "confidence": 55,
+          "variance": 257,
+          "hasWarning": true,
+          "warningReason": "High variance (257%) across sources",
+          "sources": [
+            {
+              "source": "crawl_financial",
+              "value": 25,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_official",
+              "value": 1000,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": 48.64,
+              "weight": 0.5
+            },
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": 150,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": true
+        },
+        "pbRatio": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "psRatio": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "evToEbitda": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "debtToEquity": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "currentRatio": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "roe": {
+          "value": 26.1,
+          "confidence": 69,
+          "variance": 0,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_official",
+              "value": 26.1,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": true
+        },
+        "roa": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "roic": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "freeCashFlow": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "operatingCashFlow": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "overallConfidence": 61,
+        "sourcesUsed": [
+          "crawl_financial",
+          "crawl_official",
+          "serpapi",
+          "duckduckgo",
+          "crawl_news"
+        ],
+        "dataGaps": [
+          "currentPrice",
+          "priceChange1D",
+          "priceChange1Y",
+          "weekHigh52",
+          "weekLow52",
+          "volume",
+          "grossProfit",
+          "grossMargin",
+          "operatingMargin",
+          "totalAssets",
+          "totalDebt",
+          "cashAndEquivalents",
+          "shareholderEquity",
+          "pbRatio",
+          "psRatio",
+          "evToEbitda",
+          "debtToEquity",
+          "currentRatio",
+          "roa",
+          "roic",
+          "freeCashFlow",
+          "operatingCashFlow"
+        ],
+        "varianceWarnings": [
+          "marketCap: High variance (100%) across sources",
+          "revenue: High variance (89%) across sources",
+          "operatingIncome: High variance (88%) across sources",
+          "netIncome: High variance (5556%) across sources",
+          "netMargin: High variance (57%) across sources",
+          "ebitda: High variance (108%) across sources",
+          "ebitdaMargin: High variance (57%) across sources",
+          "eps: High variance (840%) across sources",
+          "peRatio: High variance (257%) across sources"
+        ],
+        "fetchedAt": "2026-02-19T17:40:20.434Z",
+        "expiresAt": "2026-02-20T17:40:20.434Z",
+        "confidenceExplanation": {
+          "overallScore": 61,
+          "level": "medium",
+          "reasons": [
+            "Medium confidence: 5 sources with some variance",
+            "Reliance on web sources - may have inconsistencies",
+            "Only 37% of metrics available"
+          ],
+          "factors": {
+            "sourceCount": 5,
+            "pdfCount": 0,
+            "freshnessScore": 100,
+            "varianceScore": 0,
+            "dataCompleteness": 37
+          }
+        }
+      },
+      "consensusForAI": "=== VALIDATED CONSENSUS DATA FOR ZEPTO ===\nOverall Data Confidence: 61%\nSources: crawl_financial, crawl_official, serpapi, duckduckgo, crawl_news\nData As Of: 2026-02-19T17:40:20.434Z\n\n--- MARKET DATA ---\nMarket Cap: ₹119.84B (confidence: 61%) [HIGH VARIANCE - treat with caution]\nCurrent Price: UNAVAILABLE\n1-Day Price Change: UNAVAILABLE%\n1-Year Price Change: UNAVAILABLE%\n52-Week High: UNAVAILABLE\n52-Week Low: UNAVAILABLE\n\n--- INCOME STATEMENT ---\nRevenue (TTM): ₹27.00 (confidence: 59%) [HIGH VARIANCE - treat with caution]\nRevenue Growth YoY: 27.60 (confidence: 69%)%\nGross Margin: UNAVAILABLE%\nOperating Margin: UNAVAILABLE%\nNet Margin: -25.00 (confidence: 54%) [HIGH VARIANCE - treat with caution]%\nEBITDA: ₹30.59 (confidence: 64%) [HIGH VARIANCE - treat with caution]\nEBITDA Margin: -25.00 (confidence: 59%) [HIGH VARIANCE - treat with caution]%\nEPS: ₹1.19 (confidence: 66%) [HIGH VARIANCE - treat with caution]\n\n--- BALANCE SHEET ---\nTotal Assets: UNAVAILABLE\nTotal Debt: UNAVAILABLE\nCash & Equivalents: UNAVAILABLE\nDebt to Equity: UNAVAILABLE\n\n--- VALUATION RATIOS ---\nP/E Ratio: 48.64 (confidence: 55%) [HIGH VARIANCE - treat with caution]\nP/B Ratio: UNAVAILABLE\nEV/EBITDA: UNAVAILABLE\n\n--- RETURNS ---\nReturn on Equity (ROE): 26.10 (confidence: 69%)%\nReturn on Assets (ROA): UNAVAILABLE%\nReturn on Invested Capital (ROIC): UNAVAILABLE%\n\n--- CASH FLOW ---\nFree Cash Flow: UNAVAILABLE\nOperating Cash Flow: UNAVAILABLE\n\n\n--- DATA GAPS (DO NOT ESTIMATE THESE) ---\ncurrentPrice, priceChange1D, priceChange1Y, weekHigh52, weekLow52, volume, grossProfit, grossMargin, operatingMargin, totalAssets, totalDebt, cashAndEquivalents, shareholderEquity, pbRatio, psRatio, evToEbitda, debtToEquity, currentRatio, roa, roic, freeCashFlow, operatingCashFlow\n\n--- VARIANCE WARNINGS ---\nmarketCap: High variance (100%) across sources\nrevenue: High variance (89%) across sources\noperatingIncome: High variance (88%) across sources\nnetIncome: High variance (5556%) across sources\nnetMargin: High variance (57%) across sources\nebitda: High variance (108%) across sources\nebitdaMargin: High variance (57%) across sources\neps: High variance (840%) across sources\npeRatio: High variance (257%) across sources\n=== END VALIDATED DATA ==="
+    },
+    "timestamp": "2026-02-19T17:40:21.887Z"
+  },
+  "timestamp": "2026-02-19T17:40:21.887Z",
+  "expiryHours": 24,
+  "source": "api_realtime",
+  "isStale": false
+}

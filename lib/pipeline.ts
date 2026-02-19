@@ -226,7 +226,7 @@
  * │  ┌─────────────────────────────────────────────────────────────────────┐   │
  * │  │                         GROQ API CALL                              │   │
  * │  │  Endpoint: https://api.groq.com/openai/v1/chat/completions        │   │
- * │  │  Model: llama-3.3-70b-versatile                                    │   │
+ * │  │  Model: meta-llama/llama-4-scout-17b-16e-instruct                  │   │
  * │  │  Temperature: 0.1 (low for factual responses)                     │   │
  * │  │  Max Tokens: 2000                                                  │   │
  * │  └─────────────────────────────────────────────────────────────────────┘   │

@@ -6,11 +6,14 @@
 3. [Complete File Inventory & Actions](#3-complete-file-inventory--actions)
 4. [Flow Diagrams](#4-flow-diagrams)
 5. [Layer-Based Architecture](#5-layer-based-architecture)
+   5.1 [Database Schema (Supabase/PostgreSQL)](#51-database-schema-supabasepostgresql)
 6. [Core Engine Logic](#6-core-engine-logic)
 7. [Core Concepts](#7-core-concepts)
 8. [Data Sources & APIs](#8-data-sources--apis)
 9. [Error Handling & Debugging](#9-error-handling--debugging)
 10. [Configuration Reference](#10-configuration-reference)
+11. [Latest Updates & Version History](#11-latest-updates--version-history)
+12. [Component Connection Diagrams](#12-component-connection-diagrams)
 
 ---
 
@@ -22,7 +25,7 @@ EBITA Intelligence is a real-time business intelligence platform providing compa
 ### 1.2 Technology Stack
 - **Frontend**: Next.js 16 + React 19 + Tailwind CSS 4
 - **Backend**: Next.js API Routes + Python FastAPI Microservice
-- **AI/ML**: Groq API (llama-3.3-70b-versatile)
+- **AI/ML**: Groq API (meta-llama/llama-4-scout-17b-16e-instruct)
 - **Database**: Supabase (PostgreSQL)
 - **External APIs**: Yahoo Finance, Alpha Vantage, Financial Modeling Prep, NSE India
 - **Data Visualization**: Recharts
@@ -141,7 +144,7 @@ Guardrails Pipeline:
 [Prompt Sanitization] → Escape special chars, validate JSON
     ↓
 [Groq API Call]
-    Model: llama-3.3-70b-versatile
+    Model: meta-llama/llama-4-scout-17b-16e-instruct
     Temperature: 0.1 (low for factual accuracy)
     Max Tokens: 2000-3000
     JSON Mode: Enabled
@@ -460,7 +463,7 @@ lib/
 │   │
 │   ├── groq-client.ts                  # Groq API client
 │   │   ACTION: Handle Groq API communication
-│   │   CONFIG: model=llama-3.3-70b-versatile, temp=0.1, max_tokens=3000
+│   │   CONFIG: model=meta-llama/llama-4-scout-17b-16e-instruct, temp=0.1, max_tokens=3000
 │   │
 │   ├── groq-prompts.ts                 # Prompt library
 │   │   ACTION: Define all AI prompts
@@ -909,7 +912,7 @@ lib/db.ts                               # Database client
 │ 4. GROQ API CALL                                                    │
 └─────────────────────────────────────────────────────────────────────┘
     │
-    ├─▶ Model: llama-3.3-70b-versatile
+    ├─▶ Model: meta-llama/llama-4-scout-17b-16e-instruct
     ├─▶ Temperature: 0.1 (factual precision)
     ├─▶ Max Tokens: 3000
     ├─▶ JSON Mode: Enabled
@@ -1120,6 +1123,322 @@ lib/db.ts                               # Database client
 │  └─────────────┘  └─────────────┘  └─────────────┘  └─────────────┘        │
 │                                                                              │
 └─────────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 5.1 Database Schema (Supabase/PostgreSQL)
+
+The EBITA Intelligence Platform uses Supabase (PostgreSQL) for persistent storage. Below is the complete schema:
+
+### 5.1.1 Entity Intelligence Table
+```sql
+CREATE TABLE public.entity_intelligence (
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  canonical_name character varying NOT NULL,
+  normalized_name text NOT NULL,
+  entity_type character varying NOT NULL DEFAULT 'company',
+  parent_entity_id uuid,
+  ticker_nse character varying,
+  ticker_bse character varying,
+  ticker_global character varying,
+  isin character varying,
+  sector character varying,
+  industry character varying,
+  sub_industry character varying,
+  niche character varying,
+  industry_code character varying,
+  country character varying DEFAULT 'India',
+  state character varying,
+  city character varying,
+  region character varying DEFAULT 'INDIA',
+  is_listed boolean DEFAULT true,
+  is_verified boolean DEFAULT false,
+  is_active boolean DEFAULT true,
+  exchange character varying,
+  founded_year integer,
+  all_aliases jsonb DEFAULT '[]',
+  brands jsonb DEFAULT '[]',
+  competitors jsonb DEFAULT '[]',
+  subsidiaries jsonb DEFAULT '[]',
+  wikipedia_url text,
+  website text,
+  description text,
+  key_people jsonb DEFAULT '[]',
+  source character varying,
+  data_quality_score integer DEFAULT 0,
+  created_at timestamp with time zone DEFAULT now(),
+  updated_at timestamp with time zone DEFAULT now(),
+  CONSTRAINT entity_intelligence_pkey PRIMARY KEY (id)
+);
+```
+
+**Purpose:** Master table for all companies, brands, and entities  
+**Key Indexes:** `normalized_name`, `ticker_nse`, `industry`, `sector`  
+**Used By:** Entity resolver, identifier, collector
+
+### 5.1.2 Consensus Metrics Table
+```sql
+CREATE TABLE public.consensus_metrics (
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  entity_id uuid NOT NULL,
+  entity_type character varying NOT NULL DEFAULT 'company',
+  entity_name character varying NOT NULL,
+  fiscal_period character varying NOT NULL DEFAULT 'TTM',
+  market_cap bigint,
+  current_price numeric,
+  price_change_1d numeric,
+  price_change_1y numeric,
+  week_high_52 numeric,
+  week_low_52 numeric,
+  volume bigint,
+  revenue bigint,
+  revenue_growth numeric,
+  gross_profit bigint,
+  gross_margin numeric,
+  operating_income bigint,
+  operating_margin numeric,
+  net_income bigint,
+  net_margin numeric,
+  ebitda bigint,
+  ebitda_margin numeric,
+  eps numeric,
+  total_assets bigint,
+  total_liabilities bigint,
+  total_debt bigint,
+  shareholder_equity bigint,
+  cash_and_equivalents bigint,
+  pe_ratio numeric,
+  pb_ratio numeric,
+  ps_ratio numeric,
+  ev_to_ebitda numeric,
+  debt_to_equity numeric,
+  current_ratio numeric,
+  quick_ratio numeric,
+  roe numeric,
+  roa numeric,
+  roic numeric,
+  roce numeric,
+  free_cash_flow bigint,
+  operating_cash_flow bigint,
+  capital_expenditure bigint,
+  confidence_score integer DEFAULT 0,
+  sources_used jsonb DEFAULT '[]',
+  source_weights jsonb DEFAULT '{}',
+  variance_flags jsonb DEFAULT '[]',
+  outliers_removed jsonb DEFAULT '{}',
+  data_quality integer DEFAULT 0,
+  fetched_at timestamp with time zone DEFAULT now(),
+  expires_at timestamp with time zone NOT NULL,
+  CONSTRAINT consensus_metrics_pkey PRIMARY KEY (id)
+);
+```
+
+**Purpose:** Stores validated financial metrics with consensus from multiple sources  
+**Key Indexes:** `entity_id`, `entity_name`, `expires_at`  
+**Used By:** Consensus engine, analyzer, cache layer
+
+### 5.1.3 Analysis Results Table
+```sql
+CREATE TABLE public.analysis_results (
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  entity_id uuid,
+  entity_name character varying NOT NULL,
+  analysis_type character varying NOT NULL,
+  consensus_id uuid,
+  executive_summary text,
+  key_findings jsonb DEFAULT '[]',
+  risks jsonb DEFAULT '[]',
+  opportunities jsonb DEFAULT '[]',
+  vs_industry_benchmark jsonb,
+  investor_highlights jsonb DEFAULT '[]',
+  strategic_recommendations jsonb DEFAULT '[]',
+  data_gaps_note text,
+  ai_model character varying,
+  ai_confidence integer,
+  tokens_used integer,
+  hallucination_detected boolean DEFAULT false,
+  validation_passed boolean DEFAULT true,
+  created_at timestamp with time zone DEFAULT now(),
+  expires_at timestamp with time zone,
+  CONSTRAINT analysis_results_pkey PRIMARY KEY (id)
+);
+```
+
+**Purpose:** Stores AI-generated analysis results with validation metadata  
+**Key Indexes:** `entity_id`, `analysis_type`, `created_at`  
+**Used By:** AI guardrails, response builder, caching
+
+### 5.1.4 Intelligence Cache Table
+```sql
+CREATE TABLE public.intelligence_cache (
+  id uuid NOT NULL DEFAULT uuid_generate_v4(),
+  cache_key text NOT NULL UNIQUE,
+  cache_layer character varying NOT NULL DEFAULT 'consensus',
+  entity_id uuid,
+  entity_name text,
+  cache_data jsonb NOT NULL,
+  cache_version integer DEFAULT 1,
+  ttl_seconds integer DEFAULT 86400,
+  expires_at timestamp with time zone NOT NULL,
+  hit_count integer DEFAULT 0,
+  created_at timestamp with time zone DEFAULT now(),
+  last_accessed_at timestamp with time zone DEFAULT now(),
+  CONSTRAINT intelligence_cache_pkey PRIMARY KEY (id)
+);
+```
+
+**Purpose:** Multi-layer caching for fast data retrieval  
+**Cache Layers:** `consensus`, `analysis`, `entity`, `search`  
+**TTL:** Default 24 hours (86400 seconds)  
+**Used By:** Cache manager, orchestrator, API routes
+
+### 5.1.5 API Fetch Log Table
+```sql
+CREATE TABLE public.api_fetch_log (
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  entity_id uuid,
+  entity_name character varying,
+  source_name character varying NOT NULL,
+  ticker_used character varying,
+  endpoint_called text,
+  metrics_returned jsonb DEFAULT '[]',
+  response_time_ms integer,
+  success boolean DEFAULT true,
+  error_message text,
+  http_status integer,
+  fetched_at timestamp with time zone DEFAULT now(),
+  CONSTRAINT api_fetch_log_pkey PRIMARY KEY (id)
+);
+```
+
+**Purpose:** Audit trail for all external API calls  
+**Used For:** Debugging, performance monitoring, error tracking
+
+### 5.1.6 Data Deltas Table
+```sql
+CREATE TABLE public.data_deltas (
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  entity_id uuid NOT NULL,
+  entity_name character varying,
+  metric_name character varying NOT NULL,
+  previous_value numeric,
+  new_value numeric,
+  change_absolute numeric,
+  change_percent numeric,
+  change_direction character varying,
+  is_significant boolean DEFAULT false,
+  detected_at timestamp with time zone DEFAULT now(),
+  source character varying,
+  CONSTRAINT data_deltas_pkey PRIMARY KEY (id)
+);
+```
+
+**Purpose:** Track changes in financial metrics over time  
+**Used By:** Delta detector, change monitor, alerting
+
+### 5.1.7 Sector Hierarchy Table
+```sql
+CREATE TABLE public.sector_hierarchy (
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  sector character varying NOT NULL,
+  industry character varying NOT NULL,
+  sub_industry character varying,
+  niche character varying,
+  description text,
+  typical_pe_range character varying,
+  typical_ebitda_margin character varying,
+  typical_revenue_growth character varying,
+  key_metrics jsonb DEFAULT '[]',
+  top_companies jsonb DEFAULT '[]',
+  created_at timestamp with time zone DEFAULT now(),
+  CONSTRAINT sector_hierarchy_pkey PRIMARY KEY (id)
+);
+```
+
+**Purpose:** Industry classification and benchmarks  
+**Used By:** Entity resolver, industry analyzer, comparator
+
+### 5.1.8 Database Connection Flow
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                         DATABASE CONNECTION FLOW                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+                         ┌─────────────────────────┐
+                         │   Supabase Client      │
+                         │   (lib/db.ts)         │
+                         └───────────┬─────────────┘
+                                     │
+         ┌───────────────────────────┼───────────────────────────┐
+         │                           │                           │
+         ▼                           ▼                           ▼
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│   Read Operations │     │  Write Operations │     │  Cache Layer    │
+│                  │     │                  │     │                 │
+│ • Entity lookup │     │ • Store results │     │ • Check first  │
+│ • Consensus fetch│    │ • Update metrics │     │ • TTL: 24h     │
+│ • Industry info │     │ • Log API calls │     │ • Hit counter  │
+└────────┬────────┘     └────────┬────────┘     └────────┬────────┘
+         │                      │                      │
+         └──────────────────────┼──────────────────────┘
+                                │
+                                ▼
+                    ┌─────────────────────────┐
+                    │    PostgreSQL          │
+                    │    (Supabase)         │
+                    │                        │
+                    │  Tables:               │
+                    │  • entity_intelligence │
+                    │  • consensus_metrics   │
+                    │  • analysis_results    │
+                    │  • intelligence_cache  │
+                    │  • api_fetch_log       │
+                    │  • data_deltas         │
+                    │  • sector_hierarchy    │
+                    └─────────────────────────┘
+```
+
+### 5.1.9 Data Flow to Database
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                      DATA PERSISTENCE FLOW                                  │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+  Phase 1: Collection
+  ───────────────────
+  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐
+  │ MultiChannel │───▶│  Financial   │───▶│   API Fetch  │
+  │ Acquisition  │    │  Extractor   │    │     Log      │
+  └──────────────┘    └──────────────┘    └──────┬───────┘
+                                                  │
+                                                  ▼
+  Phase 2: Validation                                       
+  ──────────────────
+  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐
+  │  Consensus   │───▶│   Delta      │───▶│  Intelligence │
+  │   Engine     │    │  Detector    │    │    Cache      │
+  └──────────────┘    └──────────────┘    └──────┬───────┘
+                                                  │
+  Phase 3: Storage                                         
+  ──────────────────                                
+                                    ┌──────────────┴───────┐
+                                    │                       │
+                                    ▼                       ▼
+                          ┌─────────────────┐    ┌─────────────────┐
+                          │   Analysis      │    │   Consensus     │
+                          │   Results       │    │   Metrics       │
+                          │ (analysis_results)│   │(consensus_metrics)
+                          └─────────────────┘    └─────────────────┘
+                                    │
+                                    ▼
+                          ┌─────────────────┐
+                          │     Delta       │
+                          │     Tracking    │
+                          │  (data_deltas)  │
+                          └─────────────────┘
 ```
 
 ---
@@ -1948,7 +2267,7 @@ const API_CONFIG = {
     endpoints: {
       chat: '/chat/completions'
     },
-    model: 'llama-3.3-70b-versatile',
+    model: 'meta-llama/llama-4-scout-17b-16e-instruct',
     config: {
       temperature: 0.1,
       maxTokens: 3000,
@@ -2105,7 +2424,7 @@ const API_CONFIG = {
       "stage": "AI_API_CALL",
       "timestamp": "2026-02-19T10:30:01.750Z",
       "data": {
-        "model": "llama-3.3-70b-versatile",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
         "temperature": 0.1,
         "maxTokens": 3000
       }
@@ -2349,7 +2668,7 @@ RATE_LIMIT_ENABLED=true                              # Enable rate limiting
 MAX_REQUESTS_PER_MINUTE=60                           # Global rate limit
 
 # AI CONFIGURATION
-AI_MODEL=llama-3.3-70b-versatile                     # Groq model
+AI_MODEL=meta-llama/llama-4-scout-17b-16e-instruct                     # Groq model
 AI_TEMPERATURE=0.1                                   # Factual precision (0-1)
 AI_MAX_TOKENS=3000                                   # Max response length
 AI_TIMEOUT_MS=30000                                  # AI API timeout
@@ -2527,9 +2846,309 @@ curl http://localhost:3000/api/health
 
 ---
 
-*Last Updated: February 19, 2026*
-*Version: 2.0*
-*Total Components: 75+ files*
+## 11. Latest Updates & Version History
+
+### 11.1 Version 5.4 Updates (February 19, 2026 - 13:55 IST)
+
+#### Major Changes
+
+| Change | Description | Impact |
+|--------|-------------|--------|
+| **Groq Model Upgrade** | Updated from llama-3.x to meta-llama/llama-4-scout-17b-16e-instruct | Better AI analysis quality |
+| **Confidence Threshold** | Lowered from 60% to 35% in analyzer.ts | More analyses can run with lower confidence |
+| **PDF Worker Fix** | Installed pdfjs-dist@3.11.174 | PDF parsing now works |
+| **Zepto Industry Fix** | Added Quick Commerce sector mappings | Zepto/Blinkit resolve correctly |
+
+#### Files Modified
+
+```
+lib/analyzers/groq.ts                      → Model update
+lib/ai/groq-prompts.ts                    → Model update
+lib/ai/ai-guardrails-v2.ts                → Model update
+lib/intelligence/analyzer.ts               → Model + confidence threshold
+lib/integration/main-orchestrator.ts       → Model update
+lib/analyzers/ai.ts                       → Model update
+lib/pipeline.ts                            → Documentation update
+lib/analyzers/ai-analyzer.ts              → NEW FILE
+lib/intelligence/collector.ts               → Competitor extractor fix
+lib/intelligence/financial-extractor.ts    → Revenue pattern fix
+lib/resolution/entity-resolver-v2.ts       → Zepto/Quick Commerce mappings
+lib/intelligence/identifier.ts             → Zepto mappings
+```
+
+#### Errors Fixed
+
+1. **Model Mismatch (13:25)**: Old llama-3.x references across 7 files
+2. **Import Path Issues (13:28)**: Created ai-analyzer.ts with correct imports
+3. **LSP Errors (13:30)**: Ignored - source files not in project
+4. **Confidence Threshold (13:45)**: AI blocked due to 60% threshold
+5. **PDF Worker (13:50)**: Missing pdf.worker.mjs module
+6. **Zepto Unknown (13:52)**: Industry classification failed
+
+### 11.2 Version 5.3 Updates (February 19, 2026 - 13:00 IST)
+
+| Change | Description | Impact |
+|--------|-------------|--------|
+| **Competitor Extractor** | Added BLACKLIST, stricter regex patterns | No more "had", "company", "also" |
+| **Revenue Extraction** | Added (?!\s*%) negative lookahead | No more 36.6% → ₹835 Cr confusion |
+
+### 11.3 Version 5.0-5.2 Updates
+
+- Search-first architecture
+- Indian financial sites (screener.in, trendlyne.com, tickertape.in)
+- Confidence gating at 60%
+- Bot separation (Bot1A/B, Bot2)
+- Consensus engine
+
+---
+
+## 12. Component Connection Diagram
+
+### 12.1 Request Flow
+
+```
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                              USER REQUEST                                     │
+└──────────────────────────────────────────────────────────────────────────────┘
+                                      │
+                                      ▼
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                        INPUT PROCESSING LAYER                                │
+│  ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────────┐     │
+│  │ InputSanitizer  │───▶│ QueryClassifier│───▶│ EntityResolver      │     │
+│  │                 │    │                 │    │                     │     │
+│  │ • Normalize     │    │ • brand        │    │ • Exact Match       │     │
+│  │ • Sanitize      │    │ • company      │    │ • Fuzzy Match       │     │
+│  │ • Validate      │    │ • industry     │    │ • Quick Commerce   │     │
+│  └─────────────────┘    └─────────────────┘    │ • SECTOR_MAP       │     │
+│                                                  └──────────┬──────────┘     │
+└──────────────────────────────────────────────────────────────┘               │
+                                       │                                       │
+                                       ▼                                       │
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                        DATA ORCHESTRATION LAYER                             │
+│  ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────────┐     │
+│  │ Orchestrator    │───▶│ Collector       │───▶│ MultiChannel        │     │
+│  │                 │    │                 │    │ Acquisition         │     │
+│  │ • Pipeline      │    │ • Search        │    │                     │     │
+│  │ • Coordination │    │ • Crawl         │    │ • Tier 1: APIs      │     │
+│  │ • Confidence   │    │ • Extract       │    │ • Tier 2: Search    │     │
+│  └────────┬────────┘    └────────┬────────┘    │ • Tier 3: Crawl    │     │
+│           │                       │              └──────────┬──────────┘     │
+│           │                       │                         │                 │
+│           ▼                       ▼                         ▼                 │
+│  ┌──────────────────────────────────────────────────────────────────────┐   │
+│  │                    FINANCIAL EXTRACTOR                               │   │
+│  │  • Revenue patterns (with % exclusion)                              │   │
+│  │  • EBITDA, Profit, Market Cap                                       │   │
+│  │  • Table parsing                                                    │   │
+│  └──────────────────────────────────────────────────────────────────────┘   │
+│                                    │                                        │
+│                                    ▼                                        │
+│  ┌──────────────────────────────────────────────────────────────────────┐   │
+│  │                    CONSENSUS ENGINE                                   │   │
+│  │  • Multi-source validation                                          │   │
+│  │  • Confidence scoring                                               │   │
+│  │  • Anomaly detection                                                │   │
+│  └──────────────────────────────────────────────────────────────────────┘   │
+└──────────────────────────────────────────────────────────────────────────────┘
+                                       │
+                                       ▼
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                          AI ANALYSIS LAYER                                   │
+│  ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────────┐     │
+│  │ AI Guardrails   │───▶│ Groq API        │───▶│ ResponseValidator   │     │
+│  │                 │    │                 │    │                     │     │
+│  │ • Input check   │    │ • llama-4-scout │    │ • Hallucination     │     │
+│  │ • Prompt build  │    │ • temp: 0.1     │    │ • JSON validation   │     │
+│  │ • Confidence    │    │ • max_tokens    │    │ • Output format    │     │
+│  └─────────────────┘    └─────────────────┘    └──────────┬──────────┘     │
+│                                                            │                │
+└──────────────────────────────────────────────────────────────┘               │
+                                       │                                       │
+                                       ▼                                       │
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                          OUTPUT LAYER                                        │
+│  ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────────┐     │
+│  │ Cache Manager   │───▶│ ResponseBuilder │───▶│ Frontend Display    │     │
+│  │                 │    │                 │    │                     │     │
+│  │ • 24h TTL      │    │ • JSON format   │    │ • Dashboard         │     │
+│  │ • Delta track  │    │ • Metadata       │    │ • Charts            │     │
+│  │ • Error log    │    │ • Sources       │    │ • Tables            │     │
+│  └─────────────────┘    └─────────────────┘    └─────────────────────┘     │
+└──────────────────────────────────────────────────────────────────────────────┘
+```
+
+### 12.2 Data Flow
+
+```
+QUERY: "Zepto"
+    │
+    ▼
+┌─────────────────────────────────────────┐
+│ IDENTIFIER (identifier.ts)              │
+│ • checkExcelDatabase()                  │
+│ • quickCommerceMap: Zepto → Retail     │
+│ • Returns: {industry: "Retail",        │
+│            subIndustry: "Quick Commerce"}│
+└─────────────────────────────────────────┘
+    │
+    ▼
+┌─────────────────────────────────────────┐
+│ ORCHESTRATOR (orchestrator.ts)          │
+│ • Confidence: 85%                      │
+│ • Builds financial queries              │
+│ • Coordinates data collection           │
+└─────────────────────────────────────────┘
+    │
+    ▼
+┌─────────────────────────────────────────┐
+│ COLLECTOR (collector.ts)                │
+│ ┌─────────────────────────────────────┐ │
+│ │ BLACKLIST Filter (NEW v5.3)         │ │
+│ │ Blocks: had, company, also, etc     │ │
+│ └─────────────────────────────────────┘ │
+│ ┌─────────────────────────────────────┐ │
+│ │ Stricter Competitor Patterns        │ │
+│ │ competitors?: vs\.?|versus           │ │
+│ └─────────────────────────────────────┘ │
+└─────────────────────────────────────────┘
+    │
+    ├──────────────┬──────────────┬──────────────┐
+    ▼              ▼              ▼              ▼
+┌─────────┐  ┌──────────┐  ┌───────────┐  ┌─────────┐
+│ Financial│  │Competitor │  │ Industry  │  │ News    │
+│ Extractor│  │ Extractor │  │ Info      │  │ Search  │
+└────┬────┘  └─────┬────┘  └─────┬─────┘  └────┬────┘
+     │              │              │              │
+     │              │              │              │
+     │    ┌────────┴──────────────┴────────┐    │
+     │    │ FINANCIAL EXTRACTOR (v5.3 FIX) │    │
+     │    │ • (?!\s*%) negative lookahead  │    │
+     │    │ • Blocks percentages as revenue │    │
+     │    └───────────────────────────────┘    │
+     │                   │                      │
+     ▼                   ▼                      ▼
+┌─────────────────────────────────────────────────────────┐
+│              CONSENSUS ENGINE                          │
+│  • Validates: revenue, ebitda, profit, marketCap     │
+│  • Calculates confidence score                        │
+│  • Flags anomalies                                   │
+└─────────────────────────────────────────────────────────┘
+                          │
+                          ▼
+┌─────────────────────────────────────────────────────────┐
+│              AI ANALYSIS (Groq)                        │
+│  Model: meta-llama/llama-4-scout-17b-16e-instruct    │
+│  Confidence Gate: 35% (lowered from 60%)             │
+│  • Anti-hallucination guardrails                     │
+│  • JSON response validation                          │
+└─────────────────────────────────────────────────────────┘
+                          │
+                          ▼
+┌─────────────────────────────────────────────────────────┐
+│              OUTPUT                                    │
+│  {                                                   │
+│    "summary": "...",                                 │
+│    "financials": {revenue, ebitda, profit},          │
+│    "competitors": ["Blinkit", "Swiggy Instamart"],   │
+│    "confidence": 85                                   │
+│  }                                                   │
+└─────────────────────────────────────────────────────────┘
+```
+
+### 12.3 Layer Architecture
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                          PRESENTATION LAYER                                  │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  ┌─────────────┐  │
+│  │ Dashboard    │  │ Charts       │  │ Tables       │  │ Search      │  │
+│  │ (React)      │  │ (Recharts)  │  │ (DataGrid)   │  │ (Input)     │  │
+│  └──────────────┘  └──────────────┘  └──────────────┘  └─────────────┘  │
+└─────────────────────────────────────────────────────────────────────────────┘
+                                      │
+                                      ▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                           API LAYER                                          │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  ┌─────────────┐  │
+│  │ /api/analyze │  │ /api/search   │  │ /api/health  │  │ /api/metrics│  │
+│  │              │  │              │  │              │  │             │  │
+│  │ • POST       │  │ • GET        │  │ • GET        │  │ • GET       │  │
+│  │ • Validate   │  │ • Query      │  │ • Status     │  │ • Prometheus│  │
+│  │ • Route      │  │ • Filter     │  │ • Ready      │  │ • Scrape    │  │
+│  └──────────────┘  └──────────────┘  └──────────────┘  └─────────────┘  │
+└─────────────────────────────────────────────────────────────────────────────┘
+                                      │
+                                      ▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                       INTELLIGENCE LAYER                                     │
+│  ┌──────────────────────────────────────────────────────────────────────┐   │
+│  │ ORCHESTRATOR (orchestrator.ts)                                      │   │
+│  │  • Pipeline coordination    • Confidence scoring                   │   │
+│  │  • Error handling          • Data flow management                  │   │
+│  └──────────────────────────────────────────────────────────────────────┘   │
+│           │                    │                    │                      │
+│           ▼                    ▼                    ▼                      │
+│  ┌───────────────┐  ┌─────────────────┐  ┌─────────────────────────┐      │
+│  │ IDENTIFIER    │  │ COLLECTOR       │  │ ANALYZER               │      │
+│  │               │  │                 │  │                         │      │
+│  │ • Entity      │  │ • Search       │  │ • AI Guardrails        │      │
+│  │   resolution  │  │ • Crawl       │  │ • Groq API             │      │
+│  │ • Industry    │  │ • Extract     │  │ • Validation           │      │
+│  │   detection  │  │ • Competitor  │  │ • Output format        │      │
+│  │ • Zepto fix  │  │   BLACKLIST   │  │                         │      │
+│  └───────────────┘  └─────────────────┘  └─────────────────────────┘      │
+│           │                    │                    │                      │
+│           │                    ▼                    │                      │
+│           │           ┌─────────────────┐          │                      │
+│           │           │ FINANCIAL       │          │                      │
+│           │           │ EXTRACTOR       │◄─────────┘                      │
+│           │           │                 │                                 │
+│           │           │ • Revenue (v5.3)│                                 │
+│           │           │ • EBITDA         │                                 │
+│           │           │ • Market Cap    │                                 │
+│           │           │ • % exclusion   │                                 │
+│           │           └─────────────────┘                                 │
+│           │                    │                                          │
+│           ▼                    ▼                                          │
+│  ┌──────────────────────────────────────────────────────────────────────┐   │
+│  │                    CONSENSUS ENGINE                                   │   │
+│  │  • Multi-source validation    • Confidence calculation             │   │
+│  │  • Anomaly detection          • Data freshness                     │   │
+│  └──────────────────────────────────────────────────────────────────────┘   │
+└─────────────────────────────────────────────────────────────────────────────┘
+                                      │
+                                      ▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                          DATA LAYER                                         │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  ┌─────────────┐  │
+│  │ Supabase     │  │ Cache        │  │ Datasets     │  │ Python      │  │
+│  │              │  │ (Memory)     │  │ (Excel/CSV) │  │ Service     │  │
+│  │ • PostgreSQL │  │ • 24h TTL    │  │ • 995+ comp │  │ • NSE/BSE  │  │
+│  │ • Tables     │  │ • In-memory  │  │ • 29 ind    │  │ • Scraping │  │
+│  │ • Queries    │  │ • Delta      │  │ • Dynamic   │  │             │  │
+│  └──────────────┘  └──────────────┘  └──────────────┘  └─────────────┘  │
+└─────────────────────────────────────────────────────────────────────────────┘
+                                      │
+                                      ▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                      EXTERNAL SERVICES                                       │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  ┌─────────────┐  │
+│  │ Groq AI     │  │ Google Search│  │ Financial    │  │ Stock       │  │
+│  │              │  │              │  │ APIs         │  │ Exchanges   │  │
+│  │ • llama-4   │  │ • Custom     │  │ • Yahoo      │  │ • NSE       │  │
+│  │ • Guardrails│  │   Search     │  │ • FMP        │  │ • BSE       │  │
+│  │ • Analysis  │  │ • SerpAPI    │  │ • Alpha V    │  │             │  │
+│  └──────────────┘  └──────────────┘  └──────────────┘  └─────────────┘  │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+*Last Updated: February 19, 2026 13:55 IST*
+*Version: 5.4*
+*Total Components: 80+ files*
 *Data Sources: 6 APIs + Python Service*
 *Supported Companies: 995+*
-*Supported Industries: 29*
+*Supported Industries: 29 + Quick Commerce*

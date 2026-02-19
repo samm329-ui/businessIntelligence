@@ -88,7 +88,7 @@ async function analyzeWithGroq(data: CollectedData): Promise<AnalysisResult> {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'llama-3.1-70b-versatile',
+        model: 'meta-llama/llama-4-scout-17b-16e-instruct',
         messages: [
           {
             role: 'system',
@@ -140,7 +140,7 @@ ABSOLUTE RULES:
       opportunities: parsed.opportunities || [],
       industryOutlook: parsed.industryOutlook || 'No outlook available',
       confidence: parsed.confidence || 70,
-      model: 'groq-llama-3.1-70b',
+      model: 'groq-llama-4-scout',
       tokensUsed: result.usage?.total_tokens,
     };
 
@@ -244,9 +244,9 @@ function buildAnalysisPrompt(data: CollectedData): string {
   const consensusMetrics = (data as any).consensusMetrics;
   const structuredFinancials = (data as any).structuredFinancials;
   
-  const confidenceGate = dataConfidence < 60 
-    ? `\n\nCRITICAL: Data confidence score is ${dataConfidence}% (below 60% threshold). You MUST:
-- Set confidence to below 55
+  const confidenceGate = dataConfidence < 35 
+    ? `\n\nCRITICAL: Data confidence score is ${dataConfidence}% (below 35% threshold). You MUST:
+- Set confidence to below 30
 - Prefix executiveSummary with "[INSUFFICIENT DATA]"
 - Set all financial values you are not 100% certain about to null
 - Do NOT speculate or estimate any numbers

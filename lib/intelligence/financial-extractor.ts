@@ -83,41 +83,42 @@ const METRIC_PATTERNS: MetricPattern[] = [
   {
     metric: 'revenue',
     patterns: [
-      /(?:total\s+)?(?:revenue|sales|turnover|top\s*line)[^\d₹$€£]*?([₹$€£]?\s*[\d,]+\.?\d*)\s*(cr(?:ore)?s?|lakh?s?|(?:m|b|t)(?:illion|n)?|k|thousand)?/gi,
-      /(?:revenue|sales|turnover)\s*(?:of|at|was|is|stood\s+at|reached)\s*(?:rs\.?|inr|₹|\$)?\s*([\d,]+\.?\d*)\s*(cr(?:ore)?s?|lakh?s?|(?:m|b|t)(?:illion|n)?)?/gi,
+      // Negative lookahead (?!\s*%) ensures we don't match percentages
+      /(?:total\s+)?(?:revenue|sales|turnover|top\s*line)[^\d₹$€£]*?([₹$€£]?\s*[\d,]+\.?\d*)\s*(?!\s*%)(cr(?:ore)?s?|lakh?s?|(?:m|b|t)(?:illion|n)?|k|thousand)?/gi,
+      /(?:revenue|sales|turnover)\s*(?:of|at|was|is|stood\s+at|reached)\s*(?:rs\.?|inr|₹|\$)?\s*([\d,]+\.?\d*)\s*(?!\s*%)(cr(?:ore)?s?|lakh?s?|(?:m|b|t)(?:illion|n)?)?/gi,
     ],
   },
   {
     metric: 'ebitda',
     patterns: [
-      /ebitda[^\d₹$€£]*?([₹$€£]?\s*[\d,]+\.?\d*)\s*(cr(?:ore)?s?|lakh?s?|(?:m|b|t)(?:illion|n)?)?/gi,
-      /ebitda\s*(?:of|at|was|is|stood\s+at|reached)\s*(?:rs\.?|inr|₹|\$)?\s*([\d,]+\.?\d*)\s*(cr(?:ore)?s?|lakh?s?|(?:m|b|t)(?:illion|n)?)?/gi,
+      /ebitda[^\d₹$€£]*?([₹$€£]?\s*[\d,]+\.?\d*)\s*(?!\s*%)(cr(?:ore)?s?|lakh?s?|(?:m|b|t)(?:illion|n)?)?/gi,
+      /ebitda\s*(?:of|at|was|is|stood\s+at|reached)\s*(?:rs\.?|inr|₹|\$)?\s*([\d,]+\.?\d*)\s*(?!\s*%)(cr(?:ore)?s?|lakh?s?|(?:m|b|t)(?:illion|n)?)?/gi,
     ],
   },
   {
     metric: 'netProfit',
     patterns: [
-      /(?:net\s+)?(?:profit|income|earnings|PAT)\s*(?:after\s+tax)?[^\d₹$€£]*?([₹$€£]?\s*[\d,]+\.?\d*)\s*(cr(?:ore)?s?|lakh?s?|(?:m|b|t)(?:illion|n)?)?/gi,
-      /(?:net\s+)?(?:profit|PAT)\s*(?:of|at|was|is|stood\s+at)\s*(?:rs\.?|inr|₹|\$)?\s*([\d,]+\.?\d*)\s*(cr(?:ore)?s?|lakh?s?|(?:m|b|t)(?:illion|n)?)?/gi,
+      /(?:net\s+)?(?:profit|income|earnings|PAT)\s*(?:after\s+tax)?[^\d₹$€£]*?([₹$€£]?\s*[\d,]+\.?\d*)\s*(?!\s*%)(cr(?:ore)?s?|lakh?s?|(?:m|b|t)(?:illion|n)?)?/gi,
+      /(?:net\s+)?(?:profit|PAT)\s*(?:of|at|was|is|stood\s+at)\s*(?:rs\.?|inr|₹|\$)?\s*([\d,]+\.?\d*)\s*(?!\s*%)(cr(?:ore)?s?|lakh?s?|(?:m|b|t)(?:illion|n)?)?/gi,
     ],
   },
   {
     metric: 'operatingProfit',
     patterns: [
-      /operating\s+(?:profit|income|EBIT)[^\d₹$€£]*?([₹$€£]?\s*[\d,]+\.?\d*)\s*(cr(?:ore)?s?|lakh?s?|(?:m|b|t)(?:illion|n)?)?/gi,
+      /operating\s+(?:profit|income|EBIT)[^\d₹$€£]*?([₹$€£]?\s*[\d,]+\.?\d*)\s*(?!\s*%)(cr(?:ore)?s?|lakh?s?|(?:m|b|t)(?:illion|n)?)?/gi,
     ],
   },
   {
     metric: 'grossProfit',
     patterns: [
-      /gross\s+profit[^\d₹$€£]*?([₹$€£]?\s*[\d,]+\.?\d*)\s*(cr(?:ore)?s?|lakh?s?|(?:m|b|t)(?:illion|n)?)?/gi,
+      /gross\s+profit[^\d₹$€£]*?([₹$€£]?\s*[\d,]+\.?\d*)\s*(?!\s*%)(cr(?:ore)?s?|lakh?s?|(?:m|b|t)(?:illion|n)?)?/gi,
     ],
   },
   {
     metric: 'marketCap',
     patterns: [
-      /market\s*(?:cap(?:itali[sz]ation)?)[^\d₹$€£]*?([₹$€£]?\s*[\d,]+\.?\d*)\s*(cr(?:ore)?s?|lakh?s?|(?:m|b|t)(?:illion|n)?)?/gi,
-      /m[\.\s]*cap[^\d₹$€£]*?([₹$€£]?\s*[\d,]+\.?\d*)\s*(cr(?:ore)?s?|lakh?s?|(?:m|b|t)(?:illion|n)?)?/gi,
+      /market\s*(?:cap(?:itali[sz]ation)?)[^\d₹$€£]*?([₹$€£]?\s*[\d,]+\.?\d*)\s*(?!\s*%)(cr(?:ore)?s?|lakh?s?|(?:m|b|t)(?:illion|n)?)?/gi,
+      /m[\.\s]*cap[^\d₹$€£]*?([₹$€£]?\s*[\d,]+\.?\d*)\s*(?!\s*%)(cr(?:ore)?s?|lakh?s?|(?:m|b|t)(?:illion|n)?)?/gi,
     ],
   },
   {
@@ -308,10 +309,11 @@ function extractFromTable(text: string, source: string, sourceUrl?: string): Ext
   const results: ExtractedFinancial[] = [];
 
   const tablePatterns = [
-    /(?:Revenue|Sales|Turnover)\s*[:\|]\s*([₹$€£]?\s*[\d,]+\.?\d*)\s*(cr(?:ore)?s?|lakh?s?|(?:m|b|t)(?:illion|n)?)?/gi,
-    /(?:EBITDA)\s*[:\|]\s*([₹$€£]?\s*[\d,]+\.?\d*)\s*(cr(?:ore)?s?|lakh?s?|(?:m|b|t)(?:illion|n)?)?/gi,
-    /(?:Net\s+(?:Profit|Income)|PAT)\s*[:\|]\s*([₹$€£]?\s*[\d,]+\.?\d*)\s*(cr(?:ore)?s?|lakh?s?|(?:m|b|t)(?:illion|n)?)?/gi,
-    /(?:Market\s*Cap)\s*[:\|]\s*([₹$€£]?\s*[\d,]+\.?\d*)\s*(cr(?:ore)?s?|lakh?s?|(?:m|b|t)(?:illion|n)?)?/gi,
+    // Negative lookahead (?!\s*%) ensures we don't match percentages
+    /(?:Revenue|Sales|Turnover)\s*[:\|]\s*([₹$€£]?\s*[\d,]+\.?\d*)\s*(?!\s*%)(cr(?:ore)?s?|lakh?s?|(?:m|b|t)(?:illion|n)?)?/gi,
+    /(?:EBITDA)\s*[:\|]\s*([₹$€£]?\s*[\d,]+\.?\d*)\s*(?!\s*%)(cr(?:ore)?s?|lakh?s?|(?:m|b|t)(?:illion|n)?)?/gi,
+    /(?:Net\s+(?:Profit|Income)|PAT)\s*[:\|]\s*([₹$€£]?\s*[\d,]+\.?\d*)\s*(?!\s*%)(cr(?:ore)?s?|lakh?s?|(?:m|b|t)(?:illion|n)?)?/gi,
+    /(?:Market\s*Cap)\s*[:\|]\s*([₹$€£]?\s*[\d,]+\.?\d*)\s*(?!\s*%)(cr(?:ore)?s?|lakh?s?|(?:m|b|t)(?:illion|n)?)?/gi,
     /(?:P\/E|PE\s+Ratio)\s*[:\|]\s*([\d,]+\.?\d*)/gi,
     /(?:EPS)\s*[:\|]\s*([₹$€£]?\s*[\d,]+\.?\d*)/gi,
     /(?:ROE)\s*[:\|]\s*(-?[\d,]+\.?\d*)\s*%/gi,

@@ -65,7 +65,7 @@ OUTPUT FORMAT:
                 'Authorization': `Bearer ${apiKey}`
             },
             body: JSON.stringify({
-                model: 'llama-3.3-70b-versatile',
+                model: 'meta-llama/llama-4-scout-17b-16e-instruct',
                 messages: [
                     { role: 'system', content: systemPrompt },
                     { role: 'user', content: userPrompt }

@@ -258,6 +258,46 @@ export async function identifyInput(input: string, searchContext?: SearchContext
 // ═══════════════════════════════════════════════════════════════════════════
 
 async function checkExcelDatabase(input: string): Promise<IdentificationResult> {
+  // Quick Commerce Special Cases (Feb 2026)
+  const inputLower = input.toLowerCase().trim();
+  const quickCommerceMap: Record<string, IdentificationResult> = {
+    'zepto': {
+      found: true,
+      type: 'company',
+      name: 'Zepto',
+      industry: 'Retail',
+      subIndustry: 'Quick Commerce',
+      confidence: 95,
+      source: 'dynamic',
+      isNew: false,
+    },
+    'blinkit': {
+      found: true,
+      type: 'company',
+      name: 'Blinkit (Zepto)',
+      industry: 'Retail',
+      subIndustry: 'Quick Commerce',
+      confidence: 95,
+      source: 'dynamic',
+      isNew: false,
+    },
+    'instamart': {
+      found: true,
+      type: 'company',
+      name: 'Swiggy Instamart',
+      industry: 'Retail',
+      subIndustry: 'Quick Commerce',
+      confidence: 95,
+      source: 'dynamic',
+      isNew: false,
+    },
+  };
+
+  if (quickCommerceMap[inputLower]) {
+    console.log(`[Identifier] Quick Commerce match: ${input}`);
+    return quickCommerceMap[inputLower];
+  }
+
   try {
     const exactMatch = getCompanyByExactName(input);
     if (exactMatch) {

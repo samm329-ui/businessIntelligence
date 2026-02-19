@@ -324,7 +324,7 @@ export async function runAIAnalysis(
         if (validation.isValid && validation.sanitizedResponse) {
           return {
             ...validation.sanitizedResponse,
-            model: `groq:${clients.groq.model || 'llama-3.1-70b-versatile'}`,
+            model: `groq:${clients.groq.model || 'meta-llama/llama-4-scout-17b-16e-instruct'}`,
             tokensUsed: result.tokensUsed,
           };
         }
@@ -379,7 +379,7 @@ async function callGroq(
   system: string,
   user: string,
   apiKey: string,
-  model = 'llama-3.1-70b-versatile'
+  model = 'meta-llama/llama-4-scout-17b-16e-instruct'
 ): Promise<{ text: string; tokensUsed: number }> {
   const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
     method: 'POST',
