@@ -1,0 +1,16 @@
+{
+  "chat_type": "general",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What is Tata Motors?",
+      "timestamp": "2026-02-19T22:54:48.214Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Jishu, Tata Motors is an Indian multinational automotive manufacturing company headquartered in Mumbai, India. It is a leading player in the global automotive industry and a part of the Tata Group. The company produces a wide range of vehicles, including passenger cars, trucks, buses, and defense vehicles, under various brands such as Tata, Jaguar, and Land Rover.",
+      "timestamp": "2026-02-19T22:54:48.717Z"
+    }
+  ],
+  "created_at": "2026-02-19T22:54:48.213Z"
+}
