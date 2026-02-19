@@ -232,6 +232,9 @@ export async function getIntelligence(
     if (cacheAudit.shouldUseCache && !shouldBypassCache) {
       console.log(`[Orchestrator] Using cached data (age: ${cacheAudit.cacheAge.toFixed(1)}h)`);
       tracer.trace('FINAL_OUTPUT', { source: 'cache' });
+      
+      // Read actual cached data
+      const cachedEntry = cacheAuditor.readCache(identification.name);
       clearTracer();
       
       return {
@@ -242,8 +245,8 @@ export async function getIntelligence(
           industry: identification.industry,
           subIndustry: identification.subIndustry,
         },
-        analysis: null,
-        data: null,
+        analysis: cachedEntry?.data?.analysis || null,
+        data: cachedEntry?.data?.collectedData || null,
         metadata: {
           identificationTimeMs: idTime,
           collectionTimeMs: 0,
@@ -252,7 +255,7 @@ export async function getIntelligence(
           isNewEntity: false,
           isFromCache: true,
           changeDetected: false,
-          sourcesUsed: ['cache'],
+          sourcesUsed: cachedEntry?.data?.sources || ['cache'],
           dataSource: 'cache',
           cacheAge: cacheAudit.cacheAge,
           requestId,

@@ -76,6 +76,32 @@ export async function searchWithGoogleAPI(
 // Method 2: DuckDuckGo (No API key needed)
 // ═══════════════════════════════════════════════════════════════════════════
 
+/**
+ * Decode DuckDuckGo redirect URLs
+ * DuckDuckGo wraps external URLs like: https://duckduckgo.com/l/?uddg=https%3A%2F%2F...
+ * This extracts and decodes the actual URL
+ */
+function decodeDuckDuckGoRedirect(url: string): string {
+  // Check if it's a DuckDuckGo redirect URL
+  if (url.includes('duckduckgo.com/l/') || url.includes('//duckduckgo.com/l/')) {
+    try {
+      // Extract the uddg parameter
+      const urlObj = new URL(url.replace('//duckduckgo.com', 'https://duckduckgo.com'));
+      const actualUrl = urlObj.searchParams.get('uddg');
+      if (actualUrl) {
+        return decodeURIComponent(actualUrl);
+      }
+    } catch (e) {
+      // If parsing fails, try regex fallback
+      const match = url.match(/[?&]uddg=([^&]+)/);
+      if (match) {
+        return decodeURIComponent(match[1]);
+      }
+    }
+  }
+  return url;
+}
+
 export async function searchWithDuckDuckGo(
   query: string,
   options: SearchOptions = {}
@@ -103,8 +129,11 @@ export async function searchWithDuckDuckGo(
       const urlElement = $(element).find('.result__url');
 
       const title = titleElement.text().trim();
-      const url = titleElement.attr('href') || urlElement.text().trim();
+      let url = titleElement.attr('href') || urlElement.text().trim();
       const description = snippetElement.text().trim();
+
+      // Decode DuckDuckGo redirect URLs
+      url = decodeDuckDuckGoRedirect(url);
 
       if (title && url) {
         results.push({
@@ -326,10 +355,18 @@ export async function searchIndustryInfo(industryName: string): Promise<SearchRe
 
 export async function searchFinancialData(companyName: string): Promise<SearchResult[]> {
   const queries = [
+    // Indian financial sources - highest priority
+    `"${companyName}" site:screener.in financials`,
+    `"${companyName}" site:trendlyne.com fundamentals`,
+    `"${companyName}" site:tickertape.in stocks`,
+    `"${companyName}" site:moneycontrol.com financials`,
+    // Official filings and reports
     `"${companyName}" investor presentation pdf 2025 2024`,
-    `"${companyName}" earnings call transcript quarterly results`,
+    `"${companyName}" annual report 2024 2023 filetype:pdf`,
+    `"${companyName}" quarterly results Q3 Q2 FY24 FY25`,
+    // Indian stock exchanges
+    `"${companyName}" BSE NSE share price financial statements`,
     `"${companyName}" revenue EBITDA profit margin annual report`,
-    `"${companyName}" SEC filing BSE NSE financial statements`,
   ];
 
   const allResults: SearchResult[] = [];

@@ -1,0 +1,2234 @@
+{
+  "entity": "boAt Lifestyle",
+  "data": {
+    "analysis": {
+      "executiveSummary": "boAt Lifestyle is a company in the Unknown industry. Analysis based on 119 sources.",
+      "financials": {
+        "revenue": "₹81.5 cr",
+        "growth": "6.8%"
+      },
+      "competitors": [
+        "July",
+        "The closest competitor to boat",
+        "Competitors The closest",
+        "in January",
+        "com"
+      ],
+      "keyFindings": [
+        "Identified in Unknown industry",
+        "Data collected from 119 sources",
+        "Newly added to dataset"
+      ],
+      "risks": [
+        "Market competition",
+        "Economic conditions",
+        "Regulatory changes"
+      ],
+      "opportunities": [
+        "Industry growth potential",
+        "Market expansion",
+        "Innovation opportunities"
+      ],
+      "industryOutlook": "Unknown shows steady growth potential with increasing digitalization and market expansion.",
+      "confidence": 60,
+      "model": "rule-based"
+    },
+    "collectedData": {
+      "entity": {
+        "name": "boAt Lifestyle",
+        "type": "company",
+        "industry": "Unknown",
+        "subIndustry": "General"
+      },
+      "sources": {
+        "companyInfo": [
+          {
+            "title": "Boat_Annual_Report_25.pdf",
+            "url": "https://drive.altiusinvestech.com/docs/AnnualReports/BOAT/Boat_Annual_Report_25.pdf",
+            "description": "Company's website. https://www.boat-lifestyle.com/pages/investor-relations. (20) Instructions for attending the AGM and e-voting are as follows: (i). In view ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "boAt - 2026 Company Profile, Team, Funding, Competitors ...",
+            "url": "https://tracxn.com/d/companies/boat/__1-6OVEvWhIXhXscfbwOm0-i2W0wUXlKyhF6rf5bSZCI",
+            "description": "The company provides options for personalizing certain products. Website: www.boat-lifestyle.com/. Social: X · Facebook. Part Of. Registered Address: Unit no.",
+            "source": "serpapi"
+          },
+          {
+            "title": "boAt Asset Profile",
+            "url": "https://www.preqin.com/data/profile/asset/boat/275848",
+            "description": "Strengthen investor relations · Drive deeper performance analysis · Find ... www.boat-lifestyle.com/. Verticals. E-commerce, Manufacturing, Mobile Apps ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Board of Directors",
+            "url": "https://www.boat-lifestyle.com/pages/board-of-directors?srsltid=AfmBOopIn__IfWEmuvUzbVrBkiaPdCnAIwojj5iYish1X9HiGuSPkJEA",
+            "description": "boAt Lifestyle. Newsletter. search-icon. Search \"Speakers\". Most Searched And ... Investor Relations · Social Responsibility. Shop + -. True Wireless Earbuds ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Annual Returns",
+            "url": "https://www.boat-lifestyle.com/pages/annual-returns?srsltid=AfmBOop5c7dkITALX5RKrfgT1fkI8ltlCnLty_yrEpAfwx_3CCZACE5Z",
+            "description": "Annual Returns 2024-25 2024-25 2023-24 2023-24 2022-23 2022-23 2021 ... boAt Lifestyle. Newsletter. search-icon. Search \"Speakers\". Most Searched And ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Boat Lifestyle Company & Revenue 2014-2026",
+            "url": "https://ecdb.com/resources/sample-data/retailer/boat-lifestyle",
+            "description": "Boat Lifestyle generated revenue of US$172m on its biggest online store boat-lifestyle.com in 2024, with projections indicating a <0% increase in 2025.",
+            "source": "serpapi"
+          },
+          {
+            "title": "Boat Lifestyle Company : A Closer Look",
+            "url": "https://www.sharescart.com/article/boat-lifestyle-company-a-closer-look",
+            "description": "It is the world's fifth-largest wearable brand, according to a December 2020 news source. Boat Lifestyle intends to collect between Rs 3,000 and Rs 3,500 crore ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "What is boAt Lifestyle's business model?",
+            "url": "https://vizologi.com/business-strategy-canvas/boat-lifestyle-business-model-canvas/",
+            "description": "The revenue model of boAt Lifestyle is predominantly driven by product sales. ... boAt Lifestyle's Customer Segments. Young urban professionals; Fitness ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "boAt Returns to Profitability with Strong FY25 Performance",
+            "url": "https://www.entrepreneur.com/en-in/news-and-trends/boat-returns-to-profitability-with-strong-fy25-performance/497976",
+            "description": "... segment, strategic growth in wearables, and traction in emerging business lines. ... boAt lifestyle.\" Gaurav Nayyar, CEO of boAt, added, \"FY25 ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "boAt Business Model, Revenue, Profit & SWOT Analysis",
+            "url": "https://startuptalky.com/boat-business-model/",
+            "description": "boAt Lifestyle is a leading Indian consumer electronics brand known ... segments. By leveraging a strong Direct-to-Consumer (D2C) ...",
+            "source": "serpapi"
+          }
+        ],
+        "industryInfo": [
+          {
+            "title": "Industry 5.0 Market Size, Share & Trends, 2025",
+            "url": "https://www.marketsandmarkets.com/Market-Reports/industry-5-market-35376359.html",
+            "description": "Let Us Help You. What are the Known and Unknown Adjacencies Impacting the Industry 5.0 Market ... SHARE OF INDUSTRY 5.0 MARKET IN 2024; FIGURE 15 AUTOMOTIVE ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "2024 Market Recap and 2025 Outlook",
+            "url": "https://orw-d.com/blogs/insights/2024-market-recap-and-2025-outlook",
+            "description": "2024. Heading into 2024, the market anticipated rate cuts, but the timing and size were unknown. Markets estimated six 25 basis point cuts ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Manufactured Housing Industry Trends & Statistics",
+            "url": "https://mhinsider.com/manufactured-housing-industry-trends-statistics/",
+            "description": "Only 0.2 percent of communities have 1,000 homesites or more. An estimated 34 percent of communities in the U.S. are listed as “unknown” size.",
+            "source": "serpapi"
+          },
+          {
+            "title": "Solar Market Insight Report Q3 2025",
+            "url": "https://seia.org/research-resources/solar-market-insight-report-q3-2025/",
+            "description": "... unknown. Our low case forecast captures downside risk from new US ... by Market Segment, Q2 2024 and Q2 2025.",
+            "source": "serpapi"
+          },
+          {
+            "title": "Market Intelligence Report – Into the great Unknown Q1 2025",
+            "url": "https://www.iconfoods.com/the-market-intelligence-report-will-cover-tariffs-logistics-market-trends-and-everything-icon-foods-offers/",
+            "description": "Market Intelligence Report – Into the great Unknown Q1 2025 ... The global xylitol market size was valued at approximately USD 1.6 billion in ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Lessons Learned From Unknown Market Wizards",
+            "url": "https://www.vantagepointsoftware.com/blog/unknown-market-wizards/",
+            "description": "Attempting to summarize Unknown Market Wizards is quite challenging. In every interview there are tidbits of wisdom on how traders learned to overcome fear and ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Discover Top Traders' Secrets in Unknown Market Wizards",
+            "url": "https://www.cliffsnotes.com/study-notes/21915113",
+            "description": "Finance document from Queen Mary, University of London, 327 pages, Unknown Market Wizards The best traders you've never heard of Jack D. Schwager Contents ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "The Trading Strategy That BREAKS Every Rule - Chris Camillo",
+            "url": "https://www.youtube.com/watch?v=9PSuPnd_1VY",
+            "description": "On this episode of the Words of Rizdom podcast we are joined by Chris Camillo. Chris is a Market Wizard from Jack Schwager's Unknown Market ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Four Reasons – Identifying New Growth Markets and Building ...",
+            "url": "https://www.unknown.global/projects/four-reasons-%E2%80%93-identifying-new-growth-markets-and-building-an-entry-strategy",
+            "description": "Un/known has an exceptional ability to generate customer insights from unknown markets and to refine them into a form that gives us a clear action plan moving ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Economic outlook 2026: Key themes & insights",
+            "url": "https://www.oxfordeconomics.com/key-themes-2026/",
+            "description": "Industrial Markets, Other or unknown, Professional and business services, Real Estate, Technology, information, communication and entertainment (TICE) ...",
+            "source": "serpapi"
+          }
+        ],
+        "financialData": [
+          {
+            "title": "2024 ANNUAL REPORT",
+            "url": "https://www.sec.gov/Archives/edgar/data/1590976/000159097624000084/malibuboatsfy24annualreporta.pdf",
+            "description": "We achieved fiscal year 2024 net sales, net (loss) income and adjusted EBITDA of $829.0 million, ... • Investor Relations at Malibu Boats,. Inc.",
+            "source": "serpapi"
+          },
+          {
+            "title": "Boat_Annual_Report_25.pdf",
+            "url": "https://drive.altiusinvestech.com/docs/AnnualReports/BOAT/Boat_Annual_Report_25.pdf",
+            "description": "(a) the Audited Standalone Financial Statements of the Company for the financial year ended March 31, 2025 together with the Reports of the Board of Directors ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Investor Relations",
+            "url": "https://www.boat-lifestyle.com/pages/investor-relations?srsltid=AfmBOopz3rBLOq4Hnv0KGRZck_YlV5TZHrM8p7dwwvMYih4-c5tm0fc_",
+            "description": "Updated Draft Red Herring Prospectus-I · List of Material Creditors as on June 30, 2025 · Audio Visual UDRHP-I (Hindi).",
+            "source": "serpapi"
+          },
+          {
+            "title": "Investor Relations",
+            "url": "https://www.boat-lifestyle.com/pages/investor-relations?srsltid=AfmBOooF2JXIdsvB-kCFxY37TvNo7e2Psbj-a-bGohqZTlOTOgUvi27C",
+            "description": "Financial Statements Imagine Marketing Limited Group Company and Joint ... Annual Returns Annual General Meetings / Extra Ordinary General Meetings Statutory",
+            "source": "serpapi"
+          },
+          {
+            "title": "Investor Relations",
+            "url": "https://www.boat-lifestyle.com/pages/investor-relations?srsltid=AfmBOorBmqc_lfpKCX0W0OSQG4iKNgLL42Ii1xR7g4_p-jpaRuTlVWSW",
+            "description": "Board of Directors · Key Managerial Personnel and Senior Management Team · Annual Returns · Annual General Meetings / Extra Ordinary General Meetings · Statutory ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "“Oberoi Realty Limited H1FY24 and Q2FY24 Earnings ...",
+            "url": "https://cdn-media.screener.in/concalls/df2cab75-f2d6-4480-9044-feca4659afc1.pdf",
+            "description": "Moderator: Ladies and gentlemen, good day, and welcome to the Oberoi Realty H1FY24 and Q2FY24. Earnings Conference Call.",
+            "source": "serpapi"
+          },
+          {
+            "title": "Earnings Call Transcript Q1 & FY25",
+            "url": "https://cdn-media.screener.in/concalls/37c09068-0b0b-4d47-9ab6-f09d67fc760e.pdf",
+            "description": "With a growing project development potential, strong Balance Sheet, a validated governance structure, and a strong brand connect across ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Nitesh Estates 9th Annual Report (2012-13)",
+            "url": "https://m.moneycontrol.com/bse_annualreports/5332020313.pdf",
+            "description": "During the year, the Company recorded an operating profit (EBITDA) of Rs. (42.7) Crore compared with Rs. 7.7 Crore in the previous year and a net profit of Rs.",
+            "source": "serpapi"
+          },
+          {
+            "title": "Curtain raiser",
+            "url": "https://m.moneycontrol.com/bse_annualreports/5344250315.pdf",
+            "description": "To receive, consider and adopt the Audited Statement of Profit and Loss for the financial year ended March 31, 2015, ... shares are regularly ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Investor Relations",
+            "url": "https://www.boat-lifestyle.com/pages/investor-relations?srsltid=AfmBOoqeXjLUTqjm8IRQJE06EH7oTMH1nNnh1QQk082Z2gtmJ318_1_W",
+            "description": "India's fastest growing audio & wearables brand. The most incredible range of wireless earphones, earbuds, headphones, smart watches, and home audio. From ...",
+            "source": "serpapi"
+          }
+        ],
+        "competitors": [
+          {
+            "title": "7 Unknown Tech Stocks That Could Quintuple Your Money ...",
+            "url": "https://finance.yahoo.com/news/7-unknown-tech-stocks-could-100000754.html",
+            "description": "7 Unknown Tech Stocks That Could Quintuple Your Money in 2024 · Tech Stocks: X-FAB Silicon Foundries (XFABF) · DroneShield Limited (DRSHF) · Tech ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "India's smartwatch market in flux as unknown brands challenge ...",
+            "url": "https://medial.app/news/indias-smartwatch-market-in-flux-as-unknown-brands-challenge-heavyweights-04b3b4bbfc032",
+            "description": "... unknown brands to gain market share. As a result ... Marketing after a transformative four-year stint at boAt Lifestyle. ... competitive UK cosmetics market.",
+            "source": "serpapi"
+          },
+          {
+            "title": "The Makers Top 100 ABN AMRO",
+            "url": "https://www.abnamro.com/en/news/hundred-relatively-unknown-manufacturing-companies-generate-100-billion",
+            "description": "A hundred relatively unknown manufacturing companies together generate nearly 100 billion euros in revenue.",
+            "source": "serpapi"
+          },
+          {
+            "title": "Best NPS Scores From Top Companies in 2025",
+            "url": "https://customergauge.com/benchmarks/blog/top-highest-nps-scores",
+            "description": "... industry. Loanboox's NPS Score. 90. Industry Guide. Financial Services. Headquarters. Zurich, Switzerland. Market Cap. Unknown. G2 Customer Reviews (Volume).",
+            "source": "serpapi"
+          },
+          {
+            "title": "7 Unknown Stocks to Invest in Before They Hit the Big Time",
+            "url": "https://www.nasdaq.com/articles/7-unknown-stocks-to-invest-in-before-they-hit-the-big-time",
+            "description": "Undervalued and under-the-radar, these seven unknown stocks provide investors with big opportunities. Once the bull market returns, all of them could rally ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Top 7 boat-lifestyle.com Alternatives & Competitors",
+            "url": "https://www.semrush.com/website/boat-lifestyle.com/competitors/",
+            "description": "The closest competitor to boat-lifestyle.com are gonoise.com, goboult.co.in and portronics.com. To understand more about boat-lifestyle.com and ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "boat-lifestyle.com Competitors - Top Sites Like ...",
+            "url": "https://www.similarweb.com/website/boat-lifestyle.com/competitors/",
+            "description": "boat-lifestyle.com's top 5 competitors in January 2026 are: mivi.in, gadgets360.com, adobe.com, headphonezone.in, and more. According to Similarweb data of ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Top boAt Alternatives, Competitors",
+            "url": "https://www.cbinsights.com/company/boat-lifestyle/alternatives-competitors",
+            "description": "boAt. Unclaimed. boat-lifestyle.com · Overview & Products · Financials · People ... Compare boAt to Competitors. H. Hammer. Hammer is a D2C tech brand ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "boAt Competitors and Alternatives",
+            "url": "https://www.owler.com/company/boat-lifestyle/competitors",
+            "description": "boAt's top 9 competitors are Noise, Mivi, PTron , Skullcandy, Zebronics, Karbonn, Intex Technologies, Ambrane and UBON. Together they have raised over ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "Industry Associations",
+            "url": "https://us.influencemap.org/industry-associations",
+            "description": "Corporate Links to Industry Associations · Companies · 3M · AES Corporation · Adobe · Alaska Airlines · Albertsons · Alliant Energy Corp · Alphabet ...",
+            "source": "serpapi"
+          }
+        ],
+        "news": [
+          {
+            "title": "Wearables slowdown puts Boat in choppy waters ahead of IPO",
+            "url": "https://www.financialexpress.com/business/wearables-slowdown-puts-boat-in-choppy-waters-ahead-of-ipo-4008164/",
+            "description": "Homegrown D2C startup Boat (Imagine Marketing) saw its revenue decline for the second straight year in FY25, complicating its delayed IPO plans, ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "BoAt Defers Second Attempt At Going Public: Sources | CNBC ...",
+            "url": "https://www.youtube.com/watch?v=WSb7bseFYvI",
+            "description": "Homegrown Audio and Variables brand has deferred its initial public offering despite having all regulatory clearances in place.",
+            "source": "serpapi"
+          },
+          {
+            "title": "News",
+            "url": "https://www.boat-lifestyle.com/blogs/news?srsltid=AfmBOoqzQYSMcCgF3Xan6SvAc-Qc-xgW-MfbeErUruATrJ3_EVYBR8zE",
+            "description": "Outright Worth-IT in this price bracket. 05 May, 2022. 3 min read. After Kartik Aaryan, BOAT ropes in Kiara Advani as brand ambassador · After Kartik Aaryan, ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "The Brand that turned Headphones into a culture: Boat ...",
+            "url": "https://www.planify.in/planify-feed/the-brand-that-turned-headphones-into-a-culture-boat-trims-ipo-size-to-1500-crore/",
+            "description": "The Brand that turned Headphones into a culture: Boat trims IPO size to ₹1,500 crore. 31 October 2025. In 2015, two friends, Aman Gupta and Sameer Mehta, looked ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "'boAt builds a lifestyle that connects deeply with young ...",
+            "url": "https://www.exchange4media.com/pr-and-corporate-communication-news/boat-builds-a-lifestyle-that-connects-deeply-with-young-india-and-the-gen-z-mindset-148402.html",
+            "description": "'boAt builds a lifestyle that connects deeply with young India and the Gen Z mindset'. The seasoned communicator, Arun Mittal opens up about his early days, his ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "boAt launches in UAE: India's top homegrown audio brand",
+            "url": "https://timesofindia.indiatimes.com/world/middle-east/boat-launches-in-uae-indias-top-homegrown-audio-brand-marks-its-gulf-market-debut/articleshow/122916953.cms",
+            "description": "boAt entered the UAE market in July 2025 as India's top audio wearables brand and the world's No. 3 per IDC rankings. The brand is offering its full range, ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "boAt Lifestyle: Stronger from COVID-19 in 2021",
+            "url": "https://www.boat-lifestyle.com/blogs/news/boat-lifestyle-sets-focus-on-2021-to-come-out-stronger-from-covid-19-outbreak-says-co-founder-aman-gupta?srsltid=AfmBOoo2qDBufyl45mY5PYyMQOw8D-Z2Z60u5X7sFa7xp8AL48DiH3gq",
+            "description": "boAt Lifestyle sets focus on 2021 to come out stronger from COVID-19 outbreak, says co-founder Aman Gupta. In an interview with BGR India, Aman Gupta, co- ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "boAt Lifestyle - News, Partnerships, Mergers and Acquisitions ...",
+            "url": "https://usearch.com/company/boat-lifestyle/overview",
+            "description": "List of boAt Lifestyle Financial Result ; 6, 10-07-2025, Read Full Article, IPO-Bound boAt Returns To Profit In FY25, Posts ₹600M Net Gain, Financial Result ; 7 ...",
+            "source": "serpapi"
+          },
+          {
+            "title": "News – Page 7",
+            "url": "https://www.boat-lifestyle.com/blogs/news?page=7&srsltid=AfmBOopwURo8qy0s8LQ63XJb-TkWSVlpXTW-hPrjsnTqT5nDxUpdP0hJ",
+            "description": "India's fastest growing audio & wearables brand. The most incredible range of wireless earphones, earbuds, headphones, smart watches, and home audio. From ...",
+            "source": "serpapi"
+          }
+        ],
+        "crawledPages": [
+          {
+            "url": "https://www.boat-lifestyle.com/pages/investor-relations?srsltid=AfmBOopz3rBLOq4Hnv0KGRZck_YlV5TZHrM8p7dwwvMYih4-c5tm0fc_",
+            "title": "Investor Relations",
+            "content": "Financial Statements Imagine Marketing Limited Group Company and Joint Venture Material Subsidiaries Subsidiaries Corporate Governance Board of Directors Key Managerial Personnel and Senior Management Team Annual Returns Annual General Meetings / Extra Ordinary General Meetings Statutory Newspaper Notices / Advertisements Entity Structure Transcript - Annual General Meeting Committees of the Board Policies Notice of General Meetings / Postal Ballot Postal Ballot Draft Letter of Appointment of Independent Director Initial Public Offer Documents Updated Draft Red Herring Prospectus-I List of Material Creditors as on June 30, 2025 Audio Visual UDRHP-I (Hindi) Industry Report Audio Visual UDRHP-I (English) Imagine Marketing LimitedCIN: U52300MH2013PLC249758 Registered & Corporate Office Andheri, Mumbai +91–22–62102400 Unit no. 204&205, 2nd floor, D-wing & E-wing, Corporate Avenue, Andheri Ghatkopar Link Road, Mumbai -400093 See Map For Investors'/Shareholder's Queries and Grievance Redressal Mr. Shreekant Jayram SawantCompany Secretary & Compliance Officer +91–22–62102400, +91–22–62101300 Unit No. 204 & 205, 2nd floor, D-wing & E-wing, Corporate Avenue, Andheri Ghatkopar Link Road, Andheri East, Mumbai - 400093, Maharashtra, India Email: iml.secretarial@imaginemarketingindia.com For Registrar and Share Transfer Agent Queries MUFG Intime India Private Limited (Formerly Known as Link Intime India Private Limited) +91 22 4918 6200, +91–22–62101300 C-101, First Floor, 247 Park, Lal Bahadur Shastri Marg, Vikhroli (West), Mumbai - 400083, Maharashtra, India Email: imagine.ipo@linkintime.co.in LEGAL DISCLAIMER - IMPORTANT Click to read more I do not confirm I confirm",
+            "crawledAt": "2026-02-19T09:59:59.811Z",
+            "sourceType": "official"
+          },
+          {
+            "url": "https://www.scribd.com/document/707272626/BOAT-Annual-Report-Revenue-Financials",
+            "title": "BOAT Annual Report - Revenue - Financials | PDF | Equity (Finance) | Debt",
+            "content": "<iframe src=\"//www.googletagmanager.com/ns.html?id=GTM-KXQQWDG\" height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe> Skip to main contentOpen navigation menuClose suggestionsSearchSearchenChange LanguageUploadSign inSign in100%(1)100% found this document useful (1 vote)19K views12 pagesBOAT Annual Report - Revenue - FinancialsBOAT is an Indian consumer durable company with a market capitalization of over Rs. 12,816.98 crore. According to its 2023 balance sheet, BOAT had total assets of Rs. 21,524.10 crore, with n…Full descriptionUploaded bymaanyaagrawal65AI-enhanced title and descriptionDownloadSaveSave BOAT Annual Report _ Revenue _ Financials For LaterShare100%100% found this document useful, undefined0%, undefinedPrintEmbedAsk AIReport100%(1)100% found this document useful (1 vote)19K views12 pagesBOAT Annual Report - Revenue - FinancialsBOAT is an Indian consumer durable company with a market capitalization of over Rs. 12,816.98 crore. According to its 2023 balance sheet, BOAT had total assets of Rs. 21,524.10 crore, with non-current assets making up Rs. 4,743.09 crore of that total. BOAT had total equity of Rs. 4,691.64 crore and total liabilities of Rs. 16,832.46 crore.Read moreDownload100%(1)100% found this document useful (1 vote)19K views12 pagesBOAT Annual Report - Revenue - FinancialsBOAT is an Indian consumer durable company with a market capitalization of over Rs. 12,816.98 crore. According to its 2023 balance sheet, BOAT had total assets of Rs. 21,524.10 crore, with n…Full descriptionUploaded bymaanyaagrawal65AI-enhanced title and descriptionDownloadSaveSave BOAT Annual Report _ Revenue _ Financials For LaterShare100%100% found this document useful, undefined0%, undefinedPrintEmbedAsk AIReportOutlinePage viewDownloadSave BOAT Annual Report _ Revenue _ Financials For LaterSearchFullscreenYou are on page 112 Share this documentShare on Facebook, opens a new windowShare on LinkedIn, opens a new windowShare with Email, opens mail clientCopy linkMillions of documents at your fingertips, ad-free Subscribe with a free trial 576648e32a3d8b82ca71961b7a986505",
+            "crawledAt": "2026-02-19T10:00:03.411Z",
+            "sourceType": "official"
+          },
+          {
+            "url": "https://www.moneycontrol.com/news/business/markets/stock-market-live-sensex-nifty-50-share-price-gift-nifty-latest-updates-19-07-2024-liveblog-12772398.html",
+            "title": "Closing Bell: Sensex tanks 750 pts, Nifty closes below 24,550; Q1 results drag Ultratech, BPCL 3-4%, lifts Infosys 2% | Moneycontrol News",
+            "content": "HomeNewsbusinessmarketsLiveClosing Bell: Sensex tanks 750 pts, Nifty closes below 24,550; Q1 results drag Ultratech, BPCL 3-4%, lifts Infosys 2%Moneycontrol News-330July 19, 2024· 15:39 IST -330July 19, 2024· 15:54 IST Avdhut Bagkar Technical and Derivatives Analyst, StoxBox Indian shares traded lower on Friday due to weak global market cues and fears of new U.S.-China trade tensions. Despite opening at record highs, the Nifty 50 and Sensex quickly slipped into the red and fell sharply later in the session. India's benchmark stock indices ended their rally by hitting downward trends after a fresh record high for the fourth consecutive session on Friday. Sectors like Metal, Auto, Financial Services, and Energy saw significant declines. Brokerages' Stocks Fall As Microsoft Outage Impacts Operation. On the stock-specific front, Infosys shares rose after posting better-than-expected Q1 FY25 results and raising its FY25 revenue growth forecast to 3-4%. Other top gainers included Asian Paints, LTIMindtree, and Titan Company. In contrast, Persistent Systems fell nearly 7% after its Q1 profit missed estimates.The benchmark index initially opened 52 points higher but quickly faced selling pressure. After reaching a peak of 24854, it dropped over 100 points in the first few minutes of trading, accompanied by high volume, setting the tone for the day. The index continued to trend lower as selling pressure intensified, closing 269 points lower. Despite a significant correction and adverse market and momentum breadth, the index showed resilience by not dropping below the prior day’s low and closing above the psychological mark of 24500. Going forward, it will be crucial for the index to maintain support in the range of 24500-24200 to sustain bullish momentum.-330July 19, 2024· 15:49 IST Riya Singh – Research Analyst, Commodities and Currency , Emkay Global Gold and silver prices experienced a sharp decline following the sentiment that the anticipated bullish phase might have occurred earlier than expected, leading to profit-taking. A recent slowdown in seasonal demand could exert downward pressure on prices if ETF flows do not persist or if tactical investors retreat due to high prices. U.S. data revealed the largest increase in initial jobless claims since early May, indicating a cooling labor market. This development supports a potential rate cut by the Federal Reserve in September. Despite the recent dip, gold remains nearly 20% higher, and silver over 15% higher since the beginning of the year. Additionally, uncertainty in the U.S. political landscape is contributing to short-term volatility. This temporary decline is seen as a necessary adjustment, providing central bankers an opportunity to regain purchase traction. For Gold support is placed at $2385 - $2350 whereas for silver it is at $29. - $28.85On the other hand, oil prices have continued to decline, influenced by weak demand from China and pressure from a stronger dollar. China's economy grew at a much slower pace than expected in the second quarter, countering the narrative of tight supply. However, the significant drawdown in U.S. stockpiles and improved compliance with production cuts by OPEC members are expected to keep the market undersupplied by more than a million barrels, thereby providing support for crude oil prices. West Texas Intermediate (WTI) prices are expected to find support around $78 to $80 per barrel.Meanwhile, the USD/INR is trading at an all-time low due to a stronger dollar and widespread weakness across Asian currencies. According to the latest bulletin released by the Reserve Bank of India (RBI), the central bank purchased $4.2 billion of forex. Additionally, the market is closely monitoring the Union budget for FY 2024-25, to be held on July 23rd, for a clearer picture of economic growth. Earlier this week, the International Monetary Fund (IMF) raised India's growth projection from 6.8% to 7%. The rupee is expected to respect the resistance of 83.75 – 83.85 levels, with a potential retracement to the 83.50 level.AdvertisementRemove Ad-330July 19, 2024· 15:42 IST Parth Nyati, Founder, Tradingo An Anti-virus Crowdstrike faced a technical glitch after an update that affected the Microsoft servers and PCs where this anti-virus was installed. This anti-virus is also installed on Microsoft servers provided by Azure as a part of their cloud infrastructure. Azure accounts for 25% market share amongst cloud services. Hence a lot of large organizations, airlines, stock exchanges globally who use Azure had technical glitches. The Crowdstrike team is currently working to resolve the issue.-330July 19, 2024· 15:42 IST Wipro Q1 net profit rises to Rs 3,003 crore, beats estimates Wipro Ltd on 19 July reported its Q1 FY25 net profit rose from a year ago to Rs 3,003 crore, beating market expectations. The IT company’s April-June consolidated revenue fell to Rs 21,964 crore.A Moneycontrol poll of brokerage estimates had pegged Wipro’s fiscal first quarter net profit to rise to Rs 2,953 crore, and revenue to fall to Rs 22,229 crore.-330July 19, 2024· 15:36 IST Rupee close Rupee ends at record low of 83.66/$ against the US dollar, lower than Thursday’s close of 83.65/$AdvertisementRemove Ad-330July 19, 2024· 15:31 IST Market close Profit booking seeped across the market ahead of the Union Budget 2024, to be tabled on July 23. Caution ahead of the event also triggered a bout of strong profit booking, pulling all major indices down in the red.At close, the Sensex was down 755.48 points or 0.93 percent at 80,587.98, and the Nifty was down 275.20 points or 1.11 percent at 24,525.60. About 756 shares advanced, 2618 shares declined, and 74 shares unchanged.All sectors witnessed selling and ended with losses.-330July 19, 2024· 15:27 IST Stock Market LIVE Updates | US FDA issues 2 observations for Zydus Life's transdermal mfg site at SEZ in Ahmedabad -330July 19, 2024· 15:19 IST Stock Market LIVE Updates | Metal stocks crack under pressure; JSW Steel, Tata Steel, Hindalco slump 4-5% NIFTY METAL Top Stock Losers (Intra-day) CompanyCMPChg(%)Volume NMDC229.68-5.0510.14m Tata Steel158.18-4.9267.59m JSW Steel891.30-4.312.45m Jindal Steel948.65-4.172.68m Hindalco662.85-3.935.15m MOIL489.00-3.91.39m SAIL142.97-3.3328.98m Coal India489.65-3.098.82m Welspun Corp633.20-2.94754.74k NALCO187.16-2.6517.14m -330July 19, 2024· 15:13 IST Stock Market LIVE Updates | BPCL Q1 net profit falls 29% to Rs 3,015 crore #1 Net Profit down 28.6% At Rs 3,015 Cr Vs Rs 4,224 Cr (QoQ)#2 Revenue down 2.6% At Rs 1.13 Lk Cr Vs Rs 1.16 Lk Cr (QoQ)#3 EBITDA falls 38.7% At Rs 5,650 Cr Vs Rs 9,211 Cr (QoQ)#4 Margin At 5% Vs 8% (QoQ)-330July 19, 2024· 15:04 IST Markets@3 PM | Indices at day's low; Sensex drops 680 pts, Nifty breaks 24,550 The Sensex was down 671.49 points or 0.83 percent at 80,671.97, and the Nifty was down 254.00 points or 1.02 percent at 24,546.80. About 752 shares advanced, 2621 shares declined, and 66 shares unchanged. Nifty Index Contributors CompanyCMP Chg(%)F.F MarketCap (Rs cr)Contribution Infosys1,793.552.02%632,9841248.97 ITC474.20.84%414,788344.43 Asian Paints2,946.20.5%141,29970.04 LTIMindtree5,768.350.2%170,84333.81 Britannia5,878.950.13%141,60517.89 HCL Tech1,593.95-0.04%173,017-6.49 Titan Company3,260.7-0.04%289,480-12.39 ICICI Bank1,249.9-0.03%879,692-28.06 Dr Reddys Labs6,634.55-0.49%83,013-41.1 Kotak Mahindra1,822.45-0.24%181,162-42.61 AdvertisementRemove Ad-330July 19, 2024· 14:53 IST Stock Market LIVE Updates | UltraTech reports Q1 net profit at Rs 1,695 cr UltraTech Cement reported a weak set of Q1 FY25 results, with consolidated net profit flattish on-year at Rs 1,695 crore, missing estimates. April-June quarter consolidated revenue rose to Rs 18,069 crore.A Moneycontrol poll estimated India’s largest cement maker’s fiscal first quarter consolidated net profit at Rs 1,733 crore and revenue at Rs 17,962 crore, representing small rises on a year-on-year basis.-330July 19, 2024· 14:45 IST Stock Market LIVE Updates | BSE not impacted due to Microsoft issue; 'Our operations are running normal,' says spokesperson -330July 19, 2024· 14:43 IST Stock Market LIVE Updates | Blue Dart net profit declines 13% in June quarter #1 Net profit down 12.9% at Rs 53.4 cr vs Rs 61 cr (YoY)#2 Revenue up 8.5% at Rs 1,343 cr vs Rs 1,237.5 cr (YoY)#3 EBITDA up 5.8% at Rs 202.2 cr vs Rs 191.2 cr (YoY)#4 Margin at 15.1% vs 15.4% (YoY)-330July 19, 2024· 14:38 IST Stock Market LIVE Updates | HAL, BEL, other defence stocks slump on profit booking ahead of Budget 2024 Shares of Hindustan Aeronautics Ltd (HAL) extended losses, falling over 3 percent despite the aerospace and defence firm announcing a revised Memorandum of Understanding (MoU) with the Aeronautical Development Agency (ADA), bolstering their collaboration on the LCA AF Mk-2 program.A sales note from InCred citing valuation concerns within defence stocks like HAL has likely spooked investors.The brokerage compared HAL with its global peer Dassault Aviation. Dassault reported revenue of $5.19 billion with a profit of $974 million in the last financial year, while HAL posted revenue of $3.67 billion with a profit of $921 million during the same period. Read More-330July 19, 2024· 14:28 IST Stock Market LIVE Updates | Atul Ltd Q1 net profit rises 8.4% to Rs 112 crore Net Profit up 8.4% At Rs 112 Cr Vs Rs 103.3 Cr (YoY)Revenue up 12% At Rs 1,322 Cr Vs Rs 1,182 Cr (YoY)EBITDA up 22.5% At Rs 223 Cr Vs Rs 182 Cr (YoY)Margin At 16.9% Vs 15.4% (YoY)-330July 19, 2024· 14:18 IST Umang Dairies, Keynote Financial Services among other locked at lower circuit NSE Only Sellers (Intra-day) CompanyOffer QtyCMP Chg(%)Today Vol 20D Avg VolUmang Dairies64791.00144.39-10484090549510.25Keynote Finance4093.00253.44-103943533051.40GTL Infra86343004.002.57-5.17458848820181481397.00GVK Power32883413.008.68-5.0314121743697276.85Century Extr548546.0027.23-5.02114500494262.45GMRP&UI280547.0095.81-5.0129699085080439.00Servotech Power244086.00111.18-5.0116831072",
+            "crawledAt": "2026-02-19T10:00:06.538Z",
+            "sourceType": "financial"
+          },
+          {
+            "url": "https://ecdb.com/resources/sample-data/retailer/boat-lifestyle",
+            "title": "Boat Lifestyle Company & Revenue 2014-2026",
+            "content": "Boat Lifestyle Company & RevenueMain CategoryElectronicsMain Country Selling toIndiaBiggest Competitorgonoise.comRevenue (GMV)US$172m2024Global Rank1,2312024Conversion Rate2.0-2.5% 2024Average Order ValueUnlock2024Unlock The Full Data Set For This RetailerRevenue DevelopmentCountry & Category SplitsCompany FinancialsTransaction KPIs Book a Demo Get Access → The values shown here refer to the retailer's largest online store. Aggregated total figures and values for other stores can be found in our tool. Jump to sectionRevenue & TurnoverSales by Country & Market SharesRevenue Split by Product CategoriesMarketplace Sales: 1st & 3rd Party GMVTop StoresCompetitor Analysis & Similar StoresTransaction KPIs: Conversion Rate, Average Order ValuePayment, Shipping and Shop Software Provider LandscapeBoat Lifestyle Revenue & TurnoverBoat Lifestyle Annual Revenue & Growth by YearBoat Lifestyle's annual sales amounted to US$172m in 2024. This represents a change of <0% from the previous year. Boat Lifestyle is expected to see a growth rate of <0% in 2025 compared to 2024, indicating a projected shift in performance. Annual Revenue (GMV)US$172m2024Annual Growth Forecast<0% 24/25Explore ECDB’s Market Intelligence for FreeAccess real data examples and explore how ECDB’s e-commerce market intelligence helps you uncover valuable insights with ease.E-Commerce Revenue (GMV in Million US$)Overall Unlock2022Unlock20231722024Unlock2025Unlock2026 Note: This chart is based on the GMV of the retailer. Click here to learn more about our methodology and the available drilldown at ECDB. Test the ECDB Tool for FreeAccess real data examples from our platform. See how ECDB helps you uncover e-commerce insights with ease.Boat Lifestyle Monthly Sales & Revenue Development Retailers follow monthly revenue patterns, which depend on annual events, consumer habits, and economic conditions. In the case of Boat Lifestyle, revenues in January of 2026 were US$13m. This marks a change in monthly revenues of <0% from December. Revenue Current Month (GMV)US$13m01/26Growth from Previous Month<0% 12/25-01/26Get Monthly Revenue Data with Seasonal InsightsAccess consistent revenue data for the past 12 months - updated every month to help you track trends and seasonality. Book a Demo Get Access →Monthly E-Commerce Revenue (GMV in Million US$)Overall Unlock09-2025Unlock10-2025Unlock11-2025Unlock12-2025US$13m01-2026 Note: This chart is based on the GMV of the retailer. Click here to learn more about our methodology and the available drilldown at ECDB. Get Monthly Revenue Data with Seasonal InsightsAccess consistent revenue data for the past 12 months - updated every month to help you track trends and seasonality. Book a Demo Get Access →Boat Lifestyle Sales by Country & Market SharesBoat Lifestyle's main market is India, where the retailer generated 100% of revenues in 2024. Boat Lifestyle engages in markets that support its strategic objectives, whether through domestic focus or cross-border expansion. Market Shares by CountryOverall Unlock Unlock Detailed Country-Level Revenue Data Access an exact and granular breakdown of a retailer's revenue across all countries. Includes consistent country share values – ideal for in-depth market analysis. Book a Demo Get Access →Explore ECDB for FreeReal Samples: Explore actual data in actionProfile Variety: Access both Retailer and Market ProfilesZero Cost: No credit card or billing info neededBoat Lifestyle Revenue Split by Product CategoriesBoat Lifestyle sales by product category provide a deeper look into its income structure. Boat Lifestyle's most significant category is Electronics, which accounts for 100% of total sales in 2024. The analysis of sales by category provides a clearer picture of how different segments contribute to overall performance. Revenue Breakdown by CategoryOverall 2024Electronics (100%) Get the Complete Category SplitSee exactly which categories the retailer sells inGain in-depth category insights, not just surface-level dataIncludes a breakdown by main and subcategories Book a Demo Get Access →Boat Lifestyle Marketplace Sales: 1st & 3rd Party GMV1P vs 3P Revenue/SalesBoat Lifestyle's marketplace sales are illustrated by its GMV development. A distinction is made between 1P (first-party) and 3P (third-party) sales, where Boat Lifestyle either acts as the seller (1P) or distributes products from other sellers (3P). In 2024, Boat Lifestyle's' 1P sales contributed 100% to total GMV, while the 3P GMV accounted for 0%. 3P Share0%20243P Share ForecastUnlock2025See the Exact 1P vs. 3P SplitGet exact values instead of ranges – with 10 years of historical and forecast 1P/3P splits at your fingertips. Book a Demo Get Access →1P/3P Revenue/Sales Split5 Years Unlock Unlock 2021 Unlock Unlock 2022 Unlock Unlock 2023100%0%2024 Unlock Unlock 20251P Activity3P ActivitySee the Exact 1P vs. 3P SplitGet exact values instead of ranges – with 10 years of historical and forecast 1P/3P splits at your fingertips. Book a Demo Get Access →Try ECDB NowStart Exploring ECDB - Free & No Strings Attached Real Samples: Explore actual data in action Profile Variety: Access both Retailer and Market Profiles Zero Cost: No credit card or billing info neededBoat Lifestyle Top StoresBoat Lifestyle's flagship domain boat-lifestyle.com generated revenues of US$172m in 2024. Forecasts expect a revenue change of <0% in the coming year. Top Online Stores by GMV (in Million US$)2024 # 1 boat-lifestyle.comImagine Marketing Pvt., Ltd.20212022202320241722025Position1.Storeboat-lifestyle.com Imagine Marketing Pvt., Ltd.202020212022202320241722025Identify Top Stores with Full Revenue Breakdown Identify top stores including their detailed revenue development Wide-ranging revenue distribution on store level Detailed profile for every store Book a Demo Get Access → Position Store 2020202120222023202420251.boat-lifestyle.com Imagine Marketing Pvt., Ltd.1721.boat-lifestyle Example 1232.boat-lifestyle Store Name Some 243.boat-lifestyle Emerald Emera4.boat-lifestyle Rose HRU5.boat-lifestyle Cake Store Company 246.boat-lifestyle Lime Database Inc.7.boat-lifestyle Cyan CPU Chips Something8.boat-lifestyle Gray Singal Company9.boat-lifestyle Scissor Indigo Identify Top Stores with Full Revenue Breakdown Identify top stores including their detailed revenue development Wide-ranging revenue distribution on store level Detailed profile for every store Book a Demo Get Access → Note: This ranking is based on GMV. Click here to learn more about our methodology and the drilldown available at ECDB. Boat Lifestyle Competitor Analysis & Similar Storesgonoise.com is the closest competitor to Boat Lifestyle's largest online store boat-lifestyle.com, with a similarity score of 100.0% in 2024. oneplus.in is another key store with a high similarity score of 99.9%. This competitor analysis provides a concise overview of comparable online stores for market performance benchmarking. Top Competitors and Similar Stores Compare Selected (1/4) boat-lifestyle.com Stores boat-lifestyle.comMaingonoise.com100.0%oneplus.in99.9%emerald-emerald.xb Unlock roserose.hru Unlock cakestore24.zwr Unlock limedatabase.yzu Unlock cyan-cpu-chips.yzu Unlock graysingal-website.ghu Unlock scissorindigo.com Unlock Compare This Retailer With the Right PeersOur Similarity Score matches retailers based on real similarities – for more accurate, meaningful comparisons. Book a Demo Get Access →Boat Lifestyle Transaction KPIs: Conversion Rate, Average Order Value Analyzing transactions on Boat Lifestyle reveals key metrics like conversion rate, average order value, discount rate, and return rate. The store's conversion rate reached 2.0-2.5% in 2024, offering insight into user behavior. Overall See the Exact Transaction DataUnlock exact transaction data behind the ranges – for precise benchmarking and deeper insights. Book a Demo Get Access → Conversion Rate 2.0-2.5% 2024Average Order ValueUnlock2024Return RateUnlock2024Discount RateUnlock2024Boat Lifestyle Payment, Shipping and Shop Software Provider Landscape Payment and shipping options have a major impact on customer satisfaction. In the case of Boat Lifestyle, the payment providers Bank transfer/cash in advance (Bank transfer), Credit cards not named (Cards) and Debit cards not named (Cards) are available. Shipping providers, on the other hand, vary significantly depending on the market. Overall, Boat Lifestyle offers Not communicated. Overall Payment ProviderBank transfer/cash in advance (Bank transfer)Shipping ProviderNot communicatedShop Software Unlock SoftwareHidden Software NameVersion1.0.0Updated11st of March 2050Get Free Data Samples from ECDBBrowse selected retailer and market data and explore real samples powered by ECDB’s e-commerce market intelligence. View All Payment and Shipping Methods Offered by This Retailer Exhaustive list of all payment and shipping methods Breakdown of shop software usage including version Book a Demo Get Access →Get Free Data Samples in the ECDB ToolBrowse selected retailer and market insights and explore real data samples.More RetailersBoatsBobbi Brown CosmeticsBobshopBodega AurreraBodenBodfeld ApothekeBodumBodybuildingBody And FitBodylabBofrostBognerBohusBolBoliaBolt DepotBombasBonamiStart Exploring More Retailer Insights – Free and No Strings AttachedFind your perfect solution and let ECDB empower your e-commerce success. Explore Our Free Plan →",
+            "crawledAt": "2026-02-19T10:00:08.462Z",
+            "sourceType": "official"
+          },
+          {
+            "url": "https://startuptalky.com/boat-business-model/",
+            "title": "boAt Business Model, Revenue, Profit & SWOT Analysis: Inside the Success of India’s Top Audio Lifestyle Brand",
+            "content": "boAt, which set sail in the wave of commercialization in 2016, is considered a pioneer and the fastest emerging earphone brand in India with stylish designs, craftsmanship, and affordability. For the pleasure of music enthusiasts, the brand has placed every earbud, wired and wireless headphones, earphones, and popular Airdopes that set a new style of headphones into the consumer market.In its expanding portfolio of products, boAt has included productive cables, home theatre systems, and avant-garde tech accessories into various other categories, eventually proving itself as a statute of fine audio solutions. This combination of perfect, unusual sound quality, contemporary design-oriented sensibilities, and arduous craftsmanship has provided a successful capture of approximately major portions of the Indian market.In one of the episodes of the reality-comedy series, Aman Gupta- the co-founder of boAt and a fantastic \"shark\"-revealed he would tell how their brand boAt came about. Since 'A' was taken because of Apple, they thought of something 'B'-sounding impactful: boAt was born! Today it has an impressive 48% market share, symbolizing quality and innovation. About boAt Aman Gupta and Sameer Mehta co-founded boAt, which is Imagine Marketing Pvt. Ltd., in the year 2016, however, the idea originated even back in 2014. They found that there are no such affordable yet high-quality audio equipment products available in the Indian market, and they started it with a range of durable, affordable chargers for Apple devices.After two years of research and development, boAt officially launched in 2016 with cables and audio devices, starting with headphones and earphones. The founders injected about INR 30 lakh from their savings into this venture. With its trendy designs and low prices, boAt became an instant hit among young consumers.By 2021, boAt emerged as the leading TWS brand in India. The firm focused on the latest smartwatches and their accessories. In addition, it used eCommerce majors like Amazon and Flipkart to reach a wider audience. Excellent celebrity marketing and influencer collaboration worked to build visibility.It makes boAt capable of propelling its clientele much greater–with the increasing number of customers, now more than 800000 customers worldwide, in particular, attractive from among the millennials and the Gen Z lot.boAt Success Story: How It Became the World’s 5th Largest Wearable Brand | Valuation | Business Model | IPO | FundingboAt is a Gurgaon-based company founded by Aman Gupta and Sameer Mehta in 2016. Discover more about boAt’s business model, founders, valuation, startup story, acquisitions, IPO, funding, logo, and more.StartupTalkyPurbalee Dutta boAt Business Model boAt has designed a very strong business model around consumer electronics, primarily comprising audio and wearables. The company has adopted the Direct-to-Consumer (D2C) channel for selling its products, mainly through its website and other accessible eCommerce sites like Amazon and Flipkart, which benefits not getting alienated from the customer but gaining insights into what actual consumer behavior is like and quickly innovating products. Since the company mainly sells to youngsters, it makes beautiful, cost-effective products for students and young professionals that could hype their growing loyal consumer base.This is a very wide product line consisting of earphones, headphones, speakers, smartwatches, fitness bands, etc. plus accessories like charging cables, power banks, etc. boAt has a competitive pricing strategy with decent quality products at inexpensive cost everything, whether headphones or earphones, is usually priced between INR 350 and INR 550. Such marketing means like celebrity endorsement, influencer association, and attractive social media campaigns found the brand well known today. Moreover, boAt also builds a big and strong community out of its social media and events because its users get converted to some loyal \"boAtheads,\" making it extremely youth-centric in its branding.boAt Business Model CanvasboAt Lifestyle is a leading Indian consumer electronics brand known for its affordable, stylish, and youth-focused products, especially in the audio and wearable segments. By leveraging a strong Direct-to-Consumer (D2C) approach, influencer-driven marketing, and trend-based design, boAt has built a loyal customer base of millennials and Gen Z. The business model of boAt focuses on selling affordable, stylish consumer electronics, supported by influencer marketing, online marketplaces, and strong community engagement.boAt Business Model CanvasHere is the boAt Business Model Canvas:Key PartnerseCommerce platforms (Amazon, Flipkart, etc.)Influencers and celebrities (for endorsements)Manufacturers and logistics providersKey ActivitiesDesigning and selling audio and wearable devicesRunning Direct-to-Consumer (D2C) sales via websiteExecuting marketing campaigns (social media, influencers)Product innovation based on consumer insightsValue PropositionsAffordable, stylish, and high-quality productsTrendy designs that appeal to millennials and Gen ZWide product range (earphones, smartwatches, speakers, accessories)Strong brand community through loyalty and engagement (boAtheads)Customer SegmentsStudents and young professionalsMillennials and Gen ZBudget-conscious, fashion-forward consumersCustomer RelationshipsCommunity-driven brand (boAtheads)High customer engagement through social mediaDirect customer feedback via D2C platformChannelsboAt’s official website (D2C)Online marketplaces (Amazon, Flipkart)Social media platforms and influencer networksRevenue StreamsProduct sales (earphones, speakers, smartwatches, accessories)High-margin accessory sales (cables, chargers)Bundled sales and seasonal promotionsKey ResourcesStrong brand identity and social media presenceDesign and R&D teamsE-commerce infrastructureInfluencer and celebrity networksCost StructureManufacturing and sourcingMarketing and influencer/celebrity endorsementsLogistics and delivery costsPlatform maintenance and customer service How boAt Makes Money I boAt Revenue Model boAt Indian consumer electronics firm makes money only from selling different types of audio and wearable devices, along with accessories. Their product portfolio consists of items such as wireless and wired earphones, headphones, Bluetooth speakers, smartwatches, and different types of fitness trackers and accessories example, charging cables, power banks, and mobile cases. boAt is well known for making high-quality yet affordable products that mostly attract younger generation consumers and cause continuous availability of demand. For instance, the accessories segment alone brought in INR 81.5 crore for boAt in FY2022, which reflects its revenue earner. Well above, accessories include very highly margin items like cables and charges, which complement high profitability for the company in comparison with central offerings such as headphones and speakers. Internet Commerce with online platforms such as Amazon and Flipkart is significant in the success of boAt in that it provides major points of sale with reach and visibility. The strategies include hefty public promotion and attracting customers to high purchase quantities through offering bundles and seasonal discounts on sale. Furthermore, Boating marketing activities would enhance their brands through suitable influencer collaboration with celebrity endorsements, thereby ensuring a keen bite for millennials and Gen Z.boAt Financials Boat FinancialsFY23FY24Operating RevenueINR 3285 croreINR 3122 croreTotal ExpensesINR 3562 croreINR 3192 croreProfit/LossINR -101 croreINR -54 crore boAt FinancialsAs per regulatory filings, boAt’s audited revenue dropped by 5% to INR 3,122 crore in FY24 from INR 3,285 crore in FY23, while the company reduced its loss by 47% to INR 54 crore in FY24 from INR 101.1 crore the previous year. Also, boAt achieved a positive EBITDA in FY24, signaling a return to profitability and stronger unit economics than FY23.Revenue from operations of boAt company from 2019 to 2024boAt Revenue boAt Unique Selling Proposition boAt is blessed with a value proposition that talks about design, performance, and customer-centricity. The products create an amalgamation of beauty and brains - thus appealing to young fashion fanaticism and the aspirational lifestyle. All this at a truly affordable price: the boAt gives you the background of awesome sound, battery life, and rugged, Great Value products. The whole strength of boAt lies in understanding the consumer and closing the gap with the consumer desires so they can shift to what is current and trendy. This captures quality and stylism boAt into a brand that supports very good customer satisfaction and loyalty, all this being a generation of generation millennials and Gen Z consumers.boAt Marketing Strategy - How boAt is Ruling the WorldBoat is a leading consumer audio brand founded by Sameer Mehta and Aman Gupta. Here’s an insight into its marketing strategy.StartupTalkyMahenoor Mansuri boAt SWOT Analysis boAt SWOT AnalysisBelow is the boat SWOT analysis of boAt company in detail:boAt StrengthsStrong Brand Identity: boAt will hold a hefty portion of the audio technology market, more than 26 percent when it comes to the wireless audio segment in India in the future.Huge Range of Goods: Over 50 earbuds: wireless models and nearly 20 headsets apart from Indian smartwatches and fitness bands.Economical Price: To provide fine-quality audio and wearable devices at lower prices, thus making them available to the general masses.Capacity of Marketing: Campaigns through influencers and celebrities develop a link with the younger patron base, and an increasing reach has been achieved.boAt WeaknessesLimited Stores: Just 25% of sales through retail stores actually indicates the lag to competition like Xiaomi and Sony in retail shopping in-store. Heavy Reliance on Online Channels: Of sales, ",
+            "crawledAt": "2026-02-19T10:00:09.826Z",
+            "sourceType": "official"
+          },
+          {
+            "url": "https://wwipl.com/unlisted-shares/boat-unlisted-share-price/financial",
+            "title": "BOAT Annual Report | Balance Sheet | Imagine Marketing Financials",
+            "content": "Unlisted Deals: × BUY SELL BOAT Annual Reports, Revenue and Financials Last Traded Price 950.00 + 0.00 % Send to × Submit Close Imagine Marketing Limited (BOAT) Return Comparision with Primex 40 Index Periods 1 Week 1 Month 3 Months 6 Months 1 Year 3 Years All Time Primex-40 Imagine Marketing Limited Overview Balance Sheet P&L Account Cash Flow Financial Ratios Dividend History Imagine Marketing Limited Consolidated Balance Sheet (Rs in Millions) Particulars 31-03-2025 31-03-2024 Non-Current Assets Property, plant and equipment 187.11 219.17 Right-of-use assets 185.41 280.41 Goodwill 1,783.84 1,783.84 Other Intangible assets 1,082.97 1,318.14 Intangible assets under development 22.43 - Investments accounted for using the equity method 322.60 480.20 Other financial assets 38.51 42.37 Deferred tax assets (net) 362.87 553.91 Income tax assets (net) 123.75 220.11 Other non-current assets 3.51 3.40 Current Assets Inventories 3,258.12 4,310.06 Investments 831.95 - Trade receivables 2,545.41 1,507.96 Cash and cash equivalents 837.68 604.45 Bank balance other than cash and cash equivalents 1,990.00 1,935.00 Loans 0.54 0.04 Other financial assets 133.04 164.06 Other current assets 2,099.68 3,632.13 Total Assets 15,809.42 17,055.25 Equity Equity share capital 96.15 96.15 Instruments entirely equity in nature 108.71 108.71 Other equity 4,506.36 3,868.00 Non-Current Liabilities Borrowings - 5,039.95 Lease liabilities 114.79 197.48 Provisions 31.93 22.53 Deferred tax liabilities (net) 107.60 166.89 Current Liabilities Borrowings 5,648.81 3,561.92 Lease liabilities 83.23 82.93 Trade Payable Total outstanding dues of micro and small enterprises 276.79 91.08 Total outstanding dues of creditors other than micro and small enterprises 3,434.56 2,109.57 Other financial liabilities 139.87 489.77 Other current liabilities 151.43 101.17 Provisions 1,109.19 1,119.10 Total Equity and Liabilities 15,809.42 17,055.25 Imagine Marketing Limited Consolidated Profit & Loss Statement (Rs in Millions) Particulars 31-03-2025 31-03-2024 Income Revenue from operations 30,732.77 31,176.74 Other income 245.37 176.72 Total Income 30,978.14 31,353.46 Expenses Purchases of stock-in-trade 20,697.81 22,711.25 Changes in inventories of stock-in-trade 1,051.94 391.69 Employee benefits expense 1,348.04 1,305.19 Finance costs 278.85 683.69 Depreciation and amortization expense 399.32 355.86 Other expenses 6,627.58 6,888.22 Total Expenses 30,403.54 32,335.90 Profit/(Loss)before exceptional items, share of profit/(losses) of associate join venture and tax 574.60 (982.53) Share of profit of associate and joint venture (net of tax) 86.39 19.19 Profit/(loss) before exceptional item and tax 660.99 (962.53) Add: Exceptional item on sale of investment in associate 86.03 - Profit/(Loss) before tax 747.02 (962.53) Current tax 4.32 6.84 Deferred tax 131.90 (172.53) Profit/(Loss)for the year 610.80 (796.84) Other Comprehensive Income Re-measurements of the net defined benefit plans (0.61) 4.32 Less- Income tax relating to items that will not be reclassified to profit and loss 0.15 (1.09) Exchange differences in translating financial statements of foreign operations (6.13) 56.20 Other Comprehensive Income for the year, net of tax (6.67) 59.43 Total Comprehensive Income for the year 604.13 (737.41) Profit/(loss) for the year attributable to: Owners of the Company 610.80 (796.84) Other comprehensive income for the year attributable to: Owners of the Company (6.67) 59.43 Total comprehensive income for the year attributable to: Owners of the Company 604.13 (737.41) Earnings/(Loss) per equity share (face value of Re. 1 each) Basic (Rs.) 4.07 (5.31) Diluted (Rs.) 4.05 (5.31) Imagine Marketing Limited Consolidated Cash Flow Statement (Rs in Millions) Particulars 31-03-2025 31-03-2024 Cash Flow from Operating Activities Profit/(Loss)before tax 747.02 (962.53) Adjustments for: Share of profit of associates and joint venture (net of tax) (86.39) (19.91) Exceptional item 86.03 - Depreciation and amortization expense 399.32 355.86 Impairment expense 7.73 - Share based payment expense 86.04 111.56 Interest on fixed deposits from banks (170.29) (137.26) Interest income from others (2.72) (2.40) Fair valuation (gain) from investments designated at FVTPL (net) (23.82) (0.15) Gain on de-recognition of leases (0.16) (2.28) Fair value loss on account of changes in financial liabilities 6.52 8.72 Finance cost 278.85 683.69 Provision/(Reversal) for loss allowance for trade receivables 18.67 (62.23) Provision for doubtful advances 145.59 104.26 Provision/(Reversal)for slow and non-moving inventory (net) (589.32) 758.33 Loss on Sale/Disposal of tangible and intangible assets (net) 0.20 1.07 Unrealized foreign exchange loss (net) 13.88 0.49 Loss of derivative contracts 14.51 - Operating profit before working capital changes 931.66 837.22 Adjustments for : Decrease/(Increase) in inventories 1,641.26 (366.64) Decrease/(Increase) in trade receivables (1,056.12) 1,312.34 Decrease/(Increase) in loans (0.50) 0.41 Decrease/(Increase) in other financial assets 0.13 105.52 (Increase) in other current and non-current assets 1,386.75 2,06.45 Increase/(Decrease) in trade payables 1,336.57 (395.30) Increase in other financial liabilities 36.47 9.42 Increase/(Decrease) in other current liabilities 50.25 (50.11) Increase /(Decrease) in current and non-current provisions (2.71) 466.01 Cash generated from operations 4,323.76 3,981.32 Taxes paid (net of refunds) 92.04 (47.25) Net Cash flows from operating activities 4,415.79 3,934.08 Cash Flow from Investing Activities Dividend received from joint venture 30.00 - Sale of investment I associate/(Investment made in equity share of joint venture)(net of exceptional items) 127.96 (165.00) (Investment in)/Redemption of mutual funds (net) (808.13) 8.29 Acquisition of property, plant and equipment (50.33) (199.67) Proceeds from sale of property, plant and equipment 0.01 78.87 Acquisition of intangible assets including expenditure on internally generated intangible assets (22.84) (82.85) Redemption of fixed deposits (4,995.00) 244.39 Investment in fixed deposits 5,075.00 (249.00) Payment of deferred consideration (470.85) (224.53) Interest on fixed deposits 176.38 215.32 Net cash flow (used in) investing activities (937.71) (374.18) Cash Flow from Financing Activities Proceeds from issue of equity shares, including securities premium - 7.09 (Repayment) of short-term borrowings(net) (2,959.58) (3,767.96) Principal repayment of lease liabilities (85.02) (87.74) Interest repayment of lease liabilities (21.50) (24.66) Interest and other borrowing costs paid (172.56) (612.40) Net cash flow generated from financing activities (3,238.66) (4,485.67) Effect of exchange differences on translation of foreign currency (6.21) 56.20 Net increase/(decrease) in cash and cash equivalents 233.23 (869.58) Cash and cash equivalents at the beginning of the year 604.45 1,474.03 Cash and cash equivalents at the end of the year 837.68 604.45 Here is a summary of the Cash Flow Statement for the years 2025 and 2024: Cash Flow from Operating Activities In FY 2025, the company reported a profit before tax of ₹747.02 million, a turnaround from the loss of ₹962.53 million in FY 2024. After adjustments for non-cash and non-operating items such as depreciation (₹399.32 million), finance costs (₹278.85 million), provisions for doubtful advances (₹145.59 million), and reversal of slow-moving inventory provisions (₹589.32 million), the operating profit before working capital changes stood at ₹931.66 million in FY 2025, slightly higher than ₹837.22 million in FY 2024. Working capital adjustments provided a strong boost to cash flows. Notably, there was a reduction in inventories of ₹1,641.26 million, and an increase in trade payables of ₹1,336.57 million, though trade receivables increased by ₹1,056.12 million, creating some outflow. As a result, cash generated from operations rose to ₹4,323.76 million in FY 2025 compared to ₹3,981.32 million in FY 2024. After accounting for taxes, the net cash flow from operating activities was ₹4,415.79 million, higher than the ₹3,934.08 million achieved in FY 2024. This shows significant improvement in operational efficiency and working capital management. Cash Flow from Investing Activities The company’s investing activities showed moderate outflows in FY 2025 compared to FY 2024. The major movements include investment in mutual funds (₹808.13 million), payment of deferred consideration (₹470.85 million), and acquisition of property and intangible assets totaling ₹73.17 million. At the same time, the company redeemed fixed deposits worth ₹5,075 million, while also investing ₹4,995 million, balancing liquidity management. Additional inflows came from dividends from a joint venture (₹30 million) and proceeds from sale of investment in associate (₹127.96 million). Overall, the company reported a net cash outflow of ₹937.71 million in FY 2025, compared to ₹374.18 million in FY 2024. The higher outflow reflects continued strategic investments, but these were partly offset by cash inflows from fixed deposit movements. Cash Flow from Financing Activities Financing activities showed a clear outflow trend. In FY 2025, the company repaid short-term borrowings worth ₹2,959.58 million, alongside lease liability repayments of ₹106.52 million (principal and interest), and borrowing costs of ₹172.56 million. Unlike FY 2024, there was no equity issuance in FY 2025. Consequently, the net outflow from financing activities stood at ₹3,238.66 million in FY 2025, lower than the ₹4,485.67 million outflow in FY 2024, but still a significant drain on cash resources. Net Cash Position Despite heavy outflows from investing and financing activities, strong cash inflows from operations ensured that the company ended FY 2025 on a positive note. The net increase in cash and cash equivalents was ₹233.23 million in FY 2025, reversing the sharp decline of ₹869.58 million in FY 2024. Standalone Fin",
+            "crawledAt": "2026-02-19T10:00:11.354Z",
+            "sourceType": "official"
+          },
+          {
+            "url": "https://tracxn.com/d/companies/boat/__1-6OVEvWhIXhXscfbwOm0-i2W0wUXlKyhF6rf5bSZCI",
+            "title": "boAt - 2026 Company Profile, Team, Funding, Competitors & Financials - Tracxn",
+            "content": "Most viewed in 2019boAt - About the companyboAt is a series C company based in Gurugram (India), founded in 2016 by Aman Gupta, Sameer Mehta, Aman Gupta and Urvashi Joshi Parekh. It operates as a Retailer of personal audio and wearable products, plus mobile accessories. boAt has raised $171M in funding from investors like Fireside Ventures, Qualcomm Ventures and Warburg Pincus, with a current valuation of $1.32B. The company has 97 active competitors, including 7 funded and 1 that has exited. Its top competitors include companies like Nu Republic, BOULT and StuffCool. Sectors and market segments that boAt operate inboAt serves in the High Tech, Internet of Things - Industry Applications, Retail market segments.The primary business model of boAt are:High Tech > Wearable Technology > ***** **** > ***** ******Internet of Things - Industry Applications > Wearable Technology > ***** **** > ***** ******Retail > Consumer Electronics E-Commerce > ***** **** > ***** ******High Tech > Audio Tech > ***** **** > ***** ******Company DetailsRetailer of personal audio and wearable products, plus mobile accessories. The company provides various types of headphones, earphones, and earbuds. Also offered are smart watches, speakers, and related accessories. The company provides options for personalizing certain products.Websitewww.boat-lifestyle.com/SocialPart OfRegistered AddressUnit no. 204 & 205, 2nd floor, D-wing & E-wing, Corporate Avenue, Andheri Ghatkopar Link, Road, Mumbai City, Mumbai, Maharashtra, India, 400093Key MetricsFounded Year2016 LocationGurugram, India StageSeries C Total Funding$171M in 9 roundsLatest Funding RoundAngel, Feb 01, 2024, UndisclosedPost Money Valuation$1.32B as on Dec 02, 2022InvestorsFireside Ventures & 61 moreRanked1st among 97 active competitorsAnnual Revenue₹3,100Cr as on Mar 31, 2025Employee Count495 as on Aug 31, 2025 Investment & AcquisitionsRedGear & 2 moreSimilar CompaniesNu Republic & 172 moreView boAt's full profileLegal entities associated with boAtboAt is associated with 1 legal entity given below:Legal Entity NameDate of IncorporationRevenueLatest Employee CountDocumentsImagine Marketing LimitedCIN: U52300MH2013PLC249758India, ActiveNov 01, 2013$366M (as on Mar 31, 2025)495 (as on Aug 01, 2025)Buy NowSign up to download boAt's company profileSign Up for FreeboAt's funding and investorsboAt has raised a total funding of $171M over 9 rounds. Its first funding round was on Apr 06, 2018. boAt has 15 institutional investors and 47 angel investors.Here is the list of recent funding rounds of boAt:Filter this listDate of fundingFunding AmountRound NamePost money valuationRevenue multipleLead InvestorsOther InvestorsFeb 01, 2024UndisclosedAngel----Oct 28, 2022$61.6MSeries C$1.32B3.2xWarburg Pincus, Malabar Investments-Apr 15, 2021$6.65MSeries B$256M1.3xQualcomm Ventures-Access funding benchmarks and valuations. Sign up today!View details of boAt's funding rounds and investorsboAt's founders and board of directorsFounder? Claim ProfileThe founders of boAt are Aman Gupta, Sameer Mehta, Aman Gupta and Urvashi Joshi Parekh. Urvashi Joshi Parekh and Sameer Mehta are the CEOs of boAt.Here are the details of boAt's key team members:Aman Gupta: Co-Founder & CMO of boAt and founder of 2 other companies, Imagine Marketing and Imagine Marketing. They are also an angel investor in 127 startups and serve on the boards of 3 companies.Contact Info: 1 phone numberSameer Mehta: Co-Founder & CEO & CPO of boAt and founder of 1 other company. They are also an angel investor in 10 startups and serve on the boards of 3 companies.Aman Gupta: Co-Founder & CMO of boAt and founder of 2 other companies, PikaPika App and PrimeOS. Contact Info: 1 email address and 1 phone numberUrvashi Joshi Parekh: Former ecutive Secretary - Co Founder & CEO & COO of boAt. boAt's Board of DirectorsboAt's board has 8 active members. , , and are part of team and , , and are independent board members.Here is the list of boAt's board of directors:NameTypeRepresentingStatusDurationAman GuptaTeam-Current3y 1mSameer MehtaTeam-Past0y 5mVivek GambhirTeam-Current2y 9mAnkur SharmaTeam-Current4y 1mAnand RamamurthiIndependent board member-Current4y 2mAnish SarafIndependent board member-Current5y 1mAnand RamamoorthyIndependent board member-Current4y 2mDeven Pravinchandra WaghaniIndependent board member-Current4y 1mKanwaljit SinghIndependent board member-Past0y 5mVikram Arun ChogleIndependent board member-Past1y 0mView details of boAt's Founder profiles and Board MembersboAt's employee count trendboAt has 495 employees as of Aug 25. Here is boAt's employee count trend over the years:Uncover boAt's growth story! Sign up today!Access Tracxn on any websiteOur Google Chrome extension lets you view company details while browsing their websitesInstall Tracxn ExtensionboAt's Competitors and alternatesTop competitors of boAt include Nu Republic, BOULT and StuffCool. Here is the list of Top 10 competitors of boAt, ranked by Tracxn score:Overall RankCompany DetailsShort DescriptionTotal FundingInvestorsTracxn Score1stboAt2016, Gurugram (India), Series CRetailer of personal audio and wearable products, plus mobile accessories$171MAnalah Ventures, Malabar Investments & 60 others77/1002ndNu Republic2018, Gurugram (India), SeedOnline retailer of wireless earbuds, headphones, speakers, and mobile accessories$1.36MSalarpuria Group & 33 others61/1003rdBOULT2017, Delhi (India), UnfundedProvider of an internet first brand offering multi-category audio devices--56/1004thStuffCool2007, Mumbai (India), UnfundedInternet first brand offering mobile accessories--52/1005thNoise2014, Gurugram (India), Series BOnline retailer of smart watches, earbuds, and related accessories$30MBose49/1006thCrossbeats2015, Bengaluru (India), UnfundedInternet first brand offering audio devices--48/1007thMivi2015, Hyderabad (India), Funding RaisedMaker of smartphone accessories-RevX Capital, N+1 Capital47/1008thLyne2022, Rajkot (India), UnfundedInternet first brand of multi-category electronic products--46/1009thPlantronics1961, Santa Cruz (United States), PublicProvider of video and voice collaboration solutions-Court Square43/10010thGOVO2022, Bengaluru (India), UnfundedOnline retailer of audio products including soundbars, earbuds, and headphones--42/100Get insights and benchmarks for competitors of 2M+ companies! Sign up today!Looking for more details on boAt's competitors? Click here to see the top onesboAt's Latest cap tables and shareholdingFounders (largest shareholder) own 53.52%, Funds own 45.51%, Enterprises own 0.00% and Other People own 0.06%. The net worth of boAt's founders is INR 5,760Cr as of Dec 02, 2022.Shareholders NamePost Round Holding %Net worthCumulative investmentRealised returnsUnrealised returnsReturn multipleFounder53.52%5,760Cr4673460217193336221543586400Sameer Mehta800360717147748554465751786667574933927647Aman Gupta268662694107477926136675406329292494519540Fund45.51%4,900Cr8061950350515298629233478264Warburg Pincus756636917313604734485533171843145674634932Malabar Investments000000Qualcomm Ventures331855198679Innoven Capital000000Enterprise-47.8L0000Other People0.06%7.28Cr0000ESOP Pool0.88%95.5Cr0000Other Investors0.01%1.01Cr0000Total99.98%10,800Cr4699964277212187145279382942To unlock detailed Cap Table of boAt Sign up today!Notes: The column Net Worth represents the net worth of investments made by that entity, as per the latest cap table.DisclaimerView more details of boAt's ShareholdingboAt's Investments and acquisitionsboAt has made 1 investment in Anveshan and acquired RedGear and COVE.Here is the list of these investments and acquisitions:Date of Investment/AcquisitionTypeCompany NameFounded YearLocationJan 12, 2025AcquisitionRedGear2010Mumbai (India)Jan 14, 2022AcquisitionCOVE2015Singapore (Singapore)Aug 20, 2021InvestmentsAnveshan2019Bengaluru (India)Want to know more about where corporates are investing? Sign up today!Reports related to boAtHere is the latest report on boAt's sector:FreeWearable Technology - Sector ReportEdition: August, 2025 (98 Pages)View all reports related to boAtNews related to boAtFilter this listMedia has covered boAt for a total of 52 events in the last 1 year, 31 of them have been about company updates and 5 about partnerships.•boAt Appoints Sammyak Jain to Spearhead Global Expansion StrategyBusiness Outreach•Jan 15, 2026•boAt•boAt Introduces Valour Ring 1, a Smart Ring with 24×7 Health Tracking in a Lightweight Titanium DesignGizmochina•Dec 19, 2025•boAt•BoAt IPO Revised DRHP Flags Auditor Concernselectronicsforyou.biz•Dec 12, 2025•boAt•boAt’s IPO reality check: From ‘Shark Tank’ fame to a Rs 1,500 crore listingFinancial Express•Nov 24, 2025•boAt•boAt increases domestic production with India-focused supply chain strategyThe Hindu•Nov 22, 2025•boAt•Burn to Earn: boAt, Licious, Urban Company lead the D2C shift towards profitable growthMoneycontrol•Nov 13, 2025•boAt, Licious, Epigamia, Urban Company•boAt Files Updated DRHP For INR 1,500 Cr IPOInc42•Oct 29, 2025•boAt, Fireside Ventures, Warburg Pincus, Qualcomm Ventures•boAt turns profitable in FY25 after two years of lossesNew Indian Express•Oct 06, 2025•boAt•Boat reshuffles leadership to navigate growth, IPOIndiatimes•Sep 30, 2025•boAt, Imagine Marketing•boAt Launches Aavante Prime 6250DA & 7050DA Soundbars with Dolby AtmosGizmochina•Sep 15, 2025•boAtGet curated news about company updates, funding rounds, M&A deals and others. Sign up today!View complete company profile of boAtAre you a Founder ?Claim your ProfileClaim and keep your data updated to ensure investors can find you easily.Looking to raise funds?Showcase fundraising requirement to VCs, PEs, Angels & IBs.Find Investors for your Next RoundDiscover potential investors for your next round of investment.FAQs about boAtWhen was boAt founded?boAt was founded in 2016 and became a unicorn in 2022, reaching the milestone in 6 years. It raised its 1st funding round 2 years after its incorporation.Where is boAt located?boAt is hea",
+            "crawledAt": "2026-02-19T10:00:13.233Z",
+            "sourceType": "official"
+          },
+          {
+            "url": "https://www.preqin.com/data/profile/asset/boat/275848",
+            "title": "Preqin | Alternative Assets Data, Solutions and Insights",
+            "content": "You need to enable JavaScript to run this app.",
+            "crawledAt": "2026-02-19T10:00:15.252Z",
+            "sourceType": "official"
+          },
+          {
+            "url": "https://www.sharescart.com/article/boat-lifestyle-company-a-closer-look",
+            "title": "Boat Lifestyle Company : A Closer Look",
+            "content": "<iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-KZQXW56\" height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe> Home / Article / Boat Lifestyle Company A Closer Look Join Channel Share WhatsApp Facebook Twitter LinkedIn Telegram Copy Link Join Channel Share WhatsApp Facebook Twitter LinkedIn Telegram Copy Link Apollo Green₹ 78 (-7.1%)Capgemini Technology₹ 11000 (0%)Cheelizza Pizza₹ 34 (-5.6%)CSK ₹ 246 (11.8%)Ecosure Pulpmolding₹ 46 (-4.2%)GFCL EV₹ 45 (0%)Hella Infra₹ 119500 (-6.3%)Hero Fincorp₹ 1125 (-4.3%)HPX India₹ 29 (-9.4%)ICL Fincorp₹ 25 (0%)Incred Holdings₹ 164 (1.2%)Lords Mark₹ 80 (0%)Motilal Oswal₹ 12.7 (-0.4%)MSEI ₹ 5.4 (-8.5%)NCDEX ₹ 438 (-4.4%)NSE ₹ 2075 (0%)Onix Renewable₹ 62 (0%)OYO ₹ 26.5 (0%)Polymatech Electronics₹ 76 (-9.5%)SBI Mutual₹ 775 (0%)Sterlite Electric₹ 475 (-1%)Taparia Tools₹ 6050 (0%)Transline Technologies₹ 162 (-1.8%)Urban Tots₹ 64 (3.2%)Zepto ₹ 58 (-9.4%)Zepto CCPS₹ 44388.1816 (-6.7%) 15 Days Price Change Boat Lifestyle Company : A Closer Look Boat Lifestyle Company : A Closer Look Nikhil Singh Nikhil Singh I am a versatile professional known for my expertise as a technical analyst, insightful co... I am a versatile professional known for my expertise as a technical analyst, insightful contributions as a part-time investor, and creative talents as a content writer. With a strong background in finance, I seamlessly combine technical know-how and fundamental analysis in my role as a part-time investor. Read more 15 Articles 7 Likes 9 Followers Follow 18 Jan, 2024 0 0 Share × Share This Page Spread the word by sharing this page with your friends Page URL WhatsApp Facebook Twitter Email LinkedIn Instagram Link copied to clipboard! Exclusive Access to Unlisted Shares Early Entry Advantage High-Growth Potential Trusted & Secure Know More Summary Boat, which was founded in 2016, has quickly become the leading earphone brand in India, known for its creative designs, excellent craftsmanship, and reasonable prices. Boat provides consumers with a variety of wireless speakers, earbuds, headphones, and earphones that combine mobility with individuality, improving their music experience with each device. Overview Boat, founded in 2016, has quickly become the leading earphone brand in India, known for its creative designs, excellent craftsmanship, and reasonable prices. Boat provides consumers with various wireless speakers, earbuds, headphones, and earphones that combine mobility with individuality, improving their music experience with each device. Reputably strong in the Indian IT scene, boAt is known for its wide range of electrical products focused on music. To meet the many demands of music lovers, boAt offers a wide range of goods, including their iconic Airdopes earbuds that combine fashion and utility, as well as wired and wireless headphones and earphones. Beyond only portable music players, boAt expands its line of products to include high-end durable cables, home theatre equipment, and an intriguing assortment of tech accessories. BoAt is a renowned brand that has become the preferred choice for individuals looking for premium audio solutions with a creative touch. It is known for combining exceptional audio quality, cutting-edge design, and flawless craftsmanship. Aman Gupta, co-founder of boAt and guy widely regarded as the most entertaining or cinematic shark, discussed the naming process for the company during an appearance on the Kapil Sharma Show. Even with so many \"music-friendly\" alternatives, their goal was to make an impact on clients that would remain. Since the 'A' for Apple had already been chosen, they decided to go with the first word that sprang to mind beginning with the second letter, 'B'. Consequently, boAt was established and currently holds a 48% market share. Revenue & Business Model At boAt, Sameer Mehta and Aman Gupta are co-founders. Now that Boat has two channels of revenue, it may be accessed online and off. They have already discussed their online partners, who use the distribution strategy to service their offline clientele. Boat's goods are distributed to physical shops via more than 20 distributors. BoAt expands its market share by selling audio items on a variety of e-commerce sites, including Amazon and Flipkart, and concurrently entering physical retail spaces through joint ventures with multi-brand and consumer electronics shops. By including warranty services in its after-sales products, boAt increases customer satisfaction and encourages recurring business. The brand also makes use of its fame by teaming up with influencers and businesses to produce co-branded goods, which promote joint sales and exclusive releases through brand collaborations and licensing. With its agile business approach, boAt prioritizes knowing its customers' requirements, wants, and behaviour patterns. It has a considerable competitive advantage due to its quick adaptation and responsiveness in providing clients with exactly what they desire. The company's dedication to ongoing innovation is demonstrated by its dynamic product growth, which matches technical solutions with changing client expectations and consumption patterns. boAt has a multi-channel distribution strategy, aggressively participating in online markets like Amazon and Flipkart in addition to setting up shop in real stores. The company is also aggressively growing its offline presence. This omnichannel approach guarantees accessibility for clients with a range of purchasing preferences while also promoting overall brand growth and market reach. Segments of Boat BoAt's significant revenue of â‚¹947.35 crores in the Earphones & Headphones domain is indicative of its robust market presence and appealing consumer base. At â‚¹297.40 crores, wireless speakers also make up a sizeable portion of boAt's income stream, demonstrating the brand's success in offering high-quality audio options outside of personal listening devices. Another important product category wired earphones, brings in â‚¹94.92 crores in sales, demonstrating boAt's wide range of products that suit different consumer tastes. Furthermore, boAt's Other Accessories & Products sales, which include Chargers & More, amount to â‚¹172.03 crores, indicating the brand's capacity to use supplementary product categories to amplify its financial success. Industry Research The wireless speaker market in India is expected to develop significantly; it is expected to reach USD 859.99 million by 2029 from its estimated USD 328.84 million size in 2024. This growth trajectory indicates a noteworthy Compound Annual Growth Rate (CAGR) of 21.20% for the 2024–2029 projected period. The market is expanding due to a number of factors, such as increased smartphone penetration, more people having access to the internet at lower costs, growing need for audio solutions that are portable and flexible, and faster adoption rates of new technologies across the nation. The reason for the rise in smart speaker use in India is their capacity to deliver audio material wirelessly with ease, improving the overall sound quality on both connected and non-wired platforms. Furthermore, the incorporation of voice assistants such as Google and Amazon has a substantial impact on altering consumer preferences regarding music consumption, thereby driving market expansion. In addition, the Indian industry is seeing a surge in demand for portable and interoperable products like wireless speakers due to the quick expansion of digital streaming services. Given the existence of both domestic players like JioSaavn, Gaana, and Wynk as well as international behemoths like Spotify, Amazon Music, Apple Music, and the most recent addition, YouTube Music, this development is especially notable. Furthermore, the USD 19.5 million that Krafton invested in the Indian audio content platform Kuku FM in March 2022 highlights the growing prospects and investments in the country's audio streaming market. The Indian headphones market is expected to generate $0.8 billion in sales in 2024, growing at a predicted annual rate of 3.10% (CAGR 2024-2028). China leads the world in comparison, with the largest revenue expected to reach INR 4,063.0 million in 2024. Considering the future, it is projected that the headphone market would reach 128.9 million units by 2028, growing at a rate of 4.6% by 2025. In 2024, the average volume per person is anticipated to be 0.1 units. The increasing demand for wireless and noise-canceling features is driving the robust expansion of the Indian headphone market, showing a growing customer desire for innovative audio solutions. Promoters & Shareholding of the company The promoters' holdings in Boat, with Aman Gupta and Mr. Sameer Mehta collectively owning 3,83,70,000 shares, constitute 39.93%, while South Lake Investment's holding of 1,85,10,000 shares represents 19.26% of the total shares. The boat has raised a significant $171 million in total capital throughout ten funding rounds, including two seed, three early-stage, two late-stage, and three debt rounds. Their highest round brought in $100 million. Furthermore, along its financial journey, the firm has received backing from eight institutional investors. Fundings Date Funding Rounds Post Money Valuation Investors Feb 01, 2024 Undisclosed Series C - - Oct 28, 2022 $60.7M Series C $191M Warburg Pincus, Malabar Investments Jan 13, 2022 $271K Series B - Innoven Capital Apr 15, 2021 $6.65M Series B $256M Qualcomm Ventures Dec 26, 2020 $100M Series B - southlakesinvestment.com, Warburg Pincus, Qualcomm Ventures Sep 01, 2020 $3.41M Venture Debt - Innoven Capital Jul 26, 2019 $2.32M Venture Debt - Innoven Capital Jul 17, 2019 $2.92M Venture Debt - Navi Jan 08, 2019 $2.16M Seed $67.6M Fireside Ventures Apr 06, 2018 $922K Seed $14.6M Fireside Ventures Peer Comparison Brand Description Founded Year Investors Location Stage Plantronics Manufacturer of communications headsets and endpoints 1961 Court Square and 1 Other San",
+            "crawledAt": "2026-02-19T10:00:17.496Z",
+            "sourceType": "news"
+          }
+        ]
+      },
+      "metadata": {
+        "collectedAt": "2026-02-19T10:00:18.512Z",
+        "totalSources": 119,
+        "collectionTimeMs": 80758,
+        "isNewEntity": true,
+        "dataConfidenceScore": 85
+      },
+      "csvCompetitors": [
+        "July",
+        "The closest competitor to boat",
+        "Competitors The closest",
+        "in January",
+        "com",
+        "boAt",
+        "Compare boAt to",
+        "and Alternatives boAt",
+        "are Noise",
+        "Mivi",
+        "PTron",
+        "Skullcandy",
+        "Zebronics",
+        "Karbonn",
+        "Intex Technologies"
+      ],
+      "structuredFinancials": {
+        "revenue": [
+          {
+            "metric": "revenue",
+            "value": 1,
+            "rawValue": "Sales: 1",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_table_official",
+            "sourceUrl": "https://ecdb.com/resources/sample-data/retailer/boat-lifestyle",
+            "confidence": 0.75,
+            "extractedAt": "2026-02-19T10:00:18.539Z",
+            "fiscalPeriod": "2024"
+          },
+          {
+            "metric": "revenue",
+            "value": 128169800000,
+            "rawValue": "Revenue - FinancialsBOAT is an Indian consumer durable company with a market capitalization of over ",
+            "unit": "cr",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.scribd.com/document/707272626/BOAT-Annual-Report-Revenue-Financials",
+            "confidence": 0.5599999999999999,
+            "extractedAt": "2026-02-19T10:00:18.538Z",
+            "fiscalPeriod": "2023",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "revenue",
+            "value": 172,
+            "rawValue": "RevenueMain CategoryElectronicsMain Country Selling toIndiaBiggest Competitorgonoise.comRevenue (GMV",
+            "unit": "m",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://ecdb.com/resources/sample-data/retailer/boat-lifestyle",
+            "confidence": 0.5599999999999999,
+            "extractedAt": "2026-02-19T10:00:18.539Z",
+            "fiscalPeriod": "2024",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "revenue",
+            "value": 32850000000,
+            "rawValue": "RevenueINR 3285 crore",
+            "unit": "cr",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://startuptalky.com/boat-business-model/",
+            "confidence": 0.5599999999999999,
+            "extractedAt": "2026-02-19T10:00:18.540Z",
+            "fiscalPeriod": "FY2022",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "revenue",
+            "value": 950,
+            "rawValue": "Revenue and Financials Last Traded Price 950.00",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://wwipl.com/unlisted-shares/boat-unlisted-share-price/financial",
+            "confidence": 0.5599999999999999,
+            "extractedAt": "2026-02-19T10:00:18.541Z",
+            "fiscalPeriod": "FY2025",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "revenue",
+            "value": 2014,
+            "rawValue": "Revenue 2014",
+            "unit": "",
+            "currency": "USD",
+            "source": "serpapi",
+            "sourceUrl": "https://ecdb.com/resources/sample-data/retailer/boat-lifestyle",
+            "confidence": 0.315,
+            "extractedAt": "2026-02-19T10:00:18.536Z",
+            "fiscalPeriod": "2026",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "revenue",
+            "value": 3,
+            "rawValue": "revenue growth forecast to 3",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_financial",
+            "sourceUrl": "https://www.moneycontrol.com/news/business/markets/stock-market-live-sensex-nifty-50-share-price-gift-nifty-latest-updates-19-07-2024-liveblog-12772398.html",
+            "confidence": 0.255,
+            "extractedAt": "2026-02-19T10:00:18.538Z",
+            "fiscalPeriod": "FY25",
+            "publishedDate": "0330-07-18",
+            "freshnessScore": 0.3
+          },
+          {
+            "metric": "revenue",
+            "value": 179620000000,
+            "rawValue": "revenue at Rs 17,962 crore",
+            "unit": "cr",
+            "currency": "INR",
+            "source": "crawl_financial",
+            "sourceUrl": "https://www.moneycontrol.com/news/business/markets/stock-market-live-sensex-nifty-50-share-price-gift-nifty-latest-updates-19-07-2024-liveblog-12772398.html",
+            "confidence": 0.255,
+            "extractedAt": "2026-02-19T10:00:18.538Z",
+            "fiscalPeriod": "FY25",
+            "publishedDate": "0330-07-18",
+            "freshnessScore": 0.3
+          },
+          {
+            "metric": "revenue",
+            "value": 31000000000,
+            "rawValue": "Revenue₹3,100Cr",
+            "unit": "cr",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://tracxn.com/d/companies/boat/__1-6OVEvWhIXhXscfbwOm0-i2W0wUXlKyhF6rf5bSZCI",
+            "confidence": 0.24,
+            "extractedAt": "2026-02-19T10:00:18.541Z",
+            "fiscalPeriod": "FY25",
+            "publishedDate": "2024-01-31",
+            "freshnessScore": 0.3
+          },
+          {
+            "metric": "revenue",
+            "value": 9473500000,
+            "rawValue": "revenue of â‚¹947.35 crores",
+            "unit": "cr",
+            "currency": "INR",
+            "source": "crawl_news",
+            "sourceUrl": "https://www.sharescart.com/article/boat-lifestyle-company-a-closer-look",
+            "confidence": 0.135,
+            "extractedAt": "2026-02-19T10:00:18.543Z",
+            "fiscalPeriod": "FY28",
+            "publishedDate": "2024-01-31",
+            "freshnessScore": 0.3
+          }
+        ],
+        "ebitda": [
+          {
+            "metric": "ebitda",
+            "value": 829000000,
+            "rawValue": "EBITDA of $829.0 million",
+            "unit": "million",
+            "currency": "USD",
+            "source": "serpapi",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1590976/000159097624000084/malibuboatsfy24annualreporta.pdf",
+            "confidence": 0.6649999999999999,
+            "extractedAt": "2026-02-19T10:00:18.533Z",
+            "fiscalPeriod": "FY2024",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "ebitda",
+            "value": 829000000,
+            "rawValue": "EBITDA of $829.0 million",
+            "unit": "million",
+            "currency": "USD",
+            "source": "serpapi",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1590976/000159097624000084/malibuboatsfy24annualreporta.pdf",
+            "confidence": 0.6649999999999999,
+            "extractedAt": "2026-02-19T10:00:18.533Z",
+            "fiscalPeriod": "FY2024",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "ebitda",
+            "value": 42.7,
+            "rawValue": "EBITDA) of Rs. (42.7",
+            "unit": "",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://m.moneycontrol.com/bse_annualreports/5332020313.pdf",
+            "confidence": 0.595,
+            "extractedAt": "2026-02-19T10:00:18.536Z",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "ebitda",
+            "value": 24,
+            "rawValue": "EBITDA in FY24,",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://startuptalky.com/boat-business-model/",
+            "confidence": 0.5599999999999999,
+            "extractedAt": "2026-02-19T10:00:18.540Z",
+            "fiscalPeriod": "FY2022",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "ebitda",
+            "value": 38.7,
+            "rawValue": "EBITDA falls 38.7",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_financial",
+            "sourceUrl": "https://www.moneycontrol.com/news/business/markets/stock-market-live-sensex-nifty-50-share-price-gift-nifty-latest-updates-19-07-2024-liveblog-12772398.html",
+            "confidence": 0.255,
+            "extractedAt": "2026-02-19T10:00:18.538Z",
+            "fiscalPeriod": "FY25",
+            "publishedDate": "0330-07-18",
+            "freshnessScore": 0.3
+          }
+        ],
+        "netProfit": [
+          {
+            "metric": "netProfit",
+            "value": 829000000,
+            "rawValue": "income and adjusted EBITDA of $829.0 million",
+            "unit": "million",
+            "currency": "USD",
+            "source": "serpapi",
+            "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1590976/000159097624000084/malibuboatsfy24annualreporta.pdf",
+            "confidence": 0.6649999999999999,
+            "extractedAt": "2026-02-19T10:00:18.533Z",
+            "fiscalPeriod": "FY2024",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "netProfit",
+            "value": 1,
+            "rawValue": "Earnings Call Transcript Q1",
+            "unit": "",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://cdn-media.screener.in/concalls/37c09068-0b0b-4d47-9ab6-f09d67fc760e.pdf",
+            "confidence": 0.63,
+            "extractedAt": "2026-02-19T10:00:18.536Z",
+            "fiscalPeriod": "FY25",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "netProfit",
+            "value": 42.7,
+            "rawValue": "profit (EBITDA) of Rs. (42.7",
+            "unit": "",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://m.moneycontrol.com/bse_annualreports/5332020313.pdf",
+            "confidence": 0.595,
+            "extractedAt": "2026-02-19T10:00:18.536Z",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "netProfit",
+            "value": 1010000000,
+            "rawValue": "Profit/LossINR -101 crore",
+            "unit": "cr",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://startuptalky.com/boat-business-model/",
+            "confidence": 0.5599999999999999,
+            "extractedAt": "2026-02-19T10:00:18.540Z",
+            "fiscalPeriod": "FY2022",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "netProfit",
+            "value": 123.75,
+            "rawValue": "Income tax assets (net) 123.75",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://wwipl.com/unlisted-shares/boat-unlisted-share-price/financial",
+            "confidence": 0.5599999999999999,
+            "extractedAt": "2026-02-19T10:00:18.541Z",
+            "fiscalPeriod": "FY2025",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "netProfit",
+            "value": 25,
+            "rawValue": "Profitability with Strong FY25",
+            "unit": "",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://www.entrepreneur.com/en-in/news-and-trends/boat-returns-to-profitability-with-strong-fy25-performance/497976",
+            "confidence": 0.315,
+            "extractedAt": "2026-02-19T10:00:18.537Z",
+            "fiscalPeriod": "FY25",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "netProfit",
+            "value": 2,
+            "rawValue": "Profit & SWOT Analysis boAt Lifestyle is a leading Indian consumer electronics brand known ... segme",
+            "unit": "",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://startuptalky.com/boat-business-model/",
+            "confidence": 0.315,
+            "extractedAt": "2026-02-19T10:00:18.537Z",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "netProfit",
+            "value": 31,
+            "rawValue": "Profit and Loss for the financial year ended March 31,",
+            "unit": "",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://m.moneycontrol.com/bse_annualreports/5344250315.pdf",
+            "confidence": 0.255,
+            "extractedAt": "2026-02-19T10:00:18.536Z",
+            "publishedDate": "2015-03-30",
+            "freshnessScore": 0.3
+          },
+          {
+            "metric": "netProfit",
+            "value": 52,
+            "rawValue": "profit missed estimates.The benchmark index initially opened 52",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_financial",
+            "sourceUrl": "https://www.moneycontrol.com/news/business/markets/stock-market-live-sensex-nifty-50-share-price-gift-nifty-latest-updates-19-07-2024-liveblog-12772398.html",
+            "confidence": 0.255,
+            "extractedAt": "2026-02-19T10:00:18.538Z",
+            "fiscalPeriod": "FY25",
+            "publishedDate": "0330-07-18",
+            "freshnessScore": 0.3
+          },
+          {
+            "metric": "netProfit",
+            "value": 16950000000,
+            "rawValue": "net profit at Rs 1,695 cr",
+            "unit": "cr",
+            "currency": "INR",
+            "source": "crawl_financial",
+            "sourceUrl": "https://www.moneycontrol.com/news/business/markets/stock-market-live-sensex-nifty-50-share-price-gift-nifty-latest-updates-19-07-2024-liveblog-12772398.html",
+            "confidence": 0.255,
+            "extractedAt": "2026-02-19T10:00:18.538Z",
+            "fiscalPeriod": "FY25",
+            "publishedDate": "0330-07-18",
+            "freshnessScore": 0.3
+          },
+          {
+            "metric": "netProfit",
+            "value": 13,
+            "rawValue": "profitable growthMoneycontrol•Nov 13,",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://tracxn.com/d/companies/boat/__1-6OVEvWhIXhXscfbwOm0-i2W0wUXlKyhF6rf5bSZCI",
+            "confidence": 0.24,
+            "extractedAt": "2026-02-19T10:00:18.541Z",
+            "fiscalPeriod": "FY25",
+            "publishedDate": "2024-01-31",
+            "freshnessScore": 0.3
+          },
+          {
+            "metric": "netProfit",
+            "value": 9473500000,
+            "rawValue": "pating in online markets like Amazon and Flipkart in addition to setting up shop in real stores. The",
+            "unit": "cr",
+            "currency": "INR",
+            "source": "crawl_news",
+            "sourceUrl": "https://www.sharescart.com/article/boat-lifestyle-company-a-closer-look",
+            "confidence": 0.135,
+            "extractedAt": "2026-02-19T10:00:18.543Z",
+            "fiscalPeriod": "FY28",
+            "publishedDate": "2024-01-31",
+            "freshnessScore": 0.3
+          }
+        ],
+        "operatingProfit": [
+          {
+            "metric": "operatingProfit",
+            "value": 42.7,
+            "rawValue": "operating profit (EBITDA) of Rs. (42.7",
+            "unit": "",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://m.moneycontrol.com/bse_annualreports/5332020313.pdf",
+            "confidence": 0.595,
+            "extractedAt": "2026-02-19T10:00:18.536Z",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "operatingProfit",
+            "value": 931.66,
+            "rawValue": "Operating profit before working capital changes 931.66",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://wwipl.com/unlisted-shares/boat-unlisted-share-price/financial",
+            "confidence": 0.5599999999999999,
+            "extractedAt": "2026-02-19T10:00:18.541Z",
+            "fiscalPeriod": "FY2025",
+            "freshnessScore": 0.7
+          }
+        ],
+        "grossProfit": [],
+        "marketCap": [
+          {
+            "metric": "marketCap",
+            "value": 128169800000,
+            "rawValue": "market capitalization of over Rs. 12,816.98 crore",
+            "unit": "cr",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.scribd.com/document/707272626/BOAT-Annual-Report-Revenue-Financials",
+            "confidence": 0.5599999999999999,
+            "extractedAt": "2026-02-19T10:00:18.538Z",
+            "fiscalPeriod": "2023",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "marketCap",
+            "value": 1793.552,
+            "rawValue": "MarketCap (Rs cr)Contribution Infosys1,793.552",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_financial",
+            "sourceUrl": "https://www.moneycontrol.com/news/business/markets/stock-market-live-sensex-nifty-50-share-price-gift-nifty-latest-updates-19-07-2024-liveblog-12772398.html",
+            "confidence": 0.255,
+            "extractedAt": "2026-02-19T10:00:18.538Z",
+            "fiscalPeriod": "FY25",
+            "publishedDate": "0330-07-18",
+            "freshnessScore": 0.3
+          }
+        ],
+        "revenueGrowth": [],
+        "ebitdaMargin": [],
+        "netMargin": [
+          {
+            "metric": "netMargin",
+            "value": 5,
+            "rawValue": "Margin At 5%",
+            "unit": "%",
+            "currency": "INR",
+            "source": "crawl_financial",
+            "sourceUrl": "https://www.moneycontrol.com/news/business/markets/stock-market-live-sensex-nifty-50-share-price-gift-nifty-latest-updates-19-07-2024-liveblog-12772398.html",
+            "confidence": 0.255,
+            "extractedAt": "2026-02-19T10:00:18.538Z",
+            "fiscalPeriod": "FY25",
+            "publishedDate": "0330-07-18",
+            "freshnessScore": 0.3
+          }
+        ],
+        "peRatio": [
+          {
+            "metric": "peRatio",
+            "value": 30,
+            "rawValue": "Personnel and Senior Management Team Annual Returns Annual General Meetings / Extra Ordinary General",
+            "unit": "x",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.boat-lifestyle.com/pages/investor-relations?srsltid=AfmBOopz3rBLOq4Hnv0KGRZck_YlV5TZHrM8p7dwwvMYih4-c5tm0fc_",
+            "confidence": 0.68,
+            "extractedAt": "2026-02-19T10:00:18.537Z",
+            "fiscalPeriod": "2025",
+            "publishedDate": "2025-06-29",
+            "freshnessScore": 0.85
+          },
+          {
+            "metric": "peRatio",
+            "value": 42.7,
+            "rawValue": "perating profit (EBITDA) of Rs. (42.7",
+            "unit": "x",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://m.moneycontrol.com/bse_annualreports/5332020313.pdf",
+            "confidence": 0.595,
+            "extractedAt": "2026-02-19T10:00:18.536Z",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "peRatio",
+            "value": 100,
+            "rawValue": "pen navigation menuClose suggestionsSearchSearchenChange LanguageUploadSign inSign in100",
+            "unit": "x",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.scribd.com/document/707272626/BOAT-Annual-Report-Revenue-Financials",
+            "confidence": 0.5599999999999999,
+            "extractedAt": "2026-02-19T10:00:18.538Z",
+            "fiscalPeriod": "2023",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "peRatio",
+            "value": 172,
+            "rawValue": "petitorgonoise.comRevenue (GMV)US$172",
+            "unit": "x",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://ecdb.com/resources/sample-data/retailer/boat-lifestyle",
+            "confidence": 0.5599999999999999,
+            "extractedAt": "2026-02-19T10:00:18.539Z",
+            "fiscalPeriod": "2024",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "peRatio",
+            "value": 2,
+            "rawValue": "pecially in the audio and wearable segments. By leveraging a strong Direct-to-Consumer (D2",
+            "unit": "x",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://startuptalky.com/boat-business-model/",
+            "confidence": 0.5599999999999999,
+            "extractedAt": "2026-02-19T10:00:18.540Z",
+            "fiscalPeriod": "FY2022",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "peRatio",
+            "value": 1,
+            "rawValue": "Periods 1",
+            "unit": "x",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://wwipl.com/unlisted-shares/boat-unlisted-share-price/financial",
+            "confidence": 0.5599999999999999,
+            "extractedAt": "2026-02-19T10:00:18.541Z",
+            "fiscalPeriod": "FY2025",
+            "freshnessScore": 0.7
+          },
+          {
+            "metric": "peRatio",
+            "value": 30,
+            "rawValue": "pectus-I · List of Material Creditors as on June 30,",
+            "unit": "x",
+            "currency": "INR",
+            "source": "serpapi",
+            "sourceUrl": "https://www.boat-lifestyle.com/pages/investor-relations?srsltid=AfmBOopz3rBLOq4Hnv0KGRZck_YlV5TZHrM8p7dwwvMYih4-c5tm0fc_",
+            "confidence": 0.3825,
+            "extractedAt": "2026-02-19T10:00:18.536Z",
+            "fiscalPeriod": "2025",
+            "publishedDate": "2025-06-29",
+            "freshnessScore": 0.85
+          },
+          {
+            "metric": "peRatio",
+            "value": 1,
+            "rawValue": "pected Q1",
+            "unit": "x",
+            "currency": "INR",
+            "source": "crawl_financial",
+            "sourceUrl": "https://www.moneycontrol.com/news/business/markets/stock-market-live-sensex-nifty-50-share-price-gift-nifty-latest-updates-19-07-2024-liveblog-12772398.html",
+            "confidence": 0.255,
+            "extractedAt": "2026-02-19T10:00:18.538Z",
+            "fiscalPeriod": "FY25",
+            "publishedDate": "0330-07-18",
+            "freshnessScore": 0.3
+          },
+          {
+            "metric": "peRatio",
+            "value": 204,
+            "rawValue": "personalizing certain products.Websitewww.boat-lifestyle.com/SocialPart OfRegistered AddressUnit no.",
+            "unit": "x",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://tracxn.com/d/companies/boat/__1-6OVEvWhIXhXscfbwOm0-i2W0wUXlKyhF6rf5bSZCI",
+            "confidence": 0.24,
+            "extractedAt": "2026-02-19T10:00:18.542Z",
+            "fiscalPeriod": "FY25",
+            "publishedDate": "2024-01-31",
+            "freshnessScore": 0.3
+          },
+          {
+            "metric": "peRatio",
+            "value": 297.4,
+            "rawValue": "pealing consumer base. At â‚¹297.40",
+            "unit": "x",
+            "currency": "INR",
+            "source": "crawl_news",
+            "sourceUrl": "https://www.sharescart.com/article/boat-lifestyle-company-a-closer-look",
+            "confidence": 0.135,
+            "extractedAt": "2026-02-19T10:00:18.543Z",
+            "fiscalPeriod": "FY28",
+            "publishedDate": "2024-01-31",
+            "freshnessScore": 0.3
+          }
+        ],
+        "debtToEquity": [],
+        "roe": [],
+        "eps": [],
+        "freeCashFlow": [],
+        "metadata": {
+          "totalExtractions": 42,
+          "uniqueMetrics": 7,
+          "avgConfidence": 0.44,
+          "sourcesUsed": [
+            "serpapi",
+            "crawl_official",
+            "crawl_financial",
+            "crawl_table_official",
+            "crawl_news"
+          ],
+          "extractedAt": "2026-02-19T10:00:18.543Z"
+        }
+      },
+      "consensusMetrics": {
+        "entityId": "boAt Lifestyle",
+        "entityName": "boAt Lifestyle",
+        "entityType": "company",
+        "fiscalPeriod": "TTM",
+        "marketCap": {
+          "value": 128169800000,
+          "confidence": 66,
+          "variance": 100,
+          "hasWarning": true,
+          "warningReason": "High variance (100%) across sources",
+          "sources": [
+            {
+              "source": "crawl_table_official",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": 128169800000,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_financial",
+              "value": 1793.552,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": true
+        },
+        "currentPrice": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_table_official",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "priceChange1D": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_table_official",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "priceChange1Y": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_table_official",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "weekHigh52": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_table_official",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "weekLow52": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_table_official",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "volume": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_table_official",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "revenue": {
+          "value": 3,
+          "confidence": 47,
+          "variance": 67100,
+          "hasWarning": true,
+          "warningReason": "High variance (67100%) across sources",
+          "sources": [
+            {
+              "source": "crawl_table_official",
+              "value": 1,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": 128169800000,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": 2014,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_financial",
+              "value": 3,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_news",
+              "value": 9473500000,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": true
+        },
+        "revenueGrowthYoy": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_table_official",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "grossProfit": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_table_official",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "grossMargin": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_table_official",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "operatingIncome": {
+          "value": 931.66,
+          "confidence": 55,
+          "variance": 95.4,
+          "hasWarning": true,
+          "warningReason": "High variance (95%) across sources",
+          "sources": [
+            {
+              "source": "crawl_table_official",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": 931.66,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": 42.7,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": true
+        },
+        "operatingMargin": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_table_official",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "netIncome": {
+          "value": 829000000,
+          "confidence": 60,
+          "variance": 121.8,
+          "hasWarning": true,
+          "warningReason": "High variance (122%) across sources",
+          "sources": [
+            {
+              "source": "crawl_table_official",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": 1010000000,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": 829000000,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_financial",
+              "value": 52,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_news",
+              "value": 9473500000,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": true
+        },
+        "netMargin": {
+          "value": 5,
+          "confidence": 66,
+          "variance": 0,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_table_official",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_financial",
+              "value": 5,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": true
+        },
+        "ebitda": {
+          "value": 24,
+          "confidence": 61,
+          "variance": 61.3,
+          "hasWarning": true,
+          "warningReason": "High variance (61%) across sources",
+          "sources": [
+            {
+              "source": "crawl_table_official",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": 24,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": 829000000,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_financial",
+              "value": 38.7,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": true
+        },
+        "ebitdaMargin": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_table_official",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "eps": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_table_official",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "totalAssets": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_table_official",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "totalDebt": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_table_official",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "cashAndEquivalents": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_table_official",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "shareholderEquity": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_table_official",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "peRatio": {
+          "value": 30,
+          "confidence": 60,
+          "variance": 139,
+          "hasWarning": true,
+          "warningReason": "High variance (139%) across sources",
+          "sources": [
+            {
+              "source": "crawl_table_official",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": 30,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": 42.7,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_financial",
+              "value": 1,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_news",
+              "value": 297.4,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": true
+        },
+        "pbRatio": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_table_official",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "psRatio": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_table_official",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "evToEbitda": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_table_official",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "debtToEquity": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_table_official",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "currentRatio": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_table_official",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "roe": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_table_official",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "roa": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_table_official",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "roic": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_table_official",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "freeCashFlow": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_table_official",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "operatingCashFlow": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "crawl_table_official",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            },
+            {
+              "source": "serpapi",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_financial",
+              "value": null,
+              "weight": 0.8
+            },
+            {
+              "source": "crawl_news",
+              "value": null,
+              "weight": 0.65
+            }
+          ],
+          "isAvailable": false
+        },
+        "overallConfidence": 59,
+        "sourcesUsed": [
+          "crawl_table_official",
+          "crawl_official",
+          "serpapi",
+          "crawl_financial",
+          "crawl_news"
+        ],
+        "dataGaps": [
+          "currentPrice",
+          "priceChange1D",
+          "priceChange1Y",
+          "weekHigh52",
+          "weekLow52",
+          "volume",
+          "revenueGrowthYoy",
+          "grossProfit",
+          "grossMargin",
+          "operatingMargin",
+          "ebitdaMargin",
+          "eps",
+          "totalAssets",
+          "totalDebt",
+          "cashAndEquivalents",
+          "shareholderEquity",
+          "pbRatio",
+          "psRatio",
+          "evToEbitda",
+          "debtToEquity",
+          "currentRatio",
+          "roe",
+          "roa",
+          "roic",
+          "freeCashFlow",
+          "operatingCashFlow"
+        ],
+        "varianceWarnings": [
+          "marketCap: High variance (100%) across sources",
+          "revenue: High variance (67100%) across sources",
+          "operatingIncome: High variance (95%) across sources",
+          "netIncome: High variance (122%) across sources",
+          "ebitda: High variance (61%) across sources",
+          "peRatio: High variance (139%) across sources"
+        ],
+        "fetchedAt": "2026-02-19T10:00:18.546Z",
+        "expiresAt": "2026-02-20T10:00:18.546Z",
+        "confidenceExplanation": {
+          "overallScore": 59,
+          "level": "medium",
+          "reasons": [
+            "Medium confidence: 5 sources with some variance",
+            "Reliance on web sources - may have inconsistencies",
+            "Only 26% of metrics available"
+          ],
+          "factors": {
+            "sourceCount": 5,
+            "pdfCount": 0,
+            "freshnessScore": 100,
+            "varianceScore": 0,
+            "dataCompleteness": 26
+          }
+        }
+      },
+      "consensusForAI": "=== VALIDATED CONSENSUS DATA FOR BOAT LIFESTYLE ===\nOverall Data Confidence: 59%\nSources: crawl_table_official, crawl_official, serpapi, crawl_financial, crawl_news\nData As Of: 2026-02-19T10:00:18.546Z\n\n--- MARKET DATA ---\nMarket Cap: ₹128.17B (confidence: 66%) [HIGH VARIANCE - treat with caution]\nCurrent Price: UNAVAILABLE\n1-Day Price Change: UNAVAILABLE%\n1-Year Price Change: UNAVAILABLE%\n52-Week High: UNAVAILABLE\n52-Week Low: UNAVAILABLE\n\n--- INCOME STATEMENT ---\nRevenue (TTM): ₹3.00 (confidence: 47%) [HIGH VARIANCE - treat with caution]\nRevenue Growth YoY: UNAVAILABLE%\nGross Margin: UNAVAILABLE%\nOperating Margin: UNAVAILABLE%\nNet Margin: 5.00 (confidence: 66%)%\nEBITDA: ₹24.00 (confidence: 61%) [HIGH VARIANCE - treat with caution]\nEBITDA Margin: UNAVAILABLE%\nEPS: UNAVAILABLE\n\n--- BALANCE SHEET ---\nTotal Assets: UNAVAILABLE\nTotal Debt: UNAVAILABLE\nCash & Equivalents: UNAVAILABLE\nDebt to Equity: UNAVAILABLE\n\n--- VALUATION RATIOS ---\nP/E Ratio: 30.00 (confidence: 60%) [HIGH VARIANCE - treat with caution]\nP/B Ratio: UNAVAILABLE\nEV/EBITDA: UNAVAILABLE\n\n--- RETURNS ---\nReturn on Equity (ROE): UNAVAILABLE%\nReturn on Assets (ROA): UNAVAILABLE%\nReturn on Invested Capital (ROIC): UNAVAILABLE%\n\n--- CASH FLOW ---\nFree Cash Flow: UNAVAILABLE\nOperating Cash Flow: UNAVAILABLE\n\n\n--- DATA GAPS (DO NOT ESTIMATE THESE) ---\ncurrentPrice, priceChange1D, priceChange1Y, weekHigh52, weekLow52, volume, revenueGrowthYoy, grossProfit, grossMargin, operatingMargin, ebitdaMargin, eps, totalAssets, totalDebt, cashAndEquivalents, shareholderEquity, pbRatio, psRatio, evToEbitda, debtToEquity, currentRatio, roe, roa, roic, freeCashFlow, operatingCashFlow\n\n--- VARIANCE WARNINGS ---\nmarketCap: High variance (100%) across sources\nrevenue: High variance (67100%) across sources\noperatingIncome: High variance (95%) across sources\nnetIncome: High variance (122%) across sources\nebitda: High variance (61%) across sources\npeRatio: High variance (139%) across sources\n=== END VALIDATED DATA ==="
+    },
+    "timestamp": "2026-02-19T10:00:18.725Z"
+  },
+  "timestamp": "2026-02-19T10:00:18.725Z",
+  "expiryHours": 24,
+  "source": "api_realtime",
+  "isStale": false
+}

@@ -90,24 +90,16 @@ const DEFAULT_OPTIONS: CollectionOptions = {
 
 function buildFinancialQueries(entityName: string, industry: string): string[] {
   return [
-    // Force Tier-1 sources (NSE/BSE)
-    `${entityName} annual report revenue EBITDA profit site:nseindia.com OR site:bseindia.com`,
-    // Target PDFs explicitly
-    `${entityName} financial results investor presentation filetype:pdf`,
-    // Quarterly earnings focus
-    `${entityName} quarterly earnings revenue EBITDA FY2024 FY2025`,
-    // Competitor analysis
-    `${entityName} competitors market share industry analysis`,
-    // Financial news sources
-    `${entityName} company profile Reuters Bloomberg Moneycontrol`,
-    // Fallback - general financial
-    `${entityName} financial results revenue profit margin growth 2024 2025`,
+    `${entityName} site:screener.in`,
+    `${entityName} revenue EBITDA profit site:moneycontrol.com`,
+    `${entityName} quarterly results revenue profit FY2024 FY2025`,
+    `${entityName} annual report revenue EBITDA filetype:pdf`,
+    `${entityName} revenue EBITDA profit margin 2024 2025`,
   ];
 }
 
 function buildFinancialQuery(entityName: string, industry: string): string {
-  // Primary query - forces high-quality sources
-  return `${entityName} annual report revenue EBITDA profit site:nseindia.com OR site:bseindia.com OR filetype:pdf`;
+  return `${entityName} revenue EBITDA profit annual report 2024 2025`;
 }
 
 interface StructuredFinancialData {
@@ -205,6 +197,9 @@ const SOURCE_AUTHORITY_TIERS: Record<string, { tier: number; weight: number; lab
   'sec.gov': { tier: 1, weight: 1.0, label: 'SEC Filing' },
   'bseindia.com': { tier: 1, weight: 1.0, label: 'BSE India' },
   'nseindia.com': { tier: 1, weight: 1.0, label: 'NSE India' },
+  'screener.in': { tier: 1, weight: 0.95, label: 'Screener India' },
+  'trendlyne.com': { tier: 1, weight: 0.92, label: 'Trendlyne' },
+  'tickertape.in': { tier: 1, weight: 0.9, label: 'TickerTape' },
   'investor': { tier: 1, weight: 0.95, label: 'Investor Relations' },
   'ir.': { tier: 1, weight: 0.95, label: 'Investor Relations' },
   'annualreport': { tier: 1, weight: 0.95, label: 'Annual Report' },
@@ -572,11 +567,11 @@ function selectUrlsToCrawlIntelligent(searchResults: SearchResult[], maxUrls: nu
     return { ...result, score, reason: crawlDecision.reason };
   });
 
-  scored
+  const sortedScored = scored
     .filter(r => r.score >= 0)
     .sort((a, b) => b.score - a.score);
 
-  for (const result of scored) {
+  for (const result of sortedScored) {
     if (urls.length >= maxUrls) break;
     if (result.score < 0) continue;
 

@@ -313,6 +313,21 @@ export async function runDataIntelligenceLayer(
     new Date()
   );
 
+  // 5b. Detect and persist deltas (if we have previous data)
+  if (memoryResult) {
+    const previousConsensus = buildConsensus(
+      request.entityId,
+      request.entityName,
+      request.entityType,
+      { memory_cache: memoryResult.data as Record<string, number | null> },
+      new Date()
+    );
+    const delta = detectDeltas(previousConsensus, consensus);
+    if (delta.hasSignificantChange && supabaseClient) {
+      await persistDeltas(request.entityId, request.entityName, delta, supabaseClient);
+    }
+  }
+
   // 6. Store in memory cache (15 min for price data)
   setMemoryCache(request.entityId, consensus, 15 * 60 * 1000);
 
@@ -425,4 +440,38 @@ export function detectDeltas(
     changedMetrics,
     maxChangePercent,
   };
+}
+
+// ─── Persist Deltas ───────────────────────────────────────────────────────────
+// Stores significant changes to change_log table for tracking metric evolution
+
+export async function persistDeltas(
+  entityId: string,
+  entityName: string,
+  delta: DeltaResult,
+  supabaseClient: any
+): Promise<void> {
+  if (!delta.hasSignificantChange || !supabaseClient) return;
+
+  try {
+    const changeRecords = delta.changedMetrics.map(change => ({
+      entity_id: entityId,
+      entity_name: entityName,
+      metric_name: change.metric,
+      previous_value: change.from,
+      new_value: change.to,
+      change_absolute: change.to - change.from,
+      change_percent: change.changePercent,
+      change_direction: change.to > change.from ? 'up' : 'down',
+      is_significant: change.changePercent >= 5,
+      source: 'consensus_engine',
+      detected_at: new Date().toISOString(),
+    }));
+
+    await supabaseClient.from('data_deltas').insert(changeRecords);
+    
+    console.log(`[DIL] Persisted ${changeRecords.length} deltas for ${entityName}`);
+  } catch (err) {
+    console.error('[DIL] Failed to persist deltas:', err);
+  }
 }
