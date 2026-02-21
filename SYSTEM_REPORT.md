@@ -1,9 +1,9 @@
 # EBITA INTELLIGENCE PLATFORM - COMPREHENSIVE SYSTEM REPORT
 
-**Report Date:** February 19, 2026  
-**Version:** 7.0 (OVERHAUL - HARDCODED DATA ELIMINATION)  
+**Report Date:** February 21, 2026  
+**Version:** 9.2  
 **Status:** PRODUCTION-READY  
-**Previous Version:** 6.0 (February 19, 2026)
+**Previous Version:** 9.1 (February 21, 2026)
 
 ---
 
@@ -28,6 +28,174 @@
 | **5.4** | **Feb 19, 2026 13:50** | **UPGRADE 4: Groq model, confidence 60→35, PDF fix, Zepto industry fix** |
 | **6.0** | **Feb 19, 2026 14:30** | **UPGRADE 5: Response contract, unknown entity store, entity discovery** |
 | **7.0** | **Feb 19, 2026 15:30** | **OVERHAUL: Hardcoded data elimination, keyword classification, smart search, self-learning** |
+| **8.0** | **Feb 21, 2026 12:00** | **Multi-Source Orchestrator V2: Python bot integration, FMP/Alpha/Yahoo APIs, SERP fallback, merge/score logic** |
+| **8.1** | **Feb 21, 2026 15:00** | **ML Integration: KNN, Linear Regression, Decision Tree** |
+| **8.2** | **Feb 21, 2026 18:00** | **Complete ML Suite: K-Means, Hierarchical, Mean Shift, DBSCAN, Naive Bayes, Neural Network, PCA, Feature Extraction** |
+| **8.3** | **Feb 21, 2026 21:00** | **N.A.T. PARALLEL Integration: N.A.T. runs in parallel with all APIs, extracts structured data** |
+| **8.3.1** | **Feb 21, 2026 21:30** | **Architecture Clarification: ML = ANALYSIS, N.A.T. = CONTEXT only** |
+| **9.0** | **Feb 21, 2026 22:00** | **CRITICAL UPGRADE: Pre-ML Data Filtration, Smart Query Builder, Input Normalizer, Multi-Sector Resolver** |
+| **9.1** | **Feb 21, 2026 23:00** | **Multi-Currency Support (30 currencies), Global Comparison Engine** |
+| **9.2** | **Feb 21, 2026 24:00** | **Complete API Integration: FMP v4, NSE India Package, N.A.T. Extended Queries (competitors, investors, marketing, revenue)** |
+
+### Version 9.2 Changes
+
+**Date:** February 21, 2026
+
+| Component | Description | Status |
+|-----------|-------------|--------|
+| **FMP API v4** | Updated to use new `/stable/` endpoints | ✅ DONE |
+| **NSE India** | Integrated `stock-nse-india` npm package | ✅ DONE |
+| **N.A.T. Queries** | Added 4 new query types (competitors, investors, marketing, revenue) | ✅ DONE |
+| **Error Handling** | Data validation & normalization layer | ✅ DONE |
+| **Python Cleanup** | Removed NET Bot dependency | ✅ DONE |
+
+### Version 9.1 Changes
+
+**Date:** February 21, 2026 23:00 IST
+
+| Component | Description | Status |
+|-----------|-------------|--------|
+| **Currency Converter** | 30 currencies with file caching | ✅ DONE |
+| **Global Comparison** | 20+ industry profiles | ✅ DONE |
+
+### Version 9.0 Changes (CRITICAL UPGRADE - Based on Analysis Document)
+
+**Date:** February 21, 2026 22:00 IST
+
+**Analysis Document Used:** `D:\ProjectEBITA\upgrade\upgrade 9\intelligence_engine_analysis.md`
+
+This upgrade addresses all critical gaps identified in the analysis:
+
+| Component | Description | Status | Priority |
+|-----------|-------------|--------|----------|
+| **Pre-ML Data Filtration** | MLDataPreprocessor - outlier detection, cross-metric validation, industry validation | ✅ DONE | CRITICAL |
+| **Cross-Metric Validation** | EBITDA < Revenue, PE ratio sanity checks | ✅ DONE | CRITICAL |
+| **Industry Profiles** | 16 industry profiles with typical ranges | ✅ DONE | HIGH |
+| **Smart Query Builder** | Hierarchical fallback (specific → broad), semantic expansion | ✅ DONE | HIGH |
+| **Smart Input Normalizer** | Phonetic matching (Soundex), context disambiguation, abbreviation expansion | ✅ DONE | HIGH |
+| **Multi-Sector Resolver** | Conglomerate detection (Reliance, Tata, Birla, etc.) | ✅ DONE | HIGH |
+| **Data Completeness** | Missing value imputation | ✅ DONE | MEDIUM |
+| **N.A.T. Competitor Data** | Fetch real competitor metrics via N.A.T. | ✅ DONE | HIGH |
+
+**Files Created:**
+```
+lib/ml/data-preprocessor.ts                    → Pre-ML data filtration (410 lines)
+lib/queries/smart-query-builder.ts           → Smart query builder (280 lines)
+lib/resolution/smart-normalizer.ts            → Input normalizer (330 lines)
+lib/resolution/multi-sector-resolver.ts       → Multi-sector resolver (280 lines)
+```
+
+**Files Modified:**
+```
+lib/orchestrator-v2.ts                       → Integrated all new modules, v9.0
+```
+
+**Key Features Implemented:**
+
+1. **MLDataPreprocessor** (`lib/ml/data-preprocessor.ts`)
+   - Outlier detection (Z-score, IQR methods)
+   - Cross-metric validation (EBITDA > Revenue check)
+   - Industry-specific validation (16 industry profiles)
+   - Data completeness scoring
+   - Missing value imputation
+   - Quality score calculation (0-100)
+
+2. **SmartQueryBuilder** (`lib/queries/smart-query-builder.ts`)
+   - Hierarchical query levels (4 levels: specific → broad)
+   - Semantic metric term expansion (EBITDA, revenue, etc.)
+   - Context-aware query building
+   - Competitor queries
+   - Industry/geography context
+
+3. **SmartInputNormalizer** (`lib/resolution/smart-normalizer.ts`)
+   - Phonetic matching (Soundex algorithm)
+   - Levenshtein distance for similarity
+   - Context-based disambiguation (TCS, HDFC, etc.)
+   - Abbreviation expansion (IT, FMCG, NBFC, etc.)
+   - Multi-word entity correction
+
+4. **MultiSectorResolver** (`lib/resolution/multi-sector-resolver.ts`)
+   - Conglomerate detection (Reliance, Tata, Birla, Mahindra, ITC)
+   - Sector breakdown with revenue contribution
+   - Sector-specific competitors
+   - Primary sector identification
+
+**Integration in Orchestrator:**
+- Pre-ML data quality check runs AFTER merge, BEFORE ML analysis
+- Multi-sector resolution runs in parallel with entity resolution
+- Input normalization applied to company name
+- All validation results logged
+
+**Issues Encountered & Fixed:**
+
+| Issue | Solution |
+|-------|----------|
+| Type error in smart-normalizer.ts | Fixed return type in disambiguation function (removed 'context' property) |
+| Missing imports | Added all new module imports to orchestrator |
+| Module path issues | Created proper directory structure (queries/, resolution/) |
+
+**Testing Recommendations:**
+1. Test Pre-ML filtration with bad data (EBITDA > Revenue)
+2. Test Smart Query Builder with multiple query types
+3. Test Input Normalizer with typos: "Relianse", "Tata Motrs"
+4. Test Multi-Sector with Reliance Industries, Tata Group
+
+---
+
+### Version 8.3.1 Changes (Architecture Clarification)
+
+**Date:** February 21, 2026 21:00 IST
+
+| Component | Description | Status | Impact |
+|-----------|-------------|--------|--------|
+| **Parallel Fetch** | All APIs fetch simultaneously | ✅ DONE | Faster response |
+| **N.A.T. Initial Search** | N.A.T. extracts structured financial data in parallel | ✅ DONE | More data coverage |
+| **Regex Extraction** | Parse marketCap, peRatio, revenue, ebitda from N.A.T. response | ✅ DONE | Structured data from NLP |
+| **Merge with N.A.T.** | N.A.T. data added to merge candidates (weight: 80) | ✅ DONE | Better confidence |
+
+**Files Modified:**
+```
+lib/orchestrator-v2.ts     → Added parallel N.A.T. fetch + regex extraction
+SYSTEM_DIAGRAM.md          → Updated complete system diagram
+ARCHITECTURE.md            → Added complete query flow + system diagram
+```
+
+**Query Flow:**
+```
+1. discoverTicker() → Yahoo Search API
+2. PARALLEL:
+   ├─ fetchFromFMP()
+   ├─ fetchFromAlpha()
+   ├─ fetchYahooFinancials()
+   ├─ getNATIntelligence() [Initial Search]
+   └─ runPythonCrawler()
+3. SERP Searches
+4. Scraping
+5. Merge & Score
+6. ML Processing
+7. N.A.T. Context (Natural Language - NOT Analysis)
+```
+
+### Version 8.3.1 - Architecture Clarification
+
+**Date:** February 21, 2026 21:30 IST
+
+| Change | Description |
+|--------|-------------|
+| **ML Layer = ANALYSIS** | Mathematical analysis: clustering, predictions, classifications |
+| **N.A.T. = CONTEXT** | Natural language only: company overview, trends, news |
+
+**Key Clarification:**
+- ML Algorithms do ACTUAL mathematical analysis
+- N.A.T. provides natural language CONTEXT only
+
+### Errors Encountered & Handled:
+
+| Error | Fix |
+|-------|-----|
+| N.A.T. called for "analysis" | Clarified N.A.T. is CONTEXT only |
+| Architecture diagram misleading | Updated to show ML = ANALYSIS, N.A.T. = CONTEXT |
+| TypeScript errors in orchestrator | Fixed interface types for natIntelligence |
 
 ### Version 5.2 Changes (Search Query Fix)
 
@@ -220,6 +388,252 @@ components/dashboard/tabs/InvestorsTab.tsx      → Read from pipeline
 
 5. **clientHints Type Error (15:20):** SearchContext didn't have clientHints field
    - Fix: Added clientHints to SearchContext interface
+
+### Version 8.0 Changes (Multi-Source Orchestrator V2)
+
+**Date:** February 21, 2026  
+**Root Causes Diagnosed:**
+- Need for unified orchestrator with Python bot integration
+- Multiple data sources need normalization and scoring
+- LLM should only interpret, not invent numbers
+- Need fallback from structured APIs to real-time scraping
+
+| Component | Description | Status | Impact |
+|-----------|-------------|--------|--------|
+| **orchestrator-v2.ts** | New TypeScript orchestrator with multi-source integration | ✅ NEW | Single authoritative orchestrator |
+| **Python Crawler Wrapper** | scripts/run_crawler.py - robust Python bot integration | ✅ NEW | Calls existing Python crawlers |
+| **Python NET Bot Wrapper** | scripts/run_netbot.py - LLM analysis with merged data | ✅ NEW | No hallucination - only interprets data |
+| **Structured APIs First** | FMP → Alpha → Yahoo priority order | ✅ DONE | Most reliable data sources used first |
+| **SERP Fallback** | Google CSE + SerpAPI for real-time scraping | ✅ DONE | When APIs fail, scrape web |
+| **Merge/Score Logic** | Weighted median with source confidence | ✅ DONE | Normalizes all metrics with provenance |
+| **Derived Metrics** | EBITDA margin computed from revenue/EBITDA | ✅ DONE | Always returns value/estimate/not available |
+| **V2 API Endpoint** | PUT /api/analyze with mode: 'v2' | ✅ NEW | Alternative endpoint for new orchestrator |
+
+**Files Created:**
+```
+lib/orchestrator-v2.ts                      → Multi-source orchestrator (TypeScript)
+scripts/run_crawler.py                       → Python crawler wrapper
+scripts/run_netbot.py                        → Python NET bot (LLM) wrapper
+app/api/analyze/route.ts                    → Added V2 PUT handler
+.env.local                                   → Added V2 config variables
+```
+
+**Files Modified:**
+```
+app/api/analyze/route.ts                     → Added PUT handler for V2 mode
+.env.local                                   → Added PYTHON_CRAWLER_CMD, PYTHON_NET_SCRIPT, etc.
+```
+
+**Errors Encountered & Tackled:**
+
+1. **Cheerio Import Error (TypeScript):** Module has no default export
+   - Fix: Changed to `import * as cheerio from "cheerio"`
+
+2. **p-Retry Type Error:** RetryContext doesn't have .message property
+   - Fix: Cast to `any` in onFailedAttempt callback
+
+3. **Catch Block Type Errors:** 'e' is of type 'unknown'
+   - Fix: Added `catch (e: any)` throughout
+
+4. **Missing provenance Property:** FMP/Alpha return types didn't have provenance
+   - Fix: Cast to `any` when spreading objects
+
+5. **Null Check Error:** scraped.map(s => s.url) could be null
+   - Fix: Added optional chaining and null check in loop
+
+**Architecture Flow:**
+```
+Company Input
+    ↓
+discoverTicker() → Yahoo Search API
+    ↓
+Fetch Structured Data (Parallel):
+  ├─ fetchFromFMP()      → FMP API
+  ├─ fetchFromAlpha()    → Alpha Vantage API
+  └─ fetchYahooFinancials() → Yahoo Finance
+    ↓
+runPythonCrawler() → Python wrapper → Your existing crawler
+    ↓
+Google Custom Search → SERP links
+    ↓
+scrapeLinks() → Cheerio scraping of financial pages
+    ↓
+mergeCandidates() → Weighted median + confidence scoring
+    ↓
+computeDerived() → EBITDA margin from revenue/EBITDA
+    ↓
+runNetBot() → Python LLM with merged data (NO hallucination)
+    ↓
+Return: { merged metrics, provenance, competitors, analysis }
+```
+
+### Version 8.1 Changes (Machine Learning Integration)
+
+**Date:** February 21, 2026  
+**Root Causes Diagnosed:**
+- Need for data-driven competitor similarity scoring
+- Revenue growth prediction requires mathematical modeling
+- Industry classification needs fallback beyond rules
+
+| Component | Description | Status | Impact |
+|-----------|-------------|--------|--------|
+| **KNN Classifier** | lib/ml/ml-utils.ts - K-Nearest Neighbors | ✅ NEW | Competitor similarity scoring |
+| **Linear Regression** | Revenue growth projection | ✅ NEW | 3-year revenue forecasts |
+| **Decision Tree** | Industry classification fallback | ✅ NEW | ML-based sector detection Integration** | Added |
+| **ML to orchestrator-v2.ts | ✅ DONE | ML insights in API response |
+
+**Files Created:**
+```
+lib/ml/ml-utils.ts                     → ML algorithms (KNN, LR, DT)
+```
+
+**Files Modified:**
+```
+lib/orchestrator-v2.ts               → Added ML integration
+```
+
+**Errors Encountered & Tackled:**
+
+1. **mathjs Import Error:** standardDeviation not exported
+   - Fix: Created custom std() function using variance()
+
+2. **Type Error - TreeNode:** Leaf nodes missing left/right properties
+   - Fix: Made left/right optional in TreeNode interface
+
+3. **Type Error - Predict:** node.threshold possibly undefined
+   - Fix: Added null checks and default values
+
+4. **Type Error - Return:** Metrics type mismatch in KNN
+   - Fix: Changed return type to `any` for flexibility
+
+**ML Output Structure:**
+```json
+{
+  "mlInsights": {
+    "revenueProjections": [
+      { "year": 2026, "revenue": 320000000000, "growthRate": 0.12, "confidence": 0.78 }
+    ],
+    "industryClassification": {
+      "industry": "Automobile",
+      "confidence": 0.75
+    },
+    "algorithmVersions": {
+      "knn": "1.0",
+      "linearRegression": "1.0", 
+      "decisionTree": "1.0"
+    }
+  }
+}
+```
+
+### Version 8.2 Changes (Complete ML Suite)
+
+**Date:** February 21, 2026 18:00 IST  
+**Root Causes Diagnosed:**
+- Need for comprehensive ML algorithms beyond basic KNN/LR/DT
+- Clustering needed for company segmentation and anomaly detection
+- Sentiment analysis for news/analyst reports
+- Neural networks for credit risk prediction
+- PCA for dimensionality reduction
+
+| Component | Description | Status | Impact |
+|-----------|-------------|--------|--------|
+| **K-Means Clustering** | lib/ml/advanced-ml.ts | ✅ NEW | Company segmentation into groups |
+| **Hierarchical Clustering** | Dendrogram generation | ✅ NEW | Industry/sector grouping |
+| **Mean Shift** | Auto cluster detection | ✅ NEW | No K parameter needed |
+| **DBSCAN** | Density-based clustering | ✅ NEW | Outlier/anomaly detection |
+| **Naive Bayes** | Text classification | ✅ NEW | Sentiment analysis |
+| **Neural Network** | Multi-layer perceptron | ✅ NEW | Credit risk prediction |
+| **PCA** | Dimensionality reduction | ✅ NEW | Feature visualization |
+| **Feature Selection** | Correlation/variance analysis | ✅ NEW | Remove redundant features |
+| **Feature Extraction** | Ratio features | ✅ NEW | Financial ratio engineering |
+
+**Files Created:**
+```
+lib/ml/advanced-ml.ts              → Complete ML suite (1400+ lines)
+```
+
+**Files Modified:**
+```
+lib/orchestrator-v2.ts            → Added all ML integrations
+```
+
+**Errors Encountered & Tackled:**
+
+1. **mathjs Import Error:** covariance and correlation not exported
+   - Fix: Created custom correlationCoeff() function
+
+2. **Type Error - Set Iteration:** Cannot iterate Set without ES2015
+   - Fix: Used Array.from() for Set conversions
+
+3. **Type Error - Variance Shadowing:** Variable 'variance' used before declaration
+   - Fix: Renamed to 'colVariance'
+
+4. **Type Error - Hierarchical Clustering:** Array type mismatch
+   - Fix: Changed activeClusters type to number[][]
+
+5. **Type Error - DBSCAN:** Set spread issue
+   - Fix: Used Array.from() and concat()
+
+6. **Missing ML Properties:** Interface didn't have new ML fields
+   - Fix: Added companySegmentation, anomalyDetection, pcaResults, etc.
+
+**Algorithm Details:**
+
+1. **K-Means (v2.0):**
+   - K-means++ initialization
+   - Configurable K (default: 4)
+   - Returns segment assignments
+
+2. **Hierarchical (v2.0):**
+   - Agglomerative clustering
+   - Single/Complete/Average linkage
+   - Dendrogram output
+
+3. **Mean Shift (v2.0):**
+   - Gaussian kernel
+   - Auto cluster detection
+   - No K required
+
+4. **DBSCAN (v2.0):**
+   - Epsilon-neighborhood
+   - Core point detection
+   - Outlier identification
+
+5. **Naive Bayes (v2.0):**
+   - Multinomial classification
+   - Laplace smoothing
+   - Log-probability
+
+6. **Neural Network (v2.0):**
+   - MLP architecture
+   - Xavier initialization
+   - Backpropagation
+
+7. **PCA (v2.0):**
+   - Covariance matrix
+   - Power iteration
+   - Variance explanation
+
+**API Response Now Includes:**
+```json
+{
+  "mlInsights": {
+    "revenueProjections": [...],
+    "industryClassification": {...},
+    "companySegmentation": [...],
+    "anomalyDetection": { "clusters": [], "outlierCount": 1 },
+    "pcaResults": { "explainedVariance": [], "components": [] },
+    "creditRisk": { "risk": "LOW", "probability": 0.25 },
+    "extractedFeatures": { "profitMargin": 0.12, "roe": 0.15 },
+    "sentimentAnalysis": [...],
+    "algorithmVersions": {
+      "kmeans": "2.0", "hierarchical": "2.0", "meanshift": "2.0",
+      "dbscan": "2.0", "naiveBayes": "2.0", "neuralNetwork": "2.0", "pca": "2.0"
+    }
+  }
+}
+```
 
 ### Version 5.1 Changes (Data Persistence & Observability)
 

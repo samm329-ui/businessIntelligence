@@ -14,6 +14,15 @@
 10. [Configuration Reference](#10-configuration-reference)
 11. [Latest Updates & Version History](#11-latest-updates--version-history)
 12. [Component Connection Diagrams](#12-component-connection-diagrams)
+13. [Machine Learning Module](#13-machine-learning-module)
+14. [N.A.T. AI Assistant Integration](#14-nat-ai-assistant-integration)
+15. [Search Queries - APIs & N.A.T](#15-search-queries---apis--nat)
+16. [Data Rectifier Module](#16-data-rectifier-module)
+17. [Complete System Architecture Diagram](#17-complete-system-architecture-diagram)
+18. [Database Details](#18-database-details)
+19. [Version History](#19-version-history)
+20. [VERSION 9.0 - Complete Layer-Based Architecture](#20-version-90---complete-layer-based-architecture)
+21. [Currency & Global Comparison (v9.1)](#21-currency--global-comparison-v91)
 
 ---
 
@@ -30,6 +39,7 @@ EBITA Intelligence is a real-time business intelligence platform providing compa
 - **External APIs**: Yahoo Finance, Alpha Vantage, Financial Modeling Prep, NSE India
 - **Data Visualization**: Recharts
 - **UI Components**: shadcn/ui
+- **V2 Orchestrator**: TypeScript + Python wrappers + Cheerio scraping
 
 ### 1.3 System Capabilities
 - Real-time financial data aggregation
@@ -2848,7 +2858,102 @@ curl http://localhost:3000/api/health
 
 ## 11. Latest Updates & Version History
 
-### 11.1 Version 5.4 Updates (February 19, 2026 - 13:55 IST)
+### 11.1 Version 8.0 Updates (February 21, 2026)
+
+#### V2 Multi-Source Orchestrator
+
+**Date:** February 21, 2026  
+**Status:** PRODUCTION-READY
+
+| Change | Description | Impact |
+|--------|-------------|--------|
+| **orchestrator-v2.ts** | New TypeScript orchestrator with multi-source integration | Single authoritative orchestrator |
+| **Python Crawler Wrapper** | scripts/run_crawler.py | Robust Python bot integration |
+| **Python NET Bot Wrapper** | scripts/run_netbot.py | LLM analysis with merged data |
+| **Structured APIs First** | FMP → Alpha → Yahoo priority order | Most reliable data sources first |
+| **SERP Fallback** | Google CSE + SerpAPI | Real-time scraping when APIs fail |
+| **Merge/Score Logic** | Weighted median + confidence scoring | Normalizes all metrics |
+| **Derived Metrics** | EBITDA margin computed from revenue/EBITDA | Always returns value |
+
+#### Architecture Flow
+
+```
+Company Input → discoverTicker() → Yahoo Search API
+    ↓
+Fetch Structured Data (Parallel):
+  ├─ fetchFromFMP()      → FMP API
+  ├─ fetchFromAlpha()    → Alpha Vantage API
+  └─ fetchYahooFinancials() → Yahoo Finance
+    ↓
+runPythonCrawler() → Python wrapper → Your existing crawler
+    ↓
+Google Custom Search → SERP links
+    ↓
+scrapeLinks() → Cheerio scraping of financial pages
+    ↓
+mergeCandidates() → Weighted median + confidence scoring
+    ↓
+computeDerived() → EBITDA margin from revenue/EBITDA
+    ↓
+runNetBot() → Python LLM with merged data (NO hallucination)
+    ↓
+Return: { merged metrics, provenance, competitors, analysis }
+```
+
+#### Files Created
+
+```
+lib/orchestrator-v2.ts              → Multi-source orchestrator (TypeScript)
+scripts/run_crawler.py              → Python crawler wrapper
+scripts/run_netbot.py               → Python NET bot (LLM) wrapper
+app/api/analyze/route.ts            → Added PUT handler for V2
+.env.local                          → Added V2 config variables
+```
+
+#### Errors Encountered & Fixed
+
+1. **Cheerio Import Error**: Module has no default export
+   - Fix: Changed to `import * as cheerio from "cheerio"`
+
+2. **p-Retry Type Error**: RetryContext doesn't have .message property
+   - Fix: Cast to `any` in onFailedAttempt callback
+
+3. **Catch Block Type Errors**: 'e' is of type 'unknown'
+   - Fix: Added `catch (e: any)` throughout
+
+4. **Missing provenance Property**: FMP/Alpha return types didn't have provenance
+   - Fix: Cast to `any` when spreading objects
+
+#### API Usage
+
+```bash
+# Using V2 Orchestrator
+curl -X PUT http://localhost:3000/api/analyze \
+  -H "Content-Type: application/json" \
+  -d '{"company": "Tata Motors", "region": "India"}'
+
+# Or with explicit mode
+curl -X PUT http://localhost:3000/api/analyze \
+  -H "Content-Type: application/json" \
+  -d '{"company": "Reliance Industries", "mode": "v2"}'
+```
+
+---
+
+### 11.2 Version 7.0 Updates (February 19, 2026 - 15:30 IST)
+
+- OVERHAUL: Hardcoded data elimination
+- Keyword classification for instant sector detection
+- Smart search with client-side intent detection
+- Self-learning classification store
+
+### 11.3 Version 6.0 Updates (February 19, 2026 - 14:30 IST)
+
+- Response contract normalization
+- Unknown entity store for later enrichment
+- Entity discovery background worker
+
+### 11.4 Version 5.4 Updates (February 19, 2026 - 13:55 IST)
 
 #### Major Changes
 
@@ -2885,14 +2990,14 @@ lib/intelligence/identifier.ts             → Zepto mappings
 5. **PDF Worker (13:50)**: Missing pdf.worker.mjs module
 6. **Zepto Unknown (13:52)**: Industry classification failed
 
-### 11.2 Version 5.3 Updates (February 19, 2026 - 13:00 IST)
+### 11.5 Version 5.3 Updates (February 19, 2026 - 13:00 IST)
 
 | Change | Description | Impact |
 |--------|-------------|--------|
 | **Competitor Extractor** | Added BLACKLIST, stricter regex patterns | No more "had", "company", "also" |
 | **Revenue Extraction** | Added (?!\s*%) negative lookahead | No more 36.6% → ₹835 Cr confusion |
 
-### 11.3 Version 5.0-5.2 Updates
+### 11.6 Version 5.0-5.2 Updates
 
 - Search-first architecture
 - Indian financial sites (screener.in, trendlyne.com, tickertape.in)
@@ -3146,9 +3251,2218 @@ QUERY: "Zepto"
 
 ---
 
-*Last Updated: February 19, 2026 14:30 IST*
-*Version: 6.0*
-*Total Components: 80+ files*
-*Data Sources: 6 APIs + Python Service*
-*Supported Companies: 995+*
-*Supported Industries: 29 + Quick Commerce*
+## 13. Machine Learning Module
+
+### 13.1 Overview
+
+The ML module (`lib/ml/ml-utils.ts`) provides machine learning algorithms for enhanced business intelligence:
+
+| Algorithm | Purpose | Integration |
+|-----------|---------|-------------|
+| **K-Nearest Neighbors (KNN)** | Competitor similarity scoring | orchestrator-v2.ts |
+| **Linear Regression** | Revenue growth prediction | orchestrator-v2.ts |
+| **Decision Tree** | Industry classification fallback | orchestrator-v2.ts |
+
+### 13.2 KNN - Competitor Similarity
+
+**File:** `lib/ml/ml-utils.ts`
+
+**Algorithm:**
+- Uses Euclidean distance with z-score normalization
+- Configurable K parameter (default: 5)
+- Returns similarity scores (0-1) for top K competitors
+
+**Usage:**
+```typescript
+const knn = new KNNClassifier(3);
+const similar = knn.findSimilarCompanies(targetMetrics, competitorMetrics);
+```
+
+**Integration in Orchestrator:**
+- Fetches competitor list from Yahoo Finance
+- **Fetches REAL competitor metrics via N.A.T. realtime** (up to 5 competitors)
+- Extracts: marketCap, P/E, revenue, EBITDA, ebitdaMargin, revenueGrowth, ROE
+- Uses N.A.T. data for accurate similarity calculation
+- **Previous version used random placeholders - now uses real data**
+- Adds `similarity` score and `metrics` object to each competitor
+
+### 13.3 Linear Regression - Revenue Projection
+
+**Algorithm:**
+- Ordinary Least Squares (OLS) regression
+- Calculates R² score for confidence
+- Projects future revenue based on historical growth
+
+**Usage:**
+```typescript
+const lr = new LinearRegression();
+const projections = lr.projectRevenue(currentRevenue, historicalGrowthRates, 3);
+// Returns: [{ year: 2026, revenue: X, growthRate: Y, confidence: Z }, ...]
+```
+
+**Integration in Orchestrator:**
+- Uses historical revenue growth rate
+- Projects 3 years ahead by default
+- Returns confidence score based on R²
+
+### 13.4 Decision Tree - Industry Classification
+
+**Algorithm:**
+- Gini impurity for split selection
+- Recursive tree building with max depth limit
+- Handles mixed numerical features
+
+**Usage:**
+```typescript
+const dt = new DecisionTreeClassifier();
+dt.fit(trainingFeatures, trainingLabels);
+const classification = dt.classifyCompany(companyMetrics);
+```
+
+**Integration in Orchestrator:**
+- Fallback when keyword/rule-based classification fails
+- Uses financial metrics as features
+- Returns industry prediction with confidence
+
+### 13.5 Additional ML Utilities
+
+**Company Similarity Calculator:**
+```typescript
+const similarity = calculateCompanySimilarity(companyA, companyB);
+// Returns: 0-1 score
+```
+
+**CAGR Calculator:**
+```typescript
+const cagr = calculateCAGR(startValue, endValue, periods);
+// Returns: compound annual growth rate
+```
+
+### 13.6 ML Output in API Response
+
+```json
+{
+  "company": "Tata Motors",
+  "ticker": "TATAMOTORS.NS",
+  "competitors": [
+    { "symbol": "MARUTI", "name": "Maruti Suzuki", "similarity": 0.85 },
+    { "symbol": "HM", "name": "Hyundai Motor", "similarity": 0.72 }
+  ],
+  "mlInsights": {
+    "revenueProjections": [
+      { "year": 2026, "revenue": 320000000000, "growthRate": 0.12, "confidence": 0.78 },
+      { "year": 2027, "revenue": 358400000000, "growthRate": 0.11, "confidence": 0.65 },
+      { "year": 2028, "revenue": 401400000000, "growthRate": 0.10, "confidence": 0.52 }
+    ],
+    "industryClassification": {
+      "industry": "Automobile",
+      "confidence": 0.75,
+      "alternatives": []
+    },
+    "companySegmentation": [
+      { "company": "TATA", "segment": 0 },
+      { "company": "MARUTI", "segment": 1 }
+    ],
+    "anomalyDetection": {
+      "clusters": [[0, 3], [1, 5], [2, 2]],
+      "outlierCount": 1
+    },
+    "creditRisk": {
+      "risk": "LOW",
+      "probability": 0.25
+    },
+    "extractedFeatures": {
+      "profitMargin": 0.12,
+      "debtToEquity": 0.5,
+      "roe": 0.15
+    },
+    "sentimentAnalysis": [
+      { "text": "Strong earnings...", "sentiment": "positive", "confidence": 0.85 }
+    ],
+    "algorithmVersions": {
+      "knn": "1.0",
+      "linearRegression": "1.0",
+      "decisionTree": "1.0",
+      "kmeans": "2.0",
+      "hierarchical": "2.0",
+      "meanshift": "2.0",
+      "dbscan": "2.0",
+      "naiveBayes": "2.0",
+      "neuralNetwork": "2.0",
+      "pca": "2.0"
+    }
+  }
+}
+```
+
+### 13.7 K-Means Clustering (Company Segmentation)
+
+**Algorithm:** 
+- K-means++ initialization
+- Euclidean distance with iterative refinement
+- Configurable K clusters
+
+**Usage:**
+```typescript
+const kmeans = new KMeansClustering(4);
+const segments = kmeans.segmentCompanies(companies, 4);
+```
+
+**Integration:**
+- Segments companies into growth categories
+- Groups by: revenue, market cap, EBITDA margin, P/E, growth
+- **Uses REAL N.A.T. competitor metrics** (marketCap, revenue, ebitdaMargin, peRatio, revenueGrowth)
+- Includes target company in segmentation analysis
+
+### 13.8 Hierarchical Clustering
+
+**Algorithm:**
+- Agglomerative clustering
+- Single/Complete/Average linkage options
+- Dendrogram generation
+
+**Usage:**
+```typescript
+const hc = new HierarchicalClustering('average');
+hc.fit(data);
+const clusters = hc.getClustersAtLevel(data, 5);
+```
+
+### 13.9 Mean Shift Clustering
+
+**Algorithm:**
+- Gaussian kernel density estimation
+- Automatic cluster detection
+- No K parameter needed
+
+**Usage:**
+```typescript
+const ms = new MeanShiftClustering(1.0);
+ms.fit(data);
+const segments = ms.autoSegment(data);
+```
+
+### 13.10 DBSCAN (Density-Based Clustering)
+
+**Algorithm:**
+- Epsilon-neighborhood search
+- Core point identification
+- Outlier/anomaly detection
+
+**Usage:**
+```typescript
+const dbscan = new DBSCAN(0.5, 3);
+dbscan.fit(data);
+const anomalies = dbscan.findAnomalies(companies);
+```
+
+**Integration:**
+- Identifies outlier companies
+- Detects unusual metric patterns
+- **Uses REAL N.A.T. competitor metrics** for anomaly detection
+- Uses log-scale revenue for better distance calculation
+- Includes target company in anomaly analysis
+
+### 13.11 Naive Bayes (Sentiment Analysis)
+
+**Algorithm:**
+- Multinomial text classification
+- Laplace smoothing
+- Log-probability for numerical stability
+
+**Usage:**
+```typescript
+const nb = new NaiveBayesClassifier();
+nb.fit(trainTexts, trainLabels);
+const sentiment = nb.analyzeSentiment(newsHeadlines);
+```
+
+**Integration:**
+- Analyzes news sentiment
+- Analyst report classification
+
+### 13.12 Neural Network (Prediction)
+
+**Architecture:**
+- Multi-layer perceptron
+- Xavier weight initialization
+- Backpropagation with gradient descent
+- ReLU/Sigmoid/Tanh activations
+
+**Usage:**
+```typescript
+const nn = new NeuralNetwork([5, 8, 4, 1], { learningRate: 0.01 });
+nn.train(inputs, outputs, 1000);
+const risk = nn.predictCreditRisk(companyMetrics);
+```
+
+**Integration:**
+- Credit risk prediction
+- Price movement forecasting
+
+### 13.13 PCA (Dimensionality Reduction)
+
+**Algorithm:**
+- Covariance matrix computation
+- Power iteration for eigenvalues
+- Principal component extraction
+
+**Usage:**
+```typescript
+const pca = new PCA();
+pca.fit(data, 2);
+const reduced = pca.transform(data);
+```
+
+**Integration:**
+- Reduces financial metrics to 2D
+- Visualization support
+
+### 13.14 Feature Selection & Extraction
+
+**Feature Selector:**
+- Correlation matrix analysis
+- Uncorrelated feature selection
+- Variance-based importance
+
+**Feature Extractor:**
+- Ratio feature creation
+- Growth feature engineering
+
+**Usage:**
+```typescript
+const ratios = FeatureExtractor.createRatioFeatures(company);
+const important = FeatureSelector.featureImportance(data, names);
+```
+
+### 13.15 Complete ML Pipeline Flow
+
+```
+Input: Company Financial Metrics
+    ↓
+┌─────────────────────────────────────────────────────────────┐
+│ STEP 0: COMPETITOR DATA FETCHING (NEW)                       │
+│ - Fetch competitor list from Yahoo Finance                   │
+│ - For each competitor: Call N.A.T. realtime API              │
+│ - Extract: marketCap, P/E, revenue, EBITDA, margin, ROE      │
+│ - Parallel fetching (p-limit 3), up to 5 competitors        │
+│ - THIS ENABLES RELIABLE ML ANALYSIS                         │
+└─────────────────────────────────────────────────────────────┘
+    ↓
+┌─────────────────────────────────────────────────────────────┐
+│ STEP 1: Feature Extraction                                   │
+│ - Create ratio features (profit margin, ROE, etc.)          │
+│ - Calculate growth features (CAGR, volatility)              │
+│ - Extract features from REAL competitor data                 │
+└─────────────────────────────────────────────────────────────┘
+    ↓
+┌─────────────────────────────────────────────────────────────┐
+│ STEP 2: Feature Selection                                    │
+│ - Correlation analysis                                       │
+│ - Variance importance                                        │
+│ - Remove redundant features                                  │
+└─────────────────────────────────────────────────────────────┘
+    ↓
+┌─────────────────────────────────────────────────────────────┐
+│ STEP 3: Clustering Analysis (Parallel)                       │
+│ - K-Means: Company segmentation (uses N.A.T. competitor data)│
+│ - Hierarchical: Industry grouping                            │
+│ - Mean Shift: Auto cluster detection                        │
+│ - DBSCAN: Outlier/Anomaly detection (uses N.A.T. data)    │
+└─────────────────────────────────────────────────────────────┘
+    ↓
+┌─────────────────────────────────────────────────────────────┐
+│ STEP 4: Classification                                       │
+│ - Decision Tree: Industry classification                     │
+│ - Naive Bayes: Sentiment analysis                           │
+│ - KNN: Competitor similarity (uses N.A.T. competitor data) │
+└─────────────────────────────────────────────────────────────┘
+    ↓
+┌─────────────────────────────────────────────────────────────┐
+│ STEP 5: Prediction Models                                    │
+│ - Linear Regression: Revenue projection                      │
+│ - Neural Network: Credit risk / Price movement              │
+│ - PCA: Dimensionality reduction for visualization          │
+└─────────────────────────────────────────────────────────────┘
+    ↓
+┌─────────────────────────────────────────────────────────────┐
+│ STEP 1: Feature Extraction                                   │
+│ - Create ratio features (profit margin, ROE, etc.)          │
+│ - Calculate growth features (CAGR, volatility)              │
+└─────────────────────────────────────────────────────────────┘
+    ↓
+┌─────────────────────────────────────────────────────────────┐
+│ STEP 2: Feature Selection                                    │
+│ - Correlation analysis                                       │
+│ - Variance importance                                        │
+│ - Remove redundant features                                  │
+└─────────────────────────────────────────────────────────────┘
+    ↓
+┌─────────────────────────────────────────────────────────────┐
+│ STEP 3: Clustering Analysis (Parallel)                       │
+│ - K-Means: Company segmentation                              │
+│ - Hierarchical: Industry grouping                            │
+│ - Mean Shift: Auto cluster detection                         │
+│ - DBSCAN: Outlier/Anomaly detection                         │
+└─────────────────────────────────────────────────────────────┘
+    ↓
+┌─────────────────────────────────────────────────────────────┐
+│ STEP 4: Classification                                       │
+│ - Decision Tree: Industry classification                     │
+│ - Naive Bayes: Sentiment analysis                           │
+│ - KNN: Competitor similarity                                │
+└─────────────────────────────────────────────────────────────┘
+    ↓
+┌─────────────────────────────────────────────────────────────┐
+│ STEP 5: Prediction Models                                    │
+│ - Linear Regression: Revenue projection                     │
+│ - Neural Network: Credit risk / Price movement              │
+│ - PCA: Dimensionality reduction for visualization          │
+└─────────────────────────────────────────────────────────────┘
+    ↓
+Output: Complete ML Insights
+```
+
+### 13.16 Error Handling & Edge Cases
+
+| Scenario | Handling |
+|----------|----------|
+| Empty training data | Returns default values with 0.3 confidence |
+| Division by zero | Uses fallback values |
+| NaN/Infinity | Returns null, logs warning |
+| Dimension mismatch | Throws descriptive error |
+| Insufficient clusters | Uses available data only |
+| Training convergence | Max iterations with best effort |
+
+---
+
+## 14. N.A.T. AI Assistant Integration
+
+### 14.1 Overview
+
+The orchestrator now integrates with the N.A.T. (Natural Intelligence) AI Assistant to provide additional business intelligence through natural language. **N.A.T. now runs in PARALLEL with all structured APIs for initial data fetching.**
+
+**URL:** Configured via `NAT_URL` or `PYTHON_SERVICE_URL` environment variable
+
+### 14.2 Integration Flow (UPDATED - PARALLEL)
+
+```
+User Query: "Tata Motors"
+    ↓
+discoverTicker() → Yahoo Search API
+    ↓
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    PARALLEL DATA FETCH (ALL AT ONCE)                       │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│  ┌─────────────┐   ┌─────────────┐   ┌─────────────┐   ┌─────────────┐   │
+│  │    FMP     │   │    Alpha   │   │    Yahoo   │   │    NSE     │   │
+│  │  API Call  │   │  Vantage   │   │  Finance   │   │   India    │   │
+│  └──────┬──────┘   └──────┬──────┘   └──────┬──────┘   └──────┬──────┘   │
+│         │                  │                  │                  │            │
+│         └──────────────────┴────────┬─────────┴──────────────────┘            │
+│                                     │                                         │
+│  ┌────────────────────────────────────────────────────────────────────┐   │
+│  │                 N.A.T. AI (PARALLEL)                                │   │
+│  │  Query: "Provide STRUCTURED financial data: Market Cap, P/E,          │   │
+│  │         Revenue, EBITDA, EBITDA Margin, Revenue Growth..."             │   │
+│  │  Returns: Parsed structured financial data + sources                   │   │
+│  └────────────────────────────────────────────────────────────────────┘   │
+│                                     │                                         │
+│  ┌────────────────────────────────────────────────────────────────────┐   │
+│  │                 Python Crawler (PARALLEL)                            │   │
+│  │  python3 ./scripts/run_crawler.py "Tata Motors"                     │   │
+│  │  Returns: links[], competitors[], snippets[]                           │   │
+│  └────────────────────────────────────────────────────────────────────┘   │
+│                                     │                                         │
+└─────────────────────────────────────┼───────────────────────────────────────┘
+                                      │
+                                      ▼
+                        MERGE CANDIDATES FROM ALL SOURCES
+                        (FMP + Alpha + Yahoo + N.A.T. + Crawler)
+                                      │
+                                      ▼
+```
+
+### 14.3 Complete Query Flow
+
+```
+User Input: "Tata Motors"
+
+1. discoverTicker("Tata Motors", "India")
+   → Yahoo Search API: "Tata Motors stock ticker"
+   → Returns: "TATAMOTORS.NS"
+
+2. PARALLEL DATA FETCH:
+   │
+   ├─ fetchFromFMP("TATAMOTORS.NS")
+   │   → GET https://financialmodelingprep.com/api/v3/quote/TATAMOTORS.NS
+   │   → Returns: { marketCap, peRatio, revenue }
+   │
+   ├─ fetchFromAlpha("TATAMOTORS.NS")
+   │   → GET https://www.alphavantage.co/query?function=OVERVIEW&symbol=TATAMOTORS.NS
+   │   → Returns: { marketCap, peRatio, ebitda, revenue }
+   │
+   ├─ fetchYahooFinancials("TATAMOTORS.NS")
+   │   → GET https://query1.finance.yahoo.com/v10/finance/quoteSummary/TATAMOTORS.NS
+   │   → Returns: { marketCap, peRatio, revenue, ebitda, revenueGrowth }
+   │
+   ├─ getNATIntelligence("Tata Motors", { type: 'initial_search' })
+   │   → POST /chat: "Provide STRUCTURED financial data for Tata Motors..."
+   │   → Returns: { structuredData: { marketCap, peRatio, revenue, ebitda... } }
+   │
+   └─ runPythonCrawler("Tata Motors")
+       → python3 ./scripts/run_crawler.py "Tata Motors"
+       → Returns: { links[], competitors[], snippets[] }
+
+3. SERP SEARCHES (Sequential):
+   ├─ Google CSE: "Tata Motors P/E ratio"
+   ├─ Google CSE: "Tata Motors market cap"
+   ├─ Google CSE: "Tata Motors EBITDA"
+   ├─ Google CSE: "Tata Motors revenue"
+   ├─ Google CSE: "Tata Motors EBITDA margin"
+   ├─ Google CSE: "Tata Motors revenue growth"
+   ├─ Google CSE: "Tata Motors investor presentation"
+   └─ Google CSE: "Tata Motors annual report pdf"
+
+4. SCRAPE LINKS:
+   → Cheerio scrapes all URLs from crawler + SERP
+
+5. MERGE & SCORE:
+   → Weighted median from all sources (FMP:120, Alpha:120, Yahoo:80, N.A.T.:80)
+
+6. ML ANALYSIS (REAL MATHEMATICAL ANALYSIS):
+   → KNN, K-Means, DBSCAN, PCA, Neural Network... (Does actual data analysis)
+
+7. N.A.T. CONTEXT (Natural Language):
+   → POST /chat (general): "Provide detailed business intelligence..." (Context only)
+   → POST /chat (realtime): "Latest financial performance..." (Context only)
+
+8. OUTPUT
+```
+
+### 14.4 Data Fetching Queries
+
+#### Structured APIs:
+| Source | Endpoint | Data |
+|--------|----------|------|
+| FMP | `/api/v3/quote/{ticker}` | Market Cap, P/E, Revenue |
+| Alpha Vantage | `?function=OVERVIEW` | Market Cap, P/E, EBITDA, Revenue |
+| Yahoo Finance | `/quoteSummary/{ticker}` | All financial metrics |
+
+#### N.A.T. Initial Search Query:
+```
+Provide STRUCTURED financial data for {company}: 
+- Current Market Cap (in billions USD)
+- P/E Ratio
+- Revenue (in billions USD)
+- EBITDA (in billions USD)
+- EBITDA Margin (%)
+- Revenue Growth (%)
+- Industry/Sector
+- Key competitors
+Format as clean structured data.
+```
+
+#### SERP Search Queries:
+| # | Query | Purpose |
+|---|-------|---------|
+| 1 | `{company} P/E ratio` | Get P/E ratio |
+| 2 | `{company} market cap` | Get market cap |
+| 3 | `{company} EBITDA` | Get EBITDA |
+| 4 | `{company} revenue` | Get revenue |
+| 5 | `{company} EBITDA margin` | Get margin |
+| 6 | `{company} revenue growth` | Get growth rate |
+| 7 | `{company} "investor presentation"` | Get investor docs |
+| 8 | `{company} annual report pdf` | Get annual report |
+
+#### N.A.T. Final Analysis Queries:
+| Call | Query | Type |
+|------|-------|------|
+| General | `Provide detailed business intelligence about {company}. Include: Company overview, Recent news, Industry trends, Key competitors, Investment outlook` | Vector Store |
+| Realtime | `Latest financial performance, quarterly results, and market sentiment for {company}. Include recent news and analyst opinions.` | Web Search |
+
+#### N.A.T. Competitor Data Fetching (NEW):
+| Step | Action | Description |
+|------|--------|-------------|
+| 1 | Fetch competitor list | Get from Yahoo Finance recommendations API |
+| 2 | N.A.T. realtime query | For each competitor (up to 5), call N.A.T. with structured query |
+| 3 | Extract metrics | Parse marketCap, P/E, revenue, EBITDA, margin, ROE from response |
+| 4 | Parallel processing | Use p-limit(3) for concurrent competitor fetching |
+| 5 | Store metrics | Add to competitor object for ML analysis |
+
+**Competitor Data Query:**
+```
+Provide STRUCTURED financial metrics for {competitor_name} ({symbol}):
+- Current Market Cap (in billions USD)
+- P/E Ratio
+- Revenue (in billions USD)
+- EBITDA (in billions USD)
+- EBITDA Margin (%)
+- Revenue Growth (%)
+- ROE (%)
+Format as clean structured data with ONLY numbers.
+```
+
+**Why This Matters:**
+- Previous system used **random placeholders** for competitor metrics
+- Now uses **real N.A.T. fetched data** for reliable ML analysis
+- Enables accurate KNN similarity, K-Means clustering, and DBSCAN anomaly detection
+
+### 14.5 Source Weights
+
+| Source | Weight | Purpose |
+|--------|--------|---------|
+| FMP | 120 | Structured financial API |
+| Alpha Vantage | 120 | Structured financial API |
+| Yahoo Finance | 80 | Free financial data |
+| N.A.T. | 80 | AI extracted data |
+| Python Crawler | 40 | Web scraped |
+| SERP/Google | 40 | Search results |
+| Direct Scrape | 40 | HTML parsing |
+
+### 14.6 NAT Functions
+
+**callNAT(query, chatType)**
+- Calls NAT `/chat` endpoint
+- Returns natural language response
+- Supports both "general" and "realtime" chat types
+
+**getNATIntelligence(company, context)**
+- If type='initial_search': Extracts structured data from N.A.T. response
+- Otherwise: Calls both general and realtime insights
+- Returns deduplicated results
+
+### 14.7 API Response Structure
+
+```json
+{
+  "company": "Tata Motors",
+  "ticker": "TATAMOTORS.NS",
+  "merged": { ... },
+  "mlInsights": {
+    "revenueProjections": [...],
+    "natIntelligence": {
+      "generalInsight": "Tata Motors is India's largest automobile...",
+      "realtimeInsight": "Q3 FY26 results show revenue growth of 5%...",
+      "sources": [...]
+    }
+  }
+}
+```
+
+### 14.5 Environment Configuration
+
+```env
+# N.A.T. Service URL
+NAT_URL=http://localhost:8000
+# or
+PYTHON_SERVICE_URL=http://localhost:8000
+```
+
+---
+
+## 15. COMPLETE SYSTEM DIAGRAM (VERSION 8.3)
+
+```
+╔══════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                           EBITA INTELLIGENCE ENGINE - VERSION 8.3                                ║
+║                        Complete Architecture & Data Flow Diagram                                ║
+╚══════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+════════════════════════════════════════════════════════════════════════════════════════════════════
+                                      USER INPUT LAYER
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+    ┌─────────────┐     ┌─────────────┐     ┌─────────────┐     ┌─────────────┐
+    │  Company    │     │   Brand    │     │  Industry  │     │  Ticker   │
+    │   Name      │     │   Name     │     │   Name     │     │   Symbol   │
+    └──────┬──────┘     └──────┬──────┘     └──────┬──────┘     └──────┬──────┘
+           │                    │                    │                    │
+           └────────────────────┴────────┬─────────┴────────────────────┘
+                                        │
+                                        ▼
+                         ┌───────────────────────────────┐
+                         │     INPUT PREPROCESSOR        │
+                         │  • Entity Resolution         │
+                         │  • Ticker Discovery          │
+                         │  • Region Detection          │
+                         └──────────────┬──────────────┘
+                                        │
+                                        ▼
+
+════════════════════════════════════════════════════════════════════════════════════════════════════
+                              PARALLEL DATA SOURCE LAYER (ALL AT ONCE)
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+    ╔════════════════════════════════════════════════════════════════════════════════════════════╗
+    ║                          STRUCTURED APIs (Financial Data)                                 ║
+    ╠════════════════════════════════════════════════════════════════════════════════════════════╣
+    ║                                                                                         ║
+    ║  ┌─────────────────────┐  ┌─────────────────────┐  ┌─────────────────────┐          ║
+    ║  │        FMP          │  │    Alpha Vantage    │  │   Yahoo Finance    │          ║
+    ║  │  financialmodeling  │  │    alphavantage.co  │  │   finance.yahoo   │          ║
+    ║  │       prep.com      │  │                     │  │        .com        │          ║
+    ║  └──────────┬──────────┘  └──────────┬──────────┘  └──────────┬──────────┘          ║
+    ║             │                           │                           │                      ║
+    ║             │   ┌───────────────────────┴───────────────────────────┘                      ║
+    ║             │   │                                                                     ║
+    ║             │   │  Returns: Market Cap, P/E, Revenue, EBITDA, Growth                  ║
+    ║             │   │                                                                     ║
+    ╚═════════════╪═══╪═════════════════════════════════════════════════════════════════════╝
+                  │   │
+    ╔═════════════╪═══╪════════════════════════════════════════════════════════════════════╗
+    ║             │   │           N.A.T. AI (PARALLEL)                                      ║
+    ╠═════════════╪═══╪════════════════════════════════════════════════════════════════════╣
+    ║             │   │                                                                     ║
+    ║             │   │  ┌─────────────────────────────────────────────────────────────┐   ║
+    ║             │   │  │  Query: "Provide STRUCTURED financial data:              │   ║
+    ║             │   │  │  Market Cap, P/E, Revenue, EBITDA, EBITDA Margin..."       │   ║
+    ║             │   │  └─────────────────────────────────────────────────────────────┘   ║
+    ║             │   │                              │                                    ║
+    ║             │   │  ┌─────────────────────────────────────────────────────────────┐   ║
+    ║             │   │  │  Regex Extraction:                                        │   ║
+    ║             │   │  │  • marketCap → $XXX Billion                              │   ║
+    ║             │   │  │  • peRatio → XX.XX                                       │   ║
+    ║             │   │  │  • revenue → $XXX Billion                                │   ║
+    ║             │   │  │  • ebitda → $XXX Billion                                 │   ║
+    ║             │   │  │  • ebitdaMargin → XX%                                   │   ║
+    ║             │   │  └─────────────────────────────────────────────────────────────┘   ║
+    ║             │   │                                                                     ║
+    ╚═════════════╪═══╪════════════════════════════════════════════════════════════════════╝
+                  │   │
+    ╔═════════════╪═══╪════════════════════════════════════════════════════════════════════╗
+    ║             │   │         PYTHON CRAWLER (PARALLEL)                                  ║
+    ╠═════════════╪═══╪════════════════════════════════════════════════════════════════════╣
+    ║             │   │                                                                     ║
+    ║             │   │  Command: python3 ./scripts/run_crawler.py "{company}"             ║
+    ║             │   │                                                                     ║
+    ║             │   │  Returns: { links[], competitors[], snippets[] }                 ║
+    ║             │   │                                                                     ║
+    ╚═════════════╪═══╪════════════════════════════════════════════════════════════════════╝
+                  │   │
+                  ▼   ▼
+
+════════════════════════════════════════════════════════════════════════════════════════════════════
+                                      MERGE & SCORE ENGINE
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+    ┌─────────────────────────────────────────────────────────────────────────────────────┐
+    │                              MERGE CANDIDATES                                        │
+    ├─────────────────────────────────────────────────────────────────────────────────────┤
+    │                                                                                      │
+    │  Sources: [FMP, Alpha, Yahoo, N.A.T., Crawler, SERP, Scraped]                    │
+    │                                                                                      │
+    │  ┌─────────────┐    ┌─────────────────┐    ┌─────────────────┐                  │
+    │  │   Source    │    │   Weighted      │    │   Confidence    │                  │
+    │  │   Weight    │───▶│    Median       │───▶│   Calculator    │                  │
+    │  │             │    │                 │    │                 │                  │
+    │  │ FMP: 120   │    │ Sort by value   │    │ Count × 10     │                  │
+    │  │ Alpha: 120 │    │ Weight by       │    │ + Structured   │                  │
+    │  │ Yahoo: 80  │    │   authority    │    │   (40)         │                  │
+    │  │ N.A.T.: 80  │    │ Get median     │    │ Score 0-100    │                  │
+    │  │ Crawl: 40  │    │                 │    │                 │                  │
+    │  └─────────────┘    └─────────────────┘    └─────────────────┘                  │
+    │                                                                                      │
+    │  ┌───────────────────────────────────────────────────────────────────────────┐      │
+    │  │                    DERIVED METRICS COMPUTATION                            │      │
+    │  ├───────────────────────────────────────────────────────────────────────────┤      │
+    │  │                                                                            │      │
+    │  │  EBITDA Margin = (EBITDA / Revenue) × 100                                 │      │
+    │  │  EV/EBITDA = Enterprise Value / EBITDA                                    │      │
+    │  │  ROE = Net Income / Shareholder Equity                                    │      │
+    │  │                                                                            │      │
+    │  └───────────────────────────────────────────────────────────────────────────┘      │
+    │                                                                                      │
+    └─────────────────────────────────────────────────────────────────────────────────────┘
+                                        │
+                                        ▼
+
+════════════════════════════════════════════════════════════════════════════════════════════════════
+                                 N.A.T. CONTEXT LAYER (NATURAL LANGUAGE - NOT ANALYSIS)
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+    ┌─────────────────────────────────────────────────────────────────────────────────────┐
+    │            N.A.T. PROVIDES CONTEXT ONLY ← NOT MATHEMATICAL ANALYSIS                 │
+    │                  ML ALGORITHMS DO THE ACTUAL ANALYSIS                               │
+    ├─────────────────────────────────────────────────────────────────────────────────────┤
+    │                                                                                      │
+    │  ╔════════════════════════════════════════════════════════════════════════════════════╗  │
+    │  ║              CLUSTERING ALGORITHMS ← MATHEMATICAL ANALYSIS                       ║  │
+    │  ╠════════════════════════════════════════════════════════════════════════════════════╣  │
+    │  ║                                                                                  ║  │
+    │  ║  ┌──────────┐  ┌──────────────┐  ┌────────────┐  ┌─────────┐                ║  │
+    │  ║  │ K-Means   │  │ Hierarchical │  │ Mean Shift │  │ DBSCAN  │                ║  │
+    │  ║  │           │  │              │  │            │  │         │                ║  │
+    │  ║  │ COMPANY   │  │ INDUSTRY     │  │ AUTO       │  │ OUTLIER │                ║  │
+    │  ║  │ SEGMENTS  │  │ GROUPING     │  │ CLUSTERS   │  │ DETECT  │                ║  │
+    │  ║  │           │  │              │  │            │  │         │                ║  │
+    │  ║  │ Real Math │  │ Real Math    │  │ Real Math   │  │ Real Math│                ║  │
+    │  ║  └──────────┘  └──────────────┘  └────────────┘  └─────────┘                ║  │
+    │  ║                                                                                  ║  │
+    │  ╚════════════════════════════════════════════════════════════════════════════════════╝  │
+    │                                                                                      │
+    │  ╔════════════════════════════════════════════════════════════════════════════════════╗  │
+    │  ║            CLASSIFICATION ALGORITHMS ← MATHEMATICAL ANALYSIS                   ║  │
+    │  ╠════════════════════════════════════════════════════════════════════════════════════╣  │
+    │  ║                                                                                  ║  │
+    │  ║  ┌──────────┐  ┌──────────────┐  ┌────────────┐                                ║  │
+    │  ║  │   KNN    │  │  Decision    │  │  Naive     │                                ║  │
+    │  ║  │           │  │    Tree      │  │   Bayes    │                                ║  │
+    │  ║  │ COMPETITOR│  │ INDUSTRY     │  │ SENTIMENT  │                                ║  │
+    │  ║  │ SIMILARITY│  │ CLASSIFY     │  │ ANALYSIS   │                                ║  │
+    │  ║  │           │  │              │  │            │                                ║  │
+    │  ║  │ Real Math │  │ Real Math    │  │ Real Math   │                                ║  │
+    │  ║  └──────────┘  └──────────────┘  └────────────┘                                ║  │
+    │  ║                                                                                  ║  │
+    │  ╚════════════════════════════════════════════════════════════════════════════════════╝  │
+    │                                                                                      │
+    │  ╔════════════════════════════════════════════════════════════════════════════════════╗  │
+    │  ║                 PREDICTION MODELS ← MATHEMATICAL ANALYSIS                       ║  │
+    │  ╠════════════════════════════════════════════════════════════════════════════════════╣  │
+    │  ║                                                                                  ║  │
+    │  ║  ┌────────────────────────┐  ┌──────────────────────┐                          ║  │
+    │  ║  │   Linear Regression    │  │   Neural Network     │                          ║  │
+    │  ║  │                        │  │                      │                          ║  │
+    │  ║  │ REVENUE PROJECTION    │  │ CREDIT RISK         │                          ║  │
+    │  ║  │ GROWTH FORECAST       │  │ PRICE MOVEMENT       │                          ║  │
+    │  ║  │                       │  │                      │                          ║  │
+    │  ║  │ Real Math Calculations │  │ Real Math Calculations│                          ║  │
+    │  ║  └────────────────────────┘  └──────────────────────┘                          ║  │
+    │  ║                                                                                  ║  │
+    │  ╚════════════════════════════════════════════════════════════════════════════════════╝  │
+    │                                                                                      │
+    │  ╔════════════════════════════════════════════════════════════════════════════════════╗  │
+    │  ║            DIMENSIONALITY REDUCTION ← MATHEMATICAL ANALYSIS                    ║  │
+    │  ╠════════════════════════════════════════════════════════════════════════════════════╣  │
+    │  ║                                                                                  ║  │
+    │  ║  ┌────────────────────────┐  ┌──────────────────────┐                          ║  │
+    │  ║  │           PCA           │  │  Feature Selection  │                          ║  │
+    │  ║  │                        │  │                      │                          ║  │
+    │  ║  │ PRINCIPAL COMPONENTS  │  │ CORRELATION MATRIX  │                          ║  │
+    │  ║  │ VARIANCE EXPLAINED      │  │ FEATURE IMPORTANCE  │                          ║  │
+    │  ║  │                        │  │                      │                          ║  │
+    │  ║  │ Real Math Calculations │  │ Real Math Calculations│                          ║  │
+    │  ║  └────────────────────────┘  └──────────────────────┘                          ║  │
+    │  ║                                                                                  ║  │
+    │  ╚════════════════════════════════════════════════════════════════════════════════════╝  │
+    │                                                                                      │
+    └─────────────────────────────────────────────────────────────────────────────────────┘
+                                        │
+                                        ▼
+
+════════════════════════════════════════════════════════════════════════════════════════════
+                                 N.A.T. CONTEXT LAYER (Natural Language)
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+    ┌─────────────────────────────────────────────────────────────────────────────────────┐
+    │                    N.A.T. PROVIDES CONTEXT, NOT ANALYSIS                           │
+    │                   (ML Algorithms Do The Mathematical Analysis)                       │
+    ├─────────────────────────────────────────────────────────────────────────────────────┤
+    │                                                                                      │
+    │     ┌─────────────────────────────┐     ┌─────────────────────────────┐             │
+    │     │       GENERAL CHAT        │     │      REALTIME CHAT         │             │
+    │     │   (Vector Store Context)  │     │   (Web Search Enabled)     │             │
+    │     │                          │     │                           │             │
+    │     │ • Company Overview       │     │ • Latest Financial News   │             │
+    │     │ • Industry Trends        │     │ • Quarterly Results       │             │
+    │     │ • Business Model         │     │ • Analyst Opinions        │             │
+    │     │ • Key Risks              │     │ • Market Sentiment        │             │
+    │     │                          │     │                           │             │
+    │     │  (Context only)         │     │  (Context only)          │             │
+    │     └──────────────┬───────────┘     └───────────────┬───────────┘             │
+    │                    │                                  │                           │
+    │                    └────────────┬─────────────────────┘                           │
+    │                                 │                                                 │
+    │                                 ▼                                                 │
+    │                    ┌─────────────────────────────┐                                 │
+    │                    │   SOURCE AGGREGATION       │                                 │
+    │                    │   (Context Only)           │                                 │
+    │                    └─────────────────────────────┘                                 │
+    │                                                                                      │
+    └─────────────────────────────────────────────────────────────────────────────────────┘
+
+    ┌─────────────────────────────────────────────────────────────────────────────────────┐
+    │                           CLASSIFICATION ALGORITHMS                                │
+    ├─────────────────────────────────────────────────────────────────────────────────────┤
+    │  ┌──────────┐  ┌──────────────┐  ┌────────────┐                                │
+    │  │   KNN    │  │  Decision    │  │  Naive     │                                │
+    │  │           │  │    Tree      │  │   Bayes    │                                │
+    │  │ Competitor│  │ Industry     │  │ Sentiment  │                                │
+    │  │ Similarity│  │ Classification│  │ Analysis   │                                │
+    │  └──────────┘  └──────────────┘  └────────────┘                                │
+    └─────────────────────────────────────────────────────────────────────────────────────┘
+
+    ┌─────────────────────────────────────────────────────────────────────────────────────┐
+    │                              PREDICTION MODELS                                    │
+    ├─────────────────────────────────────────────────────────────────────────────────────┤
+    │  ┌────────────────────────┐  ┌──────────────────────┐                          │
+    │  │   Linear Regression   │  │   Neural Network     │                          │
+    │  │                       │  │                      │                          │
+    │  │ Revenue Projection   │  │ Credit Risk          │                          │
+    │  │ Growth Forecast      │  │ Price Movement       │                          │
+    │  └────────────────────────┘  └──────────────────────┘                          │
+    └─────────────────────────────────────────────────────────────────────────────────────┘
+
+    ┌─────────────────────────────────────────────────────────────────────────────────────┐
+    │                         DIMENSIONALITY REDUCTION                                    │
+    ├─────────────────────────────────────────────────────────────────────────────────────┤
+    │  ┌────────────────────────┐  ┌──────────────────────┐                          │
+    │  │           PCA           │  │ Feature Selection    │                          │
+    │  │                        │  │                      │                          │
+    │  │ Principal Components  │  │ Correlation Matrix   │                          │
+    │  │ Variance Explained     │  │ Variance Importance │                          │
+    │  └────────────────────────┘  └──────────────────────┘                          │
+    └─────────────────────────────────────────────────────────────────────────────────────┘
+                                        │
+                                        ▼
+
+════════════════════════════════════════════════════════════════════════════════════════════
+                                 N.A.T. FINAL ANALYSIS LAYER
+════════════════════════════════════════════════════════════════════════════════════════════
+
+    ┌─────────────────────────────────────────────────────────────────────────────────────┐
+    │                        DUAL CHANNEL N.A.T. PROCESSING                               │
+    ├─────────────────────────────────────────────────────────────────────────────────────┤
+    │                                                                                      │
+    │     ┌─────────────────────────────┐     ┌─────────────────────────────┐             │
+    │     │       GENERAL CHAT        │     │      REALTIME CHAT         │             │
+    │     │   (Vector Store Context)  │     │   (Web Search Enabled)     │             │
+    │     │                          │     │                           │             │
+    │     │ • Company Overview       │     │ • Latest Financial News   │             │
+    │     │ • Industry Trends        │     │ • Quarterly Results       │             │
+    │     │ • Business Model         │     │ • Analyst Opinions        │             │
+    │     │ • Key Risks              │     │ • Market Sentiment        │             │
+    │     └──────────────┬───────────┘     └───────────────┬───────────┘             │
+    │                    │                                  │                           │
+    │                    └────────────┬─────────────────────┘                           │
+    │                                 │                                                 │
+    │                                 ▼                                                 │
+    │                    ┌─────────────────────────────┐                                 │
+    │                    │   SOURCE AGGREGATION       │                                 │
+    │                    │   (Deduplicated)           │                                 │
+    │                    └─────────────────────────────┘                                 │
+    │                                                                                      │
+    └─────────────────────────────────────────────────────────────────────────────────────┘
+                                        │
+                                        ▼
+
+════════════════════════════════════════════════════════════════════════════════════════════
+                                       OUTPUT LAYER
+════════════════════════════════════════════════════════════════════════════════════════════
+
+    {
+      "company": "Tata Motors",
+      "ticker": "TATAMOTORS.NS",
+      "region": "India",
+      
+      "merged": {
+        "perMetric": {
+          "marketCap": { "value": 500000000000, "confidence": 95, "sources": ["FMP","Yahoo"] },
+          "peRatio": { "value": 18.5, "confidence": 90, "sources": ["Alpha","FMP"] },
+          "revenue": { "value": 320000000000, "confidence": 88, "sources": ["Yahoo","N.A.T."] },
+          "ebitda": { "value": 48000000000, "confidence": 85, "sources": ["FMP"] },
+          "ebitdaMargin": { "value": 15.0, "confidence": 80, "sources": ["computed"] }
+        },
+        "provenance": [...]
+      },
+      
+      "competitors": [
+        { "symbol": "MARUTI", "name": "Maruti Suzuki", "similarity": 0.85 },
+        { "symbol": "HM", "name": "Hyundai Motor", "similarity": 0.72 }
+      ],
+      
+      "mlInsights": {
+        "revenueProjections": [...],
+        "companySegmentation": [...],
+        "anomalyDetection": { "outlierCount": 1 },
+        "creditRisk": { "risk": "LOW", "probability": 0.25 },
+        "natIntelligence": {
+          "generalInsight": "...",
+          "realtimeInsight": "...",
+          "sources": [...]
+        }
+      },
+      
+      "analysis": { "text": "..." },
+      "timestamp": "2026-02-21T21:00:00.000Z"
+    }
+
+
+════════════════════════════════════════════════════════════════════════════════════════════
+                                    VERSION INFO
+════════════════════════════════════════════════════════════════════════════════════════════
+
+    Version: 8.3 (NAT Parallel Integration)
+    Date: February 21, 2026 21:00 IST
+    Total ML Algorithms: 12+
+    Data Sources: 6 APIs + Python Services + N.A.T. (Parallel)
+    Supported Companies: 995+
+    Supported Industries: 29 + Quick Commerce
+
+    KEY FEATURES:
+    ✓ All data sources fetch in PARALLEL
+    ✓ N.A.T. extracts structured financial data
+    ✓ Weighted merge with confidence scoring
+    ✓ Complete ML pipeline (Clustering, Classification, Prediction, PCA)
+    ✓ N.A.T. provides both initial data and final analysis
+
+════════════════════════════════════════════════════════════════════════════════════════════
+```
+---
+
+## 15. Search Queries - APIs & N.A.T
+
+### 15.1 Overview
+
+The orchestrator uses two types of search queries:
+1. **Direct API Queries** - Hardcoded search strings for SERP/Google CSE
+2. **N.A.T. Natural Language Queries** - AI-powered queries for context and structured data extraction
+
+### 15.2 SERP / Google CSE Search Queries
+
+**Location:** `lib/orchestrator-v2.ts` (Lines 734-743)
+
+```typescript
+const queries = [
+  `${company} P/E ratio`,
+  `${company} market cap`,
+  `${company} EBITDA`,
+  `${company} revenue`,
+  `${company} EBITDA margin`,
+  `${company} revenue growth`,
+  `${company} "investor presentation"`,
+  `${company} annual report pdf`
+];
+```
+
+**Purpose:** Each query targets a specific metric to extract from SERP results and scraped pages.
+
+**Processing Flow:**
+```
+Query → Google CSE / SERP API → Organic Results → Link Extraction → Page Scraping → Regex Parsing
+```
+
+**Scraped Metrics:**
+| Regex Pattern | Metric Extracted |
+|---------------|------------------|
+| `/P\/?E(?:\s*ratio)?[:\s]*([\d\.,]+)/i` | P/E Ratio |
+| `/market\s*cap[:\s]*([\d\.,\s\w]+)/i` | Market Cap |
+| `/revenue[:\s]*([\d\.,\s\w]+)/i` | Revenue |
+| `/ebitda[:\s]*([\d\.,\s\w]+)/i` | EBITDA |
+| `/ebitda\s*margin[:\s]*([\d\.,]+%?)/i` | EBITDA Margin |
+
+**Currency Parsing:**
+- Supports: K (thousand), M (million), B (billion), crore, lakh
+- Example: "5.2B" → 5,200,000,000
+
+### 15.3 N.A.T. Search Queries
+
+**Location:** `lib/orchestrator-v2.ts` (Lines 154-165, 203-231)
+
+#### 15.3.1 Initial Search Query (Parallel with APIs)
+
+```typescript
+const initialQuery = `Search and provide STRUCTURED financial data for ${company}: 
+  - Current Market Cap (in billions USD)
+  - P/E Ratio
+  - Revenue (in billions USD)
+  - EBITDA (in billions USD)
+  - EBITDA Margin (%)
+  - Revenue Growth (%)
+  - Industry/Sector
+  - Key competitors
+  Format as clean structured data.`;
+```
+
+**Purpose:** Extract structured numerical data from N.A.T.'s natural language response using regex parsing.
+
+**Extracted Fields:**
+| Regex Pattern | Field | Multiplier |
+|---------------|-------|------------|
+| `/market\s*cap[:\s]*\$?([\d.,]+)/i` | marketCap | 1e9 |
+| `/p\/?e\s*ratio[:\s]*([\d.,]+)/i` | peRatio | 1 |
+| `/revenue[:\s]*\$?([\d.,]+)/i` | revenue | 1e9 |
+| `/ebitda[:\s]*\$?([\d.,]+)/i` | ebitda | 1e9 |
+| `/ebitda\s*margin[:\s]*([\d.,]+)/i` | ebitdaMargin | 1 |
+| `/revenue\s*growth[:\s]*([\d.,]+)/i` | revenueGrowth | 0.01 |
+
+#### 15.3.2 General Insight Query
+
+```typescript
+const generalQuery = `Provide detailed business intelligence about ${company}. Include: 
+  1) Company overview 
+  2) Recent news 
+  3) Industry trends 
+  4) Key competitors 
+  5) Investment outlook`;
+```
+
+**Purpose:** Get contextual business intelligence from vector store (historical data).
+
+#### 15.3.3 Realtime Insight Query
+
+```typescript
+const realtimeQuery = `Latest financial performance, quarterly results, and market sentiment 
+  for ${company}. Include recent news and analyst opinions.`;
+```
+
+**Purpose:** Get latest real-time data via web search integration.
+
+### 15.4 Query Execution Flow
+
+```
+                    ┌─────────────────────────────────────┐
+                    │         USER REQUEST                 │
+                    │     "Analyze Apple Inc."             │
+                    └─────────────────┬───────────────────┘
+                                      │
+                    ┌─────────────────▼───────────────────┐
+                    │     1. TICKER DISCOVERY              │
+                    │     (Yahoo Finance Search API)        │
+                    └─────────────────┬───────────────────┘
+                                      │
+           ┌──────────────────────────┼──────────────────────────┐
+           │                          │                          │
+           ▼                          ▼                          ▼
+┌─────────────────────┐─────┐   ┌──────────────── ┌─────────────────────┐
+│  STRUCTURED APIs   │  │    N.A.T. AI        │  │   PYTHON BOTS       │
+│  (Parallel Fetch)   │  │  (Parallel Fetch)   │  │  (Parallel Fetch)   │
+├─────────────────────┤  ├─────────────────────┤  ├─────────────────────┤
+│ • FMP              │  │ • Initial Search    │  │ • run_crawler.py    │
+│ • Alpha Vantage   │  │ • General Insight   │  │ • run_netbot.py     │
+│ • Yahoo Finance   │  │ • Realtime Insight  │  │                     │
+└─────────┬─────────┘  └──────────┬──────────┘  └──────────┬──────────┘
+          │                       │                         │
+          └───────────────────────┼─────────────────────────┘
+                                  │
+                                  ▼
+                    ┌─────────────────────────────────────┐
+                    │     2. SERP SEARCH QUERIES           │
+                    │     (8 hardcoded queries)            │
+                    └─────────────────┬───────────────────┘
+                                      │
+                                      ▼
+                    ┌─────────────────────────────────────┐
+                    │     3. PAGE SCRAPING                │
+                    │     (Up to 40 URLs)                 │
+                    └─────────────────┬───────────────────┘
+                                      │
+                                      ▼
+                    ┌─────────────────────────────────────┐
+                    │     4. DATA MERGING                 │
+                    │     (Weighted median)               │
+                    └─────────────────────────────────────┘
+```
+
+---
+
+## 16. Data Rectifier Module
+
+### 16.1 Overview
+
+**CRITICAL GAP IDENTIFIED:** The current system lacks a dedicated data rectifier module. Only basic confidence scoring exists in `lib/logic/data-quality.ts`.
+
+### 16.2 Current Data Quality Scoring (Basic)
+
+**Location:** `lib/logic/data-quality.ts`
+
+```typescript
+export interface DataPoint {
+    value: any;
+    source: string;
+    timestamp: string;
+    reliability: number; // 0-100 based on source type
+}
+
+export function calculateConfidenceScore(points: DataPoint[]) {
+    // 1. Source Reliability (Max 40)
+    const avgReliability = points.reduce((acc, p) => acc + p.reliability, 0) / points.length;
+    score += (avgReliability / 100) * 40;
+
+    // 2. Data Freshness (Max 30)
+    // If < 1 day: +30, < 7 days: +20, < 30 days: +10, else: +5
+
+    // 3. Cross-Ref Variance (Max 20)
+    // If variance < 5%: +20, < 15%: +10, else: 0
+
+    // 4. Source Diversity (Bonus 10)
+    // 3+ sources: +10, 2 sources: +5
+}
+```
+
+### 16.3 Missing Data Rectifier Features
+
+The following features are **MISSING** and need to be implemented:
+
+| Feature | Description | Priority |
+|---------|-------------|----------|
+| **Range Validation** | Validate P/E 0-5000, marketCap > 0, margins -100% to 100% | HIGH |
+| **Outlier Removal** | IQR-based or Z-score outlier detection before ML | HIGH |
+| **Source Filtering** | Reject sources with < 30% historical accuracy | HIGH |
+| **Contradiction Detection** | Flag values that contradict across sources (>50% variance) | MEDIUM |
+| **Currency Normalization** | Convert all currencies to base USD | MEDIUM |
+| **Date Normalization** | Standardize all dates to ISO format | LOW |
+| **Format Standardization** | Normalize number formats (1,000,000 vs 1000000) | LOW |
+
+### 16.4 Recommended Data Rectifier Implementation
+
+```typescript
+// lib/validators/data-rectifier.ts
+
+export interface RectifiedData {
+    originalValue: number;
+    rectifiedValue: number;
+    isValid: boolean;
+    issues: string[];
+    confidence: number;
+}
+
+export class DataRectifier {
+    private validationRules: Record<string, { min: number; max: number }> = {
+        marketCap: { min: 0, max: 1e15 },
+        peRatio: { min: -500, max: 5000 },
+        ebitdaMargin: { min: -100, max: 100 },
+        revenueGrowth: { min: -1, max: 10 },  // -100% to 1000%
+        profitMargin: { min: -100, max: 100 },
+        roe: { min: -100, max: 100 },
+        debtEquity: { min: 0, max: 100 }
+    };
+
+    // IQR-based outlier detection
+    removeOutliers(values: number[]): number[] {
+        if (values.length < 4) return values;
+        
+        const sorted = [...values].sort((a, b) => a - b);
+        const q1 = sorted[Math.floor(sorted.length / 4)];
+        const q3 = sorted[Math.floor(sorted.length * 3 / 4)];
+        const iqr = q3 - q1;
+        const lower = q1 - 1.5 * iqr;
+        const upper = q3 + 1.5 * iqr;
+        
+        return values.filter(v => v >= lower && v <= upper);
+    }
+
+    // Z-score outlier detection
+    removeOutliersZScore(values: number[], threshold = 3): number[] {
+        const mean = values.reduce((a, b) => a + b, 0) / values.length;
+        const std = Math.sqrt(values.reduce((sq, n) => sq + Math.pow(n - mean, 2), 0) / values.length);
+        
+        if (std === 0) return values;
+        
+        return values.filter(v => Math.abs((v - mean) / std) <= threshold);
+    }
+
+    // Validate against business rules
+    validateRange(value: number, metric: string): { valid: boolean; issues: string[] } {
+        const rule = this.validationRules[metric];
+        if (!rule) return { valid: true, issues: [] };
+
+        const issues: string[] = [];
+        if (value < rule.min) issues.push(`Value ${value} below minimum ${rule.min}`);
+        if (value > rule.max) issues.push(`Value ${value} above maximum ${rule.max}`);
+
+        return { valid: issues.length === 0, issues };
+    }
+
+    // Check for contradictory values between sources
+    detectContradictions(values: { source: string; value: number }[]): boolean {
+        if (values.length < 2) return false;
+        
+        const numericValues = values.map(v => v.value).filter(v => !isNaN(v));
+        if (numericValues.length < 2) return false;
+
+        const min = Math.min(...numericValues);
+        const max = Math.max(...numericValues);
+        const variance = (max - min) / (max || 1);
+
+        return variance > 0.5; // > 50% variance = contradiction
+    }
+
+    // Main rectification method
+    rectify(metric: string, values: { source: string; value: number; timestamp: string }[]): RectifiedData[] {
+        return values.map(v => {
+            const issues: string[] = [];
+            
+            // 1. Range validation
+            const rangeCheck = this.validateRange(v.value, metric);
+            issues.push(...rangeCheck.issues);
+
+            // 2. Calculate confidence penalty
+            let confidence = 100;
+            if (issues.length > 0) confidence -= issues.length * 20;
+
+            return {
+                originalValue: v.value,
+                rectifiedValue: v.value,
+                isValid: rangeCheck.valid,
+                issues,
+                confidence: Math.max(0, confidence)
+            };
+        });
+    }
+}
+```
+
+### 16.5 Integration Point
+
+The Data Rectifier should be integrated **BEFORE** ML analysis:
+
+```
+Raw Data Sources
+       │
+       ▼
+┌──────────────────┐
+│  Data Merging   │  ← Current: weighted median only
+└────────┬────────┘
+         │
+         ▼
+┌──────────────────┐     ◄── NEW: Insert DataRectifier here
+│  Data Rectifier │
+│  - Range Check  │
+│  - Outlier Rem. │
+│  - Contradict.  │
+└────────┬────────┘
+         │
+         ▼
+┌──────────────────┐
+│   ML Analysis   │  ← KNN, Linear Regression, etc.
+└──────────────────┘
+```
+
+---
+
+## 17. Complete System Architecture Diagram
+
+### 17.1 End-to-End Data Flow
+
+```
++=========================================================================+
+|                         EBITA INTELLIGENCE PLATFORM                      |
+|                          COMPLETE SYSTEM ARCHITECTURE                   |
++=========================================================================+
+
+                                    +-----------------------------------------+
+                                    |           CLIENT REQUEST                |
+                                    |    { company: "Tata Motors",          |
+                                    |      region: "India" }                |
+                                    +------------------+--------------------+
+                                                       |
+                                                       v
+                                    +-----------------------------------------+
+                                    |      API ROUTE (Next.js)               |
+                                    |    app/api/analyze/route.ts           |
+                                    |    - Request Validation               |
+                                    |    - Rate Limiting                    |
+                                    |    - Response Caching                  |
+                                    +------------------+--------------------+
+                                                       |
+                                                       v
+                                    +-----------------------------------------+
+                                    |    ORCHESTRATOR V2 (lib/orchestrator) |
+                                    |    Version: 8.3.1                      |
+                                    +------------------+--------------------+
+                                                       |
+            +------------------------------------------+------------------------------------------+
+            |                                         |                                         |
+            v                                         v                                         v
++---------------------------+      +---------------------------+      +---------------------------+
+|   STRUCTURED APIs        |      |   N.A.T. AI ASSISTANT    |      |   PYTHON SERVICES         |
+|   (PARALLEL FETCH)       |      |   (PARALLEL FETCH)      |      |   (PARALLEL FETCH)        |
++---------------------------+      +---------------------------+      +---------------------------+
+|                           |      |                           |      |                           |
+|  +-----------+           |      |  +--------------------+    |      |  +--------------+         |
+|  |    FMP     |           |      |  |  Initial Search   |    |      |  | run_crawler   |         |
+|  | Financial  |           |      |  |  (Structured Data)|    |      |  |    .py       |         |
+|  | Modeling   |           |      |  +---------+---------+    |      |  |               |         |
+|  |   Prep     |           |      |            |               |      |  | Real-time     |         |
+|  |            |           |      |  +---------v---------+    |      |  | financial     |         |
+|  | API Key    |           |      |  |  General Insight  |    |      |  | data fetch    |         |
+|  | Weight:120 |           |      |  |  (Vector Store)  |    |      |  +-------+------+         |
+|  +------+------+           |      |  +---------+---------+    |      |          |               |
+|         |                   |      |            |               |      |  +-------v------+         |
+|  +------v------+           |      |  +---------v---------+    |      |  | run_netbot   |         |
+|  |   Alpha    |           |      |  |  Realtime Insight |    |      |  |    .py       |         |
+|  |  Vantage   |           |      |  |  (Web Search)    |    |      |  |               |         |
+|  |            |           |      |  +---------+---------+    |      |  | Analysis &   |         |
+|  | API Key    |           |      |            |               |      |  | insights     |         |
+|  | Weight:120 |           |      |  +---------v---------+    |      |  +-------+------+         |
+|  +------+------+           |      |  |  Regex Extraction |    |      |          |               |
+|         |                   |      |  |  (marketCap,    |    |      |  +-------v------+         |
+|  +------v------+           |      |  |   peRatio, etc.)|    |      |  |  Python      |         |
+|  |    Yahoo   |           |      |  +---------+---------+    |      |  |  FastAPI     |         |
+|  |  Finance   |           |      |            |               |      |  |  Service     |         |
+|  |            |           |      |  +---------v---------+    |      |  |  (port 8000) |         |
+|  |   Free     |           |      |  |  Source Aggregation|   |      |  +--------------+         |
+|  | Weight:80  |           |      |  +--------------------+    |      |                           |
+|  +-----------+           |      |                           |      |                           |
+|                           |      |  Weight: 80               |      |  Weight: 40               |
++------+--------------------+      +-------------+--------------+      +------------+------------+
+         |                                         |                                        |
+         +-----------------------------------------+----------------------------------------+
+                                                   |
+                                                   v
+                                    +-----------------------------------------+
+                                    |   SERP / GOOGLE CSE QUERIES             |
+                                    |   (8 Hardcoded Queries)                 |
+                                    +-----------------------------------------+
+                                    |  * "${company} P/E ratio"              |
+                                    |  * "${company} market cap"              |
+                                    |  * "${company} EBITDA"                  |
+                                    |  * "${company} revenue"                 |
+                                    |  * "${company} EBITDA margin"           |
+                                    |  * "${company} revenue growth"          |
+                                    |  * "${company} investor presentation"  |
+                                    |  * "${company} annual report pdf"      |
+                                    +------------------+------------------------+
+                                                       |
+                                                       v
+                                    +-----------------------------------------+
+                                    |   PAGE SCRAPING (Cheerio)               |
+                                    |   Up to 40 URLs                         |
+                                    |   Concurrency: 6                        |
+                                    +------------------+------------------------+
+                                                       |
+                                                       v
+                                    +-----------------------------------------+
+                                    |   DATA MERGING & SCORING               |
+                                    |   Weighted Median Calculation          |
+                                    +-----------------------------------------+
+                                    |                                         |
+                                    |  Source Weights:                        |
+                                    |  +------------+----------+              |
+                                    |  | FMP        |  120     |              |
+                                    |  | Alpha      |  120     |              |
+                                    |  | Yahoo      |   80     |              |
+                                    |  | N.A.T.     |   80     |              |
+                                    |  | Crawler    |   40     |              |
+                                    |  | SERP/Scrape|   40    |              |
+                                    |  +------------+----------+              |
+                                    |                                         |
+                                    +------------------+------------------------+
+                                                       |
+                                                       v
+                                    +-----------------------------------------+
+                                    |   DERIVED METRICS COMPUTATION          |
+                                    |   EBITDA Margin = EBITDA / Revenue     |
+                                    +------------------+------------------------+
+                                                       |
+                                                       v
+                                    +-----------------------------------------+
+                                    |   DATA RECTIFIER (MISSING)             |
+                                    |   - Range Validation                   |
+                                    |   - Outlier Removal (IQR/Z-score)      |
+                                    |   - Contradiction Detection           |
+                                    |   - Source Reliability Filter         |
+                                    +------------------+------------------------+
+                                                       |
+                                                       v
+    +------------------------------------------+------------------------------------------+
+    |                                          |                                          |
+    v                                          v                                          v
++---------------------------+      +---------------------------+      +---------------------------+
+|    MACHINE LEARNING        |      |    COMPETITOR ANALYSIS   |      |    ANALYSIS GENERATION    |
+|    ANALYTICS               |      |                           |      |                           |
++---------------------------+      |  * Yahoo Recommendations  |      |  * run_netbot()           |
+|                           |      |  * KNN Similarity        |      |  * AI Guardrails          |
+| +-------------------------+|      |  * Sector Mapping        |      |  * Response Formatting    |
+| | KNN (K-Nearest)         ||      +-----------+-------------+      +------------+--------------+
+| | Competitor Similarity   ||                  |                              |
+| | Input: revenue, mCap,  ||                  v                              v
+| |        ebitdaMargin,   ||    +-----------------------------------------------------+
+| |        peRatio, roe    ||    |                    OUTPUT                          |
+| +-------------------------+|    |  +-----------------------------------------------+    |
+|                           |    |  | company: "Tata Motors"                       |    |
+| +-------------------------+|    |  | ticker: "TATAMOTORS.NS"                      |    |
+| | Linear Regression      ||    |  | merged: { perMetric: {...}, provenance: [] }|    |
+| | Revenue Projection     ||    |  | competitors: [{ symbol, similarity }]      |    |
+| | 3-year forecast        ||    |  | mlInsights: { revenueProjections,          |    |
+| +-------------------------+|    |  |               companySegmentation,          |    |
+|                           |    |  |               anomalyDetection, ... }      |    |
+| +-------------------------+|    |  | natIntelligence: { generalInsight,         |    |
+| | Decision Tree          ||    |  |                    realtimeInsight, ... } |    |
+| | Industry Classification||    |  | analysis: { text: "..." }                 |    |
+| +-------------------------+|    |  | timestamp: "2026-02-21T..."               |    |
+|                           |    |  +-----------------------------------------------+    |
+| +-------------------------+|    +-----------------------------------------------------+
+| | K-Means Clustering     ||    
+| | Company Segmentation   ||    +-----------------------------------------------------+
+| +-------------------------+|    |                   DATABASE STORAGE                   |
+|                           |    |                                                     |
+| +-------------------------+|    |  +---------------+ +---------------+                 |
+| | Hierarchical Clustering||    |  | Supabase/     | | Cache Layer   |                 |
+| | Industry Groupings     ||    |  | PostgreSQL    | | (File-based)  |                 |
+| +-------------------------+|    |  +-------+-------+ +-------+-------+                 |
+|                           |    |          |               |                            |
+| +-------------------------+|    |          v               v                            |
+| | Mean Shift             ||    |  +-------------------------------------+              |
+| | Auto-clustering        ||    |  |  * entity_intelligence              |              |
+| +-------------------------+|    |  |  * consensus_metrics                |              |
+|                           |    |  |  * analysis_results                 |              |
+| +-------------------------+|    |  |  * intelligence_cache               |              |
+| | DBSCAN                 ||    |  |  * api_fetch_log                    |              |
+| | Anomaly Detection      ||    |  |  * data_deltas                      |              |
+| +-------------------------+|    |  |  * sector_hierarchy                 |              |
+|                           |    |  |  * unknown_entities                 |              |
+| +-------------------------+|    |  +-------------------------------------+              |
+| | Naive Bayes            ||    |                                                     |
+| | Sentiment Analysis     ||    +-----------------------------------------------------+
+| +-------------------------+|    
+|                           |      
+| +-------------------------+|      
+| | Neural Network         ||      
+| | Credit Risk Prediction ||      
+| +-------------------------+|      
+|                           |      
+| +-------------------------+|      
+| | PCA                    ||      
+| | Dimensionality Reduct. ||      
+| +-------------------------+|      
+|                           |      
+| +-------------------------+|      
+| | Feature Selection      ||      
+| | Feature Extraction    ||      
+| +-------------------------+|      
++------+---------------------+      
+       |
+       v
+```
+
+### 17.2 Source Weight Summary
+
+| Source | Weight | Type | Reliability |
+|--------|--------|------|-------------|
+| **FMP** | 120 | Structured API | High |
+| **Alpha Vantage** | 120 | Structured API | High |
+| **Yahoo Finance** | 80 | Structured API | Medium |
+| **N.A.T.** | 80 | AI Extracted | Medium |
+| **Python Crawler** | 40 | Web Scraping | Low |
+| **SERP/Google CSE** | 40 | Web Scraping | Low |
+
+---
+
+## 18. Database Details
+
+### 18.1 Database Connection
+
+**Location:** `lib/db.ts`
+
+```typescript
+import { createClient } from '@supabase/supabase-js';
+
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
+
+export const supabase = createClient(supabaseUrl, supabaseKey);
+```
+
+### 18.2 Database Schema (PostgreSQL/Supabase)
+
+The system uses 9 interconnected tables:
+
+| Table | Purpose | Key Fields |
+|-------|---------|------------|
+| `entity_intelligence` | Master company data | canonical_name, ticker_nse/bse, sector, industry |
+| `consensus_metrics` | Validated financial data | marketCap, revenue, ebitda, confidence_score |
+| `analysis_results` | AI analysis outputs | executive_summary, hallucination_detected |
+| `intelligence_cache` | Multi-layer caching | cache_key, cache_layer, expires_at |
+| `api_fetch_log` | API usage tracking | endpoint, response_time_ms, success |
+| `data_deltas` | Change tracking | metric_name, change_percent, is_significant |
+| `sector_hierarchy` | Industry taxonomy | sector, industry, typical_pe_range |
+| `unknown_entities` | Unresolved queries | original_query, status, enrichment_data |
+| `entity_discovery_queue` | Background jobs | entity_id, status, retry_count |
+
+### 18.3 Complete SQL Schema
+
+```sql
+-- Entity Intelligence (Master Company Table)
+CREATE TABLE public.entity_intelligence (
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  canonical_name character varying NOT NULL,
+  normalized_name text NOT NULL,
+  entity_type character varying DEFAULT 'company',
+  ticker_nse character varying,
+  ticker_bse character varying,
+  ticker_global character varying,
+  sector character varying,
+  industry character varying,
+  sub_industry character varying,
+  niche character varying,
+  country character varying DEFAULT 'India',
+  region character varying DEFAULT 'INDIA',
+  is_listed boolean DEFAULT true,
+  is_verified boolean DEFAULT false,
+  brands jsonb DEFAULT '[]',
+  competitors jsonb DEFAULT '[]',
+  created_at timestamp DEFAULT now(),
+  updated_at timestamp DEFAULT now()
+);
+
+-- Consensus Metrics (Validated Financial Data)
+CREATE TABLE public.consensus_metrics (
+  id uuid DEFAULT gen_random_uuid(),
+  entity_id uuid NOT NULL,
+  entity_name character varying NOT NULL,
+  market_cap bigint,
+  revenue bigint,
+  ebitda bigint,
+  ebitda_margin numeric,
+  pe_ratio numeric,
+  revenue_growth numeric,
+  confidence_score integer DEFAULT 0,
+  sources_used jsonb DEFAULT '[]',
+  variance_flags jsonb DEFAULT '[]',
+  fetched_at timestamp DEFAULT now(),
+  expires_at timestamp NOT NULL
+);
+
+-- Analysis Results (AI Outputs)
+CREATE TABLE public.analysis_results (
+  id uuid DEFAULT gen_random_uuid(),
+  entity_id uuid,
+  entity_name character varying NOT NULL,
+  analysis_type character varying NOT NULL,
+  executive_summary text,
+  key_findings jsonb DEFAULT '[]',
+  hallucination_detected boolean DEFAULT false,
+  validation_passed boolean DEFAULT true,
+  created_at timestamp DEFAULT now()
+);
+
+-- Intelligence Cache
+CREATE TABLE public.intelligence_cache (
+  id uuid DEFAULT uuid_generate_v4(),
+  cache_key text NOT NULL UNIQUE,
+  cache_layer character varying DEFAULT 'consensus',
+  cache_data jsonb NOT NULL,
+  expires_at timestamp NOT NULL,
+  hit_count integer DEFAULT 0,
+  created_at timestamp DEFAULT now()
+);
+
+-- API Fetch Log
+CREATE TABLE public.api_fetch_log (
+  id uuid DEFAULT gen_random_uuid(),
+  entity_name character varying,
+  source_name character varying NOT NULL,
+  endpoint_called text,
+  response_time_ms integer,
+  success boolean DEFAULT true,
+  error_message text,
+  fetched_at timestamp DEFAULT now()
+);
+
+-- Data Deltas (Change Tracking)
+CREATE TABLE public.data_deltas (
+  id uuid DEFAULT gen_random_uuid(),
+  entity_id uuid NOT NULL,
+  metric_name character varying NOT NULL,
+  previous_value numeric,
+  new_value numeric,
+  change_percent numeric,
+  is_significant boolean DEFAULT false,
+  detected_at timestamp DEFAULT now()
+);
+
+-- Sector Hierarchy
+CREATE TABLE public.sector_hierarchy (
+  id uuid DEFAULT gen_random_uuid(),
+  sector character varying NOT NULL,
+  industry character varying NOT NULL,
+  sub_industry character varying,
+  typical_pe_range character varying,
+  typical_ebitda_margin character varying
+);
+
+-- Unknown Entities
+CREATE TABLE public.unknown_entities (
+  id uuid DEFAULT gen_random_uuid(),
+  original_query text NOT NULL,
+  normalized_name text NOT NULL UNIQUE,
+  partial_industry character varying,
+  status character varying DEFAULT 'pending',
+  enrichment_data jsonb,
+  discovered_at timestamp DEFAULT now()
+);
+
+-- Entity Discovery Queue
+CREATE TABLE public.entity_discovery_queue (
+  id uuid DEFAULT gen_random_uuid(),
+  entity_id uuid NOT NULL,
+  status character varying DEFAULT 'queued',
+  priority integer DEFAULT 0,
+  queued_at timestamp DEFAULT now(),
+  retry_count integer DEFAULT 0
+);
+```
+
+### 18.4 Data Flow to Database
+
+```
++---------------------------------------------------------------+
+|                   DATA STORAGE FLOW                           |
++---------------------------------------------------------------+
+
+     Raw Data              Consensus              Analysis
+        |                     |                       |
+        v                     v                       v
++---------------+     +---------------+     +---------------+
+|  API Fetch    |     |  Weighted     |     |  AI Guard-    |
+|  Log          |     |  Merge        |     |  rails        |
+|               |     |               |     |               |
+| * endpoint    |     | * sources     |     | * hallucina-  |
+| * timestamp   |     | * confidence  |     |   tion check  |
+| * response    |     | * median      |     | * validation  |
++-------+-------+     +-------+-------+     +-------+-------+
+        |                     |                       |
+        |                     v                       |
+        |              +---------------+             |
+        |              |  Consensus    |             |
+        |              |  Metrics      |             |
+        |              |               |             |
+        |              | * marketCap   |             |
+        |              | * revenue     |             |
+        |              | * ebitda      |             |
+        |              | * confidence  |             |
+        |              +-------+-------+             |
+        |                      |                      |
+        |                      v                      |
+        |              +---------------+             |
+        |              |  Entity        |             |
+        |              |  Intelligence  |<------------+
+        |              |               |
+        |              | * name        |
+        |              | * industry    |
+        |              | * competitors |
+        |              +-------+-------+
+        |                      |
+        |                      v
+        |              +---------------+
+        +------------->|  Intelligence |
+                       |  Cache        |
+                       |               |
+                       | * raw         |
+                       | * consensus   |
+                       | * enriched    |
+                       | * analyzed    |
+                       +---------------+
+```
+
+### 18.5 Query Performance
+
+| Query Type | Typical Latency | Optimization |
+|------------|-----------------|--------------|
+| Entity Lookup | 50-100ms | indexed columns |
+| Metrics Fetch | 100-200ms | expires_at index |
+| Analysis Store | 200-500ms | batch inserts |
+| Cache Hit | 10-20ms | in-memory layer |
+
+---
+
+## 19. Version History
+
+| Version | Date | Changes |
+|---------|------|---------|
+| 9.1 | Feb 21, 2026 | Added: Multi-Currency Support (INR, USD, EUR, GBP, JPY, etc.), Global Comparison Engine |
+| 9.0 | Feb 21, 2026 | CRITICAL UPGRADE: Pre-ML Data Filtration, Smart Query Builder, Input Normalizer, Multi-Sector Resolver |
+| 8.4 | Feb 21, 2026 | Added: N.A.T. competitor data fetching for reliable ML analysis (KNN, K-Means, DBSCAN) |
+| 8.3.1 | Feb 21, 2026 | Added: Search Queries (15), Data Rectifier (16), System Architecture (17), Database Details (18) |
+| 8.3 | Feb 21, 2026 | N.A.T. parallel integration, 12+ ML algorithms |
+| 8.2 | Feb 20, 2026 | Python bots integration |
+| 8.1 | Feb 19, 2026 | Multi-source orchestrator v2 |
+| 8.0 | Feb 18, 2026 | Complete rewrite with ML |
+
+---
+
+## 20. VERSION 9.0 - COMPLETE LAYER-BASED ARCHITECTURE
+
+### 20.1 Architecture Overview
+
+The EBITA Intelligence Platform Version 9.0 implements a complete layer-based architecture with 8 distinct layers:
+
+```
++=========================================================================+
+|                    EBITA INTELLIGENCE PLATFORM v9.0                      |
+|                    COMPLETE LAYER-BASED ARCHITECTURE                   |
++=========================================================================+
+
+┌───────────────────────────────────────────────────────────────────────┐
+│ LAYER 1: INPUT PROCESSING                                              │
+├───────────────────────────────────────────────────────────────────────┤
+│                                                                       │
+│  ┌─────────────────────┐  ┌─────────────────────┐  ┌─────────────┐  │
+│  │  Raw User Query     │→ │ SmartInputNormalizer│→ │  Normalized │  │
+│  │  "Relianse Industries│  │                     │  │  Input      │  │
+│  │  or "Tata Motrs"    │  │ • Phonetic Match    │  │             │  │
+│  │                     │  │ • Context Disambig  │  │ • Company   │  │
+│  │                     │  │ • Abbreviation Exp  │  │ • Industry  │  │
+│  │                     │  │ • Multi-word Corr  │  │ • Context   │  │
+│  └─────────────────────┘  └─────────────────────┘  └─────────────┘  │
+│                                                                       │
+│  FILES:                                                               │
+│  • lib/resolution/smart-normalizer.ts (NEW v9.0)                    │
+│                                                                       │
+└───────────────────────────────────────────────────────────────────────┘
+                                    │
+                                    ▼
+┌───────────────────────────────────────────────────────────────────────┐
+│ LAYER 2: ENTITY RESOLUTION                                            │
+├───────────────────────────────────────────────────────────────────────┤
+│                                                                       │
+│  ┌─────────────────────┐  ┌─────────────────────┐                   │
+│  │  Normalized Input   │→ │ MultiSectorResolver │                   │
+│  │                     │  │                     │                   │
+│  │ • Company Name      │  │ • Conglomerate Check│                   │
+│  │ • Industry Context  │  │ • Sector Breakdown  │                   │
+│  │ • Region           │  │ • Primary Sector    │                   │
+│  │                     │  │ • Sector Competitors│                   │
+│  └─────────────────────┘  └─────────────────────┘                   │
+│                                    │                                  │
+│                                    ▼                                  │
+│  ┌─────────────────────────────────────────────────────────────┐     │
+│  │ OUTPUT: { isConglomerate, sectors[], primarySector }      │     │
+│  └─────────────────────────────────────────────────────────────┘     │
+│                                                                       │
+│  FILES:                                                               │
+│  • lib/resolution/multi-sector-resolver.ts (NEW v9.0)               │
+│                                                                       │
+└───────────────────────────────────────────────────────────────────────┘
+                                    │
+                                    ▼
+┌───────────────────────────────────────────────────────────────────────┐
+│ LAYER 3: QUERY CONSTRUCTION                                           │
+├───────────────────────────────────────────────────────────────────────┤
+│                                                                       │
+│  ┌─────────────────────┐  ┌─────────────────────┐                   │
+│  │  Entity Context    │→ │ SmartQueryBuilder   │                   │
+│  │                     │  │                     │                   │
+│  │ • Company          │  │ • Hierarchical      │                   │
+│  │ • Industry         │  │   Query Levels:     │                   │
+│  │ • Sector           │  │   1. Specific      │                   │
+│  │ • Region           │  │   2. Moderate      │                   │
+│  │                     │  │   3. Broad        │                   │
+│  │                     │  │   4. Industry     │                   │
+│  └─────────────────────┘  └─────────────────────┘                   │
+│                                    │                                  │
+│                                    ▼                                  │
+│  ┌─────────────────────────────────────────────────────────────┐     │
+│  │ QUERY SET: 40+ queries per company                        │     │
+│  │ • Level 1: "${company} EBITDA 2026 exact"                 │     │
+│  │ • Level 2: "${company} financial metrics 2026"            │     │
+│  │ • Level 3: "${company} annual report 2026"                │     │
+│  │ • Level 4: "${company} industry analysis"                  │     │
+│  └─────────────────────────────────────────────────────────────┘     │
+│                                                                       │
+│  FILES:                                                               │
+│  • lib/queries/smart-query-builder.ts (NEW v9.0)                    │
+│                                                                       │
+└───────────────────────────────────────────────────────────────────────┘
+                                    │
+                                    ▼
+┌───────────────────────────────────────────────────────────────────────┐
+│ LAYER 4: DATA ACQUISITION (PARALLEL)                                 │
+├───────────────────────────────────────────────────────────────────────┤
+│                                                                       │
+│  ┌──────────────────────────────────────────────────────────────┐     │
+│  │                    PARALLEL FETCHING                          │     │
+│  │                                                               │     │
+│  │  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐     │     │
+│  │  │   FMP    │ │  Alpha   │ │  Yahoo   │ │   N.A.T. │     │     │
+│  │  │  (120)   │ │  (120)   │ │   (80)   │ │   (80)   │     │     │
+│  │  └────┬─────┘ └────┬─────┘ └────┬─────┘ └────┬─────┘     │     │
+│  │       │            │            │            │             │     │
+│  │  ┌────▼────────────▼────────────▼────────────▼────┐       │     │
+│  │  │           SERP / Google CSE / Scraping          │       │     │
+│  │  │                    (40)                         │       │     │
+│  │  └────────────────────┬───────────────────────────┘       │     │
+│  │                       │                                    │     │
+│  │  ┌───────────────────▼───────────────────────────┐        │     │
+│  │  │            Python Bots (Parallel)              │        │     │
+│  │  │  • run_crawler.py • run_netbot.py            │        │     │
+│  │  └───────────────────────────────────────────────┘        │     │
+│  └──────────────────────────────────────────────────────────────┘     │
+│                                                                       │
+│  FILES:                                                               │
+│  • lib/orchestrator-v2.ts                                            │
+│  • lib/api/financial-api.ts                                         │
+│  • lib/nat/nat_service.ts                                           │
+│  • scripts/run_crawler.py, run_netbot.py                             │
+│                                                                       │
+└───────────────────────────────────────────────────────────────────────┘
+                                    │
+                                    ▼
+┌───────────────────────────────────────────────────────────────────────┐
+│ LAYER 5: DATA MERGING & QUALITY                                       │
+├───────────────────────────────────────────────────────────────────────┤
+│                                                                       │
+│  ┌──────────────────────────────────────────────────────────────┐     │
+│  │  STEP 1: Raw Data Aggregation                               │     │
+│  │  ─────────────────────────────────                         │     │
+│  │  • Collect all values per metric from all sources         │     │
+│  │  • Store source, value, timestamp, reliability            │     │
+│  └──────────────────────────────────────────────────────────────┘     │
+│                                    │                                  │
+│                                    ▼                                  │
+│  ┌──────────────────────────────────────────────────────────────┐     │
+│  │  STEP 2: Weighted Median Calculation                        │     │
+│  │  ─────────────────────────────────                         │     │
+│  │  • FMP/Alpha: 120 (high reliability)                     │     │
+│  │  • Yahoo/N.A.T.: 80 (medium)                              │     │
+│  │  • Crawler/SERP: 40 (low)                                 │     │
+│  │  • Calculate weighted median                                │     │
+│  └──────────────────────────────────────────────────────────────┘     │
+│                                    │                                  │
+│                                    ▼                                  │
+│  ┌──────────────────────────────────────────────────────────────┐     │
+│  │  STEP 3: Confidence Scoring                                 │     │
+│  │  ─────────────────────────────────                         │     │
+│  │  • Source reliability (40%)                                │     │
+│  │  • Data freshness (30%)                                  │     │
+│  │  • Cross-ref variance (20%)                               │     │
+│  │  • Source diversity (10%)                                 │     │
+│  └──────────────────────────────────────────────────────────────┘     │
+│                                    │                                  │
+│                                    ▼                                  │
+│  ┌──────────────────────────────────────────────────────────────┐     │
+│  │  STEP 4: Derived Metrics                                   │     │
+│  │  ─────────────────────────────────                         │     │
+│  │  • EBITDA Margin = EBITDA / Revenue                       │     │
+│  │  • EV/EBITDA = (Market Cap + Debt) / EBITDA              │     │
+│  └──────────────────────────────────────────────────────────────┘     │
+│                                                                       │
+│  FILES:                                                               │
+│  • lib/orchestrator-v2.ts (mergeCandidates, computeDerived)         │
+│                                                                       │
+└───────────────────────────────────────────────────────────────────────┘
+                                    │
+                                    ▼
+┌───────────────────────────────────────────────────────────────────────┐
+│ LAYER 6: PRE-ML DATA QUALITY (NEW v9.0)                              │
+├───────────────────────────────────────────────────────────────────────┤
+│                                                                       │
+│  ┌──────────────────────────────────────────────────────────────┐     │
+│  │  MLDataPreprocessor - CRITICAL NEW LAYER                   │     │
+│  │  ────────────────────────────────────────────────────────   │     │
+│  │                                                               │     │
+│  │  ┌─────────────────────────────────────────────────────┐   │     │
+│  │  │  Step 1: Outlier Detection                          │   │     │
+│  │  │  • Z-score method (3 std dev threshold)             │   │     │
+│  │  │  • IQR method (1.5x interquartile range)            │   │     │
+│  │  └─────────────────────────────────────────────────────┘   │     │
+│  │                           │                                  │     │
+│  │                           ▼                                  │     │
+│  │  ┌─────────────────────────────────────────────────────┐   │     │
+│  │  │  Step 2: Cross-Metric Validation                    │   │     │
+│  │  │  • EBITDA < Revenue (IMPOSSIBLE otherwise)          │   │     │
+│  │  │  • Net Income < Revenue                             │   │     │
+│  │  │  • EBITDA Margin calculation verification            │   │     │
+│  │  │  • Market Cap / Revenue sanity (P/S ratio)         │   │     │
+│  │  │  • P/E ratio bounds check                          │   │     │
+│  │  └─────────────────────────────────────────────────────┘   │     │
+│  │                           │                                  │     │
+│  │                           ▼                                  │     │
+│  │  ┌─────────────────────────────────────────────────────┐   │     │
+│  │  │  Step 3: Industry-Specific Validation               │   │     │
+│  │  │  • 16 industry profiles with typical ranges        │   │     │
+│  │  │  • Technology, Banking, IT, Automobile, etc.        │   │     │
+│  │  │  • P/E, EBITDA Margin, Revenue Growth ranges       │   │     │
+│  │  └─────────────────────────────────────────────────────┘   │     │
+│  │                           │                                  │     │
+│  │                           ▼                                  │     │
+│  │  ┌─────────────────────────────────────────────────────┐   │     │
+│  │  │  Step 4: Data Completeness                          │   │     │
+│  │  │  • Check required fields present                    │   │     │
+│  │  │  • Calculate completeness %                         │   │     │
+│  │  └─────────────────────────────────────────────────────┘   │     │
+│  │                           │                                  │     │
+│  │                           ▼                                  │     │
+│  │  ┌─────────────────────────────────────────────────────┐   │     │
+│  │  │  Step 5: Missing Value Imputation                  │   │     │
+│  │  │  • EBITDA from margin × revenue                    │   │     │
+│  │  │  • Market Cap from P/E × Net Income                │   │     │
+│  │  │  • Mark imputed fields for transparency            │   │     │
+│  │  └─────────────────────────────────────────────────────┘   │     │
+│  │                           │                                  │     │
+│  │                           ▼                                  │     │
+│  │  ┌─────────────────────────────────────────────────────┐   │     │
+│  │  │  OUTPUT: Quality Score (0-100)                      │   │     │
+│  │  │  • >80: Excellent                                   │   │     │
+│  │  │  • 40-80: Acceptable                               │   │     │
+│  │  │  • <40: Unreliable - warn user                    │   │     │
+│  │  └─────────────────────────────────────────────────────┘   │     │
+│  │                                                               │     │
+│  FILES:                                                               │
+│  • lib/ml/data-preprocessor.ts (NEW v9.0 - 410 lines)             │
+│                                                                       │
+└───────────────────────────────────────────────────────────────────────┘
+                                    │
+                                    ▼
+┌───────────────────────────────────────────────────────────────────────┐
+│ LAYER 7: MACHINE LEARNING ANALYTICS                                   │
+├───────────────────────────────────────────────────────────────────────┤
+│                                                                       │
+│  ┌──────────────────────────────────────────────────────────────┐     │
+│  │  COMPETITOR ANALYSIS                                         │     │
+│  │  ─────────────────────────────────                         │     │
+│  │  • Fetch competitor list (Yahoo Finance)                   │     │
+│  │  • Fetch REAL metrics via N.A.T. (up to 5 competitors)    │     │
+│  │  • KNN similarity calculation                               │     │
+│  │  • Add similarity scores to each competitor                │     │
+│  └──────────────────────────────────────────────────────────────┘     │
+│                                    │                                  │
+│                                    ▼                                  │
+│  ┌──────────────────────────────────────────────────────────────┐     │
+│  │  CLUSTERING ALGORITHMS (Parallel)                           │     │
+│  │  ─────────────────────────────────                         │     │
+│  │                                                               │     │
+│  │  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐          │     │
+│  │  │   K-Means   │ │ Hierarchical│ │ Mean Shift │          │     │
+│  │  │ Segmentation│ │ Clustering  │ │ Auto-Clust │          │     │
+│  │  └─────────────┘ └─────────────┘ └─────────────┘          │     │
+│  │                                                               │     │
+│  │  ┌─────────────┐                                          │     │
+│  │  │   DBSCAN    │ ← Anomaly Detection                       │     │
+│  │  │  Outliers   │                                          │     │
+│  │  └─────────────┘                                          │     │
+│  └──────────────────────────────────────────────────────────────┘     │
+│                                    │                                  │
+│                                    ▼                                  │
+│  ┌──────────────────────────────────────────────────────────────┐     │
+│  │  CLASSIFICATION                                             │     │
+│  │  ─────────────────────────────────                         │     │
+│  │  • Decision Tree → Industry Classification                 │     │
+│  │  • Naive Bayes → Sentiment Analysis                        │     │
+│  │  • KNN → Competitor Similarity                            │     │
+│  └──────────────────────────────────────────────────────────────┘     │
+│                                    │                                  │
+│                                    ▼                                  │
+│  ┌──────────────────────────────────────────────────────────────┐     │
+│  │  PREDICTION MODELS                                          │     │
+│  │  ─────────────────────────────────                         │     │
+│  │  • Linear Regression → Revenue Projection (3 years)       │     │
+│  │  • Neural Network → Credit Risk Prediction                 │     │
+│  │  • PCA → Dimensionality Reduction                         │     │
+│  │  • Feature Selection → Important Metrics                  │     │
+│  └──────────────────────────────────────────────────────────────┘     │
+│                                                                       │
+│  FILES:                                                               │
+│  • lib/ml/ml-utils.ts (KNN, Linear Regression, Decision Tree)       │
+│  • lib/ml/advanced-ml.ts (K-Means, DBSCAN, Neural Network, PCA)   │
+│                                                                       │
+└───────────────────────────────────────────────────────────────────────┘
+                                    │
+                                    ▼
+┌───────────────────────────────────────────────────────────────────────┐
+│ LAYER 8: OUTPUT & STORAGE                                            │
+├───────────────────────────────────────────────────────────────────────┤
+│                                                                       │
+│  ┌──────────────────────────────────────────────────────────────┐     │
+│  │  RESPONSE STRUCTURE                                          │     │
+│  │  ─────────────────────────────────                         │     │
+│  │  {                                                            │     │
+│  │    "company": "Reliance Industries",                        │     │
+│  │    "ticker": "RELIANCE.NS",                                  │     │
+│  │    "merged": { "perMetric": {...}, "provenance": [...] }, │     │
+│  │    "dataQuality": { "score": 85, "issues": [...] },       │     │
+│  │    "multiSector": { "isConglomerate": true, ... },          │     │
+│  │    "competitors": [...],                                     │     │
+│  │    "mlInsights": {                                           │     │
+│  │      "revenueProjections": [...],                           │     │
+│  │      "companySegmentation": {...},                          │     │
+│  │      "anomalyDetection": {...},                             │     │
+│  │      "natIntelligence": {...}                               │     │
+│  │    },                                                        │     │
+│  │    "analysis": { "text": "..." },                          │     │
+│  │    "timestamp": "2026-02-21T..."                           │     │
+│  │  }                                                            │     │
+│  └──────────────────────────────────────────────────────────────┘     │
+│                                    │                                  │
+│                                    ▼                                  │
+│  ┌──────────────────────────────────────────────────────────────┐     │
+│  │  DATABASE STORAGE (Supabase/PostgreSQL)                    │     │
+│  │  ──────────────────────────────────────                     │     │
+│  │  • entity_intelligence → Master company data                 │     │
+│  │  • consensus_metrics → Validated financial metrics          │     │
+│  │  • analysis_results → AI analysis with validation           │     │
+│  │  • intelligence_cache → Multi-layer caching                │     │
+│  │  • api_fetch_log → API usage tracking                     │     │
+│  │  • data_deltas → Change tracking                           │     │
+│  │  • sector_hierarchy → Industry taxonomy                    │     │
+│  │  • unknown_entities → Unresolved queries                   │     │
+│  │  • entity_discovery_queue → Background jobs                │     │
+│  └──────────────────────────────────────────────────────────────┘     │
+│                                                                       │
+└───────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+### 20.2 Data Flow Summary
+
+```
+USER INPUT
+    │
+    ▼
+Layer 1: INPUT PROCESSING
+    • SmartInputNormalizer
+    • Phonetic matching, context disambiguation
+    ▼
+Layer 2: ENTITY RESOLUTION  
+    • MultiSectorResolver
+    • Conglomerate detection, sector breakdown
+    ▼
+Layer 3: QUERY CONSTRUCTION
+    • SmartQueryBuilder
+    • Hierarchical query levels (4 levels)
+    ▼
+Layer 4: DATA ACQUISITION (PARALLEL)
+    • FMP, Alpha, Yahoo, N.A.T., Python Bots
+    • SERP, Google CSE, Web Scraping
+    ▼
+Layer 5: DATA MERGING & QUALITY
+    • Weighted median, confidence scoring
+    • Derived metrics calculation
+    ▼
+Layer 6: PRE-ML DATA QUALITY (NEW v9.0)
+    • MLDataPreprocessor
+    • Outlier detection, cross-metric validation
+    • Industry-specific validation, imputation
+    ▼
+Layer 7: ML ANALYTICS
+    • KNN, K-Means, DBSCAN, Decision Tree
+    • Linear Regression, Neural Network, PCA
+    ▼
+Layer 8: OUTPUT & STORAGE
+    • API Response + Database Persistence
+```
+
+---
+
+### 20.3 New Files in v9.0
+
+| File | Lines | Purpose |
+|------|-------|---------|
+| `lib/ml/data-preprocessor.ts` | 410 | Pre-ML data filtration, validation |
+| `lib/queries/smart-query-builder.ts` | 280 | Hierarchical query builder |
+| `lib/resolution/smart-normalizer.ts` | 330 | Input normalization, phonetic matching |
+| `lib/resolution/multi-sector-resolver.ts` | 280 | Conglomerate sector resolver |
+| `lib/currency/currency-converter.ts` | 300 | Multi-currency conversion (INR, USD, EUR, etc.) |
+| `lib/comparison/global-comparison.ts` | 380 | Global comparison engine |
+
+---
+
+## 21. CURRENCY & GLOBAL COMPARISON (v9.1)
+
+### 21.1 Supported Currencies
+
+| Code | Symbol | Name | Region |
+|------|--------|------|--------|
+| USD | $ | US Dollar | USA, North America |
+| INR | ₹ | Indian Rupee | India |
+| EUR | € | Euro | Europe, EU |
+| GBP | £ | British Pound | UK |
+| JPY | ¥ | Japanese Yen | Japan |
+| CNY | ¥ | Chinese Yuan | China |
+| AUD | A$ | Australian Dollar | Australia |
+| CAD | C$ | Canadian Dollar | Canada |
+| SGD | S$ | Singapore Dollar | Singapore |
+| CHF | Fr | Swiss Franc | Switzerland |
+| AED | د.إ | UAE Dirham | UAE |
+| SAR | ﷼ | Saudi Riyal | Saudi Arabia |
+
+### 21.2 Currency Detection
+
+The system automatically detects currency from:
+- **Symbol**: $, ₹, €, £, ¥
+- **Text**: "INR", "rupee", "dollar", "euro"
+- **Region**: Auto-detect from company region
+
+### 21.3 Global Comparison Features
+
+**Industry Benchmarks (8 Industries):**
+- Technology, Banking, Automobile, IT Services
+- Retail, Pharmaceuticals, FMCG, Energy
+
+**Comparison Metrics:**
+- Global percentile rankings (P25, P50, P75, P90)
+- Industry-relative performance
+- vs Global Median (percentage difference)
+- Cross-market peer comparison
+
+### 21.4 Data Flow
+
+```
+Company Data (Original Currency)
+         │
+         ▼
+┌─────────────────────────────┐
+│  Currency Detection        │
+│  • Symbol/Text/Region      │
+└─────────────────────────────┘
+         │
+         ▼
+┌─────────────────────────────┐
+│  Currency Conversion       │
+│  • Convert to Base (USD)  │
+│  • Exchange Rate API      │
+└─────────────────────────────┘
+         │
+         ▼
+┌─────────────────────────────┐
+│  Global Benchmarking       │
+│  • Industry Percentiles    │
+│  • vs Global Median       │
+│  • Peer Comparison        │
+└─────────────────────────────┘
+         │
+         ▼
+┌─────────────────────────────┐
+│  Output                   │
+│  • currencyInfo          │
+│  • globalComparison      │
+│  • All metrics in USD    │
+└─────────────────────────────┘
+```
+
+### 21.5 API Response Enhancement
+
+```json
+{
+  "company": "Reliance Industries",
+  "region": "India",
+  "currencyInfo": {
+    "companyCurrency": "INR",
+    "baseCurrency": "USD",
+    "exchangeRates": { "USD": 1, "INR": 83.12, ... },
+    "supportedCurrencies": ["USD", "INR", "EUR", ...]
+  },
+  "globalComparison": {
+    "normalizedMetrics": {
+      "marketCap": 250000000000,
+      "revenue": 120000000000,
+      "currency": "USD"
+    },
+    "globalRank": {
+      "marketCap": 85,
+      "revenue": 78,
+      "ebitdaMargin": 72
+    },
+    "industryPercentile": {
+      "marketCap": 90,
+      "revenue": 85,
+      "ebitdaMargin": 75
+    },
+    "vsGlobalMedian": {
+      "marketCap": 150,
+      "revenue": 120,
+      "ebitdaMargin": 10
+    }
+  }
+}
+```
+
+---
+
+**Document Status:** COMPLETE - All sections updated
+**Last Updated:** February 21, 2026
+**Total Sections:** 21
