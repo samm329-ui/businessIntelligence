@@ -222,9 +222,9 @@ export function FinancialRatiosCard({ ratios, companyName }: FinancialRatiosProp
               <BarChart data={ratioBarData} layout="vertical">
                 <XAxis type="number" stroke="#666" fontSize={10} />
                 <YAxis dataKey="name" type="category" stroke="#666" fontSize={10} width={100} />
-                <Tooltip 
+              <Tooltip 
                   contentStyle={{ backgroundColor: '#1A1A1A', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '8px' }}
-                  formatter={(value: number) => [`${value.toFixed(2)}`, 'Value']}
+                  formatter={(value: number | undefined) => value !== undefined ? [`${value.toFixed(2)}`, 'Value'] : ['N/A', 'Value']}
                 />
                 <Bar dataKey="value" radius={[0, 4, 4, 0]}>
                   {ratioBarData.map((entry, index) => (

@@ -6,11 +6,14 @@
  * Method: POST /api/analyze
  * 
  * Body: { query: string, type?: 'company' | 'industry', region?: 'INDIA' | 'GLOBAL' }
+ * 
+ * Version 8.0: Added v2 orchestrator integration for multi-source analysis
  */
 
 import { NextRequest, NextResponse } from 'next/server';
 import { entityResolver } from '@/lib/industry/entity-resolver';
 import { orchestrator } from '@/lib/data/orchestrator';
+import { analyzeCompany } from '@/lib/orchestrator-v2';
 import { 
   getCompetitors, 
   getCompaniesByIndustry,
@@ -310,7 +313,7 @@ export async function POST(req: NextRequest) {
 export async function GET() {
   return NextResponse.json({
     status: 'healthy',
-    version: '3.0',
+    version: '8.0',
     supportedIndustries: ['home_cleaning', 'automobile', 'technology', 'pharmaceuticals', 'banking'],
     supportedRegions: ['INDIA', 'GLOBAL'],
     dataSources: ['NSE', 'YAHOO', 'ALPHA_VANTAGE', 'FMP', 'DATASET'],
@@ -326,4 +329,63 @@ export async function GET() {
       'HINDUNILVR',         // → Direct ticker lookup
     ],
   });
+}
+
+// ─────────────────────────────────────────────
+// V2 POST HANDLER — Multi-Source Orchestrator
+// ─────────────────────────────────────────────
+
+export async function PUT(req: NextRequest) {
+  /**
+   * V2 API Handler - Uses new orchestrator-v2 with multi-source integration
+   * 
+   * POST /api/analyze with { mode: 'v2' } or PUT request
+   * Uses: FMP/Alpha/Yahoo APIs → Google CSE/SERP → Python Crawler → Python NET Bot
+   */
+  const startTime = Date.now();
+  
+  try {
+    const body = await req.json().catch(() => null);
+    const { company, region, mode } = body || {};
+    
+    // Use v2 orchestrator if mode is 'v2' or for direct company queries
+    if (mode === 'v2' || company) {
+      console.log(`[API/analyze] Using V2 orchestrator for: ${company || body?.query}`);
+      
+      const v2Result = await analyzeCompany(
+        company || body?.query,
+        region || 'global'
+      );
+      
+      const totalTime = Date.now() - startTime;
+      
+      return NextResponse.json({
+        success: true,
+        version: 'v2',
+        ...v2Result,
+        metadata: {
+          processingTimeMs: totalTime,
+          timestamp: new Date().toISOString(),
+        }
+      });
+    }
+    
+    // Fall back to original handler
+    return NextResponse.json({
+      success: false,
+      error: 'Invalid request for V2. Use { company: "Company Name", region: "global" }',
+    }, { status: 400 });
+    
+  } catch (error: any) {
+    console.error('[API/analyze V2] Error:', error);
+    
+    return NextResponse.json(
+      {
+        success: false,
+        error: error.message || 'Internal server error',
+        timestamp: new Date().toISOString(),
+      },
+      { status: 500 }
+    );
+  }
 }
