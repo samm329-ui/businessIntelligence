@@ -1,0 +1,18 @@
+{
+  "session_id": "77daa926-e9d3-4cbe-8949-dca92cdb42b7",
+  "chat_type": "realtime",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Latest financial performance, quarterly results, and market sentiment for TCS. Include recent news and analyst opinions.",
+      "timestamp": "2026-02-21T17:30:00.324247"
+    },
+    {
+      "role": "assistant",
+      "content": "Tata Consultancy Services (TCS) has recently reported its financial performance for the quarter ending September 2025, and here are the key highlights:\n\n**Financial Performance:**\n\n* Revenue: $7,509 million, up 0.6% QoQ (quarter-over-quarter) and 0.8% in constant currency.\n* Annualized AI Services Revenue: $1.8 billion.\n* Earnings per share (EPS) for the last quarter: 37.14 INR, beating the estimated 36.00 INR by 3.16% [Source: https://www.tcs.com/investor-relations/financial-statements, https://in.tradingview.com/symbols/NSE-TCS/].\n\n**Quarterly Results:**\n\n* TCS' Q3FY26 results show a strong performance, with revenue growth driven by its diversified portfolio and continued investments in digital transformation.\n* The company's financial statements and quarterly results are available on its investor relations website [Source: https://www.tcs.com/investor-relations].\n\n**Market Sentiment:**\n\n* The current market sentiment around TCS is positive, with the company's strong financial performance and growth prospects driving investor confidence.\n* Analysts have expressed optimism about TCS' future prospects, citing its leadership in the IT services space and its focus on emerging technologies like AI and cloud [Source: https://www.marketsmojo.com/stocks-analysis/tcs-513374-0].\n\n**Recent News and Analyst Opinions:**\n\n* According to a recent report, TCS' share price has been trending upward, driven by its strong quarterly results and positive market sentiment [Source: https://economictimes.indiatimes.com/tata-consultancy-services-ltd/stocks/companyid-8345.cms].\n* Analysts at Marketsmojo have a positive outlook on TCS, citing its strong financial performance and growth prospects [Source: https://www.marketsmojo.com/stocks-analysis/tcs-513374-0].\n\nOverall, TCS' latest financial performance, quarterly results, and market sentiment indicate a positive outlook for the company, driven by its strong leadership in the IT services space and its focus on emerging technologies.",
+      "timestamp": "2026-02-21T17:30:05.264473"
+    }
+  ],
+  "created_at": "2026-02-21T17:30:00.323557",
+  "updated_at": "2026-02-21T17:30:05.264473"
+}

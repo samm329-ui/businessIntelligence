@@ -1,0 +1,18 @@
+{
+  "session_id": "6bc05428-70b4-4436-ad3a-e12423f04d89",
+  "chat_type": "realtime",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Latest financial performance, quarterly results, and market sentiment for Tesla. Include recent news and analyst opinions.",
+      "timestamp": "2026-02-21T17:02:09.910610"
+    },
+    {
+      "role": "assistant",
+      "content": "Tesla's latest financial performance, quarterly results, and market sentiment are as follows:\n\n**Latest Financial Performance:**\n\n* Quarterly revenue: $24.90 billion, a 3.1% decrease year-over-year, but above analyst estimates of $24.75 billion.\n* Trailing EPS: $1.08\n* P/E Ratio: 381.31\n\n**Quarterly Results:**\n\n* Sales: 24,901.00\n* Net income: $840.00\n* EPS: $0.50\n\n**Market Sentiment:**\n\n* Analyst ratings: 27 analysts have given Tesla a consensus rating of \"Hold\".\n* Price prediction: The Tesla price prediction in 2026 is $396.23.\n\n**Recent News:**\n\n* Tesla's market capitalization is $1,198.69 B with 3.75 B shares outstanding.\n* Compared to the opening price on Friday, 02/20/2026, of $407.26, the current price is a gain of 1.09%.\n\n**Analyst Opinions:**\n\n* According to MarketBeat, Tesla's quarterly revenue fell 3.1% year-over-year, but beat analyst estimates.\n* Investing.com reports Tesla's sales, net income, and EPS for the latest quarter.\n* Marketscreener provides projected income statements for Tesla, including earnings before tax (EBT) and net income.\n\nSources:\n\n* https://www.marketbeat.com/stocks/NASDAQ/TSLA/earnings/\n* https://www.investing.com/equities/tesla-motors-financial-summary\n* https://public.com/stocks/tsla/forecast-price-target\n* https://markets.businessinsider.com/stocks/tsla-stock\n* https://www.marketscreener.com/quote/stock/TESLA-INC-6344549/finances/",
+      "timestamp": "2026-02-21T17:02:14.031631"
+    }
+  ],
+  "created_at": "2026-02-21T17:02:09.909673",
+  "updated_at": "2026-02-21T17:02:14.031631"
+}

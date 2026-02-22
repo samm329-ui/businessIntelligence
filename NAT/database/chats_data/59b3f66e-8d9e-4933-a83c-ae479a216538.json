@@ -1,0 +1,18 @@
+{
+  "session_id": "59b3f66e-8d9e-4933-a83c-ae479a216538",
+  "chat_type": "realtime",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Search and provide STRUCTURED financial data for Apple: \n        - Current Market Cap (in billions USD)\n        - P/E Ratio\n        - Revenue (in billions USD)\n        - EBITDA (in billions USD)\n        - EBITDA Margin (%)\n        - Revenue Growth (%)\n        - Industry/Sector\n        - Key competitors\n        Format as clean structured data.",
+      "timestamp": "2026-02-21T16:49:14.190753"
+    },
+    {
+      "role": "assistant",
+      "content": "## Apple Financial Data (as of February 2026)\n\n### Overview\n\nHere is the structured financial data for Apple Inc. (AAPL) as of February 2026:\n\n### Financial Data\n\n* **Current Market Cap**: $3,888 billion USD [1]\n* **P/E Ratio**: 34.61 [2]\n* **Revenue (Latest Available)**: The most recent annual revenue data available is for the year 2025. However, the exact figure isn't provided in the search results. \n* **EBITDA (Latest Available)**: $116.258 billion USD (Trailing Twelve Months, TTM) [5]\n* **EBITDA Margin**: To calculate the EBITDA margin, we need the revenue and EBITDA values. Assuming the revenue for TTM is approximately $383 billion (based on historical data, exact figure not provided), and EBITDA of $116.258 billion:\n  + EBITDA Margin = (EBITDA / Revenue) * 100\n  + EBITDA Margin \u2248 (116.258 / 383) * 100 \u2248 30.36% \n* **Revenue Growth**: Not provided directly. However, for context, it's known that Apple experienced a growth in quarterly EBITDA of 17.76% year-over-year for the period ending December 27, 2025 [5].\n* **Industry/Sector**: Technology, specifically in the Hardware & Software industry, and more narrowly, Consumer Electronics.\n* **Key Competitors**: \n  + Samsung Electronics (SSNLF)\n  + Amazon.com Inc. (AMZN)\n  + Alphabet Inc. (GOOGL)\n  + Microsoft Corporation (MSFT)\n\n### Sources\n\n[1] https://companiesmarketcap.com/apple/marketcap/  \n[2] https://www.advfn.com/stock-market/NASDAQ/AAPL/financials  \n[5] https://www.financecharts.com/stocks/AAPL/income-statement/ebitda  \n\nPlease note, while the data is sourced from reputable financial websites, the exact figures and dates may vary slightly based on the source and the most recent update available. For the most accurate and up-to-date information, it's recommended to check directly with official financial news sources or Apple's investor relations page.",
+      "timestamp": "2026-02-21T16:49:21.492272"
+    }
+  ],
+  "created_at": "2026-02-21T16:49:14.188700",
+  "updated_at": "2026-02-21T16:49:21.492272"
+}

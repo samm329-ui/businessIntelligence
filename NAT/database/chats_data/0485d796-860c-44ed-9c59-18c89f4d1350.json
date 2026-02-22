@@ -1,0 +1,18 @@
+{
+  "session_id": "0485d796-860c-44ed-9c59-18c89f4d1350",
+  "chat_type": "realtime",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Latest financial performance, quarterly results, and market sentiment for Apple. Include recent news and analyst opinions.",
+      "timestamp": "2026-02-21T18:16:08.924868"
+    },
+    {
+      "role": "assistant",
+      "content": "Apple's latest financial performance is impressive, with the company reporting a record-breaking quarter. Here are the key highlights:\n\n**Q1 Fiscal Year 2026 Earnings:**\n\n* Revenue: $143.8 billion, up 16% year-over-year (YoY) [1]\n* Net quarterly profit: $42.1 billion, or $2.84 per diluted share [3]\n* iPhone revenue: Reached an all-time high, driving top-line growth [2]\n\n**Quarterly Results:**\n\n* Apple's Q1 earnings beat estimates, with a 7.17% surprise over the Zacks Consensus Estimate [2]\n* The company's revenue growth expectation for Q1 2026 was between $136.7B and $139.2B, reflecting a 12% YoY growth [4]\n\n**Market Sentiment:**\n\n* Apple's quarterly results have been well-received by analysts, with many considering it a positive surprise\n* The company's best iPhone quarterly sales performance in over four years has boosted investor confidence [5]\n\n**Recent News and Analyst Opinions:**\n\n* Apple's Q1 earnings report was seen as a positive indicator of the company's growth trajectory [1]\n* Analysts expect Apple's revenue growth to continue, driven by the company's strong product lineup and expanding services segment [4]\n* According to Yahoo Finance, Apple's Q1 earnings beat estimates, driven by iPhone revenue growth [2]\n\nSources:\n\n[1] Perplexity AI - Apple Q1 Fiscal Year 2026 Earnings Call Summary\n[2] Yahoo Finance - Apple Q1 Earnings Beat Estimates, iPhone Drives Top-Line Growth\n[3] MacRumors - Apple Reports Record-Setting 1Q 2026 Results: $42.1B Profit on ...\n[4] Intellectia AI - Apple (AAPL) Expected to Report 12% Revenue Growth in Q1 2026 ...\n[5] Investing.com - Apple delivers best iPhone quarterly sales performance in over four ...\n\nOverall, Apple's latest financial performance and quarterly results have been strong, driven by the company's iPhone sales and revenue growth. Analysts remain optimistic about the company's future prospects, citing a strong product lineup and expanding services segment.",
+      "timestamp": "2026-02-21T18:16:13.136134"
+    }
+  ],
+  "created_at": "2026-02-21T18:16:08.924868",
+  "updated_at": "2026-02-21T18:16:13.136134"
+}

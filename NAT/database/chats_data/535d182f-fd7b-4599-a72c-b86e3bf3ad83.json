@@ -1,0 +1,18 @@
+{
+  "session_id": "535d182f-fd7b-4599-a72c-b86e3bf3ad83",
+  "chat_type": "realtime",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Search and provide STRUCTURED financial data for Apple: \n        - Current Market Cap (in billions USD)\n        - P/E Ratio\n        - Revenue (in billions USD)\n        - EBITDA (in billions USD)\n        - EBITDA Margin (%)\n        - Revenue Growth (%)\n        - Industry/Sector\n        - Key competitors\n        Format as clean structured data.",
+      "timestamp": "2026-02-21T18:17:56.885427"
+    },
+    {
+      "role": "assistant",
+      "content": "## Apple Financial Data (as of February 2026)\n\n### Overview\n\nHere is the structured financial data for Apple Inc. (AAPL) as of February 2026:\n\n### Financial Data\n\n* **Current Market Cap**: $3.92 trillion USD [1]\n* **P/E Ratio**: 34.38x [4]\n* **Revenue**: $365 billion USD (FY2025) [4]\n* **EBITDA**: $161 billion USD (FY2025) [3]\n* **EBITDA Margin**: 44.1% (FY2025) [3]\n* **Revenue Growth**: 2% (FY2025 vs FY2024) [4]\n\n### Industry/Sector\n\n* **Industry**: Technology Hardware & Electronics\n* **Sector**: Technology\n\n### Key Competitors\n\n* Samsung Electronics (SSNLF)\n* Alphabet (GOOGL) - Google\n* Amazon (AMZN)\n* Microsoft (MSFT)\n\n### Sources\n\n[1] Capital.com - Apple Inc (AAPL) Market Cap (February 2026 Update)\n[2] Companies Market Cap - Apple (AAPL) Market Capitalization (February 2026)\n[3] Macroaxis - Apple Company Financial Guide 2026\n[4] Yahoo Finance - Apple Inc. (AAPL) Valuation Measures & Financial Statistics\n\n### Notes\n\nThe financial data provided is based on available information as of February 2026. The values may not reflect the current market situation, as the data may not be up-to-date. For the most recent information, please refer to reliable financial sources.",
+      "timestamp": "2026-02-21T18:17:59.712703"
+    }
+  ],
+  "created_at": "2026-02-21T18:17:56.885427",
+  "updated_at": "2026-02-21T18:17:59.712703"
+}

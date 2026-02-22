@@ -1,0 +1,18 @@
+{
+  "session_id": "d9d9785e-53bd-431c-8dfb-bf8275d9c1c0",
+  "chat_type": "realtime",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Search and provide STRUCTURED financial data for HUL: \n        - Current Market Cap (in billions USD)\n        - P/E Ratio\n        - Revenue (in billions USD)\n        - EBITDA (in billions USD)\n        - EBITDA Margin (%)\n        - Revenue Growth (%)\n        - Industry/Sector\n        - Key competitors\n        Format as clean structured data.",
+      "timestamp": "2026-02-21T17:02:51.645367"
+    },
+    {
+      "role": "assistant",
+      "content": "Here's the structured financial data for Hindustan Unilever Limited (HUL):\n\n```json\n{\n  \"Current Market Cap\": {\n    \"value\": 59.8,\n    \"unit\": \"billions USD\"\n  },\n  \"P/E Ratio\": {\n    \"value\": 49.8,\n    \"unit\": \"\"\n  },\n  \"Revenue\": {\n    \"value\": 7.96,\n    \"unit\": \"billions USD\"\n  },\n  \"EBITDA\": {\n    \"value\": 5.22,\n    \"unit\": \"billions USD\"\n  },\n  \"EBITDA Margin\": {\n    \"value\": 23.7,\n    \"unit\": \"%\"\n  },\n  \"Revenue Growth\": {\n    \"value\": 8,\n    \"unit\": \"%\"\n  },\n  \"Industry/Sector\": {\n    \"value\": \"Fast-Moving Consumer Goods (FMCG)\"\n  },\n  \"Key Competitors\": [\n    \"ITC Limited\",\n    \"Nestle India Limited\",\n    \"Procter & Gamble Hygiene and Health Care Limited\",\n    \"Reckitt Benckiser (India) Limited\"\n  ]\n}\n```\n\nHere's a brief explanation of the values:\n\n* Current Market Cap: \u20b959.8B (Source: PitchBook, as of 17-Feb-2026) \u2248 $59.8B (Using current exchange rates)\n* P/E Ratio: 49.8 (Source: Screener.in)\n* Revenue: \u20b961,896 Cr (Source: Scribd) \u2248 $7.96B (Using current exchange rates, \u20b91 = $0.0128)\n* EBITDA: \u20b939,000 Cr (Source: Business Standard) \u2248 $5.22B (Using current exchange rates, \u20b91 = $0.0134)\n* EBITDA Margin: 23.7% (Source: Business Standard)\n* Revenue Growth: 8% YoY (Source: Business Standard)\n* Industry/Sector: Fast-Moving Consumer Goods (FMCG)\n* Key Competitors: Listed above (Source: General knowledge and publicly available data)\n\nPlease note that the values might not be up-to-date, and the exchange rates used for conversion may vary.\n\nReferences:\n\n1. https://pitchbook.com/profiles/company/90881-83\n2. https://www.scribd.com/document/860308019/Financial-Statement-analysis-HUL\n3. https://bsmedia.business-standard.com/_media/bs/data/market-reports/equity-brokertips/2026-02/17709742030.73079000.pdf\n4. https://www.screener.in/company/HINDUNILVR/consolidated/",
+      "timestamp": "2026-02-21T17:02:55.534571"
+    }
+  ],
+  "created_at": "2026-02-21T17:02:51.644332",
+  "updated_at": "2026-02-21T17:02:55.534571"
+}

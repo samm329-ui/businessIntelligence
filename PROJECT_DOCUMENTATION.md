@@ -140,8 +140,143 @@ The platform combines multiple data sources (Yahoo Finance, NSE India, BSE India
 │  │  └──────────────┘  └─────────────┘  └─────────────┘  └───────────┘  │   │
 │  └─────────────────────────────────────────────────────────────────────┘   │
 └─────────────────────────────────────────────────────────────────────────────┘
-             │
-             │ External APIs
+              │
+              │ External APIs
+
+---
+
+## V2 Multi-Source Orchestrator Architecture (Version 8.0)
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                     V2 ORCHESTRATOR (lib/orchestrator-v2.ts)               │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  ┌─────────────────┐                                                       │
+│  │  Input:         │                                                       │
+│  │  Company Name   │                                                       │
+│  │  Region        │                                                       │
+│  └────────┬────────┘                                                       │
+│           │                                                                 │
+│           ▼                                                                 │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │ Step 1: Ticker Discovery (discoverTicker)                          │   │
+│  │  • Yahoo Finance Search API                                         │   │
+│  │  • Cache results for 7 days                                        │   │
+│  │  • Supports: .NS (India), .BO (Bombay) suffixes                    │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│           │                                                                 │
+│           ▼                                                                 │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │ Step 2: Multi-Source Data Fetch (PARALLEL)                        │   │
+│  │                                                                      │   │
+│  │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐            │   │
+│  │  │ FMP API     │  │ Alpha Vantage│  │ Yahoo Finance│            │   │
+│  │  │ (Priority 1)│  │ (Priority 2)│  │ (Priority 3)│            │   │
+│  │  └──────────────┘  └──────────────┘  └──────────────┘            │   │
+│  │       │                  │                  │                       │   │
+│  │       └──────────────────┼──────────────────┘                       │   │
+│  │                          ▼                                           │   │
+│  │              Returns: Market Cap, P/E, Revenue, EBITDA              │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│           │                                                                 │
+│           ▼                                                                 │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │ Step 3: Python Crawler Integration                                │   │
+│  │  • Calls: scripts/run_crawler.py                                  │   │
+│  │  • Your existing Python real-time crawler                          │   │
+│  │  • Returns: links[], competitors[], snippets[]                     │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│           │                                                                 │
+│           ▼                                                                 │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │ Step 4: SERP Search (Fallback)                                   │   │
+│  │  • Google Custom Search API (primary)                              │   │
+│  │  • SerpAPI (fallback)                                            │   │
+│  │  • Queries: P/E, Market Cap, EBITDA, Revenue, etc.               │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│           │                                                                 │
+│           ▼                                                                 │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │ Step 5: Web Scraping (scrapeLinks)                                │   │
+│  │  • Cheerio-based HTML parsing                                      │   │
+│  │  • Extracts: P/E, Market Cap, Revenue, EBITDA, Margins           │   │
+│  │  • Concurrent scraping (6 parallel)                               │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│           │                                                                 │
+│           ▼                                                                 │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │ Step 6: Merge & Score (mergeCandidates)                          │   │
+│  │  • Weighted median by source authority                             │   │
+│  │  • Source weights: FMP/Alpha (120) > Yahoo (80) > Scrape (40)   │   │
+│  │  • Confidence = (sources × 10) + (structured ? 40 : 0)          │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│           │                                                                 │
+│           ▼                                                                 │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │ Step 7: Derived Metrics (computeDerived)                         │   │
+│  │  • EBITDA Margin = (EBITDA / Revenue) × 100                     │   │
+│  │  • EV/EBITDA (if EV and EBITDA available)                       │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│           │                                                                 │
+│           ▼                                                                 │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │ Step 8: Python NET Bot (LLM Analysis)                            │   │
+│  │  • Calls: scripts/run_netbot.py                                  │   │
+│  │  • Sends: merged financial data + provenance                     │   │
+│  │  • LLM receives ONLY verified data (NO hallucination)             │   │
+│  │  • Returns: structured analysis                                   │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│           │                                                                 │
+│           ▼                                                                 │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │ Output: { company, ticker, region, merged, competitors, analysis } │   │
+│  │  • merged.perMetric: { value, confidence, sources[] }              │   │
+│  │  • merged.provenance: URL[]                                        │   │
+│  │  • analysis: { summary, data_points, confidence }                │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+### API Usage
+
+```bash
+# Using V2 Orchestrator (Multi-Source)
+curl -X PUT http://localhost:3000/api/analyze \
+  -H "Content-Type: application/json" \
+  -d '{"company": "Tata Motors", "region": "India"}'
+
+# Using V2 mode explicitly
+curl -X PUT http://localhost:3000/api/analyze \
+  -H "Content-Type: application/json" \
+  -d '{"company": "Reliance Industries", "mode": "v2"}'
+```
+
+### Environment Variables Required
+
+```env
+# Financial APIs
+FMP_API_KEY=your_fmp_key
+ALPHA_VANTAGE_KEY=your_alpha_key
+
+# Search APIs
+GOOGLE_CSE_KEY=your_google_cse_key
+GOOGLE_CSE_ID=your_google_cse_id
+SERPAPI_KEY=your_serpapi_key
+
+# Python Bot Integration
+PYTHON_CRAWLER_CMD=python3
+PYTHON_CRAWLER_SCRIPT=./scripts/run_crawler.py
+PYTHON_NET_CMD=python3
+PYTHON_NET_SCRIPT=./scripts/run_netbot.py
+
+# Configuration
+CACHE_DIR=.cache
+LOG_FILE=./orchestrator-v2.log
+USER_AGENT=EBITA-Intelligence/2.0
+```
+
+---
              │
 ┌────────────▼─────────────────────────────────────────────────────────────────┐
 │                          EXTERNAL SERVICES                                  │

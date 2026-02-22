@@ -1,0 +1,18 @@
+{
+  "session_id": "a7106a1e-f69e-437d-95c7-8ee708d942ca",
+  "chat_type": "realtime",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Latest financial performance, quarterly results, and market sentiment for TCS. Include recent news and analyst opinions.",
+      "timestamp": "2026-02-21T17:44:27.877157"
+    },
+    {
+      "role": "assistant",
+      "content": "Tata Consultancy Services (TCS) recently reported its quarterly results for Q2 and Q3 of FY 2026. Here are the key highlights:\n\n**Q2 FY 2026 Performance:**\n\n- Revenue: INR 65,799 crores, with a 3.7% QoQ growth and 2.4% YoY growth.\n- Earnings per share (EPS): INR 35.27, beating analysts' expectations of INR 33.81 per share.\n [Source: Alpha Spread, Yahoo Finance]\n\n**Q3 FY 2026 Performance:**\n\n- Net profit: INR 10,657 crore, marking a 14% YoY decline.\n- Revenue from operations: Not specified in the search results.\n- Dividend: INR 57 per share.\n [Source: Mint]\n\n**Market Sentiment and Stock Price:**\n\n- As of February 21, 2026, TCS is actively trading at a current market price of INR 2686.20 per share.\n [Source: Angel One]\n\n**Analyst Opinions and Recent News:**\n\n- TCS demonstrated AI-led growth and a strong order book in Q3 FY 2026.\n- The company was ranked a Leader in 9 competitive assessments published by leading research firms in Q3 FY 2026.\n [Source: TCS Official Press Release]\n\nOverall, TCS's quarterly results show a mixed performance, with Q2 FY 2026 revenue growth and EPS beating expectations, while Q3 FY 2026 net profit declined YoY. The company's strong order book and AI-led growth are positive indicators, but the market sentiment may vary based on individual investor perspectives.\n\nFor the most up-to-date information, I recommend checking reputable financial news sources and TCS's official website.",
+      "timestamp": "2026-02-21T17:44:32.942643"
+    }
+  ],
+  "created_at": "2026-02-21T17:44:27.877157",
+  "updated_at": "2026-02-21T17:44:32.942643"
+}

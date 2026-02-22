@@ -1,0 +1,18 @@
+{
+  "session_id": "2cd6c15a-3714-467d-aae1-464e7efd4f65",
+  "chat_type": "realtime",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Search and provide STRUCTURED financial data for Microsoft: \n        - Current Market Cap (in billions USD)\n        - P/E Ratio\n        - Revenue (in billions USD)\n        - EBITDA (in billions USD)\n        - EBITDA Margin (%)\n        - Revenue Growth (%)\n        - Industry/Sector\n        - Key competitors\n        Format as clean structured data.",
+      "timestamp": "2026-02-21T17:58:11.418445"
+    },
+    {
+      "role": "assistant",
+      "content": "## Microsoft Financial Data\n\nHere's the structured financial data for Microsoft:\n\n### Financial Metrics\n\n* **Current Market Cap**: $2,952 billion USD [1]\n* **P/E Ratio**: 30.14x [4]\n* **Revenue**: $305.45 billion USD [5]\n* **EBITDA**: Not available in the search results. However, I can suggest some ways to find it.\n* **EBITDA Margin**: Not available in the search results. However, I can suggest some ways to find it.\n* **Revenue Growth**: Not available in the search results. However, I can suggest some ways to find it.\n\n### Industry/Sector and Competitors\n\n* **Industry/Sector**: Technology, Software - Infrastructure\n* **Key Competitors**: \n  - Alphabet (Google)\n  - Amazon\n  - Apple\n  - Oracle\n  - Salesforce\n\n### Notes\nThe EBITDA, EBITDA Margin, and Revenue Growth values are not available in the provided search results. For the most accurate and up-to-date information, I recommend checking Microsoft's official financial reports or reputable financial websites such as Yahoo Finance, Bloomberg, or Reuters.\n\n## Sources\n\n[1] https://companiesmarketcap.com/microsoft/marketcap/\n[2] https://pitchbook.com/profiles/company/11026-45\n[3] https://markets.businessinsider.com/stocks/msft-stock\n[4] https://finance.yahoo.com/quote/MSFT/key-statistics/\n[5] https://stockanalysis.com/stocks/msft/statistics/",
+      "timestamp": "2026-02-21T17:58:15.168540"
+    }
+  ],
+  "created_at": "2026-02-21T17:58:11.418445",
+  "updated_at": "2026-02-21T17:58:15.168540"
+}

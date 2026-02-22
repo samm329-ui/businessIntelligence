@@ -1,0 +1,18 @@
+{
+  "session_id": "472e28e3-4b47-4a93-8ccc-3cd0db2d4a39",
+  "chat_type": "realtime",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What is Apple stock price?",
+      "timestamp": "2026-02-21T17:54:06.310709"
+    },
+    {
+      "role": "assistant",
+      "content": "web_search(query=\"Apple stock price\")",
+      "timestamp": "2026-02-21T17:54:57.905074"
+    }
+  ],
+  "created_at": "2026-02-21T17:54:06.310709",
+  "updated_at": "2026-02-21T17:54:57.905074"
+}

@@ -1,0 +1,1295 @@
+2026-02-21T11:03:21.668Z orchestrator start Apple global
+2026-02-21T11:03:22.738Z ticker: AAPL
+2026-02-21T11:03:22.750Z Calling N.A.T. AI: Search and provide STRUCTURED financial data for Apple: 
+        - Current Market Cap (in billions USD)
+        - P/E Ratio
+        - Revenue (in billions USD)
+        - EBITDA (in billions USD)
+        - EBITDA Margin (%)
+        - Revenue Growth (%)
+        - Industry/Sector
+        - Key competitors
+        Format as clean structured data.
+2026-02-21T11:03:22.755Z run crawler: python3 ./scripts/run_crawler.py Apple
+2026-02-21T11:03:22.911Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:03:23.192Z runPythonCrawler failed Command failed: python3 ./scripts/run_crawler.py Apple
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+
+2026-02-21T11:03:23.200Z NAT call failed: fetch failed
+2026-02-21T11:03:24.307Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:03:26.575Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:03:26.994Z fetchYahooFinancials fail HTTP 401 Unauthorized {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-21T11:03:27.625Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:03:29.710Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:03:32.439Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:03:32.660Z fetchFromFMP fail HTTP 403 Forbidden {
+  "Error Message": "Legacy Endpoint : Due to Legacy endpoints being no longer supported - This endpoint is only available for legacy users who have valid subscriptions prior August 31, 2025. Please 
+2026-02-21T11:03:33.046Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:03:34.968Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:03:37.463Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:03:38.167Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:03:38.325Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:03:39.906Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:03:42.345Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:03:43.154Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:03:43.350Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:03:44.950Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:03:47.442Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:03:48.037Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:03:48.183Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:03:49.659Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:03:52.221Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:03:52.455Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:03:52.616Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:03:54.074Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:03:56.460Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:03:56.691Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:03:56.814Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:03:58.337Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:04:00.836Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:04:01.270Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:04:01.480Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:04:03.028Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:04:05.363Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:04:05.621Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:04:05.792Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:04:07.205Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:04:09.577Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:04:10.005Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:04:10.049Z Data Quality Check: {"qualityScore":62.5,"issues":0,"validation":"All validations passed"}
+2026-02-21T11:04:10.083Z Input normalization warning: {"original":"Apple","normalized":"Apple","confidence":0.6}
+2026-02-21T11:04:10.549Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:04:11.932Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:04:14.335Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:04:14.435Z fetchCompetitors fail HTTP 500 Cannot find server. <!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Yahoo</title>
+    <meta name="viewport" conte
+2026-02-21T11:04:16.069Z Currency Info: {"companyCurrency":"USD","baseCurrency":"USD"}
+2026-02-21T11:04:16.405Z ML revenue projections: [{"year":2027,"revenue":435617006000,"growthRate":0,"confidence":0},{"year":2028,"revenue":435617006000,"growthRate":0,"confidence":0},{"year":2029,"revenue":435617006000,"growthRate":0,"confidence":0}]
+2026-02-21T11:04:16.434Z ML industry classification: {"industry":"Services","confidence":0.75,"alternatives":[]}
+2026-02-21T11:04:16.444Z Company segmentation: [{"company":"Apple","segment":0,"metrics":{"revenue":435617006000,"marketCap":3888777003000,"ebitdaMargin":35.1,"peRatio":33.45,"revenueGrowth":0.1}}]
+2026-02-21T11:04:16.467Z Anomaly detection: {"clusters":[[-1,1]],"outlierCount":1}
+2026-02-21T11:04:16.555Z PCA results: {"explainedVariance":[1,1.8660523840544144e-17],"components":[[0.11132274836971949,0.9937843054181386,8.548210656099135e-12],[0.7288272381556484,0.6846976390512894,8.05375447439951e-9]]}
+2026-02-21T11:04:16.616Z Credit risk prediction: {"risk":"MEDIUM","probability":0.5}
+2026-02-21T11:04:16.630Z Extracted features: {"profitMargin":0.1,"ebitdaMargin":0.35100097079313747,"debtToEquity":0.42857142857142855,"debtToAssets":0.3,"currentRatio":0.3333333333333333,"roe":0.016002717771971677,"roa":0.011201902440380175,"assetTurnover":0.11201902440380174,"equityMultiplier":1.4285714285714286}
+2026-02-21T11:04:16.661Z Sentiment analysis: [{"text":"Strong quarterly earnings beat expectations","sentiment":"positive","confidence":0.8},{"text":"Revenue growth momentum continues","sentiment":"positive","confidence":0.6666666666666671},{"text":"Analysts upgrade to buy rating","sentiment":"positive","confidence":0.5}]
+2026-02-21T11:04:16.669Z Calling N.A.T. AI Assistant for: Apple
+2026-02-21T11:04:16.675Z Calling N.A.T. AI: Provide detailed business intelligence about Apple. Include: 1) Company overview 2) Recent news 3) Industry trends 4) Key competitors 5) Investment outlook
+2026-02-21T11:04:16.773Z NAT call failed: fetch failed
+2026-02-21T11:04:16.821Z Calling N.A.T. AI: Latest financial performance, quarterly results, and market sentiment for Apple. Include recent news and analyst opinions.
+2026-02-21T11:04:16.876Z NAT call failed: fetch failed
+2026-02-21T11:04:16.913Z N.A.T. Intelligence received
+2026-02-21T11:04:16.916Z run netbot python3 ./scripts/run_netbot.py {"company":"Apple","ticker":"AAPL","region":"global","financials":{"marketCap":{"value":3888777003000,"confidence":50,"sources":["Alpha"]},"peRatio":{"value":33.45,"confidence":50,"sources":["Alpha"]},"revenue":{"value":435617006000,"confidence":50,"sources":["Alpha"]},"ebitda":{"value":152901992000,"confidence":50,"sources":["Alpha"]},"ebitdaMargin":{"value":35.1,"confidence":60,"sources":[]},"profitMargin":{"value":null,"confidence":0,"sources":[]},"revenueGrowth":{"value":null,"confidence":0,"sources":[]},"roe":{"value":null,"confidence":0,"sources":[]},"roa":{"value":null,"confidence":0,"sources":[]},"debtEquity":{"value":null,"confidence":0,"sources":[]}},"provenance":[],"competitors":[]}
+2026-02-21T11:04:17.775Z runNetBot failed Command failed: python3 ./scripts/run_netbot.py {"company":"Apple","ticker":"AAPL","region":"global","financials":{"marketCap":{"value":3888777003000,"confidence":50,"sources":["Alpha"]},"peRatio":{"value":33.45,"confidence":50,"sources":["Alpha"]},"revenue":{"value":435617006000,"confidence":50,"sources":["Alpha"]},"ebitda":{"value":152901992000,"confidence":50,"sources":["Alpha"]},"ebitdaMargin":{"value":35.1,"confidence":60,"sources":[]},"profitMargin":{"value":null,"confidence":0,"sources":[]},"revenueGrowth":{"value":null,"confidence":0,"sources":[]},"roe":{"value":null,"confidence":0,"sources":[]},"roa":{"value":null,"confidence":0,"sources":[]},"debtEquity":{"value":null,"confidence":0,"sources":[]}},"provenance":[],"competitors":[]}
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+
+2026-02-21T11:04:17.777Z analysis netbot failed Command failed: python3 ./scripts/run_netbot.py {"company":"Apple","ticker":"AAPL","region":"global","financials":{"marketCap":{"value":3888777003000,"confidence":50,"sources":["Alpha"]},"peRatio":{"value":33.45,"confidence":50,"sources":["Alpha"]},"revenue":{"value":435617006000,"confidence":50,"sources":["Alpha"]},"ebitda":{"value":152901992000,"confidence":50,"sources":["Alpha"]},"ebitdaMargin":{"value":35.1,"confidence":60,"sources":[]},"profitMargin":{"value":null,"confidence":0,"sources":[]},"revenueGrowth":{"value":null,"confidence":0,"sources":[]},"roe":{"value":null,"confidence":0,"sources":[]},"roa":{"value":null,"confidence":0,"sources":[]},"debtEquity":{"value":null,"confidence":0,"sources":[]}},"provenance":[],"competitors":[]}
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+
+2026-02-21T11:04:17.781Z orchestrator done Apple
+2026-02-21T11:04:37.052Z orchestrator start TCS INDIA
+2026-02-21T11:04:37.320Z ticker: TCS.NS
+2026-02-21T11:04:37.348Z Calling N.A.T. AI: Search and provide STRUCTURED financial data for TCS: 
+        - Current Market Cap (in billions USD)
+        - P/E Ratio
+        - Revenue (in billions USD)
+        - EBITDA (in billions USD)
+        - EBITDA Margin (%)
+        - Revenue Growth (%)
+        - Industry/Sector
+        - Key competitors
+        Format as clean structured data.
+2026-02-21T11:04:37.359Z run crawler: python3 ./scripts/run_crawler.py TCS
+2026-02-21T11:04:37.405Z NAT call failed: fetch failed
+2026-02-21T11:04:37.459Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:04:37.609Z runPythonCrawler failed Command failed: python3 ./scripts/run_crawler.py TCS
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+
+2026-02-21T11:04:38.722Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:04:40.959Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:04:41.083Z fetchYahooFinancials fail HTTP 401 Unauthorized {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-21T11:04:45.207Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:04:46.944Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:04:49.933Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:04:50.046Z fetchFromFMP fail HTTP 403 Forbidden {
+  "Error Message": "Legacy Endpoint : Due to Legacy endpoints being no longer supported - This endpoint is only available for legacy users who have valid subscriptions prior August 31, 2025. Please 
+2026-02-21T11:04:50.256Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:04:51.499Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:04:53.866Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:04:54.021Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:04:54.146Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:04:55.414Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:04:57.737Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:04:57.998Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:04:58.166Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:04:59.518Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:05:01.730Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:05:01.969Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:05:02.099Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:05:03.483Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:05:05.801Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:05:06.071Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:05:06.222Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:05:07.639Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:05:09.989Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:05:10.254Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:05:10.389Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:05:11.771Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:05:14.165Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:05:14.411Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:05:14.549Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:05:15.971Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:05:18.359Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:05:18.619Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:05:18.759Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:05:20.156Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:05:22.558Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:05:22.717Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:05:22.727Z Data Quality Check: {"qualityScore":0,"issues":0,"validation":"All validations passed"}
+2026-02-21T11:05:22.738Z WARNING: Data quality below threshold - ML analysis may be unreliable
+2026-02-21T11:05:22.741Z Input normalization warning: {"original":"TCS","normalized":"Tata Consultancy Services","confidence":0.75}
+2026-02-21T11:05:23.025Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:05:24.495Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:05:26.923Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:05:27.015Z fetchCompetitors fail HTTP 500 Cannot find server. <!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Yahoo</title>
+    <meta name="viewport" conte
+2026-02-21T11:05:28.183Z Currency Info: {"companyCurrency":"INR","baseCurrency":"INR"}
+2026-02-21T11:05:28.517Z ML industry classification: {"industry":"Services","confidence":0.75,"alternatives":[]}
+2026-02-21T11:05:28.523Z Company segmentation: [{"company":"TCS","segment":0,"metrics":{"revenue":1000000000,"marketCap":1000000000,"ebitdaMargin":10,"peRatio":20,"revenueGrowth":0.1}}]
+2026-02-21T11:05:28.527Z Anomaly detection: {"clusters":[[-1,1]],"outlierCount":1}
+2026-02-21T11:05:28.585Z Credit risk prediction: {"risk":"MEDIUM","probability":0.5}
+2026-02-21T11:05:28.595Z Extracted features: {"profitMargin":0,"ebitdaMargin":0,"debtToEquity":0,"debtToAssets":0,"currentRatio":0,"roe":0,"roa":0,"assetTurnover":0,"equityMultiplier":0}
+2026-02-21T11:05:28.609Z Sentiment analysis: [{"text":"Strong quarterly earnings beat expectations","sentiment":"positive","confidence":0.8},{"text":"Revenue growth momentum continues","sentiment":"positive","confidence":0.6666666666666671},{"text":"Analysts upgrade to buy rating","sentiment":"positive","confidence":0.5}]
+2026-02-21T11:05:28.620Z Calling N.A.T. AI Assistant for: TCS
+2026-02-21T11:05:28.630Z Calling N.A.T. AI: Provide detailed business intelligence about TCS. Include: 1) Company overview 2) Recent news 3) Industry trends 4) Key competitors 5) Investment outlook
+2026-02-21T11:05:28.658Z NAT call failed: fetch failed
+2026-02-21T11:05:28.660Z Calling N.A.T. AI: Latest financial performance, quarterly results, and market sentiment for TCS. Include recent news and analyst opinions.
+2026-02-21T11:05:28.691Z NAT call failed: fetch failed
+2026-02-21T11:05:28.696Z N.A.T. Intelligence received
+2026-02-21T11:05:28.698Z run netbot python3 ./scripts/run_netbot.py {"company":"TCS","ticker":"TCS.NS","region":"INDIA","financials":{"marketCap":{"value":null,"confidence":0,"sources":[]},"peRatio":{"value":null,"confidence":0,"sources":[]},"revenue":{"value":null,"confidence":0,"sources":[]},"ebitda":{"value":null,"confidence":0,"sources":[]},"ebitdaMargin":{"value":null,"confidence":0,"sources":[]},"profitMargin":{"value":null,"confidence":0,"sources":[]},"revenueGrowth":{"value":null,"confidence":0,"sources":[]},"roe":{"value":null,"confidence":0,"sources":[]},"roa":{"value":null,"confidence":0,"sources":[]},"debtEquity":{"value":null,"confidence":0,"sources":[]}},"provenance":[],"competitors":[]}
+2026-02-21T11:05:29.268Z runNetBot failed Command failed: python3 ./scripts/run_netbot.py {"company":"TCS","ticker":"TCS.NS","region":"INDIA","financials":{"marketCap":{"value":null,"confidence":0,"sources":[]},"peRatio":{"value":null,"confidence":0,"sources":[]},"revenue":{"value":null,"confidence":0,"sources":[]},"ebitda":{"value":null,"confidence":0,"sources":[]},"ebitdaMargin":{"value":null,"confidence":0,"sources":[]},"profitMargin":{"value":null,"confidence":0,"sources":[]},"revenueGrowth":{"value":null,"confidence":0,"sources":[]},"roe":{"value":null,"confidence":0,"sources":[]},"roa":{"value":null,"confidence":0,"sources":[]},"debtEquity":{"value":null,"confidence":0,"sources":[]}},"provenance":[],"competitors":[]}
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+
+2026-02-21T11:05:29.269Z analysis netbot failed Command failed: python3 ./scripts/run_netbot.py {"company":"TCS","ticker":"TCS.NS","region":"INDIA","financials":{"marketCap":{"value":null,"confidence":0,"sources":[]},"peRatio":{"value":null,"confidence":0,"sources":[]},"revenue":{"value":null,"confidence":0,"sources":[]},"ebitda":{"value":null,"confidence":0,"sources":[]},"ebitdaMargin":{"value":null,"confidence":0,"sources":[]},"profitMargin":{"value":null,"confidence":0,"sources":[]},"revenueGrowth":{"value":null,"confidence":0,"sources":[]},"roe":{"value":null,"confidence":0,"sources":[]},"roa":{"value":null,"confidence":0,"sources":[]},"debtEquity":{"value":null,"confidence":0,"sources":[]}},"provenance":[],"competitors":[]}
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+
+2026-02-21T11:05:29.271Z orchestrator done TCS
+2026-02-21T11:19:13.985Z orchestrator start Apple global
+2026-02-21T11:19:13.989Z ticker: AAPL
+2026-02-21T11:19:14.042Z Calling N.A.T. AI: Search and provide STRUCTURED financial data for Apple: 
+        - Current Market Cap (in billions USD)
+        - P/E Ratio
+        - Revenue (in billions USD)
+        - EBITDA (in billions USD)
+        - EBITDA Margin (%)
+        - Revenue Growth (%)
+        - Industry/Sector
+        - Key competitors
+        Format as clean structured data.
+2026-02-21T11:19:14.044Z run crawler: python3 ./scripts/run_crawler.py Apple
+2026-02-21T11:19:14.330Z runPythonCrawler failed Command failed: python3 ./scripts/run_crawler.py Apple
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+
+2026-02-21T11:19:14.640Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:19:16.805Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:19:18.628Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:19:19.177Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:19:19.402Z fetchYahooFinancials fail HTTP 401 Unauthorized {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-21T11:19:20.392Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:19:21.506Z NAT response received
+2026-02-21T11:19:21.518Z NAT initial search structured data: {"marketCap":null,"peRatio":null,"revenue":null,"ebitda":null,"ebitdaMargin":null,"revenueGrowth":null}
+2026-02-21T11:19:23.184Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:19:23.289Z fetchFromFMP fail HTTP 403 Forbidden {
+  "Error Message": "Legacy Endpoint : Due to Legacy endpoints being no longer supported - This endpoint is only available for legacy users who have valid subscriptions prior August 31, 2025. Please 
+2026-02-21T11:19:23.576Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:19:24.861Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:19:27.321Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:19:27.571Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:19:27.703Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:19:29.037Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:19:31.473Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:19:31.870Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:19:32.009Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:19:33.352Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:19:35.572Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:19:35.841Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:19:35.971Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:19:37.387Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:19:39.718Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:19:39.918Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:19:40.051Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:19:41.420Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:19:43.780Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:19:43.978Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:19:44.113Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:19:45.535Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:19:47.941Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:19:48.177Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:19:48.308Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:19:49.663Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:19:52.011Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:19:52.122Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:19:52.257Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:19:53.854Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:19:56.293Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:19:56.486Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:19:56.492Z Data Quality Check: {"qualityScore":62.5,"issues":0,"validation":"All validations passed"}
+2026-02-21T11:19:56.497Z Input normalization warning: {"original":"Apple","normalized":"Apple","confidence":0.6}
+2026-02-21T11:19:57.257Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:19:58.621Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:20:01.033Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:20:01.218Z fetchCompetitors fail HTTP 500 Cannot find server. <!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Yahoo</title>
+    <meta name="viewport" conte
+2026-02-21T11:20:03.266Z Currency Info: {"companyCurrency":"USD","baseCurrency":"USD"}
+2026-02-21T11:20:03.274Z ML revenue projections: [{"year":2027,"revenue":435617006000,"growthRate":0,"confidence":0},{"year":2028,"revenue":435617006000,"growthRate":0,"confidence":0},{"year":2029,"revenue":435617006000,"growthRate":0,"confidence":0}]
+2026-02-21T11:20:03.297Z ML industry classification: {"industry":"Services","confidence":0.75,"alternatives":[]}
+2026-02-21T11:20:03.303Z Company segmentation: [{"company":"Apple","segment":0,"metrics":{"revenue":435617006000,"marketCap":3888777003000,"ebitdaMargin":35.1,"peRatio":33.45,"revenueGrowth":0.1}}]
+2026-02-21T11:20:03.306Z Anomaly detection: {"clusters":[[-1,1]],"outlierCount":1}
+2026-02-21T11:20:03.318Z PCA results: {"explainedVariance":[1,1.866052384054414e-17],"components":[[0.11132274836971949,0.9937843054181386,8.548210656099135e-12],[0.7288272381556484,0.6846976390512892,8.053754474399506e-9]]}
+2026-02-21T11:20:03.344Z Credit risk prediction: {"risk":"MEDIUM","probability":0.5}
+2026-02-21T11:20:03.351Z Extracted features: {"profitMargin":0.1,"ebitdaMargin":0.35100097079313747,"debtToEquity":0.42857142857142855,"debtToAssets":0.3,"currentRatio":0.3333333333333333,"roe":0.016002717771971677,"roa":0.011201902440380175,"assetTurnover":0.11201902440380174,"equityMultiplier":1.4285714285714286}
+2026-02-21T11:20:03.359Z Sentiment analysis: [{"text":"Strong quarterly earnings beat expectations","sentiment":"positive","confidence":0.8},{"text":"Revenue growth momentum continues","sentiment":"positive","confidence":0.6666666666666671},{"text":"Analysts upgrade to buy rating","sentiment":"positive","confidence":0.5}]
+2026-02-21T11:20:03.364Z Calling N.A.T. AI Assistant for: Apple
+2026-02-21T11:20:03.371Z Calling N.A.T. AI: Provide detailed business intelligence about Apple. Include: 1) Company overview 2) Recent news 3) Industry trends 4) Key competitors 5) Investment outlook
+2026-02-21T11:20:05.481Z NAT response received
+2026-02-21T11:20:05.484Z Calling N.A.T. AI: Latest financial performance, quarterly results, and market sentiment for Apple. Include recent news and analyst opinions.
+2026-02-21T11:20:08.958Z NAT response received
+2026-02-21T11:20:08.960Z N.A.T. Intelligence received
+2026-02-21T11:20:08.962Z run netbot python3 ./scripts/run_netbot.py {"company":"Apple","ticker":"AAPL","region":"global","financials":{"marketCap":{"value":3888777003000,"confidence":60,"sources":["Alpha","NAT"]},"peRatio":{"value":33.45,"confidence":50,"sources":["Alpha"]},"revenue":{"value":435617006000,"confidence":50,"sources":["Alpha"]},"ebitda":{"value":152901992000,"confidence":50,"sources":["Alpha"]},"ebitdaMargin":{"value":35.1,"confidence":60,"sources":["NAT"]},"profitMargin":{"value":null,"confidence":0,"sources":[]},"revenueGrowth":{"value":null,"confidence":0,"sources":[]},"roe":{"value":null,"confidence":0,"sources":[]},"roa":{"value":null,"confidence":0,"sources":[]},"debtEquity":{"value":null,"confidence":0,"sources":[]}},"provenance":["https://companiesmarketcap.com/apple/marketcap/","https://www.advfn.com/stock-market/NASDAQ/AAPL/financials","https://www.marketscreener.com/quote/stock/APPLE-INC-4849/finances/","https://finance.yahoo.com/quote/AAPL/key-statistics/","https://www.financecharts.com/stocks/AAPL/income-statement/ebitda"],"competitors":[]}
+2026-02-21T11:20:09.331Z runNetBot failed Command failed: python3 ./scripts/run_netbot.py {"company":"Apple","ticker":"AAPL","region":"global","financials":{"marketCap":{"value":3888777003000,"confidence":60,"sources":["Alpha","NAT"]},"peRatio":{"value":33.45,"confidence":50,"sources":["Alpha"]},"revenue":{"value":435617006000,"confidence":50,"sources":["Alpha"]},"ebitda":{"value":152901992000,"confidence":50,"sources":["Alpha"]},"ebitdaMargin":{"value":35.1,"confidence":60,"sources":["NAT"]},"profitMargin":{"value":null,"confidence":0,"sources":[]},"revenueGrowth":{"value":null,"confidence":0,"sources":[]},"roe":{"value":null,"confidence":0,"sources":[]},"roa":{"value":null,"confidence":0,"sources":[]},"debtEquity":{"value":null,"confidence":0,"sources":[]}},"provenance":["https://companiesmarketcap.com/apple/marketcap/","https://www.advfn.com/stock-market/NASDAQ/AAPL/financials","https://www.marketscreener.com/quote/stock/APPLE-INC-4849/finances/","https://finance.yahoo.com/quote/AAPL/key-statistics/","https://www.financecharts.com/stocks/AAPL/income-statement/ebitda"],"competitors":[]}
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+
+2026-02-21T11:20:09.333Z analysis netbot failed Command failed: python3 ./scripts/run_netbot.py {"company":"Apple","ticker":"AAPL","region":"global","financials":{"marketCap":{"value":3888777003000,"confidence":60,"sources":["Alpha","NAT"]},"peRatio":{"value":33.45,"confidence":50,"sources":["Alpha"]},"revenue":{"value":435617006000,"confidence":50,"sources":["Alpha"]},"ebitda":{"value":152901992000,"confidence":50,"sources":["Alpha"]},"ebitdaMargin":{"value":35.1,"confidence":60,"sources":["NAT"]},"profitMargin":{"value":null,"confidence":0,"sources":[]},"revenueGrowth":{"value":null,"confidence":0,"sources":[]},"roe":{"value":null,"confidence":0,"sources":[]},"roa":{"value":null,"confidence":0,"sources":[]},"debtEquity":{"value":null,"confidence":0,"sources":[]}},"provenance":["https://companiesmarketcap.com/apple/marketcap/","https://www.advfn.com/stock-market/NASDAQ/AAPL/financials","https://www.marketscreener.com/quote/stock/APPLE-INC-4849/finances/","https://finance.yahoo.com/quote/AAPL/key-statistics/","https://www.financecharts.com/stocks/AAPL/income-statement/ebitda"],"competitors":[]}
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+
+2026-02-21T11:20:09.334Z orchestrator done Apple
+2026-02-21T11:31:02.050Z orchestrator start Tesla global
+2026-02-21T11:31:02.471Z ticker: TSLA
+2026-02-21T11:31:02.476Z Calling N.A.T. AI: Search and provide STRUCTURED financial data for Tesla: 
+        - Current Market Cap (in billions USD)
+        - P/E Ratio
+        - Revenue (in billions USD)
+        - EBITDA (in billions USD)
+        - EBITDA Margin (%)
+        - Revenue Growth (%)
+        - Industry/Sector
+        - Key competitors
+        Format as clean structured data.
+2026-02-21T11:31:02.477Z run crawler: python3 ./scripts/run_crawler.py Tesla
+2026-02-21T11:31:02.618Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:31:02.860Z runPythonCrawler failed Command failed: python3 ./scripts/run_crawler.py Tesla
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+
+2026-02-21T11:31:04.139Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:31:05.984Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:31:06.550Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:31:06.714Z fetchYahooFinancials fail HTTP 401 Unauthorized {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-21T11:31:07.726Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:31:10.375Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:31:10.518Z fetchFromFMP fail HTTP 403 Forbidden {
+  "Error Message": "Legacy Endpoint : Due to Legacy endpoints being no longer supported - This endpoint is only available for legacy users who have valid subscriptions prior August 31, 2025. Please 
+2026-02-21T11:31:32.480Z NAT call failed: This operation was aborted
+2026-02-21T11:31:32.769Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:31:33.969Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:31:36.180Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:31:36.326Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:31:36.525Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:31:37.877Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:31:40.177Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:31:40.343Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:31:40.481Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:31:41.769Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:31:44.091Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:31:44.236Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:31:44.363Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:31:45.653Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:31:47.892Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:31:48.021Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:31:48.159Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:31:49.471Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:31:51.772Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:31:51.920Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:31:52.072Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:31:53.361Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:31:55.701Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:31:55.881Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:31:56.002Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:31:57.286Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:31:59.595Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:31:59.744Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:31:59.879Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:32:01.147Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:32:03.434Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:32:03.602Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:32:03.611Z Data Quality Check: {"qualityScore":47.5,"issues":2,"validation":"WARNINGS: INFO: Very high P/E ratio (384.88)\nWARNINGS: P/E ratio 384.88 extremely high for Default (typical: 10-40)"}
+2026-02-21T11:32:03.618Z Input normalization warning: {"original":"Tesla","normalized":"Tesla","confidence":0.6}
+2026-02-21T11:32:03.916Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:32:05.216Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:32:07.530Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:32:07.707Z fetchCompetitors fail HTTP 500 Cannot find server. <!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Yahoo</title>
+    <meta name="viewport" conte
+2026-02-21T11:32:07.712Z Currency Info: {"companyCurrency":"USD","baseCurrency":"USD"}
+2026-02-21T11:32:07.724Z ML revenue projections: [{"year":2027,"revenue":94827004000,"growthRate":0,"confidence":0},{"year":2028,"revenue":94827004000,"growthRate":0,"confidence":0},{"year":2029,"revenue":94827004000,"growthRate":0,"confidence":0}]
+2026-02-21T11:32:07.726Z ML industry classification: {"industry":"Services","confidence":0.75,"alternatives":[]}
+2026-02-21T11:32:07.730Z Company segmentation: [{"company":"Tesla","segment":0,"metrics":{"revenue":94827004000,"marketCap":1545326559000,"ebitdaMargin":11.08,"peRatio":384.88,"revenueGrowth":0.1}}]
+2026-02-21T11:32:07.733Z Anomaly detection: {"clusters":[[-1,1]],"outlierCount":1}
+2026-02-21T11:32:07.738Z PCA results: {"explainedVariance":[0.9999999999999999,1.1242261455224877e-16],"components":[[0.061248523939641794,0.99812254674224,2.485930262136626e-10],[0.06213744155632879,0.9980676020975903,3.999240067268991e-10]]}
+2026-02-21T11:32:07.761Z Credit risk prediction: {"risk":"LOW","probability":0.24}
+2026-02-21T11:32:07.762Z Extracted features: {"profitMargin":0.1,"ebitdaMargin":0.11075958911451005,"debtToEquity":0.4285714285714286,"debtToAssets":0.3,"currentRatio":0.3333333333333333,"roe":0.008766247352863143,"roa":0.006136373147004199,"assetTurnover":0.06136373147004199,"equityMultiplier":1.4285714285714288}
+2026-02-21T11:32:07.766Z Sentiment analysis: [{"text":"Strong quarterly earnings beat expectations","sentiment":"positive","confidence":0.8},{"text":"Revenue growth momentum continues","sentiment":"positive","confidence":0.6666666666666671},{"text":"Analysts upgrade to buy rating","sentiment":"positive","confidence":0.5}]
+2026-02-21T11:32:07.770Z Calling N.A.T. AI Assistant for: Tesla
+2026-02-21T11:32:07.772Z Calling N.A.T. AI: Provide detailed business intelligence about Tesla. Include: 1) Company overview 2) Recent news 3) Industry trends 4) Key competitors 5) Investment outlook
+2026-02-21T11:32:09.897Z NAT response received
+2026-02-21T11:32:09.898Z Calling N.A.T. AI: Latest financial performance, quarterly results, and market sentiment for Tesla. Include recent news and analyst opinions.
+2026-02-21T11:32:14.039Z NAT response received
+2026-02-21T11:32:14.041Z N.A.T. Intelligence received
+2026-02-21T11:32:14.042Z run netbot python3 ./scripts/run_netbot.py {"company":"Tesla","ticker":"TSLA","region":"global","financials":{"marketCap":{"value":1545326559000,"confidence":50,"sources":["Alpha"]},"peRatio":{"value":384.88,"confidence":50,"sources":["Alpha"]},"revenue":{"value":94827004000,"confidence":50,"sources":["Alpha"]},"ebitda":{"value":10503000000,"confidence":50,"sources":["Alpha"]},"ebitdaMargin":{"value":11.08,"confidence":60,"sources":[]},"profitMargin":{"value":null,"confidence":0,"sources":[]},"revenueGrowth":{"value":null,"confidence":0,"sources":[]},"roe":{"value":null,"confidence":0,"sources":[]},"roa":{"value":null,"confidence":0,"sources":[]},"debtEquity":{"value":null,"confidence":0,"sources":[]}},"provenance":[],"competitors":[]}
+2026-02-21T11:32:14.340Z runNetBot failed Command failed: python3 ./scripts/run_netbot.py {"company":"Tesla","ticker":"TSLA","region":"global","financials":{"marketCap":{"value":1545326559000,"confidence":50,"sources":["Alpha"]},"peRatio":{"value":384.88,"confidence":50,"sources":["Alpha"]},"revenue":{"value":94827004000,"confidence":50,"sources":["Alpha"]},"ebitda":{"value":10503000000,"confidence":50,"sources":["Alpha"]},"ebitdaMargin":{"value":11.08,"confidence":60,"sources":[]},"profitMargin":{"value":null,"confidence":0,"sources":[]},"revenueGrowth":{"value":null,"confidence":0,"sources":[]},"roe":{"value":null,"confidence":0,"sources":[]},"roa":{"value":null,"confidence":0,"sources":[]},"debtEquity":{"value":null,"confidence":0,"sources":[]}},"provenance":[],"competitors":[]}
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+
+2026-02-21T11:32:14.341Z analysis netbot failed Command failed: python3 ./scripts/run_netbot.py {"company":"Tesla","ticker":"TSLA","region":"global","financials":{"marketCap":{"value":1545326559000,"confidence":50,"sources":["Alpha"]},"peRatio":{"value":384.88,"confidence":50,"sources":["Alpha"]},"revenue":{"value":94827004000,"confidence":50,"sources":["Alpha"]},"ebitda":{"value":10503000000,"confidence":50,"sources":["Alpha"]},"ebitdaMargin":{"value":11.08,"confidence":60,"sources":[]},"profitMargin":{"value":null,"confidence":0,"sources":[]},"revenueGrowth":{"value":null,"confidence":0,"sources":[]},"roe":{"value":null,"confidence":0,"sources":[]},"roa":{"value":null,"confidence":0,"sources":[]},"debtEquity":{"value":null,"confidence":0,"sources":[]}},"provenance":[],"competitors":[]}
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+
+2026-02-21T11:32:14.342Z orchestrator done Tesla
+2026-02-21T11:32:51.285Z orchestrator start HUL INDIA
+2026-02-21T11:32:51.602Z ticker: HLM.JO
+2026-02-21T11:32:51.606Z Calling N.A.T. AI: Search and provide STRUCTURED financial data for HUL: 
+        - Current Market Cap (in billions USD)
+        - P/E Ratio
+        - Revenue (in billions USD)
+        - EBITDA (in billions USD)
+        - EBITDA Margin (%)
+        - Revenue Growth (%)
+        - Industry/Sector
+        - Key competitors
+        Format as clean structured data.
+2026-02-21T11:32:51.608Z run crawler: python3 ./scripts/run_crawler.py HUL
+2026-02-21T11:32:51.725Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:32:51.863Z runPythonCrawler failed Command failed: python3 ./scripts/run_crawler.py HUL
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+
+2026-02-21T11:32:52.988Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:32:55.225Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:32:55.399Z fetchYahooFinancials fail HTTP 401 Unauthorized {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-21T11:32:55.408Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:32:55.599Z NAT response received
+2026-02-21T11:32:55.607Z NAT initial search structured data: {"marketCap":null,"peRatio":49.8,"revenue":null,"ebitda":null,"ebitdaMargin":23.7,"revenueGrowth":0.08}
+2026-02-21T11:32:57.280Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:33:00.081Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:33:00.196Z fetchFromFMP fail HTTP 403 Forbidden {
+  "Error Message": "Legacy Endpoint : Due to Legacy endpoints being no longer supported - This endpoint is only available for legacy users who have valid subscriptions prior August 31, 2025. Please 
+2026-02-21T11:33:00.444Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:33:01.707Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:33:04.016Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:33:04.184Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:33:04.315Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:33:05.630Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:33:07.919Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:33:08.100Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:33:08.225Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:33:09.499Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:33:11.786Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:33:11.912Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:33:12.033Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:33:13.273Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:33:15.564Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:33:15.696Z googleCustomSearch fail HTTP 429 Too Many Requests {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'customsearch.googleapis.com' for consumer 'project_number:56453129463'
+2026-02-21T11:33:15.836Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:33:17.124Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:33:19.442Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:33:19.605Z googleCustomSearch fail HTTP 429 Too Many Requests {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'customsearch.googleapis.com' for consumer 'project_number:56453129463'
+2026-02-21T11:33:19.731Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:33:20.999Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:33:23.288Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:33:23.370Z googleCustomSearch fail HTTP 403 Forbidden {
+  "error": {
+    "code": 403,
+    "message": "This project does not have the access to Custom Search JSON API.",
+    "errors": [
+      {
+        "message": "This project does not have the access to 
+2026-02-21T11:33:23.492Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:33:24.721Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:33:27.031Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:33:27.221Z googleCustomSearch fail HTTP 429 Too Many Requests {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'customsearch.googleapis.com' for consumer 'project_number:56453129463'
+2026-02-21T11:33:27.366Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:33:28.663Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:33:30.968Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:33:31.121Z googleCustomSearch fail HTTP 429 Too Many Requests {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'customsearch.googleapis.com' for consumer 'project_number:56453129463'
+2026-02-21T11:33:31.126Z Data Quality Check: {"qualityScore":37.5,"issues":0,"validation":"All validations passed"}
+2026-02-21T11:33:31.129Z WARNING: Data quality below threshold - ML analysis may be unreliable
+2026-02-21T11:33:31.133Z Input normalization warning: {"original":"HUL","normalized":"Hindustan Unilever","confidence":0.75}
+2026-02-21T11:33:31.966Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:33:33.283Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:33:35.583Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:33:35.742Z fetchCompetitors fail HTTP 500 Cannot find server. <!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Yahoo</title>
+    <meta name="viewport" conte
+2026-02-21T11:33:35.745Z Currency Info: {"companyCurrency":"INR","baseCurrency":"INR"}
+2026-02-21T11:33:35.747Z ML industry classification: {"industry":"Services","confidence":0.75,"alternatives":[]}
+2026-02-21T11:33:35.750Z Company segmentation: [{"company":"HUL","segment":0,"metrics":{"revenue":1000000000,"marketCap":1000000000,"ebitdaMargin":23.7,"peRatio":49.8,"revenueGrowth":0.08}}]
+2026-02-21T11:33:35.751Z Anomaly detection: {"clusters":[[-1,1]],"outlierCount":1}
+2026-02-21T11:33:35.754Z PCA results: {"explainedVariance":[0.9976783432184194,0.0023216567815805486],"components":[[0.42841026876919763,0,0.9035843301059973],[0.9035843301059955,0,-0.42841026876920146]]}
+2026-02-21T11:33:35.784Z Credit risk prediction: {"risk":"MEDIUM","probability":0.5}
+2026-02-21T11:33:35.787Z Extracted features: {"profitMargin":0,"ebitdaMargin":0,"debtToEquity":0,"debtToAssets":0,"currentRatio":0,"roe":0,"roa":0,"assetTurnover":0,"equityMultiplier":0}
+2026-02-21T11:33:35.788Z Sentiment analysis: [{"text":"Strong quarterly earnings beat expectations","sentiment":"positive","confidence":0.8},{"text":"Revenue growth momentum continues","sentiment":"positive","confidence":0.6666666666666671},{"text":"Analysts upgrade to buy rating","sentiment":"positive","confidence":0.5}]
+2026-02-21T11:33:35.790Z Calling N.A.T. AI Assistant for: HUL
+2026-02-21T11:33:35.791Z Calling N.A.T. AI: Provide detailed business intelligence about HUL. Include: 1) Company overview 2) Recent news 3) Industry trends 4) Key competitors 5) Investment outlook
+2026-02-21T11:33:38.127Z NAT response received
+2026-02-21T11:33:38.128Z Calling N.A.T. AI: Latest financial performance, quarterly results, and market sentiment for HUL. Include recent news and analyst opinions.
+2026-02-21T11:33:41.790Z NAT response received
+2026-02-21T11:33:41.792Z N.A.T. Intelligence received
+2026-02-21T11:33:41.793Z run netbot python3 ./scripts/run_netbot.py {"company":"HUL","ticker":"HLM.JO","region":"INDIA","financials":{"marketCap":{"value":null,"confidence":0,"sources":[]},"peRatio":{"value":49.8,"confidence":10,"sources":["NAT"]},"revenue":{"value":null,"confidence":0,"sources":[]},"ebitda":{"value":null,"confidence":0,"sources":[]},"ebitdaMargin":{"value":23.7,"confidence":10,"sources":["NAT"]},"profitMargin":{"value":null,"confidence":0,"sources":[]},"revenueGrowth":{"value":0.08,"confidence":10,"sources":["NAT"]},"roe":{"value":null,"confidence":0,"sources":[]},"roa":{"value":null,"confidence":0,"sources":[]},"debtEquity":{"value":null,"confidence":0,"sources":[]}},"provenance":["https://companiesmarketcap.com/eur/hindustan-unilever/marketcap/","https://pitchbook.com/profiles/company/90881-83","https://bsmedia.business-standard.com/_media/bs/data/market-reports/equity-brokertips/2026-02/17709742030.73079000.pdf","https://www.scribd.com/document/860308019/Financial-Statement-analysis-HUL","https://www.screener.in/company/HINDUNILVR/consolidated/"],"competitors":[]}
+2026-02-21T11:33:42.185Z runNetBot failed Command failed: python3 ./scripts/run_netbot.py {"company":"HUL","ticker":"HLM.JO","region":"INDIA","financials":{"marketCap":{"value":null,"confidence":0,"sources":[]},"peRatio":{"value":49.8,"confidence":10,"sources":["NAT"]},"revenue":{"value":null,"confidence":0,"sources":[]},"ebitda":{"value":null,"confidence":0,"sources":[]},"ebitdaMargin":{"value":23.7,"confidence":10,"sources":["NAT"]},"profitMargin":{"value":null,"confidence":0,"sources":[]},"revenueGrowth":{"value":0.08,"confidence":10,"sources":["NAT"]},"roe":{"value":null,"confidence":0,"sources":[]},"roa":{"value":null,"confidence":0,"sources":[]},"debtEquity":{"value":null,"confidence":0,"sources":[]}},"provenance":["https://companiesmarketcap.com/eur/hindustan-unilever/marketcap/","https://pitchbook.com/profiles/company/90881-83","https://bsmedia.business-standard.com/_media/bs/data/market-reports/equity-brokertips/2026-02/17709742030.73079000.pdf","https://www.scribd.com/document/860308019/Financial-Statement-analysis-HUL","https://www.screener.in/company/HINDUNILVR/consolidated/"],"competitors":[]}
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+
+2026-02-21T11:33:42.186Z analysis netbot failed Command failed: python3 ./scripts/run_netbot.py {"company":"HUL","ticker":"HLM.JO","region":"INDIA","financials":{"marketCap":{"value":null,"confidence":0,"sources":[]},"peRatio":{"value":49.8,"confidence":10,"sources":["NAT"]},"revenue":{"value":null,"confidence":0,"sources":[]},"ebitda":{"value":null,"confidence":0,"sources":[]},"ebitdaMargin":{"value":23.7,"confidence":10,"sources":["NAT"]},"profitMargin":{"value":null,"confidence":0,"sources":[]},"revenueGrowth":{"value":0.08,"confidence":10,"sources":["NAT"]},"roe":{"value":null,"confidence":0,"sources":[]},"roa":{"value":null,"confidence":0,"sources":[]},"debtEquity":{"value":null,"confidence":0,"sources":[]}},"provenance":["https://companiesmarketcap.com/eur/hindustan-unilever/marketcap/","https://pitchbook.com/profiles/company/90881-83","https://bsmedia.business-standard.com/_media/bs/data/market-reports/equity-brokertips/2026-02/17709742030.73079000.pdf","https://www.scribd.com/document/860308019/Financial-Statement-analysis-HUL","https://www.screener.in/company/HINDUNILVR/consolidated/"],"competitors":[]}
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+
+2026-02-21T11:33:42.188Z orchestrator done HUL
+2026-02-21T11:34:05.004Z orchestrator start UnknownCompany123 global
+2026-02-21T11:34:06.589Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:34:08.081Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:34:10.650Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:34:10.841Z serpApiSearchOne fail HTTP 429 Too Many Requests {
+  "error": "Your account has run out of searches."
+}
+2026-02-21T11:34:10.844Z ticker: UnknownCompany123
+2026-02-21T11:34:10.856Z Calling N.A.T. AI: Search and provide STRUCTURED financial data for UnknownCompany123: 
+        - Current Market Cap (in billions USD)
+        - P/E Ratio
+        - Revenue (in billions USD)
+        - EBITDA (in billions USD)
+        - EBITDA Margin (%)
+        - Revenue Growth (%)
+        - Industry/Sector
+        - Key competitors
+        Format as clean structured data.
+2026-02-21T11:34:10.859Z run crawler: python3 ./scripts/run_crawler.py UnknownCompany123
+2026-02-21T11:34:11.305Z runPythonCrawler failed Command failed: python3 ./scripts/run_crawler.py UnknownCompany123
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+
+2026-02-21T11:34:11.463Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:34:12.764Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:34:14.796Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:34:15.118Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:34:15.293Z fetchYahooFinancials fail HTTP 401 Unauthorized {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-21T11:34:16.458Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:34:16.993Z NAT response received
+2026-02-21T11:34:16.994Z NAT initial search structured data: {"marketCap":null,"peRatio":null,"revenue":null,"ebitda":null,"ebitdaMargin":null,"revenueGrowth":null}
+2026-02-21T11:34:18.946Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:34:19.127Z fetchFromFMP fail HTTP 403 Forbidden {
+  "Error Message": "Legacy Endpoint : Due to Legacy endpoints being no longer supported - This endpoint is only available for legacy users who have valid subscriptions prior August 31, 2025. Please 
+2026-02-21T11:34:19.403Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:34:20.689Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:34:23.005Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:34:23.150Z googleCustomSearch fail HTTP 429 Too Many Requests {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'customsearch.googleapis.com' for consumer 'project_number:56453129463'
+2026-02-21T11:34:23.277Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:34:24.573Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:34:26.866Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:34:26.956Z googleCustomSearch fail HTTP 429 Too Many Requests {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'customsearch.googleapis.com' for consumer 'project_number:56453129463'
+2026-02-21T11:34:27.079Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:34:28.380Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:34:30.685Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:34:30.895Z googleCustomSearch fail HTTP 429 Too Many Requests {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'customsearch.googleapis.com' for consumer 'project_number:56453129463'
+2026-02-21T11:34:31.012Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:34:32.305Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:34:34.604Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:34:34.740Z googleCustomSearch fail HTTP 429 Too Many Requests {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'customsearch.googleapis.com' for consumer 'project_number:56453129463'
+2026-02-21T11:34:34.868Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:34:36.170Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:34:38.487Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:34:38.649Z googleCustomSearch fail HTTP 429 Too Many Requests {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'customsearch.googleapis.com' for consumer 'project_number:56453129463'
+2026-02-21T11:34:38.782Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:34:40.062Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:34:42.339Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:34:42.502Z googleCustomSearch fail HTTP 429 Too Many Requests {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'customsearch.googleapis.com' for consumer 'project_number:56453129463'
+2026-02-21T11:34:42.637Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:34:43.922Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:34:46.312Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:34:46.504Z googleCustomSearch fail HTTP 429 Too Many Requests {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'customsearch.googleapis.com' for consumer 'project_number:56453129463'
+2026-02-21T11:34:46.622Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:34:47.921Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:34:50.167Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:34:50.333Z googleCustomSearch fail HTTP 429 Too Many Requests {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'customsearch.googleapis.com' for consumer 'project_number:56453129463'
+2026-02-21T11:34:50.337Z Data Quality Check: {"qualityScore":0,"issues":0,"validation":"All validations passed"}
+2026-02-21T11:34:50.342Z WARNING: Data quality below threshold - ML analysis may be unreliable
+2026-02-21T11:34:50.351Z Input normalization warning: {"original":"UnknownCompany123","normalized":"UnknownCompany123","confidence":0.6}
+2026-02-21T11:34:50.694Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:34:52.096Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:34:54.478Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:34:54.583Z fetchCompetitors fail HTTP 500 Cannot find server. <!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Yahoo</title>
+    <meta name="viewport" conte
+2026-02-21T11:34:54.587Z Currency Info: {"companyCurrency":"USD","baseCurrency":"USD"}
+2026-02-21T11:34:54.590Z ML industry classification: {"industry":"Services","confidence":0.75,"alternatives":[]}
+2026-02-21T11:34:54.592Z Company segmentation: [{"company":"UnknownCompany123","segment":0,"metrics":{"revenue":1000000000,"marketCap":1000000000,"ebitdaMargin":10,"peRatio":20,"revenueGrowth":0.1}}]
+2026-02-21T11:34:54.593Z Anomaly detection: {"clusters":[[-1,1]],"outlierCount":1}
+2026-02-21T11:34:54.598Z Credit risk prediction: {"risk":"MEDIUM","probability":0.5}
+2026-02-21T11:34:54.599Z Extracted features: {"profitMargin":0,"ebitdaMargin":0,"debtToEquity":0,"debtToAssets":0,"currentRatio":0,"roe":0,"roa":0,"assetTurnover":0,"equityMultiplier":0}
+2026-02-21T11:34:54.600Z Sentiment analysis: [{"text":"Strong quarterly earnings beat expectations","sentiment":"positive","confidence":0.8},{"text":"Revenue growth momentum continues","sentiment":"positive","confidence":0.6666666666666671},{"text":"Analysts upgrade to buy rating","sentiment":"positive","confidence":0.5}]
+2026-02-21T11:34:54.600Z Calling N.A.T. AI Assistant for: UnknownCompany123
+2026-02-21T11:34:54.601Z Calling N.A.T. AI: Provide detailed business intelligence about UnknownCompany123. Include: 1) Company overview 2) Recent news 3) Industry trends 4) Key competitors 5) Investment outlook
+2026-02-21T11:34:55.670Z NAT response received
+2026-02-21T11:34:55.671Z Calling N.A.T. AI: Latest financial performance, quarterly results, and market sentiment for UnknownCompany123. Include recent news and analyst opinions.
+2026-02-21T11:34:58.513Z NAT response received
+2026-02-21T11:34:58.514Z N.A.T. Intelligence received
+2026-02-21T11:34:58.515Z run netbot python3 ./scripts/run_netbot.py {"company":"UnknownCompany123","ticker":"UnknownCompany123","region":"global","financials":{"marketCap":{"value":null,"confidence":0,"sources":[]},"peRatio":{"value":null,"confidence":0,"sources":[]},"revenue":{"value":null,"confidence":0,"sources":[]},"ebitda":{"value":null,"confidence":0,"sources":[]},"ebitdaMargin":{"value":null,"confidence":0,"sources":[]},"profitMargin":{"value":null,"confidence":0,"sources":[]},"revenueGrowth":{"value":null,"confidence":0,"sources":[]},"roe":{"value":null,"confidence":0,"sources":[]},"roa":{"value":null,"confidence":0,"sources":[]},"debtEquity":{"value":null,"confidence":0,"sources":[]}},"provenance":["https://www.gurufocus.com/term/ebitda-margin/UNTC","https://www.gurufocus.com/news/8629468/kalu-forecasts-revenue-and-ebitda-growth-for-2026","https://portfoliopilot.com/explore/stock-screener/large-cap-stocks-with-revenue-in-billions","http://www.lomonbillions.global/wp-content/uploads/2018/03/Lomon-Billions-DB-China-Chemical-and-Coatings-Field-Trip-March-2018.pdf","https://companyfinancials.org/finance/BHFAO"],"competitors":[]}
+2026-02-21T11:34:58.854Z runNetBot failed Command failed: python3 ./scripts/run_netbot.py {"company":"UnknownCompany123","ticker":"UnknownCompany123","region":"global","financials":{"marketCap":{"value":null,"confidence":0,"sources":[]},"peRatio":{"value":null,"confidence":0,"sources":[]},"revenue":{"value":null,"confidence":0,"sources":[]},"ebitda":{"value":null,"confidence":0,"sources":[]},"ebitdaMargin":{"value":null,"confidence":0,"sources":[]},"profitMargin":{"value":null,"confidence":0,"sources":[]},"revenueGrowth":{"value":null,"confidence":0,"sources":[]},"roe":{"value":null,"confidence":0,"sources":[]},"roa":{"value":null,"confidence":0,"sources":[]},"debtEquity":{"value":null,"confidence":0,"sources":[]}},"provenance":["https://www.gurufocus.com/term/ebitda-margin/UNTC","https://www.gurufocus.com/news/8629468/kalu-forecasts-revenue-and-ebitda-growth-for-2026","https://portfoliopilot.com/explore/stock-screener/large-cap-stocks-with-revenue-in-billions","http://www.lomonbillions.global/wp-content/uploads/2018/03/Lomon-Billions-DB-China-Chemical-and-Coatings-Field-Trip-March-2018.pdf","https://companyfinancials.org/finance/BHFAO"],"competitors":[]}
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+
+2026-02-21T11:34:58.856Z analysis netbot failed Command failed: python3 ./scripts/run_netbot.py {"company":"UnknownCompany123","ticker":"UnknownCompany123","region":"global","financials":{"marketCap":{"value":null,"confidence":0,"sources":[]},"peRatio":{"value":null,"confidence":0,"sources":[]},"revenue":{"value":null,"confidence":0,"sources":[]},"ebitda":{"value":null,"confidence":0,"sources":[]},"ebitdaMargin":{"value":null,"confidence":0,"sources":[]},"profitMargin":{"value":null,"confidence":0,"sources":[]},"revenueGrowth":{"value":null,"confidence":0,"sources":[]},"roe":{"value":null,"confidence":0,"sources":[]},"roa":{"value":null,"confidence":0,"sources":[]},"debtEquity":{"value":null,"confidence":0,"sources":[]}},"provenance":["https://www.gurufocus.com/term/ebitda-margin/UNTC","https://www.gurufocus.com/news/8629468/kalu-forecasts-revenue-and-ebitda-growth-for-2026","https://portfoliopilot.com/explore/stock-screener/large-cap-stocks-with-revenue-in-billions","http://www.lomonbillions.global/wp-content/uploads/2018/03/Lomon-Billions-DB-China-Chemical-and-Coatings-Field-Trip-March-2018.pdf","https://companyfinancials.org/finance/BHFAO"],"competitors":[]}
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+
+2026-02-21T11:34:58.857Z orchestrator done UnknownCompany123
+2026-02-21T11:56:09.230Z orchestrator start Apple global
+2026-02-21T11:56:09.231Z ticker: AAPL
+2026-02-21T11:56:09.257Z Calling N.A.T. AI: Search and provide STRUCTURED financial data for Apple: 
+        - Current Market Cap (in billions USD)
+        - P/E Ratio
+        - Revenue (in billions USD)
+        - EBITDA (in billions USD)
+        - EBITDA Margin (%)
+        - Revenue Growth (%)
+        - Industry/Sector
+        - Key competitors
+        Format as clean structured data.
+2026-02-21T11:56:09.497Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:56:10.789Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:56:12.992Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:56:13.132Z fetchYahooFinancials fail HTTP 401 Unauthorized {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-21T11:56:39.270Z NAT call failed: This operation was aborted
+2026-02-21T11:56:39.271Z FMP validation: PASS (confidence: 70%)
+2026-02-21T11:56:39.272Z Alpha validation: PASS (confidence: 70%)
+2026-02-21T11:56:39.273Z Data Quality Check: {"qualityScore":62.5,"issues":0,"validation":"All validations passed"}
+2026-02-21T11:56:39.276Z Input normalization warning: {"original":"Apple","normalized":"Apple","confidence":0.6}
+2026-02-21T11:56:39.659Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:56:40.932Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:56:43.149Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:56:43.312Z fetchCompetitors fail HTTP 500 Cannot find server. <!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Yahoo</title>
+    <meta name="viewport" conte
+2026-02-21T11:56:43.315Z Currency Info: {"companyCurrency":"USD","baseCurrency":"USD"}
+2026-02-21T11:56:43.318Z ML revenue projections: [{"year":2027,"revenue":435617006000,"growthRate":0,"confidence":0},{"year":2028,"revenue":435617006000,"growthRate":0,"confidence":0},{"year":2029,"revenue":435617006000,"growthRate":0,"confidence":0}]
+2026-02-21T11:56:43.321Z ML industry classification: {"industry":"Services","confidence":0.75,"alternatives":[]}
+2026-02-21T11:56:43.325Z Company segmentation: [{"company":"Apple","segment":0,"metrics":{"revenue":435617006000,"marketCap":3888777002850,"ebitdaMargin":35.1,"peRatio":33.45,"revenueGrowth":0.1}}]
+2026-02-21T11:56:43.327Z Anomaly detection: {"clusters":[[-1,1]],"outlierCount":1}
+2026-02-21T11:56:43.334Z PCA results: {"explainedVariance":[1.0000000000000002,-2.9024099657489702e-16],"components":[[0.1113227483739603,0.9937843054176636,8.548210656424776e-12],[0.18229378200357965,0.9832441085726531,-5.0307047618854885e-11]]}
+2026-02-21T11:56:43.354Z Credit risk prediction: {"risk":"MEDIUM","probability":0.5}
+2026-02-21T11:56:43.355Z Extracted features: {"profitMargin":0.1,"ebitdaMargin":0.35100097079313747,"debtToEquity":0.42857142857142855,"debtToAssets":0.3,"currentRatio":0.3333333333333333,"roe":0.016002717772588944,"roa":0.01120190244081226,"assetTurnover":0.1120190244081226,"equityMultiplier":1.4285714285714286}
+2026-02-21T11:56:43.357Z Sentiment analysis: [{"text":"Strong quarterly earnings beat expectations","sentiment":"positive","confidence":0.8},{"text":"Revenue growth momentum continues","sentiment":"positive","confidence":0.6666666666666671},{"text":"Analysts upgrade to buy rating","sentiment":"positive","confidence":0.5}]
+2026-02-21T11:56:43.362Z Calling N.A.T. AI Assistant for: Apple
+2026-02-21T11:56:43.364Z Calling N.A.T. AI: Provide detailed business intelligence about Apple. Include: 1) Company overview 2) Recent news 3) Industry trends 4) Key competitors 5) Investment outlook
+2026-02-21T11:57:13.376Z NAT call failed: This operation was aborted
+2026-02-21T11:57:13.378Z Calling N.A.T. AI: Latest financial performance, quarterly results, and market sentiment for Apple. Include recent news and analyst opinions.
+2026-02-21T11:57:23.622Z NAT response received
+2026-02-21T11:57:23.625Z N.A.T. Intelligence received
+2026-02-21T11:57:23.626Z orchestrator done Apple
+2026-02-21T11:58:47.971Z orchestrator start TCS INDIA
+2026-02-21T11:58:47.973Z ticker: TCS.NS
+2026-02-21T11:58:48.018Z Calling N.A.T. AI: Search and provide STRUCTURED financial data for TCS: 
+        - Current Market Cap (in billions USD)
+        - P/E Ratio
+        - Revenue (in billions USD)
+        - EBITDA (in billions USD)
+        - EBITDA Margin (%)
+        - Revenue Growth (%)
+        - Industry/Sector
+        - Key competitors
+        Format as clean structured data.
+2026-02-21T11:58:58.026Z fetchFromNSEIndia fail The operation was aborted due to timeout
+2026-02-21T11:58:58.663Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:58:58.855Z NAT call failed: fetch failed
+2026-02-21T11:58:58.856Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:59:03.020Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:59:05.041Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:59:08.726Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:59:08.885Z fetchYahooFinancials fail HTTP 401 Unauthorized {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-21T11:59:09.820Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:59:12.425Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:59:12.595Z fetchFromFMP fail HTTP 402 Payment Required Premium Query Parameter: 'Special Endpoint : This value set for 'symbol' is not available under your current subscription please visit our subscription page to upgrade your plan at https://financialmo
+2026-02-21T11:59:12.597Z Alpha validation: PASS (confidence: 50%)
+2026-02-21T11:59:12.598Z Low confidence data - attempting SERP fallback
+2026-02-21T11:59:23.294Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:59:24.957Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:59:28.603Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:59:28.752Z googleCustomSearch fail HTTP 429 Too Many Requests {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'customsearch.googleapis.com' for consumer 'project_number:56453129463'
+2026-02-21T11:59:29.152Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:59:31.209Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:59:34.115Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:59:34.241Z googleCustomSearch fail HTTP 429 Too Many Requests {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'customsearch.googleapis.com' for consumer 'project_number:56453129463'
+2026-02-21T11:59:34.929Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:59:37.483Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:59:40.305Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:59:40.440Z googleCustomSearch fail HTTP 429 Too Many Requests {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'customsearch.googleapis.com' for consumer 'project_number:56453129463'
+2026-02-21T11:59:40.584Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:59:41.861Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:59:44.135Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:59:44.214Z googleCustomSearch fail HTTP 429 Too Many Requests {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'customsearch.googleapis.com' for consumer 'project_number:56453129463'
+2026-02-21T11:59:44.418Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:59:45.630Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:59:47.895Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:59:48.023Z googleCustomSearch fail HTTP 429 Too Many Requests {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'customsearch.googleapis.com' for consumer 'project_number:56453129463'
+2026-02-21T11:59:48.177Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:59:49.458Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:59:51.819Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:59:51.970Z googleCustomSearch fail HTTP 429 Too Many Requests {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'customsearch.googleapis.com' for consumer 'project_number:56453129463'
+2026-02-21T11:59:51.977Z Data Quality Check: {"qualityScore":0,"issues":0,"validation":"All validations passed"}
+2026-02-21T11:59:51.978Z WARNING: Data quality below threshold - ML analysis may be unreliable
+2026-02-21T11:59:51.981Z Input normalization warning: {"original":"TCS","normalized":"Tata Consultancy Services","confidence":0.75}
+2026-02-21T11:59:52.504Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T11:59:53.883Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T11:59:57.049Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T11:59:57.193Z fetchCompetitors fail HTTP 500 Cannot find server. <!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Yahoo</title>
+    <meta name="viewport" conte
+2026-02-21T11:59:57.197Z Currency Info: {"companyCurrency":"INR","baseCurrency":"INR"}
+2026-02-21T11:59:57.200Z ML industry classification: {"industry":"Services","confidence":0.75,"alternatives":[]}
+2026-02-21T11:59:57.203Z Company segmentation: [{"company":"TCS","segment":0,"metrics":{"revenue":1000000000,"marketCap":1000000000,"ebitdaMargin":10,"peRatio":20,"revenueGrowth":0.1}}]
+2026-02-21T11:59:57.206Z Anomaly detection: {"clusters":[[-1,1]],"outlierCount":1}
+2026-02-21T11:59:57.226Z Credit risk prediction: {"risk":"MEDIUM","probability":0.5}
+2026-02-21T11:59:57.228Z Extracted features: {"profitMargin":0,"ebitdaMargin":0,"debtToEquity":0,"debtToAssets":0,"currentRatio":0,"roe":0,"roa":0,"assetTurnover":0,"equityMultiplier":0}
+2026-02-21T11:59:57.232Z Sentiment analysis: [{"text":"Strong quarterly earnings beat expectations","sentiment":"positive","confidence":0.8},{"text":"Revenue growth momentum continues","sentiment":"positive","confidence":0.6666666666666671},{"text":"Analysts upgrade to buy rating","sentiment":"positive","confidence":0.5}]
+2026-02-21T11:59:57.240Z Calling N.A.T. AI Assistant for: TCS
+2026-02-21T11:59:57.242Z Calling N.A.T. AI: Provide detailed business intelligence about TCS. Include: 1) Company overview 2) Recent news 3) Industry trends 4) Key competitors 5) Investment outlook
+2026-02-21T12:00:00.317Z NAT response received
+2026-02-21T12:00:00.318Z Calling N.A.T. AI: Latest financial performance, quarterly results, and market sentiment for TCS. Include recent news and analyst opinions.
+2026-02-21T12:00:05.273Z NAT response received
+2026-02-21T12:00:05.274Z N.A.T. Intelligence received
+2026-02-21T12:00:05.275Z orchestrator done TCS
+2026-02-21T12:13:02.531Z orchestrator start TCS INDIA
+2026-02-21T12:13:02.534Z ticker: TCS.NS
+2026-02-21T12:13:02.562Z Calling N.A.T. AI: Search and provide STRUCTURED financial data for TCS: 
+        - Current Market Cap (in billions USD)
+        - P/E Ratio
+        - Revenue (in billions USD)
+        - EBITDA (in billions USD)
+        - EBITDA Margin (%)
+        - Revenue Growth (%)
+        - Industry/Sector
+        - Key competitors
+        Format as clean structured data.
+2026-02-21T12:13:02.623Z NSE India instance created
+2026-02-21T12:13:02.624Z Fetching NSE data for: TCS
+2026-02-21T12:13:03.052Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T12:13:04.152Z NSE data received for TCS: {"info":{"symbol":"TCS","companyName":"Tata Consultancy Services Limited","industry":"Computers - Software & Consulting","activeSeries":["EQ","T0"],"debtSeries":[],"isFNOSec":true,"isCASec":false,"isS
+2026-02-21T12:13:04.538Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T12:13:05.695Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T12:13:06.774Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T12:13:06.841Z fetchYahooFinancials fail HTTP 401 Unauthorized {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-21T12:13:07.172Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T12:13:09.712Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T12:13:09.879Z fetchFromFMP fail HTTP 402 Payment Required Premium Query Parameter: 'Special Endpoint : This value set for 'symbol' is not available under your current subscription please visit our subscription page to upgrade your plan at https://financialmo
+2026-02-21T12:13:32.566Z NAT call failed: This operation was aborted
+2026-02-21T12:13:32.567Z Alpha validation: PASS (confidence: 50%)
+2026-02-21T12:13:32.568Z NSE validation: PASS (confidence: 50%)
+2026-02-21T12:13:32.568Z Low confidence data - attempting SERP fallback
+2026-02-21T12:13:32.871Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T12:13:34.109Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T12:13:36.354Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T12:13:36.507Z googleCustomSearch fail HTTP 429 Too Many Requests {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'customsearch.googleapis.com' for consumer 'project_number:56453129463'
+2026-02-21T12:13:36.630Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T12:13:37.956Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T12:13:40.295Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T12:13:40.452Z googleCustomSearch fail HTTP 429 Too Many Requests {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'customsearch.googleapis.com' for consumer 'project_number:56453129463'
+2026-02-21T12:13:40.594Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T12:13:41.915Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T12:13:44.197Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T12:13:44.332Z googleCustomSearch fail HTTP 429 Too Many Requests {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'customsearch.googleapis.com' for consumer 'project_number:56453129463'
+2026-02-21T12:13:44.476Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T12:13:45.794Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T12:13:48.077Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T12:13:48.215Z googleCustomSearch fail HTTP 429 Too Many Requests {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'customsearch.googleapis.com' for consumer 'project_number:56453129463'
+2026-02-21T12:13:48.356Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T12:13:49.635Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T12:13:51.833Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T12:13:51.971Z googleCustomSearch fail HTTP 429 Too Many Requests {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'customsearch.googleapis.com' for consumer 'project_number:56453129463'
+2026-02-21T12:13:52.201Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T12:13:54.977Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T12:13:58.405Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T12:13:58.535Z googleCustomSearch fail HTTP 429 Too Many Requests {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'customsearch.googleapis.com' for consumer 'project_number:56453129463'
+2026-02-21T12:13:58.545Z Data Quality Check: {"qualityScore":0,"issues":0,"validation":"All validations passed"}
+2026-02-21T12:13:58.546Z WARNING: Data quality below threshold - ML analysis may be unreliable
+2026-02-21T12:13:58.551Z Input normalization warning: {"original":"TCS","normalized":"Tata Consultancy Services","confidence":0.75}
+2026-02-21T12:14:06.466Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T12:14:09.288Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T12:14:12.851Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T12:14:12.991Z fetchCompetitors fail HTTP 500 Cannot find server. <!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Yahoo</title>
+    <meta name="viewport" conte
+2026-02-21T12:14:13.005Z Currency Info: {"companyCurrency":"INR","baseCurrency":"INR"}
+2026-02-21T12:14:13.010Z ML industry classification: {"industry":"Services","confidence":0.75,"alternatives":[]}
+2026-02-21T12:14:13.013Z Company segmentation: [{"company":"TCS","segment":0,"metrics":{"revenue":1000000000,"marketCap":1000000000,"ebitdaMargin":10,"peRatio":20,"revenueGrowth":0.1}}]
+2026-02-21T12:14:13.015Z Anomaly detection: {"clusters":[[-1,1]],"outlierCount":1}
+2026-02-21T12:14:13.050Z Credit risk prediction: {"risk":"MEDIUM","probability":0.37}
+2026-02-21T12:14:13.052Z Extracted features: {"profitMargin":0,"ebitdaMargin":0,"debtToEquity":0,"debtToAssets":0,"currentRatio":0,"roe":0,"roa":0,"assetTurnover":0,"equityMultiplier":0}
+2026-02-21T12:14:13.056Z Sentiment analysis: [{"text":"Strong quarterly earnings beat expectations","sentiment":"positive","confidence":0.8},{"text":"Revenue growth momentum continues","sentiment":"positive","confidence":0.6666666666666671},{"text":"Analysts upgrade to buy rating","sentiment":"positive","confidence":0.5}]
+2026-02-21T12:14:13.059Z Calling N.A.T. AI Assistant for: TCS
+2026-02-21T12:14:13.060Z Calling N.A.T. AI: Provide detailed business intelligence about TCS. Include: 1) Company overview 2) Recent news 3) Industry trends 4) Key competitors 5) Investment outlook
+2026-02-21T12:14:27.869Z NAT response received
+2026-02-21T12:14:27.870Z Calling N.A.T. AI: Latest financial performance, quarterly results, and market sentiment for TCS. Include recent news and analyst opinions.
+2026-02-21T12:14:32.953Z NAT response received
+2026-02-21T12:14:32.954Z N.A.T. Intelligence received
+2026-02-21T12:14:32.955Z orchestrator done TCS
+2026-02-21T12:17:45.224Z orchestrator start INFY INDIA
+2026-02-21T12:17:46.297Z ticker: INFY.NS
+2026-02-21T12:17:46.305Z Calling N.A.T. AI: Search and provide STRUCTURED financial data for INFY: 
+        - Current Market Cap (in billions USD)
+        - P/E Ratio
+        - Revenue (in billions USD)
+        - EBITDA (in billions USD)
+        - EBITDA Margin (%)
+        - Revenue Growth (%)
+        - Industry/Sector
+        - Key competitors
+        Format as clean structured data.
+2026-02-21T12:17:46.419Z NSE India instance created
+2026-02-21T12:17:46.420Z Fetching NSE data for: INFY
+2026-02-21T12:17:46.451Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T12:17:48.015Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T12:17:48.222Z NSE data received for INFY: {"info":{"symbol":"INFY","companyName":"Infosys Limited","industry":"Computers - Software & Consulting","activeSeries":["EQ","T0"],"debtSeries":[],"isFNOSec":true,"isCASec":false,"isSLBSec":true,"isDe
+2026-02-21T12:17:49.857Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T12:17:50.314Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T12:17:50.502Z fetchYahooFinancials fail HTTP 401 Unauthorized {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-21T12:17:51.350Z NAT response received
+2026-02-21T12:17:51.351Z NAT initial search structured data: {"marketCap":null,"peRatio":null,"revenue":null,"ebitda":null,"ebitdaMargin":null,"revenueGrowth":null}
+2026-02-21T12:17:51.464Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T12:17:54.169Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T12:17:54.295Z fetchFromFMP fail HTTP 402 Payment Required Premium Query Parameter: 'Special Endpoint : This value set for 'symbol' is not available under your current subscription please visit our subscription page to upgrade your plan at https://financialmo
+2026-02-21T12:17:54.297Z Alpha validation: PASS (confidence: 50%)
+2026-02-21T12:17:54.298Z NSE validation: PASS (confidence: 50%)
+2026-02-21T12:17:54.299Z Low confidence data - attempting SERP fallback
+2026-02-21T12:17:54.937Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T12:17:56.247Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T12:17:58.540Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T12:17:58.675Z googleCustomSearch fail HTTP 429 Too Many Requests {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'customsearch.googleapis.com' for consumer 'project_number:56453129463'
+2026-02-21T12:17:58.806Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T12:18:00.087Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T12:18:02.372Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T12:18:02.534Z googleCustomSearch fail HTTP 429 Too Many Requests {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'customsearch.googleapis.com' for consumer 'project_number:56453129463'
+2026-02-21T12:18:02.688Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T12:18:03.989Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T12:18:06.289Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T12:18:06.418Z googleCustomSearch fail HTTP 429 Too Many Requests {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'customsearch.googleapis.com' for consumer 'project_number:56453129463'
+2026-02-21T12:18:06.570Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T12:18:07.864Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T12:18:10.171Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T12:18:10.306Z googleCustomSearch fail HTTP 429 Too Many Requests {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'customsearch.googleapis.com' for consumer 'project_number:56453129463'
+2026-02-21T12:18:10.448Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T12:18:11.730Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T12:18:14.012Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T12:18:14.144Z googleCustomSearch fail HTTP 429 Too Many Requests {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'customsearch.googleapis.com' for consumer 'project_number:56453129463'
+2026-02-21T12:18:14.331Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T12:18:15.644Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T12:18:17.893Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T12:18:18.029Z googleCustomSearch fail HTTP 429 Too Many Requests {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'customsearch.googleapis.com' for consumer 'project_number:56453129463'
+2026-02-21T12:18:18.032Z Data Quality Check: {"qualityScore":0,"issues":0,"validation":"All validations passed"}
+2026-02-21T12:18:18.033Z WARNING: Data quality below threshold - ML analysis may be unreliable
+2026-02-21T12:18:18.038Z Input normalization warning: {"original":"INFY","normalized":"INFY","confidence":0.6}
+2026-02-21T12:18:18.614Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T12:18:19.934Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T12:18:22.281Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T12:18:22.422Z fetchCompetitors fail HTTP 500 Cannot find server. <!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Yahoo</title>
+    <meta name="viewport" conte
+2026-02-21T12:18:22.425Z Currency Info: {"companyCurrency":"INR","baseCurrency":"INR"}
+2026-02-21T12:18:22.428Z ML industry classification: {"industry":"Services","confidence":0.75,"alternatives":[]}
+2026-02-21T12:18:22.430Z Company segmentation: [{"company":"INFY","segment":0,"metrics":{"revenue":1000000000,"marketCap":1000000000,"ebitdaMargin":10,"peRatio":20,"revenueGrowth":0.1}}]
+2026-02-21T12:18:22.431Z Anomaly detection: {"clusters":[[-1,1]],"outlierCount":1}
+2026-02-21T12:18:22.448Z Credit risk prediction: {"risk":"HIGH","probability":0.83}
+2026-02-21T12:18:22.455Z Extracted features: {"profitMargin":0,"ebitdaMargin":0,"debtToEquity":0,"debtToAssets":0,"currentRatio":0,"roe":0,"roa":0,"assetTurnover":0,"equityMultiplier":0}
+2026-02-21T12:18:22.457Z Sentiment analysis: [{"text":"Strong quarterly earnings beat expectations","sentiment":"positive","confidence":0.8},{"text":"Revenue growth momentum continues","sentiment":"positive","confidence":0.6666666666666671},{"text":"Analysts upgrade to buy rating","sentiment":"positive","confidence":0.5}]
+2026-02-21T12:18:22.459Z Calling N.A.T. AI Assistant for: INFY
+2026-02-21T12:18:22.461Z Calling N.A.T. AI: Provide detailed business intelligence about INFY. Include: 1) Company overview 2) Recent news 3) Industry trends 4) Key competitors 5) Investment outlook
+2026-02-21T12:18:25.428Z NAT response received
+2026-02-21T12:18:25.429Z Calling N.A.T. AI: Latest financial performance, quarterly results, and market sentiment for INFY. Include recent news and analyst opinions.
+2026-02-21T12:18:29.021Z NAT response received
+2026-02-21T12:18:29.023Z N.A.T. Intelligence received
+2026-02-21T12:18:29.024Z orchestrator done INFY
+2026-02-21T12:28:10.768Z orchestrator start Microsoft global
+2026-02-21T12:28:11.371Z ticker: MSFT
+2026-02-21T12:28:11.376Z Calling N.A.T. AI: Search and provide STRUCTURED financial data for Microsoft: 
+        - Current Market Cap (in billions USD)
+        - P/E Ratio
+        - Revenue (in billions USD)
+        - EBITDA (in billions USD)
+        - EBITDA Margin (%)
+        - Revenue Growth (%)
+        - Industry/Sector
+        - Key competitors
+        Format as clean structured data.
+2026-02-21T12:28:11.472Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T12:28:12.698Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T12:28:14.874Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T12:28:15.025Z fetchYahooFinancials fail HTTP 401 Unauthorized {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-21T12:28:15.179Z NAT response received
+2026-02-21T12:28:15.181Z NAT initial search structured data: {"marketCap":null,"peRatio":null,"revenue":null,"ebitda":null,"ebitdaMargin":null,"revenueGrowth":null}
+2026-02-21T12:28:15.182Z FMP validation: PASS (confidence: 70%)
+2026-02-21T12:28:15.184Z Alpha validation: PASS (confidence: 70%)
+2026-02-21T12:28:15.188Z Data Quality Check: {"qualityScore":62.5,"issues":0,"validation":"All validations passed"}
+2026-02-21T12:28:15.191Z Input normalization warning: {"original":"Microsoft","normalized":"Microsoft","confidence":0.6}
+2026-02-21T12:28:15.328Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T12:28:16.706Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T12:28:19.009Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T12:28:19.175Z fetchCompetitors fail HTTP 500 Cannot find server. <!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Yahoo</title>
+    <meta name="viewport" conte
+2026-02-21T12:28:20.018Z Currency Info: {"companyCurrency":"USD","baseCurrency":"USD"}
+2026-02-21T12:28:20.021Z ML revenue projections: [{"year":2027,"revenue":305453007000,"growthRate":0,"confidence":0},{"year":2028,"revenue":305453007000,"growthRate":0,"confidence":0},{"year":2029,"revenue":305453007000,"growthRate":0,"confidence":0}]
+2026-02-21T12:28:20.023Z ML industry classification: {"industry":"Services","confidence":0.75,"alternatives":[]}
+2026-02-21T12:28:20.025Z Company segmentation: [{"company":"Microsoft","segment":0,"metrics":{"revenue":305453007000,"marketCap":2952363508000,"ebitdaMargin":57.38,"peRatio":24.87,"revenueGrowth":0.1}}]
+2026-02-21T12:28:20.026Z Anomaly detection: {"clusters":[[-1,1]],"outlierCount":1}
+2026-02-21T12:28:20.032Z PCA results: {"explainedVariance":[1.0000000000000002,-2.447106098863635e-16],"components":[[0.10291118234695892,0.9946905491397569,8.379033913024244e-12],[0.06213744155632878,0.9980676020975903,7.861271664598453e-11]]}
+2026-02-21T12:28:20.044Z Credit risk prediction: {"risk":"MEDIUM","probability":0.5}
+2026-02-21T12:28:20.045Z Extracted features: {"profitMargin":0.1,"ebitdaMargin":0.573767450257905,"debtToEquity":0.4285714285714286,"debtToAssets":0.3,"currentRatio":0.3333333333333333,"roe":0.01478007153892205,"roa":0.010346050077245433,"assetTurnover":0.10346050077245433,"equityMultiplier":1.4285714285714288}
+2026-02-21T12:28:20.047Z Sentiment analysis: [{"text":"Strong quarterly earnings beat expectations","sentiment":"positive","confidence":0.8},{"text":"Revenue growth momentum continues","sentiment":"positive","confidence":0.6666666666666671},{"text":"Analysts upgrade to buy rating","sentiment":"positive","confidence":0.5}]
+2026-02-21T12:28:20.048Z Calling N.A.T. AI Assistant for: Microsoft
+2026-02-21T12:28:20.049Z Calling N.A.T. AI: Provide detailed business intelligence about Microsoft. Include: 1) Company overview 2) Recent news 3) Industry trends 4) Key competitors 5) Investment outlook
+2026-02-21T12:28:22.166Z NAT response received
+2026-02-21T12:28:22.167Z Calling N.A.T. AI: Latest financial performance, quarterly results, and market sentiment for Microsoft. Include recent news and analyst opinions.
+2026-02-21T12:28:25.871Z NAT response received
+2026-02-21T12:28:25.872Z N.A.T. Intelligence received
+2026-02-21T12:28:25.873Z orchestrator done Microsoft
+2026-02-21T12:45:32.927Z orchestrator start Apple global
+2026-02-21T12:45:32.928Z ticker: AAPL
+2026-02-21T12:45:32.937Z Calling N.A.T. AI: Search and provide STRUCTURED financial data for Apple: 
+        - Current Market Cap (in billions USD)
+        - P/E Ratio
+        - Revenue (in billions USD)
+        - EBITDA (in billions USD)
+        - EBITDA Margin (%)
+        - Revenue Growth (%)
+        - Industry/Sector
+        - Key competitors
+        Format as clean structured data.
+2026-02-21T12:45:33.201Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T12:45:34.387Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T12:45:36.597Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T12:45:36.745Z fetchYahooFinancials fail HTTP 401 Unauthorized {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-21T12:46:02.923Z NAT response received
+2026-02-21T12:46:02.925Z NAT initial search structured data: {"marketCap":null,"peRatio":null,"revenue":null,"ebitda":null,"ebitdaMargin":null,"revenueGrowth":null}
+2026-02-21T12:46:02.926Z FMP validation: PASS (confidence: 70%)
+2026-02-21T12:46:02.926Z Alpha validation: PASS (confidence: 70%)
+2026-02-21T12:46:02.927Z Data Quality Check: {"qualityScore":62.5,"issues":0,"validation":"All validations passed"}
+2026-02-21T12:46:02.928Z Input normalization warning: {"original":"Apple","normalized":"Apple","confidence":0.6}
+2026-02-21T12:46:03.331Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T12:46:04.540Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T12:46:06.753Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T12:46:06.902Z fetchCompetitors fail HTTP 500 Cannot find server. <!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Yahoo</title>
+    <meta name="viewport" conte
+2026-02-21T12:46:06.914Z Currency Info: {"companyCurrency":"USD","baseCurrency":"USD"}
+2026-02-21T12:46:06.916Z ML revenue projections: [{"year":2027,"revenue":435617006000,"growthRate":0,"confidence":0},{"year":2028,"revenue":435617006000,"growthRate":0,"confidence":0},{"year":2029,"revenue":435617006000,"growthRate":0,"confidence":0}]
+2026-02-21T12:46:06.918Z ML industry classification: {"industry":"Services","confidence":0.75,"alternatives":[]}
+2026-02-21T12:46:06.920Z Company segmentation: [{"company":"Apple","segment":0,"metrics":{"revenue":435617006000,"marketCap":3888777002850,"ebitdaMargin":35.1,"peRatio":33.45,"revenueGrowth":0.1}}]
+2026-02-21T12:46:06.921Z Anomaly detection: {"clusters":[[-1,1]],"outlierCount":1}
+2026-02-21T12:46:06.926Z PCA results: {"explainedVariance":[1.0000000000000002,-2.9024099657489702e-16],"components":[[0.1113227483739603,0.9937843054176636,8.548210656424776e-12],[0.18229378200357965,0.9832441085726531,-5.0307047618854885e-11]]}
+2026-02-21T12:46:06.977Z Credit risk prediction: {"risk":"MEDIUM","probability":0.5}
+2026-02-21T12:46:06.978Z Extracted features: {"profitMargin":0.1,"ebitdaMargin":0.35100097079313747,"debtToEquity":0.42857142857142855,"debtToAssets":0.3,"currentRatio":0.3333333333333333,"roe":0.016002717772588944,"roa":0.01120190244081226,"assetTurnover":0.1120190244081226,"equityMultiplier":1.4285714285714286}
+2026-02-21T12:46:06.981Z Sentiment analysis: [{"text":"Strong quarterly earnings beat expectations","sentiment":"positive","confidence":0.8},{"text":"Revenue growth momentum continues","sentiment":"positive","confidence":0.6666666666666671},{"text":"Analysts upgrade to buy rating","sentiment":"positive","confidence":0.5}]
+2026-02-21T12:46:06.983Z Calling N.A.T. AI Assistant for: Apple
+2026-02-21T12:46:06.984Z Calling N.A.T. AI: Provide detailed business intelligence about Apple. Include: 1) Company overview 2) Recent news 3) Industry trends 4) Key competitors 5) Investment outlook
+2026-02-21T12:46:08.917Z NAT response received
+2026-02-21T12:46:08.918Z Calling N.A.T. AI: Latest financial performance, quarterly results, and market sentiment for Apple. Include recent news and analyst opinions.
+2026-02-21T12:46:13.146Z NAT response received
+2026-02-21T12:46:13.148Z N.A.T. Intelligence received
+2026-02-21T12:46:13.148Z orchestrator done Apple
+2026-02-21T12:47:56.861Z orchestrator start Apple global
+2026-02-21T12:47:56.862Z ticker: AAPL
+2026-02-21T12:47:56.869Z Calling N.A.T. AI: Search and provide STRUCTURED financial data for Apple: 
+        - Current Market Cap (in billions USD)
+        - P/E Ratio
+        - Revenue (in billions USD)
+        - EBITDA (in billions USD)
+        - EBITDA Margin (%)
+        - Revenue Growth (%)
+        - Industry/Sector
+        - Key competitors
+        Format as clean structured data.
+2026-02-21T12:47:57.089Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T12:47:58.283Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T12:47:59.720Z NAT response received
+2026-02-21T12:47:59.721Z NAT initial search structured data: {"marketCap":null,"peRatio":null,"revenue":null,"ebitda":null,"ebitdaMargin":null,"revenueGrowth":null}
+2026-02-21T12:48:00.472Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T12:48:00.617Z fetchYahooFinancials fail HTTP 401 Unauthorized {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+2026-02-21T12:48:00.623Z FMP validation: PASS (confidence: 70%)
+2026-02-21T12:48:00.630Z Alpha validation: PASS (confidence: 70%)
+2026-02-21T12:48:00.633Z Data Quality Check: {"qualityScore":62.5,"issues":0,"validation":"All validations passed"}
+2026-02-21T12:48:00.635Z Input normalization warning: {"original":"Apple","normalized":"Apple","confidence":0.6}
+2026-02-21T12:48:00.899Z fetch attempt fail {"error":{},"attemptNumber":1,"retriesLeft":2,"retriesConsumed":0}
+2026-02-21T12:48:02.226Z fetch attempt fail {"error":{},"attemptNumber":2,"retriesLeft":1,"retriesConsumed":1}
+2026-02-21T12:48:04.559Z fetch attempt fail {"error":{},"attemptNumber":3,"retriesLeft":0,"retriesConsumed":2}
+2026-02-21T12:48:04.698Z fetchCompetitors fail HTTP 500 Cannot find server. <!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Yahoo</title>
+    <meta name="viewport" conte
+2026-02-21T12:48:04.701Z Currency Info: {"companyCurrency":"USD","baseCurrency":"USD"}
+2026-02-21T12:48:04.704Z ML revenue projections: [{"year":2027,"revenue":435617006000,"growthRate":0,"confidence":0},{"year":2028,"revenue":435617006000,"growthRate":0,"confidence":0},{"year":2029,"revenue":435617006000,"growthRate":0,"confidence":0}]
+2026-02-21T12:48:04.709Z ML industry classification: {"industry":"Services","confidence":0.75,"alternatives":[]}
+2026-02-21T12:48:04.711Z Company segmentation: [{"company":"Apple","segment":0,"metrics":{"revenue":435617006000,"marketCap":3888777002850,"ebitdaMargin":35.1,"peRatio":33.45,"revenueGrowth":0.1}}]
+2026-02-21T12:48:04.712Z Anomaly detection: {"clusters":[[-1,1]],"outlierCount":1}
+2026-02-21T12:48:04.715Z PCA results: {"explainedVariance":[1.0000000000000002,-2.9024099657489702e-16],"components":[[0.1113227483739603,0.9937843054176636,8.548210656424776e-12],[0.18229378200357965,0.9832441085726531,-5.0307047618854885e-11]]}
+2026-02-21T12:48:04.723Z Credit risk prediction: {"risk":"MEDIUM","probability":0.5}
+2026-02-21T12:48:04.724Z Extracted features: {"profitMargin":0.1,"ebitdaMargin":0.35100097079313747,"debtToEquity":0.42857142857142855,"debtToAssets":0.3,"currentRatio":0.3333333333333333,"roe":0.016002717772588944,"roa":0.01120190244081226,"assetTurnover":0.1120190244081226,"equityMultiplier":1.4285714285714286}
+2026-02-21T12:48:04.726Z Sentiment analysis: [{"text":"Strong quarterly earnings beat expectations","sentiment":"positive","confidence":0.8},{"text":"Revenue growth momentum continues","sentiment":"positive","confidence":0.6666666666666671},{"text":"Analysts upgrade to buy rating","sentiment":"positive","confidence":0.5}]
+2026-02-21T12:48:04.727Z Calling N.A.T. AI Assistant for: Apple
+2026-02-21T12:48:04.728Z Calling N.A.T. AI: Provide detailed business intelligence about Apple. Include: 1) Company overview 2) Recent news 3) Industry trends 4) Key competitors 5) Investment outlook
+2026-02-21T12:48:06.750Z NAT response received
+2026-02-21T12:48:06.751Z Calling N.A.T. AI: Latest financial performance, quarterly results, and market sentiment for Apple. Include recent news and analyst opinions.
+2026-02-21T12:48:09.977Z NAT response received
+2026-02-21T12:48:09.978Z N.A.T. Intelligence received
+2026-02-21T12:48:09.979Z orchestrator done Apple
