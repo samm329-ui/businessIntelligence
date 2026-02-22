@@ -49,6 +49,14 @@ if not AV_KEYS:
 AV_KEY_INDEX = 0
 
 FMP_KEY = os.getenv("FMP_KEY", "")
+FMP_KEY_2 = os.getenv("FMP_KEY_2", "")
+
+# FMP - Round Robin Key Rotation
+FMP_KEYS = [FMP_KEY] if FMP_KEY else []
+if FMP_KEY_2:
+    FMP_KEYS.append(FMP_KEY_2)
+FMP_KEY_INDEX = 0
+
 GNEWS_API_KEY = os.getenv("GNEWS_API_KEY", "")
 NEWS_API_KEY = os.getenv("NEWS_API_KEY", "")
 
@@ -166,9 +174,9 @@ class ProductionIntelligence:
         self.cache: Dict = {}
         self.cache_ttl = 0  # Cache disabled - always fetch fresh
         self.tavily = TavilyClient(api_key=TAVILY_API_KEY) if TAVILY_AVAILABLE and TAVILY_API_KEY else None
-        print(f"[Production] Ready - Keys: Groq={len(GROQ_KEYS)} keys, Tavily={bool(self.tavily)}, AV={len(AV_KEYS)} keys, FMP={bool(FMP_KEY)}")
+        print(f"[Production] Ready - Keys: Groq={len(GROQ_KEYS)} keys, Tavily={bool(self.tavily)}, AV={len(AV_KEYS)} keys, FMP={len(FMP_KEYS)} keys")
         print(f"[Production] News: GNews={bool(GNEWS_API_KEY)}, NewsAPI={bool(NEWS_API_KEY)}, Tavily={bool(self.tavily)}")
-        print(f"[Production] FMP Key (first 10 chars): {FMP_KEY[:10] if FMP_KEY else 'EMPTY'}...")
+        print(f"[Production] FMP Keys: {len(FMP_KEYS)} loaded")
         print(f"[Production] Alpha Vantage Keys: {len(AV_KEYS)} loaded")
         print(f"[Production] CACHE DISABLED - always fetching fresh data")
 
@@ -217,6 +225,15 @@ class ProductionIntelligence:
         print(f"[AlphaVantage] Using key index: {(AV_KEY_INDEX - 1) % len(AV_KEYS)}")
         return key
 
+    def _get_fmp_key(self) -> str:
+        global FMP_KEY_INDEX
+        if not FMP_KEYS:
+            return ""
+        key = FMP_KEYS[FMP_KEY_INDEX % len(FMP_KEYS)]
+        FMP_KEY_INDEX += 1
+        print(f"[FMP] Using key index: {(FMP_KEY_INDEX - 1) % len(FMP_KEYS)}")
+        return key
+
     def fetch_alpha_vantage(self, symbol: str) -> Dict:
         av_key = self._get_av_key()
         if not av_key or not symbol:
@@ -245,7 +262,7 @@ class ProductionIntelligence:
         return {}
 
     def fetch_fmp(self, query: str) -> Dict:
-        if not FMP_KEY or not query:
+        if not self._get_fmp_key() or not query:
             print(f"[FMP] Skipped - no key or query: {query}")
             return {}
         
@@ -263,7 +280,7 @@ class ProductionIntelligence:
             else:
                 print(f"[FMP] Searching for: {query}")
                 # New FMP v4 API endpoint
-                r = requests.get(f"https://financialmodelingprep.com/stable/search-name?query={query}&limit=3", params={"apikey": FMP_KEY}, timeout=10)
+                r = requests.get(f"https://financialmodelingprep.com/stable/search-name?query={query}&limit=3", params={"apikey": self._get_fmp_key()}, timeout=10)
                 results = r.json()
                 if results and isinstance(results, list) and len(results) > 0:
                     symbol = results[0].get("symbol", "")
@@ -273,7 +290,7 @@ class ProductionIntelligence:
                     print(f"[FMP] No search results")
             if symbol:
                 # New FMP v4 API endpoint for profile
-                r2 = requests.get(f"https://financialmodelingprep.com/stable/profile?symbol={symbol}", params={"apikey": FMP_KEY}, timeout=15)
+                r2 = requests.get(f"https://financialmodelingprep.com/stable/profile?symbol={symbol}", params={"apikey": self._get_fmp_key()}, timeout=15)
                 if r2.status_code != 200:
                     print(f"[FMP] Profile error: {r2.status_code}")
                     return {}
@@ -298,7 +315,7 @@ class ProductionIntelligence:
                 print(f"[FMP] Using known ticker: {symbol}")
             else:
                 print(f"[FMP] Searching for: {query}")
-                r = requests.get("https://financialmodelingprep.com/api/v3/search", params={"query": query, "apikey": FMP_KEY, "limit": 3}, timeout=10)
+                r = requests.get("https://financialmodelingprep.com/api/v3/search", params={"query": query, "apikey": self._get_fmp_key(), "limit": 3}, timeout=10)
                 results = r.json()
                 if results:
                     symbol = results[0].get("symbol", "")
@@ -307,7 +324,7 @@ class ProductionIntelligence:
                     symbol = ""
                     print(f"[FMP] No search results")
             if symbol:
-                r2 = requests.get(f"https://financialmodelingprep.com/api/v3/profile/{symbol}", params={"apikey": FMP_KEY}, timeout=10)
+                r2 = requests.get(f"https://financialmodelingprep.com/api/v3/profile/{symbol}", params={"apikey": self._get_fmp_key()}, timeout=10)
                 p = r2.json()[0] if r2.json() else {}
                 if p:
                     print(f"[FMP] SUCCESS: {p.get('symbol')} - revenue: {p.get('revenue')}")
@@ -320,13 +337,13 @@ class ProductionIntelligence:
 
     def fetch_fmp_full(self, symbol: str) -> Dict:
         """Fetch complete financial data for ratio calculations from FMP"""
-        if not FMP_KEY or not symbol: 
+        if not self._get_fmp_key() or not symbol: 
             print(f"[FMP Full] Skipped - no key or symbol")
             return {}
         try:
             print(f"[FMP Full] Fetching profile for: {symbol}")
             # New FMP v4 API endpoint
-            r = requests.get(f"https://financialmodelingprep.com/stable/profile?symbol={symbol}", params={"apikey": FMP_KEY}, timeout=15)
+            r = requests.get(f"https://financialmodelingprep.com/stable/profile?symbol={symbol}", params={"apikey": self._get_fmp_key()}, timeout=15)
             print(f"[FMP Full] Profile response status: {r.status_code}")
             if r.status_code != 200:
                 print(f"[FMP Full] Error: Status {r.status_code}, response: {r.text[:200]}")
@@ -342,7 +359,7 @@ class ProductionIntelligence:
             
             print(f"[FMP Full] Fetching ratios...")
             # Get financial ratios (includes all the ratios we need!)
-            r2 = requests.get(f"https://financialmodelingprep.com/stable/ratios-ttm?symbol={symbol}", params={"apikey": FMP_KEY}, timeout=15)
+            r2 = requests.get(f"https://financialmodelingprep.com/stable/ratios-ttm?symbol={symbol}", params={"apikey": self._get_fmp_key()}, timeout=15)
             ratios_data = r2.json() if r2.status_code == 200 else {}
             if isinstance(ratios_data, list) and len(ratios_data) > 0:
                 ratios = ratios_data[0]
@@ -353,7 +370,7 @@ class ProductionIntelligence:
             
             print(f"[FMP Full] Fetching key metrics...")
             # Get key metrics
-            r3 = requests.get(f"https://financialmodelingprep.com/stable/key-metrics-ttm?symbol={symbol}", params={"apikey": FMP_KEY}, timeout=15)
+            r3 = requests.get(f"https://financialmodelingprep.com/stable/key-metrics-ttm?symbol={symbol}", params={"apikey": self._get_fmp_key()}, timeout=15)
             metrics_data = r3.json() if r3.status_code == 200 else {}
             if isinstance(metrics_data, list) and len(metrics_data) > 0:
                 metrics = metrics_data[0]
@@ -623,16 +640,16 @@ class ProductionIntelligence:
 
     def fetch_competitor_data(self, company_name: str) -> Dict:
         """Fetch market cap and financial data for a competitor using FMP search"""
-        if not FMP_KEY or not company_name: return {}
+        if not self._get_fmp_key() or not company_name: return {}
         try:
             # Search for the company
-            r = requests.get("https://financialmodelingprep.com/api/v3/search", params={"query": company_name, "apikey": FMP_KEY, "limit": 1}, timeout=10)
+            r = requests.get("https://financialmodelingprep.com/api/v3/search", params={"query": company_name, "apikey": self._get_fmp_key(), "limit": 1}, timeout=10)
             results = r.json()
             if results:
                 symbol = results[0].get("symbol", "")
                 if symbol:
                     # Get full profile
-                    r2 = requests.get(f"https://financialmodelingprep.com/api/v3/profile/{symbol}", params={"apikey": FMP_KEY}, timeout=10)
+                    r2 = requests.get(f"https://financialmodelingprep.com/api/v3/profile/{symbol}", params={"apikey": self._get_fmp_key()}, timeout=10)
                     p = r2.json()[0] if r2.json() else {}
                     return {
                         "source": "FMP",
@@ -1312,11 +1329,11 @@ Extract real company names from searches. Include source attribution. Use actual
                 continue
             
             # 2. Try FMP search-name for unknown names (max 1 call per name)
-            if FMP_KEY:
+            if self._get_fmp_key():
                 try:
                     r = requests.get(
                         f"https://financialmodelingprep.com/stable/search-name",
-                        params={"query": name, "limit": 1, "apikey": FMP_KEY},
+                        params={"query": name, "limit": 1, "apikey": self._get_fmp_key()},
                         timeout=10
                     )
                     results = r.json()
