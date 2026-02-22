@@ -1,39 +1,21 @@
+import Silk from '@/components/Silk'
+
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-[#0a0a1a] text-white overflow-x-hidden">
-      {/* Cosmic Background */}
+    <div className="min-h-screen bg-[#0a0a1a] text-white overflow-x-hidden relative">
+      {/* Silk Background */}
       <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a1a] via-[#0f0f2a] to-[#0a0a1a]"></div>
-        {/* Stars */}
-        <div className="absolute inset-0 opacity-60" style={{
-          backgroundImage: `radial-gradient(2px 2px at 20px 30px, white, transparent),
-                           radial-gradient(2px 2px at 40px 70px, white, transparent),
-                           radial-gradient(1px 1px at 50px 90px, white, transparent),
-                           radial-gradient(2px 2px at 130px 80px, white, transparent),
-                           radial-gradient(1px 1px at 160px 120px, white, transparent),
-                           radial-gradient(2px 2px at 200px 50px, white, transparent),
-                           radial-gradient(1px 1px at 250px 150px, white, transparent),
-                           radial-gradient(2px 2px at 300px 100px, white, transparent),
-                           radial-gradient(1px 1px at 350px 180px, white, transparent),
-                           radial-gradient(2px 2px at 400px 60px, white, transparent),
-                           radial-gradient(1px 1px at 450px 140px, white, transparent),
-                           radial-gradient(2px 2px at 500px 90px, white, transparent),
-                           radial-gradient(1px 1px at 550px 160px, white, transparent),
-                           radial-gradient(2px 2px at 600px 40px, white, transparent),
-                           radial-gradient(1px 1px at 650px 130px, white, transparent),
-                           radial-gradient(2px 2px at 700px 80px, white, transparent),
-                           radial-gradient(1px 1px at 750px 170px, white, transparent),
-                           radial-gradient(2px 2px at 800px 50px, white, transparent),
-                           radial-gradient(1px 1px at 850px 120px, white, transparent),
-                           radial-gradient(2px 2px at 900px 70px, white, transparent)`,
-          backgroundSize: '100% 100%'
-        }}></div>
-        {/* Cosmic Glow Effect */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1200px] h-[600px] opacity-40">
-          <div className="absolute inset-0 bg-gradient-to-b from-blue-900/30 via-purple-900/20 to-transparent blur-3xl"></div>
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-b from-indigo-600/20 to-transparent blur-2xl"></div>
-        </div>
+        <Silk
+          speed={7}
+          scale={0.7}
+          color="#412907"
+          noiseIntensity={0}
+          rotation={0}
+        />
       </div>
+
+      {/* Overlay to ensure content readability */}
+      <div className="fixed inset-0 z-10 bg-[#0a0a1a]/60 pointer-events-none" />
 
       {/* Navigation */}
       <nav className="relative z-50 px-6 lg:px-12 py-5">

@@ -1,0 +1,18 @@
+{
+  "session_id": "09a851a4-ee58-486d-a212-c7e22759d67e",
+  "chat_type": "realtime",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Give me global IT services market analysis including market size, growth rate, key players globally like Accenture, Cognizant, IBM and their comparison with Indian IT companies",
+      "timestamp": "2026-02-22T14:02:49.916571"
+    },
+    {
+      "role": "assistant",
+      "content": "The global IT services market has been steadily growing, with a projected total revenue of $1.65 trillion in 2026, expected to reach $2.51 trillion by 2031, representing a significant growth rate (Source: Yahoo Finance).\n\n**Market Size and Growth Rate:**\n\n- In 2026, the global IT services market size is estimated to be $1.65 trillion.\n- By 2031, it is expected to grow to $2.51 trillion, indicating a substantial expansion in the industry.\n\n**Key Players Globally:**\n\n1. **Accenture (USA)**: With a brand value of $42.3 billion in 2026, Accenture leads the global IT service brands rankings.\n2. **TCS (India)**: Tata Consultancy Services (TCS) has a brand value of $21.2 billion, securing the second position.\n3. **Infosys (India)**: Infosys has a brand value of $16.4 billion, ranking third globally.\n4. **IBM (USA)**: IBM has a brand value of $11 billion, standing as a prominent player in the global IT services market.\n\n**Comparison with Indian IT Companies:**\n\nIndian IT companies have made a significant impact on the global stage, with four Indian companies featuring among the top 10 most valuable IT service brands in 2025-26:\n\n1. **TCS (India)**: $21.2 billion brand value\n2. **Infosys (India)**: $16.4 billion brand value\n3. **HCLTech (India)**: $9 billion brand value\n4. **Wipro (India)**: $6.3 billion brand value\n\nThese Indian companies have demonstrated remarkable growth and competitiveness, contributing to a combined brand value of $53.9 billion, which accounts for a substantial portion of the global IT services industry (Source: Indian Express).\n\n**Other Key Players:**\n\n- **Cognizant (USA)**: With a brand value of $9.6 billion, Cognizant ranks among the top 10 IT service brands globally.\n- **Capgemini (France)**: Capgemini has a brand value of $10.5 billion, while NTT Data (Japan) has a brand value of $10.7 billion.\n\nThe global IT services market is characterized by intense competition, with both global and Indian companies vying for market share. The growth of emerging technologies like AI, cloud computing, and managed security services is expected to drive the market forward (Source: LinkedIn).\n\nSources:\n\n- LinkedIn: IT Services Global Tech Digital Transformation\n- Yahoo Finance: Global Market for IT Services 2026-2031\n- Indian Express: Top 10 most valuable IT service brands in 2025-26\n- Statista: IT Services Brand Value",
+      "timestamp": "2026-02-22T14:02:54.889024"
+    }
+  ],
+  "created_at": "2026-02-22T14:02:49.916571",
+  "updated_at": "2026-02-22T14:02:54.889024"
+}

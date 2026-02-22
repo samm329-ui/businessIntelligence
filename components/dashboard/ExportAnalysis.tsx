@@ -21,7 +21,7 @@ export function ExportButton({ analysis, industry }: ExportButtonProps) {
 
             // 1. Summary Sheet
             const summaryData = [
-                ['INSTITUTIONAL STRATEGIC REPORT', ''],
+                ['IT INTELLIGENCE WORKSPACE - STRATEGIC REPORT', ''],
                 ['Industry / Query', industry],
                 ['Generation Date', new Date().toLocaleString()],
                 ['Region Focus', analysis.industryData?.indiaMarketSize ? 'India & Global' : 'Global'],
@@ -84,13 +84,14 @@ export function ExportButton({ analysis, industry }: ExportButtonProps) {
             }
 
             // 4. Stakeholders Sheet
-            if (analysis.industryData?.investors) {
+            const stakeholderList = analysis.industryData?.stakeholders || analysis.industryData?.investors
+            if (stakeholderList) {
                 const stakeholdersData = [
                     ['INSTITUTIONAL STAKEHOLDERS', ''],
                     ['Entity Name', 'Ticker', 'Market Cap (B)', 'Revenue (B)', 'EBITDA %', 'Growth %', 'Region', 'Portfolio Link']
                 ]
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                analysis.industryData.investors.forEach((inv: Record<string, any>) => {
+                stakeholderList.forEach((inv: Record<string, any>) => {
                     stakeholdersData.push([
                         inv.name,
                         inv.ticker,
@@ -167,7 +168,7 @@ export function ExportButton({ analysis, industry }: ExportButtonProps) {
 
             pdf.setFontSize(24)
             pdf.setTextColor(255, 255, 255)
-            pdf.text('EBITA INTELLIGENCE', 20, 25)
+            pdf.text('IT INTELLIGENCE', 20, 25)
 
             pdf.setFontSize(10)
             pdf.text('INSTITUTIONAL GRADE RESEARCH', 150, 25)
@@ -210,14 +211,15 @@ export function ExportButton({ analysis, industry }: ExportButtonProps) {
             pdf.text(`Competitive Intensity: High`, 25, 167)
 
             // Section 3: Key Stakeholders
-            if (analysis.industryData?.investors) {
+            const stakeholderList = analysis.industryData?.stakeholders || analysis.industryData?.investors
+            if (stakeholderList) {
                 pdf.setFontSize(16)
                 pdf.setTextColor(11, 15, 20)
                 pdf.text('3. Primary Institutional Stakeholders', 20, 185)
 
                 pdf.setFontSize(10)
                 pdf.setTextColor(51, 65, 85)
-                analysis.industryData.investors.slice(0, 6).forEach((inv: any, i: number) => {
+                stakeholderList.slice(0, 6).forEach((inv: any, i: number) => {
                     pdf.text(`• ${inv.name} [${inv.ticker}] - Cap: $${inv.marketCap}B | Growth: ${inv.growth}%`, 25, 195 + (i * 7))
                 })
             }
@@ -225,7 +227,7 @@ export function ExportButton({ analysis, industry }: ExportButtonProps) {
             // Footer
             pdf.setFontSize(9)
             pdf.setTextColor(150, 150, 150)
-            pdf.text('Proprietary & Confidential - EBITA Business Intelligence 2024', 60, 285)
+            pdf.text('Proprietary & Confidential - IT Intelligence Workspace 2024', 60, 285)
 
             pdf.save(`${industry.replace(/\s+/g, '_')}_Strategic_Report.pdf`)
         } catch (error) {

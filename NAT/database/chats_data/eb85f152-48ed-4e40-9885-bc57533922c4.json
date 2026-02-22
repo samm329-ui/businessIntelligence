@@ -1,0 +1,18 @@
+{
+  "session_id": "eb85f152-48ed-4e40-9885-bc57533922c4",
+  "chat_type": "realtime",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Show TCS employee count, attrition rate, number of employees added, and what are the analyst recommendations and target price for TCS stock",
+      "timestamp": "2026-02-22T14:55:33.248918"
+    },
+    {
+      "role": "assistant",
+      "content": "Here's the information you requested:\n\n**TCS Employee Count, Attrition Rate, and Number of Employees Added:**\n\nAs of Q1 FY26, TCS has:\n\n* Employee count: 613,069 [3]\n* Attrition rate: 13.8% [1][3]\n* Number of employees added: 6,071 [1]\n\nAs of Q3 FY26, TCS has:\n\n* Employee count: 582,163 [2]\n* Attrition rate: 13.5% [4]\n* Number of employees decreased: 11,151 [4]\n\n**Analyst Recommendations and Target Price for TCS Stock:**\n\nI was unable to find the list of analyst recommendations and target price for TCS stock, however, here are a few recent articles:\n\nAccording to a recent article, TCS's profit soared to Rs 12,760 crore during the April-June quarter [3].\n\nTo get the most up-to-date information on analyst recommendations and target prices, I recommend checking financial websites such as:\n\n* Trendlyne: https://trendlyne.com/equity/1372/TCS/tata-consultancy-services-ltd/\n* NDTV Profit: https://www.ndtvprofit.com/markets\n* Data Insights Market: https://www.datainsightsmarket.com/news\n\nPlease note that analyst recommendations and target prices can change frequently, and it's always best to check with a financial advisor or conduct your own research before making investment decisions.\n\nReferences:\n\n[1] Data Insights Market. (n.d.). TCS Q1 FY26 Results: Attrition Down, Growth Up - What it Means. https://www.datainsightsmarket.com/news/article/tcs-q1-fy26-results-attrition-down-growth-up-what-it-means-73834\n\n[2] Trendlyne. (n.d.). TCS Live Share Price, Stock Analysis and Price Estimates. https://trendlyne.com/equity/1372/TCS/tata-consultancy-services-ltd/\n\n[3] Storyboard18. (n.d.). TCS attrition rate holds steady at 13.8% in Q1 FY26, headcount stands at 613,069. https://www.storyboard18.com/how-it-works/tcs-attrition-rate-holds-steady-at-13-8-in-q1-fy26-headcount-stands-at-613069-73845.htm\n\n[4] ScanX Trade. (n.d.). TCS Q3 Attrition Rate Rises to 13.5%, Headcount Falls by Over 11,000 Employees. https://scanx.trade/stock-market-news/earnings/tcs-q3-attrition-rate-rises-to-13-5-headcount-falls-by-over-11-000-employees/29763188",
+      "timestamp": "2026-02-22T14:55:37.105654"
+    }
+  ],
+  "created_at": "2026-02-22T14:55:33.248918",
+  "updated_at": "2026-02-22T14:55:37.105654"
+}

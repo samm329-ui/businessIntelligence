@@ -1,0 +1,18 @@
+{
+  "session_id": "4fc7a7dd-3860-41ef-b7c8-d498c2df9598",
+  "chat_type": "realtime",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Show TCS revenue breakdown by geography (North America, Europe, India, Asia Pacific) and by service segment (IT services, Consulting, Engineering, etc)",
+      "timestamp": "2026-02-22T14:55:04.186102"
+    },
+    {
+      "role": "assistant",
+      "content": "Based on the available data, here is a breakdown of TCS revenue by geography and service segment:\n\n**Geographic Revenue Breakdown (FY 2023/24):**\n\n- **Americas:** The majority of TCS revenue comes from the Americas market, with a revenue of around \u20b91.83 trillion (or approximately $22.1 billion USD, assuming an exchange rate of 1 USD = \u20b982) [Source: Statista]\n- **Europe:** Although the exact figure is not provided in the search results, it's mentioned that TCS sees mixed Q1 results with AI spending growth but global revenue slips [Source: Staffing Industry]\n- **India, Asia Pacific:** Specific figures for India and Asia Pacific are not provided, but it's mentioned that TCS generates revenue across various regions, with North America leading [Source: LinkedIn post by Raja Pillai]\n\n**Service Segment Revenue Breakdown (Q2 FY26):**\n\n- **BFSI (Banking, Financial Services, and Insurance):** +1.1% QoQ (quarter-over-quarter) growth in constant currency\n- **TSS (Tata Services Segment):** +1.8% QoQ growth\n- **Manufacturing:** +1.6% QoQ growth\n- **Life Sciences & Healthcare:** +3.4% QoQ growth\n- **AI and Consulting Services:** While specific figures are not provided, it's mentioned that AI spending is growing within TCS [Source: Staffing Industry and LinkedIn post by Raja Pillai]\n\n**IT Services and Other Segments:**\n\n- TCS reported a revenue of \u20b965,799 crore (approximately $7.94 billion USD) for Q2 FY26, with a growth of 3.7% QoQ and 0.8% in constant currency\n- The company provides a range of services, including IT services, consulting, engineering, and data-driven services [Source: Economic Times and TCS website]\n\nFor a more detailed and up-to-date breakdown, I recommend checking TCS's official financial reports and investor presentations.\n\nSources:\n\n1. [Statista - Revenue of Tata Consultancy Services by region](https://www.statista.com/statistics/328327/tcs-revenue-by-region/?srsltid=AfmBOopRMRv2MVgUQuRbNctTmo3lUv6XpyC14_Sg_L-xs8NLEnp4xniQ)\n2. [Staffing Industry - TCS sees mixed Q1 as AI spending grows but global revenue slips](https://www.staffingindustry.com/news/global-daily-news/tcs-sees-mixed-q1-as-ai-spending-grows-but-global-revenue-slips)\n3. [LinkedIn post by Raja Pillai - TCS FY 2025 Revenue](https://www.linkedin.com/posts/raja-pillai-content-creator_tcs-techleadership-revenuebreakdown-activity-7346432527777058817-sXjU)\n4. [Economic Times - TCS Q2 Results Live Updates](https://m.economictimes.com/markets/stocks/live-blog/tcs-q2-results-tata-consultancy-services-q2-fy26-revenue-earning-net-profit-dividend-date-time-09-october-2025/liveblog/124408861.cms)\n5. [TCS website - Financial Results](https://www.tcs.com/who-we-are/newsroom/press-release/tcs-financial-results-q4-fy-2025)",
+      "timestamp": "2026-02-22T14:55:08.719604"
+    }
+  ],
+  "created_at": "2026-02-22T14:55:04.186102",
+  "updated_at": "2026-02-22T14:55:08.719604"
+}

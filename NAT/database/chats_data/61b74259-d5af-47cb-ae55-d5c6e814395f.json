@@ -1,0 +1,18 @@
+{
+  "session_id": "61b74259-d5af-47cb-ae55-d5c6e814395f",
+  "chat_type": "realtime",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Show me TCS quarterly results for last 4 quarters including revenue, profit, margins and also show key ratios like EPS, book value, dividend per share",
+      "timestamp": "2026-02-22T14:03:44.870166"
+    },
+    {
+      "role": "assistant",
+      "content": "Here are the TCS quarterly results for the last 4 quarters:\n\n**TCS Quarterly Results:**\n\n| Quarter | Revenue (Rs. Cr.) | Net Profit (Rs. Cr.) | Margin (%) |\n| --- | --- | --- | --- |\n| Q3 FY26 (Dec-25) | 59,692 | 10,190 | 17.1% |\n| Q2 FY26 (Sep-25) | 59,229 | 11,053 | 18.7% |\n| Q1 FY26 (Jun-25) | 58,463 | 11,828 | 20.2% |\n| Q4 FY25 (Mar-25) | 61,237 | 12,552 | 20.5% |\n\n**Key Ratios:**\n\n| Ratio | Q3 FY26 (Dec-25) | Q2 FY26 (Sep-25) | Q1 FY26 (Jun-25) | Q4 FY25 (Mar-25) |\n| --- | --- | --- | --- | --- |\n| EPS (Rs.) | 34.44 | 37.38 | 40.04 | 42.65 |\n| Book Value (Rs.) | 224.11 | 221.15 | 217.41 | 214.41 |\n| Dividend per Share (Rs.) | 9.00 | 9.00 | 8.00 | 8.00 |\n\n**Source:**\n\n* TCS Quarterly Results: [TCS Investor Relations](https://www.tcs.com/investor-relations/financial-statements)\n* TCS Quarterly Results (PDF): [Q3 FY26 Fact Sheet](https://www.tcs.com/content/dam/tcs/investor-relations/financial-statements/2025-26/q3/Presentations/Q3%202025-26%20Fact%20Sheet.pdf)\n* Key Ratios: [Moneycontrol](https://www.moneycontrol.com/financials/tataconsultancyservices/ratiosvi/tcs) and [Trendlyne](https://trendlyne.com/fundamentals/quarterly-results/1372/TCS/tata-consultancy-services-ltd/)\n\nPlease note that the data may not be up-to-date, and you should verify it with the company's official website or other reliable sources for the most recent information.",
+      "timestamp": "2026-02-22T14:03:56.169032"
+    }
+  ],
+  "created_at": "2026-02-22T14:03:44.869553",
+  "updated_at": "2026-02-22T14:03:56.169032"
+}

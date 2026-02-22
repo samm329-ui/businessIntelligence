@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans, Manrope } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -10,6 +10,12 @@ const inter = Inter({
 
 const plusJakartaSync = Plus_Jakarta_Sans({
   variable: "--font-sans",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
   display: "swap",
 });
@@ -27,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <body
-        className={`${plusJakartaSync.variable} ${inter.variable} antialiased font-sans bg-background cosmic-gradient selection:bg-primary/20`}
+        className={`${plusJakartaSync.variable} ${inter.variable} ${manrope.variable} antialiased font-sans bg-background cosmic-gradient selection:bg-primary/20`}
         suppressHydrationWarning
       >
         {children}

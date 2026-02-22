@@ -1,0 +1,18 @@
+{
+  "session_id": "3f1b853b-4bb0-4c3b-87b9-8bdab6bcd83e",
+  "chat_type": "realtime",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What are the key investors and institutional holders in TCS and their shareholding percentages? Also tell me about their marketing strategy and global presence.",
+      "timestamp": "2026-02-22T14:02:19.599696"
+    },
+    {
+      "role": "assistant",
+      "content": "Tata Consultancy Services (TCS) is a leading IT services company with a diverse shareholder base. Here's a breakdown of the key investors and institutional holders in TCS, along with their shareholding percentages:\n\n**Shareholding Pattern (as of December 2025 or latest available data):**\n\n* **Promoters:** Tata Sons and other promoter group companies hold approximately 71.77% of TCS shares.\n* **Mutual Funds:** 5.52%\n* **Insurance Companies:** 6.44%\n* **Foreign Institutional Investors (FIIs):** 16.98% (Source: Trendlyne.com, Yahoo Finance)\n\nSome of the major institutional holders of TCS include:\n\n* **Tata Sons:** 71.77% (promoter group)\n* **Life Insurance Corporation of India (LIC):** 4.13%\n* **SBI Mutual Fund:** 2.15%\n* **HDFC Mutual Fund:** 1.44% (Source: Trendlyne.com, Marketscreener)\n\n**Marketing Strategy:**\n\nTCS has a strong brand presence globally, with a focus on digital transformation, cloud services, and business consulting. Their marketing strategy involves:\n\n1. **Digital-first approach:** TCS emphasizes digital channels, such as social media, online advertising, and content marketing, to engage with customers and promote their services.\n2. **Thought leadership:** TCS publishes research papers, whitepapers, and case studies to showcase their expertise in emerging technologies like AI, blockchain, and IoT.\n3. **Partnerships and collaborations:** TCS partners with leading technology companies, startups, and academia to stay ahead of the curve and expand their offerings.\n4. **Customer-centric approach:** TCS focuses on delivering tailored solutions to meet specific customer needs, highlighting their expertise in industry-specific domains.\n\n**Global Presence:**\n\nTCS has a significant global presence, with:\n\n1. **Operations in 55 countries:** TCS has a strong foothold in North America, Europe, Asia, and Latin America.\n2. **Over 450,000 employees:** TCS has a large, diverse workforce with a significant presence in India, the United States, Europe, and other countries.\n3. **Delivery centers and innovation hubs:** TCS has established delivery centers and innovation hubs in various locations, including India, the United States, and Europe, to serve clients and develop new solutions.\n\nSources:\n\n* Trendlyne.com: TCS Latest Shareholding Pattern\n* Yahoo Finance: Tata Consultancy Services Limited (TCS.NS) Stock Major Holders\n* Marketscreener: Share ownership Tata Consultancy Services Ltd.\n* TCS Official Website: About TCS, Corporate Information",
+      "timestamp": "2026-02-22T14:02:25.553168"
+    }
+  ],
+  "created_at": "2026-02-22T14:02:19.598645",
+  "updated_at": "2026-02-22T14:02:25.553168"
+}

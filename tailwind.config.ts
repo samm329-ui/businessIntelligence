@@ -23,55 +23,46 @@ const config: Config = {
                 background: "oklch(var(--background) / <alpha-value>)",
                 foreground: "oklch(var(--foreground) / <alpha-value>)",
                 primary: {
-                    DEFAULT: "oklch(var(--primary) / <alpha-value>)",
-                    foreground: "oklch(var(--primary-foreground) / <alpha-value>)",
+                    DEFAULT: "#00FCC2", // Cyan
+                    foreground: "#050B14",
                 },
                 secondary: {
-                    DEFAULT: "oklch(var(--secondary) / <alpha-value>)",
-                    foreground: "oklch(var(--secondary-foreground) / <alpha-value>)",
-                },
-                destructive: {
-                    DEFAULT: "oklch(var(--destructive) / <alpha-value>)",
-                    foreground: "oklch(var(--destructive-foreground) / <alpha-value>)",
-                },
-                muted: {
-                    DEFAULT: "oklch(var(--muted) / <alpha-value>)",
-                    foreground: "oklch(var(--muted-foreground) / <alpha-value>)",
+                    DEFAULT: "#26E07A", // Emerald
+                    foreground: "#050B14",
                 },
                 accent: {
-                    DEFAULT: "oklch(var(--accent) / <alpha-value>)",
-                    foreground: "oklch(var(--accent-foreground) / <alpha-value>)",
+                    DEFAULT: "#FFD28E", // Gold
+                    foreground: "#050B14",
+                },
+                destructive: {
+                    DEFAULT: "#FF6B6B",
+                    foreground: "#FFFFFF",
+                },
+                muted: {
+                    DEFAULT: "#9DB3BD",
+                    foreground: "#E6F3F8",
                 },
                 popover: {
-                    DEFAULT: "oklch(var(--popover) / <alpha-value>)",
-                    foreground: "oklch(var(--popover-foreground) / <alpha-value>)",
+                    DEFAULT: "#07111B",
+                    foreground: "#E6F3F8",
                 },
                 card: {
-                    DEFAULT: "oklch(var(--card) / <alpha-value>)",
-                    foreground: "oklch(var(--card-foreground) / <alpha-value>)",
+                    DEFAULT: "rgba(13, 24, 37, 0.4)",
+                    foreground: "#E6F3F8",
                 },
-                sidebar: {
-                    DEFAULT: "oklch(var(--sidebar) / <alpha-value>)",
-                    foreground: "oklch(var(--sidebar-foreground) / <alpha-value>)",
-                    primary: "oklch(var(--sidebar-primary) / <alpha-value>)",
-                    "primary-foreground": "oklch(var(--sidebar-primary-foreground) / <alpha-value>)",
-                    accent: "oklch(var(--sidebar-accent) / <alpha-value>)",
-                    "accent-foreground": "oklch(var(--sidebar-accent-foreground) / <alpha-value>)",
-                    border: "oklch(var(--sidebar-border) / <alpha-value>)",
-                    ring: "oklch(var(--sidebar-ring) / <alpha-value>)",
-                },
-                chart: {
-                    '1': "oklch(var(--chart-1) / <alpha-value>)",
-                    '2': "oklch(var(--chart-2) / <alpha-value>)",
-                    '3': "oklch(var(--chart-3) / <alpha-value>)",
-                    '4': "oklch(var(--chart-4) / <alpha-value>)",
-                    '5': "oklch(var(--chart-5) / <alpha-value>)",
-                }
             },
             borderRadius: {
                 lg: "var(--radius)",
                 md: "calc(var(--radius) - 2px)",
                 sm: "calc(var(--radius) - 4px)",
+                xl: "12px",
+                "2xl": "16px",
+                "3xl": "24px",
+            },
+            boxShadow: {
+                'rim-cyan': '0 0 15px rgba(0, 252, 194, 0.15), inset 0 0 10px rgba(0, 252, 194, 0.05)',
+                'rim-gold': '0 0 15px rgba(255, 210, 142, 0.15), inset 0 0 10px rgba(255, 210, 142, 0.05)',
+                'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
             },
             keyframes: {
                 "accordion-down": {
@@ -83,15 +74,23 @@ const config: Config = {
                     to: { height: "0" },
                 },
                 glow: {
-                    from: { boxShadow: "0 0 10px -10px var(--primary)" },
-                    to: { boxShadow: "0 0 20px 5px var(--primary)" }
+                    '0%, 100%': { opacity: '0.4', filter: 'blur(20px)' },
+                    '50%': { opacity: '0.8', filter: 'blur(35px)' },
+                },
+                "fade-up": {
+                    '0%': { opacity: '0', transform: 'translateY(10px)' },
+                    '100%': { opacity: '1', transform: 'translateY(0)' },
                 }
             },
             animation: {
                 "accordion-down": "accordion-down 0.2s ease-out",
                 "accordion-up": "accordion-up 0.2s ease-out",
-                glow: "glow 2s ease-in-out infinite alternate",
+                glow: "glow 3s ease-in-out infinite",
+                "fade-up": "fade-up 0.5s ease-out forwards",
             },
+            backdropBlur: {
+                xs: '2px',
+            }
         },
     },
     plugins: [],

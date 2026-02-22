@@ -1,0 +1,893 @@
+{
+  "entity": "Intuit Inc.",
+  "data": {
+    "analysis": {
+      "executiveSummary": "[INSUFFICIENT DATA] Intuit Inc. financial data is limited, with a data confidence score of 61%. Revenue is reported at ₹227.00B. Key competitor analysis is hindered by insufficient data.",
+      "financials": {
+        "revenue": "₹227.00B",
+        "ebitda": null,
+        "profit": null,
+        "growth": null,
+        "marketCap": null
+      },
+      "competitors": [
+        "Zomato Limited",
+        "Swiggy (Bundl Technologies)",
+        "Ola (ANI Technologies)",
+        "BYJU'S (Think and Learn)",
+        "Unacademy",
+        "Vedantu",
+        "BYJU’S",
+        "Shuttl",
+        "Fashor",
+        "Pando"
+      ],
+      "keyFindings": [
+        "P/E Ratio: 18.00 (confidence: 69%)",
+        "Revenue (TTM): ₹227.00B (confidence: 45%)"
+      ],
+      "risks": [
+        "Insufficient data for comprehensive financial analysis"
+      ],
+      "opportunities": [
+        "Potential for growth with complete financial data"
+      ],
+      "industryOutlook": "Technology industry outlook not available",
+      "confidence": 54,
+      "model": "groq-llama-4-scout",
+      "tokensUsed": 1334
+    },
+    "collectedData": {
+      "entity": {
+        "name": "Intuit Inc.",
+        "type": "company",
+        "industry": "Technology",
+        "subIndustry": "General"
+      },
+      "sources": {
+        "companyInfo": [
+          {
+            "title": "Investor Relations | Tata Communications",
+            "url": "https://www.tatacommunications.com/investors",
+            "description": "His efforts resulted in Mindtree winning the \"Most promising company of the Year\" in 2013 by CNBC TV18. A 40-year IT industry veteran, Krishnakumar served as Chairman of the National Association of Software and Services Companies (NASSCOM), where he worked to strengthen the Indian IT industry to build a globally competitive ecosystem.",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "PDF Financial Performance Analysis of Selected It Companies in India",
+            "url": "https://www.jetir.org/papers/JETIR2401547.pdf",
+            "description": "The Indian IT industry, according to the National Association of Software and Service Companies (Nasscom), generated revenue of US$ 227 billion in FY22, a 15.5% increase, and was projected to reach US$ 245 billion in FY23. Financial performance analysis is the process of evaluating the financial health and performance of a business or investment.",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Competitive Landscape of the Indian IT Industry in 2024",
+            "url": "https://www.wrightresearch.in/encyclopedia/chapter-report/chapter-5-competitive-landscape-of-indian-it-industry/",
+            "description": "Benefits of Investing in IT Sector Stocks in India 1. Strong Growth Prospects The Indian IT sector is one of the fastest-growing sectors in the country, with consistent double-digit growth rates. Driven by digital transformation, the demand for IT services, software development, and IT-enabled services is on the rise globally. Indian IT companies, with their competitive edge in cost, quality ...",
+            "source": "duckduckgo"
+          },
+          {
+            "title": "Indian Information Technology Sector Report 2024 | Market Insights ...",
+            "url": "https://www.wrightresearch.in/encyclopedia/indian-it-sector-report-2024/",
+            "description": "Explore the 2025 IT Sector Report, highlighting the growth, opportunities, and challenges in the Indian IT industry. Discover key insights into the Indian IT market",
+            "source": "duckduckgo"
+          }
+        ],
+        "industryInfo": [],
+        "financialData": [],
+        "competitors": [],
+        "news": [],
+        "crawledPages": [
+          {
+            "url": "https://www.tatacommunications.com/investors",
+            "title": "Investor Relations | Tata Communications",
+            "content": "Investor Relations Tata Communications is a digital ecosystem enabler that powers today’s fast-growing digital economy. Integrated Annual Report 2024-25 Watch 39th Annual General Meeting × Overview Results Filings Presentations Our Board Support Resources Get Started Overview Tata Communications has been a part of the rich heritage of the internet in India. Over the last 25 years, enterprise-enabled services have been essential to the adoption of digital services in the country. From utility to transformation, connectivity is an essential fabric of sustenance for the economy. Tata Communications is committed to enabling Industry leaders in this New World of Communications™, with our unique promise of delivering secure connected digital experiences. Latest News Tata Communications launches ‘Secure Connected Digital Experience’ to help enterprises rebuild for a post-COVID world. Explore More Latest Presentation We enable borderless growth for businesses, boost product innovation and customer experience, improve productivity and efficiency while embedding agility and managing risk. Explore More Upcoming Event Join us for our Q3 FY26 earnings call on Wednesday, January 21, 2026 Explore More Filings View financial reports and statements filed with the Securities and Exchange Commission by the Tata Communications. Explore More Subscribe to email alerts Receive notifications via email about investor press releases, filings, events, presentations and financial reports. Explore More Annual Report Driven by our promise to drive a New World of Communications™️ Explore More Quarterly Reports 2026 2025 2024 2023 2022 2021 2020 2019 2018 Q4 Q3 Q3 FY26 - Earnings Call Transcript Q3 FY26 - Earnings Call Recording Q3 FY26 - Statutory Financials Q3 FY26 - Data Pack Q2 Q2 FY26 - Data Pack Q2 FY26 - Earnings Call Transcript Q2 FY26 - Earnings Call Recording Q2 FY26 - Statutory Financials Q1 Q1 FY26 - Data Pack Q1 FY26 - Earnings Call Recording Q1 FY26 - Earnings Call Transcript Q1 FY26 - Statutory Financials Q4 Q4 FY25 - Earnings Call Recording Q4 FY25 - Earnings Call Transcript Q4 FY25 - Statutory Financials Q4 FY25 - Data Pack Q3 Q3 FY25 - Data Pack Q3 FY25 - Statutory Financials Q3 FY25 - Earnings Call Recording Q3 FY25 - Earnings Call Transcript Q2 Q2 FY25 - Data Pack Q2 FY25 - Statutory Financials Q2 FY25 - Earnings Call Recording Q2 FY25 - Earnings Call Transcript Q1 Q1 FY25 - Earnings Call Recording Q1 FY25 - Earnings Call Transcript Q1 FY25 - Data Pack Q1 FY25 - Statutory Financials Q1 FY25 - Investor Presentation Q4 Q4 FY24 - Earnings Call Recording Q4 FY24 - Earnings Call Transcript Q4 FY24 - Data Pack Q4 FY24 - Statutory Financials Q4 FY24 - Investor Presentation Q3 Q3 FY24 - Data Pack Q3 FY24 - Statutory Financials Q3 FY24 - Investor Presentation Q3 FY24 - Earnings Call Recording Q3 FY24 - Earnings Call Transcript Q2 Q2 FY24 - Earnings Call Recording Q2 FY24 - Earnings Call Transcript Q2 FY24 - Data Pack Q2 FY24 - Statutory Financials Q2 FY24 - Investor Presentation Q1 Q1 FY24 - Investor Presentation Q1 FY24 - Earnings Call Recording Q1 FY24 - Earnings Call Transcript Q1 FY24 - Data Pack Q1 FY24 - Statutory Financials Q4 Q4 FY23 - Earnings Call Transcript Q4 FY23 - Earnings Call Recording Q4 FY23 - Statutory Financials Q4 FY23 - Data Pack Q4 FY23 - Investor Fact Sheet Q4 FY23 - Snapshot - TCOM Results Q3 Q3 FY23 - Earnings Call Transcript Q3 FY23 - Earnings Call Recording Q3 FY23 - Data Pack Q3 FY23 - Statutory Financials Q3 FY23 - Investor Fact Sheet Q2 Q2 FY23 - Earnings Call Transcript Q2 FY23 - Earnings Call Recording Q2 FY23 - Data Pack Q2 FY23 - Statutory Financials Q2 FY23 - Investor Fact Sheet Q1 Q1 FY23 - Earnings Call Transcript Q1 FY23 - Earnings Call Recording Q1 FY23 - Data Pack Q1 FY23 - Statutory Financials Q1 FY23 - Investor Fact Sheet Q4 Q4 FY22 - Earnings call transcript Q4 FY22 - Earnings call recording Q4 FY22 - Data Pack Q4 FY22 - Statutory Financials Q4 FY22 - Investor Factsheet Q3 Q3 FY22 - Earnings call transcript Q3 FY22 - Earnings call recording Q3 FY22 - Data Pack Q3 FY22 - Statutory Financials Q3 FY22 - Investor Factsheet Q2 Q2 FY22 - Earnings call transcript Q2 FY22 - Earnings call recording Q2 FY22 - Data Pack Q2 FY22 - Statutory Financials Q2 FY22 - Investor Factsheet Q1 Q1 FY22 - Earnings call transcript Q1 FY22 - Earnings call recording Q1 FY22 - Data Pack Q1 FY22 - Statutory Financials Q1 FY22 - Investor Fact Sheet Q4 Q4 FY21 - Concall transcript Q4 FY21 - Statutory Financials Q4 FY21 - Investor Fact Sheet Q4 FY21 - Earnings call recording Q4 FY21 - Data Pack Q3 Q3 FY21 - Earnings Call Recording Q3 FY21 - Data Pack Q3 FY21 - Concall Transcript Q3 FY21 - Statutory Financials Q3 FY21 - Investor Fact Sheet Q2 Q2 FY21 - Concall Transcript Q2 FY21 - Statutory Financials Q2 FY21 - Investor Fact Sheet Q1 Q1 FY21 - Concall Transcript Q1 FY21 - Statutory Financials Q1 FY21 - Investor Fact Sheet Q4 Q4 FY20 - Earnings Call Recording Q4 FY20 - Concall Transcript Q4 FY20 - Statutory Financials Q4 FY20 - Investor Fact Sheet Q3 Q3 FY20 - Statutory Financials Q3 FY20 - Concall Transcript Q3 FY20 - Investor Fact Sheet Q2 Q2 FY20 - Concall Transcript Q2 FY20 - Statutory Financials Q2 FY20 - Investor Fact Sheet Q1 Q1 FY20 - Concall Transcript Q1 FY20 - Statutory Financials Q1 FY20 - Investor Fact Sheet Q4 Q4 FY19 - Concall Transcript Q4 FY19 - Statutory Financials Q4 FY19 - Investor Fact Sheet Q3 Q3 FY19 - Statutory Financials Q3 FY19 - Investor Fact Sheet Q3 FY19 - Concall Transcript Q2 Q2 FY19 - Statutory Financials Q2 FY19 - Investor Fact Sheet Q2 FY19 - Concall Transcript Q1 Q1 FY19 - Statutory Financials Q1 FY19 - Investor Fact Sheet Q1 FY19 - Concall Transcript Q4 Q4 FY18 - Investor Meet Transcript Q4 FY18 - Statutory Financials Q4 FY18 - Investor Fact Sheet Q3 Q3 FY18 - Earnings Call Transcript Q3 FY18 - Statutory Financials Q3 FY18 - Investor Fact Sheet Q2 Q2 FY18 - Earnings Call Transcript Q2 FY18 - Statutory Financials Q2 FY18 - Investor Fact Sheet Q1 Q1 FY18 - Statutory Financials Q1 FY18 - Earnings Call Transcript Q1 FY18 - Investor Fact Sheet Annual Reports 2025 2024 2023 2022 2021 2020 2019 2018 2017 2016 View All Integrated Annual Report 2024-25 Voting result ESOP Report and Certificate Intimation of AGM – June 7, 2025 39th AGM Video 39th Annual General Meeting of Tata Communications Limited, Book Closure and Record Date Independent Assurance Statement Intimation of AGM - June 18, 2025 39th AGM Transcript Communications on Tax Deduction at Source / Withholding Tax Business Responsibility and Sustainability Report Notice of the 39th AGM Outcome of AGM 2025 Subsidiary Financials - 2024-25 Annual Return 2024-25 38th AGM Transcript Communications on Tax Deduction at Source / Withholding Tax ESOP Report and Certificate Intimation of AGM - June 25 2024 38th AGM Presentation Intimation of AGM, Book Closure and Record date Independent Assurance Statement Intimation of AGM - June 26 2024 Outcome of AGM 2024 Intimation of AGM - June 18, 2024 Business Responsibility and Sustainability Report Notice of the 38th AGM 38th AGM Video Voting results Subsidiary Financials - 2023-24 Annual Return 2023-24 Integrated Annual Report 2023-24 Outcome of Annual General Meeting Intimation of AGM – newspaper publication June 23 2023 Subsidiary Financials - 2022-23 37th AGM Video Independent Assurance Statement Introduction Communications on Tax Deduction at Source / Withholding Tax Annual Return 2022-23 37th AGM Transcript Notice of AGM, Record date and Book closure Annexure to Business Responsibility and Sustainability report Notice of 37th AGM 37th AGM Presentation Intimation of AGM - newspaper publication June 15 2023 Business Responsibility and Sustainability Report Integrated Annual Report 2022-23 36th AGM Transcript Intimation of AGM - newspaper June 8, 2022 Annual Return 2021-22 Notice of AGM and Book Closure - FY2021-22 Subsidiary Financials - 2021-22 Communication on Tax Deduction at Source / Withholding Tax 36th AGM Video Intimation of AGM - newspaper May 31, 2022 Integrated Annual Report 2021-22 e-Voting-advertisement June 9, 2021 Annual Return 2020-21 Intimation of AGM - newspaper June 7, 2021 Subsidiary Financials - 2020- Notice of AGM and Book Closure - FY2020-21 Communication on Tax Deduction at Source / Withholding Tax Annual Report 2020-21 Subsidiary Accounts 2019-20 Annual Report 2019-20 Communication on Tax Deduction at Source / Withholding Tax Subsidiary Accounts 2018-19 Annual Report 2018-19 Subsidiary Accounts 2017-18 Annual Report 2017-18 Subsidiary Accounts 2016-17 Annual Report 2016-17 Subsidiary Accounts 2015-16 Annual Report 2015-16 Stock Exchange Filings 2026 2025 2024 2023 2022 2021 View All Redemption of Commercial Paper amounting to ₹200 crore Appointment of Chief Financial Officer Outcome of Board Meeting scheduled on January 21, 2026 Statement of utilisation of issue proceeds under Regulation 52(7) and 52(7)(A) of SEBI Change in Key Managerial Personnel Resignation of Chief Financial Officer Press Release - Tata Communications Launches AI-Ready Suite to Empower Enterprises Earnings Call Transcript pursuant to Regulation 30 of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 Intimation of Schedule of Analyst / Institutional Investor Meetings Composite scheme of arrangement among wholly-owned subsidiaries of the Company Intimation Under Regulation 30 of SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 (‘SEBI Listing Regulations’) – Selection of Managing Director & Chief Executive Officer (Designate) Intimation under Regulation 30 of SEBI (Listing Obligations & Disclosure Requirements) Regulations 2015 – Dissolution of a wholly owned indirect subsidiary Redemption of Commercial Paper amounting to ₹500 crore Certificate of compliance in respect of Commercial Papers issued by the Company Board Meeting for Unaudited Financial Results for the quarter and nine months ended December 31, 2025 Intimation of Earnings Call for quarterly results",
+            "crawledAt": "2026-02-22T11:29:30.655Z",
+            "sourceType": "official"
+          },
+          {
+            "url": "https://www.wrightresearch.in/encyclopedia/chapter-report/chapter-5-competitive-landscape-of-indian-it-industry/",
+            "title": "Competitive Landscape of the Indian IT Industry in 2024 report",
+            "content": "Capital Gain/Loss Report × Download for * Download Cancel Find The Right Investment Products Portfolio Management(PMS) For ₹50 Lakh+ Equity Mutual Funds Algo Strategies Tools Financial Planner Risk Profile Market Tracker Portfolio Review Home Profile Settings User Profile Investment Profile Broker Info Download G/L Report Sync Broker Data Tools Portfolio Review Resources Newsletter Learn with Wright About Philosophy Our Team Careers Support FAQs Policies Login Get Started Get Started Invest Now PMS Portfolio Management Equity Smallcases Mutual Funds Basket Algo Strategies Portfolio Review Risk Profile Market Tracker Market Dashboard Financial Planner Financial Calculators Newsletter Encyclopedia News Courses Learn with Wright Account Find The Right Investment Products Portfolio Management(PMS) For ₹50 Lakh+ Equity Mutual Funds Algo Strategies Tools Financial Planner Risk Profile Market Tracker Portfolio Review Market Dashboard Financial Calculators Home Profile Settings User Profile Investment Profile Resources Newsletter Learn with Quant Learn with Wright Encyclopedia About Philosophy Our Team Careers Support FAQs Policies Login PMS 🚀 Click here to get access to our Free Course on Momentum Investing Strategy 🚀 <iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-5TZMVQR\" height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe> Download Report Published On Aug. 12, 2024 --> Published On Aug. 12, 2024 7 min read List Of Chapters In this article Share Subscribe to our Newsletter Get weekly market insights and facts right in your inbox Subscribe Important guidelines Live Performance It depicts the actual and verifiable returns generated by the portfolios of SEBI registered entities. Live performance does not include any backtested data or claim and does not guarantee future returns. Disclosures By proceeding, you understand that investments are subjected to market risks and agree that returns shown on the platform were not used as an advertisement or promotion to influence your investment decisions. Let's get started Email ID Use phone number to Sign Up Enter Phone Use email to Sign Up Oops your are not registered ! let's get started. Error in signup. Please try again. Get OTP Or Sign up with By signing up, you agree to our Terms and Privacy Policy \"I was drawn to Wright Research due to its multi-factor approach. Their Balanced MFT is an excellent product.\" By Prashant Sharma CTO, Zydus Verify your email Email ID Enter OTP Error in signup. Please try again. Verify OTP By signing up, you agree to our Terms and Privacy Policy \"I was drawn to Wright Research due to its multi-factor approach. Their Balanced MFT is an excellent product.\" By Prashant Sharma CTO, Zydus Create your password Password Confirm Password Password must contain: At least 10 characters Mix of uppercase and lowercase letters At least one number At least one special character (!@#$%^&*) Cannot be a common password (e.g., password123) Cannot be similar to your email or name Both passwords must be the same. Create Password Skip Password By signing up, you agree to our Terms and Privacy Policy \"I was drawn to Wright Research due to its multi-factor approach. Their Balanced MFT is an excellent product.\" By Prashant Sharma CTO, Zydus Congratulations for starting your financial journey! Get personalised portfolios Skip to Trending Portfolios Log in Email ID Use phone number to Login Phone Number Use email to Login Error in login. Please try again. Continue OR By logging in, you agree to our Terms and Privacy Policy \"I was drawn to Wright Research due to its multi-factor approach. Their Balanced MFT is an excellent product.\" By Prashant Sharma CTO, Zydus Enter OTP Email ID Enter OTP Error in signup. Please try again. Verify OTP Log in with Password → By logging in, you agree to our Terms and Privacy Policy \"I was drawn to Wright Research due to its multi-factor approach. Their Balanced MFT is an excellent product.\" By Prashant Sharma CTO, Zydus Enter your password Email ID Phone Password Forgot Password? Error in login. Please try again. Continue Log in with OTP → By logging in, you agree to our Terms and Privacy Policy \"I was drawn to Wright Research due to its multi-factor approach. Their Balanced MFT is an excellent product.\" By Prashant Sharma CTO, Zydus Please enter OTP to change the password Email ID Enter OTP Something's wrong! Please try again. Verify OTP Set a new password New Password Confirm Password Password must contain: At least 10 characters Mix of uppercase and lowercase letters At least one number At least one special character (!@#$%^&*) Cannot be a common password Cannot be similar to your email or name Both passwords must be the same. Change Password Congratulations for starting your financial journey! Get personalised portfolios Skip to Trending Portfolios Answer these questions to get a personalized portfolio or skip to see trending portfolios. What is your age? 18-24 25-34 35-44 45+ Next Answer these questions to get a personalized portfolio or skip to see trending portfolios. Which investment products are you interested in? (You can choose multiple options) Stocks Smallcases Mutual Funds Portfolio Management Service Algorithms Next Answer these questions to get a personalized portfolio or skip to see trending portfolios. How should your investments behave? Aggressive Moderate Low Next Answer these questions to get a personalized portfolio or skip to see trending portfolios. What is your gender? 🧑 Male 👩 Female ⚧️ Other Next Answer these questions to get a personalized portfolio or skip to see trending portfolios. What’s your investing goal? (You can choose multiple options) Get the best returns Achieve financial freedom Conserve capital Rainy day funds Explore cool products Continue You are Conservative Investor 93/100 Investor Profile Score We've tailored Portfolio Management services for your profile. View Recommended Portfolios Restart Capital Gain/Loss Report × Download for * Download Cancel Home Explore Portfolio Tools More Sign In Portfolios Portfolio Management Equity Smallcases Mutual Fund Baskets Alternative Tools for your investments Portfolio Review Update Risk report Market Tracker Market Dashboard Financial Planner Financial Calculator Read & Share Newsletter News Learn Learn Quant Encyclopedia Help FAQs Policies Help × × Subscribe to our mailing list Enter Email Enter First Name Enter Last Name Subscribe ✅ Sucessfully Subscribed Get Started",
+            "crawledAt": "2026-02-22T11:29:32.156Z",
+            "sourceType": "official"
+          }
+        ]
+      },
+      "metadata": {
+        "collectedAt": "2026-02-22T11:29:33.174Z",
+        "totalSources": 6,
+        "collectionTimeMs": 36495,
+        "isNewEntity": false,
+        "dataConfidenceScore": 38
+      },
+      "csvCompetitors": [
+        "Zomato Limited",
+        "Swiggy (Bundl Technologies)",
+        "Ola (ANI Technologies)",
+        "BYJU'S (Think and Learn)",
+        "Unacademy",
+        "Vedantu",
+        "BYJU’S",
+        "Shuttl",
+        "Fashor",
+        "Pando"
+      ],
+      "structuredFinancials": {
+        "revenue": [
+          {
+            "metric": "revenue",
+            "value": 227000000000,
+            "rawValue": "revenue of US$ 227 billion",
+            "unit": "billion",
+            "currency": "USD",
+            "source": "duckduckgo",
+            "sourceUrl": "https://www.jetir.org/papers/JETIR2401547.pdf",
+            "confidence": 0.315,
+            "extractedAt": "2026-02-22T11:29:33.204Z",
+            "fiscalPeriod": "FY22",
+            "freshnessScore": 0.7
+          }
+        ],
+        "ebitda": [],
+        "netProfit": [
+          {
+            "metric": "netProfit",
+            "value": 3,
+            "rawValue": "Earnings Call Transcript Q3",
+            "unit": "",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.tatacommunications.com/investors",
+            "confidence": 0.8,
+            "extractedAt": "2026-02-22T11:29:33.206Z",
+            "fiscalPeriod": "FY26",
+            "publishedDate": "2026-01-20",
+            "freshnessScore": 1
+          }
+        ],
+        "operatingProfit": [],
+        "grossProfit": [],
+        "marketCap": [],
+        "revenueGrowth": [],
+        "ebitdaMargin": [],
+        "netMargin": [],
+        "peRatio": [
+          {
+            "metric": "peRatio",
+            "value": 18,
+            "rawValue": "pendent Assurance Statement Intimation of AGM - June 18,",
+            "unit": "x",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.tatacommunications.com/investors",
+            "confidence": 0.8,
+            "extractedAt": "2026-02-22T11:29:33.207Z",
+            "fiscalPeriod": "FY26",
+            "publishedDate": "2026-01-20",
+            "freshnessScore": 1
+          },
+          {
+            "metric": "peRatio",
+            "value": 50,
+            "rawValue": "pedia News Courses Learn with Wright Account Find The Right Investment Products Portfolio Management",
+            "unit": "x",
+            "currency": "INR",
+            "source": "crawl_official",
+            "sourceUrl": "https://www.wrightresearch.in/encyclopedia/chapter-report/chapter-5-competitive-landscape-of-indian-it-industry/",
+            "confidence": 0.5599999999999999,
+            "extractedAt": "2026-02-22T11:29:33.209Z",
+            "fiscalPeriod": "2024",
+            "freshnessScore": 0.7
+          }
+        ],
+        "debtToEquity": [],
+        "roe": [],
+        "eps": [],
+        "freeCashFlow": [],
+        "metadata": {
+          "totalExtractions": 4,
+          "uniqueMetrics": 3,
+          "avgConfidence": 0.62,
+          "sourcesUsed": [
+            "duckduckgo",
+            "crawl_official"
+          ],
+          "extractedAt": "2026-02-22T11:29:33.209Z"
+        }
+      },
+      "consensusMetrics": {
+        "entityId": "Intuit Inc.",
+        "entityName": "Intuit Inc.",
+        "entityType": "company",
+        "fiscalPeriod": "TTM",
+        "marketCap": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            }
+          ],
+          "isAvailable": false
+        },
+        "currentPrice": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            }
+          ],
+          "isAvailable": false
+        },
+        "priceChange1D": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            }
+          ],
+          "isAvailable": false
+        },
+        "priceChange1Y": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            }
+          ],
+          "isAvailable": false
+        },
+        "weekHigh52": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            }
+          ],
+          "isAvailable": false
+        },
+        "weekLow52": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            }
+          ],
+          "isAvailable": false
+        },
+        "volume": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            }
+          ],
+          "isAvailable": false
+        },
+        "revenue": {
+          "value": 227000000000,
+          "confidence": 45,
+          "variance": 0,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "duckduckgo",
+              "value": 227000000000,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            }
+          ],
+          "isAvailable": true
+        },
+        "revenueGrowthYoy": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            }
+          ],
+          "isAvailable": false
+        },
+        "grossProfit": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            }
+          ],
+          "isAvailable": false
+        },
+        "grossMargin": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            }
+          ],
+          "isAvailable": false
+        },
+        "operatingIncome": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            }
+          ],
+          "isAvailable": false
+        },
+        "operatingMargin": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            }
+          ],
+          "isAvailable": false
+        },
+        "netIncome": {
+          "value": 3,
+          "confidence": 69,
+          "variance": 0,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": 3,
+              "weight": 0.85
+            }
+          ],
+          "isAvailable": true
+        },
+        "netMargin": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            }
+          ],
+          "isAvailable": false
+        },
+        "ebitda": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            }
+          ],
+          "isAvailable": false
+        },
+        "ebitdaMargin": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            }
+          ],
+          "isAvailable": false
+        },
+        "eps": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            }
+          ],
+          "isAvailable": false
+        },
+        "totalAssets": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            }
+          ],
+          "isAvailable": false
+        },
+        "totalDebt": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            }
+          ],
+          "isAvailable": false
+        },
+        "cashAndEquivalents": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            }
+          ],
+          "isAvailable": false
+        },
+        "shareholderEquity": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            }
+          ],
+          "isAvailable": false
+        },
+        "peRatio": {
+          "value": 18,
+          "confidence": 69,
+          "variance": 0,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": 18,
+              "weight": 0.85
+            }
+          ],
+          "isAvailable": true
+        },
+        "pbRatio": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            }
+          ],
+          "isAvailable": false
+        },
+        "psRatio": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            }
+          ],
+          "isAvailable": false
+        },
+        "evToEbitda": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            }
+          ],
+          "isAvailable": false
+        },
+        "debtToEquity": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            }
+          ],
+          "isAvailable": false
+        },
+        "currentRatio": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            }
+          ],
+          "isAvailable": false
+        },
+        "roe": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            }
+          ],
+          "isAvailable": false
+        },
+        "roa": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            }
+          ],
+          "isAvailable": false
+        },
+        "roic": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            }
+          ],
+          "isAvailable": false
+        },
+        "freeCashFlow": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            }
+          ],
+          "isAvailable": false
+        },
+        "operatingCashFlow": {
+          "value": null,
+          "confidence": 0,
+          "variance": null,
+          "hasWarning": false,
+          "sources": [
+            {
+              "source": "duckduckgo",
+              "value": null,
+              "weight": 0.5
+            },
+            {
+              "source": "crawl_official",
+              "value": null,
+              "weight": 0.85
+            }
+          ],
+          "isAvailable": false
+        },
+        "overallConfidence": 61,
+        "sourcesUsed": [
+          "duckduckgo",
+          "crawl_official"
+        ],
+        "dataGaps": [
+          "marketCap",
+          "currentPrice",
+          "priceChange1D",
+          "priceChange1Y",
+          "weekHigh52",
+          "weekLow52",
+          "volume",
+          "revenueGrowthYoy",
+          "grossProfit",
+          "grossMargin",
+          "operatingIncome",
+          "operatingMargin",
+          "netMargin",
+          "ebitda",
+          "ebitdaMargin",
+          "eps",
+          "totalAssets",
+          "totalDebt",
+          "cashAndEquivalents",
+          "shareholderEquity",
+          "pbRatio",
+          "psRatio",
+          "evToEbitda",
+          "debtToEquity",
+          "currentRatio",
+          "roe",
+          "roa",
+          "roic",
+          "freeCashFlow",
+          "operatingCashFlow"
+        ],
+        "varianceWarnings": [],
+        "fetchedAt": "2026-02-22T11:29:33.211Z",
+        "expiresAt": "2026-02-23T11:29:33.211Z",
+        "confidenceExplanation": {
+          "overallScore": 61,
+          "level": "medium",
+          "reasons": [
+            "Medium confidence: 2 sources with some variance",
+            "Only 14% of metrics available"
+          ],
+          "factors": {
+            "sourceCount": 2,
+            "pdfCount": 0,
+            "freshnessScore": 100,
+            "varianceScore": 100,
+            "dataCompleteness": 14
+          }
+        }
+      },
+      "consensusForAI": "=== VALIDATED CONSENSUS DATA FOR INTUIT INC. ===\nOverall Data Confidence: 61%\nSources: duckduckgo, crawl_official\nData As Of: 2026-02-22T11:29:33.211Z\n\n--- MARKET DATA ---\nMarket Cap: UNAVAILABLE\nCurrent Price: UNAVAILABLE\n1-Day Price Change: UNAVAILABLE%\n1-Year Price Change: UNAVAILABLE%\n52-Week High: UNAVAILABLE\n52-Week Low: UNAVAILABLE\n\n--- INCOME STATEMENT ---\nRevenue (TTM): ₹227.00B (confidence: 45%)\nRevenue Growth YoY: UNAVAILABLE%\nGross Margin: UNAVAILABLE%\nOperating Margin: UNAVAILABLE%\nNet Margin: UNAVAILABLE%\nEBITDA: UNAVAILABLE\nEBITDA Margin: UNAVAILABLE%\nEPS: UNAVAILABLE\n\n--- BALANCE SHEET ---\nTotal Assets: UNAVAILABLE\nTotal Debt: UNAVAILABLE\nCash & Equivalents: UNAVAILABLE\nDebt to Equity: UNAVAILABLE\n\n--- VALUATION RATIOS ---\nP/E Ratio: 18.00 (confidence: 69%)\nP/B Ratio: UNAVAILABLE\nEV/EBITDA: UNAVAILABLE\n\n--- RETURNS ---\nReturn on Equity (ROE): UNAVAILABLE%\nReturn on Assets (ROA): UNAVAILABLE%\nReturn on Invested Capital (ROIC): UNAVAILABLE%\n\n--- CASH FLOW ---\nFree Cash Flow: UNAVAILABLE\nOperating Cash Flow: UNAVAILABLE\n\n\n--- DATA GAPS (DO NOT ESTIMATE THESE) ---\nmarketCap, currentPrice, priceChange1D, priceChange1Y, weekHigh52, weekLow52, volume, revenueGrowthYoy, grossProfit, grossMargin, operatingIncome, operatingMargin, netMargin, ebitda, ebitdaMargin, eps, totalAssets, totalDebt, cashAndEquivalents, shareholderEquity, pbRatio, psRatio, evToEbitda, debtToEquity, currentRatio, roe, roa, roic, freeCashFlow, operatingCashFlow\n\n=== END VALIDATED DATA ==="
+    },
+    "timestamp": "2026-02-22T11:29:34.257Z"
+  },
+  "timestamp": "2026-02-22T11:29:34.257Z",
+  "expiryHours": 24,
+  "source": "api_realtime",
+  "isStale": false
+}

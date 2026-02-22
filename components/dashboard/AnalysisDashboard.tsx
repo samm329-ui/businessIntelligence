@@ -1,13 +1,16 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, lazy, Suspense } from 'react'
 import { Sidebar } from './Sidebar'
-import { OverviewTab } from './tabs/OverviewTab'
-import { CompetitorsTab } from './tabs/CompetitorsTab'
-import { StrategiesTab } from './tabs/StrategiesTab'
-import InvestorsTab from './tabs/InvestorsTab'
+import Silk from '@/components/Silk'
 import { getResolvedData } from '@/lib/industry-database'
 import type { AnalysisResponse } from '@/types/analysis'
+
+// Lazy load tabs for better performance
+const OverviewTab = lazy(() => import('./tabs/OverviewTab').then(m => ({ default: m.OverviewTab })))
+const CompetitorsTab = lazy(() => import('./tabs/CompetitorsTab').then(m => ({ default: m.CompetitorsTab })))
+const StrategiesTab = lazy(() => import('./tabs/StrategiesTab').then(m => ({ default: m.StrategiesTab })))
+const StakeholdersTab = lazy(() => import('./tabs/StakeholdersTab').then(m => ({ default: m.StakeholdersTab })))
 
 interface AnalysisDashboardProps {
   analysis: AnalysisResponse | Record<string, unknown>
@@ -17,93 +20,93 @@ export function AnalysisDashboard({ analysis }: AnalysisDashboardProps) {
   const [activeTab, setActiveTab] = useState('dashboard')
   const [showDebug, setShowDebug] = useState(false)
 
-  // Extract entity info with fallback for typed/legacy field names
   const entityName = useMemo(() => {
-    return (analysis as any).entity?.name 
-      || (analysis as any).entityName 
-      || (analysis as any).query 
+    return (analysis as any).entity?.name
+      || (analysis as any).entityName
+      || (analysis as any).query
       || 'Unknown'
   }, [analysis])
 
   const industry = useMemo(() => {
-    return (analysis as any).entity?.industry 
-      || (analysis as any).industry 
-      || (analysis as any).industryName 
+    return (analysis as any).entity?.industry
+      || (analysis as any).industry
+      || (analysis as any).industryName
       || 'Unknown'
   }, [analysis])
 
-  const industryData = useMemo(() =>
-    getResolvedData(industry),
-    [industry]
-  )
-
-  // Get confidence score with fallback
-  const confidence = useMemo(() => {
-    return (analysis as any).data?.confidence 
-      || (analysis as any).analysis?.confidence 
-      || (analysis as any).confidence 
-      || (analysis as any).metadata?.dataConfidenceScore 
-      || 0
-  }, [analysis])
-
-  // Check if in development mode
   const isDev = process.env.NODE_ENV === 'development'
 
   return (
-    <div className="flex min-h-screen bg-background text-foreground font-sans">
+    <div className="flex min-h-screen relative" style={{ background: '#050B14', fontFamily: 'Inter, Manrope, sans-serif' }}>
+      {/* Silk Background */}
+      <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <Silk
+          speed={7}
+          scale={0.7}
+          color="#412907"
+          noiseIntensity={0}
+          rotation={0}
+        />
+      </div>
 
-      {/* Debug Panel - Only in Development */}
+      {/* Subtle overlay to dampen the color if needed, ensuring text readability */}
+      <div className="fixed inset-0 z-[1] bg-black/40 pointer-events-none" />
+
+      {/* Dev Debug Panel */}
       {isDev && (
         <div className="fixed bottom-4 right-4 z-50">
           <button
             onClick={() => setShowDebug(!showDebug)}
-            className="bg-yellow-500 hover:bg-yellow-600 text-black px-3 py-1 rounded text-sm font-mono"
+            className="px-3 py-1 rounded-lg text-sm font-mono text-black"
+            style={{ background: '#FFD28E' }}
           >
             {showDebug ? 'Hide Debug' : 'Debug'}
           </button>
-          
           {showDebug && (
-            <div className="absolute bottom-10 right-0 w-[500px] max-h-[400px] overflow-auto bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-xs border-2 border-yellow-500">
+            <div className="absolute bottom-10 right-0 w-[500px] max-h-[400px] overflow-auto rounded-xl font-mono text-xs p-4"
+              style={{ background: '#0D1825', border: '2px solid #FFD28E', color: '#26E07A' }}>
               <div className="flex justify-between items-center mb-2">
-                <span className="text-yellow-400 font-bold">Raw API Response (Dev Only)</span>
-                <button 
-                  onClick={() => setShowDebug(false)}
-                  className="text-gray-400 hover:text-white"
-                >
-                  ✕
-                </button>
+                <span style={{ color: '#FFD28E', fontWeight: 700 }}>Raw API Response (Dev Only)</span>
+                <button onClick={() => setShowDebug(false)} style={{ color: '#9DB3BD' }}>✕</button>
               </div>
-              <pre className="whitespace-pre-wrap">
-                {JSON.stringify(analysis, null, 2)}
-              </pre>
+              <pre className="whitespace-pre-wrap">{JSON.stringify(analysis, null, 2)}</pre>
             </div>
           )}
         </div>
       )}
 
-      {/* Sidebar Navigation */}
+      {/* Sidebar */}
       <Sidebar
         activeTab={activeTab}
         setActiveTab={setActiveTab}
-        industryName={industry}
+        industryName={entityName}
         analysis={analysis}
       />
 
-      {/* Main Content Area */}
-      <main className="flex-1 lg:ml-64 transition-all duration-300">
-        <div className="container mx-auto px-4 py-8 lg:px-8 lg:py-10 max-w-[1600px]">
 
-          {/* Header Area (Optional, can be used for breadcrumbs or actions) */}
-          <header className="mb-8 flex items-center justify-between lg:hidden">
-            {/* Mobile spacing/header if needed, usually handled by Sidebar's mobile toggle */}
-          </header>
+      {/* Main Content */}
+      <main className="flex-1 lg:ml-72 relative z-10">
+        <div className="container mx-auto px-4 py-8 lg:px-8 lg:py-10 max-w-[1500px]">
+          {/* Mobile header spacer */}
+          <div className="h-12 lg:h-0" />
 
-          {/* Dynamic Content */}
+          {/* Tab Content */}
           <div className="min-h-[80vh]">
-            {activeTab === 'dashboard' && <OverviewTab analysis={analysis} />}
-            {activeTab === 'market' && <CompetitorsTab analysis={analysis} />}
-            {activeTab === 'strategies' && <StrategiesTab analysis={analysis} />}
-            {activeTab === 'investors' && <InvestorsTab analysis={analysis} />}
+            <Suspense fallback={
+              <div className="flex items-center justify-center min-h-[40vh]">
+                <div className="flex flex-col items-center gap-4">
+                  <div className="w-10 h-10 border-4 border-gold/20 border-t-gold rounded-full animate-spin" />
+                  <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-gold/60 animate-pulse">
+                    Synchronizing Intelligence...
+                  </p>
+                </div>
+              </div>
+            }>
+              {activeTab === 'dashboard' && <OverviewTab analysis={analysis} />}
+              {activeTab === 'market' && <CompetitorsTab analysis={analysis} />}
+              {activeTab === 'strategies' && <StrategiesTab analysis={analysis} />}
+              {activeTab === 'stakeholders' && <StakeholdersTab analysis={analysis} />}
+            </Suspense>
           </div>
         </div>
       </main>

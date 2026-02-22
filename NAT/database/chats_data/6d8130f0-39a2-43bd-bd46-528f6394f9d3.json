@@ -1,0 +1,18 @@
+{
+  "session_id": "6d8130f0-39a2-43bd-bd46-528f6394f9d3",
+  "chat_type": "realtime",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Give me detailed financial analysis of TCS with EBITDA, EBITDA margin, EBIT, net profit margin, ROE, ROA, debt to equity, current ratio, dividend yield and growth rates",
+      "timestamp": "2026-02-22T13:57:35.062357"
+    },
+    {
+      "role": "assistant",
+      "content": "Here's a detailed financial analysis of Tata Consultancy Services (TCS) based on the available data:\n\n**1. EBITDA and EBITDA Margin:**\n\n* TCS reported revenue of US$ 7,509 mn, up 0.6% QoQ and down 0.4% YoY (up 0.8% QoQ CC/down 2.6% YoY CC) in Q3FY26.\n* To calculate EBITDA, we need more information about the company's operating expenses. However, according to a report by ICICI Direct, TCS's adjusted EBIT margin was 24.5% in Q3FY26.\n* Assuming an average depreciation and amortization expense of 1.5-2% of revenue (based on historical data), we can estimate the EBITDA margin to be around 26-27%.\n\n**2. EBIT and Net Profit Margin:**\n\n* TCS's adjusted EBIT margin was 24.5% in Q3FY26, implying an EBIT of US$ 1,839 mn (24.5% of US$ 7,509 mn).\n* The company's net profit margin was 22.36% in Q3FY26, according to Moneycontrol.\n* This implies a net profit of US$ 1,679 mn (22.36% of US$ 7,509 mn).\n\n**3. Return on Equity (ROE) and Return on Assets (ROA):**\n\n* According to Moneycontrol, TCS's ROE was 63.55% and ROA was 75.77% in Q3FY26.\n* These ratios indicate that TCS has a strong ability to generate profits from shareholders' equity and assets.\n\n**4. Debt-to-Equity Ratio:**\n\n* TCS has a debt-to-equity ratio of 0.09, according to Stock Analysis.\n* This indicates that the company has a very low level of debt and a strong equity position.\n\n**5. Current Ratio:**\n\n* TCS has a current ratio of 2.52, according to Stock Analysis.\n* This indicates that the company has sufficient liquidity to meet its short-term obligations.\n\n**6. Dividend Yield:**\n\n* Unfortunately, I couldn't find the current dividend yield for TCS. However, according to Tipranks, TCS's dividend per share was \u20b9 29 in FY2025.\n\n**7. Growth Rates:**\n\n* Revenue growth: -0.4% YoY (Q3FY26)\n* Net profit growth: Not available\n\nHere's a summary of the financial analysis:\n\n| **Financial Metric** | **Value** | **Source** |\n| --- | --- | --- |\n| EBITDA Margin | 26-27% (estimated) | - |\n| EBIT Margin | 24.5% | ICICI Direct |\n| Net Profit Margin | 22.36% | Moneycontrol |\n| ROE | 63.55% | Moneycontrol |\n| ROA | 75.77% | Moneycontrol |\n| Debt-to-Equity Ratio | 0.09 | Stock Analysis |\n| Current Ratio | 2.52 | Stock Analysis |\n| Dividend Yield | Not available | - |\n| Revenue Growth (YoY) | -0.4% | ICICI Direct |\n\nSources:\n\n* ICICI Direct: TCS Q3FY26 results report\n* Moneycontrol: TCS financials and ratios\n* Stock Analysis: TCS statistics and ratios\n* Tipranks: TCS dividend per share\n\nPlease note that some of the information is estimated or based on historical data, and may not reflect the current situation. For more up-to-date and accurate information, I recommend checking the company's official website, financial reports, or consulting with a financial analyst.",
+      "timestamp": "2026-02-22T13:57:41.184023"
+    }
+  ],
+  "created_at": "2026-02-22T13:57:35.062357",
+  "updated_at": "2026-02-22T13:57:41.184023"
+}

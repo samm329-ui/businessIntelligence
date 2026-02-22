@@ -1,0 +1,35 @@
+[
+  {
+    "requestId": "req_1771759767023_s77ged3je",
+    "timestamp": "2026-02-22T11:29:27.023Z",
+    "stage": "INPUT_RECEIVED",
+    "input": "collector-search-first",
+    "realtimePriorityMode": true
+  },
+  {
+    "requestId": "req_1771759767023_s77ged3je",
+    "timestamp": "2026-02-22T11:29:27.023Z",
+    "stage": "WEB_SEARCH_TRIGGERED",
+    "source": "web_search",
+    "metadata": {
+      "mode": "search_first",
+      "companyInfoCount": 4,
+      "industryInfoCount": 0,
+      "financialDataCount": 0,
+      "competitorsCount": 0,
+      "newsCount": 0,
+      "preSearchUsed": 4
+    }
+  },
+  {
+    "requestId": "req_1771759767023_s77ged3je",
+    "timestamp": "2026-02-22T11:29:33.173Z",
+    "stage": "CRAWLER_EXECUTED",
+    "source": "crawler",
+    "metadata": {
+      "pagesCrawled": 2,
+      "urlsAttempted": 2,
+      "mode": "intelligent"
+    }
+  }
+]
